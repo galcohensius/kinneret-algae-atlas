@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { z } from "zod";
+import { fixScientificTypography } from "./scientific-text";
 
 const rawAlgaeRecordSchema = z.object({
   scientific_name: z.string().nullable(),
@@ -77,19 +78,23 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
     const slug = existingCount === 0 ? baseSlug : `${baseSlug}-${existingCount + 1}`;
 
     const sections = sectionsWithPreferredOrder(raw.sections);
-    const morphology = sections.morphology ?? null;
-    const ecology = sections.ecology ?? null;
-    const notes = sections.notes ?? null;
+    const fixedSections: Record<string, string> = {};
+    for (const [key, value] of Object.entries(sections)) {
+      fixedSections[key] = fixScientificTypography(value);
+    }
+    const morphology = fixedSections.morphology ?? null;
+    const ecology = fixedSections.ecology ?? null;
+    const notes = fixedSections.notes ?? null;
 
     return {
       slug,
-      title: scientificName,
-      scientificName,
+      title: fixScientificTypography(scientificName),
+      scientificName: fixScientificTypography(scientificName),
       images: raw.images,
       morphology,
       ecology,
       notes,
-      sections,
+      sections: fixedSections,
       metadata: raw.metadata
     };
   });

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 
@@ -20,6 +21,19 @@ const FIELD_LABELS: Record<string, string> = {
   further_reading: "Further reading"
 };
 
+/** Matches typical Word layout: short facts first, then long-form sections. */
+const QUICK_FACT_KEYS = [
+  "previously_identified",
+  "organization",
+  "color",
+  "cell_shape",
+  "cell_size_or_diameter",
+  "biovolume_per_cell",
+  "biovolume_equation"
+] as const;
+
+const NARRATIVE_AFTER_PLATE_KEYS = ["diagnostic_features", "ecology", "further_reading"] as const;
+
 function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
 }
@@ -37,42 +51,93 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
     notFound();
   }
 
+  const sections = record.sections;
+  const morphological = sections.morphological_features?.trim() ?? "";
+  const plateImage = record.images[0];
+  const extraFigures = record.images.slice(1);
+  const hasQuickFacts = QUICK_FACT_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
+
   return (
-    <main>
-      <p>
-        <Link href="/">Back to index</Link>
+    <main className="algae-detail">
+      <p className="algae-detail-nav">
+        <Link href="/algae">← Back to algae index</Link>
       </p>
-      <h1>{record.title}</h1>
-      <p className="muted">Source: {String(record.metadata.source_file ?? "Unknown source")}</p>
 
-      {record.images.length > 0 ? (
-        <section className="card">
-          <h2 className="section-title" style={{ marginTop: 0 }}>Images</h2>
-          <div className="gallery">
-            {record.images.map((imagePath) => (
-              <figure key={imagePath} className="gallery-item">
-                <img src={imagePath} alt={`${record.title} reference`} />
-              </figure>
-            ))}
-          </div>
-        </section>
-      ) : null}
+      <header className="algae-detail-header">
+        <h1 className="algae-title">{record.title}</h1>
+        <p className="muted">Source: {String(record.metadata.source_file ?? "Unknown source")}</p>
+      </header>
 
-      {Object.entries(record.sections)
-        .filter(([, sectionValue]) => sectionValue.trim().length > 0)
-        .map(([sectionName, sectionValue]) => (
-        <section className="card" key={sectionName}>
-          <h2 className="section-title" style={{ marginTop: 0 }}>
-            {toDisplayLabel(sectionName)}
-          </h2>
-          {sectionValue
-            .split(/(?<=\.)\s+/)
-            .filter(Boolean)
-            .map((paragraph, index) => (
-              <p key={`${sectionName}-${index}`}>{paragraph.trim()}</p>
-            ))}
-        </section>
-      ))}
+      <article className="card algae-profile">
+        {hasQuickFacts ? (
+          <section className="quick-facts" aria-labelledby="quick-facts-heading">
+            <h2 id="quick-facts-heading" className="section-heading">
+              Overview
+            </h2>
+            <dl className="quick-facts-list">
+              {QUICK_FACT_KEYS.map((key) => {
+                const value = sections[key]?.trim();
+                if (!value) return null;
+                return (
+                  <Fragment key={key}>
+                    <dt>{toDisplayLabel(key)}</dt>
+                    <dd>{value}</dd>
+                  </Fragment>
+                );
+              })}
+            </dl>
+          </section>
+        ) : null}
+
+        {morphological ? (
+          <section className="narrative-block" aria-labelledby="morph-heading">
+            <h2 id="morph-heading" className="section-heading">
+              {toDisplayLabel("morphological_features")}
+            </h2>
+            <div className="algae-prose">{morphological}</div>
+          </section>
+        ) : null}
+
+        {plateImage ? (
+          <figure className="plate-figure">
+            <img src={plateImage} alt={`${record.title} — microscopy / plate (from source)`} />
+            <figcaption className="muted">
+              Microscopy and composite figures as in the source document (plate / panels).
+            </figcaption>
+          </figure>
+        ) : null}
+
+        {NARRATIVE_AFTER_PLATE_KEYS.map((key) => {
+          const value = sections[key]?.trim();
+          if (!value) return null;
+          return (
+            <section className="narrative-block" key={key} aria-labelledby={`${key}-heading`}>
+              <h2 id={`${key}-heading`} className="section-heading">
+                {toDisplayLabel(key)}
+              </h2>
+              <div className="algae-prose">{value}</div>
+            </section>
+          );
+        })}
+
+        {extraFigures.length > 0 ? (
+          <section className="figures-section" aria-labelledby="figures-heading">
+            <h2 id="figures-heading" className="section-heading">
+              Additional figures
+            </h2>
+            <div className="figures-grid">
+              {extraFigures.map((imagePath, index) => (
+                <figure key={imagePath} className="figures-grid-item">
+                  <img
+                    src={imagePath}
+                    alt={`${record.title} — figure ${index + 2}`}
+                  />
+                </figure>
+              ))}
+            </div>
+          </section>
+        ) : null}
+      </article>
     </main>
   );
 }
