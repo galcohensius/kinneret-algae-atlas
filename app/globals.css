@@ -37,6 +37,7 @@ main.home {
 .home-hero-img {
   object-fit: cover;
   object-position: center 42%;
+  z-index: 0;
 }
 
 .home-hero-scrim {
@@ -81,27 +82,42 @@ main.home {
   line-height: 1.45;
 }
 
-.home-hero-cta {
-  display: inline-block;
-  align-self: flex-start;
-  padding: 0.65rem 1.15rem;
-  border-radius: 10px;
-  font-weight: 600;
-  background: #ffffff;
-  color: #0f172a !important;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.home-hero-cta:hover {
-  background: #f1f5f9;
-  text-decoration: none;
-}
-
 .home-below-hero {
   max-width: 980px;
   margin: 0 auto;
   padding: 1.75rem 1rem 0;
+}
+
+.home-algae-index {
+  scroll-margin-top: 1rem;
+}
+
+.algae-index-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.algae-index-search {
+  margin-bottom: 1rem;
+}
+
+.algae-index-search input {
+  width: 100%;
+  max-width: 360px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+
+.algae-index-count {
+  margin: 0 0 0.75rem;
+}
+
+.algae-list-card-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
 
 a {
@@ -241,6 +257,31 @@ a:hover {
   line-height: 1.65;
   margin: 0;
   text-align: left;
+}
+
+.further-reading-list {
+  margin: 0;
+  padding-left: 1.35rem;
+  line-height: 1.55;
+}
+
+.further-reading-list li {
+  margin-bottom: 0.65rem;
+}
+
+.further-reading-list li::marker {
+  font-weight: 600;
+  color: #475569;
+}
+
+.further-reading-list a {
+  color: #0369a1;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.further-reading-list a:hover {
+  color: #0c4a6e;
 }
 
 .plate-figure {

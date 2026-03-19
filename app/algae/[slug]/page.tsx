@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
+import { citationToScholarSearchUrl, splitFurtherReadingCitations } from "../../../lib/further-reading";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 
 type AlgaeDetailPageProps = {
@@ -38,6 +39,25 @@ function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
 }
 
+function FurtherReadingList({ text }: { text: string }) {
+  const items = splitFurtherReadingCitations(text);
+  return (
+    <ol className="further-reading-list">
+      {items.map((citation, index) => (
+        <li key={`${index}-${citation.slice(0, 24)}`}>
+          <a
+            href={citationToScholarSearchUrl(citation)}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {citation}
+          </a>
+        </li>
+      ))}
+    </ol>
+  );
+}
+
 export async function generateStaticParams() {
   const algae = await getAllAlgae();
   return algae.map((record) => ({ slug: record.slug }));
@@ -60,12 +80,11 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   return (
     <main className="algae-detail">
       <p className="algae-detail-nav">
-        <Link href="/algae">← Back to algae index</Link>
+        <Link href="/#algae-index">← Back to algae index</Link>
       </p>
 
       <header className="algae-detail-header">
         <h1 className="algae-title">{record.title}</h1>
-        <p className="muted">Source: {String(record.metadata.source_file ?? "Unknown source")}</p>
       </header>
 
       <article className="card algae-profile">
@@ -110,6 +129,20 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         {NARRATIVE_AFTER_PLATE_KEYS.map((key) => {
           const value = sections[key]?.trim();
           if (!value) return null;
+          if (key === "further_reading") {
+            return (
+              <section
+                className="narrative-block further-reading-block"
+                key={key}
+                aria-labelledby={`${key}-heading`}
+              >
+                <h2 id={`${key}-heading`} className="section-heading">
+                  {toDisplayLabel(key)}
+                </h2>
+                <FurtherReadingList text={value} />
+              </section>
+            );
+          }
           return (
             <section className="narrative-block" key={key} aria-labelledby={`${key}-heading`}>
               <h2 id={`${key}-heading`} className="section-heading">
