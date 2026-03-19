@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 node_modules/
 .next/
+out/
 coverage/
 
 # Optional duplicate at repo root (canonical asset is public/kinneret-lake.jpg)

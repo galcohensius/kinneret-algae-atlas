@@ -2,6 +2,8 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { z } from "zod";
 import { fixScientificTypography } from "./scientific-text";
+import { filterAlgaeByQuery } from "./algae-filter";
+import { publicAssetPath } from "./public-path";
 
 const rawAlgaeRecordSchema = z.object({
   scientific_name: z.string().nullable(),
@@ -90,7 +92,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
       slug,
       title: fixScientificTypography(scientificName),
       scientificName: fixScientificTypography(scientificName),
-      images: raw.images,
+      images: (raw.images ?? []).map((p) => publicAssetPath(p)),
       morphology,
       ecology,
       notes,
@@ -115,16 +117,8 @@ export async function getAlgaBySlug(slug: string): Promise<AlgaeRecord | null> {
 }
 
 export async function searchAlgae(query: string): Promise<AlgaeRecord[]> {
-  const normalizedQuery = query.trim().toLowerCase();
   const allAlgae = await getAllAlgae();
-
-  if (!normalizedQuery) {
-    return allAlgae;
-  }
-
-  return allAlgae.filter((record) =>
-    record.scientificName.toLowerCase().includes(normalizedQuery)
-  );
+  return filterAlgaeByQuery(allAlgae, query);
 }
 
 export async function validateAlgaeDataFile(): Promise<{ count: number }> {

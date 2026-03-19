@@ -114,10 +114,31 @@ To support additional document styles or new section types:
 - Build a public frontend atlas (cards + detail pages + faceted filters).
 - Deploy with a dedicated domain for long-term scientific access.
 
+## GitHub Pages
+
+The Next.js app is configured for **static export** (`output: "export"`). Deploy from GitHub:
+
+1. Push this repo to GitHub.
+2. **Settings → Pages → Build and deployment:** set **Source** to **GitHub Actions**.
+3. On each push to `main`, the workflow **Deploy to GitHub Pages** builds `out/` and publishes it.
+
+Your site URL will be:
+
+`https://<username>.github.io/<repository-name>/`
+
+The workflow sets `NEXT_PUBLIC_BASE_PATH` to `/<repository-name>` so assets and routes work under that prefix. For a **user/org site** served from the repo root (`username.github.io`), clear `basePath` by changing the workflow env (or build locally with `NEXT_PUBLIC_BASE_PATH` unset).
+
+Local static build (no subpath):
+
+```bash
+npm run build
+# output in ./out
+```
+
 ## Suggested Publication Path
 
 - **Domain:** use a dedicated non-governmental domain (for example `.org.il` or `.org`).
-- **Hosting:** static hosting (Vercel/Netlify) is enough for a JSON-driven atlas.
+- **Hosting:** static hosting (GitHub Pages, Vercel, Netlify) is enough for a JSON-driven atlas.
 - **Content workflow:** keep Word files as source-of-truth, regenerate JSON via this pipeline, redeploy website.
 
 This gives a stable, professional home for a life-long research archive.

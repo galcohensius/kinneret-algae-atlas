@@ -1,19 +1,13 @@
 import Image from "next/image";
-import AlgaeIndexSection from "./components/AlgaeIndexSection";
+import { publicAssetPath } from "../lib/public-path";
+import AlgaeIndexSectionShell from "./components/AlgaeIndexSectionShell";
 
-type HomePageProps = {
-  searchParams?: Promise<{ q?: string }>;
-};
-
-export default async function HomePage({ searchParams }: HomePageProps) {
-  const resolved = searchParams ? await searchParams : {};
-  const query = resolved.q ?? "";
-
+export default function HomePage() {
   return (
     <main className="home">
       <div className="home-hero">
         <Image
-          src="/kinneret-lake.jpg"
+          src={publicAssetPath("/kinneret-lake.jpg")}
           alt="Lake Kinneret (Sea of Galilee), view from the eastern hills"
           fill
           priority
@@ -28,7 +22,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       </div>
 
       <div className="home-below-hero">
-        <AlgaeIndexSection query={query} />
+        <AlgaeIndexSectionShell />
       </div>
     </main>
   );

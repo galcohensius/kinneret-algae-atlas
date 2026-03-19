@@ -1,12 +1,19 @@
+"use client";
+
 import Link from "next/link";
-import { getAllAlgae, searchAlgae } from "../../lib/algae";
+import { useMemo } from "react";
+import { useSearchParams } from "next/navigation";
+import type { AlgaeRecord } from "../../lib/algae";
+import { filterAlgaeByQuery } from "../../lib/algae-filter";
 
 type AlgaeIndexSectionProps = {
-  query: string;
+  records: AlgaeRecord[];
 };
 
-export default async function AlgaeIndexSection({ query }: AlgaeIndexSectionProps) {
-  const records = query.trim() ? await searchAlgae(query) : await getAllAlgae();
+export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
+  const searchParams = useSearchParams();
+  const query = searchParams.get("q") ?? "";
+  const filtered = useMemo(() => filterAlgaeByQuery(records, query), [records, query]);
 
   return (
     <section
@@ -21,7 +28,7 @@ export default async function AlgaeIndexSection({ query }: AlgaeIndexSectionProp
         Browse algae species extracted from Lake Kinneret research documents.
       </p>
 
-      <form method="get" action="/" className="algae-index-search">
+      <form method="get" action="" className="algae-index-search">
         <input
           type="search"
           name="q"
@@ -30,10 +37,10 @@ export default async function AlgaeIndexSection({ query }: AlgaeIndexSectionProp
         />
       </form>
 
-      <p className="muted algae-index-count">{records.length} records</p>
+      <p className="muted algae-index-count">{filtered.length} records</p>
 
       <div className="algae-list-grid">
-        {records.map((record) => (
+        {filtered.map((record) => (
           <article className="card algae-list-card" key={record.slug}>
             {record.images[0] ? (
               <img
@@ -45,7 +52,7 @@ export default async function AlgaeIndexSection({ query }: AlgaeIndexSectionProp
               <div className="algae-thumb algae-thumb-placeholder">No image</div>
             )}
             <h3 className="algae-list-card-title">
-              <Link href={`/algae/${record.slug}`}>{record.title}</Link>
+              <Link href={`/algae/${record.slug}/`}>{record.title}</Link>
             </h3>
           </article>
         ))}
