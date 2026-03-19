@@ -14,7 +14,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
     <main>
       <h1>Kinneret Algae Atlas</h1>
       <p className="muted">
-        Browse algae species extracted from Lake Kinneret research documents.
+        Lake Kinneret algae catalog
       </p>
 
       <form method="get" style={{ marginBottom: "1rem" }}>

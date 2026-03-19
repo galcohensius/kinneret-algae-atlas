@@ -27,6 +27,19 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
       <h1>{record.title}</h1>
       <p className="muted">Source: {String(record.metadata.source_file ?? "Unknown source")}</p>
 
+      {record.images.length > 0 ? (
+        <section className="card">
+          <h2 className="section-title" style={{ marginTop: 0 }}>Images</h2>
+          <div className="gallery">
+            {record.images.map((imagePath) => (
+              <figure key={imagePath} className="gallery-item">
+                <img src={imagePath} alt={`${record.title} reference`} />
+              </figure>
+            ))}
+          </div>
+        </section>
+      ) : null}
+
       {Object.entries(record.sections).map(([sectionName, sectionValue]) => (
         <section className="card" key={sectionName}>
           <h2 className="section-title" style={{ textTransform: "capitalize", marginTop: 0 }}>

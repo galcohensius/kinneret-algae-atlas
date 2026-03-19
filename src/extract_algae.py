@@ -24,12 +24,27 @@ def main():
         default=None,
         help="Optional JSON config path. Uses package default if omitted.",
     )
+    parser.add_argument(
+        "--images-dir",
+        default="public/algae-images",
+        help="Directory where extracted images are saved.",
+    )
+    parser.add_argument(
+        "--images-public-prefix",
+        default="/algae-images",
+        help="Public URL prefix used by the web app for extracted images.",
+    )
     args = parser.parse_args()
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    records = extract_records(docx_path=args.input, config_path=args.config)
+    records = extract_records(
+        docx_path=args.input,
+        config_path=args.config,
+        images_output_dir=args.images_dir,
+        images_public_prefix=args.images_public_prefix,
+    )
     data = [record.to_dict() for record in records]
 
     with output_path.open("w", encoding="utf-8") as fp:

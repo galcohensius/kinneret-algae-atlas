@@ -5,6 +5,7 @@ from typing import Any
 @dataclass
 class AlgaeRecord:
     scientific_name: str | None
+    images: list[str] = field(default_factory=list)
     sections: dict[str, str] = field(default_factory=dict)
     metadata: dict[str, Any] = field(default_factory=dict)
 

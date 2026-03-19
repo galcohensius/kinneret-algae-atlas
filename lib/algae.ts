@@ -4,6 +4,7 @@ import { z } from "zod";
 
 const rawAlgaeRecordSchema = z.object({
   scientific_name: z.string().nullable(),
+  images: z.array(z.string()).optional().default([]),
   sections: z.record(z.string(), z.string()),
   metadata: z.record(z.string(), z.unknown())
 });
@@ -16,6 +17,7 @@ export type AlgaeRecord = {
   slug: string;
   title: string;
   scientificName: string;
+  images: string[];
   morphology: string | null;
   ecology: string | null;
   notes: string | null;
@@ -77,6 +79,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
       slug,
       title: scientificName,
       scientificName,
+      images: raw.images,
       morphology,
       ecology,
       notes,

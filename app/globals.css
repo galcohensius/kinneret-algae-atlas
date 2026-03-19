@@ -39,3 +39,23 @@ a:hover {
 .section-title {
   margin-bottom: 0.25rem;
 }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery-item {
+  margin: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
