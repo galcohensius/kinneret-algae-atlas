@@ -1,44 +1,21 @@
 import Link from "next/link";
-import { getAllAlgae, searchAlgae } from "../lib/algae";
 
-type HomePageProps = {
-  searchParams?: Promise<{ q?: string }>;
-};
-
-export default async function HomePage({ searchParams }: HomePageProps) {
-  const resolvedSearchParams = searchParams ? await searchParams : {};
-  const query = resolvedSearchParams.q ?? "";
-  const records = query ? await searchAlgae(query) : await getAllAlgae();
-
+export default function HomePage() {
   return (
     <main>
       <h1>Kinneret Algae Atlas</h1>
-      <p className="muted">
-        Lake Kinneret algae catalog
-      </p>
+      <p className="muted">Lake Kinneret algae catalog with species pages and images.</p>
 
-      <form method="get" style={{ marginBottom: "1rem" }}>
-        <input
-          type="search"
-          name="q"
-          defaultValue={query}
-          placeholder="Search scientific name..."
-          style={{ width: "100%", maxWidth: "360px", padding: "0.5rem" }}
-        />
-      </form>
-
-      <p className="muted">{records.length} records</p>
-
-      {records.map((record) => (
-        <article className="card" key={record.slug}>
-          <h2 style={{ marginTop: 0 }}>
-            <Link href={`/algae/${record.slug}`}>{record.title}</Link>
-          </h2>
-          <p className="muted" style={{ margin: 0 }}>
-            {record.ecology ?? record.morphology ?? record.notes ?? "No summary available."}
-          </p>
-        </article>
-      ))}
+      <section className="card">
+        <h2 style={{ marginTop: 0 }}>Explore the atlas</h2>
+        <p>
+          Browse all algae species extracted from research documents and open a dedicated page
+          for each species.
+        </p>
+        <p style={{ marginBottom: 0 }}>
+          <Link href="/algae">Go to algae index</Link>
+        </p>
+      </section>
     </main>
   );
 }

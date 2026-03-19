@@ -37,6 +37,12 @@ function slugify(value: string): string {
     .replace(/-+/g, "-");
 }
 
+function normalizeSlugInput(input: string): string {
+  const trimmed = input.trim();
+  const withoutBrackets = trimmed.replace(/^\[+|\]+$/g, "");
+  return slugify(withoutBrackets);
+}
+
 function getSafeName(raw: RawAlgaeRecord, index: number): string {
   const trimmed = raw.scientific_name?.trim() ?? "";
   return trimmed.length > 0 ? trimmed : `unnamed-algae-${index + 1}`;
@@ -99,7 +105,8 @@ export async function getAllAlgae(): Promise<AlgaeRecord[]> {
 
 export async function getAlgaBySlug(slug: string): Promise<AlgaeRecord | null> {
   const allAlgae = await getAllAlgae();
-  return allAlgae.find((item) => item.slug === slug) ?? null;
+  const normalized = normalizeSlugInput(slug);
+  return allAlgae.find((item) => item.slug === normalized) ?? null;
 }
 
 export async function searchAlgae(query: string): Promise<AlgaeRecord[]> {

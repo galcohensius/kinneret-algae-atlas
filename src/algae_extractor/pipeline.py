@@ -25,12 +25,14 @@ def _append_section_line(record: dict[str, Any], section_name: str, text: str):
 
 
 def _finalize_record(record: dict[str, Any]) -> AlgaeRecord | None:
-    sections = {
+    raw_sections = {
         section: " ".join(lines).strip()
         for section, lines in record["sections_buffer"].items()
         if lines
     }
-    if not record["scientific_name"] and not sections:
+    sections = _normalize_structured_fields(raw_sections)
+
+    if not record["scientific_name"] and not any(sections.values()):
         return None
 
     return AlgaeRecord(
@@ -46,6 +48,64 @@ def _slugify(value: str) -> str:
     normalized = re.sub(r"[^a-z0-9-]", "", normalized)
     normalized = re.sub(r"-{2,}", "-", normalized).strip("-")
     return normalized or "unnamed"
+
+
+FIELD_ORDER: list[tuple[str, list[str]]] = [
+    ("previously_identified", ["previously identified", "previous name used", "synonyms"]),
+    ("organization", ["organization"]),
+    ("color", ["color"]),
+    ("cell_shape", ["cell shape"]),
+    ("cell_size_or_diameter", ["cell size", "cell diameter"]),
+    ("biovolume_per_cell", ["biovolume/cell", "biovolume per cell"]),
+    ("biovolume_equation", ["biovolume equation"]),
+    ("morphological_features", ["morphological features"]),
+    ("diagnostic_features", ["diagnostic features"]),
+    ("ecology", ["ecology"]),
+    ("further_reading", ["further reading"]),
+]
+
+
+def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]:
+    source_text = raw_sections.get("notes", "").strip()
+    if not source_text:
+        source_text = " ".join(value for value in raw_sections.values() if value).strip()
+    fields: dict[str, str] = {field_name: "" for field_name, _ in FIELD_ORDER}
+
+    if not source_text:
+        return fields
+
+    label_variants = [re.escape(label) for _, labels in FIELD_ORDER for label in labels]
+    labels_regex = "|".join(label_variants)
+    marker_pattern = re.compile(rf"(?i)\b({labels_regex})\b(?:\s*\([^)]*\))?\s*:")
+    markers = list(marker_pattern.finditer(source_text))
+
+    if markers:
+        for index, marker in enumerate(markers):
+            label_text = marker.group(1).lower()
+            field_name = next(
+                (
+                    name
+                    for name, labels in FIELD_ORDER
+                    if label_text in labels
+                ),
+                None,
+            )
+            if not field_name:
+                continue
+
+            start = marker.end()
+            end = markers[index + 1].start() if index + 1 < len(markers) else len(source_text)
+            value = source_text[start:end].strip()
+            if value:
+                fields[field_name] = f"{fields[field_name]} {value}".strip()
+
+    if not fields["ecology"] and raw_sections.get("ecology"):
+        fields["ecology"] = raw_sections["ecology"].strip()
+
+    if raw_sections.get("morphology") and not fields["morphological_features"]:
+        fields["morphological_features"] = raw_sections["morphology"].strip()
+
+    return fields
 
 
 def _save_image(

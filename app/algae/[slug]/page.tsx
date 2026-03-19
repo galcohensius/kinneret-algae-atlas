@@ -6,6 +6,24 @@ type AlgaeDetailPageProps = {
   params: Promise<{ slug: string }>;
 };
 
+const FIELD_LABELS: Record<string, string> = {
+  previously_identified: "Previously identified",
+  organization: "Organization",
+  color: "Color",
+  cell_shape: "Cell shape",
+  cell_size_or_diameter: "Cell size (or diameter)",
+  biovolume_per_cell: "Biovolume/cell",
+  biovolume_equation: "Biovolume equation",
+  morphological_features: "Morphological features",
+  diagnostic_features: "Diagnostic features",
+  ecology: "Ecology",
+  further_reading: "Further reading"
+};
+
+function toDisplayLabel(fieldName: string): string {
+  return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
+}
+
 export async function generateStaticParams() {
   const algae = await getAllAlgae();
   return algae.map((record) => ({ slug: record.slug }));
@@ -40,10 +58,12 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         </section>
       ) : null}
 
-      {Object.entries(record.sections).map(([sectionName, sectionValue]) => (
+      {Object.entries(record.sections)
+        .filter(([, sectionValue]) => sectionValue.trim().length > 0)
+        .map(([sectionName, sectionValue]) => (
         <section className="card" key={sectionName}>
-          <h2 className="section-title" style={{ textTransform: "capitalize", marginTop: 0 }}>
-            {sectionName}
+          <h2 className="section-title" style={{ marginTop: 0 }}>
+            {toDisplayLabel(sectionName)}
           </h2>
           {sectionValue
             .split(/(?<=\.)\s+/)
