@@ -1,0 +1,54 @@
+{
+  "default_section": "notes",
+  "section_aliases": {
+    "morphology": [
+      "Morphology",
+      "Morphological description",
+      "Description",
+      "Diagnostic characters"
+    ],
+    "ecology": [
+      "Ecology",
+      "Habitat",
+      "Distribution",
+      "Environment"
+    ],
+    "notes": [
+      "Notes",
+      "Remarks"
+    ]
+  },
+  "record_start_blocked_prefixes": [
+    "organization",
+    "color",
+    "cell shape",
+    "cell size",
+    "cell diameter",
+    "biovolume",
+    "biovolume equation",
+    "morphological features",
+    "diagnostic features",
+    "ecology",
+    "figure",
+    "fig.",
+    "plate",
+    "further reading",
+    "environmental conditions",
+    "physiology",
+    "foodweb position",
+    "occurrence",
+    "previously identified",
+    "previous name used",
+    "synonyms"
+  ],
+  "record_following_markers": [
+    "Organization:"
+  ],
+  "record_following_marker_lookahead": 5,
+  "record_start_patterns": [
+    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+)\\s+[A-Z][a-zA-Z.-]*\\.?\\s+[A-Z][a-zA-Z.-]*\\.?\\s+\\d{4}\\b",
+    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)\\s+\\([^\\)]{2,80}\\)\\s+[A-Z][a-zA-Z.-]+",
+    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)\\s+[A-Z][a-zA-Z.-]+\\s+\\d{4}\\b",
+    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+)(?:\\s+[^:]{0,80})?$"
+  ]
+}
