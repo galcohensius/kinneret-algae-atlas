@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
+import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import { citationToScholarSearchUrl, splitFurtherReadingCitations } from "../../../lib/further-reading";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 
@@ -158,16 +159,12 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <h2 id="figures-heading" className="section-heading">
               Additional figures
             </h2>
-            <div className="figures-grid">
-              {extraFigures.map((imagePath, index) => (
-                <figure key={imagePath} className="figures-grid-item">
-                  <img
-                    src={imagePath}
-                    alt={`${record.title} — figure ${index + 2}`}
-                  />
-                </figure>
-              ))}
-            </div>
+            <ExpandableFiguresGrid
+              figures={extraFigures.map((imagePath, index) => ({
+                src: imagePath,
+                alt: `${record.title} — figure ${index + 2}`
+              }))}
+            />
           </section>
         ) : null}
       </article>
