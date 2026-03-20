@@ -65,6 +65,45 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
 ]
 
 
+def move_inline_further_reading_from_ecology(fields: dict[str, str]) -> None:
+    """
+    If ecology ends with an inline 'Further reading:' block (Word-style), move
+    the citation tail into further_reading so JSON matches the web app's section.
+    Uses the last match so accidental earlier mentions stay in ecology.
+    """
+    eco = fields.get("ecology", "").strip()
+    if not eco:
+        return
+
+    matches = list(re.finditer(r"(?i)\bfurther reading\s*:", eco))
+    if not matches:
+        return
+
+    m = matches[-1]
+    prefix = eco[: m.start()].rstrip()
+    tail = eco[m.end() :].strip()
+    fields["ecology"] = prefix
+    if not tail:
+        return
+    existing = fields.get("further_reading", "").strip()
+    fields["further_reading"] = (f"{existing} {tail}" if existing else tail).strip()
+
+
+def normalize_further_reading_citation_boundaries(text: str) -> str:
+    """
+    Word often pastes the next author directly after a page range without a period
+    (e.g. '120:267-285 Hansen G,'). Insert '. ' so citation lists split reliably on the site.
+    Only targets journal-style vol:ppp-ppp followed by space + Author pattern.
+    """
+    if not text.strip():
+        return text
+    return re.sub(
+        r"(\d{1,4}:\d+-\d+)\s+([A-Z][a-zA-Z'\-]+ [A-Z][a-zA-Z'\-]?)",
+        r"\1. \2",
+        text,
+    )
+
+
 def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]:
     source_text = raw_sections.get("notes", "").strip()
     if not source_text:
@@ -104,6 +143,12 @@ def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]
 
     if raw_sections.get("morphology") and not fields["morphological_features"]:
         fields["morphological_features"] = raw_sections["morphology"].strip()
+
+    move_inline_further_reading_from_ecology(fields)
+
+    fr = fields.get("further_reading", "").strip()
+    if fr:
+        fields["further_reading"] = normalize_further_reading_citation_boundaries(fr)
 
     return fields
 

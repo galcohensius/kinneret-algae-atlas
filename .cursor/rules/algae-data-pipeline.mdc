@@ -1,0 +1,17 @@
+---
+description: Keep algae catalog data automatic via Python extractor, not hand-edited JSON
+alwaysApply: true
+---
+
+# Algae atlas: data changes stay automatic
+
+- **Do not** hand-edit `data/processed/algae_records.json` for fixes that must survive the next Word → JSON run (structure, section splits, citations, typos in source-derived text).
+- **Do** change `src/algae_extractor/` (and/or the source `.docx`), then re-run:
+  `python src/extract_algae.py --input "data/raw/…docx" --output "data/processed/algae_records.json" --images-dir public/algae-images`
+- Hand-editing processed JSON is only for quick local experiments; **merge the same logic into the extractor** before relying on it long-term.
+
+## Further reading vs ecology
+
+Trailing **`Further reading:`** blocks embedded in ecology text are normalized by **`move_inline_further_reading_from_ecology`** in `src/algae_extractor/pipeline.py` into the `further_reading` field so the site’s numbered links stay correct.
+
+**`normalize_further_reading_citation_boundaries`** inserts a missing period after journal page ranges when Word glues the next author (e.g. `120:267-285 Hansen` → `120:267-285. Hansen`).
