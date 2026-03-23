@@ -15,23 +15,66 @@ def _new_record(source_file: str) -> dict[str, Any]:
         "images": [],
         "image_captions": [],
         "image_counter": 1,
+        # sections_buffer[section_name] = list of {text, char_styles}
+        # char_styles is a per-character style bitmask aligned to `text`.
+        # bit 1: italic, bit 2: bold, bit 0: neutral
         "sections_buffer": {},
         "metadata": {"source_file": source_file},
     }
 
 
-def _append_section_line(record: dict[str, Any], section_name: str, text: str):
+def _neutral_char_styles(text: str) -> list[int]:
+    # Neutral style for characters when we don't have run-level info.
+    return [0] * len(text)
+
+
+def _append_section_line(
+    record: dict[str, Any],
+    section_name: str,
+    text: str,
+    char_styles: list[int] | None = None,
+):
     section_lines = record["sections_buffer"].setdefault(section_name, [])
-    section_lines.append(text)
+    section_lines.append(
+        {
+            "text": text,
+            "char_styles": char_styles if char_styles is not None else _neutral_char_styles(text),
+        }
+    )
 
 
 def _finalize_record(record: dict[str, Any]) -> AlgaeRecord | None:
-    raw_sections = {
-        section: " ".join(lines).strip()
-        for section, lines in record["sections_buffer"].items()
-        if lines
-    }
-    sections = _normalize_structured_fields(raw_sections)
+    raw_sections_plain: dict[str, str] = {}
+    raw_sections_styles: dict[str, list[int]] = {}
+
+    for section, lines in record["sections_buffer"].items():
+        if not lines:
+            continue
+
+        plain_parts: list[str] = [item["text"] for item in lines if item["text"]]
+        if not plain_parts:
+            continue
+
+        styles_parts: list[list[int]] = [item["char_styles"] for item in lines if item["text"]]
+
+        # Join paragraphs with spaces to match the old `" ".join(lines)` behavior.
+        joined_plain = " ".join(plain_parts).strip()
+        joined_styles: list[int] = []
+        for i, styles in enumerate(styles_parts):
+            joined_styles.extend(styles)
+            if i + 1 < len(styles_parts):
+                joined_styles.append(0)  # neutral space
+
+        # `strip()` should not change length (paragraph text is already stripped),
+        # but keep it safe.
+        if joined_plain and len(joined_plain) != len(joined_styles):
+            # Fallback: neutralize if lengths drift for any reason.
+            joined_styles = _neutral_char_styles(joined_plain)
+
+        raw_sections_plain[section] = joined_plain
+        raw_sections_styles[section] = joined_styles
+
+    sections, sections_rich = _normalize_structured_fields(raw_sections_plain, raw_sections_styles)
 
     if not record["scientific_name"] and not any(sections.values()):
         return None
@@ -41,6 +84,7 @@ def _finalize_record(record: dict[str, Any]) -> AlgaeRecord | None:
         images=record["images"],
         image_captions=record["image_captions"],
         sections=sections,
+        sections_rich=sections_rich,
         metadata=record["metadata"],
     )
 
@@ -103,6 +147,40 @@ def move_inline_further_reading_from_ecology(fields: dict[str, str]) -> None:
     fields["further_reading"] = (f"{existing} {tail}" if existing else tail).strip()
 
 
+def move_inline_further_reading_from_ecology_rich(
+    fields_plain: dict[str, str],
+    fields_styles: dict[str, list[int]],
+) -> None:
+    """
+    Same as `move_inline_further_reading_from_ecology`, but also trims the
+    per-character styles for the ecology field.
+    """
+    eco_plain = fields_plain.get("ecology", "").strip()
+    if not eco_plain:
+        return
+
+    eco_styles = fields_styles.get("ecology", [])
+    if not eco_styles or len(eco_styles) != len(eco_plain):
+        eco_styles = _neutral_char_styles(eco_plain)
+
+    matches = list(re.finditer(r"(?i)\bfurther reading\s*:", eco_plain))
+    if not matches:
+        return
+
+    m = matches[-1]
+    prefix_plain = eco_plain[: m.start()].rstrip()
+    tail_plain = eco_plain[m.end() :].strip()
+
+    fields_plain["ecology"] = prefix_plain
+    fields_styles["ecology"] = eco_styles[: len(prefix_plain)]
+
+    if not tail_plain:
+        return
+
+    existing = fields_plain.get("further_reading", "").strip()
+    fields_plain["further_reading"] = (f"{existing} {tail_plain}" if existing else tail_plain).strip()
+
+
 def normalize_further_reading_citation_boundaries(text: str) -> str:
     """
     Word often pastes the next author directly after a page range without a period
@@ -119,18 +197,69 @@ def normalize_further_reading_citation_boundaries(text: str) -> str:
 
 
 def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]:
-    source_text = raw_sections.get("notes", "").strip()
-    if not source_text:
-        source_text = " ".join(value for value in raw_sections.values() if value).strip()
-    fields: dict[str, str] = {field_name: "" for field_name, _ in FIELD_ORDER}
+    raise RuntimeError("Old signature removed; use _normalize_structured_fields_rich(...)")
 
-    if not source_text:
-        return fields
+
+def _styles_int_to_segment_flags(style_int: int) -> tuple[bool, bool]:
+    italic = bool(style_int & 1)
+    bold = bool(style_int & 2)
+    return italic, bold
+
+
+def _char_styles_to_rich_segments(text: str, char_styles: list[int]) -> list[dict[str, Any]]:
+    if not text:
+        return []
+    if len(text) != len(char_styles):
+        char_styles = _neutral_char_styles(text)
+
+    segments: list[dict[str, Any]] = []
+    cur_style = char_styles[0]
+    start = 0
+    for i in range(1, len(text)):
+        if char_styles[i] != cur_style:
+            chunk = text[start:i]
+            italic, bold = _styles_int_to_segment_flags(cur_style)
+            segments.append({"text": chunk, "italic": italic, "bold": bold})
+            start = i
+            cur_style = char_styles[i]
+
+    chunk = text[start:]
+    italic, bold = _styles_int_to_segment_flags(cur_style)
+    segments.append({"text": chunk, "italic": italic, "bold": bold})
+    return segments
+
+
+def _normalize_structured_fields_rich(
+    raw_sections_plain: dict[str, str],
+    raw_sections_styles: dict[str, list[int]],
+) -> tuple[dict[str, str], dict[str, list[dict[str, Any]]]]:
+    source_plain = raw_sections_plain.get("notes", "").strip()
+    source_styles = raw_sections_styles.get("notes", [])
+    if not source_plain:
+        plain_parts: list[str] = []
+        styles_parts: list[list[int]] = []
+        for section, value in raw_sections_plain.items():
+            if value:
+                plain_parts.append(value)
+                styles_parts.append(raw_sections_styles.get(section, _neutral_char_styles(value)))
+        source_plain = " ".join(plain_parts).strip()
+        joined_styles: list[int] = []
+        for i, styles in enumerate(styles_parts):
+            joined_styles.extend(styles)
+            if i + 1 < len(styles_parts):
+                joined_styles.append(0)
+        source_styles = joined_styles
+
+    fields_plain: dict[str, str] = {field_name: "" for field_name, _ in FIELD_ORDER}
+    fields_styles: dict[str, list[int]] = {field_name: [] for field_name, _ in FIELD_ORDER}
+
+    if not source_plain:
+        return fields_plain, {}
 
     label_variants = [re.escape(label) for _, labels in FIELD_ORDER for label in labels]
     labels_regex = "|".join(label_variants)
     marker_pattern = re.compile(rf"(?i)\b({labels_regex})\b(?:\s*\([^)]*\))?\s*:")
-    markers = list(marker_pattern.finditer(source_text))
+    markers = list(marker_pattern.finditer(source_plain))
 
     if markers:
         for index, marker in enumerate(markers):
@@ -147,24 +276,72 @@ def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]
                 continue
 
             start = marker.end()
-            end = markers[index + 1].start() if index + 1 < len(markers) else len(source_text)
-            value = source_text[start:end].strip()
-            if value:
-                fields[field_name] = f"{fields[field_name]} {value}".strip()
+            end = markers[index + 1].start() if index + 1 < len(markers) else len(source_plain)
 
-    if not fields["ecology"] and raw_sections.get("ecology"):
-        fields["ecology"] = raw_sections["ecology"].strip()
+            slice_plain = source_plain[start:end]
+            value_plain = slice_plain.strip()
+            if not value_plain:
+                continue
 
-    if raw_sections.get("morphology") and not fields["morphological_features"]:
-        fields["morphological_features"] = raw_sections["morphology"].strip()
+            left_trim = len(slice_plain) - len(slice_plain.lstrip())
+            right_trim = len(slice_plain) - len(slice_plain.rstrip())
 
-    move_inline_further_reading_from_ecology(fields)
+            slice_styles = source_styles[start + left_trim : end - right_trim]
+            if len(slice_styles) != len(value_plain):
+                slice_styles = _neutral_char_styles(value_plain)
 
-    fr = fields.get("further_reading", "").strip()
+            if fields_plain[field_name]:
+                fields_plain[field_name] = f"{fields_plain[field_name]} {value_plain}".strip()
+                fields_styles[field_name].append(0)  # separator space
+                fields_styles[field_name].extend(slice_styles)
+            else:
+                fields_plain[field_name] = value_plain
+                fields_styles[field_name] = slice_styles[:]
+
+    if not fields_plain["ecology"] and raw_sections_plain.get("ecology"):
+        eco_plain = raw_sections_plain["ecology"].strip()
+        eco_styles = raw_sections_styles.get("ecology", _neutral_char_styles(eco_plain))
+        if len(eco_styles) != len(eco_plain):
+            eco_styles = _neutral_char_styles(eco_plain)
+        fields_plain["ecology"] = eco_plain
+        fields_styles["ecology"] = eco_styles
+
+    if raw_sections_plain.get("morphology") and not fields_plain["morphological_features"]:
+        morph_plain = raw_sections_plain["morphology"].strip()
+        morph_styles = raw_sections_styles.get("morphology", _neutral_char_styles(morph_plain))
+        if len(morph_styles) != len(morph_plain):
+            morph_styles = _neutral_char_styles(morph_plain)
+        fields_plain["morphological_features"] = morph_plain
+        fields_styles["morphological_features"] = morph_styles
+
+    move_inline_further_reading_from_ecology_rich(fields_plain, fields_styles)
+
+    fr = fields_plain.get("further_reading", "").strip()
     if fr:
-        fields["further_reading"] = normalize_further_reading_citation_boundaries(fr)
+        fields_plain["further_reading"] = normalize_further_reading_citation_boundaries(fr)
 
-    return fields
+    # Build rich segments for everything except further_reading (we render it as
+    # a citation list that depends on exact citation splitting).
+    sections_rich: dict[str, list[dict[str, Any]]] = {}
+    for key, _ in FIELD_ORDER:
+        if key == "further_reading":
+            continue
+        value_plain = fields_plain.get(key, "").strip()
+        if not value_plain:
+            continue
+        value_styles = fields_styles.get(key, [])
+        if len(value_styles) != len(value_plain):
+            value_styles = _neutral_char_styles(value_plain)
+        sections_rich[key] = _char_styles_to_rich_segments(value_plain, value_styles)
+
+    return fields_plain, sections_rich
+
+
+def _normalize_structured_fields(
+    raw_sections_plain: dict[str, str],
+    raw_sections_styles: dict[str, list[int]],
+) -> tuple[dict[str, str], dict[str, list[dict[str, Any]]]]:
+    return _normalize_structured_fields_rich(raw_sections_plain, raw_sections_styles)
 
 
 def _save_image(
@@ -260,7 +437,7 @@ def extract_records(
             expect_image_caption = False
 
             if remaining_text:
-                _append_section_line(current, default_section, remaining_text)
+                _append_section_line(current, default_section, remaining_text, char_styles=None)
             continue
 
         detected_section = detect_section_heading(text=text, alias_lookup=section_alias_lookup)
@@ -268,7 +445,12 @@ def extract_records(
             current_section = detected_section
             continue
 
-        _append_section_line(current, current_section, text)
+        _append_section_line(
+            current,
+            current_section,
+            text,
+            char_styles=block.get("char_styles"),
+        )
 
     finalized = _finalize_record(current)
     if finalized:

@@ -10,6 +10,19 @@ const rawAlgaeRecordSchema = z.object({
   images: z.array(z.string()).optional().default([]),
   image_captions: z.array(z.string()).optional().default([]),
   sections: z.record(z.string(), z.string()),
+  sections_rich: z
+    .record(
+      z.string(),
+      z.array(
+        z.object({
+          text: z.string(),
+          italic: z.boolean(),
+          bold: z.boolean(),
+        })
+      )
+    )
+    .optional()
+    .default({}),
   metadata: z.record(z.string(), z.unknown())
 });
 
@@ -27,6 +40,7 @@ export type AlgaeRecord = {
   ecology: string | null;
   notes: string | null;
   sections: Record<string, string>;
+  sectionsRich: Record<string, { text: string; italic: boolean; bold: boolean }[]>;
   metadata: Record<string, unknown>;
 };
 
@@ -111,6 +125,16 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
       ecology,
       notes,
       sections: fixedSections,
+      sectionsRich: Object.fromEntries(
+        Object.entries(raw.sections_rich ?? {}).map(([key, segments]) => [
+          key,
+          segments.map((seg) => ({
+            text: fixScientificTypography(seg.text),
+            italic: seg.italic,
+            bold: seg.bold,
+          })),
+        ])
+      ),
       metadata: raw.metadata
     };
   });

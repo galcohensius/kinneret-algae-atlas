@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
+import { RichText } from "../../components/RichText";
 import { citationToScholarSearchUrl, splitFurtherReadingCitations } from "../../../lib/further-reading";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 
@@ -74,6 +75,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
 
   const sections = record.sections;
   const morphological = sections.morphological_features?.trim() ?? "";
+  const morphologicalRich = record.sectionsRich?.morphological_features ?? [];
   const plateImage = record.images[0];
   const plateCaption = record.imageCaptions[0];
   const extraFigures = record.images.slice(1);
@@ -100,10 +102,11 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
               {QUICK_FACT_KEYS.map((key) => {
                 const value = sections[key]?.trim();
                 if (!value) return null;
+                const richValue = record.sectionsRich?.[key] ?? [];
                 return (
                   <Fragment key={key}>
                     <dt>{toDisplayLabel(key)}</dt>
-                    <dd>{value}</dd>
+                    <dd>{richValue.length > 0 ? <RichText segments={richValue} /> : value}</dd>
                   </Fragment>
                 );
               })}
@@ -116,7 +119,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <h2 id="morph-heading" className="section-heading">
               {toDisplayLabel("morphological_features")}
             </h2>
-            <div className="algae-prose">{morphological}</div>
+            <div className="algae-prose">{morphologicalRich.length > 0 ? <RichText segments={morphologicalRich} /> : morphological}</div>
           </section>
         ) : null}
 
@@ -151,7 +154,13 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
               <h2 id={`${key}-heading`} className="section-heading">
                 {toDisplayLabel(key)}
               </h2>
-              <div className="algae-prose">{value}</div>
+              <div className="algae-prose">
+                {(record.sectionsRich?.[key] ?? []).length > 0 ? (
+                  <RichText segments={record.sectionsRich[key]} />
+                ) : (
+                  value
+                )}
+              </div>
             </section>
           );
         })}

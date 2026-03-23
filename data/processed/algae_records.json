@@ -24,6 +24,216 @@
       "ecology": "Gymnodinium never forms blooms but occurs quite often at low cell densities, usually < 50 cells/mL, contributing to total phytoplankton biomass up to a maximum of ~3 g m-2 (Fig. 1). Its highest cell abundances occur in June-July (Fig. 2A). It can appear in the plankton at all times of the year but is more abundant during stratification, from May to December (Fig. 2A). Cell size fluctuates seasonally (Fig. 2B) with largest cell-size in summer. This is different from the cell size of other Kinneret dinoflagellates, that is usually largest in winter. The reason could be that more than a single species has been counted as Gymnodinium, with a larger species more common in summer. Higher cell abundances are associated with water temperatures > 23oC (Fig. 3). Gymnodinium occurs over the full range of conductivity, Cl, Ca, alkalinity, SO4, Si, water levels and solar radiation levels recorded in the lake, mostly when transparency is high (at lower ambient concentrations of chlorophyll a, and when euphotic zone depth is around 10 m. It is more abundant when ammonium and nitrate are low (Fig. 3), but DON is abundant (not shown), suggesting potential heterotrophic nutrition in addition to photosynthesis by a mixotroph. Figure 3. Gymnodinium abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at temperatures > 23oC, pH > 8.4, and low concentrations of NO3 and NH4. Based on field data from 1987-2020.",
       "further_reading": ""
     },
+    "sections_rich": {
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "yellow to golden-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "mashroom-like, close to a sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_size_or_diameter": [
+        {
+          "text": "7.6 – 12.3 m, median: 9.7 m (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "230 - 1000m3, median: 470 m3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Sphere, V,m3 = 4/3  (D/2)3. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is a classic naked dinoflagellate, the genus includes both photosynthetic and heterotrophic species. The ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cingulum",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " bisects the cell into two halves or cones, of somewhat different shapes, the lower or ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hypocone",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " is a half-sphere, the top or ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "epicone",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " is a bit larger and more conical. With those two cones placed one on top of the other, the cell often looks like a mushroom (Plate 1). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " has two unequal flagella, the longitudinal whiplash flagellum extending from the bottom side of the mushroom is seen in Plate 1, the second, transverse flagellum is hidden in the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cingulum",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ". Plate 1 – ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", showing the overall mushroom shape of half sphere covered by a cone, the cingulum region, and the whip flagellum.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "diagnostic_features": [
+        {
+          "text": "several species of naked dinoflagellates of the genera ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Glenodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occur in Lake Kinneret, they were never identified to species level. Of those, a small species of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (cell volume ~ 500 mm3) is most common. The data presented here are for this small ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium.",
+          "italic": true,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " never forms blooms but occurs quite often at low cell densities, usually < 50 cells/mL, contributing to total phytoplankton biomass up to a maximum of ~3 g m-2 (Fig. 1). Its highest cell abundances occur in June-July (Fig. 2A). It can appear in the plankton at all times of the year but is more abundant during stratification, from May to December (Fig. 2A). Cell size fluctuates seasonally (Fig. 2B) with largest cell-size in summer. This is different from the cell size of other Kinneret dinoflagellates, that is usually largest in winter. The reason could be that more than a single species has been counted as ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", with a larger species more common in summer. Higher cell abundances are associated with water temperatures > 23oC (Fig. 3). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occurs over the full range of conductivity, Cl, Ca, alkalinity, SO4, Si, water levels and solar radiation levels recorded in the lake, mostly when transparency is high (at lower ambient concentrations of chlorophyll ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "a,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and when euphotic zone depth is around 10 m. It is more abundant when ammonium and nitrate are low (Fig. 3), but DON is abundant (not shown), suggesting potential heterotrophic nutrition in addition to photosynthesis by a mixotroph. Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at temperatures > 23oC, pH > 8.4, and low concentrations of NO3 and NH4. Based on field data from 1987-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
     "metadata": {
       "source_file": "Examples to Gal.docx"
     }
@@ -48,6 +258,182 @@
       "diagnostic_features": "Ceratium furcoides is much narrower and slenderer than the more common C. hirundinella. Ceratium furcoides is much less common in Lake Kinneret than C. hirundinella. Historically it was identified as C. hirunidnella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for this species.",
       "ecology": "",
       "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
+    },
+    "sections_rich": {
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "yellow to golden-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "a spheroid from which 3-4 horns of different lengths extend",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_size_or_diameter": [
+        {
+          "text": "30-50 m wide x 165-260 m long (literature values)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "73,000 m3 (literature value, we do not routinely measure this species)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Cells are long and slender, narrowly spindle-shaped, strongly dorsiventrally flattened. Epythecae gradually tapers into a long apical horn without shoulders. Hypotheca broad and short, drawn out into 2 (occasionally 1 or 3) posterior horns of different lengths. Nucleus prominent in epicone. Cysts smooth-walled, triangular, with one narrow horn extending from each corner.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "diagnostic_features": [
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "furcoides",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is much narrower and slenderer than the more common ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "furcoides",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is much less common in Lake Kinneret than ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Historically it was identified as ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirunidnella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "furcoides",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and counted as ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Therefore, there are no ecological data specific for this species.",
+          "italic": false,
+          "bold": false
+        }
+      ]
     },
     "metadata": {
       "source_file": "Examples to Gal.docx"
@@ -80,6 +466,342 @@
       "ecology": "C. hirundinella is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cells mL-1 (Fig. 1), and <10% contribution to total biomass. An exception was a spring bloom in 2010, a year when Peridinium gatunense didn’t bloom, when cell concentration in the epilimnion reached 50 cells ml-1(14 March 2010) with biomass of 150 g m-2 (Fig. 1), contributing > 70% to total biomass. This species appears in the water column in January, peaks between March and June, then disappear from the water till next spring (Fig. 2). The mean abundance of C. hirundinella has increased since the mid 1990s and tends to be higher in years with no or moderate intensity Peridinium gatunense blooms. Ceratium cysts commonly appear in the Kinneret plankton in March and April (Fig. 2). They are more numerous than cysts of Peridinium gatunense even though the abundance of Ceratium vegetative cells is an order of magnitude lower than that of Peridinium. Environmental conditions: Over the years, higher cell abundances of C. hirundinella (> 5 cells mL-1) occurred usually during thermal stratification, over the full ranges of salinities and Ca concentrations, at water temperatures ranging 16-29oC, intermediate alkalinities (90-140 mg CaCO3 L-1), and distinctly at pH > 8.5, when both nitrate and organic N (particulate and dissolved) are present (Fig. 3).",
       "further_reading": "Pollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285. Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
     },
+    "sections_rich": {
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "yellow to golden-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "a spheroid from which 2 to 5 (usually 3 or 4) horns of different length extend",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_size_or_diameter": [
+        {
+          "text": "40-450 m long x 28-55 m wide (literature values)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "73,000 m3 (literature value, we do not routinely measure this species)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "The genus ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " has a distinct typical shape of a central body from which several horns extend to opposite directions (plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. In ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", cells are broadly or narrowly fusiform in outline, depending upon the degree of divergence of the horns. All or part of the horns are usually colorless, the gold-pigmented ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "protoplast",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (living part of the cell) is concentrated in the cell’s center. Small red bodies are often present. The helmet shaped epitheca narrows from just above the cingulum gradually forming a long horn. The cingulum is slightly narrow. The body of the hypotheca is broad and short. It is divided into a varying number of posterior horns, usually 3, sometimes only 1. The central or median horn formed by the antapical plates is the longest. Chloroplasts are numerous and oval shaped. Small red bodies are often present. Occasionally, the longitudinal flagellum can be observed microscopically (Plate 1C). Resting cysts of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " are triangular with one horn on each end (Plate 1D). Several morphotypes of this species occur in Lake Kinneret, the most common is var. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "robustum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Bachman, shaped like the Eifel Tower (Plate 1 A, C). Other forms found in L Kinneret are forma ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gracile",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", type ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "scoticum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and the variety ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "furcoides",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", now allocated to a separate species, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "furcoides",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Nutrirtion is autotrophic and holozoic by means of pseudopodia. Vegetative and sexual reproduction is known.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cells mL-1 (Fig. 1), and <10% contribution to total biomass. An exception was a spring bloom in 2010, a year when ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " didn’t bloom, when cell concentration in the epilimnion reached 50 cells ml-1(14 March 2010) with biomass of 150 g m-2 (Fig. 1), contributing > 70% to total biomass. This species appears in the water column in January, peaks between March and June, then disappear from the water till next spring (Fig. 2). The mean abundance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " has increased since the mid 1990s and tends to be higher in years with no or moderate intensity ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " blooms. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cysts commonly appear in the Kinneret plankton in March and April (Fig. 2). They are more numerous than cysts of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " even though the abundance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " vegetative cells is an order of magnitude lower than that of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Environmental",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "conditions:",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " Over the years, higher cell abundances of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (> 5 cells mL-1) occurred usually during thermal stratification, over the full ranges of salinities and Ca concentrations, at water temperatures ranging 16-29oC, intermediate alkalinities (90-140 mg CaCO3 L-1), and distinctly at pH > 8.5, when both nitrate and organic N (particulate and dissolved) are present (Fig. 3).",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
     "metadata": {
       "source_file": "Examples to Gal.docx"
     }
@@ -111,6 +833,179 @@
       "ecology": "Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL-1 (Fig. 1). It appears in the plankton from November (onset of destratification) to July, with peak abundance in March (Fig. 2), before the lake stratifies, and earlier than most other Kinneret dinoflagellates. It is more common in littoral samples. Higher cell abundances of this species occurred at higher Kinneret Alkalinity, Ca, TDP, and DO concentrations, when Dissolved organic N (DON) ranged 0.1-0.5 mg L-1 and Secchi depth ranged 2-4 m. Abundance seemed to be indifferent to most limnological parameters we record including water level, conductivity, chloride, short wave radiation, Alkalinity, Ca, TDP, NO3, and DO concentrations. Abundance was higher with lower long-wave radiation levels and water temperatures < 25 C, but both may be correlates of the time of year of its peak abundance. Some tendency towards higher alkalinity (> 100 mg CaCO3 L-1) and Ca concentrations (> 45 mg L-1). At low turbidity (< 4 NTU) waters, and low Si (Fig. 3). Occurrence: lakes, pools and brackish water; Europe.",
       "further_reading": "Moestrup, Ø. & Calado, A.J. (2018). Süßwasserflora von Mitteleuropa. Dinophyceae. Vol. 6 pp. [i]-xii, [1]-560, 421 figures. Berlin: Springer Spektrum. Pollingher & Hickel 1991. Pollingher U, Hickel B. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Archiv für Hydrobiologie 120(3):267-85."
     },
+    "sections_rich": {
+      "previously_identified": [
+        {
+          "text": "Entzia",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "(Apstein)",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Lebour",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1922",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "pinkish, non-pigmented (heterotrophic)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "flat cone (Chinese hat) on top of a half-sphere (Plate 1).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_size_or_diameter": [
+        {
+          "text": "Diameter (D): 34 - 47 m, median: 38 m (N=92) Length (L) 17 – 23 m, median: 19 m (N=92)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "15,000 – 40,000m3, median: 22,000 m3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "V,m3 = (/12) *d2 *(d+h) (volume of half sphere+cone, see Hillebrand et al. 1999). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Diplopsalis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is the only known heterotrophic (non-pigmented) thecate dinoflagellate in the lake’s pelagic waters. Its shape is distinct, of a half sphere with a Chinese hat on top of it (Photo). Another feature differentiating it from other Kinneret dinoflagellates is that its diameter at the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cingulum",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " is greater than its height. Its thecae are thick and distinct. Chloroplasts and stigma are lacking (heterotrophic). The protoplast is pink. The hypotheca is broadly rounded and slightly flattened dorsiventrally. Plates are not sculptured and don’t have any reticulations. Being heterotrophic, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Diplopsalis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is excluded from the computation of total phytoplankton biomass in our routine monitoring.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Diplopsalis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL-1 (Fig. 1). It appears in the plankton from November (onset of destratification) to July, with peak abundance in March (Fig. 2), before the lake stratifies, and earlier than most other Kinneret dinoflagellates. It is more common in littoral samples. Higher cell abundances of this species occurred at higher Kinneret Alkalinity, Ca, TDP, and DO concentrations, when Dissolved organic N (DON) ranged 0.1-0.5 mg L-1 and Secchi depth ranged 2-4 m. Abundance seemed to be indifferent to most limnological parameters we record including water level, conductivity, chloride, short wave radiation, Alkalinity, Ca, TDP, NO3, and DO concentrations. Abundance was higher with lower long-wave radiation levels and water temperatures < 25 C, but both may be correlates of the time of year of its peak abundance. Some tendency towards higher alkalinity (> 100 mg CaCO3 L-1) and Ca concentrations (> 45 mg L-1). At low turbidity (< 4 NTU) waters, and low Si (Fig. 3). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Occurrence",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ": lakes, pools and brackish water; Europe.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
     "metadata": {
       "source_file": "Examples to Gal.docx"
     }
@@ -141,6 +1036,376 @@
       "diagnostic_features": "",
       "ecology": "Peridiniopsis borgei is one of several subdominant dinoflagellates, common in Lake Kinneret in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The contribution of Ps borgei to total biomass was usually < 10% but on rare occasions it reached 40%. Ps borgei shows an annual cycle also of",
       "further_reading": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO2 availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834. Pollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285. Zohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol Oceanogr 39:1030-1043. P. gatunense and other dinoflagellates: Pollingher 1985, 1988, Pollingher & Hickel 1991"
+    },
+    "sections_rich": {
+      "previously_identified": [
+        {
+          "text": "Glenodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Lemmermann) Schiller 1937, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Lemmermann) Lemmermann 1910.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "yellow to golden-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "near-sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_size_or_diameter": [
+        {
+          "text": "varies significantly over an annual cycle Diameter (D): 29 – 40.5 m, median: 34 m (N=580) Height 32 – 44 m, median: 39 m (N=262) its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Physiology:",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is potentially capable of using HCO3 a C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Foodweb",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "position",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ": ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is an important food source for zooplankton in late spring, after the decline of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Zohary et al. 1994). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Environmental",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "conditions",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ": ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " biomasses > 5 g m-2 occurred more frequently but not exclusively at pH > 8.5, and over the full range of TDP, Ca and chloride concentrations, conductivities, alkalinities, and water temperatures (17-30C), when the lake was stratified.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "14,000 – 40,500m3, median: 21,300 m3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "V,m3 = 0.9405 D2.8596",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Ps.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is the largest of several species of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occurring in the lake. Its shape is almost a sphere (Plate 1), with the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cingulum",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ", or girdle, markedly transversing it in the middle. The ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "epitheca",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " is conical with a mouth-like tip at the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "apex",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (highest point), the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hypotheca",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " is broadly rounded. Sometimes the hypotheca has an extension at its bottom end, like a small “foot”. Chloroplasts are numerous and ribbon-shaped. Additional diagnostic features that are seen with electron microscopy (Plate 1 d-f): the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "sulcus",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " slightly extends into the epitheca, widening in the hypotheca and does not reach the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "antapex",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ". Sulcal margins sometimes have raised edges.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is one of several subdominant dinoflagellates, common in Lake Kinneret in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The contribution of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " to total biomass was usually < 10% but on rare occasions it reached 40%. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " shows an annual cycle also of",
+          "italic": false,
+          "bold": false
+        }
+      ]
     },
     "metadata": {
       "source_file": "Examples to Gal.docx"
