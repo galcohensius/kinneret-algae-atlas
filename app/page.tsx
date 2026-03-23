@@ -16,8 +16,8 @@ export default function HomePage() {
         />
         <div className="home-hero-scrim" aria-hidden />
         <div className="home-hero-content">
-          <h1>Kinneret Algae Atlas</h1>
-          <p className="home-hero-lead">Dr. Tamar Zohary</p>
+          <h1>Atlas of Kinneret Microalgae</h1>
+          <p className="home-hero-lead">by: Tamar Zohary, Alla Alster, Gal Cohensius</p>
         </div>
       </div>
 
