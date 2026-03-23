@@ -13,6 +13,7 @@ def _new_record(source_file: str) -> dict[str, Any]:
     return {
         "scientific_name": None,
         "images": [],
+        "image_captions": [],
         "image_counter": 1,
         "sections_buffer": {},
         "metadata": {"source_file": source_file},
@@ -38,6 +39,7 @@ def _finalize_record(record: dict[str, Any]) -> AlgaeRecord | None:
     return AlgaeRecord(
         scientific_name=record["scientific_name"],
         images=record["images"],
+        image_captions=record["image_captions"],
         sections=sections,
         metadata=record["metadata"],
     )
@@ -63,6 +65,18 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("ecology", ["ecology"]),
     ("further_reading", ["further reading"]),
 ]
+
+
+_IMAGE_CAPTION_RE = re.compile(
+    r"^(?:Plate|Figure|Fig\.)\s*\d+[A-Za-z]?\s*[\.:]",
+    flags=re.IGNORECASE,
+)
+
+
+def _looks_like_image_caption(text: str) -> bool:
+    # Captions are typically standalone paragraphs right under the
+    # corresponding image (e.g. "Plate 1. ...", "Figure 2. ...", "Fig. 1. ...").
+    return bool(_IMAGE_CAPTION_RE.match(text.strip()))
 
 
 def move_inline_further_reading_from_ecology(fields: dict[str, str]) -> None:
@@ -190,6 +204,7 @@ def extract_records(
     current = _new_record(source_file=source_file)
     current_section = default_section
     resolved_images_output_dir = Path(images_output_dir) if images_output_dir else None
+    expect_image_caption = False
 
     blocks = list(iter_docx_content_blocks(docx_path))
 
@@ -208,9 +223,18 @@ def extract_records(
             )
             current["image_counter"] += 1
             current["images"].append(image_path)
+            expect_image_caption = True
             continue
 
         text = block["text"]
+        if expect_image_caption:
+            if _looks_like_image_caption(text):
+                current["image_captions"].append(text)
+                expect_image_caption = False
+                continue
+            # We expected a caption right after the image but didn't see one.
+            # Stop skipping paragraphs so we don't drop real content.
+            expect_image_caption = False
         should_block = any(text.lower().startswith(prefix) for prefix in blocked_starts)
         record_start = None if should_block else detect_record_start(text=text, compiled_patterns=record_start_patterns)
         if record_start and following_markers:
@@ -233,6 +257,7 @@ def extract_records(
             current = _new_record(source_file=source_file)
             current["scientific_name"] = detected_name
             current_section = default_section
+            expect_image_caption = False
 
             if remaining_text:
                 _append_section_line(current, default_section, remaining_text)

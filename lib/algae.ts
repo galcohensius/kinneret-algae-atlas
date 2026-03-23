@@ -8,6 +8,7 @@ import { publicAssetPath } from "./public-path";
 const rawAlgaeRecordSchema = z.object({
   scientific_name: z.string().nullable(),
   images: z.array(z.string()).optional().default([]),
+  image_captions: z.array(z.string()).optional().default([]),
   sections: z.record(z.string(), z.string()),
   metadata: z.record(z.string(), z.unknown())
 });
@@ -21,6 +22,7 @@ export type AlgaeRecord = {
   title: string;
   scientificName: string;
   images: string[];
+  imageCaptions: string[];
   morphology: string | null;
   ecology: string | null;
   notes: string | null;
@@ -93,6 +95,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
       title: fixScientificTypography(scientificName),
       scientificName: fixScientificTypography(scientificName),
       images: (raw.images ?? []).map((p) => publicAssetPath(p)),
+      imageCaptions: raw.image_captions ?? [],
       morphology,
       ecology,
       notes,

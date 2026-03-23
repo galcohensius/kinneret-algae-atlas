@@ -75,7 +75,9 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   const sections = record.sections;
   const morphological = sections.morphological_features?.trim() ?? "";
   const plateImage = record.images[0];
+  const plateCaption = record.imageCaptions[0];
   const extraFigures = record.images.slice(1);
+  const extraFigureCaptions = record.imageCaptions.slice(1);
   const hasQuickFacts = QUICK_FACT_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
 
   return (
@@ -122,7 +124,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           <figure className="plate-figure">
             <img src={plateImage} alt={`${record.title} — microscopy / plate (from source)`} />
             <figcaption className="muted">
-              Microscopy and composite figures as in the source document (plate / panels).
+              {plateCaption ?? "Microscopy and composite figures as in the source document (plate / panels)."}
             </figcaption>
           </figure>
         ) : null}
@@ -162,7 +164,8 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <ExpandableFiguresGrid
               figures={extraFigures.map((imagePath, index) => ({
                 src: imagePath,
-                alt: `${record.title} — figure ${index + 2}`
+                alt: `${record.title} — figure ${index + 2}`,
+                caption: extraFigureCaptions[index]
               }))}
             />
           </section>

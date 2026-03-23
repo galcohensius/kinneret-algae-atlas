@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 export type ExpandableFigure = {
   src: string;
   alt: string;
+  caption?: string;
 };
 
 type ExpandableFiguresGridProps = {
@@ -50,6 +51,7 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
             >
               <img src={fig.src} alt={fig.alt} loading="lazy" />
             </button>
+            {fig.caption ? <figcaption className="muted">{fig.caption}</figcaption> : null}
           </figure>
         ))}
       </div>
@@ -71,6 +73,7 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
             <div className="figure-lightbox-inner" onClick={(e) => e.stopPropagation()}>
               <img className="figure-lightbox-img" src={current.src} alt={current.alt} />
             </div>
+            {current.caption ? <figcaption className="muted">{current.caption}</figcaption> : null}
           </>
         ) : null}
       </dialog>
