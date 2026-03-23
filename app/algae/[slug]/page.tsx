@@ -11,7 +11,7 @@ type AlgaeDetailPageProps = {
 };
 
 const FIELD_LABELS: Record<string, string> = {
-  previously_identified: "Previously identified",
+  previous_name_used: "Previous name used",
   organization: "Organization",
   color: "Color",
   cell_shape: "Cell shape",
@@ -21,12 +21,13 @@ const FIELD_LABELS: Record<string, string> = {
   morphological_features: "Morphological features",
   diagnostic_features: "Diagnostic features",
   ecology: "Ecology",
+  environmental_conditions: "Environmental conditions",
   further_reading: "Further reading"
 };
 
 /** Matches typical Word layout: short facts first, then long-form sections. */
 const QUICK_FACT_KEYS = [
-  "previously_identified",
+  "previous_name_used",
   "organization",
   "color",
   "cell_shape",
@@ -35,7 +36,8 @@ const QUICK_FACT_KEYS = [
   "biovolume_equation"
 ] as const;
 
-const NARRATIVE_AFTER_PLATE_KEYS = ["diagnostic_features", "ecology", "further_reading"] as const;
+// Render "Further reading" after "Additional figures" (site requirement).
+const NARRATIVE_AFTER_PLATE_KEYS = ["diagnostic_features", "ecology", "environmental_conditions"] as const;
 
 function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
@@ -135,20 +137,6 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         {NARRATIVE_AFTER_PLATE_KEYS.map((key) => {
           const value = sections[key]?.trim();
           if (!value) return null;
-          if (key === "further_reading") {
-            return (
-              <section
-                className="narrative-block further-reading-block"
-                key={key}
-                aria-labelledby={`${key}-heading`}
-              >
-                <h2 id={`${key}-heading`} className="section-heading">
-                  {toDisplayLabel(key)}
-                </h2>
-                <FurtherReadingList text={value} />
-              </section>
-            );
-          }
           return (
             <section className="narrative-block" key={key} aria-labelledby={`${key}-heading`}>
               <h2 id={`${key}-heading`} className="section-heading">
@@ -177,6 +165,18 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
                 caption: extraFigureCaptions[index]
               }))}
             />
+          </section>
+        ) : null}
+
+        {sections.further_reading?.trim() ? (
+          <section
+            className="narrative-block further-reading-block"
+            aria-labelledby="further_reading-heading"
+          >
+            <h2 id="further_reading-heading" className="section-heading">
+              {toDisplayLabel("further_reading")}
+            </h2>
+            <FurtherReadingList text={sections.further_reading.trim()} />
           </section>
         ) : null}
       </article>

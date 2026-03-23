@@ -97,7 +97,7 @@ def _slugify(value: str) -> str:
 
 
 FIELD_ORDER: list[tuple[str, list[str]]] = [
-    ("previously_identified", ["previously identified", "previous name used", "synonyms"]),
+    ("previous_name_used", ["previously identified", "previous name used", "synonyms"]),
     ("organization", ["organization"]),
     ("color", ["color"]),
     ("cell_shape", ["cell shape"]),
