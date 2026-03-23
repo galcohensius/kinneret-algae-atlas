@@ -5,6 +5,8 @@ node_modules/
 .next/
 out/
 coverage/
+*.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # Optional duplicate at repo root (canonical asset is public/kinneret-lake.jpg)
 /kinneret-lake.jpg

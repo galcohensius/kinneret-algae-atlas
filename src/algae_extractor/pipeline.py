@@ -107,6 +107,7 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("morphological_features", ["morphological features"]),
     ("diagnostic_features", ["diagnostic features"]),
     ("ecology", ["ecology"]),
+    ("environmental_conditions", ["environmental conditions"]),
     ("further_reading", ["further reading"]),
 ]
 
@@ -179,6 +180,64 @@ def move_inline_further_reading_from_ecology_rich(
 
     existing = fields_plain.get("further_reading", "").strip()
     fields_plain["further_reading"] = (f"{existing} {tail_plain}" if existing else tail_plain).strip()
+
+
+def move_inline_environmental_conditions_from_ecology_rich(
+    fields_plain: dict[str, str],
+    fields_styles: dict[str, list[int]],
+) -> None:
+    """
+    In some Word exports, "Environmental conditions:" is pasted as an inline
+    tail inside the Ecology field instead of being its own labeled section.
+
+    Split the last inline "Environmental conditions:" from ecology and store it
+    under `environmental_conditions`, trimming per-character styles accordingly.
+    """
+    eco_plain = fields_plain.get("ecology", "").strip()
+    if not eco_plain:
+        return
+
+    eco_styles = fields_styles.get("ecology", [])
+    if not eco_styles or len(eco_styles) != len(eco_plain):
+        eco_styles = _neutral_char_styles(eco_plain)
+
+    matches = list(re.finditer(r"(?i)\benvironmental conditions\s*:", eco_plain))
+    if not matches:
+        return
+
+    m = matches[-1]
+
+    # Keep the ecology prefix (everything before the label).
+    prefix_plain = eco_plain[: m.start()].rstrip()
+    fields_plain["ecology"] = prefix_plain
+    fields_styles["ecology"] = eco_styles[: len(prefix_plain)]
+
+    # Extract and trim the environmental conditions tail.
+    tail_raw_plain = eco_plain[m.end() :]
+    if not tail_raw_plain.strip():
+        return
+
+    left_trim = len(tail_raw_plain) - len(tail_raw_plain.lstrip())
+    right_trim = len(tail_raw_plain) - len(tail_raw_plain.rstrip())
+    tail_plain = tail_raw_plain.strip()
+
+    tail_styles_raw = eco_styles[m.end() :]
+    if right_trim > 0:
+        tail_styles = tail_styles_raw[left_trim : len(tail_styles_raw) - right_trim]
+    else:
+        tail_styles = tail_styles_raw[left_trim:]
+
+    # Append into existing value if marker parsing already filled it.
+    existing_plain = fields_plain.get("environmental_conditions", "").strip()
+    existing_styles = fields_styles.get("environmental_conditions", [])
+    if existing_plain:
+        if not existing_styles or len(existing_styles) != len(existing_plain):
+            existing_styles = _neutral_char_styles(existing_plain)
+        fields_plain["environmental_conditions"] = f"{existing_plain} {tail_plain}".strip()
+        fields_styles["environmental_conditions"] = existing_styles + [0] + tail_styles
+    else:
+        fields_plain["environmental_conditions"] = tail_plain
+        fields_styles["environmental_conditions"] = tail_styles
 
 
 def normalize_further_reading_citation_boundaries(text: str) -> str:
@@ -315,6 +374,7 @@ def _normalize_structured_fields_rich(
         fields_styles["morphological_features"] = morph_styles
 
     move_inline_further_reading_from_ecology_rich(fields_plain, fields_styles)
+    move_inline_environmental_conditions_from_ecology_rich(fields_plain, fields_styles)
 
     fr = fields_plain.get("further_reading", "").strip()
     if fr:
