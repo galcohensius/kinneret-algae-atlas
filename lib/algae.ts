@@ -55,6 +55,7 @@ function getSafeName(raw: RawAlgaeRecord, index: number): string {
 
 function sectionsWithPreferredOrder(sections: Record<string, string>): Record<string, string> {
   const ordered: Record<string, string> = {};
+  let furtherReadingValue: string | undefined;
 
   for (const key of PRIMARY_SECTION_ORDER) {
     if (sections[key]) {
@@ -63,9 +64,19 @@ function sectionsWithPreferredOrder(sections: Record<string, string>): Record<st
   }
 
   for (const [key, value] of Object.entries(sections)) {
+    if (key === "further_reading") {
+      // Ensure "Further reading" always renders last regardless of original
+      // insertion order in the source JSON.
+      furtherReadingValue = value;
+      continue;
+    }
     if (!ordered[key]) {
       ordered[key] = value;
     }
+  }
+
+  if (furtherReadingValue !== undefined) {
+    ordered["further_reading"] = furtherReadingValue;
   }
 
   return ordered;

@@ -35,4 +35,22 @@ describe("normalizeAlgaeRecords", () => {
     expect(result[0].slug).toBe("ceratium-hirundinella");
     expect(result[1].slug).toBe("ceratium-hirundinella-2");
   });
+
+  it('moves "further_reading" to the end of sections', () => {
+    const input: RawAlgaeRecord[] = [
+      {
+        scientific_name: "Example algae",
+        sections: {
+          ecology: "eco",
+          further_reading: "refs",
+          notes: "notes",
+          morphology: "morph",
+        },
+        metadata: {},
+      },
+    ];
+
+    const result = normalizeAlgaeRecords(input);
+    expect(Object.keys(result[0].sections)).toEqual(["morphology", "ecology", "notes", "further_reading"]);
+  });
 });
