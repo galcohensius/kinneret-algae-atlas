@@ -9,6 +9,51 @@ from .parsers.sections import build_section_alias_lookup, detect_section_heading
 from .reader import iter_docx_content_blocks
 
 
+def _strict_record_start_patterns(
+    compiled_patterns: list[re.Pattern[str]],
+) -> list[re.Pattern[str]]:
+    """
+    Subset of record-start patterns safe for mid-paragraph (.search) use.
+    Excludes the loose terminal-only binomial pattern to avoid false splits
+    (e.g. 'Gymnodinium never ...').
+    """
+    return [
+        p
+        for p in compiled_patterns
+        if r"\d{4}" in p.pattern or r"\(" in p.pattern
+    ]
+
+
+def _find_inline_record_split(
+    text: str,
+    strict_patterns: list[re.Pattern[str]],
+    all_patterns: list[re.Pattern[str]],
+) -> tuple[int, str, str] | None:
+    """
+    If a new taxon header appears after sentence-ending punctuation (not at the
+    start of the paragraph), return (byte_index, scientific_name, remainder).
+
+    Remainder is the same as detect_record_start(suffix)[1] (text after the name).
+    """
+    best: tuple[int, str, str] | None = None
+    for pattern in strict_patterns:
+        for m in pattern.finditer(text):
+            idx = m.start()
+            if idx == 0:
+                continue
+            before = text[:idx].rstrip()
+            if not before or before[-1] not in ".!?":
+                continue
+            suffix = text[idx:]
+            started = detect_record_start(text=suffix, compiled_patterns=all_patterns)
+            if not started:
+                continue
+            name, remainder = started
+            if best is None or idx < best[0]:
+                best = (idx, name, remainder)
+    return best
+
+
 def _new_record(source_file: str) -> dict[str, Any]:
     return {
         "scientific_name": None,
@@ -444,8 +489,19 @@ def extract_records(
     expect_image_caption = False
 
     blocks = list(iter_docx_content_blocks(docx_path))
+    pending_relaxed_record_markers = False
 
     for index, block in enumerate(blocks):
+        if block["type"] == "page_break":
+            finalized = _finalize_record(current)
+            if finalized:
+                records.append(finalized)
+            current = _new_record(source_file=source_file)
+            current_section = default_section
+            expect_image_caption = False
+            pending_relaxed_record_markers = True
+            continue
+
         if block["type"] == "image":
             if resolved_images_output_dir is None:
                 continue
@@ -472,11 +528,17 @@ def extract_records(
             # We expected a caption right after the image but didn't see one.
             # Stop skipping paragraphs so we don't drop real content.
             expect_image_caption = False
+        use_relaxed_record_markers = pending_relaxed_record_markers
+        if pending_relaxed_record_markers:
+            pending_relaxed_record_markers = False
+
         should_block = any(text.lower().startswith(prefix) for prefix in blocked_starts)
         record_start = None if should_block else detect_record_start(text=text, compiled_patterns=record_start_patterns)
-        if record_start and following_markers:
+        if record_start and following_markers and not use_relaxed_record_markers:
             lookahead_slice = [
-                candidate for candidate in blocks[index + 1 : index + 1 + marker_lookahead] if candidate["type"] == "paragraph"
+                candidate
+                for candidate in blocks[index + 1 : index + 1 + marker_lookahead]
+                if candidate["type"] == "paragraph"
             ]
             next_starts_with_marker = any(
                 candidate["text"].lower().startswith(marker)
@@ -499,6 +561,39 @@ def extract_records(
             if remaining_text:
                 _append_section_line(current, default_section, remaining_text, char_styles=None)
             continue
+
+        if not should_block:
+            strict_patterns = _strict_record_start_patterns(record_start_patterns)
+            inline = _find_inline_record_split(
+                text, strict_patterns, record_start_patterns
+            )
+            if inline:
+                split_idx, detected_name, remainder = inline
+                prefix = text[:split_idx]
+                if prefix.strip():
+                    char_styles = block.get("char_styles")
+                    prefix_trimmed = prefix.rstrip()
+                    if char_styles is not None and len(char_styles) == len(text):
+                        prefix_styles = char_styles[: len(prefix_trimmed)]
+                    else:
+                        prefix_styles = None
+                    _append_section_line(
+                        current, current_section, prefix_trimmed, prefix_styles
+                    )
+                finalized = _finalize_record(current)
+                if finalized:
+                    records.append(finalized)
+
+                current = _new_record(source_file=source_file)
+                current["scientific_name"] = detected_name
+                current_section = default_section
+                expect_image_caption = False
+
+                if remainder:
+                    _append_section_line(
+                        current, default_section, remainder, char_styles=None
+                    )
+                continue
 
         detected_section = detect_section_heading(text=text, alias_lookup=section_alias_lookup)
         if detected_section:

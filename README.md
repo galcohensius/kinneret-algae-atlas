@@ -75,7 +75,7 @@ python src/extract_algae.py
 4. Or run with explicit paths:
 
 ```bash
-python src/extract_algae.py --input "data/raw/Examples to Gal.docx" --output "data/processed/algae_records.json" --config "src/algae_extractor/default_config.json"
+python src/extract_algae.py --input "data/raw/Atlas-Examples to Gal V2.docx" --output "data/processed/algae_records.json" --config "src/algae_extractor/default_config.json"
 ```
 
 ## JSON Output Shape
@@ -91,7 +91,7 @@ Each extracted algae record currently looks like:
     "notes": "..."
   },
   "metadata": {
-    "source_file": "Examples to Gal.docx"
+    "source_file": "Atlas-Examples to Gal V2.docx"
   }
 }
 ```
