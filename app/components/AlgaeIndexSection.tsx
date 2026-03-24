@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import type { AlgaeRecord } from "../../lib/algae";
+import { partitionPlateAndGalleryImages } from "../../lib/algae";
 import { filterAlgaeByQuery } from "../../lib/algae-filter";
 
 type AlgaeIndexSectionProps = {
@@ -40,12 +41,14 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
       <p className="muted algae-index-count">{filtered.length} records</p>
 
       <div className="algae-list-grid">
-        {filtered.map((record) => (
+        {filtered.map((record) => {
+          const { plateImage } = partitionPlateAndGalleryImages(record.images, record.imageCaptions);
+          return (
           <article className="card algae-list-card" key={record.slug}>
-            {record.images[0] ? (
+            {plateImage ? (
               <img
                 className="algae-thumb"
-                src={record.images[0]}
+                src={plateImage}
                 alt={`${record.title} thumbnail`}
               />
             ) : (
@@ -55,7 +58,8 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
               <Link href={`/algae/${record.slug}/`}>{record.title}</Link>
             </h3>
           </article>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

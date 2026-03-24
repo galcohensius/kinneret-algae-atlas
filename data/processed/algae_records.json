@@ -2,10 +2,10 @@
   {
     "scientific_name": "Gymnodinium",
     "images": [
-      "/algae-images/gymnodinium/image-1.png",
-      "/algae-images/gymnodinium/image-2.png",
-      "/algae-images/gymnodinium/image-3.png",
-      "/algae-images/gymnodinium/image-4.png"
+      "/algae-images/gymnodinium/plate-1.png",
+      "/algae-images/gymnodinium/figure-1.png",
+      "/algae-images/gymnodinium/figure-2.png",
+      "/algae-images/gymnodinium/figure-3.png"
     ],
     "image_captions": [
       "Plate 1. Gymnodinium sp., showing the overall mushroom shape of half sphere covered by a cone, the cingulum region, and the whip flagellum.",
@@ -237,7 +237,7 @@
   {
     "scientific_name": "Ceratium furcoides",
     "images": [
-      "/algae-images/ceratium-furcoides/image-1.jpg"
+      "/algae-images/ceratium-furcoides/plate-1.jpg"
     ],
     "image_captions": [
       "Plate 1. Ceratium furcoides."
@@ -541,10 +541,10 @@
   {
     "scientific_name": "Ceratium hirundinella",
     "images": [
-      "/algae-images/ceratium-hirundinella/image-1.png",
-      "/algae-images/ceratium-hirundinella/image-2.png",
-      "/algae-images/ceratium-hirundinella/image-3.png",
-      "/algae-images/ceratium-hirundinella/image-4.png"
+      "/algae-images/ceratium-hirundinella/plate-1.png",
+      "/algae-images/ceratium-hirundinella/figure-1.png",
+      "/algae-images/ceratium-hirundinella/figure-2.png",
+      "/algae-images/ceratium-hirundinella/figure-3.png"
     ],
     "image_captions": [
       "Plate 1. Ceratium hirundinella (A,C,D,E) and C. furcoides (B). The most common variety, C. hirundinella var. robustum is seen in A (darkfield) and C. The cingulum and a flagellum are distinct in C. D - Cyst with red bodies and 3 typical horns. E-abnormal cells.",
@@ -946,10 +946,10 @@
   {
     "scientific_name": "Diplopsalis acuta",
     "images": [
-      "/algae-images/diplopsalis-acuta/image-1.png",
-      "/algae-images/diplopsalis-acuta/image-2.png",
-      "/algae-images/diplopsalis-acuta/image-3.png",
-      "/algae-images/diplopsalis-acuta/image-4.png"
+      "/algae-images/diplopsalis-acuta/plate-1.png",
+      "/algae-images/diplopsalis-acuta/figure-1.png",
+      "/algae-images/diplopsalis-acuta/figure-2.png",
+      "/algae-images/diplopsalis-acuta/figure-3.png"
     ],
     "image_captions": [
       "Plate 1. Diplopsalis acuta from Lake Kinneret. (a) light microscope photo showing the cingulum, and a flagellum. (b, c): SEM photos of side view (b) and hypotheca (c). SEM photos by U Pollingher and B Hickel. Light microscope photo by A Alster.",
@@ -1235,10 +1235,10 @@
   {
     "scientific_name": "Peridiniopsis borgei",
     "images": [
-      "/algae-images/peridiniopsis-borgei/image-1.png",
-      "/algae-images/peridiniopsis-borgei/image-2.png",
-      "/algae-images/peridiniopsis-borgei/image-3.png",
-      "/algae-images/peridiniopsis-borgei/image-4.png"
+      "/algae-images/peridiniopsis-borgei/plate-1.png",
+      "/algae-images/peridiniopsis-borgei/figure-1.png",
+      "/algae-images/peridiniopsis-borgei/figure-2.png",
+      "/algae-images/peridiniopsis-borgei/figure-3.png"
     ],
     "image_captions": [
       "Plate 1. Peridiniopsis borgei. Light microscope (a-c) and SEM photos (d-f) showing the diagnostic features of near-sphere shape, distinct cingulum, single “foot” in some but not all cells, pointed tip at the apex, ventral sulcus extending slightly into the epitheca, mostly into the hypotheca but not reaching the antapex (d, e), and dorsal view (f). Light microscope photos taken by Alla Alster, SEM photos by Barbara Hickel.",
@@ -1577,10 +1577,10 @@
   {
     "scientific_name": "Parvodinium cunningtonii",
     "images": [
-      "/algae-images/parvodinium-cunningtonii/image-1.png",
-      "/algae-images/parvodinium-cunningtonii/image-2.png",
-      "/algae-images/parvodinium-cunningtonii/image-3.png",
-      "/algae-images/parvodinium-cunningtonii/image-4.png"
+      "/algae-images/parvodinium-cunningtonii/plate-1.png",
+      "/algae-images/parvodinium-cunningtonii/figure-1.png",
+      "/algae-images/parvodinium-cunningtonii/figure-2.png",
+      "/algae-images/parvodinium-cunningtonii/figure-3.png"
     ],
     "image_captions": [
       "Plate 1. Light microscope (a-c) and SEM (d-f) photographs of Parvodinium cunningtonii, showing shape and typical small spines/horns extending from the hypotheca. The “mouth” shape at the top of the cell is diagnostic. Note red-brown stigma (eye spots) in a-c.",
@@ -1874,7 +1874,7 @@
   {
     "scientific_name": "Peridiniopsis cunningtonii var. quinquecuspidata",
     "images": [
-      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/image-1.png"
+      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/plate-1.png"
     ],
     "image_captions": [
       "Plate 1. (a) Parvodinium cunningtonii; (b) The dinoflagellate we refer to as Peridiniopsis cunningtonii var quinquecuspidata."
@@ -2055,7 +2055,7 @@
     "scientific_name": "Durinskia oculata",
     "images": [
       "/algae-images/durinskia-oculata/image-1.png",
-      "/algae-images/durinskia-oculata/image-2.png"
+      "/algae-images/durinskia-oculata/plate-1.png"
     ],
     "image_captions": [
       "Plate 1. Durinskia oculatum. Above: hand drawings copied from Popovsky & Pfeirster, to be replaced by Alla’s drawing; Below: photographs of a vegetative cell (left) and a protoplast emerging out of its thecae (right)."
@@ -2298,7 +2298,7 @@
     "scientific_name": "Glechodinium penardiforme",
     "images": [
       "/algae-images/glechodinium-penardiforme/image-1.png",
-      "/algae-images/glechodinium-penardiforme/image-2.png"
+      "/algae-images/glechodinium-penardiforme/plate-1.png"
     ],
     "image_captions": [
       "Plate1 : Glochidinium penardiforme. The large dinoflagellate nucleus is evident in the photo. Hand drawings from XXX"
@@ -2491,10 +2491,10 @@
   {
     "scientific_name": "Naiadinium polonicum",
     "images": [
-      "/algae-images/naiadinium-polonicum/image-1.png",
-      "/algae-images/naiadinium-polonicum/image-2.png",
-      "/algae-images/naiadinium-polonicum/image-3.png",
-      "/algae-images/naiadinium-polonicum/image-4.png"
+      "/algae-images/naiadinium-polonicum/plate-1.png",
+      "/algae-images/naiadinium-polonicum/figure-1.png",
+      "/algae-images/naiadinium-polonicum/figure-2.png",
+      "/algae-images/naiadinium-polonicum/figure-3.png"
     ],
     "image_captions": [
       "Plate 1. Naidinium (previously Peridiniopsis) polonicum Carty 2014. Light (a) and SEM (b, c) photographs, showing the general shape, cingulum and thecal plates. A, b: ventral view; c: dorsal view. (d-f): hand drawings showing the cells with their longitudinal flagellum, helmet-shaped epi-theca, round-based hypotheca, eyespot (stigma) and nucleus. The short and wide sulcus reaches the antapex (f). When viewed from the side (d) the convex-concave shape is evident. SEM photos: Barbara Hickel. Light microscope: Alla Alster. Hand drawings: from Popovsky and Pfeister 1990, after Penard 1891.",

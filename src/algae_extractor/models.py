@@ -6,8 +6,8 @@ from typing import Any
 class AlgaeRecord:
     scientific_name: str | None
     images: list[str] = field(default_factory=list)
-    # Captions extracted from Word-style "Plate/ Figure" paragraphs that
-    # appear immediately after an image.
+    # Captions from Word-style "Plate / Figure(s)" paragraphs right after an
+    # image (used for naming files plate-*.png vs figure-*.png in the extractor).
     image_captions: list[str] = field(default_factory=list)
     sections: dict[str, str] = field(default_factory=dict)
     # Rich inline styling extracted from Word runs. Values are arrays of

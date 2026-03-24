@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import { RichText } from "../../components/RichText";
 import { citationToScholarSearchUrl, splitFurtherReadingCitations } from "../../../lib/further-reading";
-import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
+import { getAlgaBySlug, getAllAlgae, partitionPlateAndGalleryImages } from "../../../lib/algae";
 
 type AlgaeDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -78,10 +78,12 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   const sections = record.sections;
   const morphological = sections.morphological_features?.trim() ?? "";
   const morphologicalRich = record.sectionsRich?.morphological_features ?? [];
-  const plateImage = record.images[0];
-  const plateCaption = record.imageCaptions[0];
-  const extraFigures = record.images.slice(1);
-  const extraFigureCaptions = record.imageCaptions.slice(1);
+  const { plateImage, plateCaption, galleryImages, galleryCaptions } = partitionPlateAndGalleryImages(
+    record.images,
+    record.imageCaptions
+  );
+  const extraFigures = galleryImages;
+  const extraFigureCaptions = galleryCaptions;
   const hasQuickFacts = QUICK_FACT_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
 
   return (

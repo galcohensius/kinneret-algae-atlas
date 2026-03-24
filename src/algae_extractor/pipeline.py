@@ -60,6 +60,8 @@ def _new_record(source_file: str) -> dict[str, Any]:
         "images": [],
         "image_captions": [],
         "image_counter": 1,
+        "plate_image_counter": 1,
+        "figure_image_counter": 1,
         # sections_buffer[section_name] = list of {text, char_styles}
         # char_styles is a per-character style bitmask aligned to `text`.
         # bit 1: italic, bit 2: bold, bit 0: neutral
@@ -158,15 +160,35 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
 
 
 _IMAGE_CAPTION_RE = re.compile(
-    r"^(?:Plate|Figure|Fig\.)\s*\d+[A-Za-z]?\s*[\.:]",
+    r"^(?:Plate|Figures?|Fig\.)\s*\d+[A-Za-z]?\s*[\.:]",
     flags=re.IGNORECASE,
 )
 
 
 def _looks_like_image_caption(text: str) -> bool:
     # Captions are typically standalone paragraphs right under the
-    # corresponding image (e.g. "Plate 1. ...", "Figure 2. ...", "Fig. 1. ...").
+    # corresponding image (e.g. "Plate 1. ...", "Plate1 : ...", "Figures 2. ...").
     return bool(_IMAGE_CAPTION_RE.match(text.strip()))
+
+
+def _image_filename_stem_from_caption_peek(peek_text: str | None) -> str | None:
+    """
+    If the paragraph after an image is a plate/figure caption, return
+    'plate' or 'figure' for use in filenames (plate-1.png, figure-1.png).
+    """
+    if not peek_text:
+        return None
+    stripped = peek_text.strip()
+    if not _looks_like_image_caption(stripped):
+        return None
+    # \s* allows both "Plate 1" and "Plate1" (no word boundary between "e" and "1").
+    if re.match(r"^Plate\s*\d", stripped, flags=re.IGNORECASE):
+        return "plate"
+    # Note: do not use \b after "Fig." — the dot is non-word, so \b does not
+    # match before the space before the figure number (e.g. "Fig. 3. …").
+    if re.match(r"^(?:Figures?|Fig\.)\s*", stripped, flags=re.IGNORECASE):
+        return "figure"
+    return None
 
 
 def move_inline_further_reading_from_ecology(fields: dict[str, str]) -> None:
@@ -452,7 +474,7 @@ def _normalize_structured_fields(
 def _save_image(
     blob: bytes,
     extension: str,
-    image_index: int,
+    filename_stem: str,
     algae_name: str,
     images_output_dir: Path,
     images_public_prefix: str,
@@ -460,7 +482,7 @@ def _save_image(
     safe_name = _slugify(algae_name)
     algae_images_dir = images_output_dir / safe_name
     algae_images_dir.mkdir(parents=True, exist_ok=True)
-    filename = f"image-{image_index}{extension}"
+    filename = f"{filename_stem}{extension}"
     output_file = algae_images_dir / filename
     output_file.write_bytes(blob)
     public_prefix = images_public_prefix.rstrip("/")
@@ -506,15 +528,29 @@ def extract_records(
             if resolved_images_output_dir is None:
                 continue
             algae_name = current.get("scientific_name") or f"record-{len(records) + 1}"
+            peek_text: str | None = None
+            if index + 1 < len(blocks):
+                nxt = blocks[index + 1]
+                if nxt["type"] == "paragraph":
+                    peek_text = nxt["text"]
+            kind = _image_filename_stem_from_caption_peek(peek_text)
+            if kind == "plate":
+                stem = f"plate-{current['plate_image_counter']}"
+                current["plate_image_counter"] += 1
+            elif kind == "figure":
+                stem = f"figure-{current['figure_image_counter']}"
+                current["figure_image_counter"] += 1
+            else:
+                stem = f"image-{current['image_counter']}"
+                current["image_counter"] += 1
             image_path = _save_image(
                 blob=block["blob"],
                 extension=block["extension"],
-                image_index=current["image_counter"],
+                filename_stem=stem,
                 algae_name=algae_name,
                 images_output_dir=resolved_images_output_dir,
                 images_public_prefix=images_public_prefix,
             )
-            current["image_counter"] += 1
             current["images"].append(image_path)
             expect_image_caption = True
             continue
