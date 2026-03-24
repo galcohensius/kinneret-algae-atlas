@@ -31,7 +31,7 @@ const FIELD_LABELS: Record<string, string> = {
   biovolume_per_cell: "Biovolume/cell",
   biovolume_equation: "Biovolume equation",
   morphological_features: "Morphological features",
-  distinctive_attributes: "Distinctive attributes",
+  distinctive_attributes: "Distinctive features",
   ecology: "Ecology",
   environmental_conditions: "Environmental conditions",
   further_reading: "Further reading"

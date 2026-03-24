@@ -63,6 +63,26 @@ class TestMoveOrphanProseAfterSampleSize(unittest.TestCase):
         self.assertIn("Main ecology starts here.", plain["ecology"])
 
 
+class TestDistinctiveFeaturesMarker(unittest.TestCase):
+    def test_splits_inline_from_biovolume(self) -> None:
+        notes = (
+            "Biovolume/cell: 73,000 µm3 (literature value, we do not routinely measure this species) "
+            "Distinctive features: Mixotroph. Too large to be grazed by zooplankton."
+        )
+        plain, _styles = _normalize_structured_fields_rich(
+            {"notes": notes},
+            {"notes": [0] * len(notes)},
+        )
+        self.assertEqual(
+            plain["biovolume_per_cell"],
+            "73,000 µm3 (literature value, we do not routinely measure this species)",
+        )
+        self.assertEqual(
+            plain["distinctive_attributes"],
+            "Mixotroph. Too large to be grazed by zooplankton.",
+        )
+
+
 class TestMoveInlineFurtherReadingFromEcology(unittest.TestCase):
     def test_moves_last_further_reading_block(self) -> None:
         eco_main = "Alpha beta. Fig. 3. Gamma ends here."

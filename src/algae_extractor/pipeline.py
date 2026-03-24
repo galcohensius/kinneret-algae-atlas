@@ -189,7 +189,10 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("biovolume_per_cell", ["biovolume/cell", "biovolume per cell"]),
     ("biovolume_equation", ["biovolume equation"]),
     ("morphological_features", ["morphological features"]),
-    ("distinctive_attributes", ["distinctive attributes", "diagnostic features"]),
+    (
+        "distinctive_attributes",
+        ["distinctive attributes", "distinctive features", "diagnostic features"],
+    ),
     ("ecology", ["ecology"]),
     ("environmental_conditions", ["environmental conditions"]),
     ("further_reading", ["further reading"]),

@@ -847,10 +847,10 @@
       "cell_shape": "a spheroid from which 2 to 5 (usually 3 or 4) horns of different lengths extend",
       "cell_diameter_d": "45-63 m long",
       "cell_length_l": "155-200 m wide (literature values)",
-      "biovolume_per_cell": "73,000 m3 (literature value, we do not routinely measure this species) Distinctive features: Mixotroph. Too large to be grazed by zooplankton.",
+      "biovolume_per_cell": "73,000 m3 (literature value, we do not routinely measure this species)",
       "biovolume_equation": "",
       "morphological_features": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions, making the cell longer than wide (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. In C. hirundinella, all or part of the horns are usually colorless, the gold-pigmented protoplast (living part of the cell) is concentrated in the cell’s center. Small red bodies are often present. The helmet shaped epitheca narrows from just above the cingulum gradually forming a long horn. The cingulum is slightly narrow. The body of the hypotheca is broad and short. It is divided into a varying number of posterior horns, usually 3, sometimes only 1. The central or median horn formed by the antapical plates is the longest. Chloroplasts are numerous and oval shaped. Small red bodies are often present. Occasionally, the longitudinal flagellum can be observed microscopically (Plate 1C). Resting cysts of C. hirundinella are triangular with one horn on each end (Plate 1D). Several morphotypes of this species occur in Lake Kinneret, the most common is var. robustum Bachman, shaped like the Eifel Tower (Plate 1 A, C). Other forms found in L Kinneret are forma gracile, type scoticum and the variety furcoides, now allocated to a separate species, C. furcoides.",
-      "distinctive_attributes": "",
+      "distinctive_attributes": "Mixotroph. Too large to be grazed by zooplankton.",
       "ecology": "C. hirundinella is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cells mL-1 (Fig. 1), and <10% contribution to total biomass. An exception was a spring bloom in 2010, a year when Peridinium gatunense didn’t bloom. Cell concentration in the epilimnion reached 50 cells mL-1 on14 March 2010, with biomass of 150 g m-2 (Fig. 1), contributing > 70% to total biomass. This species appears in the water column in January, peaks between March and June, then disappear from the water till next spring (Fig. 2). The mean abundance of C. hirundinella has increased since the mid 1990s and tends to be higher in years with no or moderate intensity Peridinium gatunense blooms. Nutrirtion is autotrophic and holozoic by means of pseudopodia. Vegetative and sexual reproduction is known. Ceratium cysts commonly appear in the Kinneret plankton in March and April (Fig. 2). They are more numerous than cysts of Peridinium gatunense even though the abundance of Ceratium vegetative cells is an order of magnitude lower than that of Peridinium.",
       "environmental_conditions": "Over the years, higher cell abundances of C. hirundinella (> 5 cells mL-1) occurred usually during thermal stratification, over the full ranges of salinities and Ca concentrations, at water temperatures ranging 16-29oC, intermediate alkalinities (90-140 mg CaCO3 L-1), and distinctly at pH > 8.5, when both nitrate and organic N (particulate and dissolved) are present (Fig. 3).",
       "further_reading": "Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285. Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
@@ -921,27 +921,7 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "73,000 m3 (literature value, we do not routinely measure this species) ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Distinctive",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "features:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Mixotroph. Too large to be grazed by zooplankton.",
+          "text": "73,000 m3 (literature value, we do not routinely measure this species)",
           "italic": false,
           "bold": false
         }
@@ -1069,6 +1049,13 @@
         },
         {
           "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "Mixotroph. Too large to be grazed by zooplankton.",
           "italic": false,
           "bold": false
         }
