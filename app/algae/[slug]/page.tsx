@@ -28,7 +28,7 @@ const FIELD_LABELS: Record<string, string> = {
   cell_shape: "Cell shape",
   cell_diameter_d: "Cell diameter (D)",
   cell_length_l: "Cell length (L)",
-  biovolume_per_cell: "Biovolume/cell",
+  biovolume_per_cell: "Cell biovolume",
   biovolume_equation: "Biovolume equation",
   morphological_features: "Morphological features",
   distinctive_attributes: "Distinctive features",
