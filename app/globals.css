@@ -120,6 +120,11 @@ main.home {
   font-weight: 700;
 }
 
+.algae-list-card-title .algae-taxon {
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
 a {
   color: #0369a1;
   text-decoration: none;
@@ -208,10 +213,19 @@ a:hover {
 .algae-title {
   font-size: 1.85rem;
   font-weight: 700;
-  font-style: italic;
+  font-style: normal;
   margin: 0 0 0.35rem;
   color: #0f172a;
   font-family: Georgia, "Times New Roman", serif;
+}
+
+.algae-title .algae-taxon {
+  font-style: italic;
+}
+
+.algae-title .algae-name-authority {
+  font-style: normal;
+  font-weight: 700;
 }
 
 .algae-profile {

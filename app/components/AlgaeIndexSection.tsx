@@ -55,7 +55,9 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
               <div className="algae-thumb algae-thumb-placeholder">No image</div>
             )}
             <h3 className="algae-list-card-title">
-              <Link href={`/algae/${record.slug}/`}>{record.title}</Link>
+              <Link href={`/algae/${record.slug}/`}>
+                <span className="algae-taxon">{record.scientificName}</span>
+              </Link>
             </h3>
           </article>
           );

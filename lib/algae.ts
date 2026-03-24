@@ -4,6 +4,7 @@ import { z } from "zod";
 import { fixScientificTypography } from "./scientific-text";
 import { filterAlgaeByQuery } from "./algae-filter";
 import { publicAssetPath } from "./public-path";
+import { splitTaxonAndAuthority, taxonNameForSlug } from "./taxon-display";
 
 const rawAlgaeRecordSchema = z.object({
   scientific_name: z.string().nullable(),
@@ -52,26 +53,6 @@ function normalizeSlugInput(input: string): string {
   return slugify(withoutBrackets);
 }
 
-/** Genus + epithet (and optional infraspecific rank) from a full taxon header; used for stable URLs. */
-export function taxonNameForSlug(fullHeader: string): string {
-  const s = fullHeader.trim();
-  if (!s) {
-    return s;
-  }
-  const binomial =
-    /^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)/.exec(
-      s
-    );
-  if (binomial) {
-    return binomial[1]!.trim();
-  }
-  const genus = /^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+)\b/.exec(s);
-  if (genus) {
-    return genus[1]!.trim();
-  }
-  return s;
-}
-
 function getSafeName(raw: RawAlgaeRecord, index: number): string {
   const trimmed = raw.scientific_name?.trim() ?? "";
   return trimmed.length > 0 ? trimmed : `unnamed-algae-${index + 1}`;
@@ -113,8 +94,8 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
   const slugCounts = new Map<string, number>();
 
   return input.map((raw, index) => {
-    const scientificName = getSafeName(raw, index);
-    const baseSlug = slugify(taxonNameForSlug(scientificName));
+    const fullScientificHeader = getSafeName(raw, index);
+    const baseSlug = slugify(taxonNameForSlug(fullScientificHeader));
     const existingCount = slugCounts.get(baseSlug) ?? 0;
     slugCounts.set(baseSlug, existingCount + 1);
     const slug = existingCount === 0 ? baseSlug : `${baseSlug}-${existingCount + 1}`;
@@ -128,10 +109,14 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
     const ecology = fixedSections.ecology ?? null;
     const notes = fixedSections.notes ?? null;
 
+    const { taxon, authority } = splitTaxonAndAuthority(fullScientificHeader);
+    const nameAuthority = authority ? fixScientificTypography(authority) : null;
+
     return {
       slug,
-      title: fixScientificTypography(scientificName),
-      scientificName: fixScientificTypography(scientificName),
+      title: fixScientificTypography(fullScientificHeader),
+      scientificName: fixScientificTypography(taxon),
+      nameAuthority,
       images: (raw.images ?? []).map((p) => publicAssetPath(p)),
       imageCaptions: raw.image_captions ?? [],
       morphology,
@@ -176,3 +161,5 @@ export async function validateAlgaeDataFile(): Promise<{ count: number }> {
   const algae = await getAllAlgae();
   return { count: algae.length };
 }
+
+export { splitTaxonAndAuthority, taxonNameForSlug };

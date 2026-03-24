@@ -94,7 +94,15 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
       </p>
 
       <header className="algae-detail-header">
-        <h1 className="algae-title">{record.title}</h1>
+        <h1 className="algae-title">
+          <span className="algae-taxon">{record.scientificName}</span>
+          {record.nameAuthority ? (
+            <>
+              {" "}
+              <span className="algae-name-authority">{record.nameAuthority}</span>
+            </>
+          ) : null}
+        </h1>
       </header>
 
       <article className="card algae-profile">

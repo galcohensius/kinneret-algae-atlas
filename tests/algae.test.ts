@@ -47,9 +47,10 @@ describe("normalizeAlgaeRecords", () => {
 
     const result = normalizeAlgaeRecords(input);
     expect(result[0].slug).toBe("ceratium-hirundinella");
-    expect(result[0].scientificName).toContain("Ceratium hirundinella");
-    expect(result[0].scientificName).toContain("1841");
-    expect(result[0].title).toBe(result[0].scientificName);
+    expect(result[0].scientificName).toBe("Ceratium hirundinella");
+    expect(result[0].nameAuthority).toContain("1841");
+    expect(result[0].title).toContain("Ceratium hirundinella");
+    expect(result[0].title).toContain("1841");
   });
 
   it('moves "further_reading" to the end of sections', () => {
