@@ -176,7 +176,10 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("organization", ["organization"]),
     ("color", ["color"]),
     ("cell_shape", ["cell shape"]),
-    ("cell_size_or_diameter", ["cell size", "cell diameter"]),
+    # Longer phrases first. Single-word "diameter"/"length" use _compile_field_marker_pattern
+    # (parentheses required before ':') so narrative "diameter: 37 µm" does not split fields.
+    ("cell_diameter_d", ["cell diameter", "cell size", "diameter"]),
+    ("cell_length_l", ["cell length", "length"]),
     ("biovolume_per_cell", ["biovolume/cell", "biovolume per cell"]),
     ("biovolume_equation", ["biovolume equation"]),
     ("morphological_features", ["morphological features"]),
@@ -185,6 +188,49 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("environmental_conditions", ["environmental conditions"]),
     ("further_reading", ["further reading"]),
 ]
+
+
+# Single-word field labels where a bare "word:" appears in narrative (e.g.
+# "diameter: 37 µm") and must not start a new field. Word uses "Diameter (D):".
+_SINGLE_WORD_MARKERS_REQUIRE_PARENS_BEFORE_COLON = frozenset({"diameter", "length"})
+
+
+def _compile_field_marker_pattern() -> re.Pattern[str]:
+    """
+    Match "Label:" or "Label (tag):" field starters in the notes blob.
+
+    Multi-word labels and most single-word labels allow an optional parenthetical
+    before the colon. Only diameter/length use a strict "(…)" before ':' so we
+    do not split on narrative "diameter: 37 µm".
+    """
+    multi: list[str] = []
+    single_loose: list[str] = []
+    single_strict: list[str] = []
+    for _name, labels in FIELD_ORDER:
+        for label in labels:
+            esc = re.escape(label)
+            if " " in label:
+                multi.append(esc)
+            elif label in _SINGLE_WORD_MARKERS_REQUIRE_PARENS_BEFORE_COLON:
+                single_strict.append(esc)
+            else:
+                single_loose.append(esc)
+    multi.sort(key=len, reverse=True)
+    single_loose.sort(key=len, reverse=True)
+    single_strict.sort(key=len, reverse=True)
+    multi_alt = "|".join(multi)
+    loose_alt = "|".join(single_loose)
+    strict_alt = "|".join(single_strict)
+    return re.compile(
+        rf"(?i)(?:\b({multi_alt})\b(?:\s*\([^)]*\))?\s*:"
+        rf"|\b({loose_alt})\b(?:\s*\([^)]*\))?\s*:"
+        rf"|\b({strict_alt})\b\s*\([^)]+\)\s*:)"
+    )
+
+
+def _marker_label_from_match(match: re.Match[str]) -> str:
+    g1, g2, g3 = match.group(1), match.group(2), match.group(3)
+    return (g1 or g2 or g3 or "").lower()
 
 
 _IMAGE_CAPTION_RE = re.compile(
@@ -410,14 +456,12 @@ def _normalize_structured_fields_rich(
     if not source_plain:
         return fields_plain, {}
 
-    label_variants = [re.escape(label) for _, labels in FIELD_ORDER for label in labels]
-    labels_regex = "|".join(label_variants)
-    marker_pattern = re.compile(rf"(?i)\b({labels_regex})\b(?:\s*\([^)]*\))?\s*:")
+    marker_pattern = _compile_field_marker_pattern()
     markers = list(marker_pattern.finditer(source_plain))
 
     if markers:
         for index, marker in enumerate(markers):
-            label_text = marker.group(1).lower()
+            label_text = _marker_label_from_match(marker)
             field_name = next(
                 (
                     name

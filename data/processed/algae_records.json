@@ -18,7 +18,8 @@
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "mushroom-like, close to a sphere",
-      "cell_size_or_diameter": "7.6 – 12.3 m, median: 9.7 m (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.",
+      "cell_diameter_d": "7.6 – 12.3 m, median: 9.7 m (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.",
+      "cell_length_l": "",
       "biovolume_per_cell": "230 - 1000m3, median: 470 m3.",
       "biovolume_equation": "Sphere, V,m3 = 4/3  (D/2)3. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.",
       "morphological_features": "Gymnodinium is a classic naked dinoflagellate, the genus includes both photosynthetic and heterotrophic species. The cingulum bisects the cell into two halves, or cones, of somewhat different shapes, the lower or hypocone is a half-sphere, the top or epicone is a bit larger and more conical. With those two cones placed one on top of the other, the cell often looks like a mushroom (Plate 1). Gymnodinium has two unequal flagella, the longitudinal whiplash flagellum extending from the bottom side of the mushroom is seen in Plate 1, the second, transverse flagellum is hidden in the cingulum.",
@@ -49,7 +50,7 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
           "text": "7.6 – 12.3 m, median: 9.7 m (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.",
           "italic": false,
@@ -247,7 +248,8 @@
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "a spheroid from which 3-4 horns of different lengths extend",
-      "cell_size_or_diameter": "30-50 m wide Cell length: 165-260 m long (literature values)",
+      "cell_diameter_d": "30-50 m wide",
+      "cell_length_l": "165-260 m long (literature values)",
       "biovolume_per_cell": "70,000 m3 (literature value, we do not routinely measure this species)",
       "biovolume_equation": "",
       "morphological_features": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. Cells of C. furcoides are slender, longer than wide, strongly dorsiventrally flattened. Epitheca gradually tapers into a long apical horn without shoulders. Hypotheca broad and short, drawn out into 2 (occasionally 1 or 3) posterior horns of different lengths. Nucleus prominent in epicone. Cysts are smooth-walled, triangular, with one narrow horn extending from each corner. Ceratium furcoides is narrower and slenderer than the much more common C. hirundinella.",
@@ -370,29 +372,16 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
-          "text": "30-50 m wide ",
+          "text": "30-50 m wide",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "cell_length_l": [
         {
-          "text": "Cell",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "length",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": ": 165-260 m long (literature values)",
+          "text": "165-260 m long (literature values)",
           "italic": false,
           "bold": false
         }
@@ -557,7 +546,8 @@
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "a spheroid from which 2 to 5 (usually 3 or 4) horns of different lengths extend",
-      "cell_size_or_diameter": "45-63 m long Cell length (L): 155-200 m wide (literature values)",
+      "cell_diameter_d": "45-63 m long",
+      "cell_length_l": "155-200 m wide (literature values)",
       "biovolume_per_cell": "73,000 m3 (literature value, we do not routinely measure this species) Distinctive features: Mixotroph. Too large to be grazed by zooplankton.",
       "biovolume_equation": "",
       "morphological_features": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions, making the cell longer than wide (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. In C. hirundinella, all or part of the horns are usually colorless, the gold-pigmented protoplast (living part of the cell) is concentrated in the cell’s center. Small red bodies are often present. The helmet shaped epitheca narrows from just above the cingulum gradually forming a long horn. The cingulum is slightly narrow. The body of the hypotheca is broad and short. It is divided into a varying number of posterior horns, usually 3, sometimes only 1. The central or median horn formed by the antapical plates is the longest. Chloroplasts are numerous and oval shaped. Small red bodies are often present. Occasionally, the longitudinal flagellum can be observed microscopically (Plate 1C). Resting cysts of C. hirundinella are triangular with one horn on each end (Plate 1D). Several morphotypes of this species occur in Lake Kinneret, the most common is var. robustum Bachman, shaped like the Eifel Tower (Plate 1 A, C). Other forms found in L Kinneret are forma gracile, type scoticum and the variety furcoides, now allocated to a separate species, C. furcoides.",
@@ -588,39 +578,16 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
-          "text": "45-63 m long ",
+          "text": "45-63 m long",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "cell_length_l": [
         {
-          "text": "Cell",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "length",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "(L):",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " 155-200 m wide (literature values)",
+          "text": "155-200 m wide (literature values)",
           "italic": false,
           "bold": false
         }
@@ -962,7 +929,8 @@
       "organization": "flagellated single cells",
       "color": "pinkish, non-pigmented (heterotrophic)",
       "cell_shape": "flat cone (Chinese hat) on top of a half-sphere (Plate 1).",
-      "cell_size_or_diameter": "34 - 47 m, median: 38 m (N=92) Cell Length (L): 17 – 23 m, median: 19 m (N=92)",
+      "cell_diameter_d": "34 - 47 m, median: 38 m (N=92)",
+      "cell_length_l": "17 – 23 m, median: 19 m (N=92)",
       "biovolume_per_cell": "15,000 – 40,000m3, median: 22,000 m3.",
       "biovolume_equation": "V,m3 = (/12) *d2 *(d+h) (volume of half sphere+cone, see Hillebrand et al. 1999).",
       "morphological_features": "Diplopsalis acuta is the only known heterotrophic (non-pigmented) thecate dinoflagellate in the lake’s pelagic waters. Its shape is distinct, of a half sphere with a Chinese hat on top of it (Plate 1). Another feature differentiating it from other Kinneret dinoflagellates is that its diameter at the cingulum is greater than its height. Its thecae are thick and distinct. Chloroplasts and stigma are lacking (heterotrophic). The protoplast is pink. The hypotheca is broadly rounded and slightly flattened dorsiventrally. Plates are not sculptured and have no reticulations.",
@@ -1085,39 +1053,16 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
-          "text": "34 - 47 m, median: 38 m (N=92) ",
+          "text": "34 - 47 m, median: 38 m (N=92)",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "cell_length_l": [
         {
-          "text": "Cell",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Length",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "(L)",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": ": 17 – 23 m, median: 19 m (N=92)",
+          "text": "17 – 23 m, median: 19 m (N=92)",
           "italic": false,
           "bold": false
         }
@@ -1251,7 +1196,8 @@
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "near-sphere",
-      "cell_size_or_diameter": "29 – 40.5 m, median: 34 m (N=580) Cell length (L): 32 – 44 m, median: 39 m (N=262) its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. Peridiniopsis borgei is potentially capable of using HCO3 as C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of Peridinium gatunense (Zohary et al. 1994).",
+      "cell_diameter_d": "29 – 40.5 m, median: 34 m (N=580) its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. Peridiniopsis borgei is potentially capable of using HCO3 as C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of Peridinium gatunense (Zohary et al. 1994).",
+      "cell_length_l": "32 – 44 m, median: 39 m (N=262)",
       "biovolume_per_cell": "14,000 – 40,500m3, median: 21,300 m3. Larger cell size in winter, smaller in summer (see Fig. 2b).",
       "biovolume_equation": "V,m3 = 0.9405 D2.8596 (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid). Distinctive attributes: mixotroph, heavily grazed by zooplankton, capable of using bicarbonate for photosynthesis.",
       "morphological_features": "Ps. borgei is the largest of several species of Peridiniopsis occurring in the lake (some of which were recently allocated to other genera). Its shape is almost a sphere (Plate 1), with the cingulum, or girdle, markedly transversing it in the middle. The epitheca is conical with a mouth-like tip at the apex (highest point), the hypotheca is broadly rounded. Sometimes the hypotheca has an extension at its bottom end, like a small “foot”. Chloroplasts are numerous and ribbon shaped. Diagnostic features seen with electron microscopy: the sulcus slightly extends into the epitheca, it widens in the hypotheca, it does not reach the antapex (Plate 1 d,e). Sulcal margins sometimes have raised edges.",
@@ -1282,39 +1228,9 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
-          "text": "29 – 40.5 m, median: 34 m (N=580) ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Cell",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "length",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "(L):",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " 32 – 44 m, median: 39 m (N=262) its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. ",
+          "text": "29 – 40.5 m, median: 34 m (N=580) its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. ",
           "italic": false,
           "bold": false
         },
@@ -1355,6 +1271,13 @@
         },
         {
           "text": " (Zohary et al. 1994).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "32 – 44 m, median: 39 m (N=262)",
           "italic": false,
           "bold": false
         }
@@ -1593,7 +1516,8 @@
       "organization": "flagellated single cells",
       "color": "golden-brown",
       "cell_shape": "prolate spheroid",
-      "cell_size_or_diameter": "varies significantly over an annual cycle Diameter (D): 21 - 30 m, median: 25.6 m (N=>2000) Height 27 – 36 m, median: 31 m (N=700)",
+      "cell_diameter_d": "varies significantly over an annual cycle 21 - 30 m, median: 25.6 m (N=>2000) Height 27 – 36 m, median: 31 m (N=700)",
+      "cell_length_l": "",
       "biovolume_per_cell": "6300 - 17500m3, median: 10500 m3.",
       "biovolume_equation": "V,m3 = 2.099 D2.623",
       "morphological_features": "Cells shape is of half sphere (hypotheca) + half cone (epitheca) of about the same diameter above it, with the cingulum traversing the cell where they connect (Plate 1). The apex of the epitheca has a “mouth” shape. Two to six spines extend from the hypotheca. The sulcus barely extends into the epitheca, it widens along the hypotheca where it does not reach the antapex. Red bodies often seen (Plate 1a-c). Resting cysts (not shown) are oval with a thick cell wall. Parvodinium. cunningtonii abundance shows a typical annual cycle of population increase in March, peak in April and decline in May-June, with low abundances but continuous presence throughout the summer (Fig. 2). It is one of the species always present in the water column. P. cunningtonii contribution to total biomass reaches 20-30% in most years. Cell size fluctuates seasonally, with largest size shortly before the peak of the annual maximum cell abundance (Fig. 2).",
@@ -1706,9 +1630,9 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
-          "text": "varies significantly over an annual cycle Diameter (D): 21 - 30 m, median: 25.6 m (N=>2000) Height 27 – 36 m, median: 31 m (N=700)",
+          "text": "varies significantly over an annual cycle 21 - 30 m, median: 25.6 m (N=>2000) Height 27 – 36 m, median: 31 m (N=700)",
           "italic": false,
           "bold": false
         }
@@ -1884,7 +1808,8 @@
       "organization": "flagellated single cells",
       "color": "golden-brown",
       "cell_shape": "sphere",
-      "cell_size_or_diameter": "(D): 13 - 18 m, median: 15.5 m (N=450)",
+      "cell_diameter_d": "(D): 13 - 18 m, median: 15.5 m (N=450)",
+      "cell_length_l": "",
       "biovolume_per_cell": "17500 - 4300m3, median: 2900 m3.",
       "biovolume_equation": "V,m3 = (4/3)  D3 (sphere) This is a smaller variety of Parvodinium cunningtonii, with cell shape that is close to a sphere (Plate 1). It is common in the lake. It was named and counted as Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard. Today, the variety is considered a species of its own, Peridiniopsis quinquecuspidata (Hansen and Flaim 2007) – but the organism they describe looks different to what we named P. cunningtonii var quinquecuspidata. As a result, we are uncertain about its correct taxonomic allocation and provide here no further data.",
       "morphological_features": "",
@@ -1915,7 +1840,7 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
           "text": "(D): 13 - 18 m, median: 15.5 m (N=450)",
           "italic": false,
@@ -2065,7 +1990,8 @@
       "organization": "single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "ovoid or spherical",
-      "cell_size_or_diameter": "17 - 26 m, median: 22 m (N=700)",
+      "cell_diameter_d": "17 - 26 m, median: 22 m (N=700)",
+      "cell_length_l": "",
       "biovolume_per_cell": "2600 - 9500m3, median: 5300 m3.",
       "biovolume_equation": "V,m3 = (4/3)  (D/2)3 (sphere) Cells are ovoid or spherical and slightly flattened dorsiventrally. The epi- and hyothecae are both half-sphere shaped, making together a sphere. The cingulum surrounds the cell at its middle. The sulcus is wide and does not reach the antapex. Chloroplasts are numerous, disc or club shaped and parietal. A stigma is present. Vegetative cells are often embedded in mucilage. Its thecae are barely seen on live cells, therefore it was initially considered to be the naked Gymnodinium. Peridiniopsis oculatum is a rare species, it appeared in the plankton in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples than in pelagic ones. Little is known about this species.",
       "morphological_features": "",
@@ -2188,7 +2114,7 @@
           "bold": false
         }
       ],
-      "cell_size_or_diameter": [
+      "cell_diameter_d": [
         {
           "text": "17 - 26 m, median: 22 m (N=700)",
           "italic": false,
@@ -2307,8 +2233,9 @@
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "golden-brown to greyish",
-      "cell_shape": "ovoid or prolate spheroid Diameter (D): 17 - 24 m, median: 21 m (N=160) Length (L): 20 – 27.5 m, median: 23 m (N=160)",
-      "cell_size_or_diameter": "",
+      "cell_shape": "ovoid or prolate spheroid",
+      "cell_diameter_d": "17 - 24 m, median: 21 m (N=160)",
+      "cell_length_l": "20 – 27.5 m, median: 23 m (N=160)",
       "biovolume_per_cell": "3050 - 8200m3, median: 5450 m3.",
       "biovolume_equation": "V,m3 = (4/3) L (D/2)2 (prolate sphaeroid) Cells are pentangular (having 5 sides) and extremely flattened dorsi-ventrally. The epitheca is conical and apiculate; the hypotheca is excavated at the antapex (its bottom side), both are equal in size. The wide, deep cingulum encircles the cell, the sulcus is broad, deep and reaches the antapex. It produces a marked concavity in the antapical profile. Chloroplasts are present. The protoplasm may have a dark granular appearance, such that it is grayish in color. Numerous highly refractive granules may or may not be present in the cell periphery. Peridiniopsis penardiforme is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008. Its mean water column abundance never exceeded 20 cells mL-1. Little is known about this species.",
       "morphological_features": "",
@@ -2334,47 +2261,21 @@
       ],
       "cell_shape": [
         {
-          "text": "ovoid or prolate spheroid ",
+          "text": "ovoid or prolate spheroid",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "cell_diameter_d": [
         {
-          "text": "Diameter",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
+          "text": "17 - 24 m, median: 21 m (N=160)",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "cell_length_l": [
         {
-          "text": "(D):",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " 17 - 24 m, median: 21 m (N=160) ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Length",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "(L):",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " 20 – 27.5 m, median: 23 m (N=160)",
+          "text": "20 – 27.5 m, median: 23 m (N=160)",
           "italic": false,
           "bold": false
         }
@@ -2506,8 +2407,9 @@
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
-      "cell_shape": "a prolate spheroid that was punched in its “belly” so that from dorsal view it is concave Diameter (D): 29-36 m, median: 32 m (N=32) Height (h): 32-42 m, median: 38 m (N=32)",
-      "cell_size_or_diameter": "",
+      "cell_shape": "a prolate spheroid that was punched in its “belly” so that from dorsal view it is concave",
+      "cell_diameter_d": "29-36 m, median: 32 m (N=32) Height (h): 32-42 m, median: 38 m (N=32)",
+      "cell_length_l": "",
       "biovolume_per_cell": "7,000-14,000m3, median: 10,000 m3. Utsa’s value: 17,000 m3",
       "biovolume_equation": ": V,m3 = ((4/3) h (D/2)2)/2 (half the volume of a prolate sphaeroid) Morphology: A medium-sized thecate dinoflagellate. The flagellated cells are oval, with the ventral side pressed in towards the other side as if it received a punch. As a result, the cell perimeter is convex when viewed from one side but concave when viewed from another (Plate 1). This concave/convex form is easily seen on a live, swimming cell: as it turns about its longitudinal axis its profile changes dramatically (Plate1e). This feature is the most obvious for identifying this species. An additional diagnostic feature is the smooth and rounded cell shape (Plate 1). The epitheca is helmet-shaped and pointed and is approximately the same size as the broadly rounded hypotheca. The chloroplasts are small and discoid or ribbon shaped. A stigma (eyespot) may be present. Resting cysts are spherical with their thick cell wall covered by dense hairlike projections (not shown).",
       "morphological_features": "",
@@ -2533,27 +2435,14 @@
       ],
       "cell_shape": [
         {
-          "text": "a prolate spheroid that was punched in its “belly” so that from dorsal view it is concave ",
+          "text": "a prolate spheroid that was punched in its “belly” so that from dorsal view it is concave",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "cell_diameter_d": [
         {
-          "text": "Diameter",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "(D):",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " 29-36 m, median: 32 m (N=32) ",
+          "text": "29-36 m, median: 32 m (N=32) ",
           "italic": false,
           "bold": false
         },

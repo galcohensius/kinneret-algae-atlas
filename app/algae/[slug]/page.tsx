@@ -16,7 +16,8 @@ const FIELD_LABELS: Record<string, string> = {
   organization: "Organization",
   color: "Color",
   cell_shape: "Cell shape",
-  cell_size_or_diameter: "Cell size (or diameter)",
+  cell_diameter_d: "Cell diameter (D)",
+  cell_length_l: "Cell length (L)",
   biovolume_per_cell: "Biovolume/cell",
   biovolume_equation: "Biovolume equation",
   morphological_features: "Morphological features",
@@ -32,7 +33,8 @@ const QUICK_FACT_KEYS = [
   "organization",
   "color",
   "cell_shape",
-  "cell_size_or_diameter",
+  "cell_diameter_d",
+  "cell_length_l",
   "biovolume_per_cell",
   "biovolume_equation"
 ] as const;
