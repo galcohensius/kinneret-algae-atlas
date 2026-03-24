@@ -39,6 +39,8 @@
     "occurrence",
     "previously identified",
     "previous name used",
+    "previously used",
+    "previous names",
     "synonyms"
   ],
   "record_following_markers": [
@@ -47,8 +49,8 @@
   "record_following_marker_lookahead": 5,
   "record_start_patterns": [
     "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+)\\s+[A-Z][a-zA-Z.-]*\\.?\\s+[A-Z][a-zA-Z.-]*\\.?\\s+\\d{4}\\b",
-    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)\\s+\\([^\\)]{2,80}\\)\\s+[A-Z][a-zA-Z.-]+",
+    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)\\s+\\([^\\)]{2,80}\\)\\s+[A-Z][a-zA-Z.-]+(?:\\s+\\d{4}\\b)?",
     "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)\\s+[A-Z][a-zA-Z.-]+\\s+\\d{4}\\b",
-    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+)(?:\\s+[^:]{0,80})?$"
+    "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)(?:\\s+(.*))?$"
   ]
 }

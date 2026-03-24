@@ -143,6 +143,34 @@ def _slugify(value: str) -> str:
     return normalized or "unnamed"
 
 
+# Epithet / genus-only prefix of a taxon header (before authority), for image dirs and parity with web slugs.
+_TAXON_SLUG_BINOMIAL_RE = re.compile(
+    r"^(?:\d+\.?\s*)?"
+    r"([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)"
+)
+_TAXON_SLUG_GENUS_RE = re.compile(r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+)\b")
+
+
+def _taxon_name_for_slug(full_header: str) -> str:
+    s = (full_header or "").strip()
+    if not s:
+        return s
+    m = _TAXON_SLUG_BINOMIAL_RE.match(s)
+    if m:
+        return m.group(1).strip()
+    m = _TAXON_SLUG_GENUS_RE.match(s)
+    if m:
+        return m.group(1).strip()
+    return s
+
+
+def _full_scientific_header(detected_name: str, remainder: str) -> str:
+    r = remainder.strip()
+    if r:
+        return f"{detected_name.strip()} {r}".strip()
+    return detected_name.strip()
+
+
 FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("previous_name_used", ["previously identified", "previous name used", "synonyms"]),
     ("organization", ["organization"]),
@@ -479,7 +507,7 @@ def _save_image(
     images_output_dir: Path,
     images_public_prefix: str,
 ) -> str:
-    safe_name = _slugify(algae_name)
+    safe_name = _slugify(_taxon_name_for_slug(algae_name))
     algae_images_dir = images_output_dir / safe_name
     algae_images_dir.mkdir(parents=True, exist_ok=True)
     filename = f"{filename_stem}{extension}"
@@ -590,12 +618,12 @@ def extract_records(
                 records.append(finalized)
 
             current = _new_record(source_file=source_file)
-            current["scientific_name"] = detected_name
+            current["scientific_name"] = _full_scientific_header(
+                detected_name, remaining_text or ""
+            )
             current_section = default_section
             expect_image_caption = False
 
-            if remaining_text:
-                _append_section_line(current, default_section, remaining_text, char_styles=None)
             continue
 
         if not should_block:
@@ -621,14 +649,12 @@ def extract_records(
                     records.append(finalized)
 
                 current = _new_record(source_file=source_file)
-                current["scientific_name"] = detected_name
+                current["scientific_name"] = _full_scientific_header(
+                    detected_name, remainder or ""
+                )
                 current_section = default_section
                 expect_image_caption = False
 
-                if remainder:
-                    _append_section_line(
-                        current, default_section, remainder, char_styles=None
-                    )
                 continue
 
         detected_section = detect_section_heading(text=text, alias_lookup=section_alias_lookup)
