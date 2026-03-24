@@ -1,6 +1,18 @@
 {
   "default_section": "notes",
   "section_aliases": {
+    "phylum": [
+      "Phylum"
+    ],
+    "class": [
+      "Class"
+    ],
+    "order": [
+      "Order"
+    ],
+    "habitat": [
+      "Habitat"
+    ],
     "morphology": [
       "Morphology",
       "Morphological description",
@@ -9,7 +21,6 @@
     ],
     "ecology": [
       "Ecology",
-      "Habitat",
       "Distribution",
       "Environment"
     ],
@@ -20,6 +31,10 @@
   },
   "record_start_blocked_prefixes": [
     "organization",
+    "phylum",
+    "class",
+    "order",
+    "habitat",
     "color",
     "cell shape",
     "cell size",

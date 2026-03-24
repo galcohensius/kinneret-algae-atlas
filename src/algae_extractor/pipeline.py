@@ -174,6 +174,10 @@ def _full_scientific_header(detected_name: str, remainder: str) -> str:
 
 
 FIELD_ORDER: list[tuple[str, list[str]]] = [
+    ("phylum", ["phylum"]),
+    ("class", ["class"]),
+    ("order", ["order"]),
+    ("habitat", ["habitat"]),
     ("previous_name_used", ["previously identified", "previous name used", "synonyms"]),
     ("organization", ["organization"]),
     ("color", ["color"]),
@@ -340,6 +344,75 @@ def move_inline_further_reading_from_ecology_rich(
     else:
         fields_plain["further_reading"] = tail_plain
         fields_styles["further_reading"] = tail_styles
+
+
+# Word sometimes runs prose after a sample-size parenthetical without a new field
+# label (e.g. "... (N=580) its cellular volume increases ... Ecology: ...").
+_SAMPLE_SIZE_THEN_PROSE_RE = re.compile(r"(?i)\(N=\d+\)\s+([a-z])")
+
+_MEASUREMENT_FIELDS_ORPHAN_TAIL = (
+    "cell_diameter_d",
+    "cell_length_l",
+    "biovolume_per_cell",
+)
+
+
+def move_orphan_prose_after_sample_size_from_measurement_fields_rich(
+    fields_plain: dict[str, str],
+    fields_styles: dict[str, list[int]],
+) -> None:
+    """
+    If a measurement line ends with ``(N=…)`` and lowercase prose follows in the
+    same parsed chunk (no ``Ecology:`` in between), move that tail into
+    ``ecology`` so narrative ``diameter: …`` inside the prose does not rely on a
+    field marker.
+    """
+    for field in _MEASUREMENT_FIELDS_ORPHAN_TAIL:
+        plain = fields_plain.get(field, "")
+        if not plain.strip():
+            continue
+        m = _SAMPLE_SIZE_THEN_PROSE_RE.search(plain)
+        if not m:
+            continue
+
+        split_at = m.start(1)
+        raw_head = plain[:split_at]
+        head_plain = raw_head.rstrip()
+        head_len = len(head_plain)
+        raw_tail = plain[head_len:]
+        left_trim = len(raw_tail) - len(raw_tail.lstrip())
+        tail_plain = raw_tail.lstrip()
+        if not tail_plain:
+            continue
+
+        styles = fields_styles.get(field, [])
+        if not styles or len(styles) != len(plain):
+            styles = _neutral_char_styles(plain)
+        head_styles = styles[:head_len]
+        tail_styles_raw = styles[head_len + left_trim :]
+        right_trim = len(raw_tail) - len(raw_tail.rstrip())
+        if right_trim > 0:
+            tail_styles = tail_styles_raw[: len(tail_styles_raw) - right_trim]
+        else:
+            tail_styles = tail_styles_raw
+        if len(head_styles) != len(head_plain):
+            head_styles = _neutral_char_styles(head_plain)
+        if len(tail_styles) != len(tail_plain):
+            tail_styles = _neutral_char_styles(tail_plain)
+
+        fields_plain[field] = head_plain
+        fields_styles[field] = head_styles
+
+        eco_plain = fields_plain.get("ecology", "").strip()
+        eco_styles = fields_styles.get("ecology", [])
+        if eco_plain:
+            if not eco_styles or len(eco_styles) != len(eco_plain):
+                eco_styles = _neutral_char_styles(eco_plain)
+            fields_plain["ecology"] = f"{tail_plain} {eco_plain}".strip()
+            fields_styles["ecology"] = tail_styles + [0] + eco_styles
+        else:
+            fields_plain["ecology"] = tail_plain
+            fields_styles["ecology"] = tail_styles
 
 
 def move_inline_environmental_conditions_from_ecology_rich(
@@ -558,6 +631,16 @@ def _normalize_structured_fields_rich(
         fields_plain["ecology"] = eco_plain
         fields_styles["ecology"] = eco_styles
 
+    for sec_key in ("phylum", "class", "order", "habitat"):
+        if fields_plain[sec_key].strip() or not raw_sections_plain.get(sec_key, "").strip():
+            continue
+        sub_plain = raw_sections_plain[sec_key].strip()
+        sub_styles = raw_sections_styles.get(sec_key, _neutral_char_styles(sub_plain))
+        if len(sub_styles) != len(sub_plain):
+            sub_styles = _neutral_char_styles(sub_plain)
+        fields_plain[sec_key] = sub_plain
+        fields_styles[sec_key] = sub_styles
+
     if raw_sections_plain.get("morphology") and not fields_plain["morphological_features"]:
         morph_plain = raw_sections_plain["morphology"].strip()
         morph_styles = raw_sections_styles.get("morphology", _neutral_char_styles(morph_plain))
@@ -565,6 +648,10 @@ def _normalize_structured_fields_rich(
             morph_styles = _neutral_char_styles(morph_plain)
         fields_plain["morphological_features"] = morph_plain
         fields_styles["morphological_features"] = morph_styles
+
+    move_orphan_prose_after_sample_size_from_measurement_fields_rich(
+        fields_plain, fields_styles
+    )
 
     move_inline_further_reading_from_ecology_rich(fields_plain, fields_styles)
     move_inline_environmental_conditions_from_ecology_rich(fields_plain, fields_styles)

@@ -12,9 +12,55 @@ if str(_SRC) not in sys.path:
 from algae_extractor.pipeline import (
     move_inline_further_reading_from_ecology,
     move_inline_further_reading_from_ecology_rich,
+    move_orphan_prose_after_sample_size_from_measurement_fields_rich,
     normalize_further_reading_citation_boundaries,
     normalize_further_reading_citation_boundaries_rich,
+    _normalize_structured_fields_rich,
 )
+
+
+class TestMoveOrphanProseAfterSampleSize(unittest.TestCase):
+    def test_moves_lowercase_tail_after_n_into_ecology(self) -> None:
+        dia = "29 – 40.5 µm, median: 34 µm (N=580) its cellular volume increases."
+        eco = "Peridiniopsis borgei is common."
+        fields_plain = {
+            "cell_diameter_d": dia,
+            "ecology": eco,
+        }
+        fields_styles = {
+            "cell_diameter_d": [0] * len(dia),
+            "ecology": [0] * len(eco),
+        }
+        move_orphan_prose_after_sample_size_from_measurement_fields_rich(
+            fields_plain, fields_styles
+        )
+        self.assertEqual(
+            fields_plain["cell_diameter_d"],
+            "29 – 40.5 µm, median: 34 µm (N=580)",
+        )
+        self.assertEqual(
+            fields_plain["ecology"],
+            "its cellular volume increases. Peridiniopsis borgei is common.",
+        )
+        self.assertEqual(len(fields_styles["cell_diameter_d"]), len(fields_plain["cell_diameter_d"]))
+        self.assertEqual(len(fields_styles["ecology"]), len(fields_plain["ecology"]))
+
+    def test_normalize_notes_splits_borgei_style_blob(self) -> None:
+        notes = (
+            "Cell diameter (D): 29 – 40.5 µm, median: 34 µm (N=580) "
+            "its tail before ecology label. "
+            "Ecology: Main ecology starts here."
+        )
+        plain, _styles = _normalize_structured_fields_rich(
+            {"notes": notes},
+            {"notes": [0] * len(notes)},
+        )
+        self.assertEqual(
+            plain["cell_diameter_d"],
+            "29 – 40.5 µm, median: 34 µm (N=580)",
+        )
+        self.assertTrue(plain["ecology"].startswith("its tail before ecology label."))
+        self.assertIn("Main ecology starts here.", plain["ecology"])
 
 
 class TestMoveInlineFurtherReadingFromEcology(unittest.TestCase):

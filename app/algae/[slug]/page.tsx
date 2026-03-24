@@ -18,6 +18,10 @@ type AlgaeDetailPageProps = {
 };
 
 const FIELD_LABELS: Record<string, string> = {
+  phylum: "Phylum",
+  class: "Class",
+  order: "Order",
+  habitat: "Habitat",
   previous_name_used: "Previous name used",
   organization: "Organization",
   color: "Color",
@@ -35,6 +39,10 @@ const FIELD_LABELS: Record<string, string> = {
 
 /** Matches typical Word layout: short facts first, then long-form sections. */
 const QUICK_FACT_KEYS = [
+  "phylum",
+  "class",
+  "order",
+  "habitat",
   "previous_name_used",
   "organization",
   "color",

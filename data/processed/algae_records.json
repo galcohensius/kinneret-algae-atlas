@@ -84,6 +84,10 @@
       ]
     ],
     "sections": {
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Gymnodiniales",
+      "habitat": "plankton",
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
@@ -99,6 +103,34 @@
       "further_reading": ""
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Gymnodiniales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "organization": [
         {
           "text": "flagellated single cells",
@@ -353,7 +385,11 @@
       ]
     ],
     "sections": {
-      "previous_name_used": "Ceratium hirunidnella var. furcoides Dujardin Phylum: Dinoflagellata Class: Dinophyceae Order: Gonyaulacales Habitat: plankton",
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Gonyaulacales",
+      "habitat": "plankton",
+      "previous_name_used": "Ceratium hirunidnella var. furcoides Dujardin",
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "a spheroid from which 3-4 horns of different lengths extend",
@@ -368,6 +404,34 @@
       "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Gonyaulacales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "previous_name_used": [
         {
           "text": "Ceratium",
@@ -413,51 +477,6 @@
           "text": "Dujardin",
           "italic": false,
           "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Phylum:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinoflagellata ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Class:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinophyceae ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Order:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Gonyaulacales ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Habitat:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " plankton",
-          "italic": false,
-          "bold": false
         }
       ],
       "organization": [
@@ -818,6 +837,10 @@
       ]
     ],
     "sections": {
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Gonyaulacales",
+      "habitat": "plankton",
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
@@ -833,6 +856,34 @@
       "further_reading": "Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285. Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Gonyaulacales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "organization": [
         {
           "text": "flagellated single cells",
@@ -1318,7 +1369,11 @@
       ]
     ],
     "sections": {
-      "previous_name_used": "Entzia acuta (Apstein) Lebour 1922 Phylum: Dinoflagellata Class: Dinophyceae Order: Peridiniales Habitat: plankton, littoral (more abundant) and pelagial,",
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Peridiniales",
+      "habitat": "plankton, littoral (more abundant) and pelagial,",
+      "previous_name_used": "Entzia acuta (Apstein) Lebour 1922",
       "organization": "flagellated single cells",
       "color": "pinkish, non-pigmented (heterotrophic)",
       "cell_shape": "flat cone (Chinese hat) on top of a half-sphere (Plate 1).",
@@ -1333,6 +1388,34 @@
       "further_reading": "Moestrup Ø, CaladoAJ. 2018. Süßwasserflora von Mitteleuropa. Dinophyceae. Vol. 6 pp. [i]-xii, [1]-560, 421 figures. Berlin: Springer Spektrum. Pollingher U, Hickel B. 1991. Pollingher U, Hickel B. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Archiv für Hydrobiologie 120(3):267-85."
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Peridiniales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, littoral (more abundant) and pelagial,",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "previous_name_used": [
         {
           "text": "Entzia",
@@ -1378,51 +1461,6 @@
           "text": "1922",
           "italic": false,
           "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Phylum:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinoflagellata ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Class:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinophyceae ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Order:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Peridiniales ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Habitat:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " plankton, littoral (more abundant) and pelagial,",
-          "italic": false,
-          "bold": false
         }
       ],
       "organization": [
@@ -1702,21 +1740,53 @@
       ]
     ],
     "sections": {
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Peridiniales",
+      "habitat": "plankton, pelagial",
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "near-sphere",
-      "cell_diameter_d": "29 – 40.5 m, median: 34 m (N=580) its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. Peridiniopsis borgei is potentially capable of using HCO3 as C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of Peridinium gatunense (Zohary et al. 1994).",
+      "cell_diameter_d": "29 – 40.5 m, median: 34 m (N=580)",
       "cell_length_l": "32 – 44 m, median: 39 m (N=262)",
       "biovolume_per_cell": "14,000 – 40,500m3, median: 21,300 m3. Larger cell size in winter, smaller in summer (see Fig. 2b).",
       "biovolume_equation": "V,m3 = 0.9405 D2.8596 (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).",
       "morphological_features": "Ps. borgei is the largest of several species of Peridiniopsis occurring in the lake (some of which were recently allocated to other genera). Its shape is almost a sphere (Plate 1), with the cingulum, or girdle, markedly transversing it in the middle. The epitheca is conical with a mouth-like tip at the apex (highest point), the hypotheca is broadly rounded. Sometimes the hypotheca has an extension at its bottom end, like a small “foot”. Chloroplasts are numerous and ribbon shaped. Diagnostic features seen with electron microscopy: the sulcus slightly extends into the epitheca, it widens in the hypotheca, it does not reach the antapex (Plate 1 d,e). Sulcal margins sometimes have raised edges.",
       "distinctive_attributes": "mixotroph, heavily grazed by zooplankton, capable of using bicarbonate for photosynthesis.",
-      "ecology": "Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The contribution of Ps borgei to total biomass was usually < 10% but on rare occasions it reached 40%. Ps borgei shows an annual cycle also of",
+      "ecology": "its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. Peridiniopsis borgei is potentially capable of using HCO3 as C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of Peridinium gatunense (Zohary et al. 1994). Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The contribution of Ps borgei to total biomass was usually < 10% but on rare occasions it reached 40%. Ps borgei shows an annual cycle also of",
       "environmental_conditions": "Ps borgei biomasses > 5 g m-2 occurred more frequently but not exclusively at pH > 8.5, and over the full range of TDP, Ca and chloride concentrations, conductivities, alkalinities, and water temperatures (17-30 C), when the lake was stratified (Fig. 3).",
       "further_reading": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO2 availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr. 39:1822-1834. Pollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285. Zohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043."
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Peridiniales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, pelagial",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "organization": [
         {
           "text": "flagellated single cells",
@@ -1740,47 +1810,7 @@
       ],
       "cell_diameter_d": [
         {
-          "text": "29 – 40.5 m, median: 34 m (N=580) its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Peridiniopsis",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "borgei",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " is potentially capable of using HCO3 as C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Peridinium",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "gatunense",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " (Zohary et al. 1994).",
+          "text": "29 – 40.5 m, median: 34 m (N=580)",
           "italic": false,
           "bold": false
         }
@@ -1906,6 +1936,51 @@
         }
       ],
       "ecology": [
+        {
+          "text": "its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is potentially capable of using HCO3 as C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Zohary et al. 1994). ",
+          "italic": false,
+          "bold": false
+        },
         {
           "text": "Peridiniopsis",
           "italic": true,
@@ -2126,7 +2201,11 @@
       ]
     ],
     "sections": {
-      "previous_name_used": "Peridiniopsis cunningtonii Lemmermann 1907 Phylum: Dinoflagellata Class: Dinophyceae Order: Peridiniales Habitat: plankton, pelagial",
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Peridiniales",
+      "habitat": "plankton, pelagial",
+      "previous_name_used": "Peridiniopsis cunningtonii Lemmermann 1907",
       "organization": "flagellated single cells",
       "color": "golden-brown",
       "cell_shape": "prolate spheroid",
@@ -2141,6 +2220,34 @@
       "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141. Pandeirada MS, Craveiro SC, Daugbjerg N, Moestrup Ø, Calado AJ. 2022. Ultrastructure and phylogeny of Parvodinium cunningtonii comb. nov. (syn. Peridiniopsis cunningtonii) and description of P. cunningtonii var. inerme var. nov. (Peridiniopsidaceae, Dinophyceae). Eur J Protistol. 86:125930."
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Peridiniales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, pelagial",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "previous_name_used": [
         {
           "text": "Peridiniopsis",
@@ -2176,51 +2283,6 @@
           "text": "1907",
           "italic": false,
           "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Phylum:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinoflagellata ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Class:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinophyceae ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Order:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Peridiniales ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Habitat:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " plankton, pelagial",
-          "italic": false,
-          "bold": false
         }
       ],
       "organization": [
@@ -2559,6 +2621,10 @@
       ]
     ],
     "sections": {
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Peridiniales",
+      "habitat": "plankton, pelagial",
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "golden-brown",
@@ -2574,6 +2640,34 @@
       "further_reading": ""
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Peridiniales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, pelagial",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "organization": [
         {
           "text": "flagellated single cells",
@@ -2782,7 +2876,11 @@
       ]
     ],
     "sections": {
-      "previous_name_used": "Peridiniopsis oculatum (Stein) Bourrelly 1968 Phylum: Dinoflagellata Class: Dinophyceae Order: Peridiniales Habitat: plankton, littoral",
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Peridiniales",
+      "habitat": "plankton, littoral",
+      "previous_name_used": "Peridiniopsis oculatum (Stein) Bourrelly 1968",
       "organization": "single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "ovoid or spherical",
@@ -2797,6 +2895,34 @@
       "further_reading": ""
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Peridiniales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "previous_name_used": [
         {
           "text": "Peridiniopsis",
@@ -2842,51 +2968,6 @@
           "text": "1968",
           "italic": false,
           "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Phylum:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinoflagellata ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Class:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Dinophyceae ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Order:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Peridiniales ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Habitat:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " plankton, littoral",
-          "italic": false,
-          "bold": false
         }
       ],
       "organization": [
@@ -3057,6 +3138,10 @@
       ]
     ],
     "sections": {
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Peridiniales",
+      "habitat": "plankton, littoral",
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "golden-brown to greyish",
@@ -3072,6 +3157,34 @@
       "further_reading": ""
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Peridiniales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "organization": [
         {
           "text": "flagellated single cells",
@@ -3371,21 +3484,53 @@
       ]
     ],
     "sections": {
+      "phylum": "Dinoflagellata",
+      "class": "Dinophyceae",
+      "order": "Thoracosphaerales",
+      "habitat": "plankton, littoral",
       "previous_name_used": "",
       "organization": "flagellated single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "a prolate spheroid that was punched in its “belly” so that from dorsal view it is concave",
-      "cell_diameter_d": "29-36 m, median: 32 m (N=32) Height (h): 32-42 m, median: 38 m (N=32)",
+      "cell_diameter_d": "29-36 m, median: 32 m (N=32)",
       "cell_length_l": "",
       "biovolume_per_cell": "7,000-14,000m3, median: 10,000 m3. Utsa’s value: 17,000 m3",
       "biovolume_equation": ": V,m3 = ((4/3) h (D/2)2)/2 (half the volume of a prolate sphaeroid) Morphology: A medium-sized thecate dinoflagellate. The flagellated cells are oval, with the ventral side pressed in towards the other side as if it received a punch. As a result, the cell perimeter is convex when viewed from one side but concave when viewed from another (Plate 1). This concave/convex form is easily seen on a live, swimming cell: as it turns about its longitudinal axis its profile changes dramatically (Plate1e). This feature is the most obvious for identifying this species. An additional diagnostic feature is the smooth and rounded cell shape (Plate 1). The epitheca is helmet-shaped and pointed and is approximately the same size as the broadly rounded hypotheca. The chloroplasts are small and discoid or ribbon shaped. A stigma (eyespot) may be present. Resting cysts are spherical with their thick cell wall covered by dense hairlike projections (not shown).",
       "morphological_features": "",
       "distinctive_attributes": "",
-      "ecology": "N. polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL-1 (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during summer-fall (Fig. 2). Higher abundance of N. polonicum is associated with the full range of Alkalinity, Ca, dissolved oxygen (not shown) and water temperatures, low concentrations of DIN (nitrate, ammonium) but intermediate concentrations of DON (Fig. 3). It tends to be more abundant at the lower salinities experienced in Lake Kinneret (Chloride < 250 mg/L) and at pH levels > 8.4 (Fig. 3).",
+      "ecology": "Height (h): 32-42 m, median: 38 m (N=32) N. polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL-1 (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during summer-fall (Fig. 2). Higher abundance of N. polonicum is associated with the full range of Alkalinity, Ca, dissolved oxygen (not shown) and water temperatures, low concentrations of DIN (nitrate, ammonium) but intermediate concentrations of DON (Fig. 3). It tends to be more abundant at the lower salinities experienced in Lake Kinneret (Chloride < 250 mg/L) and at pH levels > 8.4 (Fig. 3).",
       "environmental_conditions": "",
       "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141. Penard E. 1891. Les Peridiniacees du Lac Leman. Bull. Trav. Soc. Bot. Geneve 6: 1-63. Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120: 267-285. Popovsky, J. & Pfiester, L.A. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer."
     },
     "sections_rich": {
+      "phylum": [
+        {
+          "text": "Dinoflagellata",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Dinophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Thoracosphaerales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
       "organization": [
         {
           "text": "flagellated single cells",
@@ -3409,27 +3554,7 @@
       ],
       "cell_diameter_d": [
         {
-          "text": "29-36 m, median: 32 m (N=32) ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Height",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "(h):",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " 32-42 m, median: 38 m (N=32)",
+          "text": "29-36 m, median: 32 m (N=32)",
           "italic": false,
           "bold": false
         }
@@ -3479,6 +3604,26 @@
         }
       ],
       "ecology": [
+        {
+          "text": "Height",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "(h):",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " 32-42 m, median: 38 m (N=32) ",
+          "italic": false,
+          "bold": false
+        },
         {
           "text": "N.",
           "italic": true,
