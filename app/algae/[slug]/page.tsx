@@ -27,7 +27,7 @@ const FIELD_LABELS: Record<string, string> = {
   biovolume_per_cell: "Biovolume/cell",
   biovolume_equation: "Biovolume equation",
   morphological_features: "Morphological features",
-  diagnostic_features: "Diagnostic features",
+  distinctive_attributes: "Distinctive attributes",
   ecology: "Ecology",
   environmental_conditions: "Environmental conditions",
   further_reading: "Further reading"
@@ -39,6 +39,7 @@ const QUICK_FACT_KEYS = [
   "organization",
   "color",
   "cell_shape",
+  "distinctive_attributes",
   "cell_diameter_d",
   "cell_length_l",
   "biovolume_per_cell",
@@ -46,7 +47,7 @@ const QUICK_FACT_KEYS = [
 ] as const;
 
 // Render "Further reading" after "Additional figures" (site requirement).
-const NARRATIVE_AFTER_PLATE_KEYS = ["diagnostic_features", "ecology", "environmental_conditions"] as const;
+const NARRATIVE_AFTER_PLATE_KEYS = ["ecology", "environmental_conditions"] as const;
 
 function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
