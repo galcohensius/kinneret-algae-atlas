@@ -1,3 +1,10 @@
+/** Inline styling from Word runs (figure captions, sections, further reading). */
+export type RichSegment = {
+  text: string;
+  italic: boolean;
+  bold: boolean;
+};
+
 /** Shared algae record shape (no Node.js — safe for client components). */
 export type AlgaeRecord = {
   slug: string;
@@ -9,10 +16,12 @@ export type AlgaeRecord = {
   nameAuthority: string | null;
   images: string[];
   imageCaptions: string[];
+  /** Parallel to imageCaptions when extracted from Word with run styles. */
+  imageCaptionsRich: RichSegment[][];
   morphology: string | null;
   ecology: string | null;
   notes: string | null;
   sections: Record<string, string>;
-  sectionsRich: Record<string, { text: string; italic: boolean; bold: boolean }[]>;
+  sectionsRich: Record<string, RichSegment[]>;
   metadata: Record<string, unknown>;
 };

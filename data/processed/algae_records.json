@@ -13,6 +13,76 @@
       "Figure 2. Box plots showing the annual patterns of water column cell abundance (left) and cell size (as volume per cell; right) of Gymnodinium, showing its higher abundances in the second half of the year (left) and a typical sinusoidal pattern of cell size. Data are from 1987-2020.",
       "Figure 3. Gymnodinium abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at temperatures > 23oC, pH > 8.4, and low concentrations of NO3 and NH4. Based on field data from 1987-2020."
     ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " sp., showing the overall mushroom shape of half sphere covered by a cone, the cingulum region, and the whip flagellum.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " sp. depth-integrated wet-weight biomass (g m-2), Lake Kinneret, 1987-2016.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. Box plots showing the annual patterns of water column cell abundance (left) and cell size (as volume per cell; right) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", showing its higher abundances in the second half of the year (left) and a typical sinusoidal pattern of cell size. Data are from 1987-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Gymnodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at temperatures > 23oC, pH > 8.4, and low concentrations of NO3 and NH4. Based on field data from 1987-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
     "sections": {
       "previous_name_used": "",
       "organization": "flagellated single cells",
@@ -242,6 +312,45 @@
     ],
     "image_captions": [
       "Plate 1. Ceratium furcoides."
+    ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1.",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "furcoides.",
+          "italic": true,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "Ceratium hirunidnella var. furcoides Dujardin Phylum: Dinoflagellata Class: Dinophyceae Order: Gonyaulacales Habitat: plankton",
@@ -521,6 +630,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -540,6 +656,166 @@
       "Figure 1. Time series of the mean epilimnion abundance of vegetative cells (A) and cysts (B) of Ceratium hirundinella in Lake Kinneret, 1987-2020.",
       "Figure 2. Ceratium hirundinella – The seasonal pattern of cell abundance for vegetative cells and for cysts.",
       "Figure 3. Cell abundance of C. hirundinella as a function of several selected environmental variables, based on data from 1987-2020."
+    ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (A,C,D,E) and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "furcoides",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (B). The most common variety, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "robustum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is seen in A (darkfield) and C. The cingulum and a flagellum are distinct in C. D - Cyst with red bodies and 3 typical horns. E-abnormal cells.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of the mean epilimnion abundance of vegetative cells (A) and cysts (B) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in Lake Kinneret, 1987-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ceratium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " – The seasonal pattern of cell abundance for vegetative cells and for cysts.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. Cell abundance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hirundinella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " as a function of several selected environmental variables, based on data from 1987-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "",
@@ -904,6 +1180,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285. Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -923,6 +1206,116 @@
       "Figure 1. Diplopsalis acuta – time series of cell abundance, 1997-2020.",
       "Figure 2. Diplopsalis acuta – the annual cycle of cell abundance, 1974 -2020.",
       "Fig. 3. Diplopsalis acuta abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher alkalinity, lower Si and NH4. Based on field data from 1970-2020."
+    ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Diplopsalis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret. (a) light microscope photo showing the cingulum, and a flagellum. (b, c): SEM photos of side view (b) and hypotheca (c). SEM photos by U Pollingher and B Hickel. Light microscope photo by A Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Diplopsalis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " – time series of cell abundance, 1997-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Diplopsalis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " – the annual cycle of cell abundance, 1974 -2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fig. 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Diplopsalis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher alkalinity, lower Si and NH4. Based on field data from 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "Entzia acuta (Apstein) Lebour 1922 Phylum: Dinoflagellata Class: Dinophyceae Order: Peridiniales Habitat: plankton, littoral (more abundant) and pelagial,",
@@ -1171,6 +1564,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Moestrup Ø, CaladoAJ. 2018. Süßwasserflora von Mitteleuropa. Dinophyceae. Vol. 6 pp. [i]-xii, [1]-560, 421 figures. Berlin: Springer Spektrum. Pollingher U, Hickel B. 1991. Pollingher U, Hickel B. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Archiv für Hydrobiologie 120(3):267-85.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -1190,6 +1590,116 @@
       "Fig. 1. Time series of Ps. borgei biomass in Lake Kinneret, 1978-2020.",
       "Fig. 2. The annual cycle of Ps borgei in Lake Kinneret, 1978-2020: (a) cell abundance, (b) cell size, as volume per cell.",
       "Figure 3. Peridiiniopsis borgei biomass vs. selected environmental parameters from Lake Kinneret. Based on data for 1978-2020."
+    ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Light microscope (a-c) and SEM photos (d-f) showing the diagnostic features of near-sphere shape, distinct cingulum, single “foot” in some but not all cells, pointed tip at the apex, ventral sulcus extending slightly into the epitheca, mostly into the hypotheca but not reaching the antapex (d, e), and dorsal view (f). Light microscope photos taken by Alla Alster, SEM photos by Barbara Hickel.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fig. 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " biomass in Lake Kinneret, 1978-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fig. 2. The annual cycle of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in Lake Kinneret, 1978-2020: (a) cell abundance, (b) cell size, as volume per cell.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "borgei",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " biomass vs. selected environmental parameters from Lake Kinneret. Based on data for 1978-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "",
@@ -1491,6 +2001,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO2 availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr. 39:1822-1834. Pollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285. Zohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -1510,6 +2027,116 @@
       "Fig. 1. Parvodinium cunningtonii – time series of depth-integrated wet-weight biomass.",
       "Fig. 2. Ps. cunningtonii – The seasonal pattern of: (a) cell abundance; (b) cell size (volume per cell), showing the characteristic cycle with larger cells in winter, smaller in summer, which this species shares with several other Kinneret dinoflagellates.",
       "Figure 3. Parvodinium cunningtoni abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling."
+    ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate 1. Light microscope (a-c) and SEM (d-f) photographs of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Parvodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", showing shape and typical small spines/horns extending from the hypotheca. The “mouth” shape at the top of the cell is diagnostic. Note red-brown stigma (eye spots) in a-c.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fig. 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Parvodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " – time series of depth-integrated wet-weight biomass.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fig. 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ps.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " – The seasonal pattern of: (a) cell abundance; (b) cell size (volume per cell), showing the characteristic cycle with larger cells in winter, smaller in summer, which this species shares with several other Kinneret dinoflagellates.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Parvodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtoni",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling.",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "Peridiniopsis cunningtonii Lemmermann 1907 Phylum: Dinoflagellata Class: Dinophyceae Order: Peridiniales Habitat: plankton, pelagial",
@@ -1789,6 +2416,83 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141. Pandeirada MS, Craveiro SC, Daugbjerg N, Moestrup Ø, Calado AJ. 2022. Ultrastructure and phylogeny of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Parvodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " comb. nov. (syn. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ") and description of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "P.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "inerme",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var. nov. (Peridiniopsidaceae, Dinophyceae). Eur J Protistol. 86:125930.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -1802,6 +2506,70 @@
     ],
     "image_captions": [
       "Plate 1. (a) Parvodinium cunningtonii; (b) The dinoflagellate we refer to as Peridiniopsis cunningtonii var quinquecuspidata."
+    ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate 1. (a) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Parvodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii;",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (b) The dinoflagellate we refer to as ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "var",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "quinquecuspidata.",
+          "italic": true,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "",
@@ -1983,7 +2751,48 @@
       "/algae-images/durinskia-oculata/plate-1.png"
     ],
     "image_captions": [
+      "",
       "Plate 1. Durinskia oculatum. Above: hand drawings copied from Popovsky & Pfeirster, to be replaced by Alla’s drawing; Below: photographs of a vegetative cell (left) and a protoplast emerging out of its thecae (right)."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Durinskia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "oculatum.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Above: hand drawings copied from Popovsky & Pfeirster, to be replaced by Alla’s drawing; Below: photographs of a vegetative cell (left) and a protoplast emerging out of its thecae (right).",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "Peridiniopsis oculatum (Stein) Bourrelly 1968 Phylum: Dinoflagellata Class: Dinophyceae Order: Peridiniales Habitat: plankton, littoral",
@@ -2227,7 +3036,38 @@
       "/algae-images/glechodinium-penardiforme/plate-1.png"
     ],
     "image_captions": [
+      "",
       "Plate1 : Glochidinium penardiforme. The large dinoflagellate nucleus is evident in the photo. Hand drawings from XXX"
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate1 : ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Glochidinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "penardiforme.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " The large dinoflagellate nucleus is evident in the photo. Hand drawings from XXX",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "sections": {
       "previous_name_used": "",
@@ -2403,6 +3243,146 @@
       "Figure 2. Naiadinium polonicum The seasonal pattern of Naiadinium polonicum cell abundance. Based on data for 1970-2020.",
       "Figure 3. Naiadinium polonicum vs. selected environmental parameters from Lake Kinneret. Based on data for 1970-2020."
     ],
+    "image_captions_rich": [
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Naidinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (previously ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ") ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "polonicum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Carty 2014. Light (a) and SEM (b, c) photographs, showing the general shape, cingulum and thecal plates. A, b: ventral view; c: dorsal view. (d-f): hand drawings showing the cells with their longitudinal flagellum, helmet-shaped epi-theca, round-based hypotheca, eyespot (stigma) and nucleus. The short and wide sulcus reaches the antapex (f). When viewed from the side (d) the convex-concave shape is evident. SEM photos: Barbara Hickel. Light microscope: Alla Alster. Hand drawings: from Popovsky and Pfeister 1990, after Penard 1891.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Naiadinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "polonicum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cell abundance (mean epilimnion concentration) in Lake Kinneret, 1997-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Naiadinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "polonicum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " The seasonal pattern of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Naiadinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "polonicum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cell abundance. Based on data for 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Naiadinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "polonicum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " vs. selected environmental parameters from Lake Kinneret. Based on data for 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
     "sections": {
       "previous_name_used": "",
       "organization": "flagellated single cells",
@@ -2549,6 +3529,13 @@
         },
         {
           "text": " is associated with the full range of Alkalinity, Ca, dissolved oxygen (not shown) and water temperatures, low concentrations of DIN (nitrate, ammonium) but intermediate concentrations of DON (Fig. 3). It tends to be more abundant at the lower salinities experienced in Lake Kinneret (Chloride < 250 mg/L) and at pH levels > 8.4 (Fig. 3).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141. Penard E. 1891. Les Peridiniacees du Lac Leman. Bull. Trav. Soc. Bot. Geneve 6: 1-63. Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120: 267-285. Popovsky, J. & Pfiester, L.A. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer.",
           "italic": false,
           "bold": false
         }

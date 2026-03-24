@@ -59,6 +59,7 @@ def _new_record(source_file: str) -> dict[str, Any]:
         "scientific_name": None,
         "images": [],
         "image_captions": [],
+        "image_captions_rich": [],
         "image_counter": 1,
         "plate_image_counter": 1,
         "figure_image_counter": 1,
@@ -130,6 +131,7 @@ def _finalize_record(record: dict[str, Any]) -> AlgaeRecord | None:
         scientific_name=record["scientific_name"],
         images=record["images"],
         image_captions=record["image_captions"],
+        image_captions_rich=record["image_captions_rich"],
         sections=sections,
         sections_rich=sections_rich,
         metadata=record["metadata"],
@@ -311,16 +313,33 @@ def move_inline_further_reading_from_ecology_rich(
 
     m = matches[-1]
     prefix_plain = eco_plain[: m.start()].rstrip()
-    tail_plain = eco_plain[m.end() :].strip()
-
     fields_plain["ecology"] = prefix_plain
     fields_styles["ecology"] = eco_styles[: len(prefix_plain)]
 
-    if not tail_plain:
+    tail_raw_plain = eco_plain[m.end() :]
+    if not tail_raw_plain.strip():
         return
 
-    existing = fields_plain.get("further_reading", "").strip()
-    fields_plain["further_reading"] = (f"{existing} {tail_plain}" if existing else tail_plain).strip()
+    left_trim = len(tail_raw_plain) - len(tail_raw_plain.lstrip())
+    right_trim = len(tail_raw_plain) - len(tail_raw_plain.rstrip())
+    tail_plain = tail_raw_plain.strip()
+
+    tail_styles_raw = eco_styles[m.end() :]
+    if right_trim > 0:
+        tail_styles = tail_styles_raw[left_trim : len(tail_styles_raw) - right_trim]
+    else:
+        tail_styles = tail_styles_raw[left_trim:]
+
+    existing_plain = fields_plain.get("further_reading", "").strip()
+    existing_styles = fields_styles.get("further_reading", [])
+    if existing_plain:
+        if not existing_styles or len(existing_styles) != len(existing_plain):
+            existing_styles = _neutral_char_styles(existing_plain)
+        fields_plain["further_reading"] = f"{existing_plain} {tail_plain}".strip()
+        fields_styles["further_reading"] = existing_styles + [0] + tail_styles
+    else:
+        fields_plain["further_reading"] = tail_plain
+        fields_styles["further_reading"] = tail_styles
 
 
 def move_inline_environmental_conditions_from_ecology_rich(
@@ -381,6 +400,11 @@ def move_inline_environmental_conditions_from_ecology_rich(
         fields_styles["environmental_conditions"] = tail_styles
 
 
+_FR_CITE_BOUNDARY_RE = re.compile(
+    r"(\d{1,4}:\d+-\d+)(\s+)([A-Z][a-zA-Z'\-]+ [A-Z][a-zA-Z'\-]?)"
+)
+
+
 def normalize_further_reading_citation_boundaries(text: str) -> str:
     """
     Word often pastes the next author directly after a page range without a period
@@ -389,11 +413,41 @@ def normalize_further_reading_citation_boundaries(text: str) -> str:
     """
     if not text.strip():
         return text
-    return re.sub(
-        r"(\d{1,4}:\d+-\d+)\s+([A-Z][a-zA-Z'\-]+ [A-Z][a-zA-Z'\-]?)",
-        r"\1. \2",
-        text,
-    )
+    return _FR_CITE_BOUNDARY_RE.sub(r"\1. \3", text)
+
+
+def normalize_further_reading_citation_boundaries_rich(
+    text: str, styles: list[int]
+) -> tuple[str, list[int]]:
+    """
+    Same plain-text transformation as `normalize_further_reading_citation_boundaries`,
+    but keeps per-character style flags aligned (inserted period and space are neutral).
+    """
+    if not text.strip():
+        return text, styles
+    if len(styles) != len(text):
+        new_plain = normalize_further_reading_citation_boundaries(text)
+        return new_plain, _neutral_char_styles(new_plain)
+    out_plain: list[str] = []
+    out_styles: list[int] = []
+    last = 0
+    for m in _FR_CITE_BOUNDARY_RE.finditer(text):
+        out_plain.append(text[last : m.start()])
+        out_styles.extend(styles[last : m.start()])
+        g1, g3 = m.group(1), m.group(3)
+        out_plain.append(f"{g1}. {g3}")
+        out_styles.extend(styles[m.start(1) : m.end(1)])
+        out_styles.append(0)
+        out_styles.append(0)
+        out_styles.extend(styles[m.start(3) : m.end(3)])
+        last = m.end()
+    out_plain.append(text[last:])
+    out_styles.extend(styles[last:])
+    new_plain = "".join(out_plain)
+    if len(new_plain) != len(out_styles):
+        new_plain = normalize_further_reading_citation_boundaries(text)
+        return new_plain, _neutral_char_styles(new_plain)
+    return new_plain, out_styles
 
 
 def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]:
@@ -515,16 +569,24 @@ def _normalize_structured_fields_rich(
     move_inline_further_reading_from_ecology_rich(fields_plain, fields_styles)
     move_inline_environmental_conditions_from_ecology_rich(fields_plain, fields_styles)
 
-    fr = fields_plain.get("further_reading", "").strip()
-    if fr:
-        fields_plain["further_reading"] = normalize_further_reading_citation_boundaries(fr)
+    fr_raw = fields_plain.get("further_reading", "") or ""
+    if fr_raw.strip():
+        fr_plain = fr_raw.strip()
+        left = len(fr_raw) - len(fr_raw.lstrip())
+        right = len(fr_raw) - len(fr_raw.rstrip())
+        raw_st = fields_styles.get("further_reading", [])
+        if raw_st and len(raw_st) == len(fr_raw):
+            fr_styles = raw_st[left : len(raw_st) - right] if right else raw_st[left:]
+        else:
+            fr_styles = _neutral_char_styles(fr_plain)
+        if len(fr_styles) != len(fr_plain):
+            fr_styles = _neutral_char_styles(fr_plain)
+        new_fr, new_st = normalize_further_reading_citation_boundaries_rich(fr_plain, fr_styles)
+        fields_plain["further_reading"] = new_fr
+        fields_styles["further_reading"] = new_st
 
-    # Build rich segments for everything except further_reading (we render it as
-    # a citation list that depends on exact citation splitting).
     sections_rich: dict[str, list[dict[str, Any]]] = {}
     for key, _ in FIELD_ORDER:
-        if key == "further_reading":
-            continue
         value_plain = fields_plain.get(key, "").strip()
         if not value_plain:
             continue
@@ -561,6 +623,12 @@ def _save_image(
     return f"{public_prefix}/{safe_name}/{filename}"
 
 
+def _flush_missing_image_caption(current: dict[str, Any]) -> None:
+    """Keep `image_captions` index-aligned with `images` when no caption paragraph follows."""
+    current["image_captions"].append("")
+    current["image_captions_rich"].append([])
+
+
 def extract_records(
     docx_path: str | Path,
     config_path: str | Path | None = None,
@@ -587,18 +655,23 @@ def extract_records(
 
     for index, block in enumerate(blocks):
         if block["type"] == "page_break":
+            if expect_image_caption:
+                _flush_missing_image_caption(current)
+                expect_image_caption = False
             finalized = _finalize_record(current)
             if finalized:
                 records.append(finalized)
             current = _new_record(source_file=source_file)
             current_section = default_section
-            expect_image_caption = False
             pending_relaxed_record_markers = True
             continue
 
         if block["type"] == "image":
             if resolved_images_output_dir is None:
                 continue
+            if expect_image_caption:
+                _flush_missing_image_caption(current)
+                expect_image_caption = False
             algae_name = current.get("scientific_name") or f"record-{len(records) + 1}"
             peek_text: str | None = None
             if index + 1 < len(blocks):
@@ -630,11 +703,20 @@ def extract_records(
         text = block["text"]
         if expect_image_caption:
             if _looks_like_image_caption(text):
+                char_styles = block.get("char_styles")
+                if isinstance(char_styles, list) and len(char_styles) == len(text):
+                    caption_rich = _char_styles_to_rich_segments(text, char_styles)
+                else:
+                    caption_rich = _char_styles_to_rich_segments(
+                        text, _neutral_char_styles(text)
+                    )
                 current["image_captions"].append(text)
+                current["image_captions_rich"].append(caption_rich)
                 expect_image_caption = False
                 continue
             # We expected a caption right after the image but didn't see one.
             # Stop skipping paragraphs so we don't drop real content.
+            _flush_missing_image_caption(current)
             expect_image_caption = False
         use_relaxed_record_markers = pending_relaxed_record_markers
         if pending_relaxed_record_markers:
@@ -657,6 +739,9 @@ def extract_records(
                 record_start = None
         if record_start:
             detected_name, remaining_text = record_start
+            if expect_image_caption:
+                _flush_missing_image_caption(current)
+                expect_image_caption = False
             finalized = _finalize_record(current)
             if finalized:
                 records.append(finalized)
@@ -666,7 +751,6 @@ def extract_records(
                 detected_name, remaining_text or ""
             )
             current_section = default_section
-            expect_image_caption = False
 
             continue
 
@@ -688,6 +772,9 @@ def extract_records(
                     _append_section_line(
                         current, current_section, prefix_trimmed, prefix_styles
                     )
+                if expect_image_caption:
+                    _flush_missing_image_caption(current)
+                    expect_image_caption = False
                 finalized = _finalize_record(current)
                 if finalized:
                     records.append(finalized)
@@ -697,7 +784,6 @@ def extract_records(
                     detected_name, remainder or ""
                 )
                 current_section = default_section
-                expect_image_caption = False
 
                 continue
 
@@ -713,6 +799,8 @@ def extract_records(
             char_styles=block.get("char_styles"),
         )
 
+    if expect_image_caption:
+        _flush_missing_image_caption(current)
     finalized = _finalize_record(current)
     if finalized:
         records.append(finalized)

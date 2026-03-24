@@ -11,7 +11,9 @@ if str(_SRC) not in sys.path:
 
 from algae_extractor.pipeline import (
     move_inline_further_reading_from_ecology,
+    move_inline_further_reading_from_ecology_rich,
     normalize_further_reading_citation_boundaries,
+    normalize_further_reading_citation_boundaries_rich,
 )
 
 
@@ -58,6 +60,24 @@ class TestMoveInlineFurtherReadingFromEcology(unittest.TestCase):
         self.assertEqual(fields["further_reading"], "Real refs here.")
 
 
+class TestMoveInlineFurtherReadingFromEcologyRich(unittest.TestCase):
+    def test_moves_tail_and_merges_styles(self) -> None:
+        eco = "Eco body. Further reading: Smith A, Jones B (2000) Journal 1:1-2."
+        # Per-char styles: italic (1) on citation tail only for test
+        styles = [0] * len(eco)
+        tail_start = eco.index("Smith")
+        for i in range(tail_start, len(eco)):
+            styles[i] = 1
+        fields_plain = {"ecology": eco, "further_reading": ""}
+        fields_styles: dict[str, list[int]] = {"ecology": styles[:], "further_reading": []}
+        move_inline_further_reading_from_ecology_rich(fields_plain, fields_styles)
+        self.assertTrue(fields_plain["ecology"].endswith("Eco body."))
+        fr = fields_plain["further_reading"]
+        self.assertTrue(fr.startswith("Smith"))
+        self.assertEqual(len(fields_styles["further_reading"]), len(fr))
+        self.assertEqual(fields_styles["further_reading"][0], 1)
+
+
 class TestNormalizeFurtherReadingCitationBoundaries(unittest.TestCase):
     def test_inserts_period_before_next_author_after_pages(self) -> None:
         raw = (
@@ -70,6 +90,27 @@ class TestNormalizeFurtherReadingCitationBoundaries(unittest.TestCase):
     def test_idempotent_when_period_present(self) -> None:
         raw = "Arch Hydrobiol 120:267-285. Hansen G, Flaim G. 2007."
         self.assertEqual(normalize_further_reading_citation_boundaries(raw), raw)
+
+
+class TestNormalizeFurtherReadingCitationBoundariesRich(unittest.TestCase):
+    def test_matches_plain_and_inserts_neutral_styles(self) -> None:
+        raw = "Arch Hydrobiol 120:267-285 Hansen G"
+        styles = [0] * len(raw)
+        # Mark "Hansen G" as italic (bit 1)
+        hi = raw.index("Hansen")
+        for i in range(hi, len(raw)):
+            styles[i] = 1
+        out_plain, out_styles = normalize_further_reading_citation_boundaries_rich(raw, styles)
+        self.assertEqual(out_plain, normalize_further_reading_citation_boundaries(raw))
+        self.assertEqual(len(out_plain), len(out_styles))
+        self.assertEqual(out_plain[out_plain.index(".") + 1], " ")  # ". " inserted
+        # Period and space after pages are neutral
+        dot = out_plain.index("285.") + 3  # position of '.'
+        self.assertEqual(out_styles[dot], 0)
+        self.assertEqual(out_styles[dot + 1], 0)
+        # Hansen still italic after insertion
+        h2 = out_plain.index("Hansen")
+        self.assertEqual(out_styles[h2], 1)
 
 
 if __name__ == "__main__":

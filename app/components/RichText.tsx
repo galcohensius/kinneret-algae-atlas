@@ -1,10 +1,7 @@
 import { Fragment } from "react";
+import type { RichSegment } from "../../lib/algae-types";
 
-export type RichSegment = {
-  text: string;
-  italic: boolean;
-  bold: boolean;
-};
+export type { RichSegment };
 
 export function RichText({ segments }: { segments: RichSegment[] }) {
   return (

@@ -1,11 +1,14 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import type { RichSegment } from "../../lib/algae-types";
+import { RichText } from "./RichText";
 
 export type ExpandableFigure = {
   src: string;
   alt: string;
   caption?: string;
+  captionRich?: RichSegment[];
 };
 
 type ExpandableFiguresGridProps = {
@@ -51,7 +54,13 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
             >
               <img src={fig.src} alt={fig.alt} loading="lazy" />
             </button>
-            {fig.caption ? <figcaption className="muted">{fig.caption}</figcaption> : null}
+            {fig.captionRich && fig.captionRich.length > 0 ? (
+              <figcaption className="muted">
+                <RichText segments={fig.captionRich} />
+              </figcaption>
+            ) : fig.caption ? (
+              <figcaption className="muted">{fig.caption}</figcaption>
+            ) : null}
           </figure>
         ))}
       </div>
@@ -73,7 +82,13 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
             <div className="figure-lightbox-inner" onClick={(e) => e.stopPropagation()}>
               <img className="figure-lightbox-img" src={current.src} alt={current.alt} />
             </div>
-            {current.caption ? <figcaption className="muted">{current.caption}</figcaption> : null}
+            {current.captionRich && current.captionRich.length > 0 ? (
+              <figcaption className="muted">
+                <RichText segments={current.captionRich} />
+              </figcaption>
+            ) : current.caption ? (
+              <figcaption className="muted">{current.caption}</figcaption>
+            ) : null}
           </>
         ) : null}
       </dialog>

@@ -16,23 +16,52 @@ const SCHOLAR_BASE = "https://scholar.google.com/scholar?hl=en&q=";
 const SPLIT_BEFORE_NEW_CITATION =
   /\.(?:\s+)(?=[A-Z][a-zA-ZÀ-ÿ\-]+ [A-Z],|[A-Z][a-zA-ZÀ-ÿ\-]+ & [A-Z][a-zA-ZÀ-ÿ\-]+|[A-Z][A-Za-zÀ-ÿ\-]+(?:,\s+[A-Z][A-Za-zÀ-ÿ\-.]+)+\s*\([12]\d{3}\)|[A-Z]\.\s+[a-z])/g;
 
-export function splitFurtherReadingCitations(text: string): string[] {
-  const normalized = text.replace(/\s+/g, " ").trim();
+export function normalizeFurtherReadingWhitespace(blob: string): string {
+  return blob.replace(/\s+/g, " ").trim();
+}
+
+export type FurtherReadingIndexedPart = {
+  normStart: number;
+  normEnd: number;
+  citation: string;
+  /** When true, the site appends a final "." after the normalized slice (Scholar URL includes it). */
+  needsTrailingPeriod: boolean;
+};
+
+function appendFurtherReadingPart(
+  items: FurtherReadingIndexedPart[],
+  normalized: string,
+  start: number,
+  end: number
+): void {
+  const slice = normalized.slice(start, end);
+  const tstart = start + (slice.length - slice.trimStart().length);
+  const tend = start + slice.trimEnd().length;
+  if (tstart >= tend) return;
+  const base = normalized.slice(tstart, tend);
+  const needsTrailingPeriod = !/\.\s*$/.test(base);
+  const citation = needsTrailingPeriod ? `${base.trim()}.` : base.trim();
+  items.push({ normStart: tstart, normEnd: tend, citation, needsTrailingPeriod });
+}
+
+export function splitFurtherReadingIndexed(blob: string): FurtherReadingIndexedPart[] {
+  const normalized = normalizeFurtherReadingWhitespace(blob);
   if (!normalized) return [];
 
-  const parts: string[] = [];
+  const items: FurtherReadingIndexedPart[] = [];
   let start = 0;
   SPLIT_BEFORE_NEW_CITATION.lastIndex = 0;
   let m: RegExpExecArray | null;
   while ((m = SPLIT_BEFORE_NEW_CITATION.exec(normalized)) !== null) {
-    const segment = normalized.slice(start, m.index + 1).trim();
-    if (segment) parts.push(segment);
+    appendFurtherReadingPart(items, normalized, start, m.index + 1);
     start = m.index + m[0].length;
   }
-  const tail = normalized.slice(start).trim();
-  if (tail) parts.push(tail);
+  appendFurtherReadingPart(items, normalized, start, normalized.length);
+  return items;
+}
 
-  return parts.map((s) => (/\.\s*$/.test(s) ? s.trim() : `${s.trim()}.`));
+export function splitFurtherReadingCitations(text: string): string[] {
+  return splitFurtherReadingIndexed(text).map((p) => p.citation);
 }
 
 export function citationToScholarSearchUrl(citation: string): string {

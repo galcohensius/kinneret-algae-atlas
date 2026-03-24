@@ -6,24 +6,19 @@ import { filterAlgaeByQuery } from "./algae-filter";
 import { publicAssetPath } from "./public-path";
 import { splitTaxonAndAuthority, taxonNameForSlug } from "./taxon-display";
 
+const richSegmentSchema = z.object({
+  text: z.string(),
+  italic: z.boolean(),
+  bold: z.boolean(),
+});
+
 const rawAlgaeRecordSchema = z.object({
   scientific_name: z.string().nullable(),
   images: z.array(z.string()).optional().default([]),
   image_captions: z.array(z.string()).optional().default([]),
+  image_captions_rich: z.array(z.array(richSegmentSchema)).optional().default([]),
   sections: z.record(z.string(), z.string()),
-  sections_rich: z
-    .record(
-      z.string(),
-      z.array(
-        z.object({
-          text: z.string(),
-          italic: z.boolean(),
-          bold: z.boolean(),
-        })
-      )
-    )
-    .optional()
-    .default({}),
+  sections_rich: z.record(z.string(), z.array(richSegmentSchema)).optional().default({}),
   metadata: z.record(z.string(), z.unknown())
 });
 
@@ -119,6 +114,13 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
       nameAuthority,
       images: (raw.images ?? []).map((p) => publicAssetPath(p)),
       imageCaptions: raw.image_captions ?? [],
+      imageCaptionsRich: (raw.image_captions_rich ?? []).map((arr) =>
+        arr.map((seg) => ({
+          text: fixScientificTypography(seg.text),
+          italic: seg.italic,
+          bold: seg.bold,
+        }))
+      ),
       morphology,
       ecology,
       notes,

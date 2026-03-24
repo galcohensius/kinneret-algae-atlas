@@ -9,6 +9,8 @@ class AlgaeRecord:
     # Captions from Word-style "Plate / Figure(s)" paragraphs right after an
     # image (used for naming files plate-*.png vs figure-*.png in the extractor).
     image_captions: list[str] = field(default_factory=list)
+    # Parallel to image_captions: Word run-level italic/bold per caption paragraph.
+    image_captions_rich: list[list[dict[str, Any]]] = field(default_factory=list)
     sections: dict[str, str] = field(default_factory=dict)
     # Rich inline styling extracted from Word runs. Values are arrays of
     # segments {text, italic, bold}.

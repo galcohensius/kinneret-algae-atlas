@@ -3,7 +3,13 @@ import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import { RichText } from "../../components/RichText";
-import { citationToScholarSearchUrl, splitFurtherReadingCitations } from "../../../lib/further-reading";
+import type { RichSegment } from "../../../lib/algae-types";
+import {
+  citationToScholarSearchUrl,
+  normalizeFurtherReadingWhitespace,
+  splitFurtherReadingIndexed,
+} from "../../../lib/further-reading";
+import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
 
@@ -46,21 +52,46 @@ function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
 }
 
-function FurtherReadingList({ text }: { text: string }) {
-  const items = splitFurtherReadingCitations(text);
+function FurtherReadingList({
+  text,
+  segments,
+}: {
+  text: string;
+  segments?: RichSegment[];
+}) {
+  const indexed = splitFurtherReadingIndexed(text.trim());
+  const joined = (segments ?? []).map((s) => s.text).join("");
+  const canRich =
+    (segments?.length ?? 0) > 0 &&
+    normalizeFurtherReadingWhitespace(joined) === normalizeFurtherReadingWhitespace(text.trim());
+
   return (
     <ol className="further-reading-list">
-      {items.map((citation, index) => (
-        <li key={`${index}-${citation.slice(0, 24)}`}>
-          <a
-            href={citationToScholarSearchUrl(citation)}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {citation}
-          </a>
-        </li>
-      ))}
+      {indexed.map((item, index) => {
+        const sliced =
+          canRich && segments
+            ? sliceRichSegmentsByPlainRange(segments, item.normStart, item.normEnd)
+            : [];
+        const useRich = canRich && sliced.some((s) => s.text.length > 0);
+        return (
+          <li key={`${index}-${item.citation.slice(0, 24)}`}>
+            <a
+              href={citationToScholarSearchUrl(item.citation)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {useRich ? (
+                <>
+                  <RichText segments={sliced} />
+                  {item.needsTrailingPeriod ? "." : null}
+                </>
+              ) : (
+                item.citation
+              )}
+            </a>
+          </li>
+        );
+      })}
     </ol>
   );
 }
@@ -81,9 +112,17 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   const sections = record.sections;
   const morphological = sections.morphological_features?.trim() ?? "";
   const morphologicalRich = record.sectionsRich?.morphological_features ?? [];
-  const { plateImage, plateCaption, galleryImages, galleryCaptions } = partitionPlateAndGalleryImages(
+  const {
+    plateImage,
+    plateCaption,
+    plateCaptionRich,
+    galleryImages,
+    galleryCaptions,
+    galleryCaptionsRich,
+  } = partitionPlateAndGalleryImages(
     record.images,
-    record.imageCaptions
+    record.imageCaptions,
+    record.imageCaptionsRich
   );
   const extraFigures = galleryImages;
   const extraFigureCaptions = galleryCaptions;
@@ -139,7 +178,13 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           <figure className="plate-figure">
             <img src={plateImage} alt={`${record.title} — microscopy / plate (from source)`} />
             <figcaption className="muted">
-              {plateCaption ?? "Microscopy and composite figures as in the source document (plate / panels)."}
+              {plateCaptionRich && plateCaptionRich.length > 0 ? (
+                <RichText segments={plateCaptionRich} />
+              ) : plateCaption?.trim() ? (
+                plateCaption
+              ) : (
+                "Microscopy and composite figures as in the source document (plate / panels)."
+              )}
             </figcaption>
           </figure>
         ) : null}
@@ -172,7 +217,8 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
               figures={extraFigures.map((imagePath, index) => ({
                 src: imagePath,
                 alt: `${record.title} — figure ${index + 2}`,
-                caption: extraFigureCaptions[index]
+                caption: extraFigureCaptions[index],
+                captionRich: galleryCaptionsRich[index],
               }))}
             />
           </section>
@@ -186,7 +232,10 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <h2 id="further_reading-heading" className="section-heading">
               {toDisplayLabel("further_reading")}
             </h2>
-            <FurtherReadingList text={sections.further_reading.trim()} />
+            <FurtherReadingList
+              text={sections.further_reading.trim()}
+              segments={record.sectionsRich?.further_reading}
+            />
           </section>
         ) : null}
       </article>
