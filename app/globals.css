@@ -231,10 +231,6 @@ a:hover {
   border-bottom: 1px solid #e2e8f0;
 }
 
-.quick-facts .section-heading {
-  margin-top: 0;
-}
-
 .quick-facts-list {
   display: grid;
   grid-template-columns: minmax(10rem, 12rem) 1fr;

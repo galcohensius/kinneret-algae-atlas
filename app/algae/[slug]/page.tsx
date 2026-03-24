@@ -99,10 +99,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
 
       <article className="card algae-profile">
         {hasQuickFacts ? (
-          <section className="quick-facts" aria-labelledby="quick-facts-heading">
-            <h2 id="quick-facts-heading" className="section-heading">
-              Overview
-            </h2>
+          <section className="quick-facts" aria-label="Taxonomy, size, and biovolume">
             <dl className="quick-facts-list">
               {QUICK_FACT_KEYS.map((key) => {
                 const value = sections[key]?.trim();
