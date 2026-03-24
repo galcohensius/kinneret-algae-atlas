@@ -82,6 +82,16 @@ main.home {
   line-height: 1.45;
 }
 
+.home-hero-lead a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.home-hero-lead a:hover {
+  opacity: 0.92;
+}
+
 .home-below-hero {
   max-width: 980px;
   margin: 0 auto;

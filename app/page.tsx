@@ -17,7 +17,31 @@ export default function HomePage() {
         <div className="home-hero-scrim" aria-hidden />
         <div className="home-hero-content">
           <h1>Atlas of Kinneret Microalgae</h1>
-          <p className="home-hero-lead">Tamar Zohary, Alla Alster, and Gal Cohensius</p>
+          <p className="home-hero-lead">
+            <a
+              href="https://scholar.google.com/citations?user=hwxUAKsAAAAJ&hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tamar Zohary
+            </a>
+            {", "}
+            <a
+              href="https://www.linkedin.com/in/alla-alster-5876a422/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Alla Alster
+            </a>
+            {", and "}
+            <a
+              href="https://github.com/galcohensius"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Gal Cohensius
+            </a>
+          </p>
         </div>
       </div>
 
