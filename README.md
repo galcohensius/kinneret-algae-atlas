@@ -122,13 +122,18 @@ The Next.js app is configured for **static export** (`output: "export"`). Deploy
 2. **Settings → Pages → Build and deployment:** set **Source** to **GitHub Actions**.
 3. On each push to `main`, the workflow **Deploy to GitHub Pages** builds `out/` and publishes it.
 
-Your site URL will be:
+With the **custom domain** in `public/CNAME`, GitHub Pages serves the site at the **root** of that domain. The deploy workflow therefore builds **without** `NEXT_PUBLIC_BASE_PATH` (same as a local `npm run build`), so asset and app paths stay `/…` and do not break.
 
-`https://<username>.github.io/<repository-name>/`
+If you ever need the **default project URL** only (`https://<username>.github.io/<repository-name>/`), add a build env in `.github/workflows/deploy-pages.yml`:
 
-The workflow sets `NEXT_PUBLIC_BASE_PATH` to `/<repository-name>` so assets and routes work under that prefix. For a **user/org site** served from the repo root (`username.github.io`), clear `basePath` by changing the workflow env (or build locally with `NEXT_PUBLIC_BASE_PATH` unset).
+```yaml
+env:
+  NEXT_PUBLIC_BASE_PATH: /<repository-name>
+```
 
-Local static build (no subpath):
+(use the real repository name, no trailing slash). Do not use that together with a custom domain served at `/`.
+
+Local static build (root, no subpath):
 
 ```bash
 npm run build
