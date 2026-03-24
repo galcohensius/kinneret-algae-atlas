@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import type { AlgaeRecord } from "../../lib/algae";
-import { partitionPlateAndGalleryImages } from "../../lib/algae";
+import type { AlgaeRecord } from "../../lib/algae-types";
+import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
 import { filterAlgaeByQuery } from "../../lib/algae-filter";
 
 type AlgaeIndexSectionProps = {

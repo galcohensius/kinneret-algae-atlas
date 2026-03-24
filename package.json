@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "validate:data": "tsx scripts/validate-algae-data.ts"
+    "validate:data": "tsx scripts/validate-algae-data.ts",
+    "build:atlas": "npm run validate:data && next build",
+    "sync:atlas": "python src/extract_algae.py --input \"data/raw/Atlas-Examples to Gal V2.docx\" --output \"data/processed/algae_records.json\" --images-dir public/algae-images && npm run build:atlas"
   },
   "dependencies": {
     "next": "latest",

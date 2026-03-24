@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import { RichText } from "../../components/RichText";
 import { citationToScholarSearchUrl, splitFurtherReadingCitations } from "../../../lib/further-reading";
-import { getAlgaBySlug, getAllAlgae, partitionPlateAndGalleryImages } from "../../../lib/algae";
+import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
+import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
 
 type AlgaeDetailPageProps = {
   params: Promise<{ slug: string }>;
