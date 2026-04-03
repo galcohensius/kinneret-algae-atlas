@@ -43,16 +43,21 @@ describe("splitFurtherReadingCitations", () => {
     expect(splitFurtherReadingCitations(one)).toHaveLength(1);
   });
 
-  it("splits Peridinium gatunense-style topic list without periods between refs", () => {
+  it("splits bundled topic further reading (year→heading: and year→P. epithet) into six blocks", () => {
     const text =
       "Review of the literature on P. gatunense in Lake Kinneret: Zohary et al. 2014 Morphology & systematics: Pollingher 1978 p 261, Pollingher & Hickel 1988 P. gatunense as a component of the Kinneret phytoplankton or food web: Pollingher & Berman 1975, Pollingher 1981, 1986, Zohary 2004, Zohary et al. 1994 P. gatunense life cycle: Pollingher & Serruya 1976, Pollingher 1978, Alster et al. 2006 P. gatunense physiology: Pollingher & Zemel 1981, Wynne et al 1984, Berman-Frank et al 1995, Viner-Mozzini et al 2003, Zohary et al 2000, Alster et al 2007, Vardi et al 2007, P. gatunense and other dinoflagellates: Pollingher 1985, 1988, Pollingher & Hickel 1991";
     const parts = splitFurtherReadingCitations(text);
-    expect(parts.length).toBeGreaterThanOrEqual(18);
-    expect(parts.some((p) => p.includes("Zohary et al. 2014"))).toBe(true);
-    expect(parts.some((p) => p.includes("Pollingher & Hickel 1988"))).toBe(true);
-    expect(parts.some((p) => p.includes("Pollingher 1986"))).toBe(true);
-    expect(parts.some((p) => p.includes("Berman-Frank et al 1995"))).toBe(true);
-    expect(parts[parts.length - 1]).toContain("Pollingher & Hickel 1991");
+    expect(parts).toHaveLength(6);
+    expect(parts[0]).toMatch(/Review of the literature on P\. gatunense[\s\S]*Zohary et al\. 2014/);
+    expect(parts[1]).toMatch(/^Morphology & systematics:/);
+    expect(parts[1]).toContain("Pollingher & Hickel 1988");
+    expect(parts[2]).toMatch(/^P\. gatunense as a component/);
+    expect(parts[2]).toContain("Zohary et al. 1994");
+    expect(parts[3]).toMatch(/^P\. gatunense life cycle:/);
+    expect(parts[4]).toMatch(/^P\. gatunense physiology:/);
+    expect(parts[4]).toContain("Vardi et al 2007");
+    expect(parts[5]).toMatch(/^P\. gatunense and other dinoflagellates:/);
+    expect(parts[5]).toContain("Pollingher & Hickel 1991");
   });
 });
 

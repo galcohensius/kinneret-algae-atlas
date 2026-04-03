@@ -11,7 +11,7 @@ const SCHOLAR_BASE = "https://scholar.google.com/scholar?hl=en&q=";
  * Split before a new reference. Heuristics tuned to limnology-style strings:
  * - "…1834. Pollingher U, Hickel B (1991) …"
  * - "…285. Zohary T, Erez J …"
- * - "…1043. P. gatunense and …"
+ * - "…1043. P. taxon and …"
  * - "…Spektrum. Pollingher & Hickel 1991. …"
  * - "…Author A, Author B (1994) …" at line start after period
  * - "…141. Penard E. 1891 …" / "…141. Penard, E. 1891 …" (surname + optional comma + initial. + 4-digit year)
@@ -28,22 +28,54 @@ const AUTHOR_BEFORE_YEAR = String.raw`(?:${SURNAME})(?:\s+&\s+${SURNAME}|\s+et\s
 /**
  * Extra breaks for Word-style lists without ". " between references:
  * - "…2014 Morphology & systematics: …"
- * - "…1994 P. gatunense life cycle: …"
+ * - "…1994 P. taxon life cycle: …" (year then abbreviated species line)
  * - "…261, Pollingher & Hickel 1988 …"
  * - "…1981, 1986, Zohary 2004 …" (year–year then author)
  * - "…systematics: Pollingher …" (colon after letter; avoid "120:267" volume:page)
  */
-const EXTRA_SPLIT_REGEXES: RegExp[] = [
+const COMMA_AUTHOR_SPLIT = new RegExp(String.raw`,\s+(?=${AUTHOR_BEFORE_YEAR})`, "g");
+
+const LAKE_KINNERET_COLON_SPLIT = new RegExp(
+  String.raw`(?<![\d(])(?<!Lake Kinneret):\s+(?=${AUTHOR_BEFORE_YEAR})`,
+  "g"
+);
+
+/** When Word glues several topic paragraphs into one blob (year → heading: … and year → P. epithet …). */
+const YEAR_THEN_TOPIC_HEADING_SRC = String.raw`(?<=\b[12]\d{3})\s+(?=[A-Z](?:[A-Za-zÀ-ÿ&.,]|\s){0,80}:\s)`;
+const YEAR_THEN_TOPIC_HEADING_SPLIT = new RegExp(YEAR_THEN_TOPIC_HEADING_SRC, "g");
+
+/** Year ends a ref block; next token is abbreviated binomial continuing the outline (any epithet). */
+const YEAR_THEN_PDOT_EPITHET_SPLIT =
+  /(?<=\b[12]\d{3})\s+(?=P\.\s+[a-z][a-zA-Z-]+\s+)/g;
+
+/** e.g. "…2007, P. taxon and other …:" — comma before a final P.-headed topic line. */
+const COMMA_BEFORE_PDOT_AND_SPLIT = /,\s+(?=P\.\s+[a-z][a-zA-Z-]+\s+and\s+)/g;
+
+const EXTRA_SPLIT_REGEXES_NON_BUNDLED: RegExp[] = [
   /(?<=\b[12]\d{3})\s+(?=Morphology\s*&)/g,
-  /(?<=\b[12]\d{3})\s+(?=P\.\s+gatunense\b)/g,
-  new RegExp(String.raw`,\s+(?=${AUTHOR_BEFORE_YEAR})`, "g"),
+  COMMA_AUTHOR_SPLIT,
   /(?<=\b[12]\d{3}),\s+(?=\d{4}\b)/g,
-  new RegExp(
-    String.raw`(?<![\d(])(?<!Lake Kinneret):\s+(?=${AUTHOR_BEFORE_YEAR})`,
-    "g"
-  ),
+  LAKE_KINNERET_COLON_SPLIT,
   /,\s+(?=P\.\s+[a-z])/g,
 ];
+
+/** Bundled blobs already use colons inside topic lines; skip colon-before-author and year,year splits. */
+const EXTRA_SPLIT_REGEXES_BUNDLED_TOPIC: RegExp[] = [
+  YEAR_THEN_TOPIC_HEADING_SPLIT,
+  YEAR_THEN_PDOT_EPITHET_SPLIT,
+  COMMA_BEFORE_PDOT_AND_SPLIT,
+];
+
+/**
+ * One paragraph that mixes "…2014 Some heading: refs" with "…1988 P. species rest…" — comma+author
+ * splits would break every ", Author year" inside a topic; use topic boundaries only.
+ */
+function looksLikeBundledTopicFurtherReading(normalized: string): boolean {
+  return (
+    new RegExp(YEAR_THEN_TOPIC_HEADING_SRC).test(normalized) &&
+    /(?<=\b[12]\d{3})\s+(?=P\.\s+[a-z])/.test(normalized)
+  );
+}
 
 export function normalizeFurtherReadingWhitespace(blob: string): string {
   return blob.replace(/\s+/g, " ").trim();
@@ -84,7 +116,10 @@ function collectSegmentStartIndices(normalized: string): number[] {
     }
   };
   addMatchEnds(SPLIT_BEFORE_NEW_CITATION);
-  for (const re of EXTRA_SPLIT_REGEXES) {
+  const extras = looksLikeBundledTopicFurtherReading(normalized)
+    ? EXTRA_SPLIT_REGEXES_BUNDLED_TOPIC
+    : EXTRA_SPLIT_REGEXES_NON_BUNDLED;
+  for (const re of extras) {
     addMatchEnds(re);
   }
   return [...starts].filter((n) => n <= normalized.length).sort((a, b) => a - b);
