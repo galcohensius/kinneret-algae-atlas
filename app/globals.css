@@ -216,6 +216,10 @@ a:hover {
 }
 
 /* Algae detail — Word-like single-column profile */
+.algae-detail-nav-end {
+  margin-top: 1.35rem;
+}
+
 .algae-detail-header {
   margin-bottom: 1rem;
 }

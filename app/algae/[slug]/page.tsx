@@ -277,6 +277,10 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           </section>
         ) : null}
       </article>
+
+      <p className="algae-detail-nav algae-detail-nav-end">
+        <Link href="/#algae-index">← Back to algae index</Link>
+      </p>
     </main>
   );
 }
