@@ -7,7 +7,7 @@ alwaysApply: true
 
 - **Do not** hand-edit `data/processed/algae_records.json` for fixes that must survive the next Word → JSON run (structure, section splits, citations, typos in source-derived text).
 - **Do** change `src/algae_extractor/`, `src/extract_algae.py`, and/or the source `.docx`, then **you (the agent) must re-run extraction in the same turn**—do not only suggest the command. Use the active Word file under `data/raw/` as `--input`, for example:
-  `python src/extract_algae.py --input "data/raw/Atlas-Examples to Gal V2.docx" --output "data/processed/algae_records.json" --images-dir public/algae-images`
+  `python src/extract_algae.py --input "data/raw/Atlas workfile to Gal 2026-03-29.docx" --output "data/processed/algae_records.json" --images-dir public/algae-images`
   If the canonical `.docx` name changes, discover it in `data/raw/` and use that path.
 - Hand-editing processed JSON is only for quick local experiments; **merge the same logic into the extractor** before relying on it long-term.
 

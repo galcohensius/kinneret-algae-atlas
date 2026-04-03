@@ -11,7 +11,7 @@ def main():
     )
     parser.add_argument(
         "--input",
-        default="data/raw/Atlas-Examples to Gal V2.docx",
+        default="data/raw/Atlas workfile to Gal 2026-03-29.docx",
         help="Path to source DOCX file.",
     )
     parser.add_argument(
