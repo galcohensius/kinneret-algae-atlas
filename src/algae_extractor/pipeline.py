@@ -58,6 +58,7 @@ def _new_record(source_file: str) -> dict[str, Any]:
     return {
         "scientific_name": None,
         "images": [],
+        "deferred_images": [],
         "image_captions": [],
         "image_captions_rich": [],
         "image_counter": 1,
@@ -91,7 +92,34 @@ def _append_section_line(
     )
 
 
-def _finalize_record(record: dict[str, Any]) -> AlgaeRecord | None:
+def _finalize_record(
+    record: dict[str, Any],
+    *,
+    images_output_dir: Path | None = None,
+    images_public_prefix: str = "/algae-images",
+    record_index_fallback: int = 1,
+) -> AlgaeRecord | None:
+    deferred = record.get("deferred_images") or []
+    if deferred and images_output_dir is not None:
+        name = record.get("scientific_name") or _infer_scientific_name_fallback(record)
+        if not name:
+            name = f"record-{record_index_fallback}"
+        if not record.get("scientific_name"):
+            record["scientific_name"] = name
+        for item in deferred:
+            path = _save_image(
+                blob=item["blob"],
+                extension=item["extension"],
+                filename_stem=item["filename_stem"],
+                algae_name=name,
+                images_output_dir=images_output_dir,
+                images_public_prefix=images_public_prefix,
+            )
+            record["images"].append(path)
+        record["deferred_images"] = []
+    elif deferred:
+        record["deferred_images"] = []
+
     raw_sections_plain: dict[str, str] = {}
     raw_sections_styles: dict[str, list[int]] = {}
 
@@ -145,6 +173,30 @@ def _slugify(value: str) -> str:
     return normalized or "unnamed"
 
 
+# Strip "1. ", "2) ", etc. so blocked headings still match after list numbering.
+_LIST_PREFIX_RE = re.compile(r"^(?:\d+[\.\)]\s*)+")
+
+
+def _strip_leading_list_markers(text: str) -> str:
+    return _LIST_PREFIX_RE.sub("", text.strip())
+
+
+def _should_reject_fake_record_name(
+    detected_name: str | None, blocked_starts: list[str]
+) -> bool:
+    """
+    Reject record-start matches that are section headings, not taxa (e.g. the
+    loose binomial pattern matching "Previous names").
+    """
+    if not detected_name:
+        return False
+    key = detected_name.strip().lower()
+    for prefix in blocked_starts:
+        if key == prefix or key.startswith(prefix + " "):
+            return True
+    return False
+
+
 # Epithet / genus-only prefix of a taxon header (before authority), for image dirs and parity with web slugs.
 _TAXON_SLUG_BINOMIAL_RE = re.compile(
     r"^(?:\d+\.?\s*)?"
@@ -171,6 +223,42 @@ def _full_scientific_header(detected_name: str, remainder: str) -> str:
     if r:
         return f"{detected_name.strip()} {r}".strip()
     return detected_name.strip()
+
+
+def _infer_scientific_name_fallback(record: dict[str, Any]) -> str | None:
+    """
+    When figures precede the taxon header line, the header pattern may never run;
+    infer Genus sp. or a binomial from the first Plate/Figure caption.
+    """
+    for cap in record.get("image_captions") or []:
+        if not cap or not cap.strip():
+            continue
+        m = re.search(
+            r"(?i)(?:Plate|Figures?|Fig\.)\s*\d+[A-Za-z]?\s*[.:]\s*"
+            r"([A-Z][a-zA-Z-]+\s+sp\.)",
+            cap,
+        )
+        if m:
+            return m.group(1).strip()
+        m = re.search(
+            r"(?i)(?:Plate|Figures?|Fig\.)\s*\d+[A-Za-z]?\s*[.:]\s*"
+            r"([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)",
+            cap,
+        )
+        if m:
+            return m.group(1).strip()
+    for key in ("morphological_features", "ecology", "notes"):
+        buf = record.get("sections_buffer", {}).get(key)
+        if not buf:
+            continue
+        for line in buf:
+            t = (line.get("text") or "").strip()
+            if not t:
+                continue
+            m = _TAXON_SLUG_BINOMIAL_RE.match(t)
+            if m:
+                return m.group(1).strip()
+    return None
 
 
 FIELD_ORDER: list[tuple[str, list[str]]] = [
@@ -748,7 +836,12 @@ def extract_records(
             if expect_image_caption:
                 _flush_missing_image_caption(current)
                 expect_image_caption = False
-            finalized = _finalize_record(current)
+            finalized = _finalize_record(
+                current,
+                images_output_dir=resolved_images_output_dir,
+                images_public_prefix=images_public_prefix,
+                record_index_fallback=len(records) + 1,
+            )
             if finalized:
                 records.append(finalized)
             current = _new_record(source_file=source_file)
@@ -762,7 +855,6 @@ def extract_records(
             if expect_image_caption:
                 _flush_missing_image_caption(current)
                 expect_image_caption = False
-            algae_name = current.get("scientific_name") or f"record-{len(records) + 1}"
             peek_text: str | None = None
             if index + 1 < len(blocks):
                 nxt = blocks[index + 1]
@@ -778,15 +870,25 @@ def extract_records(
             else:
                 stem = f"image-{current['image_counter']}"
                 current["image_counter"] += 1
-            image_path = _save_image(
-                blob=block["blob"],
-                extension=block["extension"],
-                filename_stem=stem,
-                algae_name=algae_name,
-                images_output_dir=resolved_images_output_dir,
-                images_public_prefix=images_public_prefix,
-            )
-            current["images"].append(image_path)
+            algae_name = current.get("scientific_name")
+            if algae_name:
+                image_path = _save_image(
+                    blob=block["blob"],
+                    extension=block["extension"],
+                    filename_stem=stem,
+                    algae_name=algae_name,
+                    images_output_dir=resolved_images_output_dir,
+                    images_public_prefix=images_public_prefix,
+                )
+                current["images"].append(image_path)
+            else:
+                current["deferred_images"].append(
+                    {
+                        "blob": block["blob"],
+                        "extension": block["extension"],
+                        "filename_stem": stem,
+                    }
+                )
             expect_image_caption = True
             continue
 
@@ -812,8 +914,13 @@ def extract_records(
         if pending_relaxed_record_markers:
             pending_relaxed_record_markers = False
 
-        should_block = any(text.lower().startswith(prefix) for prefix in blocked_starts)
+        text_for_block = _strip_leading_list_markers(text)
+        should_block = any(
+            text_for_block.lower().startswith(prefix) for prefix in blocked_starts
+        )
         record_start = None if should_block else detect_record_start(text=text, compiled_patterns=record_start_patterns)
+        if record_start and _should_reject_fake_record_name(record_start[0], blocked_starts):
+            record_start = None
         if record_start and following_markers and not use_relaxed_record_markers:
             lookahead_slice = [
                 candidate
@@ -832,7 +939,12 @@ def extract_records(
             if expect_image_caption:
                 _flush_missing_image_caption(current)
                 expect_image_caption = False
-            finalized = _finalize_record(current)
+            finalized = _finalize_record(
+                current,
+                images_output_dir=resolved_images_output_dir,
+                images_public_prefix=images_public_prefix,
+                record_index_fallback=len(records) + 1,
+            )
             if finalized:
                 records.append(finalized)
 
@@ -849,6 +961,8 @@ def extract_records(
             inline = _find_inline_record_split(
                 text, strict_patterns, record_start_patterns
             )
+            if inline and _should_reject_fake_record_name(inline[1], blocked_starts):
+                inline = None
             if inline:
                 split_idx, detected_name, remainder = inline
                 prefix = text[:split_idx]
@@ -865,7 +979,12 @@ def extract_records(
                 if expect_image_caption:
                     _flush_missing_image_caption(current)
                     expect_image_caption = False
-                finalized = _finalize_record(current)
+                finalized = _finalize_record(
+                    current,
+                    images_output_dir=resolved_images_output_dir,
+                    images_public_prefix=images_public_prefix,
+                    record_index_fallback=len(records) + 1,
+                )
                 if finalized:
                     records.append(finalized)
 
@@ -891,7 +1010,12 @@ def extract_records(
 
     if expect_image_caption:
         _flush_missing_image_caption(current)
-    finalized = _finalize_record(current)
+    finalized = _finalize_record(
+        current,
+        images_output_dir=resolved_images_output_dir,
+        images_public_prefix=images_public_prefix,
+        record_index_fallback=len(records) + 1,
+    )
     if finalized:
         records.append(finalized)
 
