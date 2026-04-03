@@ -23,23 +23,15 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Tamar Zohary
+              Dr. Tamar Zohary
             </a>
-            {", "}
+            {" & "}
             <a
               href="https://www.linkedin.com/in/alla-alster-5876a422/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Alla Alster
-            </a>
-            {", and "}
-            <a
-              href="https://github.com/galcohensius"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Gal Cohensius
+              Dr. Alla Alster
             </a>
           </p>
         </div>
