@@ -1,12 +1,91 @@
 :root {
   color-scheme: light;
   font-family: Arial, Helvetica, sans-serif;
+  --bg-page: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #475569;
+  --text-placeholder: #64748b;
+  --link: #0369a1;
+  --link-hover: #0c4a6e;
+  --card-bg: #ffffff;
+  --border: #e2e8f0;
+  --surface-muted: #f8fafc;
+  --surface-subtle: #f1f5f9;
+  --input-bg: #ffffff;
+  --focus-ring: #2563eb;
+  --shadow-plate: rgb(15 23 42 / 6%);
+  --lightbox-close-bg: rgba(255, 255, 255, 0.95);
+  --lightbox-close-bg-hover: #ffffff;
+  --lightbox-close-color: #0f172a;
+}
+
+html.dark {
+  color-scheme: dark;
+  --bg-page: #0f172a;
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-placeholder: #94a3b8;
+  --link: #38bdf8;
+  --link-hover: #7dd3fc;
+  --card-bg: #1e293b;
+  --border: #334155;
+  --surface-muted: #1e293b;
+  --surface-subtle: #334155;
+  --input-bg: #0f172a;
+  --focus-ring: #60a5fa;
+  --shadow-plate: rgb(0 0 0 / 40%);
+  --lightbox-close-bg: rgba(30, 41, 59, 0.95);
+  --lightbox-close-bg-hover: #334155;
+  --lightbox-close-color: #f1f5f9;
 }
 
 body {
   margin: 0;
-  background: #f8fafc;
-  color: #0f172a;
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgb(15 23 42 / 8%);
+}
+
+html.dark .theme-toggle {
+  box-shadow: 0 1px 3px rgb(0 0 0 / 35%);
+}
+
+.theme-toggle:hover:not(:disabled) {
+  background: var(--surface-muted);
+}
+
+.theme-toggle:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.theme-toggle-label {
+  min-width: 2.5rem;
+  display: inline-block;
+  text-align: center;
 }
 
 main {
@@ -89,6 +168,7 @@ main.home {
 }
 
 .home-hero-lead a:hover {
+  color: inherit;
   opacity: 0.92;
 }
 
@@ -106,7 +186,7 @@ main.home {
   margin: 0 0 0.5rem;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text-primary);
 }
 
 .algae-index-search {
@@ -118,6 +198,10 @@ main.home {
   max-width: 360px;
   padding: 0.5rem;
   box-sizing: border-box;
+  background: var(--input-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
 }
 
 .algae-index-count {
@@ -136,24 +220,25 @@ main.home {
 }
 
 a {
-  color: #0369a1;
+  color: var(--link);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--link-hover);
 }
 
 .card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1rem;
   margin-bottom: 1rem;
 }
 
 .muted {
-  color: #475569;
+  color: var(--text-muted);
 }
 
 .section-title {
@@ -172,10 +257,10 @@ a:hover {
 
 .gallery-item {
   margin: 0;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  background: #f8fafc;
+  background: var(--surface-muted);
 }
 
 .gallery-item img {
@@ -196,7 +281,7 @@ a:hover {
   height: 92px;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   flex-shrink: 0;
 }
 
@@ -204,8 +289,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f1f5f9;
-  color: #64748b;
+  background: var(--surface-subtle);
+  color: var(--text-placeholder);
   font-size: 0.75rem;
 }
 
@@ -229,7 +314,7 @@ a:hover {
   font-weight: 700;
   font-style: normal;
   margin: 0 0 0.35rem;
-  color: #0f172a;
+  color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -245,13 +330,13 @@ a:hover {
 .algae-previous-name-line {
   margin: 0 0 0.65rem;
   line-height: 1.45;
-  color: #334155;
+  color: var(--text-secondary);
   font-size: 0.98rem;
 }
 
 .algae-previous-name-label {
   font-weight: 600;
-  color: #475569;
+  color: var(--text-muted);
 }
 
 .algae-profile {
@@ -266,9 +351,9 @@ a:hover {
   font-size: 1.05rem;
   font-weight: 700;
   margin: 1.35rem 0 0.6rem;
-  color: #0f172a;
+  color: var(--text-primary);
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid var(--border);
 }
 
 .quick-facts-list {
@@ -307,17 +392,17 @@ a:hover {
 
 .further-reading-list li::marker {
   font-weight: 600;
-  color: #475569;
+  color: var(--text-muted);
 }
 
 .further-reading-list a {
-  color: #0369a1;
+  color: var(--link);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .further-reading-list a:hover {
-  color: #0c4a6e;
+  color: var(--link-hover);
 }
 
 .plate-figure {
@@ -329,8 +414,8 @@ a:hover {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 2px rgb(15 23 42 / 6%);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px var(--shadow-plate);
 }
 
 .plate-figure figcaption {
@@ -355,10 +440,10 @@ a:hover {
 
 .figures-grid-item {
   margin: 0;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  background: #f8fafc;
+  background: var(--surface-muted);
 }
 
 .figures-grid-item img {
@@ -380,7 +465,7 @@ a:hover {
 }
 
 .figures-expand-trigger:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -431,8 +516,8 @@ a:hover {
   height: 2.75rem;
   border: none;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.95);
-  color: #0f172a;
+  background: var(--lightbox-close-bg);
+  color: var(--lightbox-close-color);
   font-size: 1.75rem;
   line-height: 1;
   cursor: pointer;
@@ -440,10 +525,10 @@ a:hover {
 }
 
 .figure-lightbox-close:hover {
-  background: #fff;
+  background: var(--lightbox-close-bg-hover);
 }
 
 .figure-lightbox-close:focus-visible {
-  outline: 2px solid #2563eb;
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
