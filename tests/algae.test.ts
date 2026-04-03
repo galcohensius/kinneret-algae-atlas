@@ -10,6 +10,7 @@ describe("normalizeAlgaeRecords", () => {
     const result = normalizeAlgaeRecords(input);
     expect(result[0].scientificName).toBe("unnamed-algae-1");
     expect(result[0].slug).toBe("unnamed-algae-1");
+    expect(result[0].thumbnailUrl).toBeNull();
   });
 
   it("preserves preferred section order for morphology and ecology", () => {

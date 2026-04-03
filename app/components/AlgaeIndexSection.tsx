@@ -43,12 +43,13 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
       <div className="algae-list-grid">
         {filtered.map((record) => {
           const { plateImage } = partitionPlateAndGalleryImages(record.images, record.imageCaptions);
+          const listImage = record.thumbnailUrl ?? plateImage;
           return (
           <article className="card algae-list-card" key={record.slug}>
-            {plateImage ? (
+            {listImage ? (
               <img
                 className="algae-thumb"
-                src={plateImage}
+                src={listImage}
                 alt={`${record.title} thumbnail`}
               />
             ) : (

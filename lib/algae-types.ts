@@ -14,6 +14,8 @@ export type AlgaeRecord = {
   scientificName: string;
   /** Authority and year tail after the taxon, when present. */
   nameAuthority: string | null;
+  /** Optional file under `public/algae-images/{slug}/thumbnail-1.png` (etc.). */
+  thumbnailUrl: string | null;
   images: string[];
   imageCaptions: string[];
   /** Parallel to imageCaptions when extracted from Word with run styles. */

@@ -9,6 +9,8 @@ export type ExpandableFigure = {
   alt: string;
   caption?: string;
   captionRich?: RichSegment[];
+  /** When set, used for the thumbnail button's aria-label (e.g. "Enlarge plate 2"). */
+  enlargeAriaLabel?: string;
 };
 
 type ExpandableFiguresGridProps = {
@@ -50,7 +52,7 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
               onClick={() => open(index)}
               aria-haspopup="dialog"
               aria-expanded={openIndex === index}
-              aria-label={`Enlarge figure ${index + 1}`}
+              aria-label={fig.enlargeAriaLabel ?? `Enlarge figure ${index + 1}`}
             >
               <img src={fig.src} alt={fig.alt} loading="lazy" />
             </button>

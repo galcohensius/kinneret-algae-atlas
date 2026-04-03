@@ -11,6 +11,11 @@ import {
 } from "../../../lib/further-reading";
 import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
+import {
+  additionalGallerySectionTitle,
+  galleryEnlargeAriaLabel,
+  galleryImageAlt,
+} from "../../../lib/gallery-image-meta";
 import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
 
 type AlgaeDetailPageProps = {
@@ -54,6 +59,8 @@ const QUICK_FACT_KEYS = [
   "biovolume_per_cell",
   "biovolume_equation"
 ] as const;
+
+const QUICK_FACT_BODY_KEYS = QUICK_FACT_KEYS.filter((key) => key !== "previous_name_used");
 
 // Render "Further reading" after "Additional figures" (site requirement).
 const NARRATIVE_AFTER_PLATE_KEYS = [
@@ -140,7 +147,9 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   );
   const extraFigures = galleryImages;
   const extraFigureCaptions = galleryCaptions;
-  const hasQuickFacts = QUICK_FACT_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
+  const hasQuickFacts = QUICK_FACT_BODY_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
+  const previousNamePlain = sections.previous_name_used?.trim() ?? "";
+  const previousNameRich = record.sectionsRich?.previous_name_used ?? [];
 
   return (
     <main className="algae-detail">
@@ -158,13 +167,32 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             </>
           ) : null}
         </h1>
+        {previousNamePlain ? (
+          <p className="algae-previous-name-line">
+            <span className="algae-previous-name-label">{toDisplayLabel("previous_name_used")}: </span>
+            {previousNameRich.length > 0 ? (
+              <RichText segments={previousNameRich} />
+            ) : (
+              previousNamePlain
+            )}
+          </p>
+        ) : null}
+        {record.thumbnailUrl ? (
+          <img
+            className="algae-species-thumbnail"
+            src={record.thumbnailUrl}
+            alt={`${record.title} — thumbnail preview`}
+            width={160}
+            height={160}
+          />
+        ) : null}
       </header>
 
       <article className="card algae-profile">
         {hasQuickFacts ? (
           <section className="quick-facts" aria-label="Taxonomy, size, and biovolume">
             <dl className="quick-facts-list">
-              {QUICK_FACT_KEYS.map((key) => {
+              {QUICK_FACT_BODY_KEYS.map((key) => {
                 const value = sections[key]?.trim();
                 if (!value) return null;
                 const richValue = record.sectionsRich?.[key] ?? [];
@@ -225,14 +253,15 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         {extraFigures.length > 0 ? (
           <section className="figures-section" aria-labelledby="figures-heading">
             <h2 id="figures-heading" className="section-heading">
-              Additional figures
+              {additionalGallerySectionTitle(extraFigures)}
             </h2>
             <ExpandableFiguresGrid
               figures={extraFigures.map((imagePath, index) => ({
                 src: imagePath,
-                alt: `${record.title} — figure ${index + 2}`,
+                alt: galleryImageAlt(record.title, imagePath, index),
                 caption: extraFigureCaptions[index],
                 captionRich: galleryCaptionsRich[index],
+                enlargeAriaLabel: galleryEnlargeAriaLabel(imagePath, index),
               }))}
             />
           </section>

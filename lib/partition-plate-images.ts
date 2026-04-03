@@ -1,11 +1,35 @@
 import type { RichSegment } from "./algae-types";
+import { isThumbnailImagePath } from "./thumbnail-path-pattern";
 
 /** Matches extractor output: `plate-1.png`, etc. (hero image in detail view). */
 const PLATE_IMAGE_PATH_RE = /\/plate-\d+/i;
 
+function dropThumbnailPaths(
+  images: string[],
+  captions: string[],
+  captionsRich: RichSegment[][] | undefined
+): { images: string[]; captions: string[]; captionsRich: RichSegment[][] | undefined } {
+  const keep: number[] = [];
+  for (let i = 0; i < images.length; i++) {
+    if (!isThumbnailImagePath(images[i]!)) keep.push(i);
+  }
+  if (keep.length === images.length) {
+    return { images, captions, captionsRich };
+  }
+  return {
+    images: keep.map((i) => images[i]!),
+    captions: keep.map((i) => captions[i] ?? ""),
+    captionsRich:
+      captionsRich !== undefined
+        ? keep.map((i) => captionsRich[i] ?? [])
+        : undefined,
+  };
+}
+
 /**
  * Prefer the first `plate-*` asset as the main figure; otherwise keep document
  * order (first image = hero). Gallery order preserves remaining images.
+ * Paths matching `thumbnail-*.png` (site previews) are ignored here.
  */
 export function partitionPlateAndGalleryImages(
   images: string[],
@@ -23,6 +47,11 @@ export function partitionPlateAndGalleryImages(
     captionsRich && i >= 0 && i < captionsRich.length && captionsRich[i]?.length
       ? captionsRich[i]
       : undefined;
+
+  const dropped = dropThumbnailPaths(images, captions, captionsRich);
+  images = dropped.images;
+  captions = dropped.captions;
+  captionsRich = dropped.captionsRich;
 
   if (images.length === 0) {
     return {

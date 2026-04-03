@@ -4,6 +4,7 @@ import { z } from "zod";
 import { fixScientificTypography } from "./scientific-text";
 import { filterAlgaeByQuery } from "./algae-filter";
 import { publicAssetPath } from "./public-path";
+import { resolveThumbnailUrl } from "./resolve-thumbnail";
 import { splitTaxonAndAuthority, taxonNameForSlug } from "./taxon-display";
 
 const richSegmentSchema = z.object({
@@ -112,6 +113,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
       title: fixScientificTypography(fullScientificHeader),
       scientificName: fixScientificTypography(taxon),
       nameAuthority,
+      thumbnailUrl: resolveThumbnailUrl(slug),
       images: (raw.images ?? []).map((p) => publicAssetPath(p)),
       imageCaptions: raw.image_captions ?? [],
       imageCaptionsRich: (raw.image_captions_rich ?? []).map((arr) =>
