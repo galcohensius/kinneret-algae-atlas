@@ -279,7 +279,10 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     # (parentheses required before ':') so narrative "diameter: 37 µm" does not split fields.
     ("cell_diameter_d", ["cell diameter", "cell size", "diameter"]),
     ("cell_length_l", ["cell length", "length"]),
-    ("biovolume_per_cell", ["biovolume/cell", "biovolume per cell"]),
+    (
+        "biovolume_per_cell",
+        ["biovolume per cell", "cell biovolume", "biovolume/cell"],
+    ),
     ("biovolume_equation", ["biovolume equation"]),
     ("morphological_features", ["morphological features"]),
     (
@@ -510,6 +513,86 @@ def move_orphan_prose_after_sample_size_from_measurement_fields_rich(
         else:
             fields_plain["ecology"] = tail_plain
             fields_styles["ecology"] = tail_styles
+
+
+# The JSON ``ecology`` slot can still receive a leading ``Cell biovolume:`` line (for
+# example when a species has no ecology block in Word yet, or when inline field markers
+# group that line under ``ecology``). Keep it with the other size / biovolume fields.
+_CELL_BIOVOLUME_LEADING_RE = re.compile(r"(?is)^cell\s+biovolume\s*:\s*")
+# End biovolume value at ". <letter>" (start of ecology prose), not at decimals.
+_CELL_BIOVOLUME_THEN_SENTENCE_RE = re.compile(r"\.\s+(?=[A-Za-z\u00C0-\u024F])")
+
+
+def move_cell_biovolume_prefix_from_ecology_rich(
+    fields_plain: dict[str, str],
+    fields_styles: dict[str, list[int]],
+) -> None:
+    """
+    If ``ecology`` begins with ``Cell biovolume:``, move that measurement into
+    ``biovolume_per_cell`` (quick facts: after diameter/length, before the biovolume
+    equation). Any sentence after the measurement stays in ``ecology``.
+    """
+    eco_plain = fields_plain.get("ecology", "").strip()
+    if not eco_plain:
+        return
+
+    m = _CELL_BIOVOLUME_LEADING_RE.match(eco_plain)
+    if not m:
+        return
+
+    eco_styles = fields_styles.get("ecology", [])
+    if not eco_styles or len(eco_styles) != len(eco_plain):
+        eco_styles = _neutral_char_styles(eco_plain)
+
+    value_start = m.end()
+    rest = eco_plain[value_start:]
+    split_m = _CELL_BIOVOLUME_THEN_SENTENCE_RE.search(rest)
+    if split_m:
+        value_slice_end = value_start + split_m.start() + 1
+        remainder_start = value_start + split_m.end()
+    else:
+        value_slice_end = len(eco_plain)
+        remainder_start = len(eco_plain)
+
+    raw_value = eco_plain[value_start:value_slice_end]
+    left_v = len(raw_value) - len(raw_value.lstrip())
+    right_v = len(raw_value) - len(raw_value.rstrip())
+    value_plain = raw_value.strip()
+    raw_remainder = eco_plain[remainder_start:]
+    rem_plain = raw_remainder.strip()
+    left_r = len(raw_remainder) - len(raw_remainder.lstrip())
+    right_r = len(raw_remainder) - len(raw_remainder.rstrip())
+
+    value_styles_raw = eco_styles[value_start:value_slice_end]
+    if right_v > 0:
+        value_styles = value_styles_raw[left_v : len(value_styles_raw) - right_v]
+    else:
+        value_styles = value_styles_raw[left_v:]
+
+    rem_styles_raw = eco_styles[remainder_start:]
+    if right_r > 0:
+        rem_styles = rem_styles_raw[left_r : len(rem_styles_raw) - right_r]
+    else:
+        rem_styles = rem_styles_raw[left_r:]
+
+    if len(value_styles) != len(value_plain):
+        value_styles = _neutral_char_styles(value_plain)
+    if rem_plain and (len(rem_styles) != len(rem_plain)):
+        rem_styles = _neutral_char_styles(rem_plain)
+
+    existing_plain = fields_plain.get("biovolume_per_cell", "").strip()
+    existing_styles = fields_styles.get("biovolume_per_cell", [])
+    if existing_plain:
+        if not existing_styles or len(existing_styles) != len(existing_plain):
+            existing_styles = _neutral_char_styles(existing_plain)
+        fields_plain["biovolume_per_cell"] = f"{existing_plain} {value_plain}".strip()
+        fields_styles["biovolume_per_cell"] = existing_styles + [0] + value_styles
+    else:
+        fields_plain["biovolume_per_cell"] = value_plain
+        fields_styles["biovolume_per_cell"] = value_styles
+
+    fields_plain["ecology"] = rem_plain
+    fields_styles["ecology"] = rem_styles
 
 
 def move_inline_environmental_conditions_from_ecology_rich(
@@ -797,6 +880,8 @@ def _normalize_structured_fields_rich(
             morph_styles = _neutral_char_styles(morph_plain)
         fields_plain["morphological_features"] = morph_plain
         fields_styles["morphological_features"] = morph_styles
+
+    move_cell_biovolume_prefix_from_ecology_rich(fields_plain, fields_styles)
 
     move_orphan_prose_after_sample_size_from_measurement_fields_rich(
         fields_plain, fields_styles

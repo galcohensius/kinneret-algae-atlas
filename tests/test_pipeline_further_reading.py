@@ -10,6 +10,7 @@ if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
 from algae_extractor.pipeline import (
+    move_cell_biovolume_prefix_from_ecology_rich,
     move_inline_further_reading_from_ecology,
     move_inline_further_reading_from_ecology_rich,
     move_orphan_prose_after_sample_size_from_measurement_fields_rich,
@@ -61,6 +62,38 @@ class TestMoveOrphanProseAfterSampleSize(unittest.TestCase):
         )
         self.assertTrue(plain["ecology"].startswith("its tail before ecology label."))
         self.assertIn("Main ecology starts here.", plain["ecology"])
+
+
+class TestCellBiovolumeEcologyPrefix(unittest.TestCase):
+    def test_moves_leading_cell_biovolume_only(self) -> None:
+        eco = "Cell biovolume: 17500 - 4300 µm3, median: 2900 µm3."
+        fields_plain = {"ecology": eco, "biovolume_per_cell": ""}
+        fields_styles = {
+            "ecology": [0] * len(eco),
+            "biovolume_per_cell": [],
+        }
+        move_cell_biovolume_prefix_from_ecology_rich(fields_plain, fields_styles)
+        self.assertEqual(fields_plain["biovolume_per_cell"], "17500 - 4300 µm3, median: 2900 µm3.")
+        self.assertEqual(fields_plain["ecology"], "")
+        self.assertEqual(len(fields_styles["biovolume_per_cell"]), len(fields_plain["biovolume_per_cell"]))
+        self.assertEqual(fields_styles["ecology"], [])
+
+    def test_moves_prefix_then_ecology_prose(self) -> None:
+        eco = (
+            "Cell biovolume: 6600 - 17500 µm3, median: 11500 µm3. "
+            "Ps elpatiewskyi shows a typical annual cycle."
+        )
+        fields_plain = {"ecology": eco, "biovolume_per_cell": ""}
+        fields_styles = {
+            "ecology": [0] * len(eco),
+            "biovolume_per_cell": [],
+        }
+        move_cell_biovolume_prefix_from_ecology_rich(fields_plain, fields_styles)
+        self.assertEqual(fields_plain["biovolume_per_cell"], "6600 - 17500 µm3, median: 11500 µm3.")
+        self.assertEqual(
+            fields_plain["ecology"],
+            "Ps elpatiewskyi shows a typical annual cycle.",
+        )
 
 
 class TestDistinctiveFeaturesMarker(unittest.TestCase):
