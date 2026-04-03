@@ -282,6 +282,7 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
         ["distinctive attributes", "distinctive features", "diagnostic features"],
     ),
     ("ecology", ["ecology"]),
+    ("physiological_features", ["physiological features"]),
     ("environmental_conditions", ["environmental conditions"]),
     ("further_reading", ["further reading"]),
 ]
@@ -564,6 +565,58 @@ def move_inline_environmental_conditions_from_ecology_rich(
         fields_styles["environmental_conditions"] = tail_styles
 
 
+def move_inline_physiological_features_from_ecology_rich(
+    fields_plain: dict[str, str],
+    fields_styles: dict[str, list[int]],
+) -> None:
+    """
+    Split inline "Physiological features:" from ecology (after environmental
+    tail removal when both are pasted in one block).
+    """
+    eco_plain = fields_plain.get("ecology", "").strip()
+    if not eco_plain:
+        return
+
+    eco_styles = fields_styles.get("ecology", [])
+    if not eco_styles or len(eco_styles) != len(eco_plain):
+        eco_styles = _neutral_char_styles(eco_plain)
+
+    matches = list(re.finditer(r"(?i)\bphysiological features\s*:", eco_plain))
+    if not matches:
+        return
+
+    m = matches[-1]
+
+    prefix_plain = eco_plain[: m.start()].rstrip()
+    fields_plain["ecology"] = prefix_plain
+    fields_styles["ecology"] = eco_styles[: len(prefix_plain)]
+
+    tail_raw_plain = eco_plain[m.end() :]
+    if not tail_raw_plain.strip():
+        return
+
+    left_trim = len(tail_raw_plain) - len(tail_raw_plain.lstrip())
+    right_trim = len(tail_raw_plain) - len(tail_raw_plain.rstrip())
+    tail_plain = tail_raw_plain.strip()
+
+    tail_styles_raw = eco_styles[m.end() :]
+    if right_trim > 0:
+        tail_styles = tail_styles_raw[left_trim : len(tail_styles_raw) - right_trim]
+    else:
+        tail_styles = tail_styles_raw[left_trim:]
+
+    existing_plain = fields_plain.get("physiological_features", "").strip()
+    existing_styles = fields_styles.get("physiological_features", [])
+    if existing_plain:
+        if not existing_styles or len(existing_styles) != len(existing_plain):
+            existing_styles = _neutral_char_styles(existing_plain)
+        fields_plain["physiological_features"] = f"{existing_plain} {tail_plain}".strip()
+        fields_styles["physiological_features"] = existing_styles + [0] + tail_styles
+    else:
+        fields_plain["physiological_features"] = tail_plain
+        fields_styles["physiological_features"] = tail_styles
+
+
 _FR_CITE_BOUNDARY_RE = re.compile(
     r"(\d{1,4}:\d+-\d+)(\s+)([A-Z][a-zA-Z'\-]+ [A-Z][a-zA-Z'\-]?)"
 )
@@ -746,6 +799,7 @@ def _normalize_structured_fields_rich(
 
     move_inline_further_reading_from_ecology_rich(fields_plain, fields_styles)
     move_inline_environmental_conditions_from_ecology_rich(fields_plain, fields_styles)
+    move_inline_physiological_features_from_ecology_rich(fields_plain, fields_styles)
 
     fr_raw = fields_plain.get("further_reading", "") or ""
     if fr_raw.strip():

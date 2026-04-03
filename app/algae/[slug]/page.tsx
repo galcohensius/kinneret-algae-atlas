@@ -33,6 +33,7 @@ const FIELD_LABELS: Record<string, string> = {
   morphological_features: "Morphological features",
   distinctive_attributes: "Distinctive features",
   ecology: "Ecology",
+  physiological_features: "Physiological features",
   environmental_conditions: "Environmental conditions",
   further_reading: "Further reading"
 };
@@ -55,7 +56,11 @@ const QUICK_FACT_KEYS = [
 ] as const;
 
 // Render "Further reading" after "Additional figures" (site requirement).
-const NARRATIVE_AFTER_PLATE_KEYS = ["ecology", "environmental_conditions"] as const;
+const NARRATIVE_AFTER_PLATE_KEYS = [
+  "ecology",
+  "physiological_features",
+  "environmental_conditions"
+] as const;
 
 function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");

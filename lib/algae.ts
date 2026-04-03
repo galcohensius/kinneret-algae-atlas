@@ -30,7 +30,7 @@ import type { AlgaeRecord } from "./algae-types";
 
 export type { AlgaeRecord };
 
-const PRIMARY_SECTION_ORDER = ["morphology", "ecology"];
+const PRIMARY_SECTION_ORDER = ["morphology", "ecology", "physiological_features"];
 
 function slugify(value: string): string {
   return value
