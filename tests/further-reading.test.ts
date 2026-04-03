@@ -24,6 +24,24 @@ describe("splitFurtherReadingCitations", () => {
     expect(parts.length).toBeGreaterThanOrEqual(2);
     expect(parts[parts.length - 1]).toContain("Pollingher U, Hickel B");
   });
+
+  it("splits after surname + initial. + year (European / monograph style)", () => {
+    const text =
+      "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141. Penard E. 1891. Les Peridiniacees du Lac Leman. Bull. Trav. Soc. Bot. Geneve 6: 1-63. Pollingher U, Hickel B. 1991. Dinoflagellate associations.";
+    const parts = splitFurtherReadingCitations(text);
+    expect(parts).toHaveLength(3);
+    expect(parts[0]).toContain("Hansen G");
+    expect(parts[0]).toContain("107-141");
+    expect(parts[0]).not.toContain("Penard");
+    expect(parts[1]).toMatch(/^Penard E\. 1891/);
+    expect(parts[2]).toContain("Pollingher U");
+  });
+
+  it("does not split journal abbreviations like J. Limnol. inside one citation", () => {
+    const one =
+      "Hansen G, Flaim G. 2007. Title here. J. Limnol. 66(2):107-141.";
+    expect(splitFurtherReadingCitations(one)).toHaveLength(1);
+  });
 });
 
 describe("citationToScholarSearchUrl", () => {

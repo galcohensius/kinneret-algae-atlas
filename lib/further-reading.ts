@@ -12,9 +12,11 @@ const SCHOLAR_BASE = "https://scholar.google.com/scholar?hl=en&q=";
  * - "…1043. P. gatunense and …"
  * - "…Spektrum. Pollingher & Hickel 1991. …"
  * - "…Author A, Author B (1994) …" at line start after period
+ * - "…141. Penard E. 1891 …" / "…141. Penard, E. 1891 …" (surname + optional comma + initial. + 4-digit year)
+ *   Surname must be ≥2 letters so "J. Limnol." is not treated as a new paper.
  */
 const SPLIT_BEFORE_NEW_CITATION =
-  /\.(?:\s+)(?=[A-Z][a-zA-ZÀ-ÿ\-]+ [A-Z],|[A-Z][a-zA-ZÀ-ÿ\-]+ & [A-Z][a-zA-ZÀ-ÿ\-]+|[A-Z][A-Za-zÀ-ÿ\-]+(?:,\s+[A-Z][A-Za-zÀ-ÿ\-.]+)+\s*\([12]\d{3}\)|[A-Z]\.\s+[a-z])/g;
+  /\.(?:\s+)(?=[A-Z][a-zA-ZÀ-ÿ\-]+ [A-Z],|[A-Z][a-zA-ZÀ-ÿ\-]+ & [A-Z][a-zA-ZÀ-ÿ\-]+|[A-Z][A-Za-zÀ-ÿ\-]+(?:,\s+[A-Z][A-Za-zÀ-ÿ\-.]+)+\s*\([12]\d{3}\)|[A-Z]\.\s+[a-z]|[A-Z][a-zA-ZÀ-ÿ\-]+,?\s+[A-Z]\.\s+[12]\d{3}\b)/g;
 
 export function normalizeFurtherReadingWhitespace(blob: string): string {
   return blob.replace(/\s+/g, " ").trim();
