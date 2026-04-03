@@ -42,6 +42,18 @@ describe("splitFurtherReadingCitations", () => {
       "Hansen G, Flaim G. 2007. Title here. J. Limnol. 66(2):107-141.";
     expect(splitFurtherReadingCitations(one)).toHaveLength(1);
   });
+
+  it("splits Peridinium gatunense-style topic list without periods between refs", () => {
+    const text =
+      "Review of the literature on P. gatunense in Lake Kinneret: Zohary et al. 2014 Morphology & systematics: Pollingher 1978 p 261, Pollingher & Hickel 1988 P. gatunense as a component of the Kinneret phytoplankton or food web: Pollingher & Berman 1975, Pollingher 1981, 1986, Zohary 2004, Zohary et al. 1994 P. gatunense life cycle: Pollingher & Serruya 1976, Pollingher 1978, Alster et al. 2006 P. gatunense physiology: Pollingher & Zemel 1981, Wynne et al 1984, Berman-Frank et al 1995, Viner-Mozzini et al 2003, Zohary et al 2000, Alster et al 2007, Vardi et al 2007, P. gatunense and other dinoflagellates: Pollingher 1985, 1988, Pollingher & Hickel 1991";
+    const parts = splitFurtherReadingCitations(text);
+    expect(parts.length).toBeGreaterThanOrEqual(18);
+    expect(parts.some((p) => p.includes("Zohary et al. 2014"))).toBe(true);
+    expect(parts.some((p) => p.includes("Pollingher & Hickel 1988"))).toBe(true);
+    expect(parts.some((p) => p.includes("Pollingher 1986"))).toBe(true);
+    expect(parts.some((p) => p.includes("Berman-Frank et al 1995"))).toBe(true);
+    expect(parts[parts.length - 1]).toContain("Pollingher & Hickel 1991");
+  });
 });
 
 describe("citationToScholarSearchUrl", () => {
