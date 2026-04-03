@@ -3,7 +3,7 @@ import path from "node:path";
 import { publicAssetPath } from "./public-path";
 
 /**
- * Species thumbnail: the extractor saves the first image per taxon as `thumbnail-1.*`
+ * Home algae index cards only: the extractor saves the first image per taxon as `thumbnail-1.*`
  * under `public/algae-images/{slug}/` (after the header and any previous-name lines).
  * First existing basename wins for manual overrides.
  */

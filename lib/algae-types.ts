@@ -14,7 +14,7 @@ export type AlgaeRecord = {
   scientificName: string;
   /** Authority and year tail after the taxon, when present. */
   nameAuthority: string | null;
-  /** First species image URL: `thumbnail-1.*` from JSON when present, else resolved from `public/algae-images/{slug}/`. */
+  /** Home index card preview only (`thumbnail-1.*` from JSON or `public/algae-images/{slug}/`). */
   thumbnailUrl: string | null;
   images: string[];
   imageCaptions: string[];

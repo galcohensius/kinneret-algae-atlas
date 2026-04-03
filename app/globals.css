@@ -250,21 +250,6 @@ a:hover {
   color: #475569;
 }
 
-.algae-species-thumbnail {
-  display: block;
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: 1px solid #e2e8f0;
-  margin-top: 0.85rem;
-  margin-bottom: 0.25rem;
-}
-
-.algae-profile > .algae-species-thumbnail:first-child {
-  margin-top: 0;
-}
-
 .algae-profile {
   padding: 1.35rem 1.5rem 1.5rem;
 }

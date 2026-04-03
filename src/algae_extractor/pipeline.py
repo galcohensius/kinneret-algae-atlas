@@ -1,6 +1,9 @@
+from io import BytesIO
 from pathlib import Path
 from typing import Any
 import re
+
+from PIL import Image
 
 from .config import load_config
 from .models import AlgaeRecord
@@ -839,6 +842,26 @@ def _normalize_structured_fields(
     return _normalize_structured_fields_rich(raw_sections_plain, raw_sections_styles)
 
 
+_TIFF_EXTENSIONS = frozenset({".tif", ".tiff"})
+
+
+def _tiff_blob_to_png_bytes(blob: bytes) -> bytes:
+    """Decode TIFF bytes and re-encode as PNG for web browsers."""
+    with Image.open(BytesIO(blob)) as im:
+        im.load()
+        if im.mode == "CMYK":
+            im = im.convert("RGB")
+        elif im.mode == "P":
+            im = im.convert("RGBA")
+        elif im.mode == "LA":
+            im = im.convert("RGBA")
+        elif im.mode not in ("RGB", "RGBA"):
+            im = im.convert("RGB")
+        out = BytesIO()
+        im.save(out, format="PNG", optimize=True)
+        return out.getvalue()
+
+
 def _save_image(
     blob: bytes,
     extension: str,
@@ -850,7 +873,17 @@ def _save_image(
     safe_name = _slugify(_taxon_name_for_slug(algae_name))
     algae_images_dir = images_output_dir / safe_name
     algae_images_dir.mkdir(parents=True, exist_ok=True)
-    filename = f"{filename_stem}{extension}"
+    ext = extension.lower()
+    if ext in _TIFF_EXTENSIONS:
+        blob = _tiff_blob_to_png_bytes(blob)
+        ext = ".png"
+        for stale in (
+            algae_images_dir / f"{filename_stem}.tif",
+            algae_images_dir / f"{filename_stem}.tiff",
+        ):
+            if stale.exists():
+                stale.unlink()
+    filename = f"{filename_stem}{ext}"
     output_file = algae_images_dir / filename
     output_file.write_bytes(blob)
     public_prefix = images_public_prefix.rstrip("/")

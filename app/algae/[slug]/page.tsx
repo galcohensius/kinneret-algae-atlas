@@ -201,15 +201,6 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             </dl>
           </section>
         ) : null}
-        {record.thumbnailUrl ? (
-          <img
-            className="algae-species-thumbnail"
-            src={record.thumbnailUrl}
-            alt={`${record.title} — thumbnail preview`}
-            width={160}
-            height={160}
-          />
-        ) : null}
 
         {morphological ? (
           <section className="narrative-block" aria-labelledby="morph-heading">

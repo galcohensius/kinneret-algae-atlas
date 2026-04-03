@@ -1,1 +1,2 @@
 python-docx
+Pillow>=10.0.0
