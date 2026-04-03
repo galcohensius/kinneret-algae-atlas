@@ -61,6 +61,8 @@ def _new_record(source_file: str) -> dict[str, Any]:
         "deferred_images": [],
         "image_captions": [],
         "image_captions_rich": [],
+        # First image after the taxon header (and any inline previous-name prose) is the list/detail thumbnail.
+        "thumbnail_assigned": False,
         "image_counter": 1,
         "plate_image_counter": 1,
         "figure_image_counter": 1,
@@ -915,7 +917,10 @@ def extract_records(
                 if nxt["type"] == "paragraph":
                     peek_text = nxt["text"]
             kind = _image_filename_stem_from_caption_peek(peek_text)
-            if kind == "plate":
+            if not current["thumbnail_assigned"]:
+                stem = "thumbnail-1"
+                current["thumbnail_assigned"] = True
+            elif kind == "plate":
                 stem = f"plate-{current['plate_image_counter']}"
                 current["plate_image_counter"] += 1
             elif kind == "figure":

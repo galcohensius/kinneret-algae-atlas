@@ -2,7 +2,7 @@
   {
     "scientific_name": "Gymnodinium sp.",
     "images": [
-      "/algae-images/gymnodinium-sp/image-1.png",
+      "/algae-images/gymnodinium-sp/thumbnail-1.png",
       "/algae-images/gymnodinium-sp/plate-1.png",
       "/algae-images/gymnodinium-sp/figure-1.png",
       "/algae-images/gymnodinium-sp/figure-2.png",
@@ -357,7 +357,7 @@
   {
     "scientific_name": "Ceratium furcoides (Levander) Langhans 1925",
     "images": [
-      "/algae-images/ceratium-furcoides/image-1.png",
+      "/algae-images/ceratium-furcoides/thumbnail-1.png",
       "/algae-images/ceratium-furcoides/plate-1.jpg"
     ],
     "image_captions": [
@@ -699,7 +699,7 @@
   {
     "scientific_name": "Ceratium hirundinella (O.F. Muller) Dujardin 1841",
     "images": [
-      "/algae-images/ceratium-hirundinella/image-1.png",
+      "/algae-images/ceratium-hirundinella/thumbnail-1.png",
       "/algae-images/ceratium-hirundinella/plate-1.png",
       "/algae-images/ceratium-hirundinella/figure-1.png",
       "/algae-images/ceratium-hirundinella/figure-2.png",
@@ -1225,7 +1225,7 @@
   {
     "scientific_name": "Diplopsalis acuta (Apstein) Entz 1906",
     "images": [
-      "/algae-images/diplopsalis-acuta/image-1.png",
+      "/algae-images/diplopsalis-acuta/thumbnail-1.png",
       "/algae-images/diplopsalis-acuta/plate-1.png",
       "/algae-images/diplopsalis-acuta/figure-1.png",
       "/algae-images/diplopsalis-acuta/figure-2.png",
@@ -1620,7 +1620,7 @@
   {
     "scientific_name": "Peridiniopsis borgei Lemmermann 1904",
     "images": [
-      "/algae-images/peridiniopsis-borgei/image-1.png",
+      "/algae-images/peridiniopsis-borgei/thumbnail-1.png",
       "/algae-images/peridiniopsis-borgei/plate-1.png",
       "/algae-images/peridiniopsis-borgei/figure-1.png",
       "/algae-images/peridiniopsis-borgei/figure-2.png",
@@ -2093,7 +2093,7 @@
   {
     "scientific_name": "Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022",
     "images": [
-      "/algae-images/parvodinium-cunningtonii/image-1.png",
+      "/algae-images/parvodinium-cunningtonii/thumbnail-1.png",
       "/algae-images/parvodinium-cunningtonii/plate-1.png",
       "/algae-images/parvodinium-cunningtonii/figure-1.png",
       "/algae-images/parvodinium-cunningtonii/figure-2.png",
@@ -2584,7 +2584,7 @@
   {
     "scientific_name": "Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926",
     "images": [
-      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/image-1.jpeg",
+      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/thumbnail-1.jpeg",
       "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/plate-1.png"
     ],
     "image_captions": [
@@ -2887,7 +2887,7 @@
   {
     "scientific_name": "Parvodinium elpatiewskyi Ostenfeld) Kretschmann et al 2019",
     "images": [
-      "/algae-images/parvodinium-elpatiewskyi/image-1.png",
+      "/algae-images/parvodinium-elpatiewskyi/thumbnail-1.png",
       "/algae-images/parvodinium-elpatiewskyi/plate-1.png",
       "/algae-images/parvodinium-elpatiewskyi/figure-1.png",
       "/algae-images/parvodinium-elpatiewskyi/figure-2.png"
@@ -3389,7 +3389,7 @@
   {
     "scientific_name": "Parvodinium cunningtonii vs Parvodinium elpatiewskyi",
     "images": [
-      "/algae-images/parvodinium-cunningtonii/image-1.png",
+      "/algae-images/parvodinium-cunningtonii/thumbnail-1.png",
       "/algae-images/parvodinium-cunningtonii/plate-1.png",
       "/algae-images/parvodinium-cunningtonii/plate-2.png",
       "/algae-images/parvodinium-cunningtonii/plate-3.png"
@@ -3825,7 +3825,7 @@
   {
     "scientific_name": "Durinskia oculata (Stein) Gert Hansen et Flaim 2007",
     "images": [
-      "/algae-images/durinskia-oculata/image-1.tif",
+      "/algae-images/durinskia-oculata/thumbnail-1.tif",
       "/algae-images/durinskia-oculata/plate-1.png",
       "/algae-images/durinskia-oculata/plate-2.png"
     ],
@@ -4216,7 +4216,7 @@
   {
     "scientific_name": "Glechodinium penardiforme Lemmermann) Boltovskoy 2000",
     "images": [
-      "/algae-images/glechodinium-penardiforme/image-1.png",
+      "/algae-images/glechodinium-penardiforme/thumbnail-1.png",
       "/algae-images/glechodinium-penardiforme/plate-1.png",
       "/algae-images/glechodinium-penardiforme/plate-2.png"
     ],
@@ -4500,7 +4500,7 @@
   {
     "scientific_name": "Naiadinium polonicum (Woloszynska) Carty 2014",
     "images": [
-      "/algae-images/naiadinium-polonicum/plate-1.png",
+      "/algae-images/naiadinium-polonicum/thumbnail-1.png",
       "/algae-images/naiadinium-polonicum/figure-1.png",
       "/algae-images/naiadinium-polonicum/figure-2.png",
       "/algae-images/naiadinium-polonicum/figure-3.png"
@@ -4833,7 +4833,7 @@
   {
     "scientific_name": "Peridinium gatunense Nygaard 1925",
     "images": [
-      "/algae-images/peridinium-gatunense/image-1.jpg",
+      "/algae-images/peridinium-gatunense/thumbnail-1.jpg",
       "/algae-images/peridinium-gatunense/figure-1.png"
     ],
     "image_captions": [

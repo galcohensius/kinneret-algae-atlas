@@ -54,6 +54,23 @@ describe("normalizeAlgaeRecords", () => {
     expect(result[0].title).toContain("1841");
   });
 
+  it("uses thumbnail path from images when present", () => {
+    const input = [
+      {
+        scientific_name: "Gymnodinium sp.",
+        images: [
+          "/algae-images/gymnodinium-sp/thumbnail-1.png",
+          "/algae-images/gymnodinium-sp/plate-1.png",
+        ],
+        sections: {},
+        metadata: {},
+      },
+    ] as unknown as RawAlgaeRecord[];
+
+    const result = normalizeAlgaeRecords(input);
+    expect(result[0].thumbnailUrl).toContain("thumbnail-1.png");
+  });
+
   it('moves "further_reading" to the end of sections', () => {
     const input = [
       {

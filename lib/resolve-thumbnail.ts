@@ -3,18 +3,23 @@ import path from "node:path";
 import { publicAssetPath } from "./public-path";
 
 /**
- * Optional square preview image per species, not from the Word figure stream.
- * Place under `public/algae-images/{slug}/`; first existing basename wins.
+ * Species thumbnail: the extractor saves the first image per taxon as `thumbnail-1.*`
+ * under `public/algae-images/{slug}/` (after the header and any previous-name lines).
+ * First existing basename wins for manual overrides.
  */
 export const THUMBNAIL_FILE_BASENAMES = [
   "thumbnail-1.png",
   "thumbnail-1.jpg",
   "thumbnail-1.jpeg",
   "thumbnail-1.webp",
+  "thumbnail-1.tif",
+  "thumbnail-1.tiff",
   "thumbnail.png",
   "thumbnail.jpg",
   "thumbnail.jpeg",
   "thumbnail.webp",
+  "thumbnail.tif",
+  "thumbnail.tiff",
 ] as const;
 
 export function resolveThumbnailUrl(slug: string): string | null {

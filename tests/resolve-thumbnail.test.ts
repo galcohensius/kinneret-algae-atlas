@@ -6,6 +6,7 @@ describe("isThumbnailImagePath", () => {
     expect(isThumbnailImagePath("/algae-images/x/thumbnail-1.png")).toBe(true);
     expect(isThumbnailImagePath("/p/thumbnail-2.JPEG")).toBe(true);
     expect(isThumbnailImagePath("/p/thumbnail.webp")).toBe(true);
+    expect(isThumbnailImagePath("/p/thumbnail-1.TIF")).toBe(true);
   });
 
   it("does not match plates or figures", () => {

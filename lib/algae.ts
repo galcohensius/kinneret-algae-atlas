@@ -5,6 +5,7 @@ import { fixScientificTypography } from "./scientific-text";
 import { filterAlgaeByQuery } from "./algae-filter";
 import { publicAssetPath } from "./public-path";
 import { resolveThumbnailUrl } from "./resolve-thumbnail";
+import { isThumbnailImagePath } from "./thumbnail-path-pattern";
 import { splitTaxonAndAuthority, taxonNameForSlug } from "./taxon-display";
 
 const richSegmentSchema = z.object({
@@ -108,13 +109,16 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
     const { taxon, authority } = splitTaxonAndAuthority(fullScientificHeader);
     const nameAuthority = authority ? fixScientificTypography(authority) : null;
 
+    const images = (raw.images ?? []).map((p) => publicAssetPath(p));
+    const thumbnailFromExtractor = images.find((p) => isThumbnailImagePath(p));
+
     return {
       slug,
       title: fixScientificTypography(fullScientificHeader),
       scientificName: fixScientificTypography(taxon),
       nameAuthority,
-      thumbnailUrl: resolveThumbnailUrl(slug),
-      images: (raw.images ?? []).map((p) => publicAssetPath(p)),
+      thumbnailUrl: thumbnailFromExtractor ?? resolveThumbnailUrl(slug),
+      images,
       imageCaptions: raw.image_captions ?? [],
       imageCaptionsRich: (raw.image_captions_rich ?? []).map((arr) =>
         arr.map((seg) => ({
