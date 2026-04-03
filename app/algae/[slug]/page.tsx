@@ -43,17 +43,21 @@ const FIELD_LABELS: Record<string, string> = {
   further_reading: "Further reading"
 };
 
-/** Matches typical Word layout: short facts first, then long-form sections. */
+/**
+ * Quick-facts order: taxonomy/habitat/distinctive traits first, then organization and size.
+ * `previous_name_used` is rendered in the page header (under the species title); it stays in
+ * this list only so its logical position is between habitat and distinctive_attributes.
+ */
 const QUICK_FACT_KEYS = [
   "phylum",
   "class",
   "order",
   "habitat",
   "previous_name_used",
+  "distinctive_attributes",
   "organization",
   "color",
   "cell_shape",
-  "distinctive_attributes",
   "cell_diameter_d",
   "cell_length_l",
   "biovolume_per_cell",
@@ -177,15 +181,6 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             )}
           </p>
         ) : null}
-        {record.thumbnailUrl ? (
-          <img
-            className="algae-species-thumbnail"
-            src={record.thumbnailUrl}
-            alt={`${record.title} — thumbnail preview`}
-            width={160}
-            height={160}
-          />
-        ) : null}
       </header>
 
       <article className="card algae-profile">
@@ -205,6 +200,15 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
               })}
             </dl>
           </section>
+        ) : null}
+        {record.thumbnailUrl ? (
+          <img
+            className="algae-species-thumbnail"
+            src={record.thumbnailUrl}
+            alt={`${record.title} — thumbnail preview`}
+            width={160}
+            height={160}
+          />
         ) : null}
 
         {morphological ? (
