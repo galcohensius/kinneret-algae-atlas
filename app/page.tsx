@@ -34,6 +34,9 @@ export default function HomePage() {
               Dr. Alla Alster
             </a>
           </p>
+          <p className="home-hero-affiliation">
+            Kinneret Limnological Institute, Israel Oceanographic and Limnological Research
+          </p>
         </div>
       </div>
 

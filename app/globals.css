@@ -161,10 +161,19 @@ main.home {
 }
 
 .home-hero-lead {
-  margin: 0 0 1rem;
+  margin: 0 0 0.4rem;
   max-width: 36rem;
   color: rgba(255, 255, 255, 0.94);
   line-height: 1.45;
+}
+
+.home-hero-affiliation {
+  margin: 0 0 1rem;
+  max-width: 36rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  line-height: 1.4;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
 .home-hero-lead a {
@@ -337,7 +346,7 @@ a:hover {
   margin: 0 0 0.65rem;
   line-height: 1.45;
   color: var(--text-secondary);
-  font-size: 0.98rem;
+  font-size: 1.0625rem;
 }
 
 .algae-previous-name-label {
