@@ -325,7 +325,7 @@ a:hover {
 }
 
 .algae-title {
-  font-size: 1.85rem;
+  font-size: 2.3125rem;
   font-weight: 700;
   font-style: normal;
   margin: 0 0 0.35rem;
@@ -346,7 +346,7 @@ a:hover {
   margin: 0 0 0.65rem;
   line-height: 1.45;
   color: var(--text-secondary);
-  font-size: 1.0625rem;
+  font-size: 1.328125rem;
 }
 
 .algae-previous-name-label {

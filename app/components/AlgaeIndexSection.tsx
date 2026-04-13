@@ -13,7 +13,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
     <section
       id="algae-index"
       className="home-algae-index"
-      aria-labelledby="algae-index-heading"
+      aria-label="Algae species index"
     >
       <p className="muted algae-index-count">{records.length} records</p>
 
