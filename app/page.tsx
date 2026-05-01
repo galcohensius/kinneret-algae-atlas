@@ -42,10 +42,10 @@ export default function HomePage() {
       </div>
 
       <div className="home-below-hero">
+        <AlgaeIndexSectionShell />
         <p className="home-supplements-link">
           <Link href="/supplements/">Supplementary Material →</Link>
         </p>
-        <AlgaeIndexSectionShell />
       </div>
     </main>
   );
