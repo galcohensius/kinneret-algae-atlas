@@ -59,6 +59,33 @@ describe("splitFurtherReadingCitations", () => {
     expect(parts[5]).toMatch(/^P\. gatunense and other dinoflagellates:/);
     expect(parts[5]).toContain("Pollingher & Hickel 1991");
   });
+
+  it("does not split 'City & City: Publisher' as a new citation (book publisher location)", () => {
+    // Single citation: publisher location "Jena & Stuttgart: Gustav Fischer" must stay attached
+    const one =
+      "Popovsky J, Pfiester LA. 1990. Suswasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer.";
+    expect(splitFurtherReadingCitations(one)).toHaveLength(1);
+
+    // Four citations where the last one ends with "Jena & Stuttgart: Gustav Fischer"
+    const four = [
+      "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.",
+      "Penard E. 1891. Les Peridiniacees du Lac Leman. Bull. Trav. Soc. Bot. Geneve 6: 1-63.",
+      "Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake. Arch. Hydrobiol. 120: 267-285.",
+      "Popovsky, J. & Pfiester, L.A. 1990. Suswasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer.",
+    ].join(" ");
+    const parts = splitFurtherReadingCitations(four);
+    expect(parts).toHaveLength(4);
+    expect(parts[3]).toContain("Jena & Stuttgart: Gustav Fischer");
+    expect(parts[3]).toContain("Popovsky");
+  });
+
+  it("still splits 'Author & Author year' as a new citation when not followed by a colon", () => {
+    const text =
+      "Pollingher U. 1981. Some paper. J. Phycol. 17:1-10. Pollingher U & Hickel B 1991. Another paper. Arch. Hydrobiol. 120:267-285.";
+    const parts = splitFurtherReadingCitations(text);
+    expect(parts).toHaveLength(2);
+    expect(parts[1]).toContain("Pollingher U & Hickel B 1991");
+  });
 });
 
 describe("citationToScholarSearchUrl", () => {

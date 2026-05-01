@@ -18,7 +18,7 @@ const SCHOLAR_BASE = "https://scholar.google.com/scholar?hl=en&q=";
  *   Surname must be ≥2 letters so "J. Limnol." is not treated as a new paper.
  */
 const SPLIT_BEFORE_NEW_CITATION =
-  /\.(?:\s+)(?=[A-Z][a-zA-ZÀ-ÿ\-]+ [A-Z],|[A-Z][a-zA-ZÀ-ÿ\-]+ & [A-Z][a-zA-ZÀ-ÿ\-]+|[A-Z][A-Za-zÀ-ÿ\-]+(?:,\s+[A-Z][A-Za-zÀ-ÿ\-.]+)+\s*\([12]\d{3}\)|[A-Z]\.\s+[a-z]|[A-Z][a-zA-ZÀ-ÿ\-]+,?\s+[A-Z]\.\s+[12]\d{3}\b)/g;
+  /\.(?:\s+)(?=[A-Z][a-zA-ZÀ-ÿ\-]+ [A-Z],|[A-Z][a-zA-ZÀ-ÿ\-]+ & [A-Z][a-zA-ZÀ-ÿ\-]+(?!\s*:)|[A-Z][A-Za-zÀ-ÿ\-]+(?:,\s+[A-Z][A-Za-zÀ-ÿ\-.]+)+\s*\([12]\d{3}\)|[A-Z]\.\s+[a-z]|[A-Z][a-zA-ZÀ-ÿ\-]+,?\s+[A-Z]\.\s+[12]\d{3}\b)/g;
 
 /** Surname token, including hyphenated (e.g. Berman-Frank, Viner-Mozzini). */
 const SURNAME = String.raw`[A-Z][a-zA-ZÀ-ÿ\-]+(?:-[A-Z][a-zA-ZÀ-ÿ\-]+)*`;
