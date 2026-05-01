@@ -24,9 +24,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
           dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP_SCRIPT }}
         />
         <ThemeToggle />
-        <nav className="site-nav" aria-label="Site navigation">
-          <Link href="/supplements/">Supplements</Link>
-        </nav>
         {children}
       </body>
     </html>
