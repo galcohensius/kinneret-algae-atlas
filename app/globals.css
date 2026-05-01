@@ -188,11 +188,11 @@ main.home {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(
-    to top,
-    rgba(15, 23, 42, 0.82) 0%,
-    rgba(15, 23, 42, 0.35) 42%,
-    rgba(15, 23, 42, 0.1) 100%
+  background: radial-gradient(
+    ellipse at center,
+    rgba(15, 23, 42, 0.52) 0%,
+    rgba(15, 23, 42, 0.18) 60%,
+    rgba(15, 23, 42, 0.08) 100%
   );
   pointer-events: none;
 }
@@ -204,8 +204,8 @@ main.home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  padding: 1.75rem 1.25rem 2.25rem;
+  justify-content: center;
+  padding: 1.75rem 1.25rem;
   max-width: 980px;
   left: 50%;
   transform: translateX(-50%);
@@ -218,7 +218,7 @@ main.home {
   margin: 0 0 0.5rem;
   color: #ffffff;
   font-size: clamp(2.3125rem, 5.25vw, 2.9375rem);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .home-hero-lead {
@@ -230,12 +230,12 @@ main.home {
 }
 
 .home-hero-affiliation {
-  margin: 0 0 1rem;
+  margin: 0;
   max-width: 36rem;
   color: rgba(255, 255, 255, 0.88);
   font-size: clamp(1.1875rem, 2.5vw, 1.3125rem);
   line-height: 1.4;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 .home-hero-lead a {
