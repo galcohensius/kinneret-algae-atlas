@@ -9,7 +9,10 @@ const THEME_BOOTSTRAP_SCRIPT = `!function(){try{var k='kinneret-atlas-theme',s=l
 
 export const metadata: Metadata = {
   title: "Kinneret Algae Atlas",
-  description: "Index of algae species observed in Lake Kinneret."
+  description: "Index of algae species observed in Lake Kinneret.",
+  icons: {
+    icon: "/favicon.jpg",
+  },
 };
 
 type RootLayoutProps = {
