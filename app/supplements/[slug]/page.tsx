@@ -117,18 +117,16 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
             <h2 id="supp-referenced-heading" className="section-heading">
               Referenced in
             </h2>
-            <ul className="supplement-taxa-links">
+            <div className="supplement-taxa-buttons">
               {supplement.linkedTaxa.map((taxonSlug) => (
-                <li key={taxonSlug}>
-                  <Link href={`/algae/${taxonSlug}/`}>
-                    <TaxonItalicName
-                      taxon={taxonSlug.replace(/-/g, " ")}
-                      className="algae-taxon"
-                    />
-                  </Link>
-                </li>
+                <Link key={taxonSlug} href={`/algae/${taxonSlug}/`} className="taxon-button">
+                  <TaxonItalicName
+                    taxon={taxonSlug.replace(/-/g, " ")}
+                    className="algae-taxon"
+                  />
+                </Link>
               ))}
-            </ul>
+            </div>
           </section>
         ) : null}
       </article>

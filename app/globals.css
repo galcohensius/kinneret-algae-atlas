@@ -80,24 +80,30 @@ body {
   margin: 0 0 0.25rem;
 }
 
-.supplement-taxa-links {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.supplement-taxa-buttons {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
-.supplement-taxa-links li a {
-  color: var(--link-color, var(--text-primary));
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  transition: text-decoration-color 0.15s;
+.taxon-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface-subtle);
+  color: var(--text-primary);
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
-.supplement-taxa-links li a:hover {
-  text-decoration-color: currentColor;
+.taxon-button:hover {
+  background: var(--link);
+  border-color: var(--link);
+  color: #fff;
+  text-decoration: none;
 }
 
 .theme-toggle {
