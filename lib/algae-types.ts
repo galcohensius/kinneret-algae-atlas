@@ -3,6 +3,8 @@ export type RichSegment = {
   text: string;
   italic: boolean;
   bold: boolean;
+  /** Optional link target (e.g. supplement document in /public). */
+  href?: string;
 };
 
 /** Shared algae record shape (no Node.js — safe for client components). */

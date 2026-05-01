@@ -12,6 +12,7 @@ const richSegmentSchema = z.object({
   text: z.string(),
   italic: z.boolean(),
   bold: z.boolean(),
+  href: z.string().optional(),
 });
 
 const rawAlgaeRecordSchema = z.object({

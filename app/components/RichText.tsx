@@ -20,7 +20,20 @@ export function RichText({ segments }: { segments: RichSegment[] }) {
           <Fragment>{seg.text}</Fragment>
         );
 
-        return <span key={index}>{content}</span>;
+        const body = seg.href ? (
+          <a
+            className="rich-inline-link"
+            href={seg.href}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {content}
+          </a>
+        ) : (
+          content
+        );
+
+        return <span key={index}>{body}</span>;
       })}
     </>
   );

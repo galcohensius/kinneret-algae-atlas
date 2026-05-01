@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
 import CiteThisRecordBlock from "../../components/CiteThisRecordBlock";
+import TaxonItalicName from "../../components/TaxonItalicName";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import { RichText } from "../../components/RichText";
 import type { RichSegment } from "../../../lib/algae-types";
@@ -139,9 +140,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   const morphological = sections.morphological_features?.trim() ?? "";
   const morphologicalRich = record.sectionsRich?.morphological_features ?? [];
   const {
-    plateImage,
-    plateCaption,
-    plateCaptionRich,
+    plateFigures,
     galleryImages,
     galleryCaptions,
     galleryCaptionsRich,
@@ -164,7 +163,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
 
       <header className="algae-detail-header">
         <h1 className="algae-title">
-          <span className="algae-taxon">{record.scientificName}</span>
+          <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
           {record.nameAuthority ? (
             <>
               {" "}
@@ -212,20 +211,23 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           </section>
         ) : null}
 
-        {plateImage ? (
-          <figure className="plate-figure">
-            <img src={plateImage} alt={`${record.title} — microscopy / plate (from source)`} />
+        {plateFigures.map((slot, idx) => (
+          <figure className="plate-figure" key={`${slot.src}-${idx}`}>
+            <img
+              src={slot.src}
+              alt={galleryImageAlt(record.title, slot.src, idx)}
+            />
             <figcaption className="muted">
-              {plateCaptionRich && plateCaptionRich.length > 0 ? (
-                <RichText segments={plateCaptionRich} />
-              ) : plateCaption?.trim() ? (
-                plateCaption
+              {slot.captionRich && slot.captionRich.length > 0 ? (
+                <RichText segments={slot.captionRich} />
+              ) : slot.caption.trim() ? (
+                slot.caption
               ) : (
                 "Microscopy and composite figures as in the source document (plate / panels)."
               )}
             </figcaption>
           </figure>
-        ) : null}
+        ))}
 
         {NARRATIVE_AFTER_PLATE_KEYS.map((key) => {
           const value = sections[key]?.trim();

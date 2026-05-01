@@ -104,6 +104,7 @@ def _finalize_record(
     images_output_dir: Path | None = None,
     images_public_prefix: str = "/algae-images",
     record_index_fallback: int = 1,
+    morphology_supplement_links: list[dict[str, Any]] | None = None,
 ) -> AlgaeRecord | None:
     deferred = record.get("deferred_images") or []
     if deferred and images_output_dir is not None:
@@ -160,6 +161,14 @@ def _finalize_record(
 
     if not record["scientific_name"] and not any(sections.values()):
         return None
+
+    rules = morphology_supplement_links or []
+    if rules and sections_rich.get("morphological_features"):
+        sections_rich["morphological_features"] = _apply_morphology_supplement_links(
+            sections_rich["morphological_features"],
+            record.get("scientific_name"),
+            rules,
+        )
 
     metadata = dict(record.get("metadata") or {})
     metadata["record_updated"] = date.today().isoformat()
@@ -814,23 +823,102 @@ def _styles_int_to_segment_flags(style_int: int) -> tuple[bool, bool]:
 def _char_styles_to_rich_segments(text: str, char_styles: list[int]) -> list[dict[str, Any]]:
     if not text:
         return []
-    if len(text) != len(char_styles):
-        char_styles = _neutral_char_styles(text)
+    styles = char_styles
+    if len(text) != len(styles):
+        styles = _neutral_char_styles(text)
 
     segments: list[dict[str, Any]] = []
-    cur_style = char_styles[0]
+    cur_style = styles[0]
     start = 0
     for i in range(1, len(text)):
-        if char_styles[i] != cur_style:
+        if styles[i] != cur_style:
             chunk = text[start:i]
             italic, bold = _styles_int_to_segment_flags(cur_style)
             segments.append({"text": chunk, "italic": italic, "bold": bold})
             start = i
-            cur_style = char_styles[i]
+            cur_style = styles[i]
 
     chunk = text[start:]
     italic, bold = _styles_int_to_segment_flags(cur_style)
     segments.append({"text": chunk, "italic": italic, "bold": bold})
+    return segments
+
+
+def _inject_href_into_rich_segments(
+    segments: list[dict[str, Any]],
+    link_text: str,
+    href: str,
+) -> list[dict[str, Any]]:
+    """
+    Merge segments to per-character style, assign ``href`` to characters covered by
+    ``link_text`` (first occurrence), then merge runs again for JSON.
+    """
+    if not segments or not link_text or not href:
+        return segments
+
+    expanded: list[dict[str, Any]] = []
+    for seg in segments:
+        t = seg.get("text") or ""
+        if not t:
+            continue
+        italic = bool(seg.get("italic"))
+        bold = bool(seg.get("bold"))
+        seg_href = seg.get("href")
+        for ch in t:
+            row = {"ch": ch, "italic": italic, "bold": bold}
+            if seg_href:
+                row["href"] = seg_href
+            expanded.append(row)
+
+    full = "".join(row["ch"] for row in expanded)
+    start = full.find(link_text)
+    if start < 0:
+        return segments
+    for i in range(start, start + len(link_text)):
+        expanded[i]["href"] = href
+
+    merged: list[dict[str, Any]] = []
+    for row in expanded:
+        ch = row["ch"]
+        italic = row["italic"]
+        bold = row["bold"]
+        row_href = row.get("href")
+        if merged:
+            last = merged[-1]
+            same = last["italic"] == italic and last["bold"] == bold
+            last_href = last.get("href")
+            if same and last_href == row_href:
+                last["text"] += ch
+                continue
+        item: dict[str, Any] = {"text": ch, "italic": italic, "bold": bold}
+        if row_href:
+            item["href"] = row_href
+        merged.append(item)
+    return merged
+
+
+def _apply_morphology_supplement_links(
+    segments: list[dict[str, Any]],
+    scientific_name: str | None,
+    rules: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    if not segments or not rules or not scientific_name:
+        return segments
+    name = scientific_name.strip()
+    if not name:
+        return segments
+    for raw in rules:
+        pattern = raw.get("scientific_name_pattern")
+        link_text = (raw.get("link_text") or "").strip()
+        href = (raw.get("href") or "").strip()
+        if not pattern or not link_text or not href:
+            continue
+        try:
+            if not re.search(pattern, name):
+                continue
+        except re.error:
+            continue
+        return _inject_href_into_rich_segments(segments, link_text, href)
     return segments
 
 
@@ -1061,6 +1149,7 @@ def extract_records(
     current_section = default_section
     resolved_images_output_dir = Path(images_output_dir) if images_output_dir else None
     expect_image_caption = False
+    morphology_supplement_links = config.get("morphology_supplement_links") or []
 
     blocks = list(iter_docx_content_blocks(docx_path))
     pending_relaxed_record_markers = False
@@ -1075,6 +1164,7 @@ def extract_records(
                 images_output_dir=resolved_images_output_dir,
                 images_public_prefix=images_public_prefix,
                 record_index_fallback=len(records) + 1,
+                morphology_supplement_links=morphology_supplement_links,
             )
             if finalized:
                 records.append(finalized)
@@ -1127,6 +1217,30 @@ def extract_records(
                     }
                 )
             expect_image_caption = True
+            continue
+
+        if block["type"] == "table":
+            if expect_image_caption:
+                _flush_missing_image_caption(current)
+                expect_image_caption = False
+            rows = block.get("rows") or []
+            if rows:
+                lines = [
+                    " | ".join(cell.strip() for cell in row)
+                    for row in rows
+                    if any(c.strip() for c in row)
+                ]
+                table_plain = "\n".join(lines).strip()
+                if table_plain:
+                    buf = current["sections_buffer"].setdefault(current_section, [])
+                    leading = "\n" if buf else ""
+                    styled = leading + table_plain
+                    _append_section_line(
+                        current,
+                        current_section,
+                        styled,
+                        _neutral_char_styles(styled),
+                    )
             continue
 
         text = block["text"]
@@ -1186,6 +1300,7 @@ def extract_records(
                 images_output_dir=resolved_images_output_dir,
                 images_public_prefix=images_public_prefix,
                 record_index_fallback=len(records) + 1,
+                morphology_supplement_links=morphology_supplement_links,
             )
             if finalized:
                 records.append(finalized)
@@ -1226,6 +1341,7 @@ def extract_records(
                     images_output_dir=resolved_images_output_dir,
                     images_public_prefix=images_public_prefix,
                     record_index_fallback=len(records) + 1,
+                    morphology_supplement_links=morphology_supplement_links,
                 )
                 if finalized:
                     records.append(finalized)
@@ -1257,6 +1373,7 @@ def extract_records(
         images_output_dir=resolved_images_output_dir,
         images_public_prefix=images_public_prefix,
         record_index_fallback=len(records) + 1,
+        morphology_supplement_links=morphology_supplement_links,
     )
     if finalized:
         records.append(finalized)

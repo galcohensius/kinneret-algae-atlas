@@ -71,6 +71,13 @@
     "Organization:"
   ],
   "record_following_marker_lookahead": 5,
+  "morphology_supplement_links": [
+    {
+      "scientific_name_pattern": "(?i)Parvodinium\\s+\\S*(cunningtonii|elpatiewskyi)\\S*",
+      "link_text": "here our tips",
+      "href": "/supplements/9-Suppl1-cunningtoni-vs-elpatiewskyi.docx"
+    }
+  ],
   "record_start_patterns": [
     "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+)\\s+[A-Z][a-zA-Z.-]*\\.?\\s+[A-Z][a-zA-Z.-]*\\.?\\s+\\d{4}\\b",
     "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)\\s+\\([^\\)]{2,80}\\)\\s+[A-Z][a-zA-Z.-]+(?:\\s+\\d{4}\\b)?",

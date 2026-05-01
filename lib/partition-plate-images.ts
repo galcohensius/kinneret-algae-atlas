@@ -26,9 +26,20 @@ function dropThumbnailPaths(
   };
 }
 
+export type PlateFigureSlot = {
+  src: string;
+  caption: string;
+  captionRich: RichSegment[] | undefined;
+};
+
+function isPlatePath(src: string): boolean {
+  return PLATE_IMAGE_PATH_RE.test(src);
+}
+
 /**
- * Prefer the first `plate-*` asset as the main figure; otherwise keep document
- * order (first image = hero). Gallery order preserves remaining images.
+ * Prefer the first `plate-*` asset as the hero figure; include every consecutive
+ * `plate-*` after it (Plates 1–n from Word stay together). Remaining assets —
+ * figures, stray images before the first plate — go to the gallery block.
  * Paths matching `thumbnail-*.png` (site previews) are ignored here.
  */
 export function partitionPlateAndGalleryImages(
@@ -39,6 +50,7 @@ export function partitionPlateAndGalleryImages(
   plateImage: string | undefined;
   plateCaption: string | undefined;
   plateCaptionRich: RichSegment[] | undefined;
+  plateFigures: PlateFigureSlot[];
   galleryImages: string[];
   galleryCaptions: string[];
   galleryCaptionsRich: (RichSegment[] | undefined)[];
@@ -58,35 +70,58 @@ export function partitionPlateAndGalleryImages(
       plateImage: undefined,
       plateCaption: undefined,
       plateCaptionRich: undefined,
+      plateFigures: [],
       galleryImages: [],
       galleryCaptions: [],
       galleryCaptionsRich: [],
     };
   }
-  const plateIdx = images.findIndex((p) => PLATE_IMAGE_PATH_RE.test(p));
+  const plateIdx = images.findIndex((p) => isPlatePath(p));
   if (plateIdx < 0) {
     return {
       plateImage: images[0],
       plateCaption: captions[0],
       plateCaptionRich: richAt(0),
+      plateFigures: [
+        {
+          src: images[0]!,
+          caption: captions[0] ?? "",
+          captionRich: richAt(0),
+        },
+      ],
       galleryImages: images.slice(1),
       galleryCaptions: captions.slice(1),
       galleryCaptionsRich: images.slice(1).map((_, j) => richAt(j + 1)),
     };
   }
-  const galleryImages = [...images.slice(0, plateIdx), ...images.slice(plateIdx + 1)];
-  const galleryCaptions = [
-    ...captions.slice(0, plateIdx),
-    ...captions.slice(plateIdx + 1),
-  ];
+
+  let runEnd = plateIdx;
+  while (runEnd + 1 < images.length && isPlatePath(images[runEnd + 1]!)) {
+    runEnd += 1;
+  }
+
+  const plateFigures: PlateFigureSlot[] = [];
+  for (let i = plateIdx; i <= runEnd; i++) {
+    plateFigures.push({
+      src: images[i]!,
+      caption: captions[i] ?? "",
+      captionRich: richAt(i),
+    });
+  }
+
+  const galleryImages = [...images.slice(0, plateIdx), ...images.slice(runEnd + 1)];
+  const galleryCaptions = [...captions.slice(0, plateIdx), ...captions.slice(runEnd + 1)];
   const galleryCaptionsRich = galleryImages.map((_, j) => {
-    const origIdx = j < plateIdx ? j : j + 1;
+    const origIdx = j < plateIdx ? j : j + (runEnd - plateIdx + 1);
     return richAt(origIdx);
   });
+
+  const firstPlate = plateFigures[0]!;
   return {
-    plateImage: images[plateIdx],
-    plateCaption: captions[plateIdx],
-    plateCaptionRich: richAt(plateIdx),
+    plateImage: firstPlate.src,
+    plateCaption: firstPlate.caption,
+    plateCaptionRich: firstPlate.captionRich,
+    plateFigures,
     galleryImages,
     galleryCaptions,
     galleryCaptionsRich,

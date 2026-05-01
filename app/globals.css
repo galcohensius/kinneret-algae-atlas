@@ -231,8 +231,16 @@ main.home {
 }
 
 .algae-list-card-title .algae-taxon {
-  font-style: italic;
+  font-style: normal;
   font-family: Georgia, "Times New Roman", serif;
+}
+
+.algae-list-card-title .algae-taxon .taxon-scientific {
+  font-style: italic;
+}
+
+.algae-list-card-title .algae-taxon .taxon-rank-abbr {
+  font-style: normal;
 }
 
 a {
@@ -335,7 +343,15 @@ a:hover {
 }
 
 .algae-title .algae-taxon {
+  font-style: normal;
+}
+
+.algae-title .algae-taxon .taxon-scientific {
   font-style: italic;
+}
+
+.algae-title .algae-taxon .taxon-rank-abbr {
+  font-style: normal;
 }
 
 .algae-title .algae-name-authority {
@@ -390,10 +406,21 @@ a:hover {
   line-height: 1.55;
 }
 
+.rich-inline-link {
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.rich-inline-link:hover {
+  color: var(--link-hover);
+}
+
 .narrative-block .algae-prose {
   line-height: 1.65;
   margin: 0;
   text-align: left;
+  white-space: pre-line;
 }
 
 .cite-this-record {

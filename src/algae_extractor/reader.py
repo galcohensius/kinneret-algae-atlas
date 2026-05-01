@@ -90,6 +90,22 @@ def _iter_document_blocks(document: Document):
             yield Table(child, document)
 
 
+def table_to_row_texts(table: Table) -> list[list[str]]:
+    """Plain text per cell, one row per Word table row (document order)."""
+    rows_out: list[list[str]] = []
+    for row in table.rows:
+        cells_out: list[str] = []
+        for cell in row.cells:
+            parts: list[str] = []
+            for paragraph in cell.paragraphs:
+                converted = _paragraph_to_plain_and_styles(paragraph)
+                if converted:
+                    parts.append(converted[0])
+            cells_out.append(normalize_whitespace(" ".join(parts)))
+        rows_out.append(cells_out)
+    return rows_out
+
+
 def _yield_images_from_drawing_element(
     drawing_el, document: Document
 ):
@@ -110,7 +126,7 @@ def _yield_images_from_drawing_element(
 
 def iter_docx_content_blocks(docx_path: str | Path):
     """
-    Yield content in document order: paragraph text, page breaks, and images
+    Yield content in document order: paragraph text, tables, page breaks, and images
     interleave as in the WordprocessingML (e.g. figure then caption; page breaks
     between species).
     """
@@ -118,6 +134,9 @@ def iter_docx_content_blocks(docx_path: str | Path):
 
     for block in _iter_document_blocks(document):
         if isinstance(block, Table):
+            rows = table_to_row_texts(block)
+            if any(any(c.strip() for c in r) for r in rows):
+                yield {"type": "table", "rows": rows}
             continue
 
         if not hasattr(block, "runs"):

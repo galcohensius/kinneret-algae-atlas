@@ -21,7 +21,9 @@ export function sliceRichSegmentsByPlainRange(
     if (lo < hi) {
       const chunk = seg.text.slice(lo, hi);
       if (chunk) {
-        result.push({ text: chunk, italic: seg.italic, bold: seg.bold });
+        const piece: RichSegment = { text: chunk, italic: seg.italic, bold: seg.bold };
+        if (seg.href) piece.href = seg.href;
+        result.push(piece);
       }
     }
     pos = segEnd;

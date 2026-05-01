@@ -3,6 +3,7 @@
 import Link from "next/link";
 import type { AlgaeRecord } from "../../lib/algae-types";
 import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
+import TaxonItalicName from "./TaxonItalicName";
 
 type AlgaeIndexSectionProps = {
   records: AlgaeRecord[];
@@ -34,7 +35,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
             )}
             <h3 className="algae-list-card-title">
               <Link href={`/algae/${record.slug}/`}>
-                <span className="algae-taxon">{record.scientificName}</span>
+                <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
               </Link>
             </h3>
           </article>
