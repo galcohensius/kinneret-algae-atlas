@@ -410,6 +410,32 @@ a:hover {
 }
 
 /* Algae detail — Word-like single-column profile */
+.algae-detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.algae-detail-nav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  border: 1.5px solid var(--link);
+  border-radius: 999px;
+  color: var(--link);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.algae-detail-nav a:hover {
+  background: var(--link);
+  color: #fff;
+  text-decoration: none;
+}
+
 .algae-detail-nav-end {
   margin-top: 1.35rem;
 }

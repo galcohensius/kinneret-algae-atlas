@@ -45,7 +45,6 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
     <main className="algae-detail">
       <p className="algae-detail-nav">
         <Link href="/supplements/">← Supplementary material</Link>
-        {" · "}
         <Link href="/#algae-index">Algae index</Link>
       </p>
 
