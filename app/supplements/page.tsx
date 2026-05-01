@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TaxonItalicName from "../components/TaxonItalicName";
 import { getAllSupplements } from "../../lib/supplements";
+import { publicAssetPath } from "../../lib/public-path";
 
 export const metadata: Metadata = {
   title: "Supplementary Material – Kinneret Algae Atlas",
@@ -21,21 +22,35 @@ export default async function SupplementsIndexPage() {
         <h1>Supplementary Material</h1>
       </header>
 
-      <article className="card algae-profile">
+      <div className="home-below-hero" style={{ padding: "0 1rem 1rem" }}>
         {supplements.length === 0 ? (
           <p className="muted">No supplements available.</p>
         ) : (
-          <ul className="supplement-taxa-links">
-            {supplements.map((s) => (
-              <li key={s.slug}>
-                <Link href={`/supplements/${s.slug}/`}>
-                  <TaxonItalicName taxon={s.title} className="algae-taxon" />
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="algae-list-grid">
+            {supplements.map((s) => {
+              const thumb = s.images[0] ? publicAssetPath(s.images[0]) : null;
+              return (
+                <article className="card algae-list-card" key={s.slug}>
+                  {thumb ? (
+                    <img
+                      className="algae-thumb"
+                      src={thumb}
+                      alt={`${s.title} thumbnail`}
+                    />
+                  ) : (
+                    <div className="algae-thumb algae-thumb-placeholder">No image</div>
+                  )}
+                  <h3 className="algae-list-card-title">
+                    <Link href={`/supplements/${s.slug}/`}>
+                      <TaxonItalicName taxon={s.title} className="algae-taxon" />
+                    </Link>
+                  </h3>
+                </article>
+              );
+            })}
+          </div>
         )}
-      </article>
+      </div>
 
       <p className="algae-detail-nav algae-detail-nav-end">
         <Link href="/#algae-index">← Algae index</Link>

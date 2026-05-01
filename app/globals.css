@@ -249,6 +249,11 @@ main.home {
   padding: 1.75rem 1rem 0;
 }
 
+.home-supplements-link {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+}
+
 .home-algae-index {
   scroll-margin-top: 1rem;
 }
