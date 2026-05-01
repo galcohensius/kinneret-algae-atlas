@@ -238,6 +238,11 @@ def _infer_scientific_name_fallback(record: dict[str, Any]) -> str | None:
     for cap in record.get("image_captions") or []:
         if not cap or not cap.strip():
             continue
+        # Prefer explicit "Genus sp." anywhere (e.g. "Figure 1. Time series of Gymnodinium sp., Lake…")
+        # so we do not treat "Time series" as a fake binomial after "Figure 1.".
+        m = re.search(r"(?i)\b([A-Z][a-zA-Z-]+\s+sp\.)\b", cap)
+        if m:
+            return m.group(1).strip()
         m = re.search(
             r"(?i)(?:Plate|Figures?|Fig\.)\s*\d+[A-Za-z]?\s*[.:]\s*"
             r"([A-Z][a-zA-Z-]+\s+sp\.)",
@@ -1099,14 +1104,19 @@ def extract_records(
         if record_start and _should_reject_fake_record_name(record_start[0], blocked_starts):
             record_start = None
         if record_start and following_markers and not use_relaxed_record_markers:
-            lookahead_slice = [
-                candidate
-                for candidate in blocks[index + 1 : index + 1 + marker_lookahead]
-                if candidate["type"] == "paragraph"
-            ]
+            # Next K *paragraph* blocks in document order (skip images/page breaks).
+            # A thumbnail between the taxon header and "Organization:" must not hide
+            # the marker when the lookahead window is only a fixed slice of block indices.
+            paragraphs_ahead: list[dict[str, Any]] = []
+            for candidate in blocks[index + 1 :]:
+                if candidate["type"] != "paragraph":
+                    continue
+                paragraphs_ahead.append(candidate)
+                if len(paragraphs_ahead) >= marker_lookahead:
+                    break
             next_starts_with_marker = any(
                 candidate["text"].lower().startswith(marker)
-                for candidate in lookahead_slice
+                for candidate in paragraphs_ahead
                 for marker in following_markers
             )
             if not next_starts_with_marker:
