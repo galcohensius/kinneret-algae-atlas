@@ -16,6 +16,7 @@ from algae_extractor.pipeline import (
     move_orphan_prose_after_sample_size_from_measurement_fields_rich,
     normalize_further_reading_citation_boundaries,
     normalize_further_reading_citation_boundaries_rich,
+    strip_inline_cite_this_record_from_narrative_fields_rich,
     _normalize_structured_fields_rich,
 )
 
@@ -210,6 +211,20 @@ class TestNormalizeFurtherReadingCitationBoundariesRich(unittest.TestCase):
         # Hansen still italic after insertion
         h2 = out_plain.index("Hansen")
         self.assertEqual(out_styles[h2], 1)
+
+
+class TestStripInlineCiteThisRecord(unittest.TestCase):
+    def test_trims_trailing_cite_from_ecology(self) -> None:
+        eco = (
+            "Some ecology prose. "
+            "Cite this record as: Tamar Zohary, Alla Alster. "
+            "16 April 2026. Electronic publication."
+        )
+        fields_plain = {"ecology": eco}
+        fields_styles = {"ecology": [0] * len(eco)}
+        strip_inline_cite_this_record_from_narrative_fields_rich(fields_plain, fields_styles)
+        self.assertEqual(fields_plain["ecology"], "Some ecology prose.")
+        self.assertEqual(fields_styles["ecology"], [0] * len("Some ecology prose."))
 
 
 if __name__ == "__main__":

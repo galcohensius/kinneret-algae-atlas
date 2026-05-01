@@ -26,4 +26,6 @@ export type AlgaeRecord = {
   sections: Record<string, string>;
   sectionsRich: Record<string, RichSegment[]>;
   metadata: Record<string, unknown>;
+  /** ISO YYYY-MM-DD: last Word→JSON extraction for this record (see metadata.record_updated). */
+  recordUpdated: string | null;
 };

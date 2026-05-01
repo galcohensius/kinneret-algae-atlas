@@ -1,3 +1,4 @@
+from datetime import date
 from io import BytesIO
 from pathlib import Path
 from typing import Any
@@ -160,6 +161,9 @@ def _finalize_record(
     if not record["scientific_name"] and not any(sections.values()):
         return None
 
+    metadata = dict(record.get("metadata") or {})
+    metadata["record_updated"] = date.today().isoformat()
+
     return AlgaeRecord(
         scientific_name=record["scientific_name"],
         images=record["images"],
@@ -167,7 +171,7 @@ def _finalize_record(
         image_captions_rich=record["image_captions_rich"],
         sections=sections,
         sections_rich=sections_rich,
-        metadata=record["metadata"],
+        metadata=metadata,
     )
 
 
@@ -297,6 +301,7 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("ecology", ["ecology"]),
     ("physiological_features", ["physiological features"]),
     ("environmental_conditions", ["environmental conditions"]),
+    ("cite_this_record", ["cite this record as"]),
     ("further_reading", ["further reading"]),
 ]
 
@@ -398,6 +403,42 @@ def move_inline_further_reading_from_ecology(fields: dict[str, str]) -> None:
         return
     existing = fields.get("further_reading", "").strip()
     fields["further_reading"] = (f"{existing} {tail}" if existing else tail).strip()
+
+
+_CITE_THIS_RECORD_START_RE = re.compile(r"(?i)Cite this record as\s*:")
+
+
+def strip_inline_cite_this_record_from_narrative_fields_rich(
+    fields_plain: dict[str, str],
+    fields_styles: dict[str, list[int]],
+) -> None:
+    """
+    Remove a trailing ``Cite this record as: …`` run erroneously pasted onto
+    ecology / environmental prose. The site renders a canonical cite line from
+    metadata instead.
+    """
+    for field in (
+        "morphological_features",
+        "ecology",
+        "physiological_features",
+        "environmental_conditions",
+        "distinctive_attributes",
+    ):
+        plain = (fields_plain.get(field) or "").strip()
+        if not plain:
+            continue
+        matches = list(_CITE_THIS_RECORD_START_RE.finditer(plain))
+        if not matches:
+            continue
+        m = matches[-1]
+        prefix_plain = plain[: m.start()].rstrip()
+        if not prefix_plain or prefix_plain == plain:
+            continue
+        styles = fields_styles.get(field, [])
+        if not styles or len(styles) != len(plain):
+            styles = _neutral_char_styles(plain)
+        fields_plain[field] = prefix_plain
+        fields_styles[field] = styles[: len(prefix_plain)]
 
 
 def move_inline_further_reading_from_ecology_rich(
@@ -886,12 +927,23 @@ def _normalize_structured_fields_rich(
         fields_plain["morphological_features"] = morph_plain
         fields_styles["morphological_features"] = morph_styles
 
+    if raw_sections_plain.get("cite_this_record", "").strip() and not fields_plain[
+        "cite_this_record"
+    ].strip():
+        cite_plain = raw_sections_plain["cite_this_record"].strip()
+        cite_styles = raw_sections_styles.get("cite_this_record", _neutral_char_styles(cite_plain))
+        if len(cite_styles) != len(cite_plain):
+            cite_styles = _neutral_char_styles(cite_plain)
+        fields_plain["cite_this_record"] = cite_plain
+        fields_styles["cite_this_record"] = cite_styles
+
     move_cell_biovolume_prefix_from_ecology_rich(fields_plain, fields_styles)
 
     move_orphan_prose_after_sample_size_from_measurement_fields_rich(
         fields_plain, fields_styles
     )
 
+    strip_inline_cite_this_record_from_narrative_fields_rich(fields_plain, fields_styles)
     move_inline_further_reading_from_ecology_rich(fields_plain, fields_styles)
     move_inline_environmental_conditions_from_ecology_rich(fields_plain, fields_styles)
     move_inline_physiological_features_from_ecology_rich(fields_plain, fields_styles)
@@ -911,6 +963,9 @@ def _normalize_structured_fields_rich(
         new_fr, new_st = normalize_further_reading_citation_boundaries_rich(fr_plain, fr_styles)
         fields_plain["further_reading"] = new_fr
         fields_styles["further_reading"] = new_st
+
+    fields_plain.pop("cite_this_record", None)
+    fields_styles.pop("cite_this_record", None)
 
     sections_rich: dict[str, list[dict[str, Any]]] = {}
     for key, _ in FIELD_ORDER:

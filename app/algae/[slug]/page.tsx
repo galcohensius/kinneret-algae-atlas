@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
+import CiteThisRecordBlock from "../../components/CiteThisRecordBlock";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import { RichText } from "../../components/RichText";
 import type { RichSegment } from "../../../lib/algae-types";
@@ -261,6 +262,8 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             />
           </section>
         ) : null}
+
+        <CiteThisRecordBlock recordUpdatedIso={record.recordUpdated} />
 
         {sections.further_reading?.trim() ? (
           <section

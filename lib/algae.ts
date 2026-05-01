@@ -121,6 +121,12 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
     const ecology = fixedSections.ecology ?? null;
     const notes = fixedSections.notes ?? null;
 
+    const recordUpdatedRaw = raw.metadata?.record_updated;
+    const recordUpdated =
+      typeof recordUpdatedRaw === "string" && /^\d{4}-\d{2}-\d{2}$/.test(recordUpdatedRaw)
+        ? recordUpdatedRaw
+        : null;
+
     const { taxon, authority } = splitTaxonAndAuthority(fullScientificHeader);
     const nameAuthority = authority ? fixScientificTypography(authority) : null;
 
@@ -156,7 +162,8 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
           })),
         ])
       ),
-      metadata: raw.metadata
+      metadata: raw.metadata,
+      recordUpdated
     };
   });
 }

@@ -28,6 +28,7 @@ describe("sortAlgaeRecordsForCatalog", () => {
         },
         sectionsRich: {},
         metadata: {},
+        recordUpdated: null,
       },
       {
         slug: "order-a-name-a",
@@ -48,6 +49,7 @@ describe("sortAlgaeRecordsForCatalog", () => {
         },
         sectionsRich: {},
         metadata: {},
+        recordUpdated: null,
       },
       {
         slug: "phylum-a",
@@ -68,6 +70,7 @@ describe("sortAlgaeRecordsForCatalog", () => {
         },
         sectionsRich: {},
         metadata: {},
+        recordUpdated: null,
       },
     ];
 
@@ -162,5 +165,18 @@ describe("normalizeAlgaeRecords", () => {
 
     const result = normalizeAlgaeRecords(input);
     expect(Object.keys(result[0].sections)).toEqual(["morphology", "ecology", "notes", "further_reading"]);
+  });
+
+  it("passes through record_updated from metadata", () => {
+    const input = [
+      {
+        scientific_name: "Example algae",
+        sections: { notes: "x" },
+        metadata: { record_updated: "2026-05-01" },
+      },
+    ] as unknown as RawAlgaeRecord[];
+
+    const result = normalizeAlgaeRecords(input);
+    expect(result[0].recordUpdated).toBe("2026-05-01");
   });
 });

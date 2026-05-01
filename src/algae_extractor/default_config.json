@@ -24,6 +24,9 @@
       "Distribution",
       "Environment"
     ],
+    "cite_this_record": [
+      "Cite this record as"
+    ],
     "notes": [
       "Notes",
       "Remarks"
@@ -61,7 +64,8 @@
     "previously used",
     "previous names",
     "synonyms",
-    "time series"
+    "time series",
+    "cite this"
   ],
   "record_following_markers": [
     "Organization:"

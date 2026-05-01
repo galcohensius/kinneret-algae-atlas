@@ -8,6 +8,10 @@ This site is the **algae atlas of Dr. Tamar Zohary**—a lifelong research effor
 
 This repository hosts the data pipeline (Word → structured records) and the static web app that publishes the atlas.
 
+## Copyright
+
+© All rights reserved. The scientific knowledge in this atlas is that of **Dr. Tamar Zohary** and **Dr. Alla Alster**.
+
 ## Updating the atlas from a new Word file
 
 When `data/raw/` gets an updated `.docx`, run these steps in order (from the repository root).
