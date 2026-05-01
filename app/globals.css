@@ -256,8 +256,27 @@ main.home {
 }
 
 .home-supplements-link {
-  margin: 0 0 1.25rem;
+  margin: 1.5rem 0 0;
   font-size: 0.95rem;
+}
+
+.home-supplements-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 1.25rem;
+  border: 1.5px solid var(--link);
+  border-radius: 999px;
+  color: var(--link);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+
+.home-supplements-link a:hover {
+  background: var(--link);
+  color: #fff;
+  text-decoration: none;
 }
 
 .home-algae-index {
