@@ -147,6 +147,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
           text: fixScientificTypography(seg.text),
           italic: seg.italic,
           bold: seg.bold,
+          ...(seg.href ? { href: seg.href } : {}),
         }))
       ),
       morphology,
@@ -160,6 +161,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
             text: fixScientificTypography(seg.text),
             italic: seg.italic,
             bold: seg.bold,
+            ...(seg.href ? { href: seg.href } : {}),
           })),
         ])
       ),

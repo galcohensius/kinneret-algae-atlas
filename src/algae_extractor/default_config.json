@@ -27,6 +27,10 @@
     "cite_this_record": [
       "Cite this record as"
     ],
+    "further_reading": [
+      "Further reading",
+      "Further Reading"
+    ],
     "notes": [
       "Notes",
       "Remarks"
@@ -75,7 +79,15 @@
     {
       "scientific_name_pattern": "(?i)Parvodinium\\s+\\S*(cunningtonii|elpatiewskyi)\\S*",
       "link_text": "here our tips",
-      "href": "/supplements/9-Suppl1-cunningtoni-vs-elpatiewskyi.docx"
+      "href": "/supplements/cunningtonii-vs-elpatiewskyi/"
+    }
+  ],
+  "supplements": [
+    {
+      "id": "9-Suppl1-cunningtoni-vs-elpatiewskyi",
+      "slug": "cunningtonii-vs-elpatiewskyi",
+      "title": "P. cunningtonii vs P. elpatiewskyi",
+      "linked_taxa": ["parvodinium-elpatiewskyi", "parvodinium-cunningtonii"]
     }
   ],
   "record_start_patterns": [

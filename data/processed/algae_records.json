@@ -415,7 +415,7 @@
       "ecology": "Historically this species was identified as Ceratium hirunidnella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.",
       "physiological_features": "",
       "environmental_conditions": "",
-      "further_reading": ""
+      "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
     },
     "sections_rich": {
       "phylum": [
@@ -663,6 +663,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -815,7 +822,7 @@
       "ecology": "C. hirundinella is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cells mL-1 (Fig. 1), and <10% contribution to total biomass. An exception was a spring bloom in 2010, a year when Peridinium gatunense didn’t bloom. Cell concentration in the epilimnion reached 50 cells mL-1 on14 March 2010, with biomass of 150 g m-2 (Fig. 1), contributing > 70% to total biomass. This species appears in the water column in January, peaks between March and June, then disappear from the water till next spring (Fig. 2). The mean abundance of C. hirundinella has increased since the mid 1990s and tends to be higher in years with no or moderate intensity Peridinium gatunense blooms. Vegetative and sexual reproduction is known. Ceratium cysts commonly appear in the Kinneret plankton in March and April (Fig. 2). They are more numerous than cysts of Peridinium gatunense even though the abundance of Ceratium vegetative cells is an order of magnitude lower than that of Peridinium.",
       "physiological_features": "",
       "environmental_conditions": "Over the years, higher cell abundances of C. hirundinella (> 5 cells mL-1) occurred usually during thermal stratification, over the full ranges of salinities and Ca concentrations, at water temperatures ranging 16-29oC, intermediate alkalinities (90-140 mg CaCO3 L-1), and distinctly at pH > 8.5, when both nitrate and organic N (particulate and dissolved) are present (Fig. 3).",
-      "further_reading": ""
+      "further_reading": "Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285. Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
     },
     "sections_rich": {
       "phylum": [
@@ -1170,6 +1177,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Pollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285. Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -1322,7 +1336,7 @@
       "ecology": "Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL-1 (Fig. 1). It appears in the plankton from November (onset of destratification) to July, with peak abundance in March (Fig. 2), before the lake stratifies, and earlier than most other Kinneret dinoflagellates. It is more common in littoral samples. Being heterotrophic, Diplopsalis acuta is excluded from the computation of total phytoplankton biomass in our routine monitoring.",
       "physiological_features": "",
       "environmental_conditions": "Higher cell abundances of this species occurred at higher Kinneret alkalinity (> 100 mg CaCO3 L-1), Ca (> 40 mg L-1), TDP, and DO concentrations, when Dissolved organic N (DON) ranged 0.1-0.5 mg L-1 and Secchi depth ranged 2-4 m, At low turbidity (< 4 NTU) waters, and low Si (Fig. 3). Abundance seemed to be indifferent to water level, conductivity, chloride, short wave radiation. Abundance was higher with lower long-wave radiation levels and water temperatures < 25 C, but both may be correlates of the time of year of its peak abundance.",
-      "further_reading": ""
+      "further_reading": "Moestrup Ø, Calado AJ. 2018. Süßwasserflora von Mitteleuropa. Dinophyceae. Vol. 6 pp. [i]-xii, [1]-560, 421 figures. Berlin: Springer Spektrum.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Archiv für Hydrobiologie 120(3):267-85."
     },
     "sections_rich": {
       "phylum": [
@@ -1546,6 +1560,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Moestrup Ø, Calado AJ. 2018. Süßwasserflora von Mitteleuropa. Dinophyceae. Vol. 6 pp. [i]-xii, [1]-560, 421 figures. Berlin: Springer Spektrum.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Archiv für Hydrobiologie 120(3):267-85.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -1698,7 +1719,7 @@
       "ecology": "Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The contribution of Peridiniopsis borgei to total biomass was usually < 10% but on rare occasions it reached 40%. Peridiniopsis borgei shows an annual cycle also of cell size (Fig. 2b). Its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 m, volume: 31,000 m3) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 m, volume: 11,000 m3) at about the same time as the minimum cell abundance. Peridiniopsis borgei is potentially capable of using HCO3 as C source for photosynthesis when pH is high and CO2 availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of Peridinium gatunense (Zohary et al. 1994).",
       "physiological_features": "",
       "environmental_conditions": "Peridiniopsis borgei biomass > 5 g m-2 occurred more frequently but not exclusively at pH > 8.5, alkalinity < 130 mg L-1, chloride <280 mg L-1, at water temperatures >17 C (Fig. 3), and over the full range of TDP and calcium concentrations, when the lake was stratified (not shown).",
-      "further_reading": ""
+      "further_reading": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO2 availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr. 39:1822-1834.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043."
     },
     "sections_rich": {
       "phylum": [
@@ -2040,6 +2061,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO2 availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr. 39:1822-1834.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -2311,7 +2339,7 @@
       "ecology": "Parvodinium cunningtonii is one of the species always present in the water column, contributing to total phytoplankton biomass up to 20-30%. The species was less abundant before the mid 1990s, when Peridinium gatunense bloomed every year, but has become more abundant with the decline of Peridinium gatunense in recent years (Fig. 1). Parvodinium cunningtonii tends to co-occur with Ps elpatiewskyi (Figs. 1, 2). Parvodinium cunningtonii abundance shows a typical annual cycle of population increase in March, peak in April and decline in May-June, with low abundances but continuous presence throughout the summer (Fig. 3). Cell size fluctuates seasonally, with largest size in winter, smallest in summer (Fig. 3). This feature is shared with several other Kinneret dinoflagellates.",
       "physiological_features": "",
       "environmental_conditions": "Parvodinium cunningtonii cell abundance > 20 mL-1 occurred more frequently but not exclusively at Chloride concentration > 225 mg L-1, conductivity > 1050 S cm-1, pH > 8.5, over the full range of alkalinities (90-140 mg CaCO3 L-1, dissolved oxygen > 10 mg L-1, at a relatively narrow range of long-wave radiation (320-385 Watt m-2), but over the full range of short-wave radiation (100-350 Watt m-2) and water temperatures (14-30C), when the lake was stratified. The high levels of dissolved oxygen during its high abundance are unusual (Fig. 4). These conditions are extremely similar to those under which Parvodinium elpatiewskyi is abundant and indeed the two species nearly always co-occur (Figs 1,2).",
-      "further_reading": ""
+      "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nPandeirada MS, Craveiro SC, Daugbjerg N, Moestrup Ø, Calado AJ. 2022. Ultrastructure and phylogeny of Parvodinium cunningtonii comb. nov. (syn. Peridiniopsis cunningtonii) and description of P. cunningtonii var. inerme var. nov. (Peridiniopsidaceae, Dinophyceae). Eur J Protistol. 86:125930."
     },
     "sections_rich": {
       "phylum": [
@@ -2528,7 +2556,7 @@
           "text": "here our tips",
           "italic": false,
           "bold": false,
-          "href": "/supplements/9-Suppl1-cunningtoni-vs-elpatiewskyi.docx"
+          "href": "/supplements/cunningtonii-vs-elpatiewskyi/"
         },
         {
           "text": " for distinguishing between these two species under the light microscope.",
@@ -2718,6 +2746,83 @@
         },
         {
           "text": " is abundant and indeed the two species nearly always co-occur (Figs 1,2).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nPandeirada MS, Craveiro SC, Daugbjerg N, Moestrup Ø, Calado AJ. 2022. Ultrastructure and phylogeny of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Parvodinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " comb. nov. (syn. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridiniopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ") and description of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "P.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cunningtonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "inerme",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var. nov. (Peridiniopsidaceae, Dinophyceae). Eur J Protistol. 86:125930.",
           "italic": false,
           "bold": false
         }
@@ -3335,7 +3440,7 @@
       "ecology": "Parvodinium elpatiewskyi is one of the common algal species in the Kinneret plankton, present in the water at all times of the year. In the absence of Peridinium gatunense in recent years, Parvodinium elpatiewskyi seems to be more abundant than in Peridinium bloom years, although 1999 was an exception (Fig. 1). It always occurs with a second species of the same genus - Parvodinium cunningtonii (Figs. 1, 2). Its abundance has a typical annual cycle with with a peak between April and June (Fig. 3). Cell size also fluctuates seasonally, being smaller in summer, larger in winter (Fig. 3). Peak cell size (February-March) precedes peak abundance by 2-3 months. These seasonal cycles are shared with Parvodinium cunningtonii and Peridiniopsis borgei. The multiannual average contribution of this dinoflagellate to total phytoplankton biomass is 3%. Its maximum biomass ever recorded was 53 g m-2 - 41% of total biomass, in April 2006, a “no-Peridinium” year.",
       "physiological_features": "",
       "environmental_conditions": "Parvodinium elpatiewskyi> 5 g m-2 or > 25 cells mL-1 occurred more frequently but not exclusively at calcium concentrations > 45 mg L-1, pH > 8.5, dissolved oxygen > 10 mg L-1, showing greater abundance at low NH4 and TDP, wide range of DON (Fig. 4). Furthermore (not shown), the higher biomasses usually occur at chloride > 230 mg L-1, conductivity > 1050 S cm-1, alkalinity > 115 mg CaCO3 L-1, at a relatively narrow range of long wave radiation (300-370 Watt m-2), but over the full range of short-wave radiation (100-350 Watt m-2) and water temperatures (14-30oC), when the lake is stratified. Cell size declines with increasing temperature, especially at temperatures below 23C, and increases with calcium and alkalinity (Fig. 5).",
-      "further_reading": ""
+      "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141."
     },
     "sections_rich": {
       "phylum": [
@@ -3582,7 +3687,7 @@
           "text": "here our tips",
           "italic": false,
           "bold": false,
-          "href": "/supplements/9-Suppl1-cunningtoni-vs-elpatiewskyi.docx"
+          "href": "/supplements/cunningtonii-vs-elpatiewskyi/"
         },
         {
           "text": " for distinguishing between these two species under the light microscope.",
@@ -3765,6 +3870,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -3918,7 +4030,7 @@
       "ecology": "Durinskia oculata is rare in the pelagic water, it appeared in our samples in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples. Little is known about this species.",
       "physiological_features": "",
       "environmental_conditions": "",
-      "further_reading": ""
+      "further_reading": "Popovsky J, Pfiester LA. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer."
     },
     "sections_rich": {
       "phylum": [
@@ -4173,6 +4285,13 @@
         },
         {
           "text": " is rare in the pelagic water, it appeared in our samples in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples. Little is known about this species.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Popovsky J, Pfiester LA. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer.",
           "italic": false,
           "bold": false
         }
@@ -4703,7 +4822,7 @@
       "ecology": "Naiadinium polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL-1 (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during summer-fall (Fig. 2).",
       "physiological_features": "",
       "environmental_conditions": "Higher abundance of N. polonicum is associated with the full range of Alkalinity, Ca, dissolved oxygen (not shown) and water temperatures, low concentrations of DIN (nitrate, ammonium) but intermediate concentrations of DON (Fig. 3). It tends to be more abundant at the lower salinities experienced in Lake Kinneret (Chloride < 250 mg/L) and at pH levels > 8.4 (Fig. 3).",
-      "further_reading": ""
+      "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nPenard E. 1891. Les Peridiniacees du Lac Leman. Bull. Trav. Soc. Bot. Geneve 6: 1-63.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120: 267-285.\nPopovsky, J. & Pfiester, L.A. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer."
     },
     "sections_rich": {
       "phylum": [
@@ -4952,6 +5071,13 @@
           "italic": false,
           "bold": false
         }
+      ],
+      "further_reading": [
+        {
+          "text": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nPenard E. 1891. Les Peridiniacees du Lac Leman. Bull. Trav. Soc. Bot. Geneve 6: 1-63.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120: 267-285.\nPopovsky, J. & Pfiester, L.A. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer.",
+          "italic": false,
+          "bold": false
+        }
       ]
     },
     "metadata": {
@@ -5192,7 +5318,7 @@
       "ecology": "From the beginning of monitoring in Lake Kinneret in the 1960s, the regular late-winter-spring bloom of P. gatunense was the most salient feature of the Kinneret phytoplankton (Zohary et al. 2014). Those intense blooms could be observed as large patches of coffee-brown colored water (Plate 4), reaching up to several square kilometers in area. At the bloom peak P. gatunense reached mean epilimnion concentrations > 500 cells mL-1 (Figs. 1, 2), or 150-250 g m-2 of wet weight biomass and comprised >95% of total phytoplankton biomass. The blooms declined sharply in May-June (Fig. 2), shortly after water temperature exceeded 25ºC, thermal stratification was established, and nutrients became scarce, leaving behind resting cysts on the lake sediments. During the summer months P. gatunense concentrations in the water column were low, usually <5 cells mL-1 (Fig. 2). Autumn turnover caused re-suspension of the cysts from the sediments, leading to their excystation and the initiation of the next year’s bloom. After many years of recorded constancy, in the mid-1990s, the regular pattern of late-winter spring P. gatunense blooms broke down, P. gatunense blooms have become irregular (Fig. 1) occurring only in high-rainfall years (Zohary et al. 2012), and in more recent years, not even in all of them. As in several other Kinneret dinoflagellates, cell size varies seasonally (Fig. 2), with largest sizes recorded in January-February, when nutrients are most plentiful, and smallest sizes in summer, after the bloom crash. In 2019 and 2020, when the lake’s water level rose after several years of being remarkably low and inundated for the first time shores that were overgrown by dense vegetation – exceptionally dense patches of P. gatunense (~1600 cells mL-1) developed between flooded Tamarix trees (Zohary et al. 2026). Peridinium gatunense cells are too large to be grazed by crustacean zooplankton (Hambright et al. 2007). The native Cichlid fish feed primarily on Peridinium (Zohary et al. 1994) but overall, grazing has only a minor impact on the population. The primary loss of cells is due to death and decomposition in the water column. Second in importance is sinking to bottom sediments, where decomposition processes prevail but some grazing also takes place. An additional, less important losses is by parasitism by chytrid fungi in the water column (Alster and Zohary 2007). Figure 1. Time series of Peridinium gatunense depth-integrated wet-weight biomass (g m-2), Lake Kinneret, 1970-2020.",
       "physiological_features": "Because Peridinium gatunense is a large cell, its growth rate is slow compared with that of other microalgae, with ambient doubling (turnover) time of ~7 days (Table 1). Lab experiments have shown maximal growth rates at 20-23oC at light intensities ranging 50-200 μmol photons m-2 s-1. Growth rates decline at 25-27 oC (Berman and Dubinsky 1985). The specific photosynthetic rates (per unit chlorophyll) of P. gatunense are low (Table 1) in comparison with other phytoplankton prevailing in Lake Kinneret. But daily vertical migration and accumulation close to the surface in daytime (Berman and Rhode 1971) enhances photosynthesis. With darkness, the motile cells migrate down the water column to depths with higher nutrient concentrations. When CO2 levels become limiting (under intense bloom conditions), the dinoflagellates responded with higher levels of external and internal carbonic anhydrase activity and internal storage of inorganic C by means of a C concentrating mechanism (Berman-Frank et al. 1994). C content of P. gatunense, 45% of dry weight, is relatively high due to the thecae made of polyglucan, with practically no N, P. Allelopathic interactions between Peridinium gatunense and the bloom forming toxic cyanobacterium, Microcystis sp. were reported by Sukenik et al. (2002). Table 1. Physiological parameters for Peridinium gatunense based on field measurements (from monitoring data using only dates when P. gatunense comprised > 90% of total phytoplankton biomass). \nPhysiological parameter | Average ± SD | N | Reference\nC:Chl ratio | 58.3 ± 19.3 | 243 | Yacobi and Zohary (2010)\nAssimilation number (at depth of max photosynthesis), mg C mg Chl-1 h-1 | 1.56 ±0.80 | 36 | Yacobi and Zohary (2010)\nTurnover time, d | 7.44±5.05 | 36 | Yacobi and Zohary (2010)\nC content, % dry weight | 45.6±4.7 | 54 | J Erez lab, HUJ\nN Content, % dry weight | 4.3±0.6 | 54 | J Erez lab, HUJ\nC:P | 464±150 |  | Wynne et al. 1982",
       "environmental_conditions": "Peridinium gatunense biomass > 100 g m-2 (considered a bloom) was associated with all incidences of Secchi depth < 1.5 m (Fig. 3) and TSS> 10 mg L-1 (not shown), 70% of all incidences of turbidity > 4 NTU (not shown), 80% of all incidences with pH > 9.1 (Fig. 3), over 80% of the cases of excessive oxygen super-saturation (DO >13 mg L-1, Fig. 3) and of TP> 0.05 mg L-1, and over 60% of all cases where TN exceeded 1 mg L-1, demonstrating how a single dominant species can modify the light conditions and chemical properties of its own environment. Factors that may have impacted P. gatunense biomass may have been salinity (no blooms at chloride> 280 mg L-1) and availability of particulate organic N (Norg-part) for a mixotrophic species (Fig. 3). Its environmental preferences included temperature range of 16-23oC, and probably particulate organic matter as a source of nutrients. This explains its proliferation in dense patches among inundated shore vegetation.",
-      "further_reading": ""
+      "further_reading": "Alster A, Zohary T (2007) Interactions between the bloom forming dinoflagellate Peridinium gatunense and the chytrid fungus Phlyctochytrium sp. Hydrobiologia 578:131-139.\nAlster A, Zohary T, Dubinsky Z (2006) Peridinium gatunense cyst type, abundance and germination in Lake Kinneret. Verh Internat Verein Limnol 29:2083-2086.\nBerman T, Dubinsky Z (1985) The autecology of Peridinium cinctum fa.westii from Lake Kinneret. Verh Internat Verein Limnol 22:2850-2854.\nBerman T, Rodhe W (1971) Distribution and migration of Peridinium in Lake Kinneret. Mitteilungen Internationale Vereinigung für Theoretische und Angewandte Limnologie 19:266-276.\nBerman T, Sherr BF, Sherr E, Wynne D, McCarthy JJ (1984) The characteristics of ammonium and nitrate uptake by phytoplankton in Lake Kinneret. Limnol Oceanogr 29:287-297.\nBerman T, Shteinman B (1998) Phytoplankton development and turbulent mixing in Lake Kinneret (1992-1996). J Plankton Res 20:709-726.\nBerman-Frank I, Erez J (1996) Inorganic carbon pools in the bloom-forming dinoflagellate Peridinium gatunense. Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO2 availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A (1983) Peridinium cinctum f. westii del Mar de Galilea, sinonimo de Peridinium gatunense (Dinophyceae). Limnobios 2:413-418.\nButow B, Wynne D, Sukenik A, Hadas O, Tel-Or E (1998) The synergistic effect of carbon concentration and high temperature on lipid peroxidation in Peridinium gatunense. J Phycol 20:355-369.\nElgavish A, Elgavish GA, Halman M, Berman T (1980) Phosphorus utilization and storage in batch cultures of the dinoflagellate Peridinium cinctum fa. westii. J Phycol 16:626-633.\nEren J (1969) Studies of development cycle of Peridinium cinctum fa. westii. Verh Internat Verein Limnol 17:1013-1016.\nHader D-P, Liu S-M, Hader M, Ullrich W (1990) Photoorientation, motility and pigmentation in a freshwater Peridinium affected by ultraviolet radiation. Gen Physiol Biophys 9:361-371.\nHambright KD, Zohary T, Gude H (2007) Microzooplankton dominate carbon flow and nutrient cycling in a warm subtropical freshwater lake. Limnol Oceanogr 52 (3):1018-1025.\nHickel B, Pollingher U (1988) Identification of the bloom forming Peridinium from Lake Kinneret (Israel) as P. gatunense (Dinophyceae). Br Phycol J23:115-119.\nHansen G, Flaim G (2007) Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nLindström K (1984) Effect of temperature, light and pH on growth, photosynthesis and respiration of the dinoflagellate Peridinium cinctum fa. westii in laboratory cultures. J Phycol 20:212-220.\nLindström K (1991) Nutrient requirements of the dinoflagellate Peridinium gatunense. J Phycol 27:207-219.\nLiu S-M, Hader D-P, Ullrich W (1990) Photoorientation in the freshwater dinoflagellate, Peridinium gatunense Nygaard. FEMS Microbiol Let 73:91-101.\nMcCarthy JJ, Wynne D, Berman T (1982) The uptake of dissolved nitrogenous nutrients by Lake Kinneret, Israel microplankton. Limnol Oceanogr 27:673-680.\nMesser G, Ben Shaul Y (1969) Fine structure of Peridinium westii, a freshwater dinoflagellate. J Protozool 15:272-280.\nMurik O, Kaplan A (2009) Paradoxically, prior acquisition of antioxidant activity enhances oxidative stress-induced cell death. Environ Microbiol 11 (9):2301-2309.\nNevo Z, Sharon N (1969) The cell wall of Peridinium westii, a non cellilosic glucan. Biochim Biophys Acta 173:161-175.\nPfiester LA (1977) Sexual reproduction of Peridinium gatunense (Dinophyceae). J Phycol 13:92-95.\nPollingher U (1986) Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nPollingher U (1988) Freshwater armored dinoflagellates: growth, reproductive strategies and population dynamics. In: Sandgren C (ed) Growth and Reproduction Strategies of Freshwater Phytoplankton. Cambridge University Press, Cambridge, pp 134-174.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285.\nPollingher U, Serruya C (1976) Phased division of Peridinium cinctum fa. westii (Dinophyceae) and development of the Lake Kinneret, Israel bloom. J Phycol 12:162-170.\nPollingher U, Zemel E (1981) In situ and experimental evidence of the influence of turbulence on cell division processes of Peridinium cinctum fa.westii. (Lemm.) Lefevre. Br Phycol J 16:281-287.\nRahat M (1968) Observations on the life cycle of Peridinium westii in a mixed culture. Isr J Bot 17:200-206.\nRodhe W (1978) Peridinium cinctum fa. westii (Lemm.) Lef.: growth characteristics. In: Serruya C (ed) Lake Kinneret. Dr. Junk Publishers, The Hague, pp 275-283.\nSerruya C, Gophen M, Pollingher U (1980) Lake Kinneret: Carbon flow patterns and ecosystems management. Arch Hydrobiol 88:265-302.\nSherr B, Sherr E, Berman T (1982) Decomposition of organic detritus: a selective role for microflagellate protozoa. Limnol Oceanogr 27:765-769.\nSpataru P, Zorn M (1976) Some aspects of natural food and feeding habits of Tilapia galilaea (Artedi) and Tiplapia aurea (Steindachner) in Lake Kinneret. Bamidgeh, The Isr J Aquaculture 28:12-17.\nSukenik A, Eshkol R, Livne A, Hadas O, Rom M, Tchernov D, Vardi A, Kaplan A (2002) Inhibition of growth and photosynthesis of the dinoflagellate Peridinium gatunense by Microcystis sp.(cyanobacteria): a novel allelopathic mechanism. Limnol Oceanogr 47:1656-1663.\nUsvyatsov S, Zohary T (2006) Lake Kinneret continuous time-depth chlorophyll record highlights major phytoplankton events. Verh Internat Verein Limnol 29:1131-1134.\nVardi A, Berman-Frank I, Rozenberg T, Hadas O, Kaplan A, Levine A (1999) Programmed cell death of the dinoflagellate Peridinium gatunense is mediated by CO2 limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A (2007) Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A (2002) Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D (1981) Phosphorus, phosphatases and the Peridinium bloom in Lake Kinneret. Verh Internat Verein Limnol 21:523-527.\nWynne D, Patni NJ, Aaronson S, Berman T (1982) The relationship between nutrient status and chemical composition of Peridinium cinctum during the bloom in Lake Kinneret. J Plankton Res 4:125-136.\nYacobi YZ, Pollingher U, Gonen Y, Gerhard V, Sukenik A (1996) HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate Peridinium gatunense (Diniophyceae) and chlorophyll degradation products. J Plankton Res 18:1781-1796.\nYacobi YZ, Zohary T (2010) Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T (2004) Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwat Biol 49:1355-1371.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes with Lake Kinneret pelagic food web. Limnol Oceanogr 39:1030-1043.\nZohary T, Hadas O, Pollingher U, Kaplan B, Pinkas R, Güde H (2000) The effect of nutrients (N, P) on the decomposition of Peridinium gatunense cells and thecae. Limnol Oceanogr 45:123-130.\nZohary T, Nishri A, Sukenik A (2012) Present-absent: a chronicle of the dinoflagellate Peridinium gatunense from Lake Kinneret. Hydrobiologia 698:161-174.\nZohary T, Pollingher U, Hadas O, Hambright KD (1998) Bloom dynamics and sedimentation of Peridinium gatunense in Lake Kinneret. Limnol Oceanogr 43:175-186.\nZohary T, Sukenik A, Berman T (2014). Peridinium gatunense. Chap. 11 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 191-212. Springer, Heidelberg.\nZohary T, Alster A, Cummings D, Dolev A, Eckert W, Gal G, Gasith A, Guk E, Leibovici E, Ofir E, Varulker S, Be’eri-Shlevin Y. 2026. Inundated Tamarix forest – a novel, climate change-induced littoral habitat in Lake Kinneret. Inland Waters 16(1), 2557696"
     },
     "sections_rich": {
       "phylum": [
@@ -5915,6 +6041,753 @@
         },
         {
           "text": " biomass may have been salinity (no blooms at chloride> 280 mg L-1) and availability of particulate organic N (Norg-part) for a mixotrophic species (Fig. 3). Its environmental preferences included temperature range of 16-23oC, and probably particulate organic matter as a source of nutrients. This explains its proliferation in dense patches among inundated shore vegetation.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Alster A, Zohary T (2007) Interactions between the bloom forming dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and the chytrid fungus ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Phlyctochytrium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " sp. Hydrobiologia 578:131-139.\nAlster A, Zohary T, Dubinsky Z (2006) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cyst type, abundance and germination in Lake Kinneret. Verh Internat Verein Limnol 29:2083-2086.\nBerman T, Dubinsky Z (1985) The autecology of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " fa.",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret. Verh Internat Verein Limnol 22:2850-2854.\nBerman T, Rodhe W (1971) Distribution and migration of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in Lake Kinneret. Mitteilungen Internationale Vereinigung für Theoretische und Angewandte Limnologie 19:266-276.\nBerman T, Sherr BF, Sherr E, Wynne D, McCarthy JJ (1984) The characteristics of ammonium and nitrate uptake by phytoplankton in Lake Kinneret. Limnol Oceanogr 29:287-297.\nBerman T, Shteinman B (1998) Phytoplankton development and turbulent mixing in Lake Kinneret (1992-1996). J Plankton Res 20:709-726.\nBerman-Frank I, Erez J (1996) Inorganic carbon pools in the bloom-forming dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO2 availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A (1983) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " f. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " del Mar de Galilea, sinonimo de ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Dinophyceae). Limnobios 2:413-418.\nButow B, Wynne D, Sukenik A, Hadas O, Tel-Or E (1998) The synergistic effect of carbon concentration and high temperature on lipid peroxidation in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". J Phycol 20:355-369.\nElgavish A, Elgavish GA, Halman M, Berman T (1980) Phosphorus utilization and storage in batch cultures of the dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " fa. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". J Phycol 16:626-633.\nEren J (1969) Studies of development cycle of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " fa. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Verh Internat Verein Limnol 17:1013-1016.\nHader D-P, Liu S-M, Hader M, Ullrich W (1990) Photoorientation, motility and pigmentation in a freshwater ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " affected by ultraviolet radiation. Gen Physiol Biophys 9:361-371.\nHambright KD, Zohary T, Gude H (2007) Microzooplankton dominate carbon flow and nutrient cycling in a warm subtropical freshwater lake. Limnol Oceanogr 52 (3):1018-1025.\nHickel B, Pollingher U (1988) Identification of the bloom forming ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret (Israel) as ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "P.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Dinophyceae). Br Phycol J23:115-119.\nHansen G, Flaim G (2007) Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nLindström K (1984) Effect of temperature, light and pH on growth, photosynthesis and respiration of the dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " fa. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in laboratory cultures. J Phycol 20:212-220.\nLindström K (1991) Nutrient requirements of the dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". J Phycol 27:207-219.\nLiu S-M, Hader D-P, Ullrich W (1990) Photoorientation in the freshwater dinoflagellate, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Nygaard. FEMS Microbiol Let 73:91-101.\nMcCarthy JJ, Wynne D, Berman T (1982) The uptake of dissolved nitrogenous nutrients by Lake Kinneret, Israel microplankton. Limnol Oceanogr 27:673-680.\nMesser G, Ben Shaul Y (1969) Fine structure of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", a freshwater dinoflagellate. J Protozool 15:272-280.\nMurik O, Kaplan A (2009) Paradoxically, prior acquisition of antioxidant activity enhances oxidative stress-induced cell death. Environ Microbiol 11 (9):2301-2309.\nNevo Z, Sharon N (1969) The cell wall of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", a non cellilosic glucan. Biochim Biophys Acta 173:161-175.\nPfiester LA (1977) Sexual reproduction of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Dinophyceae). J Phycol 13:92-95.\nPollingher U (1986) Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nPollingher U (1988) Freshwater armored dinoflagellates: growth, reproductive strategies and population dynamics. In: Sandgren C (ed) Growth and Reproduction Strategies of Freshwater Phytoplankton. Cambridge University Press, Cambridge, pp 134-174.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285.\nPollingher U, Serruya C (1976) Phased division of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " fa. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Dinophyceae) and development of the Lake Kinneret, Israel bloom. J Phycol 12:162-170.\nPollingher U, Zemel E (1981) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "In",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "situ",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and experimental evidence of the influence of turbulence on cell division processes of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " fa.",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". (Lemm.) Lefevre. Br Phycol J 16:281-287.\nRahat M (1968) Observations on the life cycle of Peridinium westii in a mixed culture. Isr J Bot 17:200-206.\nRodhe W (1978) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " fa. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Lemm.) Lef.: growth characteristics. In: Serruya C (ed) Lake Kinneret. Dr. Junk Publishers, The Hague, pp 275-283.\nSerruya C, Gophen M, Pollingher U (1980) Lake Kinneret: Carbon flow patterns and ecosystems management. Arch Hydrobiol 88:265-302.\nSherr B, Sherr E, Berman T (1982) Decomposition of organic detritus: a selective role for microflagellate protozoa. Limnol Oceanogr 27:765-769.\nSpataru P, Zorn M (1976) Some aspects of natural food and feeding habits of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tilapia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "galilaea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Artedi) and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tiplapia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "aurea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Steindachner) in Lake Kinneret. Bamidgeh, The Isr J Aquaculture 28:12-17.\nSukenik A, Eshkol R, Livne A, Hadas O, Rom M, Tchernov D, Vardi A, Kaplan A (2002) Inhibition of growth and photosynthesis of the dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " by Microcystis sp.(cyanobacteria): a novel allelopathic mechanism. Limnol Oceanogr 47:1656-1663.\nUsvyatsov S, Zohary T (2006) Lake Kinneret continuous time-depth chlorophyll record highlights major phytoplankton events. Verh Internat Verein Limnol 29:1131-1134.\nVardi A, Berman-Frank I, Rozenberg T, Hadas O, Kaplan A, Levine A (1999) Programmed cell death of the dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is mediated by CO2 limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A (2007) Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A (2002) Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D (1981) Phosphorus, phosphatases and the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " bloom in Lake Kinneret. Verh Internat Verein Limnol 21:523-527.\nWynne D, Patni NJ, Aaronson S, Berman T (1982) The relationship between nutrient status and chemical composition of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cinctum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " during the bloom in Lake Kinneret. J Plankton Res 4:125-136.\nYacobi YZ, Pollingher U, Gonen Y, Gerhard V, Sukenik A (1996) HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Diniophyceae) and chlorophyll degradation products. J Plankton Res 18:1781-1796.\nYacobi YZ, Zohary T (2010) Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T (2004) Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwat Biol 49:1355-1371.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes with Lake Kinneret pelagic food web. Limnol Oceanogr 39:1030-1043.\nZohary T, Hadas O, Pollingher U, Kaplan B, Pinkas R, Güde H (2000) The effect of nutrients (N, P) on the decomposition of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cells and thecae. Limnol Oceanogr 45:123-130.\nZohary T, Nishri A, Sukenik A (2012) Present-absent: a chronicle of the dinoflagellate ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret. Hydrobiologia 698:161-174.\nZohary T, Pollingher U, Hadas O, Hambright KD (1998) Bloom dynamics and sedimentation of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in Lake Kinneret. Limnol Oceanogr 43:175-186.\nZohary T, Sukenik A, Berman T (2014). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Chap. 11 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 191-212. Springer, Heidelberg.\nZohary T, Alster A, Cummings D, Dolev A, Eckert W, Gal G, Gasith A, Guk E, Leibovici E, Ofir E, Varulker S, Be’eri-Shlevin Y. 2026. Inundated ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tamarix",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " forest – a novel, climate change-induced littoral habitat in Lake Kinneret. Inland Waters 16(1), 2557696",
           "italic": false,
           "bold": false
         }

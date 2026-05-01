@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Link from "next/link";
 import ThemeToggle from "./components/ThemeToggle";
 import "./globals.css";
 
@@ -23,6 +24,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           dangerouslySetInnerHTML={{ __html: THEME_BOOTSTRAP_SCRIPT }}
         />
         <ThemeToggle />
+        <nav className="site-nav" aria-label="Site navigation">
+          <Link href="/supplements/">Supplements</Link>
+        </nav>
         {children}
       </body>
     </html>
