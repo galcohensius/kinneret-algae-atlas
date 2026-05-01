@@ -4673,18 +4673,21 @@
   {
     "scientific_name": "Naiadinium polonicum (Woloszynska) Carty 2014",
     "images": [
-      "/algae-images/naiadinium-polonicum/thumbnail-1.png",
+      "/algae-images/naiadinium-polonicum/thumbnail-1.jpeg",
+      "/algae-images/naiadinium-polonicum/plate-1.png",
       "/algae-images/naiadinium-polonicum/figure-1.png",
       "/algae-images/naiadinium-polonicum/figure-2.png",
       "/algae-images/naiadinium-polonicum/figure-3.png"
     ],
     "image_captions": [
+      "",
       "Plate 1. Naidinium (previously Peridiniopsis) polonicum. Light (a) and SEM (b, c) photographs, showing the general shape, cingulum and thecal plates. (a, b) ventral view; (c) dorsal view. (d-f): hand drawings showing the cells with their longitudinal flagellum, helmet-shaped epi-theca, round-based hypotheca, eyespot (stigma) and nucleus. The short and wide sulcus reaches the antapex (f). When viewed from the side (e) the convex-concave shape is evident. Light microscope photos: Alla Alster. SEM photos: Barbara Hickel. Hand drawings: from Popovsky and Pfeister 1990, after Penard 1891.",
       "Figure 1. Time series of Naiadinium polonicum cell abundance (mean epilimnion concentration) in Lake Kinneret, 1997-2020.",
       "Figure 2. The seasonal pattern of Naiadinium polonicum cell abundance. Based on data for 1970-2020.",
       "Figure 3. Naiadinium polonicum vs. selected environmental parameters from Lake Kinneret. Based on data for 1970-2020."
     ],
     "image_captions_rich": [
+      [],
       [
         {
           "text": "Plate 1. ",

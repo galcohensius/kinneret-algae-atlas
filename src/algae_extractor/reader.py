@@ -173,6 +173,35 @@ def iter_docx_content_blocks(docx_path: str | Path):
                     if sent is not None:
                         yield sent
                     yield from _yield_images_from_drawing_element(el, document)
+                elif tag == "AlternateContent":
+                    # mc:AlternateContent wraps modern drawing markup (e.g. wpg:wgp groups).
+                    # Use the mc:Choice (preferred) branch; fall back to mc:Fallback only if
+                    # mc:Choice yields nothing.
+                    emitted = False
+                    for choice in el:
+                        choice_local = choice.tag.split("}")[-1]
+                        if choice_local == "Choice":
+                            for inner in choice:
+                                inner_tag = inner.tag.split("}")[-1]
+                                if inner_tag in ("drawing", "pict"):
+                                    sent = take_paragraph_dict()
+                                    if sent is not None:
+                                        yield sent
+                                    yield from _yield_images_from_drawing_element(inner, document)
+                                    emitted = True
+                            break
+                    if not emitted:
+                        for fallback in el:
+                            fallback_local = fallback.tag.split("}")[-1]
+                            if fallback_local == "Fallback":
+                                for inner in fallback:
+                                    inner_tag = inner.tag.split("}")[-1]
+                                    if inner_tag in ("drawing", "pict"):
+                                        sent = take_paragraph_dict()
+                                        if sent is not None:
+                                            yield sent
+                                        yield from _yield_images_from_drawing_element(inner, document)
+                                break
                 elif tag == "br":
                     br_type = el.get(qn("w:type"))
                     sent = take_paragraph_dict()
