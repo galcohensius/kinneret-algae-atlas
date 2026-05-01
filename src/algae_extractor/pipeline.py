@@ -140,8 +140,10 @@ def _finalize_record(
 
         styles_parts: list[list[int]] = [item["char_styles"] for item in lines if item["text"]]
 
-        # Join paragraphs with spaces to match the old `" ".join(lines)` behavior.
-        joined_plain = " ".join(plain_parts).strip()
+        # further_reading: preserve paragraph boundaries so the frontend can split
+        # on newlines — each paragraph in Word is one citation.
+        joiner = "\n" if section == "further_reading" else " "
+        joined_plain = joiner.join(plain_parts).strip()
         joined_styles: list[int] = []
         for i, styles in enumerate(styles_parts):
             joined_styles.extend(styles)
@@ -1024,6 +1026,20 @@ def _normalize_structured_fields_rich(
             cite_styles = _neutral_char_styles(cite_plain)
         fields_plain["cite_this_record"] = cite_plain
         fields_styles["cite_this_record"] = cite_styles
+
+    # further_reading is a dedicated section heading in Word (not an inline marker),
+    # so pass it through from the section buffer directly.
+    if raw_sections_plain.get("further_reading", "").strip() and not fields_plain[
+        "further_reading"
+    ].strip():
+        fr_sec_plain = raw_sections_plain["further_reading"].strip()
+        fr_sec_styles = raw_sections_styles.get(
+            "further_reading", _neutral_char_styles(fr_sec_plain)
+        )
+        if len(fr_sec_styles) != len(fr_sec_plain):
+            fr_sec_styles = _neutral_char_styles(fr_sec_plain)
+        fields_plain["further_reading"] = fr_sec_plain
+        fields_styles["further_reading"] = fr_sec_styles
 
     move_cell_biovolume_prefix_from_ecology_rich(fields_plain, fields_styles)
 

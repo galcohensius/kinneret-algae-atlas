@@ -1,81 +1,10 @@
 /**
  * Split a "Further reading" blob into individual citations and build search URLs.
- * Citations in the source are often separated by ". " before a new author block.
- * Some atlas entries use semicolon-like runs without periods: section labels with colons,
- * comma-separated author–year refs, "YYYY P. species …" topic breaks, and "Author 1981, 1986".
+ * Each citation occupies exactly one paragraph in the source Word document.
+ * The extractor joins paragraphs with "\n", so we split on newlines here.
  */
 
 const SCHOLAR_BASE = "https://scholar.google.com/scholar?hl=en&q=";
-
-/**
- * Split before a new reference. Heuristics tuned to limnology-style strings:
- * - "…1834. Pollingher U, Hickel B (1991) …"
- * - "…285. Zohary T, Erez J …"
- * - "…1043. P. taxon and …"
- * - "…Spektrum. Pollingher & Hickel 1991. …"
- * - "…Author A, Author B (1994) …" at line start after period
- * - "…141. Penard E. 1891 …" / "…141. Penard, E. 1891 …" (surname + optional comma + initial. + 4-digit year)
- *   Surname must be ≥2 letters so "J. Limnol." is not treated as a new paper.
- */
-const SPLIT_BEFORE_NEW_CITATION =
-  /\.(?:\s+)(?=[A-Z][a-zA-ZÀ-ÿ\-]+ [A-Z],|[A-Z][a-zA-ZÀ-ÿ\-]+ & [A-Z][a-zA-ZÀ-ÿ\-]+(?!\s*:)|[A-Z][A-Za-zÀ-ÿ\-]+(?:,\s+[A-Z][A-Za-zÀ-ÿ\-.]+)+\s*\([12]\d{3}\)|[A-Z]\.\s+[a-z]|[A-Z][a-zA-ZÀ-ÿ\-]+,?\s+[A-Z]\.\s+[12]\d{3}\b)/g;
-
-/** Surname token, including hyphenated (e.g. Berman-Frank, Viner-Mozzini). */
-const SURNAME = String.raw`[A-Z][a-zA-ZÀ-ÿ\-]+(?:-[A-Z][a-zA-ZÀ-ÿ\-]+)*`;
-/** "Author", "A & B", or "Author et al" (optional period on al.) before a 4-digit year. */
-const AUTHOR_BEFORE_YEAR = String.raw`(?:${SURNAME})(?:\s+&\s+${SURNAME}|\s+et\s+al\.?)?\s+[12]\d{3}\b`;
-
-/**
- * Extra breaks for Word-style lists without ". " between references:
- * - "…2014 Morphology & systematics: …"
- * - "…1994 P. taxon life cycle: …" (year then abbreviated species line)
- * - "…261, Pollingher & Hickel 1988 …"
- * - "…1981, 1986, Zohary 2004 …" (year–year then author)
- * - "…systematics: Pollingher …" (colon after letter; avoid "120:267" volume:page)
- */
-const COMMA_AUTHOR_SPLIT = new RegExp(String.raw`,\s+(?=${AUTHOR_BEFORE_YEAR})`, "g");
-
-const LAKE_KINNERET_COLON_SPLIT = new RegExp(
-  String.raw`(?<![\d(])(?<!Lake Kinneret):\s+(?=${AUTHOR_BEFORE_YEAR})`,
-  "g"
-);
-
-/** When Word glues several topic paragraphs into one blob (year → heading: … and year → P. epithet …). */
-const YEAR_THEN_TOPIC_HEADING_SRC = String.raw`(?<=\b[12]\d{3})\s+(?=[A-Z](?:[A-Za-zÀ-ÿ&.,]|\s){0,80}:\s)`;
-const YEAR_THEN_TOPIC_HEADING_SPLIT = new RegExp(YEAR_THEN_TOPIC_HEADING_SRC, "g");
-
-/** Year ends a ref block; next token is abbreviated binomial continuing the outline (any epithet). */
-const YEAR_THEN_PDOT_EPITHET_SPLIT =
-  /(?<=\b[12]\d{3})\s+(?=P\.\s+[a-z][a-zA-Z-]+\s+)/g;
-
-/** e.g. "…2007, P. taxon and other …:" — comma before a final P.-headed topic line. */
-const COMMA_BEFORE_PDOT_AND_SPLIT = /,\s+(?=P\.\s+[a-z][a-zA-Z-]+\s+and\s+)/g;
-
-const EXTRA_SPLIT_REGEXES_NON_BUNDLED: RegExp[] = [
-  /(?<=\b[12]\d{3})\s+(?=Morphology\s*&)/g,
-  COMMA_AUTHOR_SPLIT,
-  /(?<=\b[12]\d{3}),\s+(?=\d{4}\b)/g,
-  LAKE_KINNERET_COLON_SPLIT,
-  /,\s+(?=P\.\s+[a-z])/g,
-];
-
-/** Bundled blobs already use colons inside topic lines; skip colon-before-author and year,year splits. */
-const EXTRA_SPLIT_REGEXES_BUNDLED_TOPIC: RegExp[] = [
-  YEAR_THEN_TOPIC_HEADING_SPLIT,
-  YEAR_THEN_PDOT_EPITHET_SPLIT,
-  COMMA_BEFORE_PDOT_AND_SPLIT,
-];
-
-/**
- * One paragraph that mixes "…2014 Some heading: refs" with "…1988 P. species rest…" — comma+author
- * splits would break every ", Author year" inside a topic; use topic boundaries only.
- */
-function looksLikeBundledTopicFurtherReading(normalized: string): boolean {
-  return (
-    new RegExp(YEAR_THEN_TOPIC_HEADING_SRC).test(normalized) &&
-    /(?<=\b[12]\d{3})\s+(?=P\.\s+[a-z])/.test(normalized)
-  );
-}
 
 export function normalizeFurtherReadingWhitespace(blob: string): string {
   return blob.replace(/\s+/g, " ").trim();
@@ -89,115 +18,44 @@ export type FurtherReadingIndexedPart = {
   needsTrailingPeriod: boolean;
 };
 
-function appendFurtherReadingPart(
-  items: FurtherReadingIndexedPart[],
-  normalized: string,
-  start: number,
-  end: number
-): void {
-  const slice = normalized.slice(start, end);
-  const tstart = start + (slice.length - slice.trimStart().length);
-  const tend = start + slice.trimEnd().length;
-  if (tstart >= tend) return;
-  const base = normalized.slice(tstart, tend).replace(/,\s*$/, "").trim();
-  if (!base) return;
-  const needsTrailingPeriod = !/\.\s*$/.test(base);
-  const citation = needsTrailingPeriod ? `${base.trim()}.` : base.trim();
-  items.push({ normStart: tstart, normEnd: tend, citation, needsTrailingPeriod });
-}
-
-function collectSegmentStartIndices(normalized: string): number[] {
-  const starts = new Set<number>([0, normalized.length]);
-  const addMatchEnds = (re: RegExp) => {
-    re.lastIndex = 0;
-    let m: RegExpExecArray | null;
-    while ((m = re.exec(normalized)) !== null) {
-      starts.add(m.index + m[0].length);
-    }
-  };
-  addMatchEnds(SPLIT_BEFORE_NEW_CITATION);
-  const extras = looksLikeBundledTopicFurtherReading(normalized)
-    ? EXTRA_SPLIT_REGEXES_BUNDLED_TOPIC
-    : EXTRA_SPLIT_REGEXES_NON_BUNDLED;
-  for (const re of extras) {
-    addMatchEnds(re);
-  }
-  return [...starts].filter((n) => n <= normalized.length).sort((a, b) => a - b);
-}
-
-/** Author line before the trailing publication year (for "Author 1981, 1986" style lists). */
-function extractAuthorPrefixBeforeLastYear(citation: string): string | null {
-  let t = citation.replace(/\.\s*$/, "").trim();
-  t = t.replace(/\s+p\s+\d+\s*$/i, "").trim();
-  const m = t.match(/^(.+?\S)\s+([12]\d{3})\s*$/);
-  return m ? m[1].trim() : null;
-}
-
-function isYearOnlyFragment(citation: string): boolean {
-  const t = citation.replace(/\.\s*$/, "").replace(/,\s*$/, "").trim();
-  return /^([12]\d{3})(?:,\s*[12]\d{3})*$/.test(t);
-}
-
-function yearsFromYearOnlyFragment(citation: string): string[] {
-  return citation
-    .replace(/\.\s*$/, "")
-    .replace(/,\s*$/, "")
-    .trim()
-    .split(/,\s*/)
-    .filter(Boolean);
-}
-
-function syntheticPart(citation: string): FurtherReadingIndexedPart {
-  const trimmed = citation.replace(/\s+/g, " ").trim();
-  const needsTrailingPeriod = !/\.\s*$/.test(trimmed);
-  const text = needsTrailingPeriod ? `${trimmed}.` : trimmed;
-  return { normStart: 0, normEnd: 0, citation: text, needsTrailingPeriod };
-}
-
 /**
- * "Pollingher 1985" + "1986, 1988" → keep first, add "Pollingher 1986.", "Pollingher 1988."
+ * Split the further-reading blob into one entry per citation.
+ * Citations are separated by newlines (one Word paragraph = one citation).
+ * normStart / normEnd are offsets into normalizeFurtherReadingWhitespace(blob)
+ * so that sliceRichSegmentsByPlainRange works for rich-text rendering.
  */
-function mergeYearOnlyFragments(parts: FurtherReadingIndexedPart[]): FurtherReadingIndexedPart[] {
-  const out: FurtherReadingIndexedPart[] = [];
-  for (const item of parts) {
-    if (isYearOnlyFragment(item.citation) && out.length > 0) {
-      const prefix = extractAuthorPrefixBeforeLastYear(out[out.length - 1]!.citation);
-      if (prefix) {
-        for (const y of yearsFromYearOnlyFragment(item.citation)) {
-          out.push(syntheticPart(`${prefix} ${y}`));
-        }
-        continue;
-      }
-    }
-    out.push(item);
-  }
-  return out;
-}
-
 export function splitFurtherReadingIndexed(blob: string): FurtherReadingIndexedPart[] {
-  const normalized = normalizeFurtherReadingWhitespace(blob);
-  if (!normalized) return [];
+  const trimmed = blob.trim();
+  if (!trimmed) return [];
 
-  const starts = collectSegmentStartIndices(normalized);
-  const raw: FurtherReadingIndexedPart[] = [];
-  for (let i = 0; i < starts.length - 1; i++) {
-    const a = starts[i]!;
-    const b = starts[i + 1]!;
-    if (a < b) {
-      appendFurtherReadingPart(raw, normalized, a, b);
+  const fullNorm = normalizeFurtherReadingWhitespace(trimmed);
+  const lines = trimmed.split("\n").map((l) => l.trim()).filter(Boolean);
+
+  const result: FurtherReadingIndexedPart[] = [];
+  let cursor = 0; // current offset in fullNorm
+
+  for (const line of lines) {
+    const lineNorm = normalizeFurtherReadingWhitespace(line);
+    if (!lineNorm) continue;
+
+    // Find this line's position in the full normalized string.
+    const pos = fullNorm.indexOf(lineNorm, cursor);
+    const normStart = pos >= 0 ? pos : cursor;
+    const normEnd = normStart + lineNorm.length;
+
+    const base = lineNorm.replace(/,\s*$/, "").trim();
+    if (!base) {
+      cursor = normEnd + 1;
+      continue;
     }
+    const needsTrailingPeriod = !/\.\s*$/.test(base);
+    const citation = needsTrailingPeriod ? `${base}.` : base;
+
+    result.push({ normStart, normEnd, citation, needsTrailingPeriod });
+    cursor = normEnd + 1; // +1 for the space that replaced the \n
   }
 
-  const merged = mergeYearOnlyFragments(raw);
-  return merged.filter((p) => !isOrphanSectionLabel(p.citation));
-}
-
-/** Topic-only fragment left between splits (not a useful Scholar query). */
-function isOrphanSectionLabel(citation: string): boolean {
-  const t = citation.replace(/\.\s*$/, "").trim();
-  if (/\b[12]\d{3}\b/.test(t)) return false;
-  if (/\bet\s+al\.?\b/i.test(t)) return false;
-  return /^[A-Za-z][^:]{0,120}:\s*$/.test(t);
+  return result;
 }
 
 export function splitFurtherReadingCitations(text: string): string[] {
