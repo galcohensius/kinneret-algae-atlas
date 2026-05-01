@@ -1,5 +1,80 @@
 import { describe, expect, it } from "vitest";
-import { normalizeAlgaeRecords, type RawAlgaeRecord } from "../lib/algae";
+import {
+  normalizeAlgaeRecords,
+  sortAlgaeRecordsForCatalog,
+  type AlgaeRecord,
+  type RawAlgaeRecord,
+} from "../lib/algae";
+
+describe("sortAlgaeRecordsForCatalog", () => {
+  it("orders by phylum, then scientific name (ignores class/order within same phylum)", () => {
+    const records: AlgaeRecord[] = [
+      {
+        slug: "order-b-name-z",
+        title: "Species Z",
+        scientificName: "Zea species",
+        nameAuthority: null,
+        thumbnailUrl: null,
+        images: [],
+        imageCaptions: [],
+        imageCaptionsRich: [],
+        morphology: null,
+        ecology: null,
+        notes: null,
+        sections: {
+          phylum: "B",
+          class: "B1",
+          order: "Z-order-should-not-matter",
+        },
+        sectionsRich: {},
+        metadata: {},
+      },
+      {
+        slug: "order-a-name-a",
+        title: "Species A",
+        scientificName: "Alga alpha",
+        nameAuthority: null,
+        thumbnailUrl: null,
+        images: [],
+        imageCaptions: [],
+        imageCaptionsRich: [],
+        morphology: null,
+        ecology: null,
+        notes: null,
+        sections: {
+          phylum: "B",
+          class: "B1",
+          order: "A-order-should-not-matter",
+        },
+        sectionsRich: {},
+        metadata: {},
+      },
+      {
+        slug: "phylum-a",
+        title: "Species A",
+        scientificName: "Alga alpha",
+        nameAuthority: null,
+        thumbnailUrl: null,
+        images: [],
+        imageCaptions: [],
+        imageCaptionsRich: [],
+        morphology: null,
+        ecology: null,
+        notes: null,
+        sections: {
+          phylum: "A",
+          class: "A1",
+          order: "A1a",
+        },
+        sectionsRich: {},
+        metadata: {},
+      },
+    ];
+
+    const sorted = sortAlgaeRecordsForCatalog(records).map((r) => r.slug);
+    expect(sorted).toEqual(["phylum-a", "order-a-name-a", "order-b-name-z"]);
+  });
+});
 
 describe("normalizeAlgaeRecords", () => {
   it("adds fallback name when scientific name is missing", () => {

@@ -87,6 +87,21 @@ function sectionsWithPreferredOrder(sections: Record<string, string>): Record<st
   return ordered;
 }
 
+/** Higher group (phylum first), then taxon line (`scientificName`) A–Z. Class/order stay in JSON for display but do not reorder the index. */
+export function sortAlgaeRecordsForCatalog(records: AlgaeRecord[]): AlgaeRecord[] {
+  const collator = new Intl.Collator("en", { sensitivity: "base", numeric: true });
+
+  return [...records].sort((a, b) => {
+    const pa = (a.sections.phylum ?? "").trim();
+    const pb = (b.sections.phylum ?? "").trim();
+    const pc = collator.compare(pa, pb);
+    if (pc !== 0) {
+      return pc;
+    }
+    return collator.compare(a.scientificName.trim(), b.scientificName.trim());
+  });
+}
+
 export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
   const slugCounts = new Map<string, number>();
 
@@ -151,7 +166,7 @@ export async function getAllAlgae(): Promise<AlgaeRecord[]> {
   const content = await readFile(filePath, "utf8");
   const parsed = JSON.parse(content) as unknown;
   const validated = rawAlgaeArraySchema.parse(parsed);
-  return normalizeAlgaeRecords(validated);
+  return sortAlgaeRecordsForCatalog(normalizeAlgaeRecords(validated));
 }
 
 export async function getAlgaBySlug(slug: string): Promise<AlgaeRecord | null> {
