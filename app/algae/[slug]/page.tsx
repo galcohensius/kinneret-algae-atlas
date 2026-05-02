@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import CiteThisRecordBlock from "../../components/CiteThisRecordBlock";
 import TaxonItalicName from "../../components/TaxonItalicName";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
-import { RichText } from "../../components/RichText";
+import { RichText, PlainTextWithTables } from "../../components/RichText";
 import type { RichSegment } from "../../../lib/algae-types";
 import {
   citationToScholarSearchUrl,
@@ -207,7 +207,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <h2 id="morph-heading" className="section-heading">
               {toDisplayLabel("morphological_features")}
             </h2>
-            <div className="algae-prose">{morphologicalRich.length > 0 ? <RichText segments={morphologicalRich} /> : morphological}</div>
+            <div className="algae-prose">{morphologicalRich.length > 0 ? <RichText segments={morphologicalRich} /> : <PlainTextWithTables text={morphological} />}</div>
           </section>
         ) : null}
 
@@ -241,7 +241,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
                 {(record.sectionsRich?.[key] ?? []).length > 0 ? (
                   <RichText segments={record.sectionsRich[key]} />
                 ) : (
-                  value
+                  <PlainTextWithTables text={value} />
                 )}
               </div>
             </section>

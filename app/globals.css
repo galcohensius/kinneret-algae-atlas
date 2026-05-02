@@ -537,6 +537,43 @@ a:hover {
   white-space: pre-line;
 }
 
+/* Inline HTML tables rendered from pipe-delimited Word tables */
+.inline-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0 0.5rem;
+  font-size: 0.93rem;
+  line-height: 1.45;
+  white-space: normal;
+  text-align: left;
+  overflow-x: auto;
+  display: block;
+}
+
+.inline-data-table th,
+.inline-data-table td {
+  border: 1px solid var(--border, #d0d0d0);
+  padding: 0.35rem 0.6rem;
+  vertical-align: top;
+}
+
+.inline-data-table thead th {
+  background: var(--surface-alt, #f5f5f5);
+  font-weight: 600;
+}
+
+.dark .inline-data-table thead th {
+  background: var(--surface-alt, #2a2a2a);
+}
+
+.inline-data-table tbody tr:nth-child(even) {
+  background: var(--surface-stripe, rgba(0, 0, 0, 0.025));
+}
+
+.dark .inline-data-table tbody tr:nth-child(even) {
+  background: var(--surface-stripe, rgba(255, 255, 255, 0.04));
+}
+
 .cite-this-record {
   margin-top: 1.75rem;
   margin-bottom: 0.25rem;
