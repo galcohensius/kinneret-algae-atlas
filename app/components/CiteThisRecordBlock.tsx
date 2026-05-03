@@ -29,7 +29,8 @@ export default function CiteThisRecordBlock({ recordUpdatedIso }: CiteThisRecord
   return (
     <section className="cite-this-record" aria-label="How to cite this record">
       <p className="cite-this-record-text muted">
-        Cite this record as: Tamar Zohary, Alla Alster. {lastUpdatedLong}. Electronic publication.
+        <strong>Cite this record as:</strong>{" "}
+        Tamar Zohary, Alla Alster. {lastUpdatedLong}. Electronic publication.
         Israel Oceanographic &amp; Limnological Research.{" "}
         <a href={ATLAS_CITE_URL}>{ATLAS_CITE_URL}</a>
         <span suppressHydrationWarning>
