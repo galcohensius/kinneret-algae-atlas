@@ -1,4 +1,6 @@
+import io
 import re
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from docx import Document
@@ -7,6 +9,7 @@ from docx.oxml.table import CT_Tbl
 from docx.oxml.text.paragraph import CT_P
 from docx.table import Table
 from docx.text.paragraph import Paragraph
+from PIL import Image, ImageDraw
 
 
 def normalize_whitespace(text: str) -> str:
@@ -131,9 +134,145 @@ def table_to_row_texts(table: Table) -> list[list[str]]:
     return rows_out
 
 
+_CHART_NS = {
+    "a": "http://schemas.openxmlformats.org/drawingml/2006/main",
+    "c": "http://schemas.openxmlformats.org/drawingml/2006/chart",
+}
+
+_SERIES_COLORS = [
+    (31, 119, 180),
+    (255, 127, 14),
+    (44, 160, 44),
+    (214, 39, 40),
+    (148, 103, 189),
+    (140, 86, 75),
+]
+
+
+def _safe_float(value: str | None) -> float | None:
+    if value is None:
+        return None
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def _num_cache_values(parent: ET.Element | None) -> list[float]:
+    if parent is None:
+        return []
+    out: list[float] = []
+    for pt in parent.findall(".//c:numCache/c:pt", _CHART_NS):
+        v = pt.find("c:v", _CHART_NS)
+        f = _safe_float(v.text if v is not None else None)
+        if f is not None:
+            out.append(f)
+    return out
+
+
+def _chart_series_points(chart_root: ET.Element) -> list[list[tuple[float, float]]]:
+    all_series: list[list[tuple[float, float]]] = []
+
+    # Prefer scatter chart semantics if available.
+    scatter = chart_root.find(".//c:scatterChart", _CHART_NS)
+    if scatter is not None:
+        for ser in scatter.findall("c:ser", _CHART_NS):
+            x_values = _num_cache_values(ser.find("c:xVal", _CHART_NS))
+            y_values = _num_cache_values(ser.find("c:yVal", _CHART_NS))
+            points = list(zip(x_values, y_values))
+            if points:
+                all_series.append(points)
+        if all_series:
+            return all_series
+
+    # Fallback for other chart families that use category/value pairs.
+    for ser in chart_root.findall(".//c:ser", _CHART_NS):
+        x_values = _num_cache_values(ser.find("c:cat", _CHART_NS))
+        y_values = _num_cache_values(ser.find("c:val", _CHART_NS))
+        points = list(zip(x_values, y_values))
+        if points:
+            all_series.append(points)
+
+    return all_series
+
+
+def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
+    try:
+        root = ET.fromstring(chart_blob)
+    except ET.ParseError:
+        return None
+
+    series = _chart_series_points(root)
+    if not series:
+        return None
+
+    all_points = [pt for seq in series for pt in seq]
+    if not all_points:
+        return None
+
+    x_vals = [p[0] for p in all_points]
+    y_vals = [p[1] for p in all_points]
+    x_min, x_max = min(x_vals), max(x_vals)
+    y_min, y_max = min(y_vals), max(y_vals)
+    if x_min == x_max:
+        x_max = x_min + 1.0
+    if y_min == y_max:
+        y_max = y_min + 1.0
+
+    width, height = 1400, 840
+    margin_left, margin_top, margin_right, margin_bottom = 105, 40, 35, 85
+    plot_w = width - margin_left - margin_right
+    plot_h = height - margin_top - margin_bottom
+
+    image = Image.new("RGB", (width, height), (255, 255, 255))
+    draw = ImageDraw.Draw(image)
+
+    # Plot frame + subtle horizontal grid for readability.
+    frame_color = (70, 70, 70)
+    grid_color = (228, 232, 238)
+    draw.rectangle(
+        [margin_left, margin_top, margin_left + plot_w, margin_top + plot_h],
+        outline=frame_color,
+        width=2,
+    )
+    for i in range(1, 5):
+        y = margin_top + int(plot_h * (i / 5))
+        draw.line(
+            [(margin_left, y), (margin_left + plot_w, y)],
+            fill=grid_color,
+            width=1,
+        )
+
+    def x_to_px(x: float) -> int:
+        return margin_left + int((x - x_min) / (x_max - x_min) * plot_w)
+
+    def y_to_px(y: float) -> int:
+        return margin_top + int((1.0 - (y - y_min) / (y_max - y_min)) * plot_h)
+
+    for idx, seq in enumerate(series):
+        color = _SERIES_COLORS[idx % len(_SERIES_COLORS)]
+        pts = [(x_to_px(x), y_to_px(y)) for x, y in seq]
+        if len(pts) > 1:
+            draw.line(pts, fill=color, width=2)
+        for x, y in pts:
+            draw.ellipse((x - 2, y - 2, x + 2, y + 2), fill=color)
+
+    # Minimal axis labels: numeric min/max values.
+    draw.text((margin_left, height - margin_bottom + 12), f"{x_min:.0f}", fill=frame_color)
+    draw.text((margin_left + plot_w - 40, height - margin_bottom + 12), f"{x_max:.0f}", fill=frame_color)
+    draw.text((12, margin_top + plot_h - 8), f"{y_min:.2g}", fill=frame_color)
+    draw.text((12, margin_top - 8), f"{y_max:.2g}", fill=frame_color)
+
+    out = io.BytesIO()
+    image.save(out, format="PNG")
+    return out.getvalue()
+
+
 def _yield_images_from_drawing_element(
     drawing_el, document: Document
 ):
+    emitted_any = False
+
     for blip in drawing_el.xpath(".//a:blip"):
         relation_id = blip.get(qn("r:embed"))
         if not relation_id:
@@ -147,6 +286,31 @@ def _yield_images_from_drawing_element(
             "blob": image_part.blob,
             "extension": extension,
         }
+        emitted_any = True
+
+    # Some Word figures are embedded as chart objects (c:chart) without a:blip.
+    if emitted_any:
+        return
+    for chart_node in drawing_el.xpath(".//c:chart"):
+        relation_id = chart_node.get(qn("r:id"))
+        if not relation_id:
+            continue
+        chart_part = document.part.related_parts.get(relation_id)
+        if not chart_part:
+            continue
+        chart_blob = getattr(chart_part, "blob", None)
+        if not chart_blob:
+            continue
+        rendered = _render_chart_to_png(chart_blob)
+        if not rendered:
+            continue
+        yield {
+            "type": "image",
+            "blob": rendered,
+            "extension": ".png",
+        }
+        emitted_any = True
+
 
 
 def iter_docx_content_blocks(docx_path: str | Path):
