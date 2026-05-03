@@ -34,6 +34,11 @@ def main():
         default="/algae-images",
         help="Public URL prefix used by the web app for extracted images.",
     )
+    parser.add_argument(
+        "--use-word-renderer",
+        action="store_true",
+        help="Use Microsoft Word COM rendering for chart objects (Windows only).",
+    )
     args = parser.parse_args()
 
     output_path = Path(args.output)
@@ -44,6 +49,7 @@ def main():
         config_path=args.config,
         images_output_dir=args.images_dir,
         images_public_prefix=args.images_public_prefix,
+        use_word_renderer=args.use_word_renderer,
     )
     data = [record.to_dict() for record in records]
 

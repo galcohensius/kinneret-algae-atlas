@@ -1,6 +1,8 @@
 import io
 import re
+import tempfile
 import xml.etree.ElementTree as ET
+from zipfile import ZipFile
 from pathlib import Path
 
 from docx import Document
@@ -268,8 +270,90 @@ def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
     return out.getvalue()
 
 
+def _export_word_chart_images(docx_path: str | Path) -> list[bytes]:
+    """
+    Export chart objects from Word via COM by saving filtered HTML and reading
+    chart image assets referenced as <img id="Chart N" ...>.
+    Returns chart image blobs in HTML appearance order.
+    """
+    try:
+        import pythoncom
+        import win32com.client  # type: ignore[import-untyped]
+    except Exception:
+        return []
+
+    path = str(Path(docx_path).resolve())
+    chart_images: list[bytes] = []
+    app = None
+    doc = None
+    tmpdir = tempfile.TemporaryDirectory()
+    try:
+        pythoncom.CoInitialize()
+        app = win32com.client.DispatchEx("Word.Application")
+        app.Visible = False
+        app.DisplayAlerts = 0
+        doc = app.Documents.Open(path, ReadOnly=True, AddToRecentFiles=False)
+
+        html_path = Path(tmpdir.name) / "word-export.html"
+        # wdFormatFilteredHTML = 10
+        doc.SaveAs2(str(html_path), FileFormat=10)
+
+        assets_dir = html_path.with_name(f"{html_path.stem}_files")
+        if html_path.exists() and assets_dir.exists():
+            html = html_path.read_text(encoding="utf-8", errors="ignore")
+            for tag in re.findall(r"<img\b[^>]*>", html, flags=re.IGNORECASE):
+                id_m = re.search(r'\bid="([^"]+)"', tag, flags=re.IGNORECASE)
+                src_m = re.search(r'\bsrc="([^"]+)"', tag, flags=re.IGNORECASE)
+                if not id_m or not src_m:
+                    continue
+                chart_id = id_m.group(1).strip()
+                if not re.match(r"^Chart\s+\d+$", chart_id, flags=re.IGNORECASE):
+                    continue
+                src_name = Path(src_m.group(1)).name
+                img_path = assets_dir / src_name
+                if not img_path.exists():
+                    continue
+                blob = img_path.read_bytes()
+                if blob:
+                    chart_images.append(blob)
+    except Exception:
+        return []
+    finally:
+        try:
+            if doc is not None:
+                doc.Close(False)
+        except Exception:
+            pass
+        try:
+            if app is not None:
+                app.Quit()
+        except Exception:
+            pass
+        try:
+            pythoncom.CoUninitialize()
+        except Exception:
+            pass
+        tmpdir.cleanup()
+
+    return chart_images
+
+
+def _count_chart_nodes_in_docx(docx_path: str | Path) -> int:
+    """Count <c:chart ...> nodes in word/document.xml."""
+    try:
+        with ZipFile(str(docx_path)) as zf:
+            xml = zf.read("word/document.xml").decode("utf-8", errors="ignore")
+        return len(re.findall(r"<c:chart\b", xml))
+    except Exception:
+        return 0
+
+
 def _yield_images_from_drawing_element(
-    drawing_el, document: Document
+    drawing_el,
+    document: Document,
+    *,
+    word_chart_blobs: list[bytes] | None = None,
+    chart_state: dict[str, int] | None = None,
 ):
     emitted_any = False
 
@@ -295,31 +379,73 @@ def _yield_images_from_drawing_element(
         relation_id = chart_node.get(qn("r:id"))
         if not relation_id:
             continue
+
+        # Preferred path: Word-native chart rendering (style-preserving) exported via COM.
+        if word_chart_blobs and chart_state is not None:
+            used_word_blob = False
+            if len(word_chart_blobs) == 1 and chart_state.get("total", 0) > 1:
+                # If Word emitted only one chart image, it usually corresponds to
+                # the main Figure 1 chart near the end of the record section.
+                # Apply it to the final chart occurrence and keep others on fallback.
+                if chart_state.get("seen", 0) == chart_state.get("total", 1) - 1:
+                    yield {
+                        "type": "image",
+                        "blob": word_chart_blobs[0],
+                        "extension": ".png",
+                    }
+                    used_word_blob = True
+            else:
+                idx = chart_state.get("blob_index", 0)
+                if idx < len(word_chart_blobs):
+                    yield {
+                        "type": "image",
+                        "blob": word_chart_blobs[idx],
+                        "extension": ".png",
+                    }
+                    chart_state["blob_index"] = idx + 1
+                    used_word_blob = True
+
+            if used_word_blob:
+                chart_state["seen"] = chart_state.get("seen", 0) + 1
+                emitted_any = True
+                continue
+
         chart_part = document.part.related_parts.get(relation_id)
         if not chart_part:
+            if chart_state is not None:
+                chart_state["seen"] = chart_state.get("seen", 0) + 1
             continue
         chart_blob = getattr(chart_part, "blob", None)
         if not chart_blob:
+            if chart_state is not None:
+                chart_state["seen"] = chart_state.get("seen", 0) + 1
             continue
         rendered = _render_chart_to_png(chart_blob)
         if not rendered:
+            if chart_state is not None:
+                chart_state["seen"] = chart_state.get("seen", 0) + 1
             continue
         yield {
             "type": "image",
             "blob": rendered,
             "extension": ".png",
         }
+        if chart_state is not None:
+            chart_state["seen"] = chart_state.get("seen", 0) + 1
         emitted_any = True
 
 
 
-def iter_docx_content_blocks(docx_path: str | Path):
+def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool = False):
     """
     Yield content in document order: paragraph text, tables, page breaks, and images
     interleave as in the WordprocessingML (e.g. figure then caption; page breaks
     between species).
     """
     document = Document(str(docx_path))
+    word_chart_blobs = _export_word_chart_images(docx_path) if use_word_renderer else []
+    total_chart_count = _count_chart_nodes_in_docx(docx_path)
+    chart_state = {"blob_index": 0, "seen": 0, "total": total_chart_count}
 
     for block in _iter_document_blocks(document):
         if isinstance(block, Table):
@@ -361,7 +487,12 @@ def iter_docx_content_blocks(docx_path: str | Path):
                     sent = take_paragraph_dict()
                     if sent is not None:
                         yield sent
-                    yield from _yield_images_from_drawing_element(el, document)
+                    yield from _yield_images_from_drawing_element(
+                        el,
+                        document,
+                        word_chart_blobs=word_chart_blobs,
+                        chart_state=chart_state,
+                    )
                 elif tag == "AlternateContent":
                     # mc:AlternateContent wraps modern drawing markup (e.g. wpg:wgp groups).
                     # Use the mc:Choice (preferred) branch; fall back to mc:Fallback only if
@@ -376,7 +507,12 @@ def iter_docx_content_blocks(docx_path: str | Path):
                                     sent = take_paragraph_dict()
                                     if sent is not None:
                                         yield sent
-                                    yield from _yield_images_from_drawing_element(inner, document)
+                                    yield from _yield_images_from_drawing_element(
+                                        inner,
+                                        document,
+                                        word_chart_blobs=word_chart_blobs,
+                                        chart_state=chart_state,
+                                    )
                                     emitted = True
                             break
                     if not emitted:
@@ -389,7 +525,12 @@ def iter_docx_content_blocks(docx_path: str | Path):
                                         sent = take_paragraph_dict()
                                         if sent is not None:
                                             yield sent
-                                        yield from _yield_images_from_drawing_element(inner, document)
+                                        yield from _yield_images_from_drawing_element(
+                                            inner,
+                                            document,
+                                            word_chart_blobs=word_chart_blobs,
+                                            chart_state=chart_state,
+                                        )
                                 break
                 elif tag == "br":
                     br_type = el.get(qn("w:type"))

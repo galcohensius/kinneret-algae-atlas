@@ -1164,6 +1164,7 @@ def extract_records(
     config_path: str | Path | None = None,
     images_output_dir: str | Path | None = None,
     images_public_prefix: str = "/algae-images",
+    use_word_renderer: bool = False,
 ) -> list[AlgaeRecord]:
     config = load_config(config_path)
     section_alias_lookup = build_section_alias_lookup(config["section_aliases"])
@@ -1181,7 +1182,7 @@ def extract_records(
     expect_image_caption = False
     morphology_supplement_links = config.get("morphology_supplement_links") or []
 
-    blocks = list(iter_docx_content_blocks(docx_path))
+    blocks = list(iter_docx_content_blocks(docx_path, use_word_renderer=use_word_renderer))
     pending_relaxed_record_markers = False
 
     for index, block in enumerate(blocks):
