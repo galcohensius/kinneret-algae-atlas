@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import React, { Fragment } from "react";
 import type { RichSegment } from "../../lib/algae-types";
 import { parseTextWithTables, textContainsTables } from "../../lib/inline-tables";
 
@@ -36,10 +36,26 @@ function renderSegmentContent(text: string, italic: boolean, bold: boolean) {
   return <Fragment>{text}</Fragment>;
 }
 
+/** Renders text that may contain `\n` as inline content with `<br/>` breaks. */
+function renderTextWithBreaks(text: string, italic: boolean, bold: boolean): React.ReactNode {
+  if (!text.includes("\n")) return renderSegmentContent(text, italic, bold);
+  const lines = text.split("\n");
+  return (
+    <Fragment>
+      {lines.map((line, i) => (
+        <Fragment key={i}>
+          {i > 0 && <br />}
+          {line && renderSegmentContent(line, italic, bold)}
+        </Fragment>
+      ))}
+    </Fragment>
+  );
+}
+
 /** Renders a plain-text string, converting any embedded pipe tables to HTML. */
 export function PlainTextWithTables({ text }: { text: string }) {
   if (!textContainsTables(text)) {
-    return <>{text}</>;
+    return <>{renderTextWithBreaks(text, false, false)}</>;
   }
   const blocks = parseTextWithTables(text);
   return (
@@ -48,7 +64,7 @@ export function PlainTextWithTables({ text }: { text: string }) {
         block.type === "table" ? (
           <InlineTable key={i} rows={block.rows} />
         ) : (
-          <span key={i}>{block.text}</span>
+          <span key={i}>{renderTextWithBreaks(block.text, false, false)}</span>
         )
       )}
     </>
@@ -69,7 +85,7 @@ export function RichText({ segments }: { segments: RichSegment[] }) {
                 if (block.type === "table") {
                   return <InlineTable key={bi} rows={block.rows} />;
                 }
-                const content = renderSegmentContent(block.text, seg.italic, seg.bold);
+                const content = renderTextWithBreaks(block.text, seg.italic, seg.bold);
                 const body = seg.href ? (
                   <a className="rich-inline-link" href={seg.href} target="_blank" rel="noopener noreferrer">
                     {content}
@@ -81,7 +97,7 @@ export function RichText({ segments }: { segments: RichSegment[] }) {
           );
         }
 
-        const content = renderSegmentContent(seg.text, seg.italic, seg.bold);
+        const content = renderTextWithBreaks(seg.text, seg.italic, seg.bold);
         const body = seg.href ? (
           <a
             className="rich-inline-link"

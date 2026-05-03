@@ -48,6 +48,26 @@ def _normalize_text_and_styles(chars: list[tuple[str, int]]) -> tuple[str, list[
     return ("".join(out_chars), out_styles)
 
 
+_SUPERSCRIPT_MAP: dict[str, str] = {
+    "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴",
+    "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹",
+    "-": "⁻", "+": "⁺", "(": "⁽", ")": "⁾", "n": "ⁿ", "i": "ⁱ",
+}
+
+_SUBSCRIPT_MAP: dict[str, str] = {
+    "0": "₀", "1": "₁", "2": "₂", "3": "₃", "4": "₄",
+    "5": "₅", "6": "₆", "7": "₇", "8": "₈", "9": "₉",
+    "-": "₋", "+": "₊", "(": "₍", ")": "₎",
+    "a": "ₐ", "e": "ₑ", "i": "ᵢ", "j": "ⱼ", "k": "ₖ",
+    "l": "ₗ", "m": "ₘ", "n": "ₙ", "o": "ₒ", "p": "ₚ",
+    "r": "ᵣ", "s": "ₛ", "t": "ₜ", "u": "ᵤ", "v": "ᵥ", "x": "ₓ",
+}
+
+
+def _apply_script_map(text: str, mapping: dict[str, str]) -> str:
+    return "".join(mapping.get(c, c) for c in text)
+
+
 def _paragraph_to_plain_and_styles(paragraph: Paragraph) -> tuple[str, list[int]] | None:
     chars: list[tuple[str, int]] = []
     for run in paragraph.runs:
@@ -56,7 +76,12 @@ def _paragraph_to_plain_and_styles(paragraph: Paragraph) -> tuple[str, list[int]
         style = (1 if italic else 0) | (2 if bold else 0)
         if not run.text:
             continue
-        chars.extend([(c, style) for c in run.text])
+        run_text = run.text
+        if getattr(run.font, "superscript", None):
+            run_text = _apply_script_map(run_text, _SUPERSCRIPT_MAP)
+        elif getattr(run.font, "subscript", None):
+            run_text = _apply_script_map(run_text, _SUBSCRIPT_MAP)
+        chars.extend([(c, style) for c in run_text])
 
     if not chars:
         return None

@@ -142,13 +142,27 @@ def _finalize_record(
 
         # further_reading: preserve paragraph boundaries so the frontend can split
         # on newlines — each paragraph in Word is one citation.
-        joiner = "\n" if section == "further_reading" else " "
-        joined_plain = joiner.join(plain_parts).strip()
-        joined_styles: list[int] = []
-        for i, styles in enumerate(styles_parts):
-            joined_styles.extend(styles)
-            if i + 1 < len(styles_parts):
-                joined_styles.append(0)  # neutral space
+        # Table captions ("Table N …") also get a newline separator so they appear
+        # on their own line above the table in the rendered output.
+        _TABLE_CAPTION_RE = re.compile(r"^Table\s+\d", re.IGNORECASE)
+        if section == "further_reading":
+            joined_plain = "\n".join(plain_parts).strip()
+            joined_styles: list[int] = []
+            for i, styles in enumerate(styles_parts):
+                joined_styles.extend(styles)
+                if i + 1 < len(styles_parts):
+                    joined_styles.append(0)  # neutral newline
+        else:
+            text_chunks: list[str] = []
+            joined_styles = []
+            for i, (part, styles) in enumerate(zip(plain_parts, styles_parts)):
+                if i > 0:
+                    sep = "\n" if _TABLE_CAPTION_RE.match(part) else " "
+                    text_chunks.append(sep)
+                    joined_styles.append(0)  # neutral separator
+                text_chunks.append(part)
+                joined_styles.extend(styles)
+            joined_plain = "".join(text_chunks).strip()
 
         # `strip()` should not change length (paragraph text is already stripped),
         # but keep it safe.
