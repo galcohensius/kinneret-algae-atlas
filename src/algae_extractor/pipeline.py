@@ -231,6 +231,17 @@ def _should_reject_fake_record_name(
     return False
 
 
+def _looks_like_prose_remainder(remainder: str | None) -> bool:
+    """
+    Guard against loose binomial matches on narrative lines.
+    Real taxon headers may include authority tails, but not long sentence prose.
+    """
+    tail = (remainder or "").strip()
+    if not tail or len(tail) < 120:
+        return False
+    return bool(re.search(r"[.!?]", tail))
+
+
 # Epithet / genus-only prefix of a taxon header (before authority), for image dirs and parity with web slugs.
 _TAXON_SLUG_BINOMIAL_RE = re.compile(
     r"^(?:\d+\.?\s*)?"
@@ -1169,6 +1180,7 @@ def extract_records(
     config = load_config(config_path)
     section_alias_lookup = build_section_alias_lookup(config["section_aliases"])
     record_start_patterns = compile_scientific_name_patterns(config["record_start_patterns"])
+    strict_record_start_patterns = _strict_record_start_patterns(record_start_patterns)
     default_section = config.get("default_section", "notes")
     blocked_starts = [value.lower() for value in config.get("record_start_blocked_prefixes", [])]
     following_markers = [value.lower() for value in config.get("record_following_markers", [])]
@@ -1300,8 +1312,22 @@ def extract_records(
         should_block = any(
             text_for_block.lower().startswith(prefix) for prefix in blocked_starts
         )
-        record_start = None if should_block else detect_record_start(text=text, compiled_patterns=record_start_patterns)
+        active_record_start_patterns = (
+            strict_record_start_patterns
+            if use_relaxed_record_markers
+            else record_start_patterns
+        )
+        record_start = (
+            None
+            if should_block
+            else detect_record_start(
+                text=text,
+                compiled_patterns=active_record_start_patterns,
+            )
+        )
         if record_start and _should_reject_fake_record_name(record_start[0], blocked_starts):
+            record_start = None
+        if record_start and _looks_like_prose_remainder(record_start[1]):
             record_start = None
         if record_start and following_markers and not use_relaxed_record_markers:
             # Next K *paragraph* blocks in document order (skip images/page breaks).
@@ -1345,9 +1371,8 @@ def extract_records(
             continue
 
         if not should_block:
-            strict_patterns = _strict_record_start_patterns(record_start_patterns)
             inline = _find_inline_record_split(
-                text, strict_patterns, record_start_patterns
+                text, strict_record_start_patterns, record_start_patterns
             )
             if inline and _should_reject_fake_record_name(inline[1], blocked_starts):
                 inline = None
