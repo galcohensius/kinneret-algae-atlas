@@ -72,9 +72,13 @@
     "cite this"
   ],
   "record_following_markers": [
+    "Phylum:",
+    "Class:",
+    "Order:",
+    "Habitat:",
     "Organization:"
   ],
-  "record_following_marker_lookahead": 5,
+  "record_following_marker_lookahead": 8,
   "morphology_supplement_links": [
     {
       "scientific_name_pattern": "(?i)Parvodinium\\s+\\S*(cunningtonii|elpatiewskyi)\\S*",
