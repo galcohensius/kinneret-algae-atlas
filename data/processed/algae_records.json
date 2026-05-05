@@ -6818,5 +6818,1409 @@
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
       "record_updated": "2026-05-05"
     }
+  },
+  {
+    "scientific_name": "Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824",
+    "images": [
+      "/algae-images/bangia-atropurpurea/thumbnail-1.png",
+      "/algae-images/bangia-atropurpurea/plate-1.jpg",
+      "/algae-images/bangia-atropurpurea/plate-2.jpg",
+      "/algae-images/bangia-atropurpurea/plate-3.jpg",
+      "/algae-images/bangia-atropurpurea/plate-4.jpg"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Mat-forming colony of Baniga atropurpurea with young filaments embedded in firm gelatinous matrix.",
+      "Plate 2. A young uniseriate filamenat of Baniga atropurpurea showing box shape of individual cells.",
+      "Plate 3. A mature, multiseriate filamenat of Baniga atropurpurea made of cells of different shapes and sizes.",
+      "Plate 4. Close up on a uniseriate filament of Baniga atropurpurea showing development of colorless, rizoid-like structure from an intecalary cell."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. Mat-forming colony of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Baniga",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "atropurpurea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " with young filaments embedded in firm gelatinous matrix.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. A young uniseriate filamenat of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Baniga",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "atropurpurea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " showing box shape of individual cells.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 3. A mature, multiseriate filamenat of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Baniga",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "atropurpurea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " made of cells of different shapes and sizes.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 4. Close up on a uniseriate filament of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Baniga",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "atropurpurea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " showing development of colorless, rizoid-like structure from an ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "intecalary",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cell",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Rhodophyta",
+      "class": "Bangiophyceae",
+      "order": "Bangiales",
+      "habitat": "benthos, periphyton",
+      "previous_name_used": "",
+      "organization": "filamentous (initially uniseriate, later multiseriate)",
+      "color": "dark red-brown",
+      "cell_shape": "cylinder",
+      "cell_diameter_d": "~ 20 mm (but highly variable) Filament length: Several centimeters",
+      "cell_length_l": "",
+      "biovolume_per_cell": "",
+      "biovolume_equation": "",
+      "morphological_features": "Bangia colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from intercalary cells, they are formed as a step in the reproductive cycle (Gargiulo et al. 2001).",
+      "distinctive_attributes": "filaments form dark fur-like fleecy mats at air-water interface in shallow waters (few cm) close to the waterline. The species is found in both marine and fresh waters.",
+      "ecology": "Seasonally occurring as a fleecy mat in the eulittoral zone of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it.",
+      "physiological_features": "Known as being a highly adaptive species due to its stress tolerance. Can survive desiccation and extreme solar radiation (in the supra-littoral zone).",
+      "environmental_conditions": "",
+      "further_reading": ""
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Rhodophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Bangiophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Bangiales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "benthos, periphyton",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "filamentous (initially uniseriate, later multiseriate)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "dark red-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "cylinder",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "~ 20 mm (but highly variable) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Filament",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "length:",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " Several centimeters",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Bangia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "intercalary",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " cells, they are formed as a step in the reproductive cycle (Gargiulo et al. 2001).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "filaments form dark fur-like fleecy mats at air-water interface in shallow waters (few cm) close to the waterline. The species is found in both marine and fresh waters.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Seasonally occurring as a fleecy mat in the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "eulittoral",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "zone",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "physiological_features": [
+        {
+          "text": "Known as being a highly adaptive species due to its stress tolerance. Can survive desiccation and extreme solar radiation (in the supra-littoral zone).",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Bangia atropurpurea.docx",
+      "record_updated": "2026-05-05"
+    }
+  },
+  {
+    "scientific_name": "Cryptomonas ovata",
+    "images": [
+      "/algae-images/cryptomonas-ovata/thumbnail-1.png",
+      "/algae-images/cryptomonas-ovata/plate-1.png",
+      "/algae-images/cryptomonas-ovata/plate-2.png",
+      "/algae-images/cryptomonas-ovata/plate-3.png",
+      "/algae-images/cryptomonas-ovata/figure-1.png",
+      "/algae-images/cryptomonas-ovata/figure-2.png",
+      "/algae-images/cryptomonas-ovata/figure-3.png",
+      "/algae-images/cryptomonas-ovata/figure-4.png",
+      "/algae-images/cryptomonas-ovata/figure-5.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Cryptomonas ovata from L. Kinneret showing typical ovoid shape, dark brown color and two equal-length flagella emerging out of a gullet system that reaches the center of the cell or beyond. In lateral view the cells are elliptical, elongated, ovoid, often slightly curved. The furrow-gullet system is straight or slightly curved. Photographs by Alla Alster. Drawing from B-Beres 2024.",
+      "Plate 2. Cryptomonas curvata Ehrenberg from L. Kinneret. This species appears in two morphs: (a) S-shaped in lateral view, or “campilomorph”; (b) more symmetrical oval-to ellipsoid form, or “cryptomorph”. In both, |flagella are subequal. Drawing from B-Beres 2024.",
+      "Plate 3. Cryptomonas marssonii Skuja from L. Kinneret showing typical tapering of cell towards the posterior end and being lightly curved. With 2 subequal flagella. The furrow-gullet system is obliqueextends to about half of the cell. With 2 olive-gree or olive-brown chloroplasts. Drawing from B-Beres 2024.",
+      "Figure 1. Time series of Cryptomonas spp. abundance (cells mL-1), Lake Kinneret, 1978-2020.",
+      "Figure 2. The annual pattern of water column cell abundance of Cryptomonas spp. in Lake Kinneret, based on data for 1978-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+      "Figure 3. Cryptomonas spp. abundance vs. that of Peridinium gatunense, based on data for 1970-2020. Higest abundance of Cryptomonas spp occurrs when Peridinium gatunense abundance is lowest, and visa-versa.",
+      "Figure 4. Crytomonas cell size (as volume, mm3): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respecitively, showing weak but significant correlation of cell size with each of those variables.",
+      "Figure 5. Crytomonas spp. abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from L. Kinneret showing typical ovoid shape, dark brown color and two equal-length flagella emerging out of a gullet system that reaches the center of the cell or beyond. In lateral view the cells are elliptical, elongated, ovoid, often slightly curved. The furrow-gullet system is straight or slightly curved. Photographs by Alla Alster. Drawing from B-Beres 2024.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "curvata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Ehrenberg from L. Kinneret. This species appears in two morphs: (a) S-shaped in lateral view, or “campilomorph”; (b) more symmetrical oval-to ellipsoid form, or “cryptomorph”. In both, |flagella are subequal. Drawing from B-Beres 2024.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "marssonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Skuja from L. Kinneret showing typical tapering of cell towards the posterior end and being lightly curved. With 2 subequal flagella. The furrow-gullet system is obliqueextends to about half of the cell. With 2 olive-gree or olive-brown chloroplasts. Drawing from B-Beres 2024.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. abundance (cells mL-1), Lake Kinneret, 1978-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. in Lake Kinneret, based on data for 1978-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. abundance vs. that of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on data for 1970-2020. Higest abundance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp occurrs when ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance is lowest, and visa-versa.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 4. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Crytomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cell size (as volume, mm3): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respecitively, showing weak but significant correlation of cell size with each of those variables.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 5. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Crytomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cryptista",
+      "class": "Cryptophyceae",
+      "order": "Cryptomonadales",
+      "habitat": "plankton pelagic/littoral",
+      "previous_name_used": "",
+      "organization": "flagellated single cells",
+      "color": "dark brown",
+      "cell_shape": "oval",
+      "cell_diameter_d": "6 – 17 m, median: 9.2 m (N=2400).",
+      "cell_length_l": "10 – 30 m, median: 14 m (N=424). Cell biovolum: 400 – 2000 m3, median: 700 m3. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
+      "biovolume_per_cell": "",
+      "biovolume_equation": "V=0.7076D3.0772 (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid).",
+      "morphological_features": "Relatively large free-swimming cells, dark brown in color, shaped as an elongated monad with two equal or subequal length flagella extending out of a gullet (longitudinal groove on the cell surface) in the upper part of the cell. The bottom end is rounded. With 1 or 2 chloroplasts per cell located at the cell periphery, phycoerythrin as the principal accessory pigment (giving the deep brown color), and a single large and central pyrenoid. Cryptomonas is differentiated from Plagioaselmis in being the larger cryptophyte found in Lake Kinneret. Three species of Cryptomonas occur in the lake, including C. ovata, C. marssonii and C. curvata (Plates 1-3). Dues to the similar size and limited diagnostic characters, for the routine monitoring the 3 species have all been counted under a single code for the genus Cryptomonas, and the data presented in figures 1-4 are for the genus.",
+      "distinctive_attributes": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria), its chloroplast fluorecses orange when observed under epifluorescent microscope. Always present in the water column, with peak biomass in winter and another peak in summer. Distinctively larger size than Plagioselmis. Probably mixotrophic.",
+      "ecology": "Cryptopmonas spp. are always present in the water column (Fig. 1), with higher abundances in winter (Dec to Feb) but also in summer (Jul - Sep) and lowest in April-May, at the time of the Peridinium bloom (Fig. 2). It is possible that the two seasonal abundance peaks are due to two different Cryptopmonas species. Abundance is usually < 250 cells/mL (Fig. 2). A noteworthy exception occurred during the cold winter of 1992, when the Peridinium bloom developed later than usual and Cryptomonas abundance in February exceeded 1000/mL (Fig. 1). Overall, when Peridinium gatunense is abundant in the water, Cryptomonas spp. abundance is low, and visa-versa (Fig. 3). Cell size of Cryptomonas varies seasonally, with larger cell volume in winter (Fig. 4a).",
+      "physiological_features": "",
+      "environmental_conditions": "Kinneret Crytomonas is resistant to higher chloride concentrations and is present at all ambient water temperatures (Fig. 5). High abundances of Cryptomonas spp. are associated with: mixing depth (Zmix) > 35 m typical of the winter time when the water column is fully mixed; euphotic zone depth range of 5-12 m (not shown); higher alkalinities; lower organic N (Fig. 5). Cell size tends to deline with water temperature and increase with Alkalinity and Ca concentration (Fig. 4 b,c,d).",
+      "further_reading": "Javornicky P 2003. Cryptomonas ovata Ehrenberg (Cryptophyceae) and some related species. Algological Studies/Archiv für Hydrobiologie, Supplement 110: 43-65.\nNovarino G 2011. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V. 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cryptista",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cryptophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Cryptomonadales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton pelagic/littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "dark brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "oval",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "6 – 17 m, median: 9.2 m (N=2400).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "10 – 30 m, median: 14 m (N=424). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cell",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "biovolum",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ": 400 – 2000 m3, median: 700 m3. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "V=0.7076D3.0772 (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Relatively large free-swimming cells, dark brown in color, shaped as an elongated monad with two equal or subequal length flagella extending out of a ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gullet",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (longitudinal groove on the cell surface) in the upper part of the cell. The bottom end is rounded. With 1 or 2 chloroplasts per cell located at the cell periphery, phycoerythrin as the principal accessory pigment (giving the deep brown color), and a single large and central pyrenoid. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is differentiated from ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plagioaselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in being the larger cryptophyte found in Lake Kinneret. Three species of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occur in the lake, including ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovata,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "marssonii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "and",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "curvata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Plates 1-3). Dues to the similar size and limited diagnostic characters, for the routine monitoring the 3 species have all been counted under a single code for the genus ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", and the data presented in figures 1-4 are for the genus.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria), its chloroplast fluorecses orange when observed under epifluorescent microscope. Always present in the water column, with peak biomass in winter and another peak in summer. Distinctively larger size than ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plagioselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Probably mixotrophic.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Cryptopmonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. are always present in the water column (Fig. 1), with higher abundances in winter (Dec to Feb) but also in summer (Jul - Sep) and lowest in April-May, at the time of the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " bloom (Fig. 2). It is possible that the two seasonal abundance peaks are due to two different ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptopmonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " species",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Abundance is usually < 250 cells/mL (Fig. 2). A noteworthy exception occurred during the cold winter of 1992, when the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " bloom developed later than usual and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance in February exceeded 1000/mL (Fig. 1). Overall, when ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is abundant in the water, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. abundance is low, and visa-versa (Fig. 3). Cell size of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " varies seasonally, with larger cell volume in winter (Fig. 4a).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Kinneret ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Crytomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is resistant to higher chloride concentrations and is present at all ambient water temperatures (Fig. 5). High abundances of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. are associated with: mixing depth (Zmix) > 35 m typical of the winter time when the water column is fully mixed; euphotic zone depth range of 5-12 m (not shown); higher alkalinities; lower organic N (Fig. 5). Cell size tends to deline with water temperature and increase with Alkalinity and Ca concentration (Fig. 4 b,c,d).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Javornicky P 2003. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Ehrenberg (Cryptophyceae) and some related species. Algological Studies/Archiv für Hydrobiologie, Supplement 110: 43-65.\nNovarino G 2011. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V. 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Cryptophytes.docx",
+      "record_updated": "2026-05-05"
+    }
+  },
+  {
+    "scientific_name": "Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994",
+    "images": [
+      "/algae-images/plagioselmis-nannoplanctica/thumbnail-1.png",
+      "/algae-images/plagioselmis-nannoplanctica/plate-1.png",
+      "/algae-images/plagioselmis-nannoplanctica/figure-1.png",
+      "/algae-images/plagioselmis-nannoplanctica/figure-2.png",
+      "/algae-images/plagioselmis-nannoplanctica/figure-3.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Plagioselmis nannoplanctonica (previously named Rhodomonas minuta va. nannooplanctonica). Showing typical drop shape and unequal flagella, emerging from a groove at the top, rounded part of the cell. Left drawing shows also the periferal chloroplast (black), central pyrenoid surrounded by a thick starch sheath of two hemispheral halves. Right drawing shows details seen by scanning electron microscopy. Drawing taken from Novarino (2003).",
+      "Figure 1. Figure 1. Time series of Plagioselmis nannoplanctonica abundance (cells mL-1), Lake Kinneret, 1970-2020.",
+      "Figure 2. The annual pattern of water column cell abundance of Plagioselmis nannoplanctonica in Lake Kinneret, based on data for 1970-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+      "Figure 3. Plagioselmis nannoplanctonica abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plagioselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "nannoplanctonica",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (previously named ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Rhodomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "minuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " va. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "nannooplanctonica",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": "). Showing typical drop shape and unequal flagella, emerging from a groove at the top, rounded part of the cell. Left drawing shows also the periferal chloroplast (black), central pyrenoid surrounded by a thick starch sheath of two hemispheral halves. Right drawing shows details seen by scanning electron microscopy. Drawing taken from Novarino (2003).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plagioselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "nannoplanctonica",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1), Lake Kinneret, 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plagioselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "nannoplanctonica",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in Lake Kinneret, based on data for 1970-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plagioselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "nannoplanctonica",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cryptista",
+      "class": "Cryptophyceae",
+      "order": "Cryptomonadales",
+      "habitat": "plankton, pelagic/littoral",
+      "previous_name_used": "Rhodomonas minuta var. nannoplanctica Skuja 1948",
+      "organization": "flagellated single cells",
+      "color": "reddish to dark brown",
+      "cell_shape": "drop-like",
+      "cell_diameter_d": "3 – 6 m, median: 4.5 m (N=477).",
+      "cell_length_l": "6 – 10 m, median: 7.8 m (N=390). Cell biovolum: 40 – 150 m3, median: 82 m3.",
+      "biovolume_per_cell": "",
+      "biovolume_equation": "V=1.841D2.5264 (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R2=0.93).",
+      "morphological_features": "A small drop-shaped monad with two slightly unequal flagella (Plate 1), this is the smaller cryptophyte of Lake Kinneret. A single red (contains phycoerythrin) chloroplast is dorsal with ventral margins. A central large pyrenoid surrounded by a thick startch sheath of 2 hemispherical halves. The nucleus is posterior. Its chloroplast fluoresces orange (auatofluorescence) when observed under an epifluorescent microscope.",
+      "distinctive_attributes": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria) – fluorecses orange when stained with DAPI. Always present in the water column. Distinctively smaller size than Cryptomonas. Probably mixotrophic.",
+      "ecology": "Plagioselmis nannoplanctonica is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter holomixis (Dec. to Mar.), lowest in summer (Jun. to Oct.; Fig. 2). Indifferent to increasing salinity (or Cl- conc.; Fig. 3). Like Cryptomnonas, it is present in both the pelagic and littoral zones and is highly grazed by zooplankton.",
+      "physiological_features": "",
+      "environmental_conditions": "Present at the full range observed in Lake Kinneret of the following environmental variables: Zeu (euphotic zone depth), Secchi depth, pH, NH4, DO, SO4, TSS, Turbidity. Abundance increases with increasing alkalinity and nitrate, and with declining water temperature, DON, Organic N, total dissolved P (Fig. 3).",
+      "further_reading": "Lund JWG 1962. A rarely recorded but very common British alga, Rhodomonas minuta Skuja. British Phycological Bulletin, 2: 133-139.\nNovarino G 2011. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cryptista",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cryptophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Cryptomonadales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, pelagic/littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "previous_name_used": [
+        {
+          "text": "Rhodomonas",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "minuta",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "var.",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "nannoplanctica",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Skuja",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1948",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "reddish to dark brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "drop-like",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "3 – 6 m, median: 4.5 m (N=477).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "6 – 10 m, median: 7.8 m (N=390). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cell",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "biovolum",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ": 40 – 150 m3, median: 82 m3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "V=1.841D2.5264 (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R2=0.93).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "A small drop-shaped monad with two slightly unequal flagella (Plate 1), this is the smaller cryptophyte of Lake Kinneret. A single red (contains phycoerythrin) chloroplast is dorsal with ventral margins. A central large pyrenoid surrounded by a thick startch sheath of 2 hemispherical halves. The nucleus is posterior. Its chloroplast fluoresces orange (auatofluorescence) when observed under an epifluorescent microscope.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria) – fluorecses orange when stained with DAPI. Always present in the water column. Distinctively smaller size than ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Probably mixotrophic.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Plagioselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "nannoplanctonica",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter holomixis (Dec. to Mar.), lowest in summer (Jun. to Oct.; Fig. 2). Indifferent to increasing salinity (or Cl- conc.; Fig. 3). Like ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomnonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", it is present in both the pelagic and littoral zones and is highly grazed by zooplankton.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Present at the full range observed in Lake Kinneret of the following environmental variables: Zeu (euphotic zone depth), Secchi depth, pH, NH4, DO, SO4, TSS, Turbidity. Abundance increases with increasing alkalinity and nitrate, and with declining water temperature, DON, Organic N, total dissolved P (Fig. 3).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Lund JWG 1962. A rarely recorded but very common British alga, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Rhodomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "minuta",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Skuja. British Phycological Bulletin, 2: 133-139.\nNovarino G 2011. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Cryptophytes.docx",
+      "record_updated": "2026-05-05"
+    }
   }
 ]

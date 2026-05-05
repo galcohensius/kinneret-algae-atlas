@@ -25,14 +25,17 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 3. **Extract JSON and images** (always run after changing the Word source or the Python extractor):
 
    ```bash
-   python src/extract_algae.py --input "data/raw/<your-file>.docx" --output "data/processed/algae_records.json" --images-dir public/algae-images
+   python src/extract_algae.py --input "data/raw/<your-file>.docx" --output "data/processed/algae_records.json" --images-dir public/algae-images --use-word-renderer
    ```
 
    Or, if defaults already point at the right file:
 
    ```bash
-   python src/extract_algae.py
+   python src/extract_algae.py --use-word-renderer
    ```
+
+   For multi-doc builds, repeat `--input` (one per file), or omit `--input` to auto-discover all
+   `data/raw/*.docx` files except names matching `*suppl*.docx`.
 
 4. **Validate processed data** (matches CI):
 
