@@ -348,6 +348,76 @@ def _count_chart_nodes_in_docx(docx_path: str | Path) -> int:
         return 0
 
 
+def _round_to_quarter_turn(angle: float) -> int | None:
+    rounded = int(round(angle / 90.0) * 90)
+    if abs(angle - rounded) > 0.75:
+        return None
+    return rounded % 360
+
+
+def _apply_word_drawing_transform(
+    *, blob: bytes, extension: str, drawing_el
+) -> tuple[bytes, str]:
+    """
+    Apply Word drawing transforms (rotation/flip) so extracted images keep
+    the orientation users see in the .docx.
+    """
+    xfrms = drawing_el.xpath(".//*[local-name()='xfrm']")
+    transform = None
+    for x in xfrms:
+        if x.get("rot") is not None or x.get("flipH") is not None or x.get("flipV") is not None:
+            transform = x
+            break
+    if transform is None:
+        return blob, extension
+
+    rot_attr = transform.get("rot")
+    flip_h = str(transform.get("flipH", "")).lower() in {"1", "true"}
+    flip_v = str(transform.get("flipV", "")).lower() in {"1", "true"}
+
+    clockwise_deg = 0.0
+    if rot_attr is not None:
+        try:
+            clockwise_deg = (int(rot_attr) / 60000.0) % 360.0
+        except ValueError:
+            clockwise_deg = 0.0
+
+    quarter_turn = _round_to_quarter_turn(clockwise_deg)
+    should_rotate = quarter_turn not in (None, 0)
+    if not should_rotate and not flip_h and not flip_v:
+        return blob, extension
+
+    try:
+        with Image.open(io.BytesIO(blob)) as im:
+            out = im.copy()
+            if flip_h:
+                out = out.transpose(Image.Transpose.FLIP_LEFT_RIGHT)
+            if flip_v:
+                out = out.transpose(Image.Transpose.FLIP_TOP_BOTTOM)
+            if should_rotate and quarter_turn is not None:
+                # OOXML rot is clockwise; PIL rotate is counter-clockwise.
+                out = out.rotate(-quarter_turn, expand=True)
+
+            target_ext = extension.lower()
+            if target_ext in {".jpg", ".jpeg"}:
+                fmt = "JPEG"
+                if out.mode in ("RGBA", "LA", "P"):
+                    out = out.convert("RGB")
+            elif target_ext == ".gif":
+                fmt = "GIF"
+            else:
+                target_ext = ".png"
+                fmt = "PNG"
+                if out.mode == "CMYK":
+                    out = out.convert("RGB")
+
+            buf = io.BytesIO()
+            out.save(buf, format=fmt)
+            return buf.getvalue(), target_ext
+    except Exception:
+        return blob, extension
+
+
 def _yield_images_from_drawing_element(
     drawing_el,
     document: Document,
@@ -365,9 +435,14 @@ def _yield_images_from_drawing_element(
         if not image_part:
             continue
         extension = Path(getattr(image_part, "filename", "")).suffix.lower() or ".png"
+        blob, extension = _apply_word_drawing_transform(
+            blob=image_part.blob,
+            extension=extension,
+            drawing_el=drawing_el,
+        )
         yield {
             "type": "image",
-            "blob": image_part.blob,
+            "blob": blob,
             "extension": extension,
         }
         emitted_any = True
