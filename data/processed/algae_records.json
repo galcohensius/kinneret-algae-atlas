@@ -339,7 +339,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -674,7 +674,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -1188,7 +1188,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -1571,7 +1571,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -2072,7 +2072,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -2830,7 +2830,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -3144,11 +3144,11 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
-    "scientific_name": "Parvodinium elpatiewskyi",
+    "scientific_name": "Parvodinium elpatiewskyi Ostenfeld) Kretschmann et al 2019",
     "images": [
       "/algae-images/parvodinium-elpatiewskyi/thumbnail-1.png",
       "/algae-images/parvodinium-elpatiewskyi/plate-1.png",
@@ -3881,7 +3881,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -4299,17 +4299,17 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
-    "scientific_name": "Glochidinium penardiforme",
+    "scientific_name": "Glechodinium penardiforme Lemmermann) Boltovskoy 2000",
     "images": [
-      "/algae-images/glochidinium-penardiforme/thumbnail-1.png",
-      "/algae-images/glochidinium-penardiforme/plate-1.png",
-      "/algae-images/glochidinium-penardiforme/plate-2.jpg",
-      "/algae-images/glochidinium-penardiforme/plate-3.png",
-      "/algae-images/glochidinium-penardiforme/figure-1.png"
+      "/algae-images/glechodinium-penardiforme/thumbnail-1.png",
+      "/algae-images/glechodinium-penardiforme/plate-1.png",
+      "/algae-images/glechodinium-penardiforme/plate-2.jpg",
+      "/algae-images/glechodinium-penardiforme/plate-3.png",
+      "/algae-images/glechodinium-penardiforme/figure-1.png"
     ],
     "image_captions": [
       "",
@@ -4676,7 +4676,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -5094,7 +5094,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -6816,7 +6816,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -7129,21 +7129,21 @@
     },
     "metadata": {
       "source_file": "Bangia atropurpurea.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
-    "scientific_name": "Cryptomonas ovata",
+    "scientific_name": "Cryptomonas Ehrenberg 1831",
     "images": [
-      "/algae-images/cryptomonas-ovata/thumbnail-1.png",
-      "/algae-images/cryptomonas-ovata/plate-1.png",
-      "/algae-images/cryptomonas-ovata/plate-2.png",
-      "/algae-images/cryptomonas-ovata/plate-3.png",
-      "/algae-images/cryptomonas-ovata/figure-1.png",
-      "/algae-images/cryptomonas-ovata/figure-2.png",
-      "/algae-images/cryptomonas-ovata/figure-3.png",
-      "/algae-images/cryptomonas-ovata/figure-4.png",
-      "/algae-images/cryptomonas-ovata/figure-5.png"
+      "/algae-images/cryptomonas/thumbnail-1.png",
+      "/algae-images/cryptomonas/plate-1.png",
+      "/algae-images/cryptomonas/plate-2.png",
+      "/algae-images/cryptomonas/plate-3.png",
+      "/algae-images/cryptomonas/figure-1.png",
+      "/algae-images/cryptomonas/figure-2.png",
+      "/algae-images/cryptomonas/figure-3.png",
+      "/algae-images/cryptomonas/figure-4.png",
+      "/algae-images/cryptomonas/figure-5.png"
     ],
     "image_captions": [
       "",
@@ -7799,7 +7799,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   },
   {
@@ -8220,7 +8220,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes.docx",
-      "record_updated": "2026-05-05"
+      "record_updated": "2026-05-07"
     }
   }
 ]

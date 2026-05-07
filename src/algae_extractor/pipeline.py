@@ -242,6 +242,21 @@ def _looks_like_prose_remainder(remainder: str | None) -> bool:
     return bool(re.search(r"[.!?]", tail))
 
 
+def _looks_like_explicit_record_header_line(text: str) -> bool:
+    s = text.strip()
+    if not s:
+        return False
+    if _looks_like_image_caption(s):
+        return False
+    if ":" in s:
+        return False
+    if len(s) > 160:
+        return False
+    if re.search(r"[.!?]$", s):
+        return False
+    return bool(re.match(r"^(?:\d+\.?\s*)?[A-Z][A-Za-z-]+(?:\s+.+)?$", s))
+
+
 # Epithet / genus-only prefix of a taxon header (before authority), for image dirs and parity with web slugs.
 _TAXON_SLUG_BINOMIAL_RE = re.compile(
     r"^(?:\d+\.?\s*)?"
@@ -1369,6 +1384,39 @@ def extract_records(
             current_section = default_section
 
             continue
+
+        if not should_block and following_markers:
+            if _looks_like_explicit_record_header_line(text):
+                paragraphs_ahead: list[dict[str, Any]] = []
+                for candidate in blocks[index + 1 :]:
+                    if candidate["type"] != "paragraph":
+                        continue
+                    paragraphs_ahead.append(candidate)
+                    if len(paragraphs_ahead) >= marker_lookahead:
+                        break
+                next_starts_with_marker = any(
+                    candidate["text"].lower().startswith(marker)
+                    for candidate in paragraphs_ahead
+                    for marker in following_markers
+                )
+                if next_starts_with_marker:
+                    if expect_image_caption:
+                        _flush_missing_image_caption(current)
+                        expect_image_caption = False
+                    finalized = _finalize_record(
+                        current,
+                        images_output_dir=resolved_images_output_dir,
+                        images_public_prefix=images_public_prefix,
+                        record_index_fallback=len(records) + 1,
+                        morphology_supplement_links=morphology_supplement_links,
+                    )
+                    if finalized:
+                        records.append(finalized)
+
+                    current = _new_record(source_file=source_file)
+                    current["scientific_name"] = _strip_leading_list_markers(text).strip()
+                    current_section = default_section
+                    continue
 
         if not should_block:
             inline = _find_inline_record_split(
