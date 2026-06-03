@@ -4,7 +4,7 @@ import json
 import re
 from pathlib import Path
 
-from algae_extractor.pipeline import extract_records
+from algae_extractor.pipeline import extract_records, prune_catalog_images
 
 
 _BINOMIAL_RE = re.compile(
@@ -225,6 +225,15 @@ def main():
         data.extend(record.to_dict() for record in records)
 
     data = _merge_records(data)
+
+    images_dir = Path(args.images_dir)
+    if images_dir.is_dir():
+        files_removed, dirs_removed = prune_catalog_images(data, images_dir)
+        if files_removed or dirs_removed:
+            print(
+                f"Pruned {files_removed} stale image file(s) and "
+                f"{dirs_removed} obsolete species image folder(s)."
+            )
 
     with output_path.open("w", encoding="utf-8") as fp:
         json.dump(data, fp, ensure_ascii=False, indent=2)

@@ -3,6 +3,7 @@ from io import BytesIO
 from pathlib import Path
 from typing import Any
 import re
+import shutil
 
 from PIL import Image
 
@@ -1136,6 +1137,68 @@ def _normalize_structured_fields(
 
 
 _TIFF_EXTENSIONS = frozenset({".tif", ".tiff"})
+_IMAGE_SAVE_EXTENSIONS = frozenset({".png", ".jpg", ".jpeg", ".gif", ".webp", ".tif", ".tiff"})
+
+
+def species_image_dir_slug(scientific_name: str) -> str:
+    """Folder name under ``public/algae-images`` for a record header."""
+    return _slugify(_taxon_name_for_slug(scientific_name))
+
+
+def _unlink_stem_extension_variants(
+    algae_images_dir: Path, stem: str, keep_extension: str
+) -> None:
+    """Remove other extensions for the same stem (e.g. old thumbnail-1.jpg)."""
+    keep = keep_extension.lower()
+    for ext in _IMAGE_SAVE_EXTENSIONS:
+        if ext == keep:
+            continue
+        path = algae_images_dir / f"{stem}{ext}"
+        if path.is_file():
+            path.unlink()
+
+
+def prune_catalog_images(
+    records: list[dict[str, Any]],
+    images_output_dir: Path,
+) -> tuple[int, int]:
+    """
+    After extraction, drop image files not referenced in merged JSON and remove
+    species folders that no longer appear in the catalog.
+    """
+    if not images_output_dir.is_dir():
+        return 0, 0
+
+    keep_by_slug: dict[str, set[str]] = {}
+    for record in records:
+        name = (record.get("scientific_name") or "").strip()
+        if not name:
+            continue
+        slug = species_image_dir_slug(name)
+        filenames = {Path(p).name for p in (record.get("images") or []) if p}
+        if slug in keep_by_slug:
+            keep_by_slug[slug] |= filenames
+        else:
+            keep_by_slug[slug] = filenames
+
+    files_removed = 0
+    for slug, keep_names in keep_by_slug.items():
+        species_dir = images_output_dir / slug
+        if not species_dir.is_dir():
+            continue
+        for path in species_dir.iterdir():
+            if path.is_file() and path.name not in keep_names:
+                path.unlink()
+                files_removed += 1
+
+    dirs_removed = 0
+    for child in images_output_dir.iterdir():
+        if not child.is_dir() or child.name in keep_by_slug:
+            continue
+        shutil.rmtree(child)
+        dirs_removed += 1
+
+    return files_removed, dirs_removed
 
 
 def _tiff_blob_to_png_bytes(blob: bytes) -> bytes:
@@ -1163,19 +1226,14 @@ def _save_image(
     images_output_dir: Path,
     images_public_prefix: str,
 ) -> str:
-    safe_name = _slugify(_taxon_name_for_slug(algae_name))
+    safe_name = species_image_dir_slug(algae_name)
     algae_images_dir = images_output_dir / safe_name
     algae_images_dir.mkdir(parents=True, exist_ok=True)
     ext = extension.lower()
     if ext in _TIFF_EXTENSIONS:
         blob = _tiff_blob_to_png_bytes(blob)
         ext = ".png"
-        for stale in (
-            algae_images_dir / f"{filename_stem}.tif",
-            algae_images_dir / f"{filename_stem}.tiff",
-        ):
-            if stale.exists():
-                stale.unlink()
+    _unlink_stem_extension_variants(algae_images_dir, filename_stem, ext)
     filename = f"{filename_stem}{ext}"
     output_file = algae_images_dir / filename
     output_file.write_bytes(blob)

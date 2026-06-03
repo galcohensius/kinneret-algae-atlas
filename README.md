@@ -37,6 +37,9 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    For multi-doc builds, repeat `--input` (one per file), or omit `--input` to auto-discover all
    `data/raw/*.docx` files except names matching `*suppl*.docx`.
 
+   Re-running extraction **prunes** each species image folder: files not listed in the new
+   JSON are deleted (so replaced or removed pictures in Word do not leave stale files on disk).
+
 4. **Validate processed data** (matches CI):
 
    ```bash
