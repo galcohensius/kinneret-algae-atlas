@@ -4,7 +4,10 @@ import { notFound } from "next/navigation";
 import CiteThisRecordBlock from "../../components/CiteThisRecordBlock";
 import TaxonItalicName from "../../components/TaxonItalicName";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
-import { RichText, PlainTextWithTables } from "../../components/RichText";
+import GlossaryAwarePlainText from "../../components/GlossaryAwarePlainText";
+import GlossaryAwareRichText from "../../components/GlossaryAwareRichText";
+import GlossaryAwareText from "../../components/GlossaryAwareText";
+import { RichText } from "../../components/RichText";
 import type { RichSegment } from "../../../lib/algae-types";
 import {
   citationToScholarSearchUrl,
@@ -178,9 +181,9 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <span className="algae-previous-name-label">{toDisplayLabel("previous_name_used")}: </span>
             <span className="algae-previous-name-value">
               {previousNameRich.length > 0 ? (
-                <RichText segments={previousNameRich} />
+                <GlossaryAwareRichText segments={previousNameRich} />
               ) : (
-                previousNamePlain
+                <GlossaryAwareText text={previousNamePlain} />
               )}
             </span>
           </p>
@@ -198,7 +201,13 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
                 return (
                   <Fragment key={key}>
                     <dt>{toDisplayLabel(key)}</dt>
-                    <dd>{richValue.length > 0 ? <RichText segments={richValue} /> : value}</dd>
+                    <dd>
+                      {richValue.length > 0 ? (
+                        <GlossaryAwareRichText segments={richValue} />
+                      ) : (
+                        <GlossaryAwareText text={value} />
+                      )}
+                    </dd>
                   </Fragment>
                 );
               })}
@@ -211,7 +220,13 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <h2 id="morph-heading" className="section-heading">
               {toDisplayLabel("morphological_features")}
             </h2>
-            <div className="algae-prose">{morphologicalRich.length > 0 ? <RichText segments={morphologicalRich} /> : <PlainTextWithTables text={morphological} />}</div>
+            <div className="algae-prose">
+              {morphologicalRich.length > 0 ? (
+                <GlossaryAwareRichText segments={morphologicalRich} />
+              ) : (
+                <GlossaryAwarePlainText text={morphological} />
+              )}
+            </div>
           </section>
         ) : null}
 
@@ -243,9 +258,9 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
               </h2>
               <div className="algae-prose">
                 {(record.sectionsRich?.[key] ?? []).length > 0 ? (
-                  <RichText segments={record.sectionsRich[key]} />
+                  <GlossaryAwareRichText segments={record.sectionsRich[key]} />
                 ) : (
-                  <PlainTextWithTables text={value} />
+                  <GlossaryAwarePlainText text={value} />
                 )}
               </div>
             </section>

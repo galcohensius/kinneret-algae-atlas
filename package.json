@@ -9,8 +9,9 @@
     "lint": "next lint",
     "test": "vitest run",
     "validate:data": "tsx scripts/validate-algae-data.ts",
+    "extract:glossary": "python src/extract_glossary.py",
     "build:atlas": "npm run validate:data && next build",
-    "sync:atlas": "python src/extract_algae.py --output \"data/processed/algae_records.json\" --images-dir public/algae-images --use-word-renderer && npm run build:atlas"
+    "sync:atlas": "python src/extract_algae.py --output \"data/processed/algae_records.json\" --images-dir public/algae-images --use-word-renderer && npm run extract:glossary && npm run build:atlas"
   },
   "dependencies": {
     "next": "latest",

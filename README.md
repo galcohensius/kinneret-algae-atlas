@@ -48,9 +48,15 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    - Python: `PYTHONPATH=src python -m unittest discover -s tests -p "test_pipeline*.py" -v`  
      (PowerShell: `$env:PYTHONPATH='src'; python -m unittest discover -s tests -p "test_pipeline*.py" -v`)
 
-6. **Local preview:** `npm run dev`
+6. **Glossary** (when `data/raw/1-Glossary.doc` changes, Windows or `.docx`):
 
-7. **Publish:** Commit the updated `data/processed/algae_records.json`, `public/algae-images/`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
+   ```bash
+   python src/extract_glossary.py
+   ```
+
+7. **Local preview:** `npm run dev`
+
+8. **Publish:** Commit the updated `data/processed/algae_records.json`, `data/processed/glossary.json`, `public/algae-images/`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
 
 **One-shot extract + validate + production build** (still commit and push yourself):
 

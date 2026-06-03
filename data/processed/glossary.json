@@ -1,0 +1,973 @@
+{
+  "title": "Glossary: terms used in species descriptions",
+  "record_updated": "2026-06-03",
+  "entries": [
+    {
+      "term": "Acicular",
+      "slug": "acicular",
+      "definition": "needle-shaped",
+      "letter": "A",
+      "match_phrases": [
+        "Acicular"
+      ]
+    },
+    {
+      "term": "Acute",
+      "slug": "acute",
+      "definition": "sharp angle (<90 degrees)",
+      "letter": "A",
+      "match_phrases": [
+        "Acute"
+      ]
+    },
+    {
+      "term": "Alkalinity",
+      "slug": "alkalinity",
+      "definition": "mg CO3 L-1",
+      "letter": "A",
+      "match_phrases": [
+        "Alkalinity"
+      ]
+    },
+    {
+      "term": "Amoeboid",
+      "slug": "amoeboid",
+      "definition": "amoeba like",
+      "letter": "A",
+      "match_phrases": [
+        "Amoeboid"
+      ]
+    },
+    {
+      "term": "Anterior",
+      "slug": "anterior",
+      "definition": "situated at the front side, opposite of posterior",
+      "letter": "A",
+      "match_phrases": [
+        "Anterior"
+      ]
+    },
+    {
+      "term": "Antapex",
+      "slug": "antapex",
+      "definition": "the point opposite to the tip of the cell on its other end",
+      "letter": "A",
+      "match_phrases": [
+        "Antapex"
+      ]
+    },
+    {
+      "term": "Antapical",
+      "slug": "antapical",
+      "definition": "opposite to the tip of the cell on its other end",
+      "letter": "A",
+      "match_phrases": [
+        "Antapical"
+      ]
+    },
+    {
+      "term": "Apex (plural: apices)",
+      "slug": "apex",
+      "definition": "tip of a cell (in species that have one or more attenuated endings)",
+      "letter": "A",
+      "match_phrases": [
+        "Apex",
+        "apices"
+      ]
+    },
+    {
+      "term": "Apical axis",
+      "slug": "apical-axis",
+      "definition": "in diatoms: axis linking the two poles of a valve",
+      "letter": "A",
+      "match_phrases": [
+        "Apical axis"
+      ]
+    },
+    {
+      "term": "Apiculate",
+      "slug": "apiculate",
+      "definition": "terminating in a short, sharp, flexible point in diatoms: having a short broad tip see Fig. Y (Cox 1996 P. 16)",
+      "letter": "A",
+      "match_phrases": [
+        "Apiculate"
+      ]
+    },
+    {
+      "term": "Aplanospores",
+      "slug": "aplanospores",
+      "definition": "non-motile spores formed asexually within the parent cell, having no flagella.",
+      "letter": "A",
+      "match_phrases": [
+        "Aplanospores"
+      ]
+    },
+    {
+      "term": "Arcuate",
+      "slug": "arcuate",
+      "definition": "see Fig. X (Cox 1996 P. 6)",
+      "letter": "A",
+      "match_phrases": [
+        "Arcuate"
+      ]
+    },
+    {
+      "term": "Areola (plural: areolae)",
+      "slug": "areola",
+      "definition": "a regular, repeated perforation through the siliceous layer on the valve of a diatom cell",
+      "letter": "A",
+      "match_phrases": [
+        "Areola",
+        "areolae"
+      ]
+    },
+    {
+      "term": "Athecate",
+      "slug": "athecate",
+      "definition": "in dinoflagellates: ‘naked’, not having thecae, not being enclosed in a shell of cellulose plates.",
+      "letter": "A",
+      "match_phrases": [
+        "Athecate"
+      ]
+    },
+    {
+      "term": "Attenuated",
+      "slug": "attenuated",
+      "definition": "long, narrow and sometimes tapering",
+      "letter": "A",
+      "match_phrases": [
+        "Attenuated"
+      ]
+    },
+    {
+      "term": "Autogamy",
+      "slug": "autogamy",
+      "definition": "non-sexual reproduction, self-fertilization or conjugation in an individual organism by division of its nucleus into two parts that in turn reunite to form a zygote",
+      "letter": "A",
+      "match_phrases": [
+        "Autogamy"
+      ]
+    },
+    {
+      "term": "Auxospore",
+      "slug": "auxospore",
+      "definition": "large cell resulting from sexual reproduction or autogamy.  In diatoms, they lack the rigid valves, instead they are covered by delicate siliceous scales or bands.",
+      "letter": "A",
+      "match_phrases": [
+        "Auxospore"
+      ]
+    },
+    {
+      "term": "Axial",
+      "slug": "axial",
+      "definition": "along the axis",
+      "letter": "A",
+      "match_phrases": [
+        "Axial"
+      ]
+    },
+    {
+      "term": "Bilateral symmetry",
+      "slug": "bilateral-symmetry",
+      "definition": "symmetry about a single middle line",
+      "letter": "B",
+      "match_phrases": [
+        "Bilateral symmetry"
+      ]
+    },
+    {
+      "term": "Broad linear",
+      "slug": "broad-linear",
+      "definition": "see Fig. X (Cox 1996 P. 6)",
+      "letter": "B",
+      "match_phrases": [
+        "Broad linear"
+      ]
+    },
+    {
+      "term": "Capitate",
+      "slug": "capitate",
+      "definition": "having a part that is enlarged and rounded see fig. Y (Cox 1996 P. 16)",
+      "letter": "C",
+      "match_phrases": [
+        "Capitate"
+      ]
+    },
+    {
+      "term": "Caudus",
+      "slug": "caudus",
+      "definition": "‘tail’ of euglenophytes",
+      "letter": "C",
+      "match_phrases": [
+        "Caudus"
+      ]
+    },
+    {
+      "term": "Cingulum (plural: cingula)",
+      "slug": "cingulum",
+      "definition": "portion of the diatom girdle associated with a single valve.  In dinoflagellates:  a transverse groove that encircles the cell and holds the transverse flagellum in place.",
+      "letter": "C",
+      "match_phrases": [
+        "Cingulum",
+        "cingula"
+      ]
+    },
+    {
+      "term": "Conductivity",
+      "slug": "conductivity",
+      "definition": "specific conductance, S cm-1",
+      "letter": "C",
+      "match_phrases": [
+        "Conductivity"
+      ]
+    },
+    {
+      "term": "Conjugation",
+      "slug": "conjugation",
+      "definition": "a form of sexual reproduction where neither gamete is flagellated. This type of reproduction, typical of the Zygnematalean (conjugating) green algae, cells attach to each other so that the gametes can fuse.",
+      "letter": "C",
+      "match_phrases": [
+        "Conjugation"
+      ]
+    },
+    {
+      "term": "Costa (Plural: costae)",
+      "slug": "costa",
+      "definition": "rib-like longitudinal cell wall thickening",
+      "letter": "C",
+      "match_phrases": [
+        "Costa",
+        "costae"
+      ]
+    },
+    {
+      "term": "Dorsal",
+      "slug": "dorsal",
+      "definition": "back side, opposite of ventral",
+      "letter": "D",
+      "match_phrases": [
+        "Dorsal"
+      ]
+    },
+    {
+      "term": "Dorsiventral",
+      "slug": "dorsiventral",
+      "definition": "in diatoms: a cell with different curvature to its two sides connecting the apices see Fig. X",
+      "letter": "D",
+      "match_phrases": [
+        "Dorsiventral"
+      ]
+    },
+    {
+      "term": "Epitheca",
+      "slug": "epitheca",
+      "definition": "in dinoflagellates: the upper theca of the dinoflagellate cellulose shell, which together with the hypotheca makes a full cell covering.",
+      "letter": "E",
+      "match_phrases": [
+        "Epitheca"
+      ]
+    },
+    {
+      "term": "Eulittoral zone",
+      "slug": "eulittoral-zone",
+      "definition": "the lake region between maximum and minimum water level.",
+      "letter": "E",
+      "match_phrases": [
+        "Eulittoral zone"
+      ]
+    },
+    {
+      "term": "Eye spot",
+      "slug": "eye-spot",
+      "definition": "light-sensitive, typically red-colored (carotenoid pigments) spot or organelle in algal cells",
+      "letter": "E",
+      "match_phrases": [
+        "Eye spot"
+      ]
+    },
+    {
+      "term": "Fibula (plural: fibulae)",
+      "slug": "fibula",
+      "definition": "in diatoms: a bridge of silica between portions of the valve on either side of the raphe",
+      "letter": "F",
+      "match_phrases": [
+        "Fibula",
+        "fibulae"
+      ]
+    },
+    {
+      "term": "Flagellum (plural: flagella)",
+      "slug": "flagellum",
+      "definition": "long, thread-like organelle that projects out of the cell and functions in motility.",
+      "letter": "F",
+      "match_phrases": [
+        "Flagellum",
+        "flagella"
+      ]
+    },
+    {
+      "term": "Frustule",
+      "slug": "frustule",
+      "definition": "the silicaceous cell wall of a diatom cell",
+      "letter": "F",
+      "match_phrases": [
+        "Frustule"
+      ]
+    },
+    {
+      "term": "Fusiform",
+      "slug": "fusiform",
+      "definition": "elongated shape that is widest in the middle and tapering towards the ends. Spindle shape. Like an American football.",
+      "letter": "F",
+      "match_phrases": [
+        "Fusiform"
+      ]
+    },
+    {
+      "term": "Gamete",
+      "slug": "gamete",
+      "definition": "sex cell",
+      "letter": "G",
+      "match_phrases": [
+        "Gamete"
+      ]
+    },
+    {
+      "term": "Gametangium (plural: gametangia)",
+      "slug": "gametangium",
+      "definition": "a cell containing the gametes",
+      "letter": "G",
+      "match_phrases": [
+        "Gametangium",
+        "gametangia"
+      ]
+    },
+    {
+      "term": "Girdle",
+      "slug": "girdle",
+      "definition": "the region in a diatom frustule (shell) where the two valves overlap",
+      "letter": "G",
+      "match_phrases": [
+        "Girdle"
+      ]
+    },
+    {
+      "term": "Girdle view",
+      "slug": "girdle-view",
+      "definition": "in diatoms, the way the cell looks under the microscope when examined looking at the girdle of the cell (as opposed to the valve view, i.e. looking at the valve face of the cell)",
+      "letter": "G",
+      "match_phrases": [
+        "Girdle view"
+      ]
+    },
+    {
+      "term": "Gullet",
+      "slug": "gullet",
+      "definition": "a longitudinal depression in the upper part of a cryptophyte, chrysophyte or euglenophyte cell from which a flagellum or flagella emerge.",
+      "letter": "G",
+      "match_phrases": [
+        "Gullet"
+      ]
+    },
+    {
+      "term": "Haptonema",
+      "slug": "haptonema",
+      "definition": "a thread-like appendage between the 2 flagella of Haptophytes",
+      "letter": "H",
+      "match_phrases": [
+        "Haptonema"
+      ]
+    },
+    {
+      "term": "Heteropolar",
+      "slug": "heteropolar",
+      "definition": "having different poles.  In diatoms: with apices of differing size and/or shape",
+      "letter": "H",
+      "match_phrases": [
+        "Heteropolar"
+      ]
+    },
+    {
+      "term": "Hyaline",
+      "slug": "hyaline",
+      "definition": "colorless, translucent, clear",
+      "letter": "H",
+      "match_phrases": [
+        "Hyaline"
+      ]
+    },
+    {
+      "term": "Hypotheca",
+      "slug": "hypotheca",
+      "definition": "in dinoflagellates: the lower theca of the dinoflagellate cellulose shell, which together with the epitheca makes a full cell covering.",
+      "letter": "H",
+      "match_phrases": [
+        "Hypotheca"
+      ]
+    },
+    {
+      "term": "intecalary cell",
+      "slug": "intecalary-cell",
+      "definition": "located between two other cells in a filament",
+      "letter": "I",
+      "match_phrases": [
+        "intecalary cell"
+      ]
+    },
+    {
+      "term": "Isogamous (isogamy)",
+      "slug": "isogamous",
+      "definition": "sexual reproduction in which two types of gametes are morphologically indistinguishable, although functionally they are different.",
+      "letter": "I",
+      "match_phrases": [
+        "Isogamous (isogamy)"
+      ]
+    },
+    {
+      "term": "Isopolar",
+      "slug": "isopolar",
+      "definition": "having the same poles.  In diatoms: with apices of the same size and shape",
+      "letter": "I",
+      "match_phrases": [
+        "Isopolar"
+      ]
+    },
+    {
+      "term": "Isthmus",
+      "slug": "isthmus",
+      "definition": "in desmids: the narrow mid-region of the cell connecting the two semicells.  The nucleus is located in this mid-region.",
+      "letter": "I",
+      "match_phrases": [
+        "Isthmus"
+      ]
+    },
+    {
+      "term": "Lanceolate",
+      "slug": "lanceolate",
+      "definition": "see Fig. X (Cox 1996 P. 6)",
+      "letter": "L",
+      "match_phrases": [
+        "Lanceolate"
+      ]
+    },
+    {
+      "term": "Linear",
+      "slug": "linear",
+      "definition": "see Fig. X",
+      "letter": "L",
+      "match_phrases": [
+        "Linear"
+      ]
+    },
+    {
+      "term": "Linear-lanceolate",
+      "slug": "linear-lanceolate",
+      "definition": "see Fig. X",
+      "letter": "L",
+      "match_phrases": [
+        "Linear-lanceolate"
+      ]
+    },
+    {
+      "term": "Lorica",
+      "slug": "lorica",
+      "definition": "a rotective case containing a naked (non-walled) cell",
+      "letter": "L",
+      "match_phrases": [
+        "Lorica"
+      ]
+    },
+    {
+      "term": "Lunate",
+      "slug": "lunate",
+      "definition": "shape of a moon in its first quarter.  see Fig. X",
+      "letter": "L",
+      "match_phrases": [
+        "Lunate"
+      ]
+    },
+    {
+      "term": "Mantle",
+      "slug": "mantle",
+      "definition": "see valve mantle",
+      "letter": "M",
+      "match_phrases": [
+        "Mantle"
+      ]
+    },
+    {
+      "term": "Oogamy (oogamous)",
+      "slug": "oogamy",
+      "definition": "sexual reproduction in which there is a fusion of a smaller flagellated male gamete (e.g. spermatozoid) with a larger, nonflagellated female gamete (e.g. egg or oogonium)",
+      "letter": "O",
+      "match_phrases": [
+        "Oogamy (oogamous)"
+      ]
+    },
+    {
+      "term": "Oogonium (plural: oogonia)",
+      "slug": "oogonium",
+      "definition": "large, single-celled female gametanium that may produce one or more eggs.",
+      "letter": "O",
+      "match_phrases": [
+        "Oogonium",
+        "oogonia"
+      ]
+    },
+    {
+      "term": "Papilla",
+      "slug": "papilla",
+      "definition": "(plural: papillae) protuberance or swelling.",
+      "letter": "P",
+      "match_phrases": [
+        "Papilla"
+      ]
+    },
+    {
+      "term": "Paramylon",
+      "slug": "paramylon",
+      "definition": "a carbohydrate stored in euglenophytes in ‘paramylon bodies’.",
+      "letter": "P",
+      "match_phrases": [
+        "Paramylon"
+      ]
+    },
+    {
+      "term": "Parietal",
+      "slug": "parietal",
+      "definition": "positioned by the cell wall.",
+      "letter": "P",
+      "match_phrases": [
+        "Parietal"
+      ]
+    },
+    {
+      "term": "Pentangular",
+      "slug": "pentangular",
+      "definition": "having 5 sides.",
+      "letter": "P",
+      "match_phrases": [
+        "Pentangular"
+      ]
+    },
+    {
+      "term": "Pellicle",
+      "slug": "pellicle",
+      "definition": "in euglenoids, the outer proteinaceous cell surface layer (or peripheral protoplasmic layer), often in a spiral arrangement.",
+      "letter": "P",
+      "match_phrases": [
+        "Pellicle"
+      ]
+    },
+    {
+      "term": "Posterior",
+      "slug": "posterior",
+      "definition": "situated at the rear or back side, opposite of anterior.",
+      "letter": "P",
+      "match_phrases": [
+        "Posterior"
+      ]
+    },
+    {
+      "term": "Process",
+      "slug": "process",
+      "definition": "a part that naturally grows on or stick out on an organism.",
+      "letter": "P",
+      "match_phrases": [
+        "Process"
+      ]
+    },
+    {
+      "term": "Protoplast",
+      "slug": "protoplast",
+      "definition": "the living material inside a cell. In thecate dinoflagellates the protoplasts are membrane-bound and can emerge out of their thecae.",
+      "letter": "P",
+      "match_phrases": [
+        "Protoplast"
+      ]
+    },
+    {
+      "term": "Puncta (singular: punctum)",
+      "slug": "puncta",
+      "definition": "minute depressions on the diatom valve or the desmid cell wall.",
+      "letter": "P",
+      "match_phrases": [
+        "Puncta (singular: punctum)"
+      ]
+    },
+    {
+      "term": "Punctate",
+      "slug": "punctate",
+      "definition": "ornamented with dots (=puncta)",
+      "letter": "P",
+      "match_phrases": [
+        "Punctate"
+      ]
+    },
+    {
+      "term": "Pyrenoid",
+      "slug": "pyrenoid",
+      "definition": "organelle, often spherical, associated with the chloroplast containing the enzyme Rubisco",
+      "letter": "P",
+      "match_phrases": [
+        "Pyrenoid"
+      ]
+    },
+    {
+      "term": "Pyriform",
+      "slug": "pyriform",
+      "definition": "pear-shaped",
+      "letter": "P",
+      "match_phrases": [
+        "Pyriform"
+      ]
+    },
+    {
+      "term": "Radial symmetry",
+      "slug": "radial-symmetry",
+      "definition": "symmetry resembling that of a pie, where several cutting planes produce roughly identical pieces.  There is no left or right side, only top (dorsal) and bottom (ventral) sides.",
+      "letter": "R",
+      "match_phrases": [
+        "Radial symmetry"
+      ]
+    },
+    {
+      "term": "Raphe",
+      "slug": "raphe",
+      "definition": "in diatoms, a pair of slit-like structures in one or both valves associated with the gliding movement.",
+      "letter": "R",
+      "match_phrases": [
+        "Raphe"
+      ]
+    },
+    {
+      "term": "Reniform",
+      "slug": "reniform",
+      "definition": "kidney shaped",
+      "letter": "R",
+      "match_phrases": [
+        "Reniform"
+      ]
+    },
+    {
+      "term": "Retuse",
+      "slug": "retuse",
+      "definition": "having the end rounded and slightly indented; as, a retuse leaf",
+      "letter": "R",
+      "match_phrases": [
+        "Retuse"
+      ]
+    },
+    {
+      "term": "Rostrate",
+      "slug": "rostrate",
+      "definition": "see Fig. Y (Cox 1996 P 16).",
+      "letter": "R",
+      "match_phrases": [
+        "Rostrate"
+      ]
+    },
+    {
+      "term": "Scalariform conjugation",
+      "slug": "scalariform-conjugation",
+      "definition": "literally, ladder-like; in members of conjugatophycea a type of conjugation where the conjugation tube forms between two parallel filaments.",
+      "letter": "S",
+      "match_phrases": [
+        "Scalariform conjugation"
+      ]
+    },
+    {
+      "term": "Septum (plural: septa)",
+      "slug": "septum",
+      "definition": "in diatoms: cross-partitioning on a girdle element projecting into or dividing a cell into chambers.",
+      "letter": "S",
+      "match_phrases": [
+        "Septum",
+        "septa"
+      ]
+    },
+    {
+      "term": "Serrulate",
+      "slug": "serrulate",
+      "definition": "finely serrated.  Having a finely notched edge like the teeth of a saw.",
+      "letter": "S",
+      "match_phrases": [
+        "Serrulate"
+      ]
+    },
+    {
+      "term": "Sinus",
+      "slug": "sinus",
+      "definition": "in desmids: the median incision dividing the desmid cell into two semicells.",
+      "letter": "S",
+      "match_phrases": [
+        "Sinus"
+      ]
+    },
+    {
+      "term": "Spinule(s)",
+      "slug": "spinule",
+      "definition": "minute spine or thorn-like projection(s)",
+      "letter": "S",
+      "match_phrases": [
+        "Spinule(s)"
+      ]
+    },
+    {
+      "term": "Sternum",
+      "slug": "sternum",
+      "definition": "in diatoms: a hyaline region, without striae, running a long the long axis of a valve in araphid diatoms.",
+      "letter": "S",
+      "match_phrases": [
+        "Sternum"
+      ]
+    },
+    {
+      "term": "Stigma",
+      "slug": "stigma",
+      "definition": "see; eye-spot",
+      "letter": "S",
+      "match_phrases": [
+        "Stigma"
+      ]
+    },
+    {
+      "term": "Stria (plural: striae)",
+      "slug": "stria",
+      "definition": "stripe(s), line of pores on the diatom valve",
+      "letter": "S",
+      "match_phrases": [
+        "Stria",
+        "striae"
+      ]
+    },
+    {
+      "term": "Subcapitate",
+      "slug": "subcapitate",
+      "definition": "see Fig. Y",
+      "letter": "S",
+      "match_phrases": [
+        "Subcapitate"
+      ]
+    },
+    {
+      "term": "Subostrate",
+      "slug": "subostrate",
+      "definition": "see Fig. Y (Cox 1996 P 16).",
+      "letter": "S",
+      "match_phrases": [
+        "Subostrate"
+      ]
+    },
+    {
+      "term": "Sulcus",
+      "slug": "sulcus",
+      "definition": "in dinoflagellates: a longitudinal groove in the ventral face of the cell, in hypotheca/hypocone that may extend into the epitheca/epicone; hold the longitudinal whiplash flagellum.",
+      "letter": "S",
+      "match_phrases": [
+        "Sulcus"
+      ]
+    },
+    {
+      "term": "Suture",
+      "slug": "suture",
+      "definition": "Line or groove, especially in desmids, marking the limits between adjacent semicells. In filamentous zygnematales: groove around zygospore.  In armoured dinoflagellates: groove between the plates.",
+      "letter": "S",
+      "match_phrases": [
+        "Suture"
+      ]
+    },
+    {
+      "term": "Tapering",
+      "slug": "tapering",
+      "definition": "narrowing, ending in a point.",
+      "letter": "T",
+      "match_phrases": [
+        "Tapering"
+      ]
+    },
+    {
+      "term": "Theca (Plural: thecae)",
+      "slug": "theca",
+      "definition": "in dinoflagellates: a cell covering made of cellulose plates. Usually each cell has 2 thecae (an epi-theca and a hypo-theca), which together fully encase the cell.",
+      "letter": "T",
+      "match_phrases": [
+        "Theca",
+        "thecae"
+      ]
+    },
+    {
+      "term": "Thecate",
+      "slug": "thecate",
+      "definition": "in dinoflagellates: having thecae, being enclosed in a shell of cellulose plates which makes the cell look ‘armoured’.",
+      "letter": "T",
+      "match_phrases": [
+        "Thecate"
+      ]
+    },
+    {
+      "term": "Tychoplanktonic",
+      "slug": "tychoplanktonic",
+      "definition": "species that are predominantly planktonic but are capable of prolonged survival on or in sediments",
+      "letter": "T",
+      "match_phrases": [
+        "Tychoplanktonic"
+      ]
+    },
+    {
+      "term": "Tranapical axis",
+      "slug": "tranapical-axis",
+      "definition": "in diatoms: axis linking the mid-points of opposing valve margins, intersecting the the middle of the apical axis",
+      "letter": "T",
+      "match_phrases": [
+        "Tranapical axis"
+      ]
+    },
+    {
+      "term": "Transverse",
+      "slug": "transverse",
+      "definition": "passing through a hyperbola’s foci",
+      "letter": "T",
+      "match_phrases": [
+        "Transverse"
+      ]
+    },
+    {
+      "term": "Trichocyst",
+      "slug": "trichocyst",
+      "definition": "in dinoflagellates and raphidophytes, a proteinaceous ejectile organelle.",
+      "letter": "T",
+      "match_phrases": [
+        "Trichocyst"
+      ]
+    },
+    {
+      "term": "Truncate",
+      "slug": "truncate",
+      "definition": "cut off, trimmed",
+      "letter": "T",
+      "match_phrases": [
+        "Truncate"
+      ]
+    },
+    {
+      "term": "Undulate (adj)",
+      "slug": "undulate",
+      "definition": "with a wavy appearance, edge or marking",
+      "letter": "U",
+      "match_phrases": [
+        "Undulate (adj)"
+      ]
+    },
+    {
+      "term": "Undulation",
+      "slug": "undulation",
+      "definition": "a curving form or outline, especially one in a series such as a wave",
+      "letter": "U",
+      "match_phrases": [
+        "Undulation"
+      ]
+    },
+    {
+      "term": "Valve",
+      "slug": "valve",
+      "definition": "one of two halves of the diatom silicaceous shell (=frustule).  The two valves usually have the same shape, but since one fits into the other as in a petri dish, they are of different size.",
+      "letter": "V",
+      "match_phrases": [
+        "Valve"
+      ]
+    },
+    {
+      "term": "Valve face",
+      "slug": "valve-face",
+      "definition": "the round part of the valve",
+      "letter": "V",
+      "match_phrases": [
+        "Valve face"
+      ]
+    },
+    {
+      "term": "Valve mantle",
+      "slug": "valve-mantle",
+      "definition": "the marginal part of the valve, differentiated by slope and/or structure",
+      "letter": "V",
+      "match_phrases": [
+        "Valve mantle"
+      ]
+    },
+    {
+      "term": "Valve margin",
+      "slug": "valve-margin",
+      "definition": "the edge of the valve where the cingulum begins",
+      "letter": "V",
+      "match_phrases": [
+        "Valve margin"
+      ]
+    },
+    {
+      "term": "Valve view",
+      "slug": "valve-view",
+      "definition": "in diatoms, the way the cell looks under the microscope when examined looking at the valve face of the cell (as opposed to the girdle view, i.e. looking at the side face of the cell)",
+      "letter": "V",
+      "match_phrases": [
+        "Valve view"
+      ]
+    },
+    {
+      "term": "Ventral",
+      "slug": "ventral",
+      "definition": "front side, opposite of dorsal",
+      "letter": "V",
+      "match_phrases": [
+        "Ventral"
+      ]
+    },
+    {
+      "term": "Verruca (Plural: verruacae)",
+      "slug": "verruca",
+      "definition": "wart(s) or spiny projection(s)",
+      "letter": "V",
+      "match_phrases": [
+        "Verruca",
+        "verruacae"
+      ]
+    },
+    {
+      "term": "Verrucose",
+      "slug": "verrucose",
+      "definition": "covered with warty or spiny projections",
+      "letter": "V",
+      "match_phrases": [
+        "Verrucose"
+      ]
+    },
+    {
+      "term": "Zoospore",
+      "slug": "zoospore",
+      "definition": "motile asexual spore",
+      "letter": "Z",
+      "match_phrases": [
+        "Zoospore"
+      ]
+    },
+    {
+      "term": "Zoosporangium",
+      "slug": "zoosporangium",
+      "definition": "cell producing zoospores",
+      "letter": "Z",
+      "match_phrases": [
+        "Zoosporangium"
+      ]
+    },
+    {
+      "term": "Zygospore",
+      "slug": "zygospore",
+      "definition": "thick-walled resting spore formed sexually by the fusion of two gametes",
+      "letter": "Z",
+      "match_phrases": [
+        "Zygospore"
+      ]
+    }
+  ],
+  "source_file": "1-Glossary.doc"
+}

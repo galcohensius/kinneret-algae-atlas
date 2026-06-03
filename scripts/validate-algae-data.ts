@@ -1,8 +1,11 @@
 import { validateAlgaeDataFile } from "../lib/algae";
+import { validateGlossaryFile } from "../lib/glossary-server";
 
 async function main() {
-  const result = await validateAlgaeDataFile();
-  console.log(`Validated algae data file successfully (${result.count} records).`);
+  const algae = await validateAlgaeDataFile();
+  const glossary = await validateGlossaryFile();
+  console.log(`Validated algae data file successfully (${algae.count} records).`);
+  console.log(`Validated glossary file successfully (${glossary.count} terms).`);
 }
 
 main().catch((error: unknown) => {

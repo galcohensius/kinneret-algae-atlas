@@ -20,6 +20,10 @@ export default async function SupplementsIndexPage() {
 
       <header className="algae-detail-header">
         <h1>Supplementary Material</h1>
+        <p className="glossary-intro muted">
+          Morphology and ecology terms used across the atlas are defined in the{" "}
+          <Link href="/glossary/">glossary</Link>.
+        </p>
       </header>
 
       <div className="home-below-hero" style={{ padding: "0 1rem 1rem" }}>
