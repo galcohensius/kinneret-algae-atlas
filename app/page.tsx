@@ -44,8 +44,8 @@ export default function HomePage() {
       <div className="home-below-hero">
         <AlgaeIndexSectionShell />
         <nav className="home-aux-links" aria-label="Reference material">
-          <Link href="/glossary/">Glossary →</Link>
-          <Link href="/supplements/">Supplementary Material →</Link>
+          <Link href="/glossary/">Glossary</Link>
+          <Link href="/supplements/">Supplementary Material</Link>
         </nav>
       </div>
     </main>
