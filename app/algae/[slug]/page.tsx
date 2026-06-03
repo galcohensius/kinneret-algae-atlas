@@ -7,6 +7,7 @@ import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import GlossaryAwarePlainText from "../../components/GlossaryAwarePlainText";
 import GlossaryAwareRichText from "../../components/GlossaryAwareRichText";
 import GlossaryAwareText from "../../components/GlossaryAwareText";
+import PreviousNameHeader from "../../components/PreviousNameHeader";
 import { RichText } from "../../components/RichText";
 import type { RichSegment } from "../../../lib/algae-types";
 import {
@@ -158,7 +159,6 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   const extraFigureCaptions = galleryCaptions;
   const hasQuickFacts = QUICK_FACT_BODY_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
   const previousNamePlain = sections.previous_name_used?.trim() ?? "";
-  const previousNameRich = record.sectionsRich?.previous_name_used ?? [];
 
   return (
     <main className="algae-detail">
@@ -177,16 +177,10 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           ) : null}
         </h1>
         {previousNamePlain ? (
-          <p className="algae-previous-name-line">
-            <span className="algae-previous-name-label">{toDisplayLabel("previous_name_used")}: </span>
-            <span className="algae-previous-name-value">
-              {previousNameRich.length > 0 ? (
-                <GlossaryAwareRichText segments={previousNameRich} />
-              ) : (
-                <GlossaryAwareText text={previousNamePlain} />
-              )}
-            </span>
-          </p>
+          <PreviousNameHeader
+            label={toDisplayLabel("previous_name_used")}
+            plain={previousNamePlain}
+          />
         ) : null}
       </header>
 
