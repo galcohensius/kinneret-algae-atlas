@@ -477,12 +477,20 @@ a:hover {
   margin: 0 0 0.65rem;
   line-height: 1.45;
   color: var(--text-secondary);
-  font-size: 1.328125rem;
+  font-size: 1rem;
 }
 
 .algae-previous-name-label {
   font-weight: 600;
   color: var(--text-muted);
+}
+
+/* The previous (often better-known) name should read at the title's size. */
+.algae-previous-name-value {
+  font-size: 2.3125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .algae-profile {

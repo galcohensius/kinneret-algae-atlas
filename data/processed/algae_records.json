@@ -98,6 +98,7 @@
       "cell_diameter_d": "7.6 – 12.3 m, median: 9.7 m (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.",
       "cell_length_l": "",
       "biovolume_per_cell": "230 - 1000m3, median: 470 m3.",
+      "filament_length": "",
       "biovolume_equation": "Sphere, V,m3 = 4/3  (D/2)3. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.",
       "morphological_features": "Gymnodinium is a classic naked dinoflagellate, the genus includes both photosynthetic and heterotrophic species. The cingulum bisects the cell into two halves, or cones, of somewhat different shapes, the lower or hypocone is a half-sphere, the top or epicone is a bit larger and more conical. With those two cones placed one on top of the other, the cell often looks like a mushroom (Plate 1). Gymnodinium has two unequal flagella, the longitudinal whiplash flagellum extending from the bottom side of the mushroom is seen in Plate 1, the second, transverse flagellum is hidden in the cingulum.",
       "distinctive_attributes": "",
@@ -339,7 +340,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -409,6 +410,7 @@
       "cell_diameter_d": "30-50 m wide",
       "cell_length_l": "165-260 m long (literature values)",
       "biovolume_per_cell": "70,000 m3 (literature value, we do not routinely measure this species)",
+      "filament_length": "",
       "biovolume_equation": "",
       "morphological_features": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. Cells of C. furcoides are slender, longer than wide, strongly dorsiventrally flattened. Epitheca gradually tapers into a long apical horn without shoulders. Hypotheca broad and short, drawn out into 2 (occasionally 1 or 3) posterior horns of different lengths. Nucleus prominent in epicone. Cysts are smooth-walled, triangular, with one narrow horn extending from each corner. Ceratium furcoides is narrower and slenderer than the more common C. hirundinella.",
       "distinctive_attributes": "",
@@ -674,7 +676,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -816,6 +818,7 @@
       "cell_diameter_d": "45-63 m (literature values)",
       "cell_length_l": "155-200 m (literature values)",
       "biovolume_per_cell": "73,000 m3 (literature value, we do not routinely measure this species)",
+      "filament_length": "",
       "biovolume_equation": "",
       "morphological_features": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions, making the cell longer than wide (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. In C. hirundinella, all or part of the horns are usually colorless, the gold-pigmented protoplast (living part of the cell) is concentrated in the cell’s center. Small red bodies are often present. The helmet shaped epitheca narrows from just above the cingulum gradually forming a long horn. The cingulum is slightly narrow. The body of the hypotheca is broad and short. It is divided into a varying number of posterior horns, usually 3, sometimes only 1. The central or median horn formed by the antapical plates is the longest. Chloroplasts are numerous and oval shaped. Occasionally, the longitudinal flagellum can be observed microscopically (Plate 1a). Resting cysts of C. hirundinella are triangular with one horn on each end (Plate 1c). Several morphotypes of this species occur in Lake Kinneret, the most common is var. robustum Bachman, shaped like the Eifel Tower (Plate 1a,b). Other forms found in L Kinneret are forma gracile, type scoticum and the variety furcoides, now allocated to a separate species, C. furcoides.",
       "distinctive_attributes": "Too large to be grazed by Kinneret zooplankton. Nutrirtion is autotrophic and holozoic by means of pseudopodia.",
@@ -1188,7 +1191,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -1330,6 +1333,7 @@
       "cell_diameter_d": "34 - 47 m, median: 38 m (N=92)",
       "cell_length_l": "17 – 23 m, median: 19 m (N=92)",
       "biovolume_per_cell": "15,000 – 40,000m3, median: 22,000 m3.",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = (/12) *D2 *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999).",
       "morphological_features": "Diplopsalis acuta is the only known heterotrophic (non-pigmented) thecate dinoflagellate in the lake’s pelagic waters. Its shape is distinct, of a half sphere with a Chinese hat on top of it (Plate 1). Another feature differentiating it from other Kinneret dinoflagellates is that its diameter at the cingulum is greater than its height. Its thecae are thick and distinct. Chloroplasts and stigma are lacking (heterotrophic). The protoplast is pink. The hypotheca is broadly rounded and slightly flattened dorsiventrally. Plates are not sculptured and have no reticulations.",
       "distinctive_attributes": "the only non-pigmented thecate dinoflagellate of Lake Kinneret.",
@@ -1571,7 +1575,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -1713,6 +1717,7 @@
       "cell_diameter_d": "29 – 40.5 m, median: 34 m (N=580)",
       "cell_length_l": "32 – 44 m, median: 39 m (N=262)",
       "biovolume_per_cell": "14,000 – 40,500m3, median: 21,300 m3. Larger cell size in winter, smaller in summer (see Fig. 2b).",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = 0.9405 D2.8596 (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).",
       "morphological_features": "Peridiniopsis borgei is the largest of several species of Peridiniopsis, Durinskia, Glechodinium, Naiadinium, and Parvodinium occurring in the lake. Its shape is almost a sphere (Plate 1), with the cingulum, or girdle, markedly transversing it in the middle. The epitheca is conical with a mouth-like tip at the apex (highest point), the hypotheca is broadly rounded. Sometimes the hypotheca has an extension at its bottom end, like a small “foot”. Chloroplasts are numerous and ribbon shaped. Diagnostic features seen with electron microscopy: the sulcus slightly extends into the epitheca, it widens in the hypotheca, it does not reach the antapex (Plate 1 d,e). Sulcal margins sometimes have raised edges.",
       "distinctive_attributes": "mixotroph, heavily grazed by zooplankton, capable of using bicarbonate for photosynthesis.",
@@ -2072,7 +2077,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -2333,6 +2338,7 @@
       "cell_diameter_d": "varies significantly over an annual cycle 21 - 30 m, median: 25.6 m (N=>2000)",
       "cell_length_l": "27 – 36 m, median: 31 m (N=700)",
       "biovolume_per_cell": "6300 - 17500m3, median: 10500 m3.",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = 2.099 D2.623",
       "morphological_features": "Cells shape is of half sphere (hypotheca) + half cone (epitheca) of about the same diameter above it, with the cingulum traversing the cell where they connect (Plate 1). The apex of the epitheca has a “mouth” shape. Two to six spines extend from the hypotheca. The sulcus barely extends into the epitheca, it widens along the hypotheca where it does not reach the antapex. Red bodies often seen (Plate 1a-c). Resting cysts (not shown) are oval with a thick cell wall. Parvodinium cunningtonii is similar to P. elpatiewskyi in size and shape, and they tend to co-occur. See here our tips for distinguishing between these two species under the light microscope.",
       "distinctive_attributes": "Co-occurs with Parvodinium elpatiewskyi",
@@ -2830,7 +2836,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -2945,6 +2951,7 @@
       "cell_diameter_d": "(D): 13 - 18 m, median: 15.5 m (N=450)",
       "cell_length_l": "",
       "biovolume_per_cell": "17500 - 4300m3, median: 2900 m3.",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = (4/3)  D3 (sphere)",
       "morphological_features": "This is a smaller variety of the species named today Parvodinium cunningtonii, with cell shape that is close to a sphere (Plate 1). It is common in the lake. It was named and counted as Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard. Today, the variety is considered a species of its own, Peridiniopsis quinquecuspidata (Hansen and Flaim 2007) – but the organism they describe looks different to what we named Peridiniopsis cunningtonii var quinquecuspidata. As a result, we are uncertain about its correct taxonomic allocation and provide here no further data.",
       "distinctive_attributes": "",
@@ -3144,7 +3151,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -3434,6 +3441,7 @@
       "cell_diameter_d": "21 - 30 m, median: 26 m (N=>2000)",
       "cell_length_l": "28 – 37 m, median: 32.5 m (N=700)",
       "biovolume_per_cell": "6600 - 17500m3, median: 11500 m3.",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = 1.2514 D2.793 (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).",
       "morphological_features": "Cells are pentangular (having 5 sides) or ovoid in shape and slightly flattened dorsi-ventrally. The epitheca is conical, with a “mouth” shaped apex (uppermost end) and is larger than the hypotheca, which is rounded but excavated on the antapex (base, opposite to the apex). The cingulum encircles the cell; the sulcus widens along the hypotheca. Several spines or teeth-like projections are present on the hypotheca, typically some of them are lined up as in a brush (Plate 1). The chloroplasts are numerous and discoid. A red body is occasionally seen (Plate 1). SEM shows that the plates are concave and ornamented by rows of fine punctae, and that the sulcus extends all the way to the concave base of the hypotheca. The resting cysts (not shown) are somewhat oval with a thick cell wall, 36 m x 28 m. Parvodinium elpatiewskyi is similar to P. cunningtonii in size and shape, and they tend to co-occur. See here our tips for distinguishing between these two species under the light microscope.",
       "distinctive_attributes": "Co-occurs with P. cunningtonii",
@@ -3881,7 +3889,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -4024,6 +4032,7 @@
       "cell_diameter_d": "17 - 26 m, median: 22 m (N=700)",
       "cell_length_l": "",
       "biovolume_per_cell": "2600 - 9500m3, median: 5300 m3.",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = (4/3)  (D/2)3. (sphere equation)",
       "morphological_features": "Cells are ovoid or spherical and slightly flattened dorsiventrally. The epitheca and hypotheca are both half-sphere shaped, making together a sphere. The cingulum surrounds the cell at its middle (Plates 1a,b, 2). The sulcus is wide and does not reach the antapex. Chloroplasts are numerous, disc or club shaped and parietal. A stigma is present. Vegetative cells are often embedded in mucilage. Thecae are barely seen on live cells therefore it was initially considered to be Glenodinium, a naked dinoflagellate, but the theca is evident after the cell sheds it (Plate 1c, 4).",
       "distinctive_attributes": "",
@@ -4299,7 +4308,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -4441,6 +4450,7 @@
       "cell_diameter_d": "17 - 24 m, median: 21 m (N=160)",
       "cell_length_l": "20 – 27.5 m, median: 23 m (N=160)",
       "biovolume_per_cell": "3050 - 8200m3, median: 5450 m3.",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = (4/3) L (D/2)2 (prolate sphaeroid)",
       "morphological_features": "Cells are pentangular (having 5 sides) and flattened dorsi-ventrally (Plates 1, 2, 3). The epitheca is conical and apiculate; the hypotheca is excavated at the antapex (its bottom side, Plates 2,3), both theca are equal in size. The wide, deep cingulum encircles the cell, the sulcus is broad, deep and reaches the antapex. It produces a marked concavity in the antapical profile. Chloroplasts are present. The protoplasm may have a dark granular appearance, such that it is grayish in color. Numerous highly refractive granules may or may not be present in the cell periphery (Plates 1, 2).",
       "distinctive_attributes": "",
@@ -4676,7 +4686,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -4828,6 +4838,7 @@
       "cell_diameter_d": "29-36 m, median: 32 m (N=32)",
       "cell_length_l": "32-42 m, median: 38 m (N=32)",
       "biovolume_per_cell": "7,000-14,000m3, median: 10,000 m3",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = ((4/3) L (D/2)2)/2 (half the volume of a prolate sphaeroid)",
       "morphological_features": "A medium-sized thecate dinoflagellate. The flagellated cells are oval, with the ventral side pressed in towards the other side as if it received a punch. As a result, the cell perimeter is convex when viewed from one side but concave when viewed from another (Plate 1). This concave/convex form is easily seen on a live, swimming cell: as it turns about its longitudinal axis its profile changes dramatically (Plate 1e). This feature is the most obvious for identifying this species. An additional diagnostic feature is the smooth and rounded cell shape (Plate 1). The epitheca is helmet-shaped and pointed and is approximately the same size as the broadly rounded hypotheca. The chloroplasts are small and discoid or ribbon shaped. A stigma (eyespot) may be present. Resting cysts are spherical with their thick cell wall covered by dense hairlike projections (not shown).",
       "distinctive_attributes": "convex-concave shape, seen when it circles around itself while swimming",
@@ -5094,7 +5105,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -5353,6 +5364,7 @@
       "cell_diameter_d": "44 - 58 m, median: 50 m (N=1230)",
       "cell_length_l": "47 – 60 m, median: 52 m (N=423)",
       "biovolume_per_cell": "44,300 – 99,400m3, median: 67,000 m3.",
+      "filament_length": "",
       "biovolume_equation": "V,m3 = 1.31 D2.7835. Regression eqn. based on >400 measurements of both D and L with V computed for a prolate sphaeroid.",
       "morphological_features": "This is the second largest dinoflagellate in Lake Kinneret (after Ceratium hirundinella). Under the light microscope, those large, spherical single cells are distinct by having thick, colorless thecae (shell) enveloping the strongly brown-colored living cell or protoplast (Plate 1a,b). The epitheca and hypotheca, are conical and of similar size. The cingulum is wide, deep, and displaced about one cingular width (Plate 2). The sulcus widens slightly and reaches the antapex. The plates are reticulated or rarely rugose and irregularly arranged. Chloroplasts are numerous and parietal (along cell walls). See Hansen and Flaim (2007) for a more detailed taxonomic description. Under unfavorable conditions the cells shed their thecae, and a naked protoplast emerges which will later excrete new thecae. The thecae are also shed before cell division (Plate 1c). After division, each of the two daughter cells excretes its own new thecae. Mitotic cell division is “phased”: it occurs only at night, between midnight and 4 am (Serruya and Pollingher 1976). Sexual reproduction was never observed in Lake Kinneret, possibly because it also occurs at night. Peridinium gatunense resting cysts are spherical, with a thick and distinct cell wall, and two distinct red spots, or eyespots (Plate 3). Throughout the bloom development period, a small proportion of the cells (~ 1 %, Alster et al. 2006) change their morphology to become resting cysts, which sink to the sediments to remain there as an inoculum for future growth. Vegetative cells emerging from resting cysts keep the two red spots. After cell division each daughter cell keeps one red spot. With later divisions those red spots get diluted. Presence of those red spots are thus an indication of the origin of the cell from a resting cyst.",
       "distinctive_attributes": "mixotroph. Too large to be grazed by zooplankton. Major food source for Cichlid fishes. Performs daily vertical migrations. When it blooms in spring it constitutes > 95% of total phytoplankton biomass. Its bloom can be seen as patches of coffee brown colored water. Peridinium gatunense is certainly the most studied organism in Lake Kinneret, with hundreds of publications addressing it. For a review article see Zohary et al. 2014.",
@@ -6816,7 +6828,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates workfile for Gal 2026-04-30.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -6830,7 +6842,7 @@
     ],
     "image_captions": [
       "",
-      "Plate 1. Mat-forming colony of Baniga atropurpurea with young filaments embedded in firm gelatinous matrix.",
+      "Plate 1. Mat-forming colony of Baniga atropurpurea with young, uniseriate filaments embedded in firm gelatinous matrix.",
       "Plate 2. A young uniseriate filamenat of Baniga atropurpurea showing box shape of individual cells.",
       "Plate 3. A mature, multiseriate filamenat of Baniga atropurpurea made of cells of different shapes and sizes.",
       "Plate 4. Close up on a uniseriate filament of Baniga atropurpurea showing development of colorless, rizoid-like structure from an intecalary cell."
@@ -6859,7 +6871,7 @@
           "bold": false
         },
         {
-          "text": " with young filaments embedded in firm gelatinous matrix.",
+          "text": " with young, uniseriate filaments embedded in firm gelatinous matrix.",
           "italic": false,
           "bold": false
         }
@@ -6975,14 +6987,15 @@
       "organization": "filamentous (initially uniseriate, later multiseriate)",
       "color": "dark red-brown",
       "cell_shape": "cylinder",
-      "cell_diameter_d": "~ 20 mm (but highly variable) Filament length: Several centimeters",
+      "cell_diameter_d": "~ 20 mm (but highly variable)",
       "cell_length_l": "",
       "biovolume_per_cell": "",
+      "filament_length": "Several centimeters",
       "biovolume_equation": "",
-      "morphological_features": "Bangia colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from intercalary cells, they are formed as a step in the reproductive cycle (Gargiulo et al. 2001).",
+      "morphological_features": "Bangia colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with a prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from intercalary cells, they are formed as a step in the reproductive cycle (Gargiulo et al. 2001).",
       "distinctive_attributes": "filaments form dark fur-like fleecy mats at air-water interface in shallow waters (few cm) close to the waterline. The species is found in both marine and fresh waters.",
-      "ecology": "Seasonally occurring as a fleecy mat in the eulittoral zone of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it.",
-      "physiological_features": "Known as being a highly adaptive species due to its stress tolerance. Can survive desiccation and extreme solar radiation (in the supra-littoral zone).",
+      "ecology": "Seasonally occurring as a fleecy mat in the eulittoral zone of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it. Most Rhodophytes are marine. Only ~ 3% of the ca. 5000 species of Rhodophytes occur in freshwaters, Bangia atropurpurea is one of them.",
+      "physiological_features": "Known as being a highly adaptive species due to its stress tolerance. The same species is found in both marine and freshwater environments. Can survive desiccation and extreme solar radiation (in the supra-littoral zone). The species is an indicator of fresh, clear water. Fuarther reading: Gargiulo GM, Genovese G, Morabito M, Culoso F, De Masi F. 2001. Sexual and asexual reproduction in a freshwater population of Bangia atropurpurea (Bangiales, Rhodophyta) from eastern Sicily (Italy). Phycologia, 40, 88–96.",
       "environmental_conditions": "",
       "further_reading": ""
     },
@@ -7038,27 +7051,14 @@
       ],
       "cell_diameter_d": [
         {
-          "text": "~ 20 mm (but highly variable) ",
+          "text": "~ 20 mm (but highly variable)",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "filament_length": [
         {
-          "text": "Filament",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "length:",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " Several centimeters",
+          "text": "Several centimeters",
           "italic": false,
           "bold": false
         }
@@ -7070,7 +7070,7 @@
           "bold": false
         },
         {
-          "text": " colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from ",
+          "text": " colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with a prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from ",
           "italic": false,
           "bold": false
         },
@@ -7114,14 +7114,94 @@
           "bold": true
         },
         {
-          "text": " of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it.",
+          "text": " of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it. Most Rhodophytes are marine. Only ~ 3% of the ca. 5000 species of Rhodophytes occur in freshwaters, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Bangia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "atropurpurea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is one of them.",
           "italic": false,
           "bold": false
         }
       ],
       "physiological_features": [
         {
-          "text": "Known as being a highly adaptive species due to its stress tolerance. Can survive desiccation and extreme solar radiation (in the supra-littoral zone).",
+          "text": "Known as being a highly adaptive species due to its stress tolerance. The same species is found in both marine and freshwater environments. Can survive desiccation and extreme solar radiation (in the supra-littoral zone). The species is an indicator of fresh, clear water. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Fuarther",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "reading:",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " Gargiulo GM, Genovese G, Morabito M, Culoso F, De Masi F. 2001. Sexual and asexual reproduction in a freshwater population of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Bangia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "atropurpurea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Bangiales, Rhodophyta) from eastern Sicily (Italy). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Phycologia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "40",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", 88–96.",
           "italic": false,
           "bold": false
         }
@@ -7129,7 +7209,7 @@
     },
     "metadata": {
       "source_file": "Bangia atropurpurea.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -7148,12 +7228,12 @@
     "image_captions": [
       "",
       "Plate 1. Cryptomonas ovata from L. Kinneret showing typical ovoid shape, dark brown color and two equal-length flagella emerging out of a gullet system that reaches the center of the cell or beyond. In lateral view the cells are elliptical, elongated, ovoid, often slightly curved. The furrow-gullet system is straight or slightly curved. Photographs by Alla Alster. Drawing from B-Beres 2024.",
-      "Plate 2. Cryptomonas curvata Ehrenberg from L. Kinneret. This species appears in two morphs: (a) S-shaped in lateral view, or “campilomorph”; (b) more symmetrical oval-to ellipsoid form, or “cryptomorph”. In both, |flagella are subequal. Drawing from B-Beres 2024.",
-      "Plate 3. Cryptomonas marssonii Skuja from L. Kinneret showing typical tapering of cell towards the posterior end and being lightly curved. With 2 subequal flagella. The furrow-gullet system is obliqueextends to about half of the cell. With 2 olive-gree or olive-brown chloroplasts. Drawing from B-Beres 2024.",
+      "Plate 2. Cryptomonas curvata Ehrenberg from L. Kinneret. This species appears in two morphs: (a) S-shaped in lateral view, or “campilomorph”; (b) more symmetrical oval-to ellipsoid form, or “cryptomorph”. In both, the flagella are subequal. Drawing from B-Beres 2024.",
+      "Plate 3. Cryptomonas marssonii Skuja showing typical tapering of cell towards the posterior end and being lightly curved. With 2 subequal flagella. The furrow-gullet system is oblique, it extends to about half of the cell. With 2 olive-green or olive-brown chloroplasts. Drawing from B-Beres 2024.",
       "Figure 1. Time series of Cryptomonas spp. abundance (cells mL-1), Lake Kinneret, 1978-2020.",
       "Figure 2. The annual pattern of water column cell abundance of Cryptomonas spp. in Lake Kinneret, based on data for 1978-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
       "Figure 3. Cryptomonas spp. abundance vs. that of Peridinium gatunense, based on data for 1970-2020. Higest abundance of Cryptomonas spp occurrs when Peridinium gatunense abundance is lowest, and visa-versa.",
-      "Figure 4. Crytomonas cell size (as volume, mm3): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respecitively, showing weak but significant correlation of cell size with each of those variables.",
+      "Figure 4. Crytomonas cell size (as volume, mm3): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respectively, showing weak but significant correlation of cell size with each of those variables.",
       "Figure 5. Crytomonas spp. abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling."
     ],
     "image_captions_rich": [
@@ -7207,7 +7287,7 @@
           "bold": false
         },
         {
-          "text": " Ehrenberg from L. Kinneret. This species appears in two morphs: (a) S-shaped in lateral view, or “campilomorph”; (b) more symmetrical oval-to ellipsoid form, or “cryptomorph”. In both, |flagella are subequal. Drawing from B-Beres 2024.",
+          "text": " Ehrenberg from L. Kinneret. This species appears in two morphs: (a) S-shaped in lateral view, or “campilomorph”; (b) more symmetrical oval-to ellipsoid form, or “cryptomorph”. In both, the flagella are subequal. Drawing from B-Beres 2024.",
           "italic": false,
           "bold": false
         }
@@ -7234,7 +7314,7 @@
           "bold": false
         },
         {
-          "text": " Skuja from L. Kinneret showing typical tapering of cell towards the posterior end and being lightly curved. With 2 subequal flagella. The furrow-gullet system is obliqueextends to about half of the cell. With 2 olive-gree or olive-brown chloroplasts. Drawing from B-Beres 2024.",
+          "text": " Skuja showing typical tapering of cell towards the posterior end and being lightly curved. With 2 subequal flagella. The furrow-gullet system is oblique, it extends to about half of the cell. With 2 olive-green or olive-brown chloroplasts. Drawing from B-Beres 2024.",
           "italic": false,
           "bold": false
         }
@@ -7352,7 +7432,7 @@
           "bold": false
         },
         {
-          "text": " cell size (as volume, mm3): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respecitively, showing weak but significant correlation of cell size with each of those variables.",
+          "text": " cell size (as volume, mm3): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respectively, showing weak but significant correlation of cell size with each of those variables.",
           "italic": false,
           "bold": false
         }
@@ -7395,11 +7475,12 @@
       "color": "dark brown",
       "cell_shape": "oval",
       "cell_diameter_d": "6 – 17 m, median: 9.2 m (N=2400).",
-      "cell_length_l": "10 – 30 m, median: 14 m (N=424). Cell biovolum: 400 – 2000 m3, median: 700 m3. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
-      "biovolume_per_cell": "",
+      "cell_length_l": "10 – 30 m, median: 14 m (N=424).",
+      "biovolume_per_cell": "400 – 2000 m3, median: 700 m3. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
+      "filament_length": "",
       "biovolume_equation": "V=0.7076D3.0772 (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid).",
       "morphological_features": "Relatively large free-swimming cells, dark brown in color, shaped as an elongated monad with two equal or subequal length flagella extending out of a gullet (longitudinal groove on the cell surface) in the upper part of the cell. The bottom end is rounded. With 1 or 2 chloroplasts per cell located at the cell periphery, phycoerythrin as the principal accessory pigment (giving the deep brown color), and a single large and central pyrenoid. Cryptomonas is differentiated from Plagioaselmis in being the larger cryptophyte found in Lake Kinneret. Three species of Cryptomonas occur in the lake, including C. ovata, C. marssonii and C. curvata (Plates 1-3). Dues to the similar size and limited diagnostic characters, for the routine monitoring the 3 species have all been counted under a single code for the genus Cryptomonas, and the data presented in figures 1-4 are for the genus.",
-      "distinctive_attributes": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria), its chloroplast fluorecses orange when observed under epifluorescent microscope. Always present in the water column, with peak biomass in winter and another peak in summer. Distinctively larger size than Plagioselmis. Probably mixotrophic.",
+      "distinctive_attributes": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria), its chloroplast fluorecses orange when observed under epifluorescent microscope. Always present in the water column of Lake Kinneret, with peak biomass in winter and another peak in summer. Distinctively larger size than Plagioselmis. Probably mixotrophic.",
       "ecology": "Cryptopmonas spp. are always present in the water column (Fig. 1), with higher abundances in winter (Dec to Feb) but also in summer (Jul - Sep) and lowest in April-May, at the time of the Peridinium bloom (Fig. 2). It is possible that the two seasonal abundance peaks are due to two different Cryptopmonas species. Abundance is usually < 250 cells/mL (Fig. 2). A noteworthy exception occurred during the cold winter of 1992, when the Peridinium bloom developed later than usual and Cryptomonas abundance in February exceeded 1000/mL (Fig. 1). Overall, when Peridinium gatunense is abundant in the water, Cryptomonas spp. abundance is low, and visa-versa (Fig. 3). Cell size of Cryptomonas varies seasonally, with larger cell volume in winter (Fig. 4a).",
       "physiological_features": "",
       "environmental_conditions": "Kinneret Crytomonas is resistant to higher chloride concentrations and is present at all ambient water temperatures (Fig. 5). High abundances of Cryptomonas spp. are associated with: mixing depth (Zmix) > 35 m typical of the winter time when the water column is fully mixed; euphotic zone depth range of 5-12 m (not shown); higher alkalinities; lower organic N (Fig. 5). Cell size tends to deline with water temperature and increase with Alkalinity and Ca concentration (Fig. 4 b,c,d).",
@@ -7464,27 +7545,14 @@
       ],
       "cell_length_l": [
         {
-          "text": "10 – 30 m, median: 14 m (N=424). ",
+          "text": "10 – 30 m, median: 14 m (N=424).",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "biovolume_per_cell": [
         {
-          "text": "Cell",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "biovolum",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": ": 400 – 2000 m3, median: 700 m3. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
+          "text": "400 – 2000 m3, median: 700 m3. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
           "italic": false,
           "bold": false
         }
@@ -7625,7 +7693,7 @@
       ],
       "distinctive_attributes": [
         {
-          "text": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria), its chloroplast fluorecses orange when observed under epifluorescent microscope. Always present in the water column, with peak biomass in winter and another peak in summer. Distinctively larger size than ",
+          "text": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria), its chloroplast fluorecses orange when observed under epifluorescent microscope. Always present in the water column of Lake Kinneret, with peak biomass in winter and another peak in summer. Distinctively larger size than ",
           "italic": false,
           "bold": false
         },
@@ -7799,7 +7867,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
     }
   },
   {
@@ -7813,7 +7881,7 @@
     ],
     "image_captions": [
       "",
-      "Plate 1. Plagioselmis nannoplanctonica (previously named Rhodomonas minuta va. nannooplanctonica). Showing typical drop shape and unequal flagella, emerging from a groove at the top, rounded part of the cell. Left drawing shows also the periferal chloroplast (black), central pyrenoid surrounded by a thick starch sheath of two hemispheral halves. Right drawing shows details seen by scanning electron microscopy. Drawing taken from Novarino (2003).",
+      "Plate 1. Plagioselmis nannoplanctonica (previously named Rhodomonas minuta va. nannooplanctonica). Showing typical drop shape, and unequal flagella emerging from a groove at the top, rounded part of the cell. Left drawing shows also the periferal chloroplast (black), central pyrenoid surrounded by a thick starch sheath of two hemispheral halves. Right drawing shows details of cell surface seen by scanning electron microscopy. Drawing taken from Novarino (2002).",
       "Figure 1. Figure 1. Time series of Plagioselmis nannoplanctonica abundance (cells mL-1), Lake Kinneret, 1970-2020.",
       "Figure 2. The annual pattern of water column cell abundance of Plagioselmis nannoplanctonica in Lake Kinneret, based on data for 1970-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
       "Figure 3. Plagioselmis nannoplanctonica abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling."
@@ -7872,7 +7940,7 @@
           "bold": false
         },
         {
-          "text": "). Showing typical drop shape and unequal flagella, emerging from a groove at the top, rounded part of the cell. Left drawing shows also the periferal chloroplast (black), central pyrenoid surrounded by a thick starch sheath of two hemispheral halves. Right drawing shows details seen by scanning electron microscopy. Drawing taken from Novarino (2003).",
+          "text": "). Showing typical drop shape, and unequal flagella emerging from a groove at the top, rounded part of the cell. Left drawing shows also the periferal chloroplast (black), central pyrenoid surrounded by a thick starch sheath of two hemispheral halves. Right drawing shows details of cell surface seen by scanning electron microscopy. Drawing taken from Novarino (2002).",
           "italic": false,
           "bold": false
         }
@@ -7963,21 +8031,22 @@
       "phylum": "Cryptista",
       "class": "Cryptophyceae",
       "order": "Cryptomonadales",
-      "habitat": "plankton, pelagic/littoral",
+      "habitat": "plankton, pelagic/littoral Distinctive featureses: heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria) – fluorecses orange when stained with DAPI. Always present in the water column. Distinctively smaller size than Cryptomonas. Probably mixotrophic.",
       "previous_name_used": "Rhodomonas minuta var. nannoplanctica Skuja 1948",
       "organization": "flagellated single cells",
       "color": "reddish to dark brown",
       "cell_shape": "drop-like",
       "cell_diameter_d": "3 – 6 m, median: 4.5 m (N=477).",
-      "cell_length_l": "6 – 10 m, median: 7.8 m (N=390). Cell biovolum: 40 – 150 m3, median: 82 m3.",
-      "biovolume_per_cell": "",
+      "cell_length_l": "6 – 10 m, median: 7.8 m (N=390).",
+      "biovolume_per_cell": "40 – 150 m3, median: 82 m3.",
+      "filament_length": "",
       "biovolume_equation": "V=1.841D2.5264 (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R2=0.93).",
       "morphological_features": "A small drop-shaped monad with two slightly unequal flagella (Plate 1), this is the smaller cryptophyte of Lake Kinneret. A single red (contains phycoerythrin) chloroplast is dorsal with ventral margins. A central large pyrenoid surrounded by a thick startch sheath of 2 hemispherical halves. The nucleus is posterior. Its chloroplast fluoresces orange (auatofluorescence) when observed under an epifluorescent microscope.",
-      "distinctive_attributes": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria) – fluorecses orange when stained with DAPI. Always present in the water column. Distinctively smaller size than Cryptomonas. Probably mixotrophic.",
+      "distinctive_attributes": "",
       "ecology": "Plagioselmis nannoplanctonica is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter holomixis (Dec. to Mar.), lowest in summer (Jun. to Oct.; Fig. 2). Indifferent to increasing salinity (or Cl- conc.; Fig. 3). Like Cryptomnonas, it is present in both the pelagic and littoral zones and is highly grazed by zooplankton.",
       "physiological_features": "",
       "environmental_conditions": "Present at the full range observed in Lake Kinneret of the following environmental variables: Zeu (euphotic zone depth), Secchi depth, pH, NH4, DO, SO4, TSS, Turbidity. Abundance increases with increasing alkalinity and nitrate, and with declining water temperature, DON, Organic N, total dissolved P (Fig. 3).",
-      "further_reading": "Lund JWG 1962. A rarely recorded but very common British alga, Rhodomonas minuta Skuja. British Phycological Bulletin, 2: 133-139.\nNovarino G 2011. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport."
+      "further_reading": "Lund JWG 1962. A rarely recorded but very common British alga, Rhodomonas minuta Skuja. British Phycological Bulletin, 2: 133-139.\nNovarino G 2002. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Eds: John DM, Whitton BA, Brook AJ. pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport."
     },
     "sections_rich": {
       "phylum": [
@@ -8003,7 +8072,37 @@
       ],
       "habitat": [
         {
-          "text": "plankton, pelagic/littoral",
+          "text": "plankton, pelagic/littoral ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Distinctive",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "featureses:",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria) – fluorecses orange when stained with DAPI. Always present in the water column. Distinctively smaller size than ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cryptomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Probably mixotrophic.",
           "italic": false,
           "bold": false
         }
@@ -8095,27 +8194,14 @@
       ],
       "cell_length_l": [
         {
-          "text": "6 – 10 m, median: 7.8 m (N=390). ",
+          "text": "6 – 10 m, median: 7.8 m (N=390).",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "biovolume_per_cell": [
         {
-          "text": "Cell",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "biovolum",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": ": 40 – 150 m3, median: 82 m3.",
+          "text": "40 – 150 m3, median: 82 m3.",
           "italic": false,
           "bold": false
         }
@@ -8130,23 +8216,6 @@
       "morphological_features": [
         {
           "text": "A small drop-shaped monad with two slightly unequal flagella (Plate 1), this is the smaller cryptophyte of Lake Kinneret. A single red (contains phycoerythrin) chloroplast is dorsal with ventral margins. A central large pyrenoid surrounded by a thick startch sheath of 2 hemispherical halves. The nucleus is posterior. Its chloroplast fluoresces orange (auatofluorescence) when observed under an epifluorescent microscope.",
-          "italic": false,
-          "bold": false
-        }
-      ],
-      "distinctive_attributes": [
-        {
-          "text": "heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria) – fluorecses orange when stained with DAPI. Always present in the water column. Distinctively smaller size than ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Cryptomonas",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": ". Probably mixotrophic.",
           "italic": false,
           "bold": false
         }
@@ -8212,7 +8281,7 @@
           "bold": false
         },
         {
-          "text": " Skuja. British Phycological Bulletin, 2: 133-139.\nNovarino G 2011. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport.",
+          "text": " Skuja. British Phycological Bulletin, 2: 133-139.\nNovarino G 2002. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Eds: John DM, Whitton BA, Brook AJ. pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport.",
           "italic": false,
           "bold": false
         }
@@ -8220,7 +8289,1951 @@
     },
     "metadata": {
       "source_file": "Cryptophytes.docx",
-      "record_updated": "2026-05-07"
+      "record_updated": "2026-06-03"
+    }
+  },
+  {
+    "scientific_name": "Tetraselmis cordiformis (Carter) Stein 1878",
+    "images": [
+      "/algae-images/tetraselmis-cordiformis/thumbnail-1.png",
+      "/algae-images/tetraselmis-cordiformis/plate-1.png",
+      "/algae-images/tetraselmis-cordiformis/plate-2.png",
+      "/algae-images/tetraselmis-cordiformis/figure-1.png",
+      "/algae-images/tetraselmis-cordiformis/figure-2.png",
+      "/algae-images/tetraselmis-cordiformis/figure-3.png",
+      "/algae-images/tetraselmis-cordiformis/figure-4.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Tetraselmis cordiformis (live material) seen with its heart or cherry-shape, 4 flagella and reddish-brown eyespot. A, B, D – front view. C - Specimen viewed looking at its “bottom” side with only the ends of the four flagella visible. Photos: Alla alster.",
+      "Plate 2. A massive bloom of Tetraselmis cordiformis on 19 February 1996: the entire lake water turned grass green, as seen in the green trail of water behind our sampling boat and as seen more closely in a hand-held beaker of lake water (inset). Photos: Tamar Zohary.",
+      "Figure 1. Time series of Tetraselmis cordiformis abundance (cells mL-1), Lake Kinneret, 1992-2020. The greater frequency of observations of the species from 2013 onwards is likely due to change of the technician doing the microscope counts on 1 Jan 2013.",
+      "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (right) P. elpatiewskyi, based on data for 1992-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+      "Figure 3. A. Time series of measured cell size, 2006-2012, showing largest size around January-February each year (grid lines indicate 1 January of each year). B. Regression of cell size against water temperature.",
+      "Figure 4. Tetraselmis cordiformis abundance (cells mL-1) vs. selected environmental parameters recorded at the site and time of sampling."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tetraselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (live material) seen with its heart or cherry-shape, 4 flagella and reddish-brown eyespot. A, B, D – front view. C - Specimen viewed looking at its “bottom” side with only the ends of the four flagella visible. Photos: Alla alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. A massive bloom of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tetraselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " on 19 February 1996: the entire lake water turned grass green, as seen in the green trail of water behind our sampling boat and as seen more closely in a hand-held beaker of lake water (inset). Photos: Tamar Zohary.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tetraselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1), Lake Kinneret, 1992-2020. The greater frequency of observations of the species from 2013 onwards is likely due to change of the technician doing the microscope counts on 1 Jan 2013.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (right) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "P.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "elpatiewskyi",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on data for 1992-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. A. Time series of measured cell size, 2006-2012, showing largest size around January-February each year (grid lines indicate 1 January of each year). B. Regression of cell size against water temperature.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 4. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tetraselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. selected environmental parameters recorded at the site and time of sampling.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Chlorophyta",
+      "class": "Chlorodendrophyceae",
+      "order": "Chlorodendrales",
+      "habitat": "plankton",
+      "previous_name_used": "Carteria cordiformis Diesing 1866",
+      "organization": "flagellated single cells",
+      "color": "green",
+      "cell_shape": "sphaeroid",
+      "cell_diameter_d": "10.2–15.9 mm, median: 13.1 mm (N=526).",
+      "cell_length_l": "13.4–18.7 mm, median: 15.9 mm (N=526)",
+      "biovolume_per_cell": "730-2400 mm3, median: 1400 mm3.",
+      "filament_length": "",
+      "biovolume_equation": "prolate spheroid V, mm3 = 4/3 p L/2 (D/2)2 (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid: V= 1.9507*D2.5651",
+      "morphological_features": "One of the larger flagellated species of Lake Kinneret (after the dinoflagellates), and the only one with four flagella (Plate1). It is heart-shaped (=cordiform, as it’s name) or cherry-shaped, ellipsoidal or almost sphaerical, never twisted, with four equal-length flagella emerging out of a pit or depression in the upper side of the cell (Plate 1). It has a red eyespot or stigma, and a single cup-shaped chloroplast usually with a basal pyrenoid. Two contractile vacuoles are present near the base of the flagella.",
+      "distinctive_attributes": "relatively large cell size with 4 flagella.",
+      "ecology": "Tetraselmis cordiformis usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m-2 (not shown). It is more abundant between February and April and again from August till November but absent in July and rare in December and January (Fig. 2). A technician-effect is noted in our data: a technician was replaced on 1 Jan 2013. It is evident in Fig. 1 that the newer technician counted this species more frequqently than the previous one. On a single unusual occassion in February 1996 Tetraselmis cordiformis formed an intense bloom that colored the entire lake with a strong grass-green color. This intense bloom disappeared within a few days and was missed by our weekly sampling, but photographic records remain (Plate 2). On another occassion, a massive bloom of this flagellated alga took place in a series of experimental tanks behind the Kinneret Limnological Institute. Again the bloom was short lived and disappeared within days. A distinct annual cycle of cell size is evident from our data: cells are smaller size in summer, larger in winter (Figs. 2, 3A). Cell size correlates well with water temperature (R2=0.48, Fig. 3B).",
+      "physiological_features": "",
+      "environmental_conditions": "T. cordiformis occurred at the full range of water temperatures occurring in the lake, at conductivities > 1000 mS cm-1 and Chloride > 210 mgL-1, when Secchi transparency was 2-4 m, euphotic zone depth > 5 m, mostly at pH between 8–9, Chlorophyll < 400 mg m-2, at alkalinities > 100 mg L-1, when NH4 was low but NO3, Norg and DON were moderate (Fig. 4).",
+      "further_reading": ""
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Chlorophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Chlorodendrophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Chlorodendrales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "previous_name_used": [
+        {
+          "text": "Carteria",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Diesing",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1866",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "sphaeroid",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "10.2–15.9 mm, median: 13.1 mm (N=526).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "13.4–18.7 mm, median: 15.9 mm (N=526)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "730-2400 mm3, median: 1400 mm3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "prolate spheroid V, mm3 = 4/3 p L/2 (D/2)2 (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid: V= 1.9507*D2.5651",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "One of the larger flagellated species of Lake Kinneret (after the dinoflagellates), and the only one with four flagella (Plate1). It is heart-shaped (=cordiform, as it’s name) or cherry-shaped, ellipsoidal or almost sphaerical, never twisted, with four equal-length flagella emerging out of a pit or depression in the upper side of the cell (Plate 1). It has a red ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "eyespot",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " or ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "stigma",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ", and a single cup-shaped chloroplast usually with a basal pyrenoid. Two contractile vacuoles are present near the base of the flagella.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "relatively large cell size with 4 flagella.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Tetraselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m-2 (not shown). It is more abundant between February and April and again from August till November but absent in July and rare in December and January (Fig. 2). A technician-effect is noted in our data: a technician was replaced on 1 Jan 2013. It is evident in Fig. 1 that the newer technician counted this species more frequqently than the previous one. On a single unusual occassion in February 1996 ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Tetraselmis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " formed an intense bloom that colored the entire lake with a strong grass-green color. This intense bloom disappeared within a few days and was missed by our weekly sampling, but photographic records remain (Plate 2). On another occassion, a massive bloom of this flagellated alga took place in a series of experimental tanks behind the Kinneret Limnological Institute. Again the bloom was short lived and disappeared within days. A distinct annual cycle of cell size is evident from our data: cells are smaller size in summer, larger in winter (Figs. 2, 3A). Cell size correlates well with water temperature (R2=0.48, Fig. 3B).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "T.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "cordiformis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occurred at the full range of water temperatures occurring in the lake, at conductivities > 1000 mS cm-1 and Chloride > 210 mgL-1, when Secchi transparency was 2-4 m, euphotic zone depth > 5 m, mostly at pH between 8–9, Chlorophyll < 400 mg m-2, at alkalinities > 100 mg L-1, when NH4 was low but NO3, Norg and DON were moderate (Fig. 4).",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Cryptophytes.docx",
+      "record_updated": "2026-06-03"
+    }
+  },
+  {
+    "scientific_name": "Chrysochromulina parva Lackey 1939",
+    "images": [
+      "/algae-images/chrysochromulina-parva/thumbnail-1.png",
+      "/algae-images/chrysochromulina-parva/image-1.png",
+      "/algae-images/chrysochromulina-parva/plate-1.png",
+      "/algae-images/chrysochromulina-parva/figure-1.png",
+      "/algae-images/chrysochromulina-parva/figure-2.png",
+      "/algae-images/chrysochromulina-parva/figure-3.png"
+    ],
+    "image_captions": [
+      "",
+      "",
+      "Plate 2. Hand drawing of Erkenia subaequiciliata Skuja= Chrysochromulina parva Lackey: A. by Skuja 1957, showing the life-cycle of this bi-flagellated species, including its division into two daughter cells (33-36). B. by Lackey 1939, showing the haptonema (pointed upwards in 1,2,3) as well as other details. 1 General structure. 2 lateral view. 3 Cell with round chromatophores, 4. Cross-section showing middle depression.",
+      "Figure 1. Time series of Chrysochromulina parva cell abundance in Lake Kinneret, 1970-2020.",
+      "Figure 2. The annual pattern of water column cell abundance of Chrysochromulina parva, based on data for 1978-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+      "Figure 3. Chrysochromulina parva abundance (cells mL-1) vs. selected environmental parameters recorded at the site and time of sampling, showing indifference to temperatue and nitrate but tendency for higher cell concentrations at lower chlorophyll and DON concentrations."
+    ],
+    "image_captions_rich": [
+      [],
+      [],
+      [
+        {
+          "text": "Plate 2. Hand drawing of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Erkenia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "subaequiciliata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Skuja",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "=",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Lackey: A. by Skuja 1957, showing the life-cycle of this bi-flagellated species, including its division into two daughter cells (33-36). B. by Lackey 1939, showing the haptonema (pointed upwards in 1,2,3) as well as other details. 1 General structure. 2 lateral view. 3 Cell with round chromatophores, 4. Cross-section showing middle depression.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cell abundance in Lake Kinneret, 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on data for 1978-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. selected environmental parameters recorded at the site and time of sampling, showing indifference to temperatue and nitrate but tendency for higher cell concentrations at lower chlorophyll and DON concentrations.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Haptophyta",
+      "class": "Coccolithophyceae",
+      "order": "Prymnesiales",
+      "habitat": "plankton, pelagic/littoral",
+      "previous_name_used": "Erkenia subaequiciliata, Skuya 1948",
+      "organization": "flagellated single cells",
+      "color": "yellow to golden-brown",
+      "cell_shape": "spheroid",
+      "cell_diameter_d": "2.9 – 5.2 m, median: 3.9 m (N=100).",
+      "cell_length_l": "",
+      "biovolume_per_cell": "13 – 76 m3, median: 34 m3.",
+      "filament_length": "",
+      "biovolume_equation": "Sphere V, m3 = 4/3 p *(D/2)3.",
+      "morphological_features": "This species comprises the smallest (3 - 5 mm diameter), but very common flagellates of Lake Kinneret (Plate. 1). Cells have a bilateral symmetry, spheroid shape except when dividing (Plate 2A), with 2 flagella of equal or near-equal length, 1 haptonema (Plate 2B), 2 chloroplasts, 2 contractile vacuoles, and a stigma (Plates 1, 2). The flagella are much longer than the cell. During swimming, one flagellum is directed forward, whereas the other trails behind. The haptonema that may be mistaken for a third flagellum, is a thread-like organelle used for attachment and catching prey. It is thinner and more delicate than the flagella and rarely seen under a light microscope, because it often contracts and hides against the cell wall. During cell division there is a stage when the two daughter cells are still contained within the same cell wall thus the cell seems particularly wide and with 4 flagella (Plate 2A). Skyua, who first described Erkenia subaequiciliata in 1948, didn’t see its haptonema and placed it with the Chrysophyta, although in all other attributes it resembled the haptophyte Chrysochromulina parva Lackey 1939. With more advanced microscopy it was shown in the 1960s that the two species are identical, and the earlier name, Chrysochromulina parva, took over. Plate 1 Chrysochromulina parva from Lake Kinneret. Note the small, spherical cell shape and the shape of the chloroplasts. A flagellum (only 1 of 2) is seen in the uppermost specimen.",
+      "distinctive_attributes": "A tiny flagellated species that is seasonally extremely abundant (thousands of cells/mL), probably mixotroph, heavily grazed by zooplankton.",
+      "ecology": "Chrysochromulina parva is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL-1; an all-time maximum of 11,900 cells mL-1 was recorded in April 2019 (Fig. 1). Despite their high abundance, their minute size makes their contiribution to total phytoplankton biomass usually negligible, on average only 0.4%. The max biomass contribution ever recorded was 7.9 g m-2 and 13% of the total biomass. Chrysochromulina parva is abundant in winter – spring, it is rare or completely absent from the water column in the summer and re-appears in the fall (Fig. 2).",
+      "physiological_features": "",
+      "environmental_conditions": "occurs at the full range of temperatures, water levels, conductivities, chloride, alkalinity, Ca and nitrate concentrations recorded in Lake Kinneret. Higher abundances were restricted to a relatively narrow range of long wave radiation, between 325-375 Watt m-2, to overall low chlorophyll concentration (i.e. not during major blooms of other species), at DON < 0.4 mg L-1, NH4 < 0.1 mg L-1, organic N around 0.5 mg L-1, pH in the range of 8-9 and Secchi depth between 1-4 m (Fig. 3).",
+      "further_reading": ""
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Haptophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Coccolithophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Prymnesiales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, pelagic/littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "previous_name_used": [
+        {
+          "text": "Erkenia",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "subaequiciliata",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": ",",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Skuya",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1948",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "yellow to golden-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "spheroid",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "2.9 – 5.2 m, median: 3.9 m (N=100).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "13 – 76 m3, median: 34 m3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Sphere V, m3 = 4/3 p *(D/2)3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "This species comprises the smallest (3 - 5 mm diameter), but very common flagellates of Lake Kinneret (Plate. 1). Cells have a bilateral symmetry, spheroid shape except when dividing (Plate 2A), with 2 flagella of equal or near-equal length, 1 ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "haptonema",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (Plate 2B), 2 chloroplasts, 2 contractile vacuoles, and a stigma (Plates 1, 2). The flagella are much longer than the cell. During swimming, one flagellum is directed forward, whereas the other trails behind. The haptonema that may be mistaken for a third flagellum, is a thread-like organelle used for attachment and catching prey. It is thinner and more delicate than the flagella and rarely seen under a light microscope, because it often contracts and hides against the cell wall. During cell division there is a stage when the two daughter cells are still contained within the same cell wall thus the cell seems particularly wide and with 4 flagella (Plate 2A). Skyua, who first described ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Erkenia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "subaequiciliata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in 1948",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ",",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " didn’t see its haptonema and placed it with the Chrysophyta, although in all other attributes it resembled the haptophyte ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Lackey 1939. With more advanced microscopy it was shown in the 1960s that the two species are identical, and the earlier name, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " took over. Plate 1 ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret. Note the small, spherical cell shape and the shape of the chloroplasts. A flagellum (only 1 of 2) is seen in the uppermost specimen.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "A tiny flagellated species that is seasonally extremely abundant (thousands of cells/mL), probably mixotroph, heavily grazed by zooplankton.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL-1; an all-time maximum of 11,900 cells mL-1 was recorded in April 2019 (Fig. 1). Despite their high abundance, their minute size makes their contiribution to total phytoplankton biomass usually negligible, on average only 0.4%. The max biomass contribution ever recorded was 7.9 g m-2 and 13% of the total biomass. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysochromulina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "parva",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is abundant in winter – spring, it is rare or completely absent from the water column in the summer and re-appears in the fall (Fig. 2).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "occurs at the full range of temperatures, water levels, conductivities, chloride, alkalinity, Ca and nitrate concentrations recorded in Lake Kinneret. Higher abundances were restricted to a relatively narrow range of long wave radiation, between 325-375 Watt m-2, to overall low chlorophyll concentration (i.e. not during major blooms of other species), at DON < 0.4 mg L-1, NH4 < 0.1 mg L-1, organic N around 0.5 mg L-1, pH in the range of 8-9 and Secchi depth between 1-4 m (Fig. 3).",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Cryptophytes.docx",
+      "record_updated": "2026-06-03"
+    }
+  },
+  {
+    "scientific_name": "Euglena Ehrenberg 1830",
+    "images": [
+      "/algae-images/euglena/thumbnail-1.jpg",
+      "/algae-images/euglena/plate-1.jpg",
+      "/algae-images/euglena/image-1.png",
+      "/algae-images/euglena/plate-2.png",
+      "/algae-images/euglena/figure-1.png",
+      "/algae-images/euglena/figure-2.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Euglena proxima, one of several species of Euglena occurring in the plankton of Lake Kinneret, mostly in the littoral zone. With numerous disk-shaped chloroplasts and a conical colorless caudus (=tail piece). Photo by Alla Alster.",
+      "",
+      "Plate 2. Left: Reddish-brown water due to an intense Euglenophyte bloom in the Agmon Wetland, Hula Valley, 31 October 2022. Photo by Dana Klein. Right: microscope photo of the dominant bloom species, Euglena sanguinea Ehrenberg 1832. Photo by Alla Alster.",
+      "Figure 1. Time series of Euglena spp. abundance (average water column cells mL-1), Sta. A, Lake Kinneret, 2013-2020.",
+      "Figure 2. Euglena spp. abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher water temperature, lower dissolved oxygen (DO), Mixing depth of 15-20 m, Ca > 42 mg L-1."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "proxima,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " one of several species of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occurring in the plankton of Lake Kinneret, mostly in the littoral zone. With numerous disk-shaped chloroplasts and a conical colorless caudus (=tail piece). Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [],
+      [
+        {
+          "text": "Plate 2. Left: Reddish-brown water due to an intense Euglenophyte bloom in the Agmon Wetland, Hula Valley, 31 October 2022. Photo by Dana Klein. Right: microscope photo of the dominant bloom species, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "sanguinea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Ehrenberg 1832. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (average water column cells mL-1), Sta. A, Lake Kinneret, 2013-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher water temperature, lower dissolved oxygen (DO), Mixing depth of 15-20 m, Ca > 42 mg L-1.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Euglenophyta",
+      "class": "Euglenophyceae",
+      "order": "Euglenales",
+      "habitat": "plankton, mostly littoral",
+      "previous_name_used": "",
+      "organization": "single flagellated cells",
+      "color": "grass-green",
+      "cell_shape": "a flattened drop of water",
+      "cell_diameter_d": "13-19 mm, median 10 mm (N=173)",
+      "cell_length_l": "length 28-53 mm, median 27 mm (N=173)",
+      "biovolume_per_cell": "500 - 9000 mm3, median: 1200 mm3.",
+      "filament_length": "",
+      "biovolume_equation": "prolate spheroid V, m3 = 4/3 p (D/2)2 L/2",
+      "morphological_features": "Euglena is the most common euglenoid genus worldwide. It is a large, flagellated algae with a distinct orange-red eyespot. The motile cells are ovoid-cylindrical to narrowly fusiform, frequently with a narrow, elongated posterior caudus (“tail”), and may change their shape while they move under the microscope. Euglena has a single flagellum used for swimming, and a second very short flagellum that is not seen under a light microscope. The cells can turn spherical by an end-to-end contraction, followed by a quick expansion. They are also capable of actively contorting themselves in a variety of shapes through peristaltic-like motions, as well as twisting around an apical axis. The orange to red colored eyespot, noticeable near the base of the flagellum, is much larger than the eyespot in flagellated green algae. A single vacuole, capable of contracting, may be conspicuous when it is expanded. The shape, number and position of the chloroplasts along with the presence or absence of pyrenoids were traditionally key taxonomic features along with cell size and apical shapes. In apical view Euglena is circular although at times it could be twisted. Several species of Euglena occur in Lake Kinneret, including E. proxima (Plate 1) and E. acus (now considered a synonym of Lepocynclis acus). In our routine counts all species of Euglena are aggregated into a single counting code.",
+      "distinctive_attributes": "large flagellated cells (only 1 flagellum can be seen), mixotroph, changes shape continuously. Distinct red eyespot.",
+      "ecology": "Euglena spp. are rare in the Kinneret pelagic zone, but occasionally abundant in littoral samples, especially if collected from niches with high concentrations of organic matter, such as shallow waters among seasonally inundated shore vegetation, or temporary shore-pools created in bottom depressions with decomposing vegetation when the water level declines at a fast pace. In Agmon Wetlands in the peat soils of the Hula valley, Euglena species (as well as other Euglenoids) are much more abundant than in Kinneret. Occasionally, the toxin-producing Euglena sanguinea forms massive blooms that paint the surface water red (Plate 2). The distinctive euglenoid pigment astaxanthin is responsible for the distinctive red color.",
+      "physiological_features": "Strongly phototactic. Conducts vertical migrations.",
+      "environmental_conditions": "The cell abundance data shown in Figs. 1, 2 are for a sum of individuals belonging to the Euglena genus recorded at the pelagic water of Lake Kinneret. Euglena spp. abundance was indifferent to chloride concentrations, Secchi depth, TDP, DON. Higher cell concentrations were found in summer (Fig. 1), at higher water temperatures (> 25C), when the mixing depth ranged 15-20 m, dissolved oxygen between 6-8 mg L-1 (Fig. 2), pH between 8.0 and 8.6, NH4 < 0.06 mg N L-1, Organic N between 0.2-0.4 mg N L-1 (not shown).",
+      "further_reading": "Dillard, G.E. (2000). Freshwater algae of the southeastern United States, Part 7. Pigmented Euglenophyceae. Bibliotheca Phycologica 106: 1–135.\nWołowski, K. (2011). Euglenophyta (Euglenoids). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 181-239. Cambridge: Cambridge University Press."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Euglenophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Euglenophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Euglenales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, mostly littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "single flagellated cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "grass-green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "a flattened drop of water",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "13-19 mm, median 10 mm (N=173)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "length 28-53 mm, median 27 mm (N=173)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "500 - 9000 mm3, median: 1200 mm3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "prolate spheroid V, m3 = 4/3 p (D/2)2 L/2",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is the most common euglenoid genus worldwide. It is a large, flagellated algae with a distinct orange-red eyespot. The motile cells are ovoid-cylindrical to narrowly ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "fusiform",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ", frequently with a narrow, elongated ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "posterior",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "caudus",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (“tail”), and may change their shape while they move under the microscope. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " has a single ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "flagellum",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " used for swimming, and a second very short flagellum that is not seen under a light microscope. The cells can turn spherical by an end-to-end contraction, followed by a quick expansion. They are also capable of actively contorting themselves in a variety of shapes through peristaltic-like motions, as well as twisting around an apical axis. The orange to red colored eyespot, noticeable near the base of the flagellum, is much larger than the eyespot in flagellated green algae. A single vacuole, capable of contracting, may be conspicuous when it is expanded. The shape, number and position of the chloroplasts along with the presence or absence of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "pyrenoids",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " were traditionally key taxonomic features along with cell size and apical shapes. In apical view ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is circular although at times it could be twisted. Several species of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occur in Lake Kinneret, including ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "E.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "proxima",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Plate 1) and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "E.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (now considered a synonym of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Lepocynclis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "acus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": "). In our routine counts all species of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " are aggregated into a single counting code.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "large flagellated cells (only 1 flagellum can be seen)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ",",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " mixotroph, changes shape continuously. Distinct red eyespot.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. are rare in the Kinneret pelagic zone, but occasionally abundant in littoral samples, especially if collected from niches with high concentrations of organic matter, such as shallow waters among seasonally inundated shore vegetation, or temporary shore-pools created in bottom depressions with decomposing vegetation when the water level declines at a fast pace. In Agmon Wetlands in the peat soils of the Hula valley, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " species (as well as other Euglenoids) are much more abundant than in Kinneret. Occasionally, the toxin-producing ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "sanguinea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " forms massive blooms that paint the surface water red (Plate 2). The distinctive euglenoid pigment astaxanthin is responsible for the distinctive red color.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "physiological_features": [
+        {
+          "text": "Strongly phototactic. Conducts vertical migrations.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "The cell abundance data shown in Figs. 1, 2 are for a sum of individuals belonging to the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " genus recorded at the pelagic water of Lake Kinneret. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. abundance was indifferent to chloride concentrations, Secchi depth, TDP, DON. Higher cell concentrations were found in summer (Fig. 1), at higher water temperatures (> 25C), when the mixing depth ranged 15-20 m, dissolved oxygen between 6-8 mg L-1 (Fig. 2), pH between 8.0 and 8.6, NH4 < 0.06 mg N L-1, Organic N between 0.2-0.4 mg N L-1 (not shown).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Dillard, G.E. (2000). Freshwater algae of the southeastern United States, Part 7. Pigmented Euglenophyceae. Bibliotheca Phycologica 106: 1–135.\nWołowski, K. (2011). Euglenophyta (Euglenoids). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 181-239. Cambridge: Cambridge University Press.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Euglenophytes.docx",
+      "record_updated": "2026-06-03"
+    }
+  },
+  {
+    "scientific_name": "Phacus caudatus Huebner 1886",
+    "images": [
+      "/algae-images/phacus-caudatus/thumbnail-1.png",
+      "/algae-images/phacus-caudatus/plate-1.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Phacus caudatus from the littoral zone of Lake Kinneret. Photo by Alla Alster."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Phacus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "caudatus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from the littoral zone of Lake Kinneret. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Euglenophyta",
+      "class": "Euglenophyceae",
+      "order": "Euglenales",
+      "habitat": "plankton/benthos, littoral",
+      "previous_name_used": "",
+      "organization": "flagellated single cells",
+      "color": "grass green",
+      "cell_shape": "leaf-shaped",
+      "cell_diameter_d": "",
+      "cell_length_l": "",
+      "biovolume_per_cell": "",
+      "filament_length": "",
+      "biovolume_equation": "",
+      "morphological_features": "Phacus species (see thumbnail photo) are single-celled, grass-colored, leaf-shaped (i.e. flat and very thin), often twisted, with straight or slightly bent sharply pointed caudus (or ‘tail’). It is striped, all the stripes start at the flagellum opening and end in the ’tail’ covering the cell like longitude lines covering a globe. With numerous discoid chloroplasts, no pyrenoids. Phacus does not change its shape like Euglena does. The cells are motile, their locomotion flagellum emerges from a canal at the top side of the cell. A second flagellum is very short and not emerging, cannot be seen by light microscopy. A red eyespot is usually seen near the top of the cell. One or two large paramylon (a carbohydrate) storage body is often seen as an elongated white body.",
+      "distinctive_attributes": "Elegant swimming, striped and thin like a sheet of paper, with distinct eyespot and a sharply pointed tail. Rare – never counted in our samples.",
+      "ecology": "Phacus species are extremely rare in Lake Kinneret. They have never been abundant enough to be counted in our routine monitoring, but occasionally a specimen is found in the littoral zone, usually of the species Phacus caudatus (Plate 1).",
+      "physiological_features": "",
+      "environmental_conditions": "",
+      "further_reading": "Dillard, G.E. (2000). Freshwater algae of the southeastern United States, Part 7. Pigmented Euglenophyceae. Bibliotheca Phycologica 106: 1–135.\nWołowski, K. (2011). Euglenophyta (Euglenoids). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 181-239. Cambridge: Cambridge University Press."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Euglenophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Euglenophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Euglenales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton/benthos, littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "flagellated single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "grass green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "leaf-shaped",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Phacus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " species (see thumbnail photo) are single-celled, grass-colored, leaf-shaped (i.e. flat and very thin), often twisted, with straight or slightly bent sharply pointed ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "caudus",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (or ‘tail’). It is striped, all the stripes start at the flagellum opening and end in the ’tail’ covering the cell like longitude lines covering a globe. With numerous discoid chloroplasts, no pyrenoids. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Phacus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " does not change its shape like ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " does. The cells are motile, their locomotion flagellum emerges from a canal at the top side of the cell. A second flagellum is very short and not emerging, cannot be seen by light microscopy. A red eyespot is usually seen near the top of the cell. One or two large ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "paramylon",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (a carbohydrate) storage body is often seen as an elongated white body.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "Elegant swimming, striped and thin like a sheet of paper, with distinct eyespot and a sharply pointed tail. Rare – never counted in our samples.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Phacus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " species are extremely rare in Lake Kinneret. They have never been abundant enough to be counted in our routine monitoring, but occasionally a specimen is found in the littoral zone, usually of the species ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Phacus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "caudatus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Plate 1).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Dillard, G.E. (2000). Freshwater algae of the southeastern United States, Part 7. Pigmented Euglenophyceae. Bibliotheca Phycologica 106: 1–135.\nWołowski, K. (2011). Euglenophyta (Euglenoids). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 181-239. Cambridge: Cambridge University Press.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Euglenophytes.docx",
+      "record_updated": "2026-06-03"
+    }
+  },
+  {
+    "scientific_name": "Trachelomonas Ehrenberg 1833",
+    "images": [
+      "/algae-images/trachelomonas/thumbnail-1.png",
+      "/algae-images/trachelomonas/plate-1.png",
+      "/algae-images/trachelomonas/plate-2.png",
+      "/algae-images/trachelomonas/figure-1.png",
+      "/algae-images/trachelomonas/figure-2.png",
+      "/algae-images/trachelomonas/figure-3.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Typical Trachelomonas: a euglenoid cell encapsulated by a thick lorica. Left: bright field; Many chlorophytes arranged around cell periphery, large circular nucleus in it center. Arrow indicates the protruding opening of the lorica from which the flagellum extends (but is not seen here). Right: dark field. Photos by Tamar Zohary.",
+      "Plate 2. Trachelomonas hispida (Perty) Stein 1878 from Lake Kinneret. The Euglena-like cell is exiting its brown-colored lorica. The single flagellum is seen extending though an opening in the lorica at its bottom end. Photos by Alla Alster.",
+      "Figure 1. Time series of Trachelomonas spp. abundance (cells mL-1), Lake Kinneret, 1999-2020.",
+      "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (right) of Trachelomonas spp., based on data for 1999-2014. Statistics shown: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles – top and bottom bars, respectively.",
+      "Figure 3. Trachelomonas spp. abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, indifference to water temperature (avg 0-10 m), ambient chloride concentration, higher abundance at lower chlorophyll (no major bloom of another species), and higher Organic N."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. Typical ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ": a euglenoid cell encapsulated by a thick lorica. Left: bright field; Many chlorophytes arranged around cell periphery, large circular nucleus in it center. Arrow indicates the protruding opening of the lorica from which the flagellum extends (but is not seen here). Right: dark field. Photos by Tamar Zohary.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "hispida",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Perty) Stein 1878 from Lake Kinneret. The ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": "-like cell is exiting its brown-colored lorica. The single flagellum is seen extending though an opening in the lorica at its bottom end. Photos by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL-1), Lake Kinneret, 1999-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (right) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp., based on data for 1999-2014. Statistics shown: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles – top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. abundance (cells mL-1) vs. environmental parameters recorded at the site and time of sampling, indifference to water temperature (avg 0-10 m), ambient chloride concentration, higher abundance at lower chlorophyll (no major bloom of another species), and higher Organic N.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Euglenophyta",
+      "class": "Euglenophyceae",
+      "order": "Euglenales",
+      "habitat": "plankton, pelagic",
+      "previous_name_used": "",
+      "organization": "single flagellated cells",
+      "color": "brown",
+      "cell_shape": "sphaeroid",
+      "cell_diameter_d": "8.9-15.5 mm (median=11.4 mm). Range reported is 5th-95th percentiles for 234 cells measured during 2004-2009.",
+      "cell_length_l": "",
+      "biovolume_per_cell": "370 - 2000 mm3, median: 800 mm3.",
+      "filament_length": "",
+      "biovolume_equation": "sphere, V, mm3 = ¾ p (D/2)3",
+      "morphological_features": "Trachelomonas cells are similar to those of Euglena, except that they are completely encased in a mucilaginous rigid envelope outside the plasma membrane called lorica (Plates 1, 2). This lorica is highly mineralized and dark brown in color. The cell is flagellated and capable of euglenoid movement within the lorica as well as swimming out of it (Plate 2). The lorica has a bottle-neck-shaped opening through which the flagellum emerges and through which the cell may swim out for cell division or when conditions require, then may swim back into it. Trachelomonas is distinguishable from other spherical unicellular species occurring in Lake Kinneret by the bottle-neck-shaped opening of its lorica, at the top part of the cell (arrow in Plate 1). This structure can be seen only when the cell is observed from the side, not when it is observed from above or below.",
+      "distinctive_attributes": "Near-spherical flagellated cells encapsulated in a brown lorica with a distinctive “mouth” opening through which the locomotive flagellum emerges.",
+      "ecology": "Trachelomonas is the only euglenoid seen in Kinneret pelagic plankton samples quite often, although this genus too is never abundant, maximum cell density ever recorded was ~50/mL (Fig. 1). Trachelomonas can be viewed at any time of the year but tends to appear more often in spring (March-April) and rarely from August to October. (Fig. 2). Cell size varies only slightly, with no distinct annual pattern (Fig. 2).",
+      "physiological_features": "",
+      "environmental_conditions": "The abundance of Trachelomonas spp. in the pelagic water of Lake Kinneret was indifferent to water temperature, ambient chloride concentration (Fig. 3), water level, pH, Ca, Alkalinity, Si, NO3, NH4 and Zmix/Zeu ration (not shown). Higher abundances of the genus were recorded when depth-integrates (0-15 m) chlorophyll concentrations were < 500 mg m-2, and organic N > 0.15 mg N L-1 (Fig. 3).",
+      "further_reading": "Cavalier-Smith, T. (2016). Higher classification and phylogeny of Euglenozoa. European Journal of Protistology 56: 250–276."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Euglenophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Euglenophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Euglenales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, pelagic",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "single flagellated cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "sphaeroid",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "8.9-15.5 mm (median=11.4 mm). Range reported is 5th-95th percentiles for 234 cells measured during 2004-2009.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "370 - 2000 mm3, median: 800 mm3.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "sphere, V, mm3 = ¾ p (D/2)3",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cells are similar to those of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Euglena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", except that they are completely encased in a mucilaginous rigid envelope outside the plasma membrane called ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "lorica",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (Plates 1, 2). This lorica is highly mineralized and dark brown in color. The cell is flagellated and capable of euglenoid movement within the lorica as well as swimming out of it (Plate 2). The lorica has a bottle-neck-shaped opening through which the flagellum emerges and through which the cell may swim out for cell division or when conditions require, then may swim back into it. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is distinguishable from other spherical unicellular species occurring in Lake Kinneret by the bottle-neck-shaped opening of its lorica, at the top part of the cell (arrow in Plate 1). This structure can be seen only when the cell is observed from the side, not when it is observed from above or below.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "Near-spherical flagellated cells encapsulated in a brown lorica with a distinctive “mouth” opening through which the locomotive flagellum emerges.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is the only euglenoid seen in Kinneret pelagic plankton samples quite often, although this genus too is never abundant, maximum cell density ever recorded was ~50/mL (Fig. 1). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " can be viewed at any time of the year but tends to appear more often in spring (March-April) and rarely from August to October. (Fig. 2). Cell size varies only slightly, with no distinct annual pattern (Fig. 2).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "The",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "abundance",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "of",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Trachelomonas",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. in the pelagic water of Lake Kinneret was indifferent to water temperature, ambient chloride concentration (Fig. 3), water level, pH, Ca, Alkalinity, Si, NO3, NH4 and Zmix/Zeu ration (not shown). Higher abundances of the genus were recorded when depth-integrates (0-15 m) chlorophyll concentrations were < 500 mg m-2, and organic N > 0.15 mg N L-1 (Fig. 3).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Cavalier-Smith, T. (2016). Higher classification and phylogeny of Euglenozoa. European Journal of Protistology 56: 250–276.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Euglenophytes.docx",
+      "record_updated": "2026-06-03"
     }
   }
 ]

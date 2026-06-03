@@ -343,6 +343,10 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
         "biovolume_per_cell",
         ["biovolume per cell", "cell biovolume", "biovolume/cell"],
     ),
+    # Filamentous species only (e.g. Bangia). In Word the value is often glued to
+    # the end of the "Cell diameter (D):" line; the "filament length" marker pulls
+    # it into its own quick fact, shown right after "Cell biovolume".
+    ("filament_length", ["filament length"]),
     ("biovolume_equation", ["biovolume equation"]),
     ("morphological_features", ["morphological features"]),
     (

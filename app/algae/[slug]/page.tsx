@@ -36,6 +36,7 @@ const FIELD_LABELS: Record<string, string> = {
   cell_diameter_d: "Cell diameter (D)",
   cell_length_l: "Cell length (L)",
   biovolume_per_cell: "Cell biovolume",
+  filament_length: "Filament length",
   biovolume_equation: "Biovolume equation",
   morphological_features: "Morphological features",
   distinctive_attributes: "Distinctive features",
@@ -63,6 +64,7 @@ const QUICK_FACT_KEYS = [
   "cell_diameter_d",
   "cell_length_l",
   "biovolume_per_cell",
+  "filament_length",
   "biovolume_equation"
 ] as const;
 
@@ -174,11 +176,13 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         {previousNamePlain ? (
           <p className="algae-previous-name-line">
             <span className="algae-previous-name-label">{toDisplayLabel("previous_name_used")}: </span>
-            {previousNameRich.length > 0 ? (
-              <RichText segments={previousNameRich} />
-            ) : (
-              previousNamePlain
-            )}
+            <span className="algae-previous-name-value">
+              {previousNameRich.length > 0 ? (
+                <RichText segments={previousNameRich} />
+              ) : (
+                previousNamePlain
+              )}
+            </span>
           </p>
         ) : null}
       </header>

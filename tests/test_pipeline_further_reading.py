@@ -117,6 +117,21 @@ class TestDistinctiveFeaturesMarker(unittest.TestCase):
         )
 
 
+class TestFilamentLengthMarker(unittest.TestCase):
+    def test_splits_filament_length_from_cell_diameter(self) -> None:
+        # Bangia-style: Word glues "Filament length:" onto the cell diameter line.
+        notes = (
+            "Cell diameter (D): ~ 20 mm (but highly variable) "
+            "Filament length: Several centimeters"
+        )
+        plain, _styles = _normalize_structured_fields_rich(
+            {"notes": notes},
+            {"notes": [0] * len(notes)},
+        )
+        self.assertEqual(plain["cell_diameter_d"], "~ 20 mm (but highly variable)")
+        self.assertEqual(plain["filament_length"], "Several centimeters")
+
+
 class TestMoveInlineFurtherReadingFromEcology(unittest.TestCase):
     def test_moves_last_further_reading_block(self) -> None:
         eco_main = "Alpha beta. Fig. 3. Gamma ends here."
