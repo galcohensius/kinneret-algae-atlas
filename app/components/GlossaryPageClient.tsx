@@ -43,10 +43,6 @@ export default function GlossaryPageClient({
 
   return (
     <>
-      <p className="glossary-intro muted">
-        Terms used in species descriptions. Tap a highlighted term on any species page for a
-        short definition, or browse the full list here.
-      </p>
       <p className="glossary-meta muted">
         {title} · Last updated {recordUpdated} · {totalCount} terms
       </p>

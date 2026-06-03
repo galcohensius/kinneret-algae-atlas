@@ -1,0 +1,85 @@
+import type { AlgaeRecord } from "./algae-types";
+
+/**
+ * Muted accent colors per phylum (readable on light and dark backgrounds).
+ *
+ * Name → color (Greek roots in the phylum name):
+ *   Chlorophyta — chloros (green)
+ *   Rhodophyta — rhodon (rose / red)
+ *
+ * No color in the name; hue chosen for distinction and typical field appearance:
+ *   Cryptista, Dinoflagellata, Euglenophyta, Haptophyta
+ */
+const PHYLUM_ACCENTS: Record<string, string> = {
+  chlorophyta: "#15803d", // chloros = green
+  rhodophyta: "#be123c", // rhodon = rose-red
+  cryptista: "#6b4c9a", // kryptos = hidden (not a color)
+  dinoflagellata: "#0e7490", // no color in name; marine cyan
+  euglenophyta: "#ca8a04", // no color in name; golden xanthophyll-rich forms
+  haptophyta: "#2563eb", // no color in name; marine coccolithophores
+  unclassified: "#64748b",
+};
+
+const FALLBACK_PALETTE = [
+  PHYLUM_ACCENTS.chlorophyta,
+  PHYLUM_ACCENTS.rhodophyta,
+  PHYLUM_ACCENTS.cryptista,
+  PHYLUM_ACCENTS.dinoflagellata,
+  PHYLUM_ACCENTS.euglenophyta,
+  PHYLUM_ACCENTS.haptophyta,
+];
+
+export type PhylumCatalogGroup = {
+  phylum: string;
+  slug: string;
+  accent: string;
+  records: AlgaeRecord[];
+};
+
+export function phylumToSlug(phylum: string): string {
+  const normalized = phylum
+    .trim()
+    .toLowerCase()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+  return normalized || "unclassified";
+}
+
+export function getPhylumAccent(phylum: string): string {
+  const key = phylumToSlug(phylum);
+  if (PHYLUM_ACCENTS[key]) {
+    return PHYLUM_ACCENTS[key];
+  }
+  let hash = 0;
+  for (const ch of key) {
+    hash = (hash + ch.charCodeAt(0)) % FALLBACK_PALETTE.length;
+  }
+  return FALLBACK_PALETTE[hash] ?? PHYLUM_ACCENTS.unclassified;
+}
+
+/**
+ * Group consecutive records by phylum. Input should already be sorted
+ * (see sortAlgaeRecordsForCatalog).
+ */
+export function groupAlgaeByPhylum(records: AlgaeRecord[]): PhylumCatalogGroup[] {
+  const groups: PhylumCatalogGroup[] = [];
+
+  for (const record of records) {
+    const phylum = (record.sections.phylum ?? "").trim() || "Unclassified";
+    const last = groups[groups.length - 1];
+    if (last && last.phylum === phylum) {
+      last.records.push(record);
+      continue;
+    }
+    groups.push({
+      phylum,
+      slug: phylumToSlug(phylum),
+      accent: getPhylumAccent(phylum),
+      records: [record],
+    });
+  }
+
+  return groups;
+}

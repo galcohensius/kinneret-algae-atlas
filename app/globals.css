@@ -483,8 +483,83 @@ main.home {
   border-radius: 6px;
 }
 
-.algae-index-count {
+.algae-index-summary {
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  max-width: 42rem;
+}
+
+.phylum-jump-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.65rem;
+  margin: 0 0 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.phylum-jump-nav a {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.phylum-jump-nav a:hover {
+  background: var(--surface-subtle);
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+.phylum-jump-count {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.phylum-catalog {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.phylum-catalog-group {
+  display: grid;
+  grid-template-columns: 0.42rem minmax(0, 1fr);
+  gap: 0 1rem;
+  scroll-margin-top: 1.25rem;
+  padding: 0.85rem 0.85rem 0.85rem 0;
+  border-radius: 0 12px 12px 0;
+  background: color-mix(in srgb, var(--phylum-accent) 10%, transparent);
+}
+
+.phylum-catalog-rail {
+  border-radius: 6px;
+  background: var(--phylum-accent);
+  min-height: 100%;
+}
+
+.phylum-catalog-body {
+  min-width: 0;
+}
+
+.phylum-catalog-heading {
   margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.phylum-catalog-count {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .algae-list-card-title {

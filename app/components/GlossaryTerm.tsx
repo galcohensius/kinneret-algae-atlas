@@ -64,7 +64,7 @@ export default function GlossaryTerm({
           <span className="glossary-popover-term">{term}</span>
           <span className="glossary-popover-def">{definition}</span>
           <Link className="glossary-popover-link" href={href} onClick={close}>
-            Full definition →
+            Glossary →
           </Link>
         </span>
       ) : null}
