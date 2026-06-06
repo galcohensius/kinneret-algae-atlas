@@ -5,6 +5,7 @@ import { RichText } from "../../components/RichText";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import TaxonItalicName from "../../components/TaxonItalicName";
 import { getAllSupplements, getSupplementBySlug } from "../../../lib/supplements";
+import { getAllAlgae } from "../../../lib/algae";
 import { publicAssetPath } from "../../../lib/public-path";
 import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
 import { galleryImageAlt, galleryEnlargeAriaLabel, additionalGallerySectionTitle } from "../../../lib/gallery-image-meta";
@@ -34,6 +35,9 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
   if (!supplement) {
     notFound();
   }
+
+  const allAlgae = await getAllAlgae();
+  const algaeBySlug = new Map(allAlgae.map((r) => [r.slug, r.scientificName]));
 
   const images = supplement.images.map((p) => publicAssetPath(p));
   const { plateFigures, galleryImages, galleryCaptions, galleryCaptionsRich } =
@@ -120,7 +124,7 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
               {supplement.linkedTaxa.map((taxonSlug) => (
                 <Link key={taxonSlug} href={`/algae/${taxonSlug}/`} className="taxon-button">
                   <TaxonItalicName
-                    taxon={taxonSlug.replace(/-/g, " ")}
+                    taxon={algaeBySlug.get(taxonSlug) ?? taxonSlug.replace(/-/g, " ")}
                     className="algae-taxon"
                   />
                 </Link>

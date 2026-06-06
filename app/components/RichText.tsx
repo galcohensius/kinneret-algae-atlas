@@ -86,8 +86,13 @@ export function RichText({ segments }: { segments: RichSegment[] }) {
                   return <InlineTable key={bi} rows={block.rows} />;
                 }
                 const content = renderTextWithBreaks(block.text, seg.italic, seg.bold);
+                const isInternal = seg.href?.startsWith("/");
                 const body = seg.href ? (
-                  <a className="rich-inline-link" href={seg.href} target="_blank" rel="noopener noreferrer">
+                  <a
+                    className="rich-inline-link"
+                    href={seg.href}
+                    {...(!isInternal && { target: "_blank", rel: "noopener noreferrer" })}
+                  >
                     {content}
                   </a>
                 ) : content;
@@ -98,12 +103,12 @@ export function RichText({ segments }: { segments: RichSegment[] }) {
         }
 
         const content = renderTextWithBreaks(seg.text, seg.italic, seg.bold);
+        const isInternal = seg.href?.startsWith("/");
         const body = seg.href ? (
           <a
             className="rich-inline-link"
             href={seg.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            {...(!isInternal && { target: "_blank", rel: "noopener noreferrer" })}
           >
             {content}
           </a>
