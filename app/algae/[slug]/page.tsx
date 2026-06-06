@@ -129,6 +129,17 @@ function FurtherReadingList({
   );
 }
 
+export async function generateMetadata({ params }: AlgaeDetailPageProps) {
+  const { slug } = await params;
+  const record = await getAlgaBySlug(slug);
+  if (!record) return {};
+  const excerpt = record.ecology?.replace(/\s+/g, " ").slice(0, 160).trimEnd();
+  return {
+    title: `${record.scientificName} – Kinneret Algae Atlas`,
+    ...(excerpt && { description: excerpt }),
+  };
+}
+
 export async function generateStaticParams() {
   const algae = await getAllAlgae();
   return algae.map((record) => ({ slug: record.slug }));
