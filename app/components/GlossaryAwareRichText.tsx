@@ -4,6 +4,7 @@ import { Fragment } from "react";
 import type { RichSegment } from "../../lib/algae-types";
 import { linkGlossaryInPlainText } from "../../lib/glossary-link";
 import { glossaryIndex } from "../../lib/glossary-client";
+import { sliceRichSegmentsByPlainRange } from "../../lib/rich-segments";
 import { textContainsTables } from "../../lib/inline-tables";
 import GlossaryTerm from "./GlossaryTerm";
 import { RichText } from "./RichText";
@@ -13,46 +14,40 @@ type GlossaryAwareRichTextProps = {
   enableGlossary?: boolean;
 };
 
-function StyledLiteral({
-  text,
-  italic,
-  bold,
-}: {
-  text: string;
-  italic: boolean;
-  bold: boolean;
-}) {
-  if (bold && italic) return <em><strong>{text}</strong></em>;
-  if (italic) return <em>{text}</em>;
-  if (bold) return <strong>{text}</strong>;
-  return <>{text}</>;
+function isGlossaryEligibleSegment(seg: RichSegment): boolean {
+  return Boolean(seg.text) && !seg.href && !textContainsTables(seg.text);
 }
 
-function GlossaryLinkedRun({
-  text,
-  italic,
-  bold,
-}: {
-  text: string;
-  italic: boolean;
-  bold: boolean;
-}) {
-  const parts = linkGlossaryInPlainText(text, glossaryIndex.matchPhrases);
+/** Link glossary terms across Word run boundaries (italic splits). */
+function GlossaryLinkedRichBlock({ segments }: { segments: RichSegment[] }) {
+  const plain = segments.map((s) => s.text).join("");
+  const parts = linkGlossaryInPlainText(plain, glossaryIndex.matchPhrases);
+  let cursor = 0;
+
   return (
     <>
-      {parts.map((part, i) =>
-        part.type === "text" ? (
-          <StyledLiteral key={i} text={part.text} italic={italic} bold={bold} />
-        ) : (
+      {parts.map((part, i) => {
+        const start = cursor;
+        const end = cursor + part.text.length;
+        cursor = end;
+
+        if (part.type === "text") {
+          const sliced = sliceRichSegmentsByPlainRange(segments, start, end);
+          return sliced.length > 0 ? (
+            <RichText key={`t-${i}-${start}`} segments={sliced} />
+          ) : null;
+        }
+
+        return (
           <GlossaryTerm
-            key={`${i}-${part.slug}`}
+            key={`g-${i}-${part.slug}-${start}`}
             matchedText={part.text}
             slug={part.slug}
             term={part.term}
             definition={part.definition}
           />
-        )
-      )}
+        );
+      })}
     </>
   );
 }
@@ -61,42 +56,41 @@ export default function GlossaryAwareRichText({
   segments,
   enableGlossary = true,
 }: GlossaryAwareRichTextProps) {
+  if (!enableGlossary) {
+    return <RichText segments={segments} />;
+  }
+
+  const blocks: { kind: "glossary" | "other"; segments: RichSegment[] }[] = [];
+  let glossaryRun: RichSegment[] = [];
+
+  const flushGlossary = () => {
+    if (glossaryRun.length > 0) {
+      blocks.push({ kind: "glossary", segments: glossaryRun });
+      glossaryRun = [];
+    }
+  };
+
+  for (const seg of segments) {
+    if (isGlossaryEligibleSegment(seg)) {
+      glossaryRun.push(seg);
+    } else {
+      flushGlossary();
+      blocks.push({ kind: "other", segments: [seg] });
+    }
+  }
+  flushGlossary();
+
   return (
     <>
-      {segments.map((seg, index) => {
-        if (!seg.text) return null;
-
-        const useGlossary = enableGlossary && !seg.href;
-
-        if (seg.href) {
-          const content = <StyledLiteral text={seg.text} italic={seg.italic} bold={seg.bold} />;
-          return (
-            <a
-              key={index}
-              className="rich-inline-link"
-              href={seg.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {content}
-            </a>
-          );
-        }
-
-        if (textContainsTables(seg.text)) {
-          return <RichText key={index} segments={[seg]} />;
-        }
-
-        return (
-          <span key={index}>
-            {useGlossary ? (
-              <GlossaryLinkedRun text={seg.text} italic={seg.italic} bold={seg.bold} />
-            ) : (
-              <StyledLiteral text={seg.text} italic={seg.italic} bold={seg.bold} />
-            )}
-          </span>
-        );
-      })}
+      {blocks.map((block, index) =>
+        block.kind === "glossary" ? (
+          <Fragment key={`glossary-${index}`}>
+            <GlossaryLinkedRichBlock segments={block.segments} />
+          </Fragment>
+        ) : (
+          <RichText key={`other-${index}`} segments={block.segments} />
+        )
+      )}
     </>
   );
 }

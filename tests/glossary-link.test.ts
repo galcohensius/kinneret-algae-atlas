@@ -46,4 +46,38 @@ describe("linkGlossaryInPlainText", () => {
     const parts = linkGlossaryInPlainText("Not applicable here.", phrases);
     expect(parts.every((p) => p.type === "text")).toBe(true);
   });
+
+  it("links plural surface forms for single-word terms", () => {
+    const entries: GlossaryEntry[] = [
+      {
+        term: "Pyrenoid",
+        slug: "pyrenoid",
+        definition: "definition",
+        letter: "P",
+        match_phrases: ["Pyrenoid"],
+      },
+    ];
+    const parts = linkGlossaryInPlainText(
+      "A prominent pyrenoids in each cell.",
+      buildGlossaryMatchPhrases(entries)
+    );
+    expect(parts.some((p) => p.type === "term" && p.text === "pyrenoids")).toBe(true);
+  });
+
+  it("links multi-word terms across segment boundaries when joined", () => {
+    const entries: GlossaryEntry[] = [
+      {
+        term: "Eulittoral zone",
+        slug: "eulittoral-zone",
+        definition: "definition",
+        letter: "E",
+        match_phrases: ["Eulittoral zone"],
+      },
+    ];
+    const phrases = buildGlossaryMatchPhrases(entries);
+    const parts = linkGlossaryInPlainText("in the eulittoral zone of Lake", phrases);
+    expect(parts.some((p) => p.type === "term" && p.text.toLowerCase() === "eulittoral zone")).toBe(
+      true
+    );
+  });
 });
