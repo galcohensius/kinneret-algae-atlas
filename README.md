@@ -51,15 +51,23 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    - Python: `PYTHONPATH=src python -m unittest discover -s tests -p "test_pipeline*.py" -v`  
      (PowerShell: `$env:PYTHONPATH='src'; python -m unittest discover -s tests -p "test_pipeline*.py" -v`)
 
-6. **Glossary** (when `data/raw/1-Glossary.doc` changes, Windows or `.docx`):
+6. **Supplements** (when `data/raw/9-Suppl1*.docx` changes, or after a full image rebuild):
+
+   ```bash
+   python src/extract_supplements.py --input "data/raw/9-Suppl1 cunningtoni vs elpatiewskyi.docx"
+   ```
+
+   > **Important:** `extract_algae.py` does not touch supplement images. If you delete `public/algae-images/` and re-extract, you must re-run this step or supplement figures will be missing.
+
+7. **Glossary** (when `data/raw/1-Glossary.doc` changes, Windows or `.docx`):
 
    ```bash
    python src/extract_glossary.py
    ```
 
-7. **Local preview:** `npm run dev`
+8. **Local preview:** `npm run dev`
 
-8. **Publish:** Commit the updated `data/processed/algae_records.json`, `data/processed/glossary.json`, `public/algae-images/`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
+9. **Publish:** Commit the updated `data/processed/algae_records.json`, `data/processed/glossary.json`, `public/algae-images/`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
 
 **One-shot extract + validate + production build** (still commit and push yourself):
 
