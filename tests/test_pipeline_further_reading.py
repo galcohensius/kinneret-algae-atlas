@@ -132,6 +132,42 @@ class TestFilamentLengthMarker(unittest.TestCase):
         self.assertEqual(plain["filament_length"], "Several centimeters")
 
 
+class TestColonyAndFilamentFieldMarkers(unittest.TestCase):
+    def test_splits_colony_fields_from_single_blob(self) -> None:
+        notes = (
+            "Cell shape: spherical "
+            "Colony shape: spherical to ellipsoidal "
+            "Cell diameter (D): 9-22 mm "
+            "Cell biovolume: 380-4500 mm3, median: 1900 mm3 "
+            "Biovolume equation: Sphere V, µm3 = 4/3 p (D/2)3 "
+            "Colony diameter: 40-150 mm "
+            "Cells per colony: 4-16"
+        )
+        plain, _styles = _normalize_structured_fields_rich(
+            {"notes": notes},
+            {"notes": [0] * len(notes)},
+        )
+        self.assertEqual(plain["cell_shape"], "spherical")
+        self.assertEqual(plain["colony_shape"], "spherical to ellipsoidal")
+        self.assertEqual(plain["cell_diameter_d"], "9-22 mm")
+        self.assertEqual(plain["biovolume_per_cell"], "380-4500 mm3, median: 1900 mm3")
+        self.assertEqual(plain["biovolume_equation"], "Sphere V, µm3 = 4/3 p (D/2)3")
+        self.assertEqual(plain["colony_diameter"], "40-150 mm")
+        self.assertEqual(plain["cells_per_colony"], "4-16")
+
+    def test_splits_cells_per_filament_from_filament_length(self) -> None:
+        notes = (
+            "Filament length: 200-500 µm "
+            "Cells per filament: 20-80"
+        )
+        plain, _styles = _normalize_structured_fields_rich(
+            {"notes": notes},
+            {"notes": [0] * len(notes)},
+        )
+        self.assertEqual(plain["filament_length"], "200-500 µm")
+        self.assertEqual(plain["cells_per_filament"], "20-80")
+
+
 class TestMoveInlineFurtherReadingFromEcology(unittest.TestCase):
     def test_moves_last_further_reading_block(self) -> None:
         eco_main = "Alpha beta. Fig. 3. Gamma ends here."
