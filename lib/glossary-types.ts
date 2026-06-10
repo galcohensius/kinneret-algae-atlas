@@ -10,7 +10,14 @@ export type GlossaryData = {
   title: string;
   record_updated: string;
   source_file?: string;
+  plates?: GlossaryPlate[];
   entries: GlossaryEntry[];
+};
+
+export type GlossaryPlate = {
+  id: string;
+  label: string;
+  src: string;
 };
 
 export type GlossaryMatchPhrase = {

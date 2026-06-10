@@ -11,10 +11,17 @@ const glossaryEntrySchema = z.object({
   match_phrases: z.array(z.string()).min(1),
 });
 
+const glossaryPlateSchema = z.object({
+  id: z.string().min(1),
+  label: z.string().min(1),
+  src: z.string().min(1),
+});
+
 const glossaryDataSchema = z.object({
   title: z.string(),
   record_updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   source_file: z.string().optional(),
+  plates: z.array(glossaryPlateSchema).optional(),
   entries: z.array(glossaryEntrySchema).min(1),
 });
 

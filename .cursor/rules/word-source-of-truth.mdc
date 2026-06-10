@@ -1,0 +1,11 @@
+---
+description: Keep Word files as source of truth
+alwaysApply: true
+---
+
+# Word Source Of Truth
+
+- Never edit or "fix" files under `data/raw/` (Word source files).
+- Treat Word files as the canonical source of truth for atlas content.
+- If typos, wrong units, or other source-content errors are found, report them clearly to the user instead of changing extracted JSON to hide the issue.
+- Re-run extraction/validation after source updates, but do not alter source wording in code or processed files to bypass source errors.

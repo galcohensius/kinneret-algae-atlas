@@ -1,7 +1,12 @@
 import { buildGlossaryMatchPhrases } from "./glossary-link";
-import type { GlossaryData, GlossaryEntry, GlossaryMatchPhrase } from "./glossary-types";
+import type {
+  GlossaryData,
+  GlossaryEntry,
+  GlossaryMatchPhrase,
+  GlossaryPlate,
+} from "./glossary-types";
 
-export type { GlossaryData, GlossaryEntry, GlossaryMatchPhrase };
+export type { GlossaryData, GlossaryEntry, GlossaryMatchPhrase, GlossaryPlate };
 
 export type GlossaryIndex = {
   data: GlossaryData;

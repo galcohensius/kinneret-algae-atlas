@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { GlossaryEntry } from "../../lib/glossary-types";
+import type { GlossaryEntry, GlossaryPlate } from "../../lib/glossary-types";
 
 type LetterGroup = {
   letter: string;
@@ -13,13 +13,36 @@ type GlossaryPageClientProps = {
   recordUpdated: string;
   letters: string[];
   groups: LetterGroup[];
+  plates: GlossaryPlate[];
 };
+
+function renderDefinitionWithPlateLinks(definition: string) {
+  const parts = definition.split(/(Cox \(1996\) Plate [12])/g);
+  return parts.map((part, index) => {
+    if (part === "Cox (1996) Plate 1") {
+      return (
+        <a key={`${index}-plate-1`} href="#cox-1996-plate-1">
+          {part}
+        </a>
+      );
+    }
+    if (part === "Cox (1996) Plate 2") {
+      return (
+        <a key={`${index}-plate-2`} href="#cox-1996-plate-2">
+          {part}
+        </a>
+      );
+    }
+    return <span key={`${index}-text`}>{part}</span>;
+  });
+}
 
 export default function GlossaryPageClient({
   title,
   recordUpdated,
   letters,
   groups,
+  plates,
 }: GlossaryPageClientProps) {
   const [query, setQuery] = useState("");
 
@@ -90,13 +113,27 @@ export default function GlossaryPageClient({
               {group.entries.map((entry) => (
                 <div key={entry.slug} id={entry.slug} className="glossary-entry">
                   <dt>{entry.term}</dt>
-                  <dd>{entry.definition}</dd>
+                  <dd>{renderDefinitionWithPlateLinks(entry.definition)}</dd>
                 </div>
               ))}
             </dl>
           </section>
         ))
       )}
+
+      {plates.length > 0 ? (
+        <section className="glossary-plates" aria-labelledby="glossary-plates-heading">
+          <h2 id="glossary-plates-heading" className="glossary-letter-heading">
+            Cox (1996) reference plates
+          </h2>
+          {plates.map((plate) => (
+            <figure key={plate.id} id={plate.id} className="plate-figure">
+              <img src={plate.src} alt={`Glossary ${plate.label} from Cox (1996)`} />
+              <figcaption className="muted">{plate.label}</figcaption>
+            </figure>
+          ))}
+        </section>
+      ) : null}
     </>
   );
 }

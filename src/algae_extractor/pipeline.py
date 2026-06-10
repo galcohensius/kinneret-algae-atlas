@@ -336,6 +336,7 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("organization", ["organization"]),
     ("color", ["color"]),
     ("cell_shape", ["cell shape"]),
+    ("colony_shape", ["colony shape"]),
     # Longer phrases first. Single-word "diameter"/"length" use _compile_field_marker_pattern
     # (parentheses required before ':') so narrative "diameter: 37 µm" does not split fields.
     ("cell_diameter_d", ["cell diameter", "cell size", "diameter"]),
@@ -344,11 +345,14 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
         "biovolume_per_cell",
         ["biovolume per cell", "cell biovolume", "biovolume/cell"],
     ),
+    ("biovolume_equation", ["biovolume equation"]),
     # Filamentous species only (e.g. Bangia). In Word the value is often glued to
     # the end of the "Cell diameter (D):" line; the "filament length" marker pulls
     # it into its own quick fact, shown right after "Cell biovolume".
     ("filament_length", ["filament length"]),
-    ("biovolume_equation", ["biovolume equation"]),
+    ("cells_per_filament", ["cells per filament", "cells/filament"]),
+    ("colony_diameter", ["colony diameter"]),
+    ("cells_per_colony", ["cells per colony", "cells/colony"]),
     ("morphological_features", ["morphological features"]),
     (
         "distinctive_attributes",

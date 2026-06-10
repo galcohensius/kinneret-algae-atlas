@@ -32,6 +32,7 @@ export default async function GlossaryPage() {
           recordUpdated={index.data.record_updated}
           letters={index.letters}
           groups={groups}
+          plates={index.data.plates ?? []}
         />
       </article>
 

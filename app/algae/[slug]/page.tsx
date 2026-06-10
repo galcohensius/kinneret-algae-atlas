@@ -37,11 +37,15 @@ const FIELD_LABELS: Record<string, string> = {
   organization: "Organization",
   color: "Color",
   cell_shape: "Cell shape",
+  colony_shape: "Colony shape",
   cell_diameter_d: "Cell diameter (D)",
   cell_length_l: "Cell length (L)",
   biovolume_per_cell: "Cell biovolume",
-  filament_length: "Filament length",
   biovolume_equation: "Biovolume equation",
+  filament_length: "Filament length",
+  cells_per_filament: "Cells per filament",
+  colony_diameter: "Colony diameter",
+  cells_per_colony: "Cells per colony",
   morphological_features: "Morphological features",
   distinctive_attributes: "Distinctive features",
   ecology: "Ecology",
@@ -65,11 +69,15 @@ const QUICK_FACT_KEYS = [
   "organization",
   "color",
   "cell_shape",
+  "colony_shape",
   "cell_diameter_d",
   "cell_length_l",
   "biovolume_per_cell",
+  "biovolume_equation",
   "filament_length",
-  "biovolume_equation"
+  "cells_per_filament",
+  "colony_diameter",
+  "cells_per_colony"
 ] as const;
 
 const QUICK_FACT_BODY_KEYS = QUICK_FACT_KEYS.filter((key) => key !== "previous_name_used");
