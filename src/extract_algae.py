@@ -167,10 +167,11 @@ def main():
     parser.add_argument(
         "--exclude-glob",
         action="append",
-        default=["*suppl*.docx"],
+        default=["*suppl*.docx", "*glossary*.docx"],
         help=(
             "Glob pattern (against filename) excluded from raw-dir auto-discovery. "
-            "Repeat for multiple patterns."
+            "Supplements (*suppl*) and the glossary (*glossary*) have their own "
+            "extractors and are excluded by default. Repeat for multiple patterns."
         ),
     )
     parser.add_argument(

@@ -53,6 +53,55 @@ def _normalize_text_and_styles(chars: list[tuple[str, int]]) -> tuple[str, list[
     return ("".join(out_chars), out_styles)
 
 
+# Adobe "Symbol" font maps Latin code points to Greek letters / math glyphs
+# (e.g. the byte for "m" renders as the micron µ, "p" renders as π). Word stores
+# the underlying Latin character, so plain text extraction yields "m"/"p" unless
+# we remap by font. Some Word builds instead store the glyph in the F0xx Private
+# Use Area (0xF000 + code); we strip that offset before mapping.
+_ADOBE_SYMBOL_TO_UNICODE: dict[int, str] = {
+    # lowercase Greek (0x61-0x7A)
+    0x61: "α", 0x62: "β", 0x63: "χ", 0x64: "δ", 0x65: "ε", 0x66: "φ",
+    0x67: "γ", 0x68: "η", 0x69: "ι", 0x6A: "ϕ", 0x6B: "κ", 0x6C: "λ",
+    0x6D: "μ", 0x6E: "ν", 0x6F: "ο", 0x70: "π", 0x71: "θ", 0x72: "ρ",
+    0x73: "σ", 0x74: "τ", 0x75: "υ", 0x76: "ϖ", 0x77: "ω", 0x78: "ξ",
+    0x79: "ψ", 0x7A: "ζ",
+    # uppercase Greek (0x41-0x5A)
+    0x41: "Α", 0x42: "Β", 0x43: "Χ", 0x44: "Δ", 0x45: "Ε", 0x46: "Φ",
+    0x47: "Γ", 0x48: "Η", 0x49: "Ι", 0x4A: "ϑ", 0x4B: "Κ", 0x4C: "Λ",
+    0x4D: "Μ", 0x4E: "Ν", 0x4F: "Ο", 0x50: "Π", 0x51: "Θ", 0x52: "Ρ",
+    0x53: "Σ", 0x54: "Τ", 0x55: "Υ", 0x56: "ς", 0x57: "Ω", 0x58: "Ξ",
+    0x59: "Ψ", 0x5A: "Ζ",
+    # common math glyphs in Symbol encoding
+    0xB1: "±", 0xB3: "≥", 0xA3: "≤", 0xB9: "≠", 0xBB: "↔", 0xB4: "×",
+    0xB8: "÷", 0xB0: "°", 0xA5: "∞", 0xD7: "≅", 0xBD: "|",
+}
+
+
+def _remap_symbol_text(text: str, is_symbol_font: bool) -> str:
+    """Convert Symbol-font / F0xx-PUA code points to their real Unicode glyphs."""
+    if not text:
+        return text
+    out: list[str] = []
+    for ch in text:
+        cp = ord(ch)
+        if 0xF000 <= cp <= 0xF0FF:
+            # F0xx is "Symbol glyph at code (cp - 0xF000)": map Greek/math via the
+            # table, else fall back to the plain ASCII glyph (space, digits, etc.)
+            # rather than leaking the invisible PUA character through.
+            base = cp - 0xF000
+            out.append(_ADOBE_SYMBOL_TO_UNICODE.get(base, chr(base)))
+        elif is_symbol_font:
+            out.append(_ADOBE_SYMBOL_TO_UNICODE.get(cp, ch))
+        else:
+            out.append(ch)
+    return "".join(out)
+
+
+def _run_font_is_symbol(run) -> bool:
+    name = getattr(run.font, "name", None)
+    return bool(name) and name.lower() == "symbol"
+
+
 _SUPERSCRIPT_MAP: dict[str, str] = {
     "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴",
     "5": "⁵", "6": "⁶", "7": "⁷", "8": "⁸", "9": "⁹",
@@ -81,7 +130,7 @@ def _paragraph_to_plain_and_styles(paragraph: Paragraph) -> tuple[str, list[int]
         style = (1 if italic else 0) | (2 if bold else 0)
         if not run.text:
             continue
-        run_text = run.text
+        run_text = _remap_symbol_text(run.text, _run_font_is_symbol(run))
         if getattr(run.font, "superscript", None):
             run_text = _apply_script_map(run_text, _SUPERSCRIPT_MAP)
         elif getattr(run.font, "subscript", None):
@@ -95,6 +144,16 @@ def _paragraph_to_plain_and_styles(paragraph: Paragraph) -> tuple[str, list[int]
     if not plain:
         return None
     return plain, styles
+
+
+def paragraph_clean_text(paragraph: Paragraph) -> str:
+    """Plain paragraph text with Symbol-font glyphs and super/subscripts normalized.
+
+    Returns "" for empty paragraphs (unlike `_paragraph_to_plain_and_styles`, which
+    returns None) so callers can join paragraphs line-by-line.
+    """
+    converted = _paragraph_to_plain_and_styles(paragraph)
+    return converted[0] if converted else ""
 
 
 def iter_docx_paragraphs(docx_path: str | Path):
@@ -554,6 +613,9 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
             bold = bool(getattr(run, "bold", False))
             italic = bool(getattr(run, "italic", False))
             style_int = (1 if italic else 0) | (2 if bold else 0)
+            is_symbol = _run_font_is_symbol(run)
+            is_superscript = bool(getattr(run.font, "superscript", None))
+            is_subscript = bool(getattr(run.font, "subscript", None))
 
             for el in run._element:
                 tag = el.tag.split("}")[-1]
@@ -616,7 +678,12 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                         yield {"type": "page_break"}
                 elif tag == "t":
                     if el.text:
-                        buf_chars.extend((ch, style_int) for ch in el.text)
+                        run_text = _remap_symbol_text(el.text, is_symbol)
+                        if is_superscript:
+                            run_text = _apply_script_map(run_text, _SUPERSCRIPT_MAP)
+                        elif is_subscript:
+                            run_text = _apply_script_map(run_text, _SUBSCRIPT_MAP)
+                        buf_chars.extend((ch, style_int) for ch in run_text)
 
         sent = take_paragraph_dict()
         if sent is not None:

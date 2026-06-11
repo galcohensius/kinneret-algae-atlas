@@ -35,7 +35,8 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    ```
 
    For multi-doc builds, repeat `--input` (one per file), or omit `--input` to auto-discover all
-   `data/raw/*.docx` files except names matching `*suppl*.docx`.
+   `data/raw/*.docx` files except names matching `*suppl*.docx` or `*glossary*.docx` (supplements
+   and the glossary have their own extractors below).
 
    Re-running extraction **prunes** each species image folder: files not listed in the new
    JSON are deleted (so replaced or removed pictures in Word do not leave stale files on disk).
@@ -59,11 +60,14 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 
    > **Important:** `extract_algae.py` does not touch supplement images. If you delete `public/algae-images/` and re-extract, you must re-run this step or supplement figures will be missing.
 
-7. **Glossary** (when `data/raw/1-Glossary.doc` changes, Windows or `.docx`):
+7. **Glossary** (when the `data/raw/*glossary*` file changes, Windows `.doc` or `.docx`):
 
    ```bash
    python src/extract_glossary.py
    ```
+
+   With no `--input`, the newest `data/raw/*glossary*.docx` is auto-discovered (date-stamped
+   names sort newest-last). Pass `--input` to force a specific file.
 
 8. **Local preview:** `npm run dev`
 

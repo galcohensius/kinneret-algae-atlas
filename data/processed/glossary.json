@@ -1,6 +1,6 @@
 {
   "title": "Glossary: terms used in species descriptions",
-  "record_updated": "2026-06-10",
+  "record_updated": "2026-06-11",
   "entries": [
     {
       "term": "acicular",
@@ -23,7 +23,7 @@
     {
       "term": "alkalinity",
       "slug": "alkalinity",
-      "definition": "mg CaCO3 L-1",
+      "definition": "mg CaCO₃ L⁻¹",
       "letter": "A",
       "match_phrases": [
         "alkalinity"
@@ -87,7 +87,7 @@
     {
       "term": "apiculate",
       "slug": "apiculate",
-      "definition": "terminating in a short, sharp, flexible point in diatoms: having a short broad tip see Cox (1996) Plate 2",
+      "definition": "terminating in a short, sharp, flexible point. In diatoms: having a short broad tip see Cox (1996) Plate 2",
       "letter": "A",
       "match_phrases": [
         "apiculate"
@@ -151,7 +151,7 @@
     {
       "term": "auxospore",
       "slug": "auxospore",
-      "definition": "large cell resulting from sexual reproduction or autogamy.  In diatoms, they lack the rigid valves, instead they are covered by delicate siliceous scales or bands",
+      "definition": "large cell resulting from sexual reproduction or autogamy. In diatoms, they lack the rigid valves, instead they are covered by delicate siliceous scales or bands",
       "letter": "A",
       "match_phrases": [
         "auxospore"
@@ -205,7 +205,7 @@
     {
       "term": "cingulum (plural: cingula)",
       "slug": "cingulum",
-      "definition": "portion of the diatom girdle associated with a single valve.  In dinoflagellates:  a transverse groove that encircles the cell and holds the transverse flagellum in place.",
+      "definition": "portion of the diatom girdle associated with a single valve. In dinoflagellates: a transverse groove that encircles the cell and holds the transverse flagellum in place.",
       "letter": "C",
       "match_phrases": [
         "cingulum",
@@ -215,7 +215,7 @@
     {
       "term": "conductivity",
       "slug": "conductivity",
-      "definition": "specific conductance, S cm-1",
+      "definition": "specific conductance, μS cm⁻¹",
       "letter": "C",
       "match_phrases": [
         "conductivity"
@@ -381,7 +381,7 @@
     {
       "term": "heteropolar",
       "slug": "heteropolar",
-      "definition": "having different poles.  In diatoms: with apices of differing size and/or shape",
+      "definition": "having different poles. In diatoms: with apices of differing size and/or shape",
       "letter": "H",
       "match_phrases": [
         "heteropolar"
@@ -426,7 +426,7 @@
     {
       "term": "isopolar",
       "slug": "isopolar",
-      "definition": "having the same poles.  In diatoms: with apices of the same size and shape",
+      "definition": "having the same poles. In diatoms: with apices of the same size and shape",
       "letter": "I",
       "match_phrases": [
         "isopolar"
@@ -435,7 +435,7 @@
     {
       "term": "isthmus",
       "slug": "isthmus",
-      "definition": "in desmids: the narrow mid-region of the cell connecting the two semicells.  The nucleus is located in this mid-region",
+      "definition": "in desmids: the narrow mid-region of the cell connecting the two semicells. The nucleus is located in this mid-region",
       "letter": "I",
       "match_phrases": [
         "isthmus"
@@ -480,7 +480,7 @@
     {
       "term": "lunate",
       "slug": "lunate",
-      "definition": "shape of a moon in its first quarter.  see Cox (1996) Plate 1",
+      "definition": "shape of a moon in its first quarter. see Cox (1996) Plate 1",
       "letter": "L",
       "match_phrases": [
         "lunate"
@@ -625,7 +625,7 @@
     {
       "term": "radial symmetry",
       "slug": "radial-symmetry",
-      "definition": "symmetry resembling that of a pie, where several cutting planes produce roughly identical pieces.  There is no left or right side, only top (dorsal) and bottom (ventral) sides",
+      "definition": "symmetry resembling that of a pie, where several cutting planes produce roughly identical pieces. There is no left or right side, only top (dorsal) and bottom (ventral) sides",
       "letter": "R",
       "match_phrases": [
         "radial symmetry"
@@ -689,7 +689,7 @@
     {
       "term": "serrulate",
       "slug": "serrulate",
-      "definition": "finely serrated.  Having a finely notched edge like the teeth of a saw",
+      "definition": "finely serrated. Having a finely notched edge like the teeth of a saw",
       "letter": "S",
       "match_phrases": [
         "serrulate"
@@ -771,7 +771,7 @@
     {
       "term": "suture",
       "slug": "suture",
-      "definition": "Line or groove, especially in desmids, marking the limits between adjacent semicells. In filamentous zygnematales: groove around zygospore.  In armored dinoflagellates: groove between the plates",
+      "definition": "Line or groove, especially in desmids, marking the limits between adjacent semicells. In filamentous zygnematales: groove around zygospore. In armored dinoflagellates: groove between the plates",
       "letter": "S",
       "match_phrases": [
         "suture"
@@ -871,7 +871,7 @@
     {
       "term": "valve",
       "slug": "valve",
-      "definition": "one of two halves of the diatom silicaceous shell (=frustule).  The two valves usually have the same shape, but since one fits into the other as in a petri dish, they are of different size",
+      "definition": "one of two halves of the diatom silicaceous shell (=frustule). The two valves usually have the same shape, but since one fits into the other as in a petri dish, they are of different size",
       "letter": "V",
       "match_phrases": [
         "valve"
@@ -981,5 +981,5 @@
       "src": "/glossary-images/cox-1996-plate-2.png"
     }
   ],
-  "source_file": "1-Glossary 2026-06-07.doc"
+  "source_file": "1-Glossary 2026-06-11.docx"
 }

@@ -16,8 +16,10 @@ from glossary_extractor.parse import parse_glossary_text
 def _read_docx_paragraphs(path: Path) -> str:
     from docx import Document
 
+    from algae_extractor.reader import paragraph_clean_text
+
     doc = Document(str(path))
-    return "\n".join(p.text for p in doc.paragraphs)
+    return "\n".join(paragraph_clean_text(p) for p in doc.paragraphs)
 
 
 def _open_word_app():
@@ -166,12 +168,30 @@ def _normalize_cox_figure_references(data: dict) -> None:
         entry["definition"] = definition
 
 
+def _discover_glossary_input(raw_dir: Path) -> Path | None:
+    """Find the glossary source in raw_dir, preferring .docx and the newest name.
+
+    Source filenames are date-stamped (e.g. "1-Glossary 2026-06-11.docx"), so the
+    fixed default cannot be relied on. Sort last = most recent date for these names.
+    """
+    candidates = sorted(
+        p for p in raw_dir.glob("*.doc*") if "glossary" in p.name.lower()
+    )
+    if not candidates:
+        return None
+    docx = [p for p in candidates if p.suffix.lower() == ".docx"]
+    return (docx or candidates)[-1]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Extract glossary JSON from Word.")
     parser.add_argument(
         "--input",
-        default="data/raw/1-Glossary.doc",
-        help="Path to glossary Word file (.doc or .docx).",
+        default=None,
+        help=(
+            "Path to glossary Word file (.doc or .docx). "
+            "If omitted, the newest data/raw/*glossary*.docx is auto-discovered."
+        ),
     )
     parser.add_argument(
         "--output",
@@ -190,7 +210,14 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    input_path = Path(args.input)
+    if args.input:
+        input_path = Path(args.input)
+    else:
+        discovered = _discover_glossary_input(Path("data/raw"))
+        if discovered is None:
+            raise SystemExit("No glossary file found in data/raw (looked for *glossary*.doc*).")
+        input_path = discovered
+
     output_path = Path(args.output)
     images_dir = Path(args.images_dir)
     if not input_path.is_file():
