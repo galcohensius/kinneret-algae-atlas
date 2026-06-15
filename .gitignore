@@ -5,6 +5,7 @@ node_modules/
 .next/
 out/
 coverage/
+.idea/
 *.tsbuildinfo
 tsconfig.tsbuildinfo
 next-env.d.ts
