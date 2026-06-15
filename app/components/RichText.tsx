@@ -29,23 +29,40 @@ function InlineTable({ rows }: { rows: string[][] }) {
   );
 }
 
-function renderSegmentContent(text: string, italic: boolean, bold: boolean) {
-  if (bold && italic) return <em><strong>{text}</strong></em>;
-  if (italic) return <em>{text}</em>;
-  if (bold) return <strong>{text}</strong>;
-  return <Fragment>{text}</Fragment>;
+function renderSegmentContent(
+  text: string,
+  italic: boolean,
+  bold: boolean,
+  superscript = false,
+  subscript = false,
+) {
+  let content: React.ReactNode;
+  if (bold && italic) content = <em><strong>{text}</strong></em>;
+  else if (italic) content = <em>{text}</em>;
+  else if (bold) content = <strong>{text}</strong>;
+  else content = <Fragment>{text}</Fragment>;
+
+  if (superscript) return <sup>{content}</sup>;
+  if (subscript) return <sub>{content}</sub>;
+  return content;
 }
 
 /** Renders text that may contain `\n` as inline content with `<br/>` breaks. */
-function renderTextWithBreaks(text: string, italic: boolean, bold: boolean): React.ReactNode {
-  if (!text.includes("\n")) return renderSegmentContent(text, italic, bold);
+function renderTextWithBreaks(
+  text: string,
+  italic: boolean,
+  bold: boolean,
+  superscript = false,
+  subscript = false,
+): React.ReactNode {
+  if (!text.includes("\n")) return renderSegmentContent(text, italic, bold, superscript, subscript);
   const lines = text.split("\n");
   return (
     <Fragment>
       {lines.map((line, i) => (
         <Fragment key={i}>
           {i > 0 && <br />}
-          {line && renderSegmentContent(line, italic, bold)}
+          {line && renderSegmentContent(line, italic, bold, superscript, subscript)}
         </Fragment>
       ))}
     </Fragment>
@@ -85,7 +102,13 @@ export function RichText({ segments }: { segments: RichSegment[] }) {
                 if (block.type === "table") {
                   return <InlineTable key={bi} rows={block.rows} />;
                 }
-                const content = renderTextWithBreaks(block.text, seg.italic, seg.bold);
+                const content = renderTextWithBreaks(
+                  block.text,
+                  seg.italic,
+                  seg.bold,
+                  seg.superscript,
+                  seg.subscript,
+                );
                 const isInternal = seg.href?.startsWith("/");
                 const body = seg.href ? (
                   <a
@@ -102,7 +125,13 @@ export function RichText({ segments }: { segments: RichSegment[] }) {
           );
         }
 
-        const content = renderTextWithBreaks(seg.text, seg.italic, seg.bold);
+        const content = renderTextWithBreaks(
+          seg.text,
+          seg.italic,
+          seg.bold,
+          seg.superscript,
+          seg.subscript,
+        );
         const isInternal = seg.href?.startsWith("/");
         const body = seg.href ? (
           <a

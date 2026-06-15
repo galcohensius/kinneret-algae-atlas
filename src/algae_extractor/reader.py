@@ -26,6 +26,8 @@ def _normalize_text_and_styles(chars: list[tuple[str, int]]) -> tuple[str, list[
     Style flags are bit-packed:
       - bit 1: italic
       - bit 2: bold
+      - bit 4: superscript
+      - bit 8: subscript
       - bit 0: neutral
     """
     out_chars: list[str] = []
@@ -122,18 +124,43 @@ def _apply_script_map(text: str, mapping: dict[str, str]) -> str:
     return "".join(mapping.get(c, c) for c in text)
 
 
+# Inverse of the script maps: glyph -> ASCII source. Super/subscript glyph sets are
+# disjoint, so a single combined lookup is unambiguous.
+_SUPERSCRIPT_UNMAP: dict[str, str] = {v: k for k, v in _SUPERSCRIPT_MAP.items()}
+_SUBSCRIPT_UNMAP: dict[str, str] = {v: k for k, v in _SUBSCRIPT_MAP.items()}
+
+
+def unmap_script_glyphs(text: str) -> str:
+    """Convert super/subscript Unicode glyphs back to their ASCII source characters.
+
+    Plain-text output keeps the baked glyphs (e.g. the glossary has no rich rendering),
+    but rich segments store super/subscript runs as ASCII plus a style flag so the
+    frontend can wrap them in <sup>/<sub>. This also recovers characters that have no
+    superscript glyph (e.g. the decimal point in an exponent like D2.5264), which the
+    baked-glyph form leaves stranded on the baseline.
+    """
+    return "".join(_SUPERSCRIPT_UNMAP.get(c, _SUBSCRIPT_UNMAP.get(c, c)) for c in text)
+
+
 def _paragraph_to_plain_and_styles(paragraph: Paragraph) -> tuple[str, list[int]] | None:
     chars: list[tuple[str, int]] = []
     for run in paragraph.runs:
         bold = bool(getattr(run, "bold", False))
         italic = bool(getattr(run, "italic", False))
-        style = (1 if italic else 0) | (2 if bold else 0)
+        is_superscript = bool(getattr(run.font, "superscript", None))
+        is_subscript = bool(getattr(run.font, "subscript", None))
+        style = (
+            (1 if italic else 0)
+            | (2 if bold else 0)
+            | (4 if is_superscript else 0)
+            | (8 if is_subscript else 0)
+        )
         if not run.text:
             continue
         run_text = _remap_symbol_text(run.text, _run_font_is_symbol(run))
-        if getattr(run.font, "superscript", None):
+        if is_superscript:
             run_text = _apply_script_map(run_text, _SUPERSCRIPT_MAP)
-        elif getattr(run.font, "subscript", None):
+        elif is_subscript:
             run_text = _apply_script_map(run_text, _SUBSCRIPT_MAP)
         chars.extend([(c, style) for c in run_text])
 
@@ -612,10 +639,15 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
         for run in paragraph.runs:
             bold = bool(getattr(run, "bold", False))
             italic = bool(getattr(run, "italic", False))
-            style_int = (1 if italic else 0) | (2 if bold else 0)
             is_symbol = _run_font_is_symbol(run)
             is_superscript = bool(getattr(run.font, "superscript", None))
             is_subscript = bool(getattr(run.font, "subscript", None))
+            style_int = (
+                (1 if italic else 0)
+                | (2 if bold else 0)
+                | (4 if is_superscript else 0)
+                | (8 if is_subscript else 0)
+            )
 
             for el in run._element:
                 tag = el.tag.split("}")[-1]

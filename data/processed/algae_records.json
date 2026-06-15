@@ -46,7 +46,18 @@
           "bold": false
         },
         {
-          "text": " sp. depth-integrated wet-weight biomass (g m⁻²), Lake Kinneret, 1987-2016.",
+          "text": " sp. depth-integrated wet-weight biomass (g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1987-2016.",
           "italic": false,
           "bold": false
         }
@@ -80,7 +91,51 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at temperatures > 23oC, pH > 8.4, and lower concentrations of NO₃ and NH₄. Field data from 1987-2020.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at temperatures > 23",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C, pH > 8.4, and lower concentrations of NO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " and NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ". Field data from 1987-2020.",
           "italic": false,
           "bold": false
         }
@@ -170,14 +225,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "230 - 1000 μm³, median: 470 μm³.",
+          "text": "230 - 1000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 470 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "Sphere, V, μm³ = 4/3 π (D/2)³. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.",
+          "text": "Sphere, V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.",
           "italic": false,
           "bold": false
         }
@@ -276,7 +375,18 @@
           "bold": false
         },
         {
-          "text": " (cell volume ~ 500 μm³) is most common. The data presented here are for this small ",
+          "text": " (cell volume ~ 500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") is most common. The data presented here are for this small ",
           "italic": false,
           "bold": false
         },
@@ -306,7 +416,18 @@
           "bold": false
         },
         {
-          "text": " never forms blooms but occurs quite often at low cell densities, usually < 50 cells/mL, contributing to total phytoplankton biomass up to a maximum of ~3 g m⁻² (Fig. 1). It can appear in the plankton at all times of the year but is more abundant during stratification, from May to December, with highest cell abundances occur in June-July (Fig. 2). Cell size fluctuates seasonally, with largest cell-size in summer (Fig. 2). This is different from the cell size of other Kinneret dinoflagellates, that is usually largest in winter. The reason could be that more than a single species has been counted as ",
+          "text": " never forms blooms but occurs quite often at low cell densities, usually < 50 cells/mL, contributing to total phytoplankton biomass up to a maximum of ~3 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 1). It can appear in the plankton at all times of the year but is more abundant during stratification, from May to December, with highest cell abundances occur in June-July (Fig. 2). Cell size fluctuates seasonally, with largest cell-size in summer (Fig. 2). This is different from the cell size of other Kinneret dinoflagellates, that is usually largest in winter. The reason could be that more than a single species has been counted as ",
           "italic": false,
           "bold": false
         },
@@ -316,7 +437,18 @@
           "bold": false
         },
         {
-          "text": ", with a larger species more common in summer. Higher cell abundances are associated with water temperatures > 23oC (Fig. 3). ",
+          "text": ", with a larger species more common in summer. Higher cell abundances are associated with water temperatures > 23",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C (Fig. 3). ",
           "italic": false,
           "bold": false
         },
@@ -326,7 +458,18 @@
           "bold": false
         },
         {
-          "text": " occurs over the full range of conductivity, Cl, Ca, alkalinity, SO₄, Si, water levels and solar radiation levels recorded in the lake, mostly when transparency is high (at lower ambient concentrations of chlorophyll ",
+          "text": " occurs over the full range of conductivity, Cl, Ca, alkalinity, SO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ", Si, water levels and solar radiation levels recorded in the lake, mostly when transparency is high (at lower ambient concentrations of chlorophyll ",
           "italic": false,
           "bold": false
         },
@@ -344,7 +487,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -540,7 +683,18 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "70,000 μm³ (literature value, we do not routinely measure this species)",
+          "text": "70,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (literature value, we do not routinely measure this species)",
           "italic": false,
           "bold": false
         }
@@ -684,7 +838,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -905,7 +1059,18 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "73,000 μm³ (literature value, we do not routinely measure this species)",
+          "text": "73,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (literature value, we do not routinely measure this species)",
           "italic": false,
           "bold": false
         }
@@ -1051,7 +1216,18 @@
           "bold": false
         },
         {
-          "text": " is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cells mL⁻¹ (Fig. 1), and <10% contribution to total biomass. An exception was a spring bloom in 2010, a year when ",
+          "text": " is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 1), and <10% contribution to total biomass. An exception was a spring bloom in 2010, a year when ",
           "italic": false,
           "bold": false
         },
@@ -1071,7 +1247,29 @@
           "bold": false
         },
         {
-          "text": " didn’t bloom. Cell concentration in the epilimnion reached 50 cells mL-¹ on14 March 2010, with biomass of 150 g m⁻² (Fig. 1), contributing > 70% to total biomass. This species appears in the water column in January, peaks between March and June, then disappear from the water till next spring (Fig. 2). The mean abundance of ",
+          "text": " didn’t bloom. Cell concentration in the epilimnion reached 50 cells mL-",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " on14 March 2010, with biomass of 150 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 1), contributing > 70% to total biomass. This species appears in the water column in January, peaks between March and June, then disappear from the water till next spring (Fig. 2). The mean abundance of ",
           "italic": false,
           "bold": false
         },
@@ -1188,7 +1386,51 @@
           "bold": false
         },
         {
-          "text": " (> 5 cells mL⁻¹) occurred usually during thermal stratification, over the full ranges of salinities and Ca concentrations, at water temperatures ranging 16-29oC, intermediate alkalinities (90-140 mg CaCO₃ L⁻¹), and distinctly at pH > 8.5, when both nitrate and organic N (particulate and dissolved) are present (Fig. 3).",
+          "text": " (> 5 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") occurred usually during thermal stratification, over the full ranges of salinities and Ca concentrations, at water temperatures ranging 16-29",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C, intermediate alkalinities (90-140 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), and distinctly at pH > 8.5, when both nitrate and organic N (particulate and dissolved) are present (Fig. 3).",
           "italic": false,
           "bold": false
         }
@@ -1203,7 +1445,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -1327,7 +1569,29 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher alkalinity, lower Si and NH₄. Based on field data from 1970-2020.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher alkalinity, lower Si and NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ". Based on field data from 1970-2020.",
           "italic": false,
           "bold": false
         }
@@ -1471,14 +1735,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "15,000 – 40,000 μm³, median: 22,000 μm³.",
+          "text": "15,000 – 40,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 22,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = (π/12) *D² *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999).",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = (π/12) *D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999).",
           "italic": false,
           "bold": false
         }
@@ -1549,7 +1857,18 @@
           "bold": false
         },
         {
-          "text": " is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL⁻¹ (Fig. 1). It appears in the plankton from November (onset of destratification) to July, with peak abundance in March (Fig. 2), before the lake stratifies, and earlier than most other Kinneret dinoflagellates. It is more common in littoral samples. Being heterotrophic, ",
+          "text": " is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 1). It appears in the plankton from November (onset of destratification) to July, with peak abundance in March (Fig. 2), before the lake stratifies, and earlier than most other Kinneret dinoflagellates. It is more common in littoral samples. Being heterotrophic, ",
           "italic": false,
           "bold": false
         },
@@ -1576,7 +1895,51 @@
       ],
       "environmental_conditions": [
         {
-          "text": "Higher cell abundances of this species occurred at higher Kinneret alkalinity (> 100 mg CaCO₃ L⁻¹), Ca (> 40 mg L⁻¹), TDP, and DO concentrations, when Dissolved organic N (DON) ranged 0.1-0.5 mg L⁻¹ and Secchi depth ranged 2-4 m, At low turbidity (< 4 NTU) waters, and low Si (Fig. 3). Abundance seemed to be indifferent to water level, conductivity, chloride, short wave radiation. Abundance was higher with lower long-wave radiation levels and water temperatures < 25 C, but both may be correlates of the time of year of its peak abundance.",
+          "text": "Higher cell abundances of this species occurred at higher Kinneret alkalinity (> 100 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Ca (> 40 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), TDP, and DO concentrations, when Dissolved organic N (DON) ranged 0.1-0.5 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " and Secchi depth ranged 2-4 m, At low turbidity (< 4 NTU) waters, and low Si (Fig. 3). Abundance seemed to be indifferent to water level, conductivity, chloride, short wave radiation. Abundance was higher with lower long-wave radiation levels and water temperatures < 25 C, but both may be correlates of the time of year of its peak abundance.",
           "italic": false,
           "bold": false
         }
@@ -1591,7 +1954,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -1812,14 +2175,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "14,000 – 40,500 μm³, median: 21,300 μm³. Larger cell size in winter, smaller in summer (see Fig. 2b).",
+          "text": "14,000 – 40,500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 21,300 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Larger cell size in winter, smaller in summer (see Fig. 2b).",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = 0.9405 D².⁸⁵⁹⁶ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 0.9405 D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2.8596",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).",
           "italic": false,
           "bold": false
         }
@@ -2020,7 +2427,29 @@
           "bold": false
         },
         {
-          "text": " shows an annual cycle also of cell size (Fig. 2b). Its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 μm, volume: 31,000 μm³) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 μm, volume: 11,000 μm³) at about the same time as the minimum cell abundance. ",
+          "text": " shows an annual cycle also of cell size (Fig. 2b). Its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 μm, volume: 31,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 μm, volume: 11,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") at about the same time as the minimum cell abundance. ",
           "italic": false,
           "bold": false
         },
@@ -2040,7 +2469,29 @@
           "bold": false
         },
         {
-          "text": " is potentially capable of using HCO₃ as C source for photosynthesis when pH is high and CO₂ availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of ",
+          "text": " is potentially capable of using HCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " as C source for photosynthesis when pH is high and CO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of ",
           "italic": false,
           "bold": false
         },
@@ -2082,14 +2533,58 @@
           "bold": false
         },
         {
-          "text": " biomass > 5 g m⁻² occurred more frequently but not exclusively at pH > 8.5, alkalinity < 130 mg L⁻¹, chloride <280 mg L⁻¹, at water temperatures >17 C (Fig. 3), and over the full range of TDP and calcium concentrations, when the lake was stratified (not shown).",
+          "text": " biomass > 5 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " occurred more frequently but not exclusively at pH > 8.5, alkalinity < 130 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", chloride <280 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", at water temperatures >17 C (Fig. 3), and over the full range of TDP and calcium concentrations, when the lake was stratified (not shown).",
           "italic": false,
           "bold": false
         }
       ],
       "further_reading": [
         {
-          "text": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO₂ availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr. 39:1822-1834.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043.",
+          "text": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr. 39:1822-1834.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043.",
           "italic": false,
           "bold": false
         }
@@ -2097,7 +2592,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -2266,7 +2761,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. ",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. ",
           "italic": false,
           "bold": false
         },
@@ -2340,7 +2846,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling.",
           "italic": false,
           "bold": false
         }
@@ -2474,16 +2991,55 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "6300 - 17500 μm³, median: 10500 μm³.",
+          "text": "6300 - 17500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 10500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = 2.099 D².⁶²³",
+          "text": "V, μm",
           "italic": false,
           "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 2.099 D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2.623",
+          "italic": false,
+          "bold": false,
+          "superscript": true
         }
       ],
       "morphological_features": [
@@ -2755,7 +3311,95 @@
           "bold": false
         },
         {
-          "text": " cell abundance > 20 mL⁻¹ occurred more frequently but not exclusively at Chloride concentration > 225 mg L⁻¹, conductivity > 1050 μS cm⁻¹, pH > 8.5, over the full range of alkalinities (90-140 mg CaCO₃ L⁻¹, dissolved oxygen > 10 mg L⁻¹, at a relatively narrow range of long-wave radiation (320-385 Watt m⁻²), but over the full range of short-wave radiation (100-350 Watt m⁻²) and water temperatures (14-30C), when the lake was stratified. The high levels of dissolved oxygen during its high abundance are unusual (Fig. 4). These conditions are extremely similar to those under which ",
+          "text": " cell abundance > 20 mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " occurred more frequently but not exclusively at Chloride concentration > 225 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", conductivity > 1050 μS cm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", pH > 8.5, over the full range of alkalinities (90-140 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", dissolved oxygen > 10 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", at a relatively narrow range of long-wave radiation (320-385 Watt m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), but over the full range of short-wave radiation (100-350 Watt m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") and water temperatures (14-30C), when the lake was stratified. The high levels of dissolved oxygen during its high abundance are unusual (Fig. 4). These conditions are extremely similar to those under which ",
           "italic": false,
           "bold": false
         },
@@ -2860,7 +3504,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -3047,14 +3691,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "17500 - 4300 μm³, median: 2900 μm³.",
+          "text": "17500 - 4300 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 2900 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = (4/3) π D³ (sphere)",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = (4/3) π D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (sphere)",
           "italic": false,
           "bold": false
         }
@@ -3179,7 +3867,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -3424,7 +4112,29 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. selected environmental parameters recorded at the site and time of sampling, showing greater abundance at: low NH₄ and TDP; wide range of DON; and higher pH, DO and calcium levels.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. selected environmental parameters recorded at the site and time of sampling, showing greater abundance at: low NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " and TDP; wide range of DON; and higher pH, DO and calcium levels.",
           "italic": false,
           "bold": false
         }
@@ -3451,7 +4161,18 @@
           "bold": false
         },
         {
-          "text": " cell size (μm³) vs. environmental parameters recorded at the site and time of sampling. Data for 2006-2020.",
+          "text": " cell size (μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling. Data for 2006-2020.",
           "italic": false,
           "bold": false
         }
@@ -3595,14 +4316,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "6600 - 17500 μm³, median: 11500 μm³.",
+          "text": "6600 - 17500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 11500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = 1.2514 D².⁷⁹³ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 1.2514 D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2.793",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).",
           "italic": false,
           "bold": false
         }
@@ -3884,7 +4649,18 @@
           "bold": false
         },
         {
-          "text": " The multiannual average contribution of this dinoflagellate to total phytoplankton biomass is 3%. Its maximum biomass ever recorded was 53 g m⁻² - 41% of total biomass, in April 2006, a “no-Peridinium” year.",
+          "text": " The multiannual average contribution of this dinoflagellate to total phytoplankton biomass is 3%. Its maximum biomass ever recorded was 53 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " - 41% of total biomass, in April 2006, a “no-Peridinium” year.",
           "italic": false,
           "bold": false
         }
@@ -3906,7 +4682,128 @@
           "bold": false
         },
         {
-          "text": " > 5 g m⁻² or > 25 cells mL⁻¹ occurred more frequently but not exclusively at calcium concentrations > 45 mg L⁻¹, pH > 8.5, dissolved oxygen > 10 mg L⁻¹, showing greater abundance at low NH4 and TDP, wide range of DON (Fig. 4). Furthermore (not shown), the higher biomasses usually occur at chloride > 230 mg L⁻¹, conductivity > 1050 μS cm⁻¹, alkalinity > 115 mg CaCO₃ L⁻¹, at a relatively narrow range of long wave radiation (300-370 Watt m⁻²), but over the full range of short-wave radiation (100-350 Watt m⁻²) and water temperatures (14-30oC), when the lake is stratified. Cell size declines with increasing temperature, especially at temperatures below 23C, and increases with calcium and alkalinity (Fig. 5).",
+          "text": " > 5 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " or > 25 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " occurred more frequently but not exclusively at calcium concentrations > 45 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", pH > 8.5, dissolved oxygen > 10 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", showing greater abundance at low NH4 and TDP, wide range of DON (Fig. 4). Furthermore (not shown), the higher biomasses usually occur at chloride > 230 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", conductivity > 1050 μS cm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", alkalinity > 115 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", at a relatively narrow range of long wave radiation (300-370 Watt m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), but over the full range of short-wave radiation (100-350 Watt m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") and water temperatures (14-30",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C), when the lake is stratified. Cell size declines with increasing temperature, especially at temperatures below 23C, and increases with calcium and alkalinity (Fig. 5).",
           "italic": false,
           "bold": false
         }
@@ -3921,7 +4818,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -4223,14 +5120,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "2600 - 9500 μm³, median: 5300 μm³.",
+          "text": "2600 - 9500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 5300 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = (4/3) π (D/2)³. (sphere equation)",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = (4/3) π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3.",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (sphere equation)",
           "italic": false,
           "bold": false
         }
@@ -4344,7 +5285,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -4468,7 +5409,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹), Lake Kinneret, 1970-2020. Prior to 1983 the species wasn’t counted.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1970-2020. Prior to 1983 the species wasn’t counted.",
           "italic": false,
           "bold": false
         }
@@ -4612,14 +5564,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "3050 - 8200 μm³, median: 5450 μm³.",
+          "text": "3050 - 8200 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 5450 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = (4/3)π L (D/2)² (prolate sphaeroid)",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = (4/3)π L (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (prolate sphaeroid)",
           "italic": false,
           "bold": false
         }
@@ -4718,7 +5714,18 @@
           "bold": false
         },
         {
-          "text": " is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008 (Fig. 1). Its mean water column abundance never exceeded 20 cells mL⁻¹. Little is known about this species.",
+          "text": " is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008 (Fig. 1). Its mean water column abundance never exceeded 20 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Little is known about this species.",
           "italic": false,
           "bold": false
         }
@@ -4726,7 +5733,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -5044,14 +6051,53 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "7,000-14,000 μm³, median: 10,000 μm³",
+          "text": "7,000-14,000 μm",
           "italic": false,
           "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 10,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = ((4/3)π L (D/2)²)/2 (half the volume of a prolate sphaeroid)",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = ((4/3)π L (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ")/2 (half the volume of a prolate sphaeroid)",
           "italic": false,
           "bold": false
         }
@@ -5107,7 +6153,18 @@
           "bold": false
         },
         {
-          "text": " occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL⁻¹ (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during summer-fall (Fig. 2).",
+          "text": " occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during summer-fall (Fig. 2).",
           "italic": false,
           "bold": false
         }
@@ -5149,7 +6206,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -5395,7 +6452,18 @@
           "bold": false
         },
         {
-          "text": " depth-integrated wet-weight biomass (g m⁻²), Lake Kinneret, 1970-2020.",
+          "text": " depth-integrated wet-weight biomass (g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1970-2020.",
           "italic": false,
           "bold": false
         }
@@ -5449,7 +6517,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling.",
           "italic": false,
           "bold": false
         }
@@ -5633,14 +6712,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "44,300 – 99,400 μm³, median: 67,000 μm³.",
+          "text": "44,300 – 99,400 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 67,000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V, μm³ = 1.31 D².⁷⁸³⁵. Regression eqn. based on >400 measurements of both D and L with V computed for a prolate sphaeroid.",
+          "text": "V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 1.31 D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2.7835",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Regression eqn. based on >400 measurements of both D and L with V computed for a prolate sphaeroid.",
           "italic": false,
           "bold": false
         }
@@ -5861,7 +6984,40 @@
           "bold": false
         },
         {
-          "text": " reached mean epilimnion concentrations > 500 cells mL⁻¹ (Figs. 1, 2), or 150-250 g m⁻² of wet weight biomass and comprised >95% of total phytoplankton biomass. The blooms declined sharply in May-June (Fig. 2), shortly after water temperature exceeded 25ºC, thermal stratification was established, and nutrients became scarce, leaving behind resting cysts on the lake sediments. Another trigger to the bloom decline is CO₂ limitation as ambient pH increases with increasing photosynthesis (Berman-Frank et al. 1995). During the summer months ",
+          "text": " reached mean epilimnion concentrations > 500 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Figs. 1, 2), or 150-250 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " of wet weight biomass and comprised >95% of total phytoplankton biomass. The blooms declined sharply in May-June (Fig. 2), shortly after water temperature exceeded 25ºC, thermal stratification was established, and nutrients became scarce, leaving behind resting cysts on the lake sediments. Another trigger to the bloom decline is CO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " limitation as ambient pH increases with increasing photosynthesis (Berman-Frank et al. 1995). During the summer months ",
           "italic": false,
           "bold": false
         },
@@ -5881,7 +7037,18 @@
           "bold": false
         },
         {
-          "text": " concentrations in the water column were low, usually <5 cells mL⁻¹ (Fig. 2). Autumn turnover caused re-suspension of the cysts from the sediments, leading to their excystation and the initiation of the next year’s bloom. After many years of recorded constancy, in the mid-1990s, the regular pattern of late-winter spring ",
+          "text": " concentrations in the water column were low, usually <5 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 2). Autumn turnover caused re-suspension of the cysts from the sediments, leading to their excystation and the initiation of the next year’s bloom. After many years of recorded constancy, in the mid-1990s, the regular pattern of late-winter spring ",
           "italic": false,
           "bold": false
         },
@@ -5941,7 +7108,18 @@
           "bold": false
         },
         {
-          "text": " (~1600 cells mL⁻¹) developed between flooded ",
+          "text": " (~1600 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") developed between flooded ",
           "italic": false,
           "bold": false
         },
@@ -6008,7 +7186,51 @@
           "bold": false
         },
         {
-          "text": " is a large cell, its growth rate is slow compared with that of other microalgae, with ambient doubling (turnover) time of ~7 days (Table 1). Lab experiments have shown maximal growth rates at 20-23oC at light intensities ranging 50-200 μmol photons m⁻² s⁻¹. Growth rates decline at 25-27 oC (Berman and Dubinsky 1985). The specific photosynthetic rates (per unit chlorophyll) of ",
+          "text": " is a large cell, its growth rate is slow compared with that of other microalgae, with ambient doubling (turnover) time of ~7 days (Table 1). Lab experiments have shown maximal growth rates at 20-23",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C at light intensities ranging 50-200 μmol photons m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " s",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Growth rates decline at 25-27 ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C (Berman and Dubinsky 1985). The specific photosynthetic rates (per unit chlorophyll) of ",
           "italic": false,
           "bold": false
         },
@@ -6028,7 +7250,18 @@
           "bold": false
         },
         {
-          "text": " are low (Table 1) in comparison with other phytoplankton prevailing in Lake Kinneret. But daily vertical migration and accumulation close to the surface in daytime (Berman and Rhode 1971) enhances photosynthesis. With darkness, the motile cells migrate down the water column to depths with higher nutrient concentrations. When CO₂ levels become limiting (under intense bloom conditions), the dinoflagellates responded with higher levels of external and internal carbonic anhydrase activity and internal storage of inorganic C by means of a C concentrating mechanism (Berman-Frank et al. 1994). C content of ",
+          "text": " are low (Table 1) in comparison with other phytoplankton prevailing in Lake Kinneret. But daily vertical migration and accumulation close to the surface in daytime (Berman and Rhode 1971) enhances photosynthesis. With darkness, the motile cells migrate down the water column to depths with higher nutrient concentrations. When CO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " levels become limiting (under intense bloom conditions), the dinoflagellates responded with higher levels of external and internal carbonic anhydrase activity and internal storage of inorganic C by means of a C concentrating mechanism (Berman-Frank et al. 1994). C content of ",
           "italic": false,
           "bold": false
         },
@@ -6160,7 +7393,68 @@
           "bold": false
         },
         {
-          "text": " biomass > 100 g m⁻² (considered a bloom) was associated with all incidences of Secchi depth < 1.5 m (Fig. 3) and TSS> 10 mg L⁻¹ (not shown), 70% of all incidences of turbidity > 4 NTU (not shown), 80% of all incidences with pH > 9.1 (Fig. 3), over 80% of the cases of excessive oxygen super-saturation (DO >13 mg L⁻¹, Fig. 3) and of TP> 0.05 mg L⁻¹, and over 60% of all cases where TN exceeded 1 mg L⁻¹, demonstrating how a single dominant species can modify the light conditions and chemical properties of its own environment. Factors that may have impacted ",
+          "text": " biomass > 100 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (considered a bloom) was associated with all incidences of Secchi depth < 1.5 m (Fig. 3) and TSS> 10 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (not shown), 70% of all incidences of turbidity > 4 NTU (not shown), 80% of all incidences with pH > 9.1 (Fig. 3), over 80% of the cases of excessive oxygen super-saturation (DO >13 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ",",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " Fig. 3) and of TP> 0.05 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", and over 60% of all cases where TN exceeded 1 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", demonstrating how a single dominant species can modify the light conditions and chemical properties of its own environment. Factors that may have impacted ",
           "italic": false,
           "bold": false
         },
@@ -6180,7 +7474,29 @@
           "bold": false
         },
         {
-          "text": " biomass may have been salinity (no blooms at chloride> 280 mg L⁻¹) and availability of particulate organic N (Norg-part) for a mixotrophic species (Fig. 3). Its environmental preferences included temperature range of 16-23oC, and probably particulate organic matter as a source of nutrients. This explains its proliferation in dense patches among inundated shore vegetation.",
+          "text": " biomass may have been salinity (no blooms at chloride> 280 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") and availability of particulate organic N (Norg-part) for a mixotrophic species (Fig. 3). Its environmental preferences included temperature range of 16-23",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C, and probably particulate organic matter as a source of nutrients. This explains its proliferation in dense patches among inundated shore vegetation.",
           "italic": false,
           "bold": false
         }
@@ -6327,7 +7643,18 @@
           "bold": false
         },
         {
-          "text": ". Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO₂ availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A (1983) ",
+          "text": ". Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A (1983) ",
           "italic": false,
           "bold": false
         },
@@ -6837,7 +8164,18 @@
           "bold": false
         },
         {
-          "text": " is mediated by CO₂ limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A (2007) Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A (2002) Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D (1981) Phosphorus, phosphatases and the ",
+          "text": " is mediated by CO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A (2007) Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A (2002) Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D (1981) Phosphorus, phosphatases and the ",
           "italic": false,
           "bold": false
         },
@@ -6985,7 +8323,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -7337,7 +8675,7 @@
     },
     "metadata": {
       "source_file": "Bangia atropurpurea 2026-06-03.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -7459,7 +8797,18 @@
           "bold": false
         },
         {
-          "text": " spp. abundance (cells mL⁻¹), Lake Kinneret, 1978-2020.",
+          "text": " spp. abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1978-2020.",
           "italic": false,
           "bold": false
         }
@@ -7560,7 +8909,18 @@
           "bold": false
         },
         {
-          "text": " cell size (as volume, μm³): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respectively, showing weak but significant correlation of cell size with each of those variables.",
+          "text": " cell size (as volume, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "): (a) time series, showing tendency for larger cells at the beginning of each calendar year. (b-d) Regressions against temperature, calcium and alkalinity, respectively, showing weak but significant correlation of cell size with each of those variables.",
           "italic": false,
           "bold": false
         }
@@ -7587,7 +8947,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling.",
           "italic": false,
           "bold": false
         }
@@ -7684,14 +9055,47 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "400 – 2000 μm³, median: 700 μm³. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
+          "text": "400 – 2000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 700 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V=0.7076D³.⁰⁷⁷² (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid).",
+          "text": "V=0.7076D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3.0772",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid).",
           "italic": false,
           "bold": false
         }
@@ -7999,7 +9403,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-07.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -8099,7 +9503,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹), Lake Kinneret, 1970-2020.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1970-2020.",
           "italic": false,
           "bold": false
         }
@@ -8153,7 +9568,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling.",
           "italic": false,
           "bold": false
         }
@@ -8337,14 +9763,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "40 – 150 μm³, median: 82 μm³.",
+          "text": "40 – 150 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 82 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "V=1.841D².⁵²⁶⁴ (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R²=0.93).",
+          "text": "V=1.841D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2.5264",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "=0.93).",
           "italic": false,
           "bold": false
         }
@@ -8373,7 +9843,18 @@
           "bold": false
         },
         {
-          "text": " is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter holomixis (Dec. to Mar.), lowest in summer (Jun. to Oct.; Fig. 2). Indifferent to increasing salinity (or Cl⁻ conc.; Fig. 3). Like ",
+          "text": " is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter holomixis (Dec. to Mar.), lowest in summer (Jun. to Oct.; Fig. 2). Indifferent to increasing salinity (or Cl",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " conc.; Fig. 3). Like ",
           "italic": false,
           "bold": false
         },
@@ -8390,7 +9871,29 @@
       ],
       "environmental_conditions": [
         {
-          "text": "Present at the full range observed in Lake Kinneret of the following environmental variables: Zeu (euphotic zone depth), Secchi depth, pH, NH₄, DO, SO₄, TSS, Turbidity. Abundance increases with increasing alkalinity and nitrate, and with declining water temperature, DON, Organic N, total dissolved P (Fig. 3).",
+          "text": "Present at the full range observed in Lake Kinneret of the following environmental variables: Zeu (euphotic zone depth), Secchi depth, pH, NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ", DO, SO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ", TSS, Turbidity. Abundance increases with increasing alkalinity and nitrate, and with declining water temperature, DON, Organic N, total dissolved P (Fig. 3).",
           "italic": false,
           "bold": false
         }
@@ -8425,7 +9928,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-07.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -8526,7 +10029,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹), Lake Kinneret, 1992-2020. The greater frequency of observations of the species from 2013 onwards is likely due to change of the technician doing the microscope counts on 1 Jan 2013.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1992-2020. The greater frequency of observations of the species from 2013 onwards is likely due to change of the technician doing the microscope counts on 1 Jan 2013.",
           "italic": false,
           "bold": false
         }
@@ -8587,7 +10101,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. selected environmental parameters recorded at the site and time of sampling.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. selected environmental parameters recorded at the site and time of sampling.",
           "italic": false,
           "bold": false
         }
@@ -8721,16 +10246,66 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "730-2400 μm³, median: 1400 μm³.",
+          "text": "730-2400 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 1400 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "prolate spheroid V, μm³ = 4/3 p L/2 (D/2)² (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid: V= 1.9507*D².⁵⁶⁵¹",
+          "text": "prolate spheroid V, μm",
           "italic": false,
           "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 p L/2 (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid: V= 1.9507*D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2.5651",
+          "italic": false,
+          "bold": false,
+          "superscript": true
         }
       ],
       "morphological_features": [
@@ -8784,7 +10359,18 @@
           "bold": false
         },
         {
-          "text": " usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m⁻² (not shown). It is more abundant between February and April and again from August till November but absent in July and rare in December and January (Fig. 2). A technician-effect is noted in our data: a technician was replaced on 1 Jan 2013. It is evident in Fig. 1 that the newer technician counted this species more frequqently than the previous one. On a single unusual occassion in February 1996 ",
+          "text": " usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (not shown). It is more abundant between February and April and again from August till November but absent in July and rare in December and January (Fig. 2). A technician-effect is noted in our data: a technician was replaced on 1 Jan 2013. It is evident in Fig. 1 that the newer technician counted this species more frequqently than the previous one. On a single unusual occassion in February 1996 ",
           "italic": false,
           "bold": false
         },
@@ -8804,7 +10390,18 @@
           "bold": false
         },
         {
-          "text": " formed an intense bloom that colored the entire lake with a strong grass-green color. This intense bloom disappeared within a few days and was missed by our weekly sampling, but photographic records remain (Plate 2). On another occassion, a massive bloom of this flagellated alga took place in a series of experimental tanks behind the Kinneret Limnological Institute. Again the bloom was short lived and disappeared within days. A distinct annual cycle of cell size is evident from our data: cells are smaller size in summer, larger in winter (Figs. 2, 3A). Cell size correlates well with water temperature (R²=0.48, Fig. 3B).",
+          "text": " formed an intense bloom that colored the entire lake with a strong grass-green color. This intense bloom disappeared within a few days and was missed by our weekly sampling, but photographic records remain (Plate 2). On another occassion, a massive bloom of this flagellated alga took place in a series of experimental tanks behind the Kinneret Limnological Institute. Again the bloom was short lived and disappeared within days. A distinct annual cycle of cell size is evident from our data: cells are smaller size in summer, larger in winter (Figs. 2, 3A). Cell size correlates well with water temperature (R",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "=0.48, Fig. 3B).",
           "italic": false,
           "bold": false
         }
@@ -8826,7 +10423,73 @@
           "bold": false
         },
         {
-          "text": " occurred at the full range of water temperatures occurring in the lake, at conductivities > 1000 μS cm⁻¹ and Chloride > 210 mgL⁻¹, when Secchi transparency was 2-4 m, euphotic zone depth > 5 m, mostly at pH between 8–9, Chlorophyll < 400 mg m⁻², at alkalinities > 100 mg L⁻¹, when NH₄ was low but NO₃, Norg and DON were moderate (Fig. 4).",
+          "text": " occurred at the full range of water temperatures occurring in the lake, at conductivities > 1000 μS cm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " and Chloride > 210 mgL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", when Secchi transparency was 2-4 m, euphotic zone depth > 5 m, mostly at pH between 8–9, Chlorophyll < 400 mg m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", at alkalinities > 100 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", when NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " was low but NO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ", Norg and DON were moderate (Fig. 4).",
           "italic": false,
           "bold": false
         }
@@ -8834,7 +10497,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-07.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -9017,7 +10680,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. selected environmental parameters recorded at the site and time of sampling, showing indifference to temperatue and nitrate but tendency for higher cell concentrations at lower chlorophyll and DON concentrations.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. selected environmental parameters recorded at the site and time of sampling, showing indifference to temperatue and nitrate but tendency for higher cell concentrations at lower chlorophyll and DON concentrations.",
           "italic": false,
           "bold": false
         }
@@ -9149,14 +10823,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "13 – 76 μm³, median: 34 μm³.",
+          "text": "13 – 76 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 34 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "Sphere V, μm³ = 4/3 π *(D/2)³.",
+          "text": "Sphere V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π *(D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
@@ -9272,7 +10990,40 @@
           "bold": false
         },
         {
-          "text": " is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL⁻¹; an all-time maximum of 11,900 cells mL⁻¹ was recorded in April 2019 (Fig. 1). Despite their high abundance, their minute size makes their contiribution to total phytoplankton biomass usually negligible, on average only 0.4%. The max biomass contribution ever recorded was 7.9 g m⁻² and 13% of the total biomass. ",
+          "text": " is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "; an all-time maximum of 11,900 cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " was recorded in April 2019 (Fig. 1). Despite their high abundance, their minute size makes their contiribution to total phytoplankton biomass usually negligible, on average only 0.4%. The max biomass contribution ever recorded was 7.9 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " and 13% of the total biomass. ",
           "italic": false,
           "bold": false
         },
@@ -9299,7 +11050,62 @@
       ],
       "environmental_conditions": [
         {
-          "text": "occurs at the full range of temperatures, water levels, conductivities, chloride, alkalinity, Ca and nitrate concentrations recorded in Lake Kinneret. Higher abundances were restricted to a relatively narrow range of long wave radiation, between 325-375 Watt m⁻², to overall low chlorophyll concentration (i.e. not during major blooms of other species), at DON < 0.4 mg L⁻¹, NH₄ < 0.1 mg L⁻¹, organic N around 0.5 mg L⁻¹, pH in the range of 8-9 and Secchi depth between 1-4 m (Fig. 3).",
+          "text": "occurs at the full range of temperatures, water levels, conductivities, chloride, alkalinity, Ca and nitrate concentrations recorded in Lake Kinneret. Higher abundances were restricted to a relatively narrow range of long wave radiation, between 325-375 Watt m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", to overall low chlorophyll concentration (i.e. not during major blooms of other species), at DON < 0.4 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " < 0.1 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", organic N around 0.5 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", pH in the range of 8-9 and Secchi depth between 1-4 m (Fig. 3).",
           "italic": false,
           "bold": false
         }
@@ -9307,7 +11113,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-07.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -9487,7 +11293,18 @@
           "bold": false
         },
         {
-          "text": " abundance (average water column cells mL⁻¹), Sta. A, Lake Kinneret, 2013-2020.",
+          "text": " abundance (average water column cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Sta. A, Lake Kinneret, 2013-2020.",
           "italic": false,
           "bold": false
         }
@@ -9514,7 +11331,29 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher water temperature, lower dissolved oxygen (DO), Mixing depth of 15-20 m, Ca > 42 mg L⁻¹.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher cell concentrations at higher water temperature, lower dissolved oxygen (DO), Mixing depth of 15-20 m, Ca > 42 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
@@ -9611,14 +11450,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "500 - 9000 μm³, median: 1200 μm³.",
+          "text": "500 - 9000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 1200 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "prolate spheroid V, μm³ = 4/3 π (D/2)² L/2",
+          "text": "prolate spheroid V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " L/2",
           "italic": false,
           "bold": false
         }
@@ -9873,7 +11756,51 @@
           "bold": false
         },
         {
-          "text": " spp. abundance was indifferent to chloride concentrations, Secchi depth, TDP, DON. Higher cell concentrations were found in summer (Fig. 1), at higher water temperatures (> 25C), when the mixing depth ranged 15-20 m, dissolved oxygen between 6-8 mg L⁻¹ (Fig. 2), pH between 8.0 and 8.6, NH₄ < 0.06 mg N L⁻¹, Organic N between 0.2-0.4 mg N L⁻¹ (not shown).",
+          "text": " spp. abundance was indifferent to chloride concentrations, Secchi depth, TDP, DON. Higher cell concentrations were found in summer (Fig. 1), at higher water temperatures (> 25C), when the mixing depth ranged 15-20 m, dissolved oxygen between 6-8 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 2), pH between 8.0 and 8.6, NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " < 0.06 mg N L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", Organic N between 0.2-0.4 mg N L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (not shown).",
           "italic": false,
           "bold": false
         }
@@ -9888,7 +11815,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-03.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -10127,7 +12054,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-03.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -10226,7 +12153,18 @@
           "bold": false
         },
         {
-          "text": " abundance (cells mL⁻¹), Lake Kinneret, 1999-2020.",
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1999-2020.",
           "italic": false,
           "bold": false
         }
@@ -10260,7 +12198,18 @@
           "bold": false
         },
         {
-          "text": " spp. abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling, indifference to water temperature (avg 0-10 m), ambient chloride concentration, higher abundance at lower chlorophyll (no major bloom of another species), and higher Organic N.",
+          "text": " spp. abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling, indifference to water temperature (avg 0-10 m), ambient chloride concentration, higher abundance at lower chlorophyll (no major bloom of another species), and higher Organic N.",
           "italic": false,
           "bold": false
         }
@@ -10343,23 +12292,84 @@
       ],
       "cell_diameter_d": [
         {
-          "text": "8.9-15.5 μm (median=11.4 μm). Range reported is 5th-95th percentiles for 234 cells measured during 2004-2009.",
+          "text": "8.9-15.5 μm (median=11.4 μm). Range reported is 5",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "th",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "-95",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "th",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " percentiles for 234 cells measured during 2004-2009.",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_per_cell": [
         {
-          "text": "370 - 2000 μm³, median: 800 μm³.",
+          "text": "370 - 2000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 800 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "sphere, V, μm³ = ¾ π (D/2)³",
+          "text": "sphere, V, μm",
           "italic": false,
           "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = ¾ π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
         }
       ],
       "morphological_features": [
@@ -10470,7 +12480,51 @@
           "bold": false
         },
         {
-          "text": " spp. in the pelagic water of Lake Kinneret was indifferent to water temperature, ambient chloride concentration (Fig. 3), water level, pH, Ca, Alkalinity, Si, NO₃, NH₄ and Zmix/Zeu ration (not shown). Higher abundances of the genus were recorded when depth-integrates (0-15 m) chlorophyll concentrations were < 500 mg m⁻², and organic N > 0.15 mg N L⁻¹ (Fig. 3).",
+          "text": " spp. in the pelagic water of Lake Kinneret was indifferent to water temperature, ambient chloride concentration (Fig. 3), water level, pH, Ca, Alkalinity, Si, NO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ", NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " and Zmix/Zeu ration (not shown). Higher abundances of the genus were recorded when depth-integrates (0-15 m) chlorophyll concentrations were < 500 mg m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", and organic N > 0.15 mg N L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 3).",
           "italic": false,
           "bold": false
         }
@@ -10478,7 +12532,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-03.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -10665,7 +12719,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-03.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -10820,14 +12874,58 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "200 – 1300 μm³, median: 520 μm³.",
+          "text": "200 – 1300 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 520 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "Sphere V, μm³ = 4/3 π (D/2)³.",
+          "text": "Sphere V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
@@ -10923,7 +13021,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-06-11.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -11086,16 +13184,55 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "25 – 460 μm³, median: 100 μm³.",
+          "text": "25 – 460 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 100 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ],
       "biovolume_equation": [
         {
-          "text": "Sphere V, μm³ = 4/3 π (D/2)³",
+          "text": "Sphere V, μm",
           "italic": false,
           "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
         }
       ],
       "colony_diameter": [
@@ -11185,15 +13322,120 @@
           "bold": false
         },
         {
-          "text": " was counted occurred at the full range of temperature, NO₃ and NH₄, when chlorophyll was < 500 mg m⁻², chloride > 230 mg L⁻¹, Zₑᵤ ranged 6-11 m, Secchi depth ranged 2-4 m, alkalinity was > 100 mg CaCO₃ L⁻¹, Ca > 44 mg L⁻¹, DON < 0.5 mg L⁻¹ and TDP < 100 μg L⁻¹",
+          "text": " was counted occurred at the full range of temperature, NO",
           "italic": false,
           "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " and NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": ", when chlorophyll was < 500 mg m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", chloride > 230 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", Z",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "eu",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " ranged 6-11 m, Secchi depth ranged 2-4 m, alkalinity was > 100 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", Ca > 44 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", DON < 0.5 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " and TDP < 100 μg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
         }
       ]
     },
     "metadata": {
       "source_file": "Volvocales 2026-06-11.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   },
   {
@@ -11327,14 +13569,42 @@
       ],
       "biovolume_per_cell": [
         {
-          "text": "40 – 400 μm³",
+          "text": "40 – 400 μm",
           "italic": false,
           "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
         }
       ],
       "biovolume_equation": [
         {
-          "text": "Sphere V, μm³ = 4/3 π (D/2)³.",
+          "text": "Sphere V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
@@ -11392,7 +13662,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-06-11.docx",
-      "record_updated": "2026-06-11"
+      "record_updated": "2026-06-15"
     }
   }
 ]

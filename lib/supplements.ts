@@ -10,6 +10,8 @@ const richSegmentSchema = z.object({
   text: z.string(),
   italic: z.boolean(),
   bold: z.boolean(),
+  superscript: z.boolean().optional(),
+  subscript: z.boolean().optional(),
   href: z.string().optional(),
 });
 
@@ -41,6 +43,8 @@ function toRichSegment(seg: z.infer<typeof richSegmentSchema>): RichSegment {
     text: seg.text,
     italic: seg.italic,
     bold: seg.bold,
+    ...(seg.superscript ? { superscript: true } : {}),
+    ...(seg.subscript ? { subscript: true } : {}),
     ...(seg.href ? { href: seg.href } : {}),
   };
 }

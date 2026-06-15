@@ -11,7 +11,7 @@ from .config import load_config
 from .models import AlgaeRecord
 from .parsers.scientific_name import compile_scientific_name_patterns, detect_record_start
 from .parsers.sections import build_section_alias_lookup, detect_section_heading
-from .reader import iter_docx_content_blocks
+from .reader import iter_docx_content_blocks, unmap_script_glyphs
 
 
 def _strict_record_start_patterns(
@@ -865,10 +865,26 @@ def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]
     raise RuntimeError("Old signature removed; use _normalize_structured_fields_rich(...)")
 
 
-def _styles_int_to_segment_flags(style_int: int) -> tuple[bool, bool]:
+def _styles_int_to_segment_flags(style_int: int) -> tuple[bool, bool, bool, bool]:
     italic = bool(style_int & 1)
     bold = bool(style_int & 2)
-    return italic, bold
+    superscript = bool(style_int & 4)
+    subscript = bool(style_int & 8)
+    return italic, bold, superscript, subscript
+
+
+def _make_rich_segment(chunk: str, style_int: int) -> dict[str, Any]:
+    italic, bold, superscript, subscript = _styles_int_to_segment_flags(style_int)
+    # Super/subscript runs are stored as ASCII plus a flag so the frontend can render
+    # <sup>/<sub>; the baked display glyphs are undone here.
+    if superscript or subscript:
+        chunk = unmap_script_glyphs(chunk)
+    segment: dict[str, Any] = {"text": chunk, "italic": italic, "bold": bold}
+    if superscript:
+        segment["superscript"] = True
+    if subscript:
+        segment["subscript"] = True
+    return segment
 
 
 def _char_styles_to_rich_segments(text: str, char_styles: list[int]) -> list[dict[str, Any]]:
@@ -883,15 +899,11 @@ def _char_styles_to_rich_segments(text: str, char_styles: list[int]) -> list[dic
     start = 0
     for i in range(1, len(text)):
         if styles[i] != cur_style:
-            chunk = text[start:i]
-            italic, bold = _styles_int_to_segment_flags(cur_style)
-            segments.append({"text": chunk, "italic": italic, "bold": bold})
+            segments.append(_make_rich_segment(text[start:i], cur_style))
             start = i
             cur_style = styles[i]
 
-    chunk = text[start:]
-    italic, bold = _styles_int_to_segment_flags(cur_style)
-    segments.append({"text": chunk, "italic": italic, "bold": bold})
+    segments.append(_make_rich_segment(text[start:], cur_style))
     return segments
 
 

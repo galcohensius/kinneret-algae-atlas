@@ -3,6 +3,10 @@ export type RichSegment = {
   text: string;
   italic: boolean;
   bold: boolean;
+  /** Word superscript run (e.g. an exponent); rendered as <sup>. */
+  superscript?: boolean;
+  /** Word subscript run (e.g. chemical formula index); rendered as <sub>. */
+  subscript?: boolean;
   /** Optional link target (e.g. supplement document in /public). */
   href?: string;
 };

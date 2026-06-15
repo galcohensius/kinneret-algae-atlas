@@ -19,7 +19,7 @@ import re
 
 from PIL import Image
 
-from .reader import iter_docx_content_blocks
+from .reader import iter_docx_content_blocks, unmap_script_glyphs
 
 
 # ---------------------------------------------------------------------------
@@ -40,11 +40,23 @@ def _char_styles_to_rich(text: str, char_styles: list[int]) -> list[dict[str, An
         j = i + 1
         while j < len(text) and char_styles[j] == style:
             j += 1
-        segments.append({
-            "text": text[i:j],
+        chunk = text[i:j]
+        superscript = bool(style & 4)
+        subscript = bool(style & 8)
+        # Super/subscript runs are stored as ASCII plus a flag so the frontend can
+        # render <sup>/<sub>; the baked display glyphs are undone here.
+        if superscript or subscript:
+            chunk = unmap_script_glyphs(chunk)
+        segment: dict[str, Any] = {
+            "text": chunk,
             "italic": bool(style & 1),
             "bold": bool(style & 2),
-        })
+        }
+        if superscript:
+            segment["superscript"] = True
+        if subscript:
+            segment["subscript"] = True
+        segments.append(segment)
         i = j
     return segments
 
