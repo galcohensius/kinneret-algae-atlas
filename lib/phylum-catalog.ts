@@ -7,13 +7,17 @@ import type { AlgaeRecord } from "./algae-types";
  *   Chlorophyta — chloros (green)
  *   Rhodophyta — rhodon (rose / red)
  *
+ * Green by biology rather than name (freshwater green algae); kept lighter than
+ * Chlorophyta's dark forest green to stay distinct:
+ *   Charophyta
+ *
  * No color in the name; hue chosen for distinction and typical field appearance:
- *   Charophyta, Cryptista, Dinoflagellata, Euglenophyta, Haptophyta
+ *   Cryptista, Dinoflagellata, Euglenophyta, Haptophyta
  */
 const PHYLUM_ACCENTS: Record<string, string> = {
   chlorophyta: "#15803d", // chloros = green
   rhodophyta: "#be123c", // rhodon = rose-red
-  charophyta: "#65a30d", // no color in name; bright grass-green filamentous charophytes
+  charophyta: "#22c55e", // green algae; bright spring green, kept lighter than Chlorophyta's dark forest green to stay distinct
   cryptista: "#6b4c9a", // kryptos = hidden (not a color)
   dinoflagellata: "#0e7490", // no color in name; marine cyan
   euglenophyta: "#ca8a04", // no color in name; golden xanthophyll-rich forms

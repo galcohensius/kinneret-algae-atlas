@@ -504,17 +504,17 @@ main.home {
   display: inline-block;
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--phylum-accent, var(--border));
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: var(--phylum-accent, var(--text-secondary));
   text-decoration: none;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
 .phylum-jump-nav a:hover {
-  background: var(--surface-subtle);
-  color: var(--text-primary);
+  background: color-mix(in srgb, var(--phylum-accent, var(--text-secondary)) 14%, transparent);
+  color: var(--phylum-accent, var(--text-primary));
   text-decoration: none;
 }
 
@@ -536,7 +536,12 @@ main.home {
   scroll-margin-top: 1.25rem;
   padding: 0.85rem 0.85rem 0.85rem 0;
   border-radius: 0 12px 12px 0;
-  background: color-mix(in srgb, var(--phylum-accent) 10%, transparent);
+  background: color-mix(in srgb, var(--phylum-accent) 16%, transparent);
+}
+
+/* A single-species group shouldn't stretch full width; hug its one card (~half page). */
+.phylum-catalog-group--single {
+  max-width: 520px;
 }
 
 .phylum-catalog-rail {
@@ -659,7 +664,9 @@ a:hover {
 
 .algae-list-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  /* auto-fill (not auto-fit) keeps empty tracks, and a fixed max caps card width,
+     so a single-species group fills ~half a row instead of stretching full width. */
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 460px));
   gap: 0.9rem;
 }
 

@@ -52,7 +52,11 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
       {phylumGroups.length > 1 ? (
         <nav className="phylum-jump-nav" aria-label="Jump to phylum">
           {phylumGroups.map((group) => (
-            <a key={group.slug} href={`#phylum-${group.slug}`}>
+            <a
+              key={group.slug}
+              href={`#phylum-${group.slug}`}
+              style={{ "--phylum-accent": group.accent } as CSSProperties}
+            >
               {group.phylum}
               <span className="phylum-jump-count"> ({group.records.length})</span>
             </a>
@@ -65,7 +69,11 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
           <section
             key={group.slug}
             id={`phylum-${group.slug}`}
-            className="phylum-catalog-group"
+            className={
+              group.records.length === 1
+                ? "phylum-catalog-group phylum-catalog-group--single"
+                : "phylum-catalog-group"
+            }
             style={{ "--phylum-accent": group.accent } as CSSProperties}
             aria-labelledby={`phylum-heading-${group.slug}`}
           >
