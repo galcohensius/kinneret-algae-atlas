@@ -15,6 +15,26 @@ function loadRecords(): RawRecord[] {
   return JSON.parse(readFileSync(filePath, "utf-8")) as RawRecord[];
 }
 
+interface RawSupplement {
+  id?: string;
+  title?: string;
+  images?: string[];
+}
+
+/** Supplements use the same image-naming convention; surface them as pseudo-records so the same checks apply. */
+function loadSupplementsAsRecords(): RawRecord[] {
+  const filePath = resolve(__dirname, "../data/processed/supplements.json");
+  const supplements = JSON.parse(readFileSync(filePath, "utf-8")) as RawSupplement[];
+  return supplements.map((s) => ({
+    scientific_name: `supplement: ${s.title ?? s.id ?? "?"}`,
+    images: s.images,
+  }));
+}
+
+function loadAllRecords(): RawRecord[] {
+  return [...loadRecords(), ...loadSupplementsAsRecords()];
+}
+
 describe("algae image naming", () => {
   it("reports total image count across all species", () => {
     const records = loadRecords();
@@ -28,7 +48,7 @@ describe("algae image naming", () => {
   });
 
   it("every image is a thumbnail, plate, or figure — no uncaptioned image-N fallbacks", () => {
-    const records = loadRecords();
+    const records = loadAllRecords();
     const violations: { species: string; image: string }[] = [];
 
     for (const record of records) {
@@ -51,7 +71,7 @@ describe("algae image naming", () => {
   });
 
   it("every image path matches a known naming convention", () => {
-    const records = loadRecords();
+    const records = loadAllRecords();
     const unknown: { species: string; image: string }[] = [];
 
     for (const record of records) {
