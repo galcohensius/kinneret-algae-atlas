@@ -23,6 +23,7 @@ import {
   galleryImageAlt,
 } from "../../../lib/gallery-image-meta";
 import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
+import { buildCitationBundle } from "../../../lib/cite-this-record";
 
 type AlgaeDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -145,6 +146,9 @@ export async function generateMetadata({ params }: AlgaeDetailPageProps) {
   return {
     title: `${record.scientificName} – Kinneret Algae Atlas`,
     ...(excerpt && { description: excerpt }),
+    alternates: {
+      canonical: `https://kinneret-algae-atlas.org/algae/${record.slug}`,
+    },
   };
 }
 
@@ -178,9 +182,29 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   const extraFigureCaptions = galleryCaptions;
   const hasQuickFacts = QUICK_FACT_BODY_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
   const previousNamePlain = sections.previous_name_used?.trim() ?? "";
+  const citation = buildCitationBundle(record.recordUpdated);
+  const speciesJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "DefinedTerm",
+    name: record.scientificName,
+    termCode: record.slug,
+    url: `https://kinneret-algae-atlas.org/algae/${record.slug}`,
+    description: (sections.ecology ?? sections.morphological_features ?? "").trim().slice(0, 320),
+    inDefinedTermSet: "https://kinneret-algae-atlas.org/#algae-index",
+    isPartOf: {
+      "@type": "Dataset",
+      name: "Kinneret Algae Atlas",
+      url: "https://kinneret-algae-atlas.org/",
+    },
+    citation: [citation.recordCitation, citation.atlasAttribution],
+  };
 
   return (
     <main className="algae-detail">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speciesJsonLd) }}
+      />
       <p className="algae-detail-nav">
         <Link href="/#algae-index">← Back to algae index</Link>
       </p>

@@ -1,11 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { publicAssetPath } from "../lib/public-path";
 import AlgaeIndexSectionShell from "./components/AlgaeIndexSectionShell";
+import { buildAtlasAttribution } from "../lib/cite-this-record";
+
+export const metadata: Metadata = {
+  title: "Kinneret Algae Atlas",
+  description:
+    "Atlas of Kinneret microalgae by Dr. Tamar Zohary and Dr. Alla Alster, with species records, glossary definitions, and supplementary material.",
+  alternates: {
+    canonical: "https://kinneret-algae-atlas.org/",
+  },
+};
 
 export default function HomePage() {
+  const datasetJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: "Kinneret Algae Atlas",
+    url: "https://kinneret-algae-atlas.org/",
+    description:
+      "Atlas of Kinneret microalgae with species profiles, glossary terms, and supplementary material.",
+    creator: [
+      {
+        "@type": "Person",
+        name: "Dr. Tamar Zohary",
+      },
+      {
+        "@type": "Person",
+        name: "Dr. Alla Alster",
+      },
+    ],
+    publisher: {
+      "@type": "Organization",
+      name: "Israel Oceanographic & Limnological Research",
+    },
+    citation: buildAtlasAttribution(),
+    license: "All rights reserved",
+  };
+
   return (
     <main className="home">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
+      />
       <div className="home-hero">
         <Image
           src={publicAssetPath("/kinneret-lake.jpg")}

@@ -16,22 +16,22 @@ function AlgaeListCard({ record }: { record: AlgaeRecord }) {
   const listImage = record.thumbnailUrl ?? plateImage;
 
   return (
-    <article className="card algae-list-card">
-      {listImage ? (
-        <img
-          className="algae-thumb"
-          src={listImage}
-          alt={`${record.title} thumbnail`}
-        />
-      ) : (
-        <div className="algae-thumb algae-thumb-placeholder">No image</div>
-      )}
-      <h3 className="algae-list-card-title">
-        <Link href={`/algae/${record.slug}/`}>
+    <Link href={`/algae/${record.slug}/`} className="algae-list-card-link">
+      <article className="card algae-list-card">
+        {listImage ? (
+          <img
+            className="algae-thumb"
+            src={listImage}
+            alt={`${record.title} thumbnail`}
+          />
+        ) : (
+          <div className="algae-thumb algae-thumb-placeholder">No image</div>
+        )}
+        <h3 className="algae-list-card-title">
           <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
-        </Link>
-      </h3>
-    </article>
+        </h3>
+      </article>
+    </Link>
   );
 }
 

@@ -1,0 +1,22 @@
+# Kinneret Algae Atlas — LLM Discovery
+
+Canonical URL: https://kinneret-algae-atlas.org/
+Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
+
+Primary resources:
+- Site index: https://kinneret-algae-atlas.org/#algae-index
+- Species pages: https://kinneret-algae-atlas.org/algae/{slug}
+- Glossary: https://kinneret-algae-atlas.org/glossary/
+- Supplementary material: https://kinneret-algae-atlas.org/supplements/
+
+Machine-readable endpoints:
+- https://kinneret-algae-atlas.org/api/species
+- https://kinneret-algae-atlas.org/api/species/{slug}
+- https://kinneret-algae-atlas.org/api/glossary
+
+Compact corpus:
+- https://kinneret-algae-atlas.org/llms-full.txt
+
+Citation policy for downstream LLM use:
+- Include BOTH per-record citation and atlas-level attribution when answering species questions.
+- Prefer scientific names and stable species slugs for disambiguation.

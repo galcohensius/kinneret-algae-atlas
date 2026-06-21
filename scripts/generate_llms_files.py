@@ -1,0 +1,261 @@
+"""Generate LLM discovery files from processed atlas data."""
+
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import unicodedata
+from pathlib import Path
+from typing import Any
+
+ATLAS_URL = "https://kinneret-algae-atlas.org"
+ATLAS_CITE_URL = f"{ATLAS_URL}/"
+CANONICAL_AUTHORS = "Dr. Tamar Zohary, Dr. Alla Alster"
+CANONICAL_AFFILIATION = (
+    "Kinneret Limnological Institute, Israel Oceanographic and Limnological Research"
+)
+CANONICAL_PUBLISHER = "Israel Oceanographic & Limnological Research"
+
+_BINOMIAL_RE = re.compile(
+    r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)"
+)
+_GENUS_RE = re.compile(r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+)\b")
+
+_KEY_SIZE_FIELDS: list[tuple[str, str]] = [
+    ("organization", "Organization"),
+    ("cell_shape", "Cell shape"),
+    ("colony_shape", "Colony shape"),
+    ("cell_diameter_d", "Cell diameter (D)"),
+    ("cell_length_l", "Cell length (L)"),
+    ("biovolume_per_cell", "Cell biovolume"),
+    ("biovolume_equation", "Biovolume equation"),
+    ("filament_length", "Filament length"),
+    ("cells_per_filament", "Cells per filament"),
+    ("colony_diameter", "Colony diameter"),
+    ("cells_per_colony", "Cells per colony"),
+]
+
+
+def _slugify(value: str) -> str:
+    normalized = unicodedata.normalize("NFKD", value)
+    normalized = normalized.encode("ascii", "ignore").decode("ascii")
+    normalized = normalized.strip().lower()
+    normalized = re.sub(r"[^a-z0-9\s-]", "", normalized)
+    normalized = re.sub(r"\s+", "-", normalized)
+    normalized = re.sub(r"-{2,}", "-", normalized).strip("-")
+    return normalized or "unnamed"
+
+
+def _record_slug(scientific_name: str, index: int) -> str:
+    text = (scientific_name or "").strip()
+    if not text:
+        return f"unnamed-{index + 1}"
+    binomial = _BINOMIAL_RE.match(text)
+    if binomial:
+        return _slugify(binomial.group(1))
+    genus = _GENUS_RE.match(text)
+    if genus:
+        return _slugify(genus.group(1))
+    return _slugify(text)
+
+
+def _format_long_date(iso_date: str | None) -> str:
+    if not iso_date or not re.match(r"^\d{4}-\d{2}-\d{2}$", iso_date):
+        return "Unknown update date"
+    y, m, d = iso_date.split("-")
+    months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ]
+    return f"{int(d)} {months[int(m) - 1]} {y}"
+
+
+def _record_citation(record_updated: str | None) -> str:
+    long_date = _format_long_date(record_updated)
+    return (
+        f"{CANONICAL_AUTHORS}. {long_date}. Electronic publication. "
+        f"{CANONICAL_PUBLISHER}. {ATLAS_CITE_URL}"
+    )
+
+
+def _atlas_attribution() -> str:
+    return f"{CANONICAL_AUTHORS}. {CANONICAL_AFFILIATION}."
+
+
+def _compact_text(text: str, max_len: int = 220) -> str:
+    compact = re.sub(r"\s+", " ", (text or "").strip())
+    if len(compact) <= max_len:
+        return compact
+    return compact[: max_len - 1].rstrip() + "…"
+
+
+def _build_llms_txt() -> str:
+    lines = [
+        "# Kinneret Algae Atlas — LLM Discovery",
+        "",
+        "Canonical URL: https://kinneret-algae-atlas.org/",
+        "Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.",
+        "",
+        "Primary resources:",
+        "- Site index: https://kinneret-algae-atlas.org/#algae-index",
+        "- Species pages: https://kinneret-algae-atlas.org/algae/{slug}",
+        "- Glossary: https://kinneret-algae-atlas.org/glossary/",
+        "- Supplementary material: https://kinneret-algae-atlas.org/supplements/",
+        "",
+        "Machine-readable endpoints:",
+        "- https://kinneret-algae-atlas.org/api/species",
+        "- https://kinneret-algae-atlas.org/api/species/{slug}",
+        "- https://kinneret-algae-atlas.org/api/glossary",
+        "",
+        "Compact corpus:",
+        "- https://kinneret-algae-atlas.org/llms-full.txt",
+        "",
+        "Citation policy for downstream LLM use:",
+        "- Include BOTH per-record citation and atlas-level attribution when answering species questions.",
+        "- Prefer scientific names and stable species slugs for disambiguation.",
+    ]
+    return "\n".join(lines) + "\n"
+
+
+def _species_block(record: dict[str, Any], index: int) -> str:
+    sections = record.get("sections") or {}
+    metadata = record.get("metadata") or {}
+    scientific_name = (record.get("scientific_name") or "").strip()
+    slug = _record_slug(scientific_name, index)
+    canonical_url = f"{ATLAS_URL}/algae/{slug}"
+    updated = metadata.get("record_updated") if isinstance(metadata.get("record_updated"), str) else None
+
+    lines: list[str] = [
+        f"## Species: {scientific_name or 'Unnamed taxon'}",
+        f"- Slug: {slug}",
+        f"- Canonical URL: {canonical_url}",
+        f"- Taxonomy: phylum={sections.get('phylum', '').strip() or '-'}; class={sections.get('class', '').strip() or '-'}; order={sections.get('order', '').strip() or '-'}",
+    ]
+
+    habitat = sections.get("habitat", "").strip()
+    if habitat:
+        lines.append(f"- Habitat: {_compact_text(habitat, 180)}")
+
+    for key, label in _KEY_SIZE_FIELDS:
+        value = (sections.get(key) or "").strip()
+        if value:
+            lines.append(f"- {label}: {_compact_text(value, 220)}")
+
+    ecology = (sections.get("ecology") or "").strip()
+    if ecology:
+        lines.append(f"- Ecology (compact): {_compact_text(ecology, 240)}")
+
+    lines.append(f"- Per-record citation: {_record_citation(updated)}")
+    lines.append(f"- Atlas attribution: {_atlas_attribution()}")
+    lines.append(f"- Record updated (source extraction): {updated or 'Unknown'}")
+    source_file = metadata.get("source_file")
+    if isinstance(source_file, str) and source_file.strip():
+        lines.append(f"- Source file: {source_file.strip()}")
+
+    return "\n".join(lines)
+
+
+def _glossary_block(glossary: dict[str, Any]) -> str:
+    entries = glossary.get("entries") or []
+    plates = glossary.get("plates") or []
+    lines = [
+        "## Glossary",
+        f"- Canonical URL: {ATLAS_URL}/glossary/",
+        f"- Terms count: {len(entries)}",
+    ]
+    if isinstance(glossary.get("record_updated"), str):
+        lines.append(f"- Record updated: {glossary['record_updated']}")
+    if isinstance(glossary.get("source_file"), str):
+        lines.append(f"- Source file: {glossary['source_file']}")
+    lines.append("- Atlas attribution: " + _atlas_attribution())
+    lines.append("")
+    lines.append("### Glossary terms (compact)")
+    for entry in entries:
+        term = (entry.get("term") or "").strip()
+        slug = (entry.get("slug") or "").strip()
+        definition = _compact_text((entry.get("definition") or "").strip(), 180)
+        if term and slug and definition:
+            lines.append(f"- {term} [{slug}]: {definition}")
+    if plates:
+        lines.append("")
+        lines.append("### Glossary plates")
+        for plate in plates:
+            pid = (plate.get("id") or "").strip()
+            label = (plate.get("label") or "").strip()
+            src = (plate.get("src") or "").strip()
+            if pid and label and src:
+                lines.append(f"- {label} [{pid}]: {ATLAS_URL}{src}")
+    return "\n".join(lines)
+
+
+def _build_llms_full(records: list[dict[str, Any]], glossary: dict[str, Any]) -> str:
+    lines = [
+        "# Kinneret Algae Atlas — Compact LLM Corpus",
+        "",
+        "Scope: compact machine-readable digest of species and glossary data.",
+        f"Atlas URL: {ATLAS_CITE_URL}",
+        f"Atlas attribution: {_atlas_attribution()}",
+        "",
+        "Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.",
+        "",
+        f"Species count: {len(records)}",
+        "",
+    ]
+    for idx, record in enumerate(records):
+        lines.append(_species_block(record, idx))
+        lines.append("")
+
+    lines.append(_glossary_block(glossary))
+    lines.append("")
+    return "\n".join(lines)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Generate llms.txt and llms-full.txt from processed data.")
+    parser.add_argument(
+        "--algae-input",
+        default="data/processed/algae_records.json",
+        help="Path to processed algae records JSON.",
+    )
+    parser.add_argument(
+        "--glossary-input",
+        default="data/processed/glossary.json",
+        help="Path to processed glossary JSON.",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="public",
+        help="Directory where llms.txt and llms-full.txt are written.",
+    )
+    args = parser.parse_args()
+
+    algae_path = Path(args.algae_input)
+    glossary_path = Path(args.glossary_input)
+    out_dir = Path(args.output_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    records = json.loads(algae_path.read_text(encoding="utf-8"))
+    glossary = json.loads(glossary_path.read_text(encoding="utf-8"))
+
+    llms_txt = _build_llms_txt()
+    llms_full = _build_llms_full(records, glossary)
+
+    (out_dir / "llms.txt").write_text(llms_txt, encoding="utf-8")
+    (out_dir / "llms-full.txt").write_text(llms_full, encoding="utf-8")
+    print(f"Wrote {(out_dir / 'llms.txt')}")
+    print(f"Wrote {(out_dir / 'llms-full.txt')}")
+
+
+if __name__ == "__main__":
+    main()
