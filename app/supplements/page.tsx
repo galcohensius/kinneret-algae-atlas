@@ -32,22 +32,22 @@ export default async function SupplementsIndexPage() {
             {supplements.map((s) => {
               const thumb = s.images[0] ? publicAssetPath(s.images[0]) : null;
               return (
-                <article className="card algae-list-card" key={s.slug}>
-                  {thumb ? (
-                    <img
-                      className="algae-thumb"
-                      src={thumb}
-                      alt={`${s.title} thumbnail`}
-                    />
-                  ) : (
-                    <div className="algae-thumb algae-thumb-placeholder">No image</div>
-                  )}
-                  <h3 className="algae-list-card-title">
-                    <Link href={`/supplements/${s.slug}/`}>
+                <Link href={`/supplements/${s.slug}/`} className="algae-list-card-link" key={s.slug}>
+                  <article className="card algae-list-card">
+                    {thumb ? (
+                      <img
+                        className="algae-thumb"
+                        src={thumb}
+                        alt={`${s.title} thumbnail`}
+                      />
+                    ) : (
+                      <div className="algae-thumb algae-thumb-placeholder">No image</div>
+                    )}
+                    <h3 className="algae-list-card-title">
                       <TaxonItalicName taxon={s.title} className="algae-taxon" />
-                    </Link>
-                  </h3>
-                </article>
+                    </h3>
+                  </article>
+                </Link>
               );
             })}
           </div>
