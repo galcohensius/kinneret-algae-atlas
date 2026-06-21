@@ -64,6 +64,11 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
         </nav>
       ) : null}
 
+      <nav className="home-aux-links home-aux-links-top" aria-label="Reference material">
+        <Link href="/glossary/">Glossary</Link>
+        <Link href="/supplements/">Supplementary Material</Link>
+      </nav>
+
       <div className="phylum-catalog">
         {phylumGroups.map((group) => (
           <section

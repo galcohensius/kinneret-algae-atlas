@@ -266,6 +266,10 @@ main.home {
   margin: 1.5rem 0 0;
 }
 
+.home-aux-links-top {
+  margin: 0 0 1.25rem;
+}
+
 .home-aux-links a {
   display: inline-flex;
   align-items: center;

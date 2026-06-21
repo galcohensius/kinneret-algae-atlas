@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import { publicAssetPath } from "../lib/public-path";
 import AlgaeIndexSectionShell from "./components/AlgaeIndexSectionShell";
@@ -83,10 +82,6 @@ export default function HomePage() {
 
       <div className="home-below-hero">
         <AlgaeIndexSectionShell />
-        <nav className="home-aux-links" aria-label="Reference material">
-          <Link href="/glossary/">Glossary</Link>
-          <Link href="/supplements/">Supplementary Material</Link>
-        </nav>
       </div>
     </main>
   );
