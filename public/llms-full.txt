@@ -6,7 +6,7 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 
 Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.
 
-Species count: 24
+Species count: 25
 
 ## Species: Gymnodinium F. Stein 1878
 - Slug: gymnodinium
@@ -15,13 +15,13 @@ Species count: 24
 - Habitat: plankton
 - Organization: flagellated single cells
 - Cell shape: mushroom-like, close to a sphere
-- Cell diameter (D): 7.6 – 12.3 m, median: 9.7 m (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.
-- Cell biovolume: 230 - 1000m3, median: 470 m3.
-- Biovolume equation: Sphere, V,m3 = 4/3  (D/2)3. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.
-- Ecology (compact): Several species of naked dinoflagellates of the genera Gymnodinium and Glenodinium occur in Lake Kinneret, they were never identified to species level. Of those, a small species of Gymnodinium (cell volume ~ 500 mm3) is most common. The da…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Cell diameter (D): 7.6 – 12.3 μm, median: 9.7 μm (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.
+- Cell biovolume: 230 - 1000 μm³, median: 470 μm³.
+- Biovolume equation: Sphere, V, μm³ = 4/3 π (D/2)³. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.
+- Ecology (compact): Several species of naked dinoflagellates of the genera Gymnodinium and Glenodinium occur in Lake Kinneret, they were never identified to species level. Of those, a small species of Gymnodinium (cell volume ~ 500 μm³) is most common. The da…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Ceratium furcoides (Levander) Langhans 1925
@@ -31,13 +31,13 @@ Species count: 24
 - Habitat: plankton
 - Organization: flagellated single cells
 - Cell shape: a spheroid from which 2-4 horns of different lengths extend
-- Cell diameter (D): 30-50 m wide
-- Cell length (L): 165-260 m long (literature values)
-- Cell biovolume: 70,000 m3 (literature value, we do not routinely measure this species)
+- Cell diameter (D): 30-50 μm wide
+- Cell length (L): 165-260 μm long (literature values)
+- Cell biovolume: 70,000 μm³ (literature value, we do not routinely measure this species)
 - Ecology (compact): Historically this species was identified as Ceratium hirunidnella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Ceratium hirundinella (O.F. Muller) Dujardin 1841
@@ -47,13 +47,13 @@ Species count: 24
 - Habitat: plankton
 - Organization: flagellated single cells
 - Cell shape: a spheroid from which 2 to 5 (usually 3 or 4) horns of different lengths extend
-- Cell diameter (D): 45-63 m (literature values)
-- Cell length (L): 155-200 m (literature values)
-- Cell biovolume: 73,000 m3 (literature value, we do not routinely measure this species)
+- Cell diameter (D): 45-63 μm (literature values)
+- Cell length (L): 155-200 μm (literature values)
+- Cell biovolume: 73,000 μm³ (literature value, we do not routinely measure this species)
 - Ecology (compact): C. hirundinella is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cel…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Diplopsalis acuta (Apstein) Entz 1906
@@ -63,14 +63,14 @@ Species count: 24
 - Habitat: plankton, littoral (more abundant) and pelagial,
 - Organization: flagellated single cells
 - Cell shape: flat cone (Chinese hat) on top of a half-sphere (Plate 1).
-- Cell diameter (D): 34 - 47 m, median: 38 m (N=92)
-- Cell length (L): 17 – 23 m, median: 19 m (N=92)
-- Cell biovolume: 15,000 – 40,000m3, median: 22,000 m3.
-- Biovolume equation: V,m3 = (/12) *D2 *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999).
-- Ecology (compact): Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL-1 (Fig. 1). It appears in the plankton from November (onset of destratification) to Ju…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Cell diameter (D): 34 - 47 μm, median: 38 μm (N=92)
+- Cell length (L): 17 – 23 μm, median: 19 μm (N=92)
+- Cell biovolume: 15,000 – 40,000 μm³, median: 22,000 μm³.
+- Biovolume equation: V, μm³ = (π/12) *D² *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999).
+- Ecology (compact): Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL⁻¹ (Fig. 1). It appears in the plankton from November (onset of destratification) to Ju…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Peridiniopsis borgei Lemmermann 1904
@@ -80,14 +80,14 @@ Species count: 24
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
 - Cell shape: near-sphere
-- Cell diameter (D): 29 – 40.5 m, median: 34 m (N=580)
-- Cell length (L): 32 – 44 m, median: 39 m (N=262)
-- Cell biovolume: 14,000 – 40,500m3, median: 21,300 m3. Larger cell size in winter, smaller in summer (see Fig. 2b).
-- Biovolume equation: V,m3 = 0.9405 D2.8596 (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).
+- Cell diameter (D): 29 – 40.5 μm, median: 34 μm (N=580)
+- Cell length (L): 32 – 44 μm, median: 39 μm (N=262)
+- Cell biovolume: 14,000 – 40,500 μm³, median: 21,300 μm³. Larger cell size in winter, smaller in summer (see Fig. 2b).
+- Biovolume equation: V, μm³ = 0.9405 D².⁸⁵⁹⁶ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).
 - Ecology (compact): Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022
@@ -97,14 +97,14 @@ Species count: 24
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
 - Cell shape: prolate spheroid
-- Cell diameter (D): varies significantly over an annual cycle 21 - 30 m, median: 25.6 m (N=>2000)
-- Cell length (L): 27 – 36 m, median: 31 m (N=700)
-- Cell biovolume: 6300 - 17500m3, median: 10500 m3.
-- Biovolume equation: V,m3 = 2.099 D2.623
+- Cell diameter (D): varies significantly over an annual cycle 21 - 30 μm, median: 25.6 μm (N=>2000)
+- Cell length (L): 27 – 36 μm, median: 31 μm (N=700)
+- Cell biovolume: 6300 - 17500 μm³, median: 10500 μm³.
+- Biovolume equation: V, μm³ = 2.099 D².⁶²³
 - Ecology (compact): Parvodinium cunningtonii is one of the species always present in the water column, contributing to total phytoplankton biomass up to 20-30%. The species was less abundant before the mid 1990s, when Peridinium gatunense bloomed every year,…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926
@@ -114,12 +114,12 @@ Species count: 24
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
 - Cell shape: sphere
-- Cell diameter (D): (D): 13 - 18 m, median: 15.5 m (N=450)
-- Cell biovolume: 17500 - 4300m3, median: 2900 m3.
-- Biovolume equation: V,m3 = (4/3)  D3 (sphere)
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Cell diameter (D): (D): 13 - 18 μm, median: 15.5 μm (N=450)
+- Cell biovolume: 17500 - 4300 μm³, median: 2900 μm³.
+- Biovolume equation: V, μm³ = (4/3) π D³ (sphere)
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Parvodinium elpatiewskyi (Ostenfeld) Kretschmann et al 2019
@@ -129,14 +129,14 @@ Species count: 24
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
 - Cell shape: prolate spheroid
-- Cell diameter (D): 21 - 30 m, median: 26 m (N=>2000)
-- Cell length (L): 28 – 37 m, median: 32.5 m (N=700)
-- Cell biovolume: 6600 - 17500m3, median: 11500 m3.
-- Biovolume equation: V,m3 = 1.2514 D2.793 (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).
+- Cell diameter (D): 21 - 30 μm, median: 26 μm (N=>2000)
+- Cell length (L): 28 – 37 μm, median: 32.5 μm (N=700)
+- Cell biovolume: 6600 - 17500 μm³, median: 11500 μm³.
+- Biovolume equation: V, μm³ = 1.2514 D².⁷⁹³ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid).
 - Ecology (compact): Parvodinium elpatiewskyi is one of the common algal species in the Kinneret plankton, present in the water at all times of the year. In the absence of Peridinium gatunense in recent years, Parvodinium elpatiewskyi seems to be more abundant…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Durinskia oculata (Stein) Gert Hansen et Flaim 2007
@@ -146,13 +146,13 @@ Species count: 24
 - Habitat: plankton, mostly littoral
 - Organization: single cells
 - Cell shape: ovoid or spherical
-- Cell diameter (D): 17 - 26 m, median: 22 m (N=700)
-- Cell biovolume: 2600 - 9500m3, median: 5300 m3.
-- Biovolume equation: V,m3 = (4/3)  (D/2)3. (sphere equation)
+- Cell diameter (D): 17 - 26 μm, median: 22 μm (N=700)
+- Cell biovolume: 2600 - 9500 μm³, median: 5300 μm³.
+- Biovolume equation: V, μm³ = (4/3) π (D/2)³. (sphere equation)
 - Ecology (compact): Durinskia oculata is rare in the pelagic water, it appeared in our samples in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples. Lit…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Glochidinium penardiforme (Lemmermann) Boltovskoy 2000
@@ -162,14 +162,14 @@ Species count: 24
 - Habitat: plankton, littoral
 - Organization: flagellated single cells
 - Cell shape: ovoid or prolate spheroid
-- Cell diameter (D): 17 - 24 m, median: 21 m (N=160)
-- Cell length (L): 20 – 27.5 m, median: 23 m (N=160)
-- Cell biovolume: 3050 - 8200m3, median: 5450 m3.
-- Biovolume equation: V,m3 = (4/3) L (D/2)2 (prolate sphaeroid)
+- Cell diameter (D): 17 - 24 μm, median: 21 μm (N=160)
+- Cell length (L): 20 – 27.5 μm, median: 23 μm (N=160)
+- Cell biovolume: 3050 - 8200 μm³, median: 5450 μm³.
+- Biovolume equation: V, μm³ = (4/3)π L (D/2)² (prolate sphaeroid)
 - Ecology (compact): Glochidinium penardiforme is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008 (Fig. 1). Its mean water column abundanc…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Naiadinium polonicum (Woloszynska) Carty 2014
@@ -179,14 +179,14 @@ Species count: 24
 - Habitat: plankton, littoral
 - Organization: flagellated single cells
 - Cell shape: a prolate spheroid that was punched in its “belly” so that from dorsal view it is concave
-- Cell diameter (D): 29-36 m, median: 32 m (N=32)
-- Cell length (L): 32-42 m, median: 38 m (N=32)
-- Cell biovolume: 7,000-14,000m3, median: 10,000 m3
-- Biovolume equation: V,m3 = ((4/3) L (D/2)2)/2 (half the volume of a prolate sphaeroid)
-- Ecology (compact): Naiadinium polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL-1 (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Cell diameter (D): 29-36 μm, median: 32 μm (N=32)
+- Cell length (L): 32-42 μm, median: 38 μm (N=32)
+- Cell biovolume: 7,000-14,000 μm³, median: 10,000 μm³
+- Biovolume equation: V, μm³ = ((4/3)π L (D/2)²)/2 (half the volume of a prolate sphaeroid)
+- Ecology (compact): Naiadinium polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL⁻¹ (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Peridinium gatunense Nygaard 1925
@@ -196,14 +196,14 @@ Species count: 24
 - Habitat: plankton, pelagial, littoral
 - Organization: flagellated single cells
 - Cell shape: prolate sphaeroid (close to a sphere)
-- Cell diameter (D): 44 - 58 m, median: 50 m (N=1230)
-- Cell length (L): 47 – 60 m, median: 52 m (N=423)
-- Cell biovolume: 44,300 – 99,400m3, median: 67,000 m3.
-- Biovolume equation: V,m3 = 1.31 D2.7835. Regression eqn. based on >400 measurements of both D and L with V computed for a prolate sphaeroid.
+- Cell diameter (D): 44 - 58 μm, median: 50 μm (N=1230)
+- Cell length (L): 47 – 60 μm, median: 52 μm (N=423)
+- Cell biovolume: 44,300 – 99,400 μm³, median: 67,000 μm³.
+- Biovolume equation: V, μm³ = 1.31 D².⁷⁸³⁵. Regression eqn. based on >400 measurements of both D and L with V computed for a prolate sphaeroid.
 - Ecology (compact): From the beginning of monitoring in Lake Kinneret in the 1960s, the regular late-winter-spring bloom of P. gatunense was the most salient feature of the Kinneret phytoplankton (Zohary et al. 2014). Those intense blooms could be observed as…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: 1 Dinoflagellates 2026-06-08.docx
 
 ## Species: Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824
@@ -213,12 +213,12 @@ Species count: 24
 - Habitat: benthos, periphyton
 - Organization: filamentous (initially uniseriate, later multiseriate)
 - Cell shape: cylinder
-- Cell diameter (D): ~ 20 mm (but highly variable)
+- Cell diameter (D): ~ 20 μm (but highly variable)
 - Filament length: Several centimeters
 - Ecology (compact): Seasonally occurring as a fleecy mat in the eulittoral zone of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in foll…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
+- Record updated (source extraction): 2026-06-16
 - Source file: Bangia atropurpurea 2026-06-03.docx
 
 ## Species: Cryptomonas Ehrenberg 1831
@@ -228,15 +228,15 @@ Species count: 24
 - Habitat: plankton pelagic/littoral
 - Organization: flagellated single cells
 - Cell shape: oval
-- Cell diameter (D): 6 – 17 m, median: 9.2 m (N=2400).
-- Cell length (L): 10 – 30 m, median: 14 m (N=424).
-- Cell biovolume: 400 – 2000 m3, median: 700 m3. Larger cell size in winter, smaller in summer (see Figs. 2, 4).
-- Biovolume equation: V=0.7076D3.0772 (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid).
+- Cell diameter (D): 6 – 17 μm, median: 9.2 μm (N=2400).
+- Cell length (L): 10 – 30 μm, median: 14 μm (N=424).
+- Cell biovolume: 400 – 2000 μm³, median: 700 μm³. Larger cell size in winter, smaller in summer (see Figs. 2, 4).
+- Biovolume equation: V=0.7076D³.⁰⁷⁷² (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid).
 - Ecology (compact): Cryptopmonas spp. are always present in the water column (Fig. 1), with higher abundances in winter (Dec to Feb) but also in summer (Jul - Sep) and lowest in April-May, at the time of the Peridinium bloom (Fig. 2). It is possible that the…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Cryptophytes 2026-06-07.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Cryptophytes 2026-06-14.docx
 
 ## Species: Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994
 - Slug: plagioselmis-nannoplanctica
@@ -245,15 +245,15 @@ Species count: 24
 - Habitat: plankton, pelagic/littoral Distinctive featureses: heavily grazed by zooplankton, contains phycoerythrine (like cyanobacteria) – fluorecses orange when stained with DAPI. Always p…
 - Organization: flagellated single cells
 - Cell shape: drop-like
-- Cell diameter (D): 3 – 6 m, median: 4.5 m (N=477).
-- Cell length (L): 6 – 10 m, median: 7.8 m (N=390).
-- Cell biovolume: 40 – 150 m3, median: 82 m3.
-- Biovolume equation: V=1.841D2.5264 (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R2=0.93).
+- Cell diameter (D): 3 – 6 μm, median: 4.5 μm (N=477).
+- Cell length (L): 6 – 10 μm, median: 7.8 μm (N=390).
+- Cell biovolume: 40 – 150 μm³, median: 82 μm³.
+- Biovolume equation: V=1.841D².⁵²⁶⁴ (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R²=0.93).
 - Ecology (compact): Plagioselmis nannoplanctonica is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winte…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Cryptophytes 2026-06-07.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Cryptophytes 2026-06-14.docx
 
 ## Species: Tetraselmis cordiformis (Carter) Stein 1878
 - Slug: tetraselmis-cordiformis
@@ -262,15 +262,15 @@ Species count: 24
 - Habitat: plankton
 - Organization: flagellated single cells
 - Cell shape: sphaeroid
-- Cell diameter (D): 10.2–15.9 mm, median: 13.1 mm (N=526).
-- Cell length (L): 13.4–18.7 mm, median: 15.9 mm (N=526)
-- Cell biovolume: 730-2400 mm3, median: 1400 mm3.
-- Biovolume equation: prolate spheroid V, mm3 = 4/3 p L/2 (D/2)2 (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid: V= 1.9507*D2.5651
-- Ecology (compact): Tetraselmis cordiformis usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m-2 (not shown). It is more abundant between February and April and again from August till November but…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Cell diameter (D): 10.2–15.9 μm, median: 13.1 μm (N=526).
+- Cell length (L): 13.4–18.7 μm, median: 15.9 μm (N=526)
+- Cell biovolume: 730-2400 μm³, median: 1400 μm³.
+- Biovolume equation: prolate spheroid V, μm³ = 4/3 p L/2 (D/2)² (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid: V= 1.9507*D².⁵⁶⁵¹
+- Ecology (compact): Tetraselmis cordiformis usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m⁻² (not shown). It is more abundant between February and April and again from August till November but…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Cryptophytes 2026-06-07.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Cryptophytes 2026-06-14.docx
 
 ## Species: Chrysochromulina parva Lackey 1939
 - Slug: chrysochromulina-parva
@@ -279,14 +279,14 @@ Species count: 24
 - Habitat: plankton, pelagic/littoral
 - Organization: flagellated single cells
 - Cell shape: spheroid
-- Cell diameter (D): 2.9 – 5.2 m, median: 3.9 m (N=100).
-- Cell biovolume: 13 – 76 m3, median: 34 m3.
-- Biovolume equation: Sphere V, m3 = 4/3 p *(D/2)3.
-- Ecology (compact): Chrysochromulina parva is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL-1; an all-time maximum of 11,900 cells mL-1 was recorded in April 2019 (F…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Cell diameter (D): 2.9 – 5.2 μm, median: 3.9 μm (N=100).
+- Cell biovolume: 13 – 76 μm³, median: 34 μm³.
+- Biovolume equation: Sphere V, μm³ = 4/3 π *(D/2)³.
+- Ecology (compact): Chrysochromulina parva is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL⁻¹; an all-time maximum of 11,900 cells mL⁻¹ was recorded in April 2019 (F…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Cryptophytes 2026-06-07.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Cryptophytes 2026-06-14.docx
 
 ## Species: Euglena Ehrenberg 1830
 - Slug: euglena
@@ -295,15 +295,15 @@ Species count: 24
 - Habitat: plankton, mostly littoral
 - Organization: single flagellated cells
 - Cell shape: a flattened drop of water
-- Cell diameter (D): 13-19 mm, median 10 mm (N=173)
-- Cell length (L): length 28-53 mm, median 27 mm (N=173)
-- Cell biovolume: 500 - 9000 mm3, median: 1200 mm3.
-- Biovolume equation: prolate spheroid V, m3 = 4/3 p (D/2)2 L/2
+- Cell diameter (D): 13-19 μm, median 10 μm (N=173)
+- Cell length (L): length 28-53 μm, median 27 μm (N=173)
+- Cell biovolume: 500 - 9000 μm³, median: 1200 μm³.
+- Biovolume equation: prolate spheroid V, μm³ = 4/3 π (D/2)² L/2
 - Ecology (compact): Euglena spp. are rare in the Kinneret pelagic zone, but occasionally abundant in littoral samples, especially if collected from niches with high concentrations of organic matter, such as shallow waters among seasonally inundated shore vege…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Euglenophytes 2026-06-03.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Euglenophytes 2026-06-14.docx
 
 ## Species: Phacus longicauda (Ehrenberg) Dujardin 1841
 - Slug: phacus-longicauda
@@ -313,10 +313,10 @@ Species count: 24
 - Organization: flagellated single cells
 - Cell shape: leaf-shaped
 - Ecology (compact): Phacus species are extremely rare in Lake Kinneret. They have never been abundant enough to be counted in our routine monitoring, but occasionally a specimen is found in the littoral zone, usually of the species Phacus longicauda (Plate 1)…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Euglenophytes 2026-06-03.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Euglenophytes 2026-06-14.docx
 
 ## Species: Trachelomonas Ehrenberg 1833
 - Slug: trachelomonas
@@ -325,14 +325,14 @@ Species count: 24
 - Habitat: plankton, pelagic
 - Organization: single flagellated cells
 - Cell shape: sphaeroid
-- Cell diameter (D): 8.9-15.5 mm (median=11.4 mm). Range reported is 5th-95th percentiles for 234 cells measured during 2004-2009.
-- Cell biovolume: 370 - 2000 mm3, median: 800 mm3.
-- Biovolume equation: sphere, V, mm3 = ¾ p (D/2)3
+- Cell diameter (D): 8.9-15.5 μm (median=11.4 μm). Range reported is 5th-95th percentiles for 234 cells measured during 2004-2009.
+- Cell biovolume: 370 - 2000 μm³, median: 800 μm³.
+- Biovolume equation: sphere, V, μm³ = ¾ π (D/2)³
 - Ecology (compact): Trachelomonas is the only euglenoid seen in Kinneret pelagic plankton samples quite often, although this genus too is never abundant, maximum cell density ever recorded was ~50/mL (Fig. 1). Trachelomonas can be viewed at any time of the ye…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Euglenophytes 2026-06-03.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Euglenophytes 2026-06-14.docx
 
 ## Species: Colacium Ehrenberg 1833
 - Slug: colacium
@@ -342,10 +342,10 @@ Species count: 24
 - Organization: colonies
 - Cell shape: oval
 - Ecology (compact): Colacium colonies are occasionally seen as epibions on zooplankton, especially on copepods and rotifers (Plate 1). Since they are sessile, they are not observed in our phytoplankton samples, were never counted and we have no corresponding…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Euglenophytes 2026-06-03.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Euglenophytes 2026-06-14.docx
 
 ## Species: Chlamydomonas sp. Ehrenberg 1833
 - Slug: chlamydomonas-sp
@@ -354,14 +354,14 @@ Species count: 24
 - Habitat: plankton
 - Organization: flagellated single cells
 - Cell shape: spherical
-- Cell diameter (D): 7 – 13 m, median: 10 m (N=562).
-- Cell biovolume: 200 – 1300 m3, median: 520 m3.
-- Biovolume equation: Sphere V, m3 = 4/3 p (D/2)3.
+- Cell diameter (D): 7 – 13 μm, median: 10 μm (N=562).
+- Cell biovolume: 200 – 1300 μm³, median: 520 μm³.
+- Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³.
 - Ecology (compact): Abundance data for this taxon was heavily biased by the person counting it: Technician 1 (1983 – 1995) counted more Chlamydomonas individuals in her samples than the two other technicians and Technician 2 counted the least (Fig. 1). This “…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Volvocales 2026-06-09.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Volvocales 2026-06-11.docx
 
 ## Species: Eudorina elegans Ehrenberg 1832
 - Slug: eudorina-elegans
@@ -371,16 +371,16 @@ Species count: 24
 - Organization: flagellated coenobia
 - Cell shape: spherical
 - Colony shape: spherical to ellipsoidal
-- Cell diameter (D): 4 – 10 m, median: 6 m (N=54).
-- Cell biovolume: 25 – 460 m3, median: 100 m3.
-- Biovolume equation: Sphere V, m3 = 4/3 p (D/2)3
-- Colony diameter: 40-150 mm
+- Cell diameter (D): 4 – 10 μm, median: 6 μm (N=54).
+- Cell biovolume: 25 – 460 μm³, median: 100 μm³.
+- Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³
+- Colony diameter: 40-150 μm
 - Cells per colony: 4-16
 - Ecology (compact): Eudorina elegans is rare in our Kinneret samples, in 50 years of monitoring the species was counted <20 times, most of them since 2013 (Fig. 1).
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Volvocales 2026-06-09.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Volvocales 2026-06-11.docx
 
 ## Species: Pandorina morum (O. Müller) Bory 1826
 - Slug: pandorina-morum
@@ -390,35 +390,55 @@ Species count: 24
 - Organization: flagellated coenobia
 - Cell shape: spherical
 - Colony shape: subspherical
-- Cell diameter (D): 8 – 17 m
-- Cell biovolume: 40 – 400 m3
-- Biovolume equation: Sphere V, m3 = 4/3 p (D/2)3.
-- Colony diameter: 20-60 mm
+- Cell diameter (D): 8 – 17 μm
+- Cell biovolume: 40 – 400 μm³
+- Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³.
+- Colony diameter: 20-60 μm
 - Cells per colony: 8-16
-- Ecology (compact): Pandorina morum is common in the littoral zones of Lake Kinneret, but practically never seen in the pelagic water, so we have no ecological data for it. The specimen in Plate 1 was collected at the shore by the Kinneret Limnological Instit…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 10 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Ecology (compact): Pandorina morum is common in the littoral zone of Lake Kinneret, but practically never seen in the pelagic water. Hence there are no ecological data for it. The species is common in stratified shallow lakes rich in nitrate. The specimen in…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-06-10
-- Source file: Volvocales 2026-06-09.docx
+- Record updated (source extraction): 2026-06-16
+- Source file: Volvocales 2026-06-11.docx
+
+## Species: Mougeotia Agardh 1824
+- Slug: mougeotia
+- Canonical URL: https://kinneret-algae-atlas.org/algae/mougeotia
+- Taxonomy: phylum=Charophyta; class=Zygnematophyceae; order=Zygnematales
+- Habitat: plankton
+- Organization: filamentous
+- Cell shape: cylinder
+- Colony shape: long filaments made of long cylindrical cells
+- Cell diameter (D): 3.1 – 4.7 μm, median: 3.7 μm (N=1200)
+- Cell length (L): 36 – 95 μm, median: 60 μm (N=1200): cells are >10 times longer than wide
+- Cell biovolume: 350 – 1300 μm³, median: 650 μm³
+- Biovolume equation: cylinder V, μm³ = π (D/2)² L
+- Filament length: 130 - 800 μm
+- Cells per filament: Usually 1-6 but can be as long as 40 cells
+- Ecology (compact): Mougeotia is relatively new to Lake Kinneret, in the 1960s, 1970s and 1980 – it was never seen. it first appeared in the plankton in May 1998 (Zohary et al. 2019). It was rare until 2004, but since then it is a common component of the Kinn…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
+- Record updated (source extraction): 2026-06-16
+- Source file: Zygnematales 2026-06-16.docx
 
 ## Glossary
 - Canonical URL: https://kinneret-algae-atlas.org/glossary/
 - Terms count: 106
-- Record updated: 2026-06-10
-- Source file: 1-Glossary 2026-06-07.doc
+- Record updated: 2026-06-15
+- Source file: 1-Glossary 2026-06-11.docx
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
 
 ### Glossary terms (compact)
 - acicular [acicular]: needle-shaped
 - acute [acute]: sharp angle (<90 degrees)
-- alkalinity [alkalinity]: mg CaCO3 L-1
+- alkalinity [alkalinity]: mg CaCO₃ L⁻¹
 - amoeboid [amoeboid]: amoeba like
 - anterior [anterior]: situated at the front side, opposite of posterior
 - antapex [antapex]: the point opposite to the tip of the cell on its other end
 - antapical [antapical]: opposite to the tip of the cell on its other end
 - apex (plural: apices) [apex]: tip of a cell (in species that have one or more attenuated endings)
 - apical axis [apical-axis]: in diatoms: axis linking the two poles of a valve
-- apiculate [apiculate]: terminating in a short, sharp, flexible point in diatoms: having a short broad tip see Cox (1996) Plate 2
+- apiculate [apiculate]: terminating in a short, sharp, flexible point. In diatoms: having a short broad tip see Cox (1996) Plate 2
 - aplanospores [aplanospores]: non-motile spores formed asexually within the parent cell, having no flagella
 - arcuate [arcuate]: see Cox (1996) Plate 1
 - areola (plural: areolae) [areola]: a regular, repeated perforation through the siliceous layer on the valve of a diatom cell
@@ -432,7 +452,7 @@ Species count: 24
 - capitate [capitate]: having a part that is enlarged and rounded see Cox (1996) Plate 2
 - caudus [caudus]: ‘tail’ of euglenophytes
 - cingulum (plural: cingula) [cingulum]: portion of the diatom girdle associated with a single valve. In dinoflagellates: a transverse groove that encircles the cell and holds the transverse flagellum in place.
-- conductivity [conductivity]: specific conductance, S cm-1
+- conductivity [conductivity]: specific conductance, μS cm⁻¹
 - conjugation [conjugation]: a form of sexual reproduction where neither gamete is flagellated. This type of reproduction, typical of the Zygnematalean (conjugating) green algae, cells attach to each other so…
 - costa (Plural: costae) [costa]: rib-like longitudinal cell wall thickening
 - dorsal [dorsal]: back side, opposite of ventral

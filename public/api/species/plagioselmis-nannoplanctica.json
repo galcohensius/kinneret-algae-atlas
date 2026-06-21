@@ -1,0 +1,29 @@
+{
+  "slug": "plagioselmis-nannoplanctica",
+  "scientific_name": "Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica",
+  "taxonomy": {
+    "phylum": "Cryptista",
+    "class": "Cryptophyceae",
+    "order": "Cryptomonadales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated single cells",
+    "cell_shape": "drop-like",
+    "cell_diameter_d": "3 – 6 μm, median: 4.5 μm (N=477).",
+    "cell_length_l": "6 – 10 μm, median: 7.8 μm (N=390).",
+    "biovolume_per_cell": "40 – 150 μm³, median: 82 μm³.",
+    "biovolume_equation": "V=1.841D².⁵²⁶⁴ (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R²=0.93)."
+  },
+  "narrative": {
+    "morphology": "A small drop-shaped monad with two slightly unequal flagella (Plate 1), this is the smaller cryptophyte of Lake Kinneret. A single red (contains phycoerythrin) chloroplast is dorsal with ventral margins. A central large pyrenoid surrounded by a thick startch sheath of 2 hemispherical halves. The nucleus is posterior. Its chloroplast fluoresces orange (auatofluorescence) when observed under an epifluorescent microscope.",
+    "ecology": "Plagioselmis nannoplanctonica is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter holomixis (Dec. to Mar.), lowest in summer (Jun. to Oct.; Fig. 2). Indifferent to increasing salinity (or chloride conc.; Fig. 3). Like Cryptomnonas, it is present in both the pelagic and littoral zones and is highly grazed by zooplankton.",
+    "environmental_conditions": "Present at the full range observed in Lake Kinneret of the following environmental variables: Zₑᵤ (euphotic zone depth), Secchi depth, pH, NH₄, DO, SO₄, Total suspended solids, Turbidity. Abundance increases with increasing alkalinity and nitrate, and with declining water temperature, DON, Organic N, total dissolved P (Fig. 3).",
+    "further_reading": "Lund JWG 1962. A rarely recorded but very common British alga, Rhodomonas minuta Skuja. British Phycological Bulletin, 2: 133-139.\nNovarino G 2002. Cryptophyta (Cryptomonads). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Eds: John DM, Whitton BA, Brook AJ. pp. 240-249. Cambridge: Cambridge University Press.\nB-Beres V 2024. Az egybarazdas moszatok [cryptophyceae] kishatarozoja. Hun-REN OK VOI, Funkcionalis Algologgiai Kutatocsoport."
+  }
+}

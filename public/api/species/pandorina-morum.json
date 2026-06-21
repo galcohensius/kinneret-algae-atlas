@@ -1,0 +1,31 @@
+{
+  "slug": "pandorina-morum",
+  "scientific_name": "Pandorina morum (O. Müller) Bory 1826",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/pandorina-morum",
+  "taxonomy": {
+    "phylum": "Chlorophyta",
+    "class": "Chlorophyceae",
+    "order": "Volvocales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated coenobia",
+    "cell_shape": "spherical",
+    "colony_shape": "subspherical",
+    "cell_diameter_d": "8 – 17 μm",
+    "biovolume_per_cell": "40 – 400 μm³",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³.",
+    "colony_diameter": "20-60 μm",
+    "cells_per_colony": "8-16"
+  },
+  "narrative": {
+    "morphology": "The coenobia are made of 8 or 16 cells compressed into a dense spherical aggregate that is surrounded by an envelope of hyaline mucilage. Each cell has two equal-length flagella that are longer than the cell. With a cup-shaped chloroplast, 1 or more pyrenoids, 2 contractile vacuoles an anterior red eyespot.",
+    "ecology": "Pandorina morum is common in the littoral zone of Lake Kinneret, but practically never seen in the pelagic water. Hence there are no ecological data for it. The species is common in stratified shallow lakes rich in nitrate. The specimen in Plate 1 was collected at the shore by the Kinneret Limnological Institute in March 2006.",
+    "environmental_conditions": "",
+    "further_reading": ""
+  }
+}

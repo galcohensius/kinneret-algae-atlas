@@ -1,0 +1,380 @@
+{
+  "count": 25,
+  "species": [
+    {
+      "slug": "gymnodinium",
+      "scientific_name": "Gymnodinium F. Stein 1878",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/gymnodinium",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Gymnodiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "ceratium-furcoides",
+      "scientific_name": "Ceratium furcoides (Levander) Langhans 1925",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/ceratium-furcoides",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Gonyaulacales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "ceratium-hirundinella",
+      "scientific_name": "Ceratium hirundinella (O.F. Muller) Dujardin 1841",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/ceratium-hirundinella",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Gonyaulacales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "diplopsalis-acuta",
+      "scientific_name": "Diplopsalis acuta (Apstein) Entz 1906",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/diplopsalis-acuta",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "peridiniopsis-borgei",
+      "scientific_name": "Peridiniopsis borgei Lemmermann 1904",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridiniopsis-borgei",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "parvodinium-cunningtonii",
+      "scientific_name": "Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/parvodinium-cunningtonii",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "peridiniopsis-cunningtonii-var-quinquecuspidata",
+      "scientific_name": "Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "parvodinium-elpatiewskyi",
+      "scientific_name": "Parvodinium elpatiewskyi (Ostenfeld) Kretschmann et al 2019",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/parvodinium-elpatiewskyi",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "durinskia-oculata",
+      "scientific_name": "Durinskia oculata (Stein) Gert Hansen et Flaim 2007",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/durinskia-oculata",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "glochidinium-penardiforme",
+      "scientific_name": "Glochidinium penardiforme (Lemmermann) Boltovskoy 2000",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "naiadinium-polonicum",
+      "scientific_name": "Naiadinium polonicum (Woloszynska) Carty 2014",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/naiadinium-polonicum",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Thoracosphaerales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "peridinium-gatunense",
+      "scientific_name": "Peridinium gatunense Nygaard 1925",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridinium-gatunense",
+      "taxonomy": {
+        "phylum": "Dinoflagellata",
+        "class": "Dinophyceae",
+        "order": "Peridiniales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "bangia-atropurpurea",
+      "scientific_name": "Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/bangia-atropurpurea",
+      "taxonomy": {
+        "phylum": "Rhodophyta",
+        "class": "Bangiophyceae",
+        "order": "Bangiales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "cryptomonas",
+      "scientific_name": "Cryptomonas Ehrenberg 1831",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/cryptomonas",
+      "taxonomy": {
+        "phylum": "Cryptista",
+        "class": "Cryptophyceae",
+        "order": "Cryptomonadales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "plagioselmis-nannoplanctica",
+      "scientific_name": "Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica",
+      "taxonomy": {
+        "phylum": "Cryptista",
+        "class": "Cryptophyceae",
+        "order": "Cryptomonadales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "tetraselmis-cordiformis",
+      "scientific_name": "Tetraselmis cordiformis (Carter) Stein 1878",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/tetraselmis-cordiformis",
+      "taxonomy": {
+        "phylum": "Chlorophyta",
+        "class": "Chlorodendrophyceae",
+        "order": "Chlorodendrales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "chrysochromulina-parva",
+      "scientific_name": "Chrysochromulina parva Lackey 1939",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/chrysochromulina-parva",
+      "taxonomy": {
+        "phylum": "Haptophyta",
+        "class": "Coccolithophyceae",
+        "order": "Prymnesiales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "euglena",
+      "scientific_name": "Euglena Ehrenberg 1830",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/euglena",
+      "taxonomy": {
+        "phylum": "Euglenophyta",
+        "class": "Euglenophyceae",
+        "order": "Euglenales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "phacus-longicauda",
+      "scientific_name": "Phacus longicauda (Ehrenberg) Dujardin 1841",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/phacus-longicauda",
+      "taxonomy": {
+        "phylum": "Euglenophyta",
+        "class": "Euglenophyceae",
+        "order": "Euglenales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "trachelomonas",
+      "scientific_name": "Trachelomonas Ehrenberg 1833",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/trachelomonas",
+      "taxonomy": {
+        "phylum": "Euglenophyta",
+        "class": "Euglenophyceae",
+        "order": "Euglenales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "colacium",
+      "scientific_name": "Colacium Ehrenberg 1833",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/colacium",
+      "taxonomy": {
+        "phylum": "Euglenophyta",
+        "class": "Euglenophyceae",
+        "order": "Euglenales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "chlamydomonas-sp",
+      "scientific_name": "Chlamydomonas sp. Ehrenberg 1833",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/chlamydomonas-sp",
+      "taxonomy": {
+        "phylum": "Chlorophyta",
+        "class": "Chlorophyceae",
+        "order": "Volvocales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "eudorina-elegans",
+      "scientific_name": "Eudorina elegans Ehrenberg 1832",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/eudorina-elegans",
+      "taxonomy": {
+        "phylum": "Chlorophyta",
+        "class": "Chlorophyceae",
+        "order": "Volvocales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "pandorina-morum",
+      "scientific_name": "Pandorina morum (O. Müller) Bory 1826",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/pandorina-morum",
+      "taxonomy": {
+        "phylum": "Chlorophyta",
+        "class": "Chlorophyceae",
+        "order": "Volvocales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "mougeotia",
+      "scientific_name": "Mougeotia Agardh 1824",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/mougeotia",
+      "taxonomy": {
+        "phylum": "Charophyta",
+        "class": "Zygnematophyceae",
+        "order": "Zygnematales"
+      },
+      "record_updated": "2026-06-16",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    }
+  ]
+}

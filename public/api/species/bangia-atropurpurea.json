@@ -1,0 +1,27 @@
+{
+  "slug": "bangia-atropurpurea",
+  "scientific_name": "Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/bangia-atropurpurea",
+  "taxonomy": {
+    "phylum": "Rhodophyta",
+    "class": "Bangiophyceae",
+    "order": "Bangiales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "filamentous (initially uniseriate, later multiseriate)",
+    "cell_shape": "cylinder",
+    "cell_diameter_d": "~ 20 μm (but highly variable)",
+    "filament_length": "Several centimeters"
+  },
+  "narrative": {
+    "morphology": "Bangia colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with a prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from intercalary cells, they are formed as a step in the reproductive cycle (Gargiulo et al. 2001).",
+    "ecology": "Seasonally occurring as a fleecy mat in the eulittoral zone of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it. Most Rhodophytes are marine. Only ~ 3% of the ca. 5000 species of Rhodophytes occur in freshwaters, Bangia atropurpurea is one of them.",
+    "environmental_conditions": "",
+    "further_reading": "Gargiulo GM, Genovese G, Morabito M, Culoso F, De Masi F. 2001. Sexual and asexual reproduction in a freshwater population of Bangia atropurpurea (Bangiales, Rhodophyta) from eastern Sicily (Italy). Phycologia, 40: 88–96."
+  }
+}

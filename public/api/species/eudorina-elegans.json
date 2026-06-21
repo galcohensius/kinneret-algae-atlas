@@ -1,0 +1,31 @@
+{
+  "slug": "eudorina-elegans",
+  "scientific_name": "Eudorina elegans Ehrenberg 1832",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/eudorina-elegans",
+  "taxonomy": {
+    "phylum": "Chlorophyta",
+    "class": "Chlorophyceae",
+    "order": "Volvocales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated coenobia",
+    "cell_shape": "spherical",
+    "colony_shape": "spherical to ellipsoidal",
+    "cell_diameter_d": "4 – 10 μm, median: 6 μm (N=54).",
+    "biovolume_per_cell": "25 – 460 μm³, median: 100 μm³.",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³",
+    "colony_diameter": "40-150 μm",
+    "cells_per_colony": "4-16"
+  },
+  "narrative": {
+    "morphology": "Eudorina elegans coenobia in Lake Kinneret are spherical or ellipsoidal, 60-200 μm in diameter, with 4 to 16 cells per colony. Individual cells are spherical or slightly pear-shaped, regularly arranged at periphery of a mucilaginous envelope. With cup-shaped chloroplast and up to 5 pyrenoids per cell, anterior eyespot, two contractile apical vacuoles. The two equal-length flagella are longer than the cell. They protrude through the mucilaginous envelope and enable movement of the colony as a single unit.",
+    "ecology": "Eudorina elegans is rare in our Kinneret samples, in 50 years of monitoring the species was counted <20 times, most of them since 2013 (Fig. 1).",
+    "environmental_conditions": "The few times when Eudorina elegans was counted occurred at the full range of temperature, NO₃ and NH₄, when chlorophyll was < 500 mg m⁻², chloride > 230 mg L⁻¹, Zₑᵤ ranged 6-11 m, Secchi depth ranged 2-4 m, alkalinity was > 100 mg CaCO₃ L⁻¹, Ca > 44 mg L⁻¹, DON < 0.5 mg L⁻¹ and TDP < 100 μg L⁻¹",
+    "further_reading": ""
+  }
+}

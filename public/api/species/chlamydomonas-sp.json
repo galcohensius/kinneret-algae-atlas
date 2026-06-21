@@ -1,0 +1,28 @@
+{
+  "slug": "chlamydomonas-sp",
+  "scientific_name": "Chlamydomonas sp. Ehrenberg 1833",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/chlamydomonas-sp",
+  "taxonomy": {
+    "phylum": "Chlorophyta",
+    "class": "Chlorophyceae",
+    "order": "Volvocales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated single cells",
+    "cell_shape": "spherical",
+    "cell_diameter_d": "7 – 13 μm, median: 10 μm (N=562).",
+    "biovolume_per_cell": "200 – 1300 μm³, median: 520 μm³.",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³."
+  },
+  "narrative": {
+    "morphology": "Spherical flagellated green single cells, with two flagella about same length as cell and a cup-shaped chloroplast. Several hundreds of species of Chlamydomonas were described, they are difficult to distinguish by light microscopy, we did not identify the Kinneret Chlamydomonas to species level, and it is possible that there is more than one species.",
+    "ecology": "Abundance data for this taxon was heavily biased by the person counting it: Technician 1 (1983 – 1995) counted more Chlamydomonas individuals in her samples than the two other technicians and Technician 2 counted the least (Fig. 1). This “technician effect”, dominant to other pattern in the cell abundance data, is a big limitation of long-term phytoplankton data sets based on microscope counts, it is not unique to Lake Kinneret. The discrepancies between technicians exist for all species, but at varying levels, depending on the taxon being counted: less conspicuous species that are easier to misidentify are more susceptible. For the annual cycle (Fig. 2) we present only data counted by Technician 3. It shows Chlamydomonas spp. are present in the water at all times of the year, with a tendency to higher abundance from October till February. Cell size remains close to constant over time, with no apparent annual pattern.",
+    "environmental_conditions": "The Kinneret data for Chlamydomonas for 2013-2020 (Technician 3) do not show distinct correlations with any of the environmental factors we examined: it seems indifferent to water temperature, mixed layer depth, euphotic depth, Secchi depth, chloride, nutrients (not shown).",
+    "further_reading": ""
+  }
+}

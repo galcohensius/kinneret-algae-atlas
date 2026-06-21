@@ -10,9 +10,9 @@ Primary resources:
 - Supplementary material: https://kinneret-algae-atlas.org/supplements/
 
 Machine-readable endpoints:
-- https://kinneret-algae-atlas.org/api/species
-- https://kinneret-algae-atlas.org/api/species/{slug}
-- https://kinneret-algae-atlas.org/api/glossary
+- https://kinneret-algae-atlas.org/api/species.json
+- https://kinneret-algae-atlas.org/api/species/{slug}.json
+- https://kinneret-algae-atlas.org/api/glossary.json
 
 Compact corpus:
 - https://kinneret-algae-atlas.org/llms-full.txt

@@ -1,0 +1,29 @@
+{
+  "slug": "diplopsalis-acuta",
+  "scientific_name": "Diplopsalis acuta (Apstein) Entz 1906",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/diplopsalis-acuta",
+  "taxonomy": {
+    "phylum": "Dinoflagellata",
+    "class": "Dinophyceae",
+    "order": "Peridiniales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated single cells",
+    "cell_shape": "flat cone (Chinese hat) on top of a half-sphere (Plate 1).",
+    "cell_diameter_d": "34 - 47 μm, median: 38 μm (N=92)",
+    "cell_length_l": "17 – 23 μm, median: 19 μm (N=92)",
+    "biovolume_per_cell": "15,000 – 40,000 μm³, median: 22,000 μm³.",
+    "biovolume_equation": "V, μm³ = (π/12) *D² *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999)."
+  },
+  "narrative": {
+    "morphology": "Diplopsalis acuta is the only known heterotrophic (non-pigmented) thecate dinoflagellate in the lake’s pelagic waters. Its shape is distinct, of a half sphere with a Chinese hat on top of it (Plate 1). Another feature differentiating it from other Kinneret dinoflagellates is that its diameter at the cingulum is greater than its height. Its thecae are thick and distinct. Chloroplasts and stigma are lacking (heterotrophic). The protoplast is pink. The hypotheca is broadly rounded and slightly flattened dorsiventrally. Plates are not sculptured and have no reticulations.",
+    "ecology": "Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL⁻¹ (Fig. 1). It appears in the plankton from November (onset of destratification) to July, with peak abundance in March (Fig. 2), before the lake stratifies, and earlier than most other Kinneret dinoflagellates. It is more common in littoral samples. Being heterotrophic, Diplopsalis acuta is excluded from the computation of total phytoplankton biomass in our routine monitoring.",
+    "environmental_conditions": "Higher cell abundances of this species occurred at higher Kinneret alkalinity (> 100 mg CaCO₃ L⁻¹), Ca (> 40 mg L⁻¹), TDP, and DO concentrations, when Dissolved organic N (DON) ranged 0.1-0.5 mg L⁻¹ and Secchi depth ranged 2-4 m, At low turbidity (< 4 NTU) waters, and low Si (Fig. 3). Abundance seemed to be indifferent to water level, conductivity, chloride, short wave radiation. Abundance was higher with lower long-wave radiation levels and water temperatures < 25 C, but both may be correlates of the time of year of its peak abundance.",
+    "further_reading": "Moestrup Ø, Calado AJ. 2018. Süßwasserflora von Mitteleuropa. Dinophyceae. Vol. 6 pp. [i]-xii, [1]-560, 421 figures. Berlin: Springer Spektrum.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Archiv für Hydrobiologie 120(3):267-85."
+  }
+}

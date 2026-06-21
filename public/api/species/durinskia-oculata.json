@@ -1,0 +1,28 @@
+{
+  "slug": "durinskia-oculata",
+  "scientific_name": "Durinskia oculata (Stein) Gert Hansen et Flaim 2007",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/durinskia-oculata",
+  "taxonomy": {
+    "phylum": "Dinoflagellata",
+    "class": "Dinophyceae",
+    "order": "Peridiniales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "single cells",
+    "cell_shape": "ovoid or spherical",
+    "cell_diameter_d": "17 - 26 μm, median: 22 μm (N=700)",
+    "biovolume_per_cell": "2600 - 9500 μm³, median: 5300 μm³.",
+    "biovolume_equation": "V, μm³ = (4/3) π (D/2)³. (sphere equation)"
+  },
+  "narrative": {
+    "morphology": "Cells are ovoid or spherical and slightly flattened dorsiventrally. The epitheca and hypotheca are both half-sphere shaped, making together a sphere. The cingulum surrounds the cell at its middle (Plates 1a,b, 2). The sulcus is wide and does not reach the antapex. Chloroplasts are numerous, disc or club shaped and parietal. A stigma is present. Vegetative cells are often embedded in mucilage. Thecae are barely seen on live cells therefore it was initially considered to be Glenodinium, a naked dinoflagellate, but the theca is evident after the cell sheds it (Plate 1c, 4).",
+    "ecology": "Durinskia oculata is rare in the pelagic water, it appeared in our samples in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples. Little is known about this species.",
+    "environmental_conditions": "",
+    "further_reading": "Popovsky J, Pfiester LA. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer."
+  }
+}

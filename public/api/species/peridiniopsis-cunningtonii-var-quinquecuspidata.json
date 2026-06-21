@@ -1,0 +1,28 @@
+{
+  "slug": "peridiniopsis-cunningtonii-var-quinquecuspidata",
+  "scientific_name": "Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata",
+  "taxonomy": {
+    "phylum": "Dinoflagellata",
+    "class": "Dinophyceae",
+    "order": "Peridiniales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated single cells",
+    "cell_shape": "sphere",
+    "cell_diameter_d": "(D): 13 - 18 μm, median: 15.5 μm (N=450)",
+    "biovolume_per_cell": "17500 - 4300 μm³, median: 2900 μm³.",
+    "biovolume_equation": "V, μm³ = (4/3) π D³ (sphere)"
+  },
+  "narrative": {
+    "morphology": "This is a smaller variety of the species named today Parvodinium cunningtonii, with cell shape that is close to a sphere (Plate 1). It is common in the lake. It was named and counted as Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard. Today, the variety is considered a species of its own, Peridiniopsis quinquecuspidata (Hansen and Flaim 2007) – but the organism they describe looks different to what we named Peridiniopsis cunningtonii var quinquecuspidata. As a result, we are uncertain about its correct taxonomic allocation and provide here no further data.",
+    "ecology": "",
+    "environmental_conditions": "",
+    "further_reading": ""
+  }
+}

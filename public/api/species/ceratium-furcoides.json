@@ -1,0 +1,28 @@
+{
+  "slug": "ceratium-furcoides",
+  "scientific_name": "Ceratium furcoides (Levander) Langhans 1925",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/ceratium-furcoides",
+  "taxonomy": {
+    "phylum": "Dinoflagellata",
+    "class": "Dinophyceae",
+    "order": "Gonyaulacales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated single cells",
+    "cell_shape": "a spheroid from which 2-4 horns of different lengths extend",
+    "cell_diameter_d": "30-50 μm wide",
+    "cell_length_l": "165-260 μm long (literature values)",
+    "biovolume_per_cell": "70,000 μm³ (literature value, we do not routinely measure this species)"
+  },
+  "narrative": {
+    "morphology": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. Cells of C. furcoides are slender, longer than wide, strongly dorsiventrally flattened. Epitheca gradually tapers into a long apical horn without shoulders. Hypotheca broad and short, drawn out into 2 (occasionally 1 or 3) posterior horns of different lengths. Nucleus prominent in epicone. Cysts are smooth-walled, triangular, with one narrow horn extending from each corner. Ceratium furcoides is narrower and slenderer than the more common C. hirundinella.",
+    "ecology": "Historically this species was identified as Ceratium hirunidnella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.",
+    "environmental_conditions": "",
+    "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
+  }
+}

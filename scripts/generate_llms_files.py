@@ -60,6 +60,18 @@ def _record_slug(scientific_name: str, index: int) -> str:
     return _slugify(text)
 
 
+def _records_with_unique_slugs(records: list[dict[str, Any]]) -> list[tuple[dict[str, Any], str]]:
+    seen: dict[str, int] = {}
+    out: list[tuple[dict[str, Any], str]] = []
+    for idx, record in enumerate(records):
+        base = _record_slug((record.get("scientific_name") or "").strip(), idx)
+        count = seen.get(base, 0)
+        seen[base] = count + 1
+        slug = base if count == 0 else f"{base}-{count + 1}"
+        out.append((record, slug))
+    return out
+
+
 def _format_long_date(iso_date: str | None) -> str:
     if not iso_date or not re.match(r"^\d{4}-\d{2}-\d{2}$", iso_date):
         return "Unknown update date"
@@ -114,9 +126,9 @@ def _build_llms_txt() -> str:
         "- Supplementary material: https://kinneret-algae-atlas.org/supplements/",
         "",
         "Machine-readable endpoints:",
-        "- https://kinneret-algae-atlas.org/api/species",
-        "- https://kinneret-algae-atlas.org/api/species/{slug}",
-        "- https://kinneret-algae-atlas.org/api/glossary",
+        "- https://kinneret-algae-atlas.org/api/species.json",
+        "- https://kinneret-algae-atlas.org/api/species/{slug}.json",
+        "- https://kinneret-algae-atlas.org/api/glossary.json",
         "",
         "Compact corpus:",
         "- https://kinneret-algae-atlas.org/llms-full.txt",
@@ -128,11 +140,10 @@ def _build_llms_txt() -> str:
     return "\n".join(lines) + "\n"
 
 
-def _species_block(record: dict[str, Any], index: int) -> str:
+def _species_block(record: dict[str, Any], slug: str) -> str:
     sections = record.get("sections") or {}
     metadata = record.get("metadata") or {}
     scientific_name = (record.get("scientific_name") or "").strip()
-    slug = _record_slug(scientific_name, index)
     canonical_url = f"{ATLAS_URL}/algae/{slug}"
     updated = metadata.get("record_updated") if isinstance(metadata.get("record_updated"), str) else None
 
@@ -199,7 +210,83 @@ def _glossary_block(glossary: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def _build_llms_full(records: list[dict[str, Any]], glossary: dict[str, Any]) -> str:
+def _build_species_index_item(record: dict[str, Any], slug: str) -> dict[str, Any]:
+    sections = record.get("sections") or {}
+    metadata = record.get("metadata") or {}
+    updated = metadata.get("record_updated") if isinstance(metadata.get("record_updated"), str) else None
+    return {
+        "slug": slug,
+        "scientific_name": (record.get("scientific_name") or "").strip(),
+        "canonical_url": f"{ATLAS_URL}/algae/{slug}",
+        "taxonomy": {
+            "phylum": (sections.get("phylum") or "").strip(),
+            "class": (sections.get("class") or "").strip(),
+            "order": (sections.get("order") or "").strip(),
+        },
+        "record_updated": updated,
+        "citation": {
+            "per_record": _record_citation(updated),
+            "atlas_attribution": _atlas_attribution(),
+        },
+    }
+
+
+def _build_species_detail(record: dict[str, Any], slug: str) -> dict[str, Any]:
+    sections = record.get("sections") or {}
+    key_fields = {
+        key: (sections.get(key) or "").strip()
+        for key, _label in _KEY_SIZE_FIELDS
+        if (sections.get(key) or "").strip()
+    }
+    base = _build_species_index_item(record, slug)
+    return {
+        **base,
+        "key_fields": key_fields,
+        "narrative": {
+            "morphology": (sections.get("morphological_features") or "").strip(),
+            "ecology": (sections.get("ecology") or "").strip(),
+            "environmental_conditions": (sections.get("environmental_conditions") or "").strip(),
+            "further_reading": (sections.get("further_reading") or "").strip(),
+        },
+    }
+
+
+def _build_glossary_api(glossary: dict[str, Any]) -> dict[str, Any]:
+    updated = glossary.get("record_updated") if isinstance(glossary.get("record_updated"), str) else None
+    entries = glossary.get("entries") or []
+    plates = glossary.get("plates") or []
+    return {
+        "title": glossary.get("title") or "Glossary",
+        "canonical_url": f"{ATLAS_URL}/glossary/",
+        "record_updated": updated,
+        "source_file": glossary.get("source_file"),
+        "citation": {
+            "per_record": _record_citation(updated),
+            "atlas_attribution": _atlas_attribution(),
+        },
+        "plates": [
+            {
+                "id": plate.get("id"),
+                "label": plate.get("label"),
+                "src": f"{ATLAS_URL}{plate.get('src')}",
+            }
+            for plate in plates
+            if isinstance(plate, dict)
+        ],
+        "entries": [
+            {
+                "term": entry.get("term"),
+                "slug": entry.get("slug"),
+                "definition": entry.get("definition"),
+                "letter": entry.get("letter"),
+            }
+            for entry in entries
+            if isinstance(entry, dict)
+        ],
+    }
+
+
+def _build_llms_full(records_with_slugs: list[tuple[dict[str, Any], str]], glossary: dict[str, Any]) -> str:
     lines = [
         "# Kinneret Algae Atlas — Compact LLM Corpus",
         "",
@@ -209,16 +296,46 @@ def _build_llms_full(records: list[dict[str, Any]], glossary: dict[str, Any]) ->
         "",
         "Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.",
         "",
-        f"Species count: {len(records)}",
+        f"Species count: {len(records_with_slugs)}",
         "",
     ]
-    for idx, record in enumerate(records):
-        lines.append(_species_block(record, idx))
+    for record, slug in records_with_slugs:
+        lines.append(_species_block(record, slug))
         lines.append("")
 
     lines.append(_glossary_block(glossary))
     lines.append("")
     return "\n".join(lines)
+
+
+def _write_static_api_files(
+    records_with_slugs: list[tuple[dict[str, Any], str]],
+    glossary: dict[str, Any],
+    out_dir: Path,
+) -> None:
+    api_dir = out_dir / "api"
+    species_dir = api_dir / "species"
+    species_dir.mkdir(parents=True, exist_ok=True)
+
+    species_index = [_build_species_index_item(record, slug) for record, slug in records_with_slugs]
+    (api_dir / "species.json").write_text(
+        json.dumps({"count": len(species_index), "species": species_index}, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    for record, slug in records_with_slugs:
+        (species_dir / f"{slug}.json").write_text(
+            json.dumps(_build_species_detail(record, slug), ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+
+    (api_dir / "glossary.json").write_text(
+        json.dumps(_build_glossary_api(glossary), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"Wrote {(api_dir / 'species.json')}")
+    print(f"Wrote {(api_dir / 'glossary.json')}")
+    print(f"Wrote {len(records_with_slugs)} files under {species_dir}")
 
 
 def main() -> None:
@@ -247,12 +364,14 @@ def main() -> None:
 
     records = json.loads(algae_path.read_text(encoding="utf-8"))
     glossary = json.loads(glossary_path.read_text(encoding="utf-8"))
+    records_with_slugs = _records_with_unique_slugs(records)
 
     llms_txt = _build_llms_txt()
-    llms_full = _build_llms_full(records, glossary)
+    llms_full = _build_llms_full(records_with_slugs, glossary)
 
     (out_dir / "llms.txt").write_text(llms_txt, encoding="utf-8")
     (out_dir / "llms-full.txt").write_text(llms_full, encoding="utf-8")
+    _write_static_api_files(records_with_slugs, glossary, out_dir)
     print(f"Wrote {(out_dir / 'llms.txt')}")
     print(f"Wrote {(out_dir / 'llms-full.txt')}")
 

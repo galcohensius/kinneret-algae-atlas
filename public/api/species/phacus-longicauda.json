@@ -1,0 +1,25 @@
+{
+  "slug": "phacus-longicauda",
+  "scientific_name": "Phacus longicauda (Ehrenberg) Dujardin 1841",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/phacus-longicauda",
+  "taxonomy": {
+    "phylum": "Euglenophyta",
+    "class": "Euglenophyceae",
+    "order": "Euglenales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated single cells",
+    "cell_shape": "leaf-shaped"
+  },
+  "narrative": {
+    "morphology": "Phacus species (see thumbnail photo) are single-celled, grass-colored, leaf-shaped (i.e. flat and very thin), often twisted, with straight or slightly bent sharply pointed caudus (or ‘tail’). It is striped, all the stripes start at the flagellum opening and end in the ’tail’ covering the cell like longitude lines covering a globe. With numerous discoid chloroplasts, no pyrenoids. Phacus does not change its shape like Euglena does. The cells are motile, their locomotion flagellum emerges from a canal at the top side of the cell. A second flagellum is very short and not emerging, cannot be seen by light microscopy. A red eyespot is usually seen near the top of the cell. One or two large paramylon (a carbohydrate) storage body is often seen as an elongated white body.",
+    "ecology": "Phacus species are extremely rare in Lake Kinneret. They have never been abundant enough to be counted in our routine monitoring, but occasionally a specimen is found in the littoral zone, usually of the species Phacus longicauda (Plate 1) or Phacus caudatus.",
+    "environmental_conditions": "",
+    "further_reading": "Dillard, G.E. (2000). Freshwater algae of the southeastern United States, Part 7. Pigmented Euglenophyceae. Bibliotheca Phycologica 106: 1–135.\nWołowski, K. (2011). Euglenophyta (Euglenoids). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 181-239. Cambridge: Cambridge University Press."
+  }
+}

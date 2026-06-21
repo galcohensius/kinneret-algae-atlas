@@ -1,0 +1,29 @@
+{
+  "slug": "naiadinium-polonicum",
+  "scientific_name": "Naiadinium polonicum (Woloszynska) Carty 2014",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/naiadinium-polonicum",
+  "taxonomy": {
+    "phylum": "Dinoflagellata",
+    "class": "Dinophyceae",
+    "order": "Thoracosphaerales"
+  },
+  "record_updated": "2026-06-16",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 16 June 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "flagellated single cells",
+    "cell_shape": "a prolate spheroid that was punched in its “belly” so that from dorsal view it is concave",
+    "cell_diameter_d": "29-36 μm, median: 32 μm (N=32)",
+    "cell_length_l": "32-42 μm, median: 38 μm (N=32)",
+    "biovolume_per_cell": "7,000-14,000 μm³, median: 10,000 μm³",
+    "biovolume_equation": "V, μm³ = ((4/3)π L (D/2)²)/2 (half the volume of a prolate sphaeroid)"
+  },
+  "narrative": {
+    "morphology": "A medium-sized thecate dinoflagellate. The flagellated cells are oval, with the ventral side pressed in towards the other side as if it received a punch. As a result, the cell perimeter is convex when viewed from one side but concave when viewed from another (Plate 1). This concave/convex form is easily seen on a live, swimming cell: as it turns about its longitudinal axis its profile changes dramatically (Plate 1e). This feature is the most obvious for identifying this species. An additional diagnostic feature is the smooth and rounded cell shape (Plate 1). The epitheca is helmet-shaped and pointed and is approximately the same size as the broadly rounded hypotheca. The chloroplasts are small and discoid or ribbon shaped. A stigma (eyespot) may be present. Resting cysts are spherical with their thick cell wall covered by dense hairlike projections (not shown).",
+    "ecology": "Naiadinium polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL⁻¹ (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during summer-fall (Fig. 2).",
+    "environmental_conditions": "Higher abundance of N. polonicum is associated with the full range of Alkalinity, Ca, dissolved oxygen (not shown) and water temperatures, low concentrations of DIN (nitrate, ammonium) but intermediate concentrations of DON (Fig. 3). It tends to be more abundant at the lower salinities experienced in Lake Kinneret (Chloride < 250 mg/L) and at pH levels > 8.4 (Fig. 3).",
+    "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nPenard E. 1891. Les Peridiniacees du Lac Leman. Bull. Trav. Soc. Bot. Geneve 6: 1-63.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120: 267-285.\nPopovsky, J. & Pfiester, L.A. 1990. Süßwasserflora von Mitteleuropa. Dinophyceae (Dinoflagellida). Vol. 6 pp. 1-272. Jena & Stuttgart: Gustav Fischer."
+  }
+}
