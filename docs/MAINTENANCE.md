@@ -75,8 +75,8 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 
 5. **Tests** (optional locally; required on push via GitHub Actions):
    - Node: `npm run test`
-   - Python: `PYTHONPATH=src python -m unittest discover -s tests -p "test_pipeline*.py" -v`
-     (PowerShell: `$env:PYTHONPATH='src'; python -m unittest discover -s tests -p "test_pipeline*.py" -v`)
+  - Python: `PYTHONPATH=src python -m unittest discover -s tests -p "test_*.py" -v`
+    (PowerShell: `$env:PYTHONPATH='src'; python -m unittest discover -s tests -p "test_*.py" -v`)
 
 6. **Supplements** (when `data/raw/9-Suppl1*.docx` changes, or after a full image rebuild):
 
@@ -86,23 +86,36 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 
    > **Important:** `extract_algae.py` does not touch supplement images. If you delete `public/algae-images/` and re-extract, you must re-run this step or supplement figures will be missing.
 
-7. **Glossary** (when the `data/raw/*glossary*` file changes, Windows `.doc` or `.docx`):
+7. **Glossary** (when the `data/raw/*glossary*.docx` file changes):
 
    ```bash
    python src/extract_glossary.py
    ```
 
    With no `--input`, the newest `data/raw/*glossary*.docx` is auto-discovered (date-stamped
-   names sort newest-last). Pass `--input` to force a specific file.
+   names sort newest-last). Pass `--input` to force a specific file. Legacy `.doc` glossary
+   files are no longer supported; save glossary updates as `.docx`.
 
-8. **Local preview:** `npm run dev`
+8. **LLM/static API files** (after any atlas, supplement, or glossary data change):
 
-9. **Publish:** Commit the updated `data/processed/algae_records.json`, `data/processed/glossary.json`, `public/algae-images/`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
+   ```bash
+   npm run generate:llms
+   ```
+
+   This regenerates `public/llms.txt`, `public/llms-full.txt`, and static JSON under
+   `public/api/` for LLM and machine-readable access.
+
+9. **Local preview:** `npm run dev`
+
+10. **Publish:** Commit the updated `data/processed/algae_records.json`, `data/processed/glossary.json`, `data/processed/supplements.json`, `public/algae-images/`, `public/glossary-images/`, `public/api/`, `public/llms*.txt`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
 
 **One-shot extract + validate + production build** (still commit and push yourself):
 
 ```bash
 npm run sync:atlas
 ```
+
+`sync:atlas` now runs algae extraction, supplement extraction, glossary extraction, LLM/static
+API generation, validation, and a production build.
 
 Structural or recurring extraction bugs belong in `src/algae_extractor/` (and re-run step 3) — not in hand-edits to `algae_records.json` that the next extract would overwrite.

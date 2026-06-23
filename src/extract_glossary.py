@@ -5,8 +5,6 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import sys
-import tempfile
 from pathlib import Path
 from zipfile import ZipFile
 
@@ -22,59 +20,11 @@ def _read_docx_paragraphs(path: Path) -> str:
     return "\n".join(paragraph_clean_text(p) for p in doc.paragraphs)
 
 
-def _open_word_app():
-    import win32com.client  # type: ignore[import-untyped]
-
-    app = win32com.client.DispatchEx("Word.Application")
-    app.Visible = False
-    return app
-
-
-def _read_doc_via_word_com(path: Path) -> str:
-    app = _open_word_app()
-    try:
-        doc = app.Documents.Open(str(path.resolve()), ReadOnly=True)
-        try:
-            return doc.Content.Text
-        finally:
-            doc.Close(False)
-    finally:
-        app.Quit()
-
-
 def read_glossary_source(path: Path) -> str:
     suffix = path.suffix.lower()
     if suffix == ".docx":
         return _read_docx_paragraphs(path)
-    if suffix == ".doc":
-        if sys.platform != "win32":
-            raise SystemExit(
-                f"Cannot read legacy .doc on {sys.platform}. "
-                "Run extraction on Windows or save the glossary as .docx."
-            )
-        return _read_doc_via_word_com(path)
-    raise SystemExit(f"Unsupported glossary format: {path}")
-
-
-def _convert_doc_to_docx(path: Path) -> Path:
-    """Convert legacy .doc to a temporary .docx so image extraction can reuse DOCX logic."""
-    if sys.platform != "win32":
-        raise SystemExit("Legacy .doc conversion requires Windows and Microsoft Word.")
-
-    app = _open_word_app()
-    tmp_dir = Path(tempfile.mkdtemp(prefix="glossary-docx-"))
-    out_path = tmp_dir / "glossary-converted.docx"
-    wd_format_xml_document = 16
-
-    try:
-        doc = app.Documents.Open(str(path.resolve()), ReadOnly=True)
-        try:
-            doc.SaveAs2(str(out_path), FileFormat=wd_format_xml_document)
-        finally:
-            doc.Close(False)
-    finally:
-        app.Quit()
-    return out_path
+    raise SystemExit(f"Unsupported glossary format: {path}. Save glossary sources as .docx.")
 
 
 def _extract_glossary_plates(
@@ -87,14 +37,8 @@ def _extract_glossary_plates(
     Extract the final two glossary images as Cox plates and return metadata for rendering.
     The updated glossary source places these two figures at the end of the document.
     """
-    working_docx: Path | None = None
-    temp_docx: Path | None = None
-
     if source_path.suffix.lower() == ".docx":
         working_docx = source_path
-    elif source_path.suffix.lower() == ".doc":
-        temp_docx = _convert_doc_to_docx(source_path)
-        working_docx = temp_docx
     else:
         return []
 
@@ -134,13 +78,6 @@ def _extract_glossary_plates(
             }
         )
 
-    if temp_docx is not None:
-        try:
-            temp_docx.unlink(missing_ok=True)
-            temp_docx.parent.rmdir()
-        except OSError:
-            pass
-
     return plates
 
 
@@ -175,12 +112,11 @@ def _discover_glossary_input(raw_dir: Path) -> Path | None:
     fixed default cannot be relied on. Sort last = most recent date for these names.
     """
     candidates = sorted(
-        p for p in raw_dir.glob("*.doc*") if "glossary" in p.name.lower()
+        p for p in raw_dir.glob("*.docx") if "glossary" in p.name.lower()
     )
     if not candidates:
         return None
-    docx = [p for p in candidates if p.suffix.lower() == ".docx"]
-    return (docx or candidates)[-1]
+    return candidates[-1]
 
 
 def main() -> None:
@@ -189,7 +125,7 @@ def main() -> None:
         "--input",
         default=None,
         help=(
-            "Path to glossary Word file (.doc or .docx). "
+            "Path to glossary Word file (.docx). "
             "If omitted, the newest data/raw/*glossary*.docx is auto-discovered."
         ),
     )
@@ -215,7 +151,7 @@ def main() -> None:
     else:
         discovered = _discover_glossary_input(Path("data/raw"))
         if discovered is None:
-            raise SystemExit("No glossary file found in data/raw (looked for *glossary*.doc*).")
+            raise SystemExit("No .docx glossary file found in data/raw (looked for *glossary*.docx).")
         input_path = discovered
 
     output_path = Path(args.output)

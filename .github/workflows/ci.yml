@@ -16,9 +16,7 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
       - name: Python extractor tests
-        run: |
-          PYTHONPATH=src python -m unittest discover -s tests -p "test_pipeline*.py" -v
-          PYTHONPATH=src python -m unittest tests.test_glossary_parse tests.test_pipeline_image_prune -v
+        run: PYTHONPATH=src python -m unittest discover -s tests -p "test_*.py" -v
       - uses: actions/setup-node@v4
         with:
           node-version: 20

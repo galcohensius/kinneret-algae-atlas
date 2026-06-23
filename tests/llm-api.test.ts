@@ -52,7 +52,7 @@ describe("llm-api glossary mapping", () => {
     const glossary: GlossaryData = {
       title: "Glossary",
       record_updated: "2026-06-10",
-      source_file: "1-Glossary 2026-06-07.doc",
+      source_file: "1-Glossary 2026-06-07.docx",
       plates: [{ id: "cox-1996-plate-1", label: "Plate 1", src: "/glossary-images/cox-1996-plate-1.png" }],
       entries: [
         {
