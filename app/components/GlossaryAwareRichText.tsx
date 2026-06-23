@@ -8,6 +8,7 @@ import { sliceRichSegmentsByPlainRange } from "../../lib/rich-segments";
 import { textContainsTables } from "../../lib/inline-tables";
 import GlossaryTerm from "./GlossaryTerm";
 import { RichText } from "./RichText";
+import { useClaimFirstGlossaryOccurrence } from "./GlossaryLinkScopeProvider";
 
 type GlossaryAwareRichTextProps = {
   segments: RichSegment[];
@@ -20,6 +21,7 @@ function isGlossaryEligibleSegment(seg: RichSegment): boolean {
 
 /** Link glossary terms across Word run boundaries (italic splits). */
 function GlossaryLinkedRichBlock({ segments }: { segments: RichSegment[] }) {
+  const claimFirstOccurrence = useClaimFirstGlossaryOccurrence();
   const plain = segments.map((s) => s.text).join("");
   const parts = linkGlossaryInPlainText(plain, glossaryIndex.matchPhrases);
   let cursor = 0;
@@ -35,6 +37,13 @@ function GlossaryLinkedRichBlock({ segments }: { segments: RichSegment[] }) {
           const sliced = sliceRichSegmentsByPlainRange(segments, start, end);
           return sliced.length > 0 ? (
             <RichText key={`t-${i}-${start}`} segments={sliced} />
+          ) : null;
+        }
+
+        if (!claimFirstOccurrence(part.slug)) {
+          const sliced = sliceRichSegmentsByPlainRange(segments, start, end);
+          return sliced.length > 0 ? (
+            <RichText key={`p-${i}-${start}`} segments={sliced} />
           ) : null;
         }
 

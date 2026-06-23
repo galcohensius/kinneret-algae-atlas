@@ -7,6 +7,7 @@ import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import GlossaryAwarePlainText from "../../components/GlossaryAwarePlainText";
 import GlossaryAwareRichText from "../../components/GlossaryAwareRichText";
 import GlossaryAwareText from "../../components/GlossaryAwareText";
+import { GlossaryLinkScopeProvider } from "../../components/GlossaryLinkScopeProvider";
 import PreviousNameHeader from "../../components/PreviousNameHeader";
 import { RichText } from "../../components/RichText";
 import type { RichSegment } from "../../../lib/algae-types";
@@ -200,14 +201,15 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   };
 
   return (
-    <main className="algae-detail">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(speciesJsonLd) }}
-      />
-      <p className="algae-detail-nav">
-        <Link href="/#algae-index">← Back to algae index</Link>
-      </p>
+    <GlossaryLinkScopeProvider>
+      <main className="algae-detail">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(speciesJsonLd) }}
+        />
+        <p className="algae-detail-nav">
+          <Link href="/#algae-index">← Back to algae index</Link>
+        </p>
 
       <header className="algae-detail-header">
         <h1 className="algae-title">
@@ -339,9 +341,10 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         ) : null}
       </article>
 
-      <p className="algae-detail-nav algae-detail-nav-end">
-        <Link href="/#algae-index">← Back to algae index</Link>
-      </p>
-    </main>
+        <p className="algae-detail-nav algae-detail-nav-end">
+          <Link href="/#algae-index">← Back to algae index</Link>
+        </p>
+      </main>
+    </GlossaryLinkScopeProvider>
   );
 }
