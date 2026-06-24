@@ -498,7 +498,7 @@ main.home {
 .phylum-jump-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 0.65rem;
+  gap: 0.35rem 0.45rem;
   margin: 0 0 1.25rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
@@ -506,10 +506,10 @@ main.home {
 
 .phylum-jump-nav a {
   display: inline-block;
-  padding: 0.32rem 0.68rem;
+  padding: 0.25rem 0.48rem;
   border-radius: 999px;
   border: 1px solid var(--phylum-accent, var(--border));
-  font-size: clamp(0.9rem, 0.84rem + 0.18vw, 0.98rem);
+  font-size: clamp(0.84rem, 0.8rem + 0.12vw, 0.9rem);
   font-weight: 600;
   color: var(--phylum-accent, var(--text-secondary));
   text-decoration: none;
