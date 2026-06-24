@@ -506,10 +506,10 @@ main.home {
 
 .phylum-jump-nav a {
   display: inline-block;
-  padding: 0.25rem 0.55rem;
+  padding: 0.32rem 0.68rem;
   border-radius: 999px;
   border: 1px solid var(--phylum-accent, var(--border));
-  font-size: 0.85rem;
+  font-size: clamp(0.9rem, 0.84rem + 0.18vw, 0.98rem);
   font-weight: 600;
   color: var(--phylum-accent, var(--text-secondary));
   text-decoration: none;
@@ -560,22 +560,23 @@ main.home {
 
 .phylum-catalog-heading {
   margin: 0 0 0.75rem;
-  font-size: 1.2rem;
+  font-size: clamp(1.3rem, 1.16rem + 0.45vw, 1.5rem);
   font-weight: 700;
   color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
 }
 
 .phylum-catalog-count {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .algae-list-card-title {
   margin: 0;
-  font-size: 1.21rem;
+  font-size: clamp(1.32rem, 1.16rem + 0.48vw, 1.5rem);
   font-weight: 700;
+  line-height: 1.18;
 }
 
 .algae-list-card-title .algae-taxon {
