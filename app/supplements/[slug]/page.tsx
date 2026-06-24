@@ -114,7 +114,7 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
           ) : null}
 
           {supplement.linkedTaxa.length > 0 ? (
-            <section className="narrative-block" aria-labelledby="supp-referenced-heading">
+            <section className="narrative-block supplement-referenced-block" aria-labelledby="supp-referenced-heading">
               <h2 id="supp-referenced-heading" className="section-heading">
                 Referenced in
               </h2>
