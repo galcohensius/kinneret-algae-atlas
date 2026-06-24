@@ -2,10 +2,11 @@
 Extract a supplement .docx into data/processed/supplements.json.
 
 Usage:
+    python src/extract_supplements.py
+
+    # Or force one/more source files:
     python src/extract_supplements.py \\
-        --input "data/raw/9-Suppl1 cunningtoni vs elpatiewskyi.docx" \\
-        --output data/processed/supplements.json \\
-        --images-dir public/algae-images
+        --input "data/raw/9-Suppl1 cunningtoni vs elpatiewskyi.docx"
 
 The output file is an array; running for multiple supplements upserts by id
 so each run only replaces the entry matching the current document.
@@ -53,11 +54,44 @@ def _find_supplement_meta(
     return None
 
 
+def _discover_supplement_inputs(raw_dir: Path) -> list[Path]:
+    """Find supplement DOCX files in raw_dir."""
+    return sorted(
+        p
+        for p in raw_dir.glob("*.docx")
+        if "suppl" in p.name.lower() or "supplement" in p.name.lower()
+    )
+
+
+def _upsert_supplement(existing: list[dict], record: dict) -> bool:
+    """Return True when an existing record was replaced."""
+    record_id = record["id"]
+    for i, item in enumerate(existing):
+        if item.get("id") == record_id:
+            existing[i] = record
+            return True
+    existing.append(record)
+    return False
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Extract a supplement DOCX into supplements.json."
+        description="Extract one or more supplement DOCX files into supplements.json."
     )
-    parser.add_argument("--input", required=True, help="Path to the supplement .docx file.")
+    parser.add_argument(
+        "--input",
+        action="append",
+        default=[],
+        help=(
+            "Path to a supplement .docx file. Repeat for multiple files. "
+            "If omitted, data/raw/*suppl*.docx and *supplement*.docx are auto-discovered."
+        ),
+    )
+    parser.add_argument(
+        "--raw-dir",
+        default="data/raw",
+        help="Directory scanned for supplement DOCX files when --input is omitted.",
+    )
     parser.add_argument(
         "--output",
         default="data/processed/supplements.json",
@@ -89,27 +123,18 @@ def main() -> None:
     config = load_config(args.config)
     supplements_config: list[dict] = config.get("supplements") or []
 
-    docx_path = Path(args.input)
-    if not docx_path.exists():
-        sys.exit(f"Input file not found: {docx_path}")
-
-    supplement_meta = _find_supplement_meta(supplements_config, docx_path)
-    if supplement_meta is None:
+    inputs = [Path(p) for p in args.input] if args.input else _discover_supplement_inputs(Path(args.raw_dir))
+    if not inputs:
         sys.exit(
-            f"No matching entry in the 'supplements' config block for '{docx_path.name}'.\n"
-            "Add an entry to src/algae_extractor/default_config.json."
+            "No supplement DOCX files found. Pass --input or add files under "
+            f"{args.raw_dir} with 'suppl' or 'supplement' in the filename."
         )
+    for docx_path in inputs:
+        if not docx_path.exists():
+            sys.exit(f"Input file not found: {docx_path}")
 
     images_output_dir = Path(args.images_dir) if args.images_dir else None
 
-    record = extract_supplement(
-        docx_path,
-        supplement_meta,
-        images_output_dir=images_output_dir,
-        images_public_prefix=args.images_public_prefix,
-    )
-
-    # Upsert into existing output array.
     output_path = Path(args.output)
     existing: list[dict] = []
     if output_path.exists():
@@ -119,22 +144,29 @@ def main() -> None:
         except (json.JSONDecodeError, OSError):
             existing = []
 
-    record_id = record["id"]
-    replaced = False
-    for i, item in enumerate(existing):
-        if item.get("id") == record_id:
-            existing[i] = record
-            replaced = True
-            break
-    if not replaced:
-        existing.append(record)
+    for docx_path in inputs:
+        supplement_meta = _find_supplement_meta(supplements_config, docx_path)
+        if supplement_meta is None:
+            sys.exit(
+                f"No matching entry in the 'supplements' config block for '{docx_path.name}'.\n"
+                "Add an entry to src/algae_extractor/default_config.json."
+            )
+
+        record = extract_supplement(
+            docx_path,
+            supplement_meta,
+            images_output_dir=images_output_dir,
+            images_public_prefix=args.images_public_prefix,
+        )
+        replaced = _upsert_supplement(existing, record)
+        action = "Updated" if replaced else "Added"
+        print(f"{action} '{record['id']}' from {docx_path.name}.")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(
         json.dumps(existing, indent=2, ensure_ascii=False), encoding="utf-8"
     )
-    action = "Updated" if replaced else "Added"
-    print(f"{action} '{record_id}'. {len(existing)} supplement(s) in {output_path}.")
+    print(f"{len(existing)} supplement(s) in {output_path}.")
 
 
 if __name__ == "__main__":

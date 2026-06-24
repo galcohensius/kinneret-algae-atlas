@@ -24,9 +24,43 @@ class TestLlmsOutputs(unittest.TestCase):
 
     def test_llms_txt_lists_machine_readable_endpoints(self) -> None:
         llms_txt = (ROOT / "public" / "llms.txt").read_text(encoding="utf-8")
-        self.assertIn("/api/species", llms_txt)
-        self.assertIn("/api/species/{slug}", llms_txt)
-        self.assertIn("/api/glossary", llms_txt)
+        self.assertIn("/api/species.json", llms_txt)
+        self.assertIn("/api/species/{slug}.json", llms_txt)
+        self.assertIn("/api/glossary.json", llms_txt)
+
+    def test_generated_species_api_matches_processed_records(self) -> None:
+        records = json.loads((ROOT / "data" / "processed" / "algae_records.json").read_text(encoding="utf-8"))
+        species_api = json.loads((ROOT / "public" / "api" / "species.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(species_api["count"], len(records))
+        self.assertEqual(len(species_api["species"]), len(records))
+
+        first = species_api["species"][0]
+        self.assertIn("slug", first)
+        self.assertIn("scientific_name", first)
+        self.assertIn("canonical_url", first)
+        self.assertIn("taxonomy", first)
+        self.assertIn("citation", first)
+        self.assertIn("per_record", first["citation"])
+        self.assertIn("atlas_attribution", first["citation"])
+
+        for item in species_api["species"]:
+            slug = item["slug"]
+            detail_path = ROOT / "public" / "api" / "species" / f"{slug}.json"
+            self.assertTrue(detail_path.is_file(), f"Missing detail JSON for {slug}")
+            detail = json.loads(detail_path.read_text(encoding="utf-8"))
+            self.assertEqual(detail["slug"], slug)
+            self.assertEqual(detail["citation"]["atlas_attribution"], item["citation"]["atlas_attribution"])
+
+    def test_generated_glossary_api_has_terms_and_citation(self) -> None:
+        glossary = json.loads((ROOT / "data" / "processed" / "glossary.json").read_text(encoding="utf-8"))
+        glossary_api = json.loads((ROOT / "public" / "api" / "glossary.json").read_text(encoding="utf-8"))
+
+        self.assertEqual(len(glossary_api["entries"]), len(glossary["entries"]))
+        self.assertIn("citation", glossary_api)
+        self.assertIn("per_record", glossary_api["citation"])
+        self.assertIn("atlas_attribution", glossary_api["citation"])
+        self.assertGreater(len(glossary_api["entries"]), 0)
 
 
 if __name__ == "__main__":

@@ -11,12 +11,13 @@ Section splitting heuristic:
   - Everything else accumulates as rich-text lines under the current section.
 """
 
-from datetime import date
+from datetime import date, datetime
 from io import BytesIO
 from pathlib import Path
 from typing import Any
 import re
 
+from docx import Document
 from PIL import Image
 
 from .reader import iter_docx_content_blocks, unmap_script_glyphs
@@ -76,6 +77,18 @@ def _is_implicit_heading(text: str, char_styles: list[int]) -> bool:
     if not non_space:
         return False
     return all((s & 2) for _, s in non_space)
+
+
+def _source_modified_date(docx_path: Path) -> str:
+    """Use the DOCX metadata date so extraction reruns do not churn JSON."""
+    try:
+        modified = Document(docx_path).core_properties.modified
+    except Exception:
+        modified = None
+
+    if isinstance(modified, datetime):
+        return modified.date().isoformat()
+    return date.today().isoformat()
 
 
 def _section_key(heading: str) -> str:
@@ -251,6 +264,6 @@ def extract_supplement(
         "image_captions_rich": image_captions_rich,
         "metadata": {
             "source_file": docx_path.name,
-            "record_updated": date.today().isoformat(),
+            "record_updated": _source_modified_date(docx_path),
         },
     }

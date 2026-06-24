@@ -20,7 +20,9 @@ flowchart LR
   subgraph Processed["Processed artifacts"]
     json["data/processed/algae_records.json"]
     gjson["data/processed/glossary.json"]
+    sjson["data/processed/supplements.json"]
     imgs["public/algae-images/"]
+    llms["public/llms*.txt<br/>public/api/*.json"]
   end
 
   subgraph Build["Build & deploy (Next.js)"]
@@ -30,11 +32,17 @@ flowchart LR
   end
 
   docx --> algae --> json
-  docx --> suppl --> imgs
+  docx --> suppl --> sjson
   docx --> gloss --> gjson
   algae --> imgs
+  suppl --> imgs
+  json --> llms
+  gjson --> llms
+  sjson --> llms
   json --> validate --> next --> pages
   gjson --> next
+  sjson --> next
+  llms --> next
   imgs --> next
 ```
 
@@ -75,14 +83,17 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 
 5. **Tests** (optional locally; required on push via GitHub Actions):
    - Node: `npm run test`
-  - Python: `PYTHONPATH=src python -m unittest discover -s tests -p "test_*.py" -v`
-    (PowerShell: `$env:PYTHONPATH='src'; python -m unittest discover -s tests -p "test_*.py" -v`)
+   - Python: `PYTHONPATH=src python -m unittest discover -s tests -p "test_*.py" -v`
+     (PowerShell: `$env:PYTHONPATH='src'; python -m unittest discover -s tests -p "test_*.py" -v`)
 
 6. **Supplements** (when `data/raw/9-Suppl1*.docx` changes, or after a full image rebuild):
 
    ```bash
-   python src/extract_supplements.py --input "data/raw/9-Suppl1 cunningtoni vs elpatiewskyi.docx"
+   python src/extract_supplements.py
    ```
+
+   With no `--input`, all `data/raw/*suppl*.docx` and `*supplement*.docx` files are auto-discovered.
+   Pass `--input` repeatedly to force one or more specific supplement files.
 
    > **Important:** `extract_algae.py` does not touch supplement images. If you delete `public/algae-images/` and re-extract, you must re-run this step or supplement figures will be missing.
 
