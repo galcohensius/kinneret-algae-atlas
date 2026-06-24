@@ -574,7 +574,7 @@ main.home {
 
 .algae-list-card-title {
   margin: 0;
-  font-size: clamp(1.32rem, 1.16rem + 0.48vw, 1.5rem);
+  font-size: clamp(1.45rem, 1.28rem + 0.55vw, 1.65rem);
   font-weight: 700;
   line-height: 1.18;
 }
@@ -674,8 +674,8 @@ a:hover {
 }
 
 .algae-thumb {
-  width: 92px;
-  height: 92px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid var(--border);

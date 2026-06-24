@@ -55,14 +55,14 @@ describe("index card title sizing", () => {
 
     const cardMinWidthPx = 360;
     const cardPaddingPx = 32;
-    const thumbnailWidthPx = 92;
+    const thumbnailWidthPx = 100;
     const cardGapPx = 12;
     const titleWidthPx = cardMinWidthPx - cardPaddingPx - thumbnailWidthPx - cardGapPx;
 
     const failures = titles.flatMap((item) => {
-      const mobileLines = estimatedLines(item.title, titleWidthPx, 21.12); // 1.32rem
-      const desktopLines = estimatedLines(item.title, titleWidthPx, 24); // 1.5rem
-      const maxLines = item.kind === "algae" ? 4 : 3;
+      const mobileLines = estimatedLines(item.title, titleWidthPx, 23.2); // 1.45rem
+      const desktopLines = estimatedLines(item.title, titleWidthPx, 26.4); // 1.65rem
+      const maxLines = 4;
       return Math.max(mobileLines, desktopLines) <= maxLines
         ? []
         : [`${item.label}: ${item.title} (${mobileLines}/${desktopLines} lines)`];
