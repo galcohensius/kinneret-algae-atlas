@@ -1,0 +1,29 @@
+{
+  "slug": "chroococcus-turgidus",
+  "scientific_name": "Chroococcus turgidus (Kützing) Nägeli 1849",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-turgidus",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-07-05",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "single cells or colonies of 2 (most common) to 8 cells",
+    "cell_shape": "sphere",
+    "colony_shape": "spherical",
+    "cell_diameter_d": "4 – 13 μm, median: 6.2 μm (N=502). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely.",
+    "biovolume_per_cell": "40 – 200 μm³. Larger cell size in winter, smaller in summer (see Fig. 2).",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³."
+  },
+  "narrative": {
+    "morphology": "Individual spherical cells are surrounded by hyaline lamellate sheaths. After division the original sheath remains around each new cell but an additional sheath envelpes both cells, now hemispherical, that remain attached (Plate 1). The cells are strongly colored, with colorless but distinct sheaths. Chroococcus turgidus and Chroococcus minutus are difficult to tell apart. On average, C. minutus cells are smaller, but both species show large size variation and the sizes overlap.",
+    "ecology": "Chroococcus turgidus and Chroococcus minutus have always been common in lake Kinneret, with long periods when their abundance was of thousands of cells mL⁻¹ (Fig. 1) Prior to the decline of Peridinium gatunense and appearance of nostocalean cyanobacteria in the mid 1990s they were the most abundant Kinneret cyanobacterial taxa, mostly because other cyanobacteria were rare. Peak abundance is in May-June (Fig. 2). Like several other Kinneret species, cells are smaller in summer, larger in winter (Fig. 2).",
+    "environmental_conditions": "Chroococcus turgidus is more abundant at temperature > 22 C. It occurs at all chloride concentrations.",
+    "further_reading": "Zohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209."
+  }
+}

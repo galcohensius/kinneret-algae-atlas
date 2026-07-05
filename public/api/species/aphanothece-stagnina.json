@@ -1,0 +1,29 @@
+{
+  "slug": "aphanothece-stagnina",
+  "scientific_name": "Aphanothece stagnina (Sprengel) A. Braun 1863",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/aphanothece-stagnina",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-07-05",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonial",
+    "cell_shape": "cylinders with rounded ends",
+    "colony_shape": "sphaerical and various shapes formed when a sphere gets pushed, pulled or twisted",
+    "cell_diameter_d": "3–5 μm",
+    "cell_length_l": "4–11 μm",
+    "colony_diameter": "up to 1-2 cm"
+  },
+  "narrative": {
+    "morphology": "large brown to olive-green colonies made of densly packed ovoid cells, floating in shallow water near the lake’s waterline. Colonies can reach diameter >1 cm and are seen with a naked eye. Prokaryotic cells with no individual sheath.",
+    "ecology": "Initial development is benthic, but mature colonies float to the surface and are wind-driven to form shoreline accumulations. Masses of this species were seen in Lake Kinneret only once during Summer-fall 2008. At other times, occasionally a few colonies are observed.",
+    "environmental_conditions": "",
+    "further_reading": ""
+  }
+}

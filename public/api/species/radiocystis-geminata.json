@@ -1,0 +1,31 @@
+{
+  "slug": "radiocystis-geminata",
+  "scientific_name": "Radiocystis geminata Skuja 1948",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/radiocystis-geminata",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-07-05",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonies",
+    "cell_shape": "sphere",
+    "colony_shape": "spherical (more or less)",
+    "cell_diameter_d": "1-3.7 µm; median: 2 μm; N=609",
+    "biovolume_per_cell": "0.5 – 25 μm³, median: 4 μm³; N=609",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³",
+    "colony_diameter": "up to 70 µm",
+    "cells_per_colony": "40-100 (600)"
+  },
+  "narrative": {
+    "morphology": "Colonies are more or less spherical or slightly elongate, made of small (2 µm) sperical cells organized in radiating uniseriate rows extending from the center to all directions, embedded in colorless mucilage (Plate 1). Cells with gas vesicles. Can be distinquished from Microcystis spp. by the smaller cell size and organization in radiating rows. Cell size varies only slightly, OK not to measure cell size routinely, use a median value instead.",
+    "ecology": "Radiocystis germinata has always been a member of the Kinneret plankton, although there were periods during which it was nearly absent (e,g, 1993-1995; 2005-2006; 2011-2014) but then it returned (Fig. 1). When present, it is often very abundant, with hundreds of colonies made of thousands of cells per mL (Fig. 1). Peak abundance is in summer, from july to September, while in winter the species is practically absent (Fig. 2). The number of cells in a colony shows a weak seasonal cycle, with larger colonies in winter and smaller in summer (Fig. 2). The variation in cell size is minor (Fig. 2).",
+    "environmental_conditions": "Abundance increases with water temperature. Indifferent to salinity at the range occurring in Kinneret. Most abundant when pH ranges 8.5-9, alkalinity 100-120 mg CaCO₃ mL⁻¹ (not shown).",
+    "further_reading": ""
+  }
+}

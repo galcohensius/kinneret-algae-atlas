@@ -1,0 +1,31 @@
+{
+  "slug": "aphanocapsa-sp",
+  "scientific_name": "Aphanocapsa sp. Nägeli 1849",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/aphanocapsa-sp",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-07-05",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonies",
+    "cell_shape": "sphere",
+    "colony_shape": "sphere or close to a sphere",
+    "cell_diameter_d": "0.5-1.0 μm.",
+    "biovolume_per_cell": "0.06-0.5 μm³",
+    "biovolume_equation": "Sphere V, µm³ = 4/3 π (D/2)³.",
+    "colony_diameter": "~50-200 μm",
+    "cells_per_colony": "hundreds to thousands"
+  },
+  "narrative": {
+    "morphology": "Colonies with many closely packed tiny (0.4-1.0 μm diameter) spherical cells with no gas vacuoles, irregularly arranged and embedded in mucilage with indistinct outer margin. Rare. Identified only to genus level.",
+    "ecology": "Rare in Lake Kinneret, we have no ecological data for this genus.",
+    "environmental_conditions": "",
+    "further_reading": ""
+  }
+}

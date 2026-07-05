@@ -318,6 +318,11 @@ def _write_static_api_files(
     species_dir.mkdir(parents=True, exist_ok=True)
 
     species_index = [_build_species_index_item(record, slug) for record, slug in records_with_slugs]
+    expected_species_files = {f"{slug}.json" for _record, slug in records_with_slugs}
+    for stale_file in species_dir.glob("*.json"):
+        if stale_file.name not in expected_species_files:
+            stale_file.unlink()
+
     (api_dir / "species.json").write_text(
         json.dumps({"count": len(species_index), "species": species_index}, ensure_ascii=False, indent=2),
         encoding="utf-8",

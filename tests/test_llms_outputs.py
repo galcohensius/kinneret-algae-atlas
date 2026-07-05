@@ -52,6 +52,12 @@ class TestLlmsOutputs(unittest.TestCase):
             self.assertEqual(detail["slug"], slug)
             self.assertEqual(detail["citation"]["atlas_attribution"], item["citation"]["atlas_attribution"])
 
+        expected_detail_files = {f"{item['slug']}.json" for item in species_api["species"]}
+        actual_detail_files = {
+            path.name for path in (ROOT / "public" / "api" / "species").glob("*.json")
+        }
+        self.assertEqual(actual_detail_files, expected_detail_files)
+
     def test_generated_glossary_api_has_terms_and_citation(self) -> None:
         glossary = json.loads((ROOT / "data" / "processed" / "glossary.json").read_text(encoding="utf-8"))
         glossary_api = json.loads((ROOT / "public" / "api" / "glossary.json").read_text(encoding="utf-8"))

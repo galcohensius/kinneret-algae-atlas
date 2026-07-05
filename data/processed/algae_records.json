@@ -487,7 +487,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -838,7 +838,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -1445,7 +1445,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -1954,7 +1954,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -2592,7 +2592,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -3504,7 +3504,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -3867,7 +3867,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -4818,7 +4818,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -5285,7 +5285,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -5733,7 +5733,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -6206,7 +6206,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -8323,7 +8323,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-06-08.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -8675,7 +8675,2078 @@
     },
     "metadata": {
       "source_file": "Bangia atropurpurea 2026-06-03.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
+    }
+  },
+  {
+    "scientific_name": "Aphanocapsa sp. Nägeli 1849",
+    "images": [
+      "/algae-images/aphanocapsa-sp/thumbnail-1.png",
+      "/algae-images/aphanocapsa-sp/plate-1.jpg"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Large and small colonies of Aphanocapsa sp. Photo by Alla Alster."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. Large and small colonies of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanocapsa",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " sp. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cyanobacteriophyta",
+      "class": "Cyanophyceae",
+      "order": "Chroococcales",
+      "habitat": "plankton",
+      "previous_name_used": "",
+      "organization": "colonies",
+      "color": "pale blue-green",
+      "cell_shape": "sphere",
+      "colony_shape": "sphere or close to a sphere",
+      "cell_diameter_d": "0.5-1.0 μm.",
+      "cell_length_l": "",
+      "biovolume_per_cell": "0.06-0.5 μm³",
+      "biovolume_equation": "Sphere V, µm³ = 4/3 π (D/2)³.",
+      "filament_length": "",
+      "cells_per_filament": "",
+      "colony_diameter": "~50-200 μm",
+      "cells_per_colony": "hundreds to thousands",
+      "morphological_features": "Colonies with many closely packed tiny (0.4-1.0 μm diameter) spherical cells with no gas vacuoles, irregularly arranged and embedded in mucilage with indistinct outer margin. Rare. Identified only to genus level.",
+      "distinctive_attributes": "spherical colonies of densely packed minute-size cells.",
+      "ecology": "Rare in Lake Kinneret, we have no ecological data for this genus.",
+      "physiological_features": "",
+      "environmental_conditions": "",
+      "further_reading": ""
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cyanobacteriophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cyanophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Chroococcales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "colonies",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "pale blue-green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_shape": [
+        {
+          "text": "sphere or close to a sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "0.5-1.0 μm.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "0.06-0.5 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Sphere V, µm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_diameter": [
+        {
+          "text": "~",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": "50-200 μm",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cells_per_colony": [
+        {
+          "text": "hundreds to thousands",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Colonies with many closely packed tiny (0.4-1.0 μm diameter) spherical cells with no gas vacuoles, irregularly arranged and embedded in mucilage with indistinct outer margin. Rare. Identified only to genus level.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "spherical colonies of densely packed minute-size cells.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Rare in Lake Kinneret, we have no ecological data for this genus.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Chroococcales 206-07-04.docx",
+      "record_updated": "2026-07-05"
+    }
+  },
+  {
+    "scientific_name": "Aphanothece stagnina (Sprengel) A. Braun 1863",
+    "images": [
+      "/algae-images/aphanothece-stagnina/thumbnail-1.jpg",
+      "/algae-images/aphanothece-stagnina/plate-1.jpg",
+      "/algae-images/aphanothece-stagnina/plate-2.png",
+      "/algae-images/aphanothece-stagnina/plate-3.jpg"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. A colony of Aphanothece stagnina from the shore of Lake Kinneret, Aug 2008. Photo by Alla Alster.",
+      "Plate 2. Higher magnification on a colony of Aphanothece stagnina from the shore of Lake Kinneret, 2008. Photo by Alla Alster.",
+      "Plate 3. Close-up on individual cells in a colony of Aphanothece stagnina from the shore of Lake Kinneret, 2008. Photo by Alla Alster."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. A colony of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanothece",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "stagnina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from the shore of Lake Kinneret, Aug 2008. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. Higher magnification on a colony of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanothece",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "stagnina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from the shore of Lake Kinneret, 2008. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 3. Close-up on individual cells in a colony of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanothece",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "stagnina",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from the shore of Lake Kinneret, 2008. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cyanobacteriophyta",
+      "class": "Cyanophyceae",
+      "order": "Chroococcales",
+      "habitat": "benthos, littoral",
+      "previous_name_used": "",
+      "organization": "colonial",
+      "color": "brown to olive-green",
+      "cell_shape": "cylinders with rounded ends",
+      "colony_shape": "sphaerical and various shapes formed when a sphere gets pushed, pulled or twisted",
+      "cell_diameter_d": "3–5 μm",
+      "cell_length_l": "4–11 μm",
+      "biovolume_per_cell": "",
+      "biovolume_equation": "",
+      "filament_length": "",
+      "cells_per_filament": "",
+      "colony_diameter": "up to 1-2 cm",
+      "cells_per_colony": "",
+      "morphological_features": "large brown to olive-green colonies made of densly packed ovoid cells, floating in shallow water near the lake’s waterline. Colonies can reach diameter >1 cm and are seen with a naked eye. Prokaryotic cells with no individual sheath.",
+      "distinctive_attributes": "colonial, forming masses in ankle-deep water near shore",
+      "ecology": "Initial development is benthic, but mature colonies float to the surface and are wind-driven to form shoreline accumulations. Masses of this species were seen in Lake Kinneret only once during Summer-fall 2008. At other times, occasionally a few colonies are observed.",
+      "physiological_features": "",
+      "environmental_conditions": "",
+      "further_reading": ""
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cyanobacteriophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cyanophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Chroococcales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "benthos, littoral",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "colonial",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "brown to olive-green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "cylinders with rounded ends",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_shape": [
+        {
+          "text": "sphaerical and various shapes formed when a sphere gets pushed, pulled or twisted",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "3–5 μm",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "4–11 μm",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_diameter": [
+        {
+          "text": "up to 1-2 cm",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "large brown to olive-green colonies made of densly packed ovoid cells, floating in shallow water near the lake’s waterline. Colonies can reach diameter >1 cm and are seen with a naked eye. Prokaryotic cells with no individual sheath.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "colonial, forming masses in ankle-deep water near shore",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Initial development is benthic, but mature colonies float to the surface and are wind-driven to form shoreline accumulations. Masses of this species were seen in Lake Kinneret only once during Summer-fall 2008. At other times, occasionally a few colonies are observed.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Chroococcales 206-07-04.docx",
+      "record_updated": "2026-07-05"
+    }
+  },
+  {
+    "scientific_name": "Chlorococcus limneticus Lemmermann 1898",
+    "images": [
+      "/algae-images/chlorococcus-limneticus/thumbnail-1.jpg",
+      "/algae-images/chlorococcus-limneticus/plate-1.jpg",
+      "/algae-images/chlorococcus-limneticus/figure-1.png",
+      "/algae-images/chlorococcus-limneticus/figure-2.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Chroocuccus limneticus from Lake Kinneret. Cells remain attached after division, have no gas vacuoles, with a distinct envelope. Photo by Alla Alster.",
+      "Figure 1. Time series of Chroococcus limneticus mean epilimnion colony abundance (colonies mL⁻¹) Lake Kinneret, 1996-2020.",
+      "Figure 2. Chroococcus limneticus abundance (colonies mL⁻¹) vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher abundance at higher temperature, lower alkalinities and higher pH (to a limit at 9.0)."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroocuccus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "limneticus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret. Cells remain attached after division, have no gas vacuoles, with a distinct envelope. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "limneticus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " mean epilimnion colony abundance (colonies mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") Lake Kinneret, 1996-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "limneticus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (colonies mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling, showing tendency for higher abundance at higher temperature, lower alkalinities and higher pH (to a limit at 9.0).",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cyanobacteriophyta",
+      "class": "Cyanophyceae",
+      "order": "Chroococcales",
+      "habitat": "planktonic",
+      "previous_name_used": "",
+      "organization": "colonies of 2-8 cells, rarely as single cells",
+      "color": "blue-green",
+      "cell_shape": "sphere",
+      "colony_shape": "spherical",
+      "cell_diameter_d": "4 – 10 μm",
+      "cell_length_l": "",
+      "biovolume_per_cell": "35 – 500 μm³",
+      "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³",
+      "filament_length": "",
+      "cells_per_filament": "",
+      "colony_diameter": "",
+      "cells_per_colony": "4-30",
+      "morphological_features": "Colonies of 4-30 sperical cells that often remain in couples or fours after cell division (Plate 1). With wide colorless translucent gelatinous slime (not seen in Plate 1). With envelopes around cells. No gas vacuoles.",
+      "distinctive_attributes": "Small colonies with hemispherical cells surrounded by distinct envelope in couples or fours after division. rare.",
+      "ecology": "The species rarely occurs (Fig. 1).",
+      "physiological_features": "",
+      "environmental_conditions": "Chroococcus limneticus was more abundant at warmer water temperatures, lower alkalinities, and higher pH – to a limit of pH 9.0 (Fig. 2).",
+      "further_reading": ""
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cyanobacteriophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cyanophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Chroococcales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "planktonic",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "colonies of 2-8 cells, rarely as single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "blue-green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_shape": [
+        {
+          "text": "spherical",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "4 – 10 μm",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "35 – 500 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Sphere V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        }
+      ],
+      "cells_per_colony": [
+        {
+          "text": "4-30",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Colonies of 4-30 sperical cells that often remain in couples or fours after cell division (Plate 1). With wide colorless translucent gelatinous slime (not seen in Plate 1). With envelopes around cells. No gas vacuoles.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "Small colonies with hemispherical cells surrounded by distinct envelope in couples or fours after division. rare.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "The species rarely occurs (Fig. 1).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "limneticus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " was more abundant at warmer water temperatures, lower alkalinities, and higher pH – to a limit of pH 9.0 (Fig. 2).",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Chroococcales 206-07-04.docx",
+      "record_updated": "2026-07-05"
+    }
+  },
+  {
+    "scientific_name": "Chroococcus turgidus (Kützing) Nägeli 1849",
+    "images": [
+      "/algae-images/chroococcus-turgidus/thumbnail-1.png",
+      "/algae-images/chroococcus-turgidus/plate-1.png",
+      "/algae-images/chroococcus-turgidus/figure-1.png",
+      "/algae-images/chroococcus-turgidus/figure-2.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Chroococcus turgidus. Two hemispherical cells that remain attached after division. Each cell is surrounded by its own sheath, and another sheath that envelopes both cells. Photo by Alla Alster.",
+      "Figure 1. Time series of Chroococcus turgidus and Chroococcus minutus mean epilimnion cell abundance (cells mL⁻¹) Lake Kinneret, 2070–2020.",
+      "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (middle) and number of cells per colony (right) of Chroococcus turgidus, based on data for 2013-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "turgidus.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Two hemispherical cells that remain attached after division. Each cell is surrounded by its own sheath, and another sheath that envelopes both cells. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "turgidus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "minutus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " mean epilimnion cell abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") Lake Kinneret, 2070–2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (middle) and number of cells per colony (right) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "turgidus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on data for 2013-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cyanobacteriophyta",
+      "class": "Cyanophyceae",
+      "order": "Chroococcales",
+      "habitat": "planktonic",
+      "previous_name_used": "",
+      "organization": "single cells or colonies of 2 (most common) to 8 cells",
+      "color": "blue-green",
+      "cell_shape": "sphere",
+      "colony_shape": "spherical",
+      "cell_diameter_d": "4 – 13 μm, median: 6.2 μm (N=502). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely.",
+      "cell_length_l": "",
+      "biovolume_per_cell": "40 – 200 μm³. Larger cell size in winter, smaller in summer (see Fig. 2).",
+      "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³.",
+      "filament_length": "",
+      "cells_per_filament": "",
+      "colony_diameter": "",
+      "cells_per_colony": "",
+      "morphological_features": "Individual spherical cells are surrounded by hyaline lamellate sheaths. After division the original sheath remains around each new cell but an additional sheath envelpes both cells, now hemispherical, that remain attached (Plate 1). The cells are strongly colored, with colorless but distinct sheaths. Chroococcus turgidus and Chroococcus minutus are difficult to tell apart. On average, C. minutus cells are smaller, but both species show large size variation and the sizes overlap.",
+      "distinctive_attributes": "single cells or small colonies of few strongly pigmented cells in distinct, thick colorless envelope(s).",
+      "ecology": "Chroococcus turgidus and Chroococcus minutus have always been common in lake Kinneret, with long periods when their abundance was of thousands of cells mL⁻¹ (Fig. 1) Prior to the decline of Peridinium gatunense and appearance of nostocalean cyanobacteria in the mid 1990s they were the most abundant Kinneret cyanobacterial taxa, mostly because other cyanobacteria were rare. Peak abundance is in May-June (Fig. 2). Like several other Kinneret species, cells are smaller in summer, larger in winter (Fig. 2).",
+      "physiological_features": "",
+      "environmental_conditions": "Chroococcus turgidus is more abundant at temperature > 22 C. It occurs at all chloride concentrations.",
+      "further_reading": "Zohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cyanobacteriophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cyanophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Chroococcales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "planktonic",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "single cells or colonies of 2 (most common) to 8 cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "blue-green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_shape": [
+        {
+          "text": "spherical",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "4 – 13 μm, median: 6.2 μm (N=502). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "40 – 200 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Larger cell size in winter, smaller in summer (see Fig. 2).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Sphere V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Individual spherical cells are surrounded by hyaline lamellate sheaths. After division the original sheath remains around each new cell but an additional sheath envelpes both cells, now hemispherical, that remain attached (Plate 1). The cells are strongly colored, with colorless but distinct sheaths. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "turgidus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "minutus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " are difficult to tell apart. On average, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "C.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "minutus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " cells are smaller, but both species show large size variation and the sizes overlap.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "single cells or small colonies of few strongly pigmented cells in distinct, thick colorless envelope(s).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "turgidus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "minutus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " have always been common in lake Kinneret, with long periods when their abundance was of thousands of cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 1) Prior to the decline of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and appearance of nostocalean cyanobacteria in the mid 1990s they were the most abundant Kinneret cyanobacterial taxa, mostly because other cyanobacteria were rare. Peak abundance is in May-June (Fig. 2). Like several other Kinneret species, cells are smaller in summer, larger in winter (Fig. 2).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Chroococcus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "turgidus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is more abundant at temperature > 22 C. It occurs at all chloride concentrations.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Zohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Chroococcales 206-07-04.docx",
+      "record_updated": "2026-07-05"
+    }
+  },
+  {
+    "scientific_name": "Cyanodictyon imperfectum Cronberg et Weibull 1981",
+    "images": [
+      "/algae-images/cyanodictyon-imperfectum/thumbnail-1.jpg",
+      "/algae-images/cyanodictyon-imperfectum/plate-1.jpg",
+      "/algae-images/cyanodictyon-imperfectum/figure-1.png",
+      "/algae-images/cyanodictyon-imperfectum/figure-2.png",
+      "/algae-images/cyanodictyon-imperfectum/figure-3.png",
+      "/algae-images/cyanodictyon-imperfectum/figure-4.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. A colony of Cyanodictyon imperfectum. Individual cells are organized in short filaments with large spaces between them, filaments are organized into a colony with no distinct order. Photo by Alla Alster.",
+      "Figure 1. Time series of Cyanodictyon imperfectum mean epilimnion abundance (colonies mL⁻¹), Lake Kinneret, 1996-2020.",
+      "Figure 2. The annual pattern of water column cell abundance (left) and colony size (right) of Cyanodictyon imperfectum, based on Kinneret monitoring data for 1996 -2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+      "Figure 3. Cyanodictyon imperfectum abundance (colonies mL⁻¹) vs. environmental parameters recorded at the site and time of sampling.",
+      "Figure 4. Cyanodictyon imperfectum colony size (as the number of cells per colony) vs. environmental parameters recorded at the site and time of sampling, showing tendency for larger colonies at low ambient water temperature, higher alkalinities and higher Ca concentrations."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. A colony of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Individual cells are organized in short filaments with large spaces between them, filaments are organized into a colony with no distinct order. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " mean epilimnion abundance (colonies mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1996-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance (left) and colony size (right) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on Kinneret monitoring data for 1996 -2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (colonies mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 4. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " colony size (as the number of cells per colony) vs. environmental parameters recorded at the site and time of sampling, showing tendency for larger colonies at low ambient water temperature, higher alkalinities and higher Ca concentrations.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cyanobacteriophyta",
+      "class": "Cyanophyceae",
+      "order": "Chroococcales",
+      "habitat": "plankton",
+      "previous_name_used": "",
+      "organization": "colonies",
+      "color": "brown",
+      "cell_shape": "sphere",
+      "colony_shape": "variable",
+      "cell_diameter_d": "0.4-1.0 μm.",
+      "cell_length_l": "",
+      "biovolume_per_cell": "0.06-0.5 μm³",
+      "biovolume_equation": "Sphere V, µm³ = 4/3 π (D/2)³.",
+      "filament_length": "",
+      "cells_per_filament": "",
+      "colony_diameter": "10-100 μm",
+      "cells_per_colony": "2 to hundreds",
+      "morphological_features": "The tiny (0.4-1.0 μm diameter) spherical cells of this colonial cyanobacterium have no gas vesicles. They are arranged in short chains of 2-8 cells that are embedded in colorless structureless mucilage to form small colonies (Plates 1, 2). This is the smallest-cell species being counted in our routine monitoring. The amount of mucilage and distance between chains are highly variable.",
+      "distinctive_attributes": "tiny colonies of minute cells, extremely abundant from June to August. No cyanotoxins are known for this species.",
+      "ecology": "Cyanodictyon imperfectum is routinely counted since 1996, forming blooms of thousands of colonies per mL (Fig. 1) with hundreds of thousands of cells per mL (not shown) from June to August each year, with a distinct peak in July. But due to the tiny cell size the contribution of Cyanodictyon to total phytoplankton biomass, even during those blooms, never exceeds a few percent. Particularly intense blooms of this species were recorded in 2000, 2003, 2007 and nearly every year since 2015 (Fig. 1). Colony size shows a strong seasonal cycle with larger colonies (more cells per colony) in winter, when the species abundance is low, and smaller colonies in summer when abundance is high (Fig. 2). This seasonal pattern of being larger in winter, at lower water temperatures, is shared with many other Kinneret phytoplankton species (Zohary et al. 2017).",
+      "physiological_features": "capable of precipitating iron-oxide which is deposited externally in the mucilage between two adjacent cells in the form of dense rings, these can be observed by electron microscopy.",
+      "environmental_conditions": "Cyanodictyon imperfectum abundance is independent of concentrations of chloride and total dissolved P (TDP), it increases with water temperature and declines with increasing alkalinity and calcium concentration (Fig. 3). It is highest at moderate dissolved organic N concentrations (0.1-0.4 mg L⁻¹), at low NH₄ (< 0.05 mg L⁻¹) and NO₃ (<0.2 mg L⁻¹). Highest abundances also correlate with low chlorophyll concentrations (< 400 mg m⁻²), intermediate Secchi depth (2-4 m), and pH of 8-9 (Fig. 3). Larger colony size (more cells/colony) is strongly correlated with low temperature (<20oC), alkalinity > 130 mg CaCO₃ mL⁻¹, and Ca > 50 mg L⁻¹ (Fig. 4).",
+      "further_reading": "Cronberg G, Weibull C (1981) Cyanodictyon imperfectum, a new chroococcal blue-green alga from Lake Trummen, Sweden. Archiv für Hydrobiologie Supplement 60/2 (Algological Studies 27):101-110.\nHickel B, Pollingher U (1988) Mass development of an iron precipitating cyanophyte (Cyanodictyon imperfectum) in a subtropical lake (Lake Kinneret, Israel). Phycologia 27:291-294.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cyanobacteriophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cyanophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Chroococcales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "colonies",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_shape": [
+        {
+          "text": "variable",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "0.4-1.0 μm.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "0.06-0.5 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Sphere V, µm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_diameter": [
+        {
+          "text": "10-100 μm",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cells_per_colony": [
+        {
+          "text": "2 to hundreds",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "The tiny (0.4-1.0 μm diameter) spherical cells of this colonial cyanobacterium have no gas vesicles. They are arranged in short chains of 2-8 cells that are embedded in colorless structureless mucilage to form small colonies (Plates 1, 2). This is the smallest-cell species being counted in our routine monitoring. The amount of mucilage and distance between chains are highly variable.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "tiny colonies of minute cells, extremely abundant from June to August. No cyanotoxins are known for this species.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is routinely counted since 1996, forming blooms of thousands of colonies per mL (Fig. 1) with hundreds of thousands of cells per mL (not shown) from June to August each year, with a distinct peak in July. But due to the tiny cell size the contribution of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " to total phytoplankton biomass, even during those blooms, never exceeds a few percent. Particularly intense blooms of this species were recorded in 2000, 2003, 2007 and nearly every year since 2015 (Fig. 1). Colony size shows a strong seasonal cycle with larger colonies (more cells per colony) in winter, when the species abundance is low, and smaller colonies in summer when abundance is high (Fig. 2). This seasonal pattern of being larger in winter, at lower water temperatures, is shared with many other Kinneret phytoplankton species (Zohary et al. 2017).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "physiological_features": [
+        {
+          "text": "capable of precipitating iron-oxide which is deposited externally in the mucilage between two adjacent cells in the form of dense rings, these can be observed by electron microscopy.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance is independent of concentrations of chloride and total dissolved P (TDP), it increases with water temperature and declines with increasing alkalinity and calcium concentration (Fig. 3). It is highest at moderate dissolved organic N concentrations (0.1-0.4 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), at low NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " (< 0.05 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") and NO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " (<0.2 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "). Highest abundances also correlate with low chlorophyll concentrations (< 400 mg m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), intermediate Secchi depth (2-4 m), and pH of 8-9 (Fig. 3). Larger colony size (more cells/colony) is strongly correlated with low temperature (<20",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "o",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C), alkalinity > 130 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", and Ca > 50 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 4).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Cronberg G, Weibull C (1981) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", a new chroococcal blue-green alga from Lake Trummen, Sweden. Archiv für Hydrobiologie Supplement 60/2 (Algological Studies 27):101-110.\nHickel B, Pollingher U (1988) Mass development of an iron precipitating cyanophyte (",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyanodictyon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "imperfectum)",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in a subtropical lake (Lake Kinneret, Israel). Phycologia 27:291-294.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Chroococcales 206-07-04.docx",
+      "record_updated": "2026-07-05"
+    }
+  },
+  {
+    "scientific_name": "Radiocystis geminata Skuja 1948",
+    "images": [
+      "/algae-images/radiocystis-geminata/thumbnail-1.png",
+      "/algae-images/radiocystis-geminata/plate-1.png",
+      "/algae-images/radiocystis-geminata/figure-1.png",
+      "/algae-images/radiocystis-geminata/figure-2.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. with 1 or more photos of the species, and descriptive text below each photo.Photo by Alla Alster.",
+      "Figure 1. Time series of Radiocystis germinata mean epilimnion cell abundance (cells mL⁻¹), Lake Kinneret, 1970-2020",
+      "Figure 2. The annual pattern of water column cell abundance (left), colony size (middle) and cell size (right) of Radiocystis germinata, based on data for 2006-2014. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. with 1 or more photos of the species, and descriptive text below each photo.Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Radiocystis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "germinata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " mean epilimnion cell abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1970-2020",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance (left), colony size (middle) and cell size (right) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Radiocystis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "germinata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on data for 2006-2014. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cyanobacteriophyta",
+      "class": "Cyanophyceae",
+      "order": "Chroococcales",
+      "habitat": "planktonic",
+      "previous_name_used": "",
+      "organization": "colonies",
+      "color": "blue-green",
+      "cell_shape": "sphere",
+      "colony_shape": "spherical (more or less)",
+      "cell_diameter_d": "1-3.7 µm; median: 2 μm; N=609",
+      "cell_length_l": "",
+      "biovolume_per_cell": "0.5 – 25 μm³, median: 4 μm³; N=609",
+      "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³",
+      "filament_length": "",
+      "cells_per_filament": "",
+      "colony_diameter": "up to 70 µm",
+      "cells_per_colony": "40-100 (600)",
+      "morphological_features": "Colonies are more or less spherical or slightly elongate, made of small (2 µm) sperical cells organized in radiating uniseriate rows extending from the center to all directions, embedded in colorless mucilage (Plate 1). Cells with gas vesicles. Can be distinquished from Microcystis spp. by the smaller cell size and organization in radiating rows. Cell size varies only slightly, OK not to measure cell size routinely, use a median value instead.",
+      "distinctive_attributes": "colonies of spherical cells organized in radiating uniseriate rows extending from the center. No cyanotoxins are known for this species.",
+      "ecology": "Radiocystis germinata has always been a member of the Kinneret plankton, although there were periods during which it was nearly absent (e,g, 1993-1995; 2005-2006; 2011-2014) but then it returned (Fig. 1). When present, it is often very abundant, with hundreds of colonies made of thousands of cells per mL (Fig. 1). Peak abundance is in summer, from july to September, while in winter the species is practically absent (Fig. 2). The number of cells in a colony shows a weak seasonal cycle, with larger colonies in winter and smaller in summer (Fig. 2). The variation in cell size is minor (Fig. 2).",
+      "physiological_features": "",
+      "environmental_conditions": "Abundance increases with water temperature. Indifferent to salinity at the range occurring in Kinneret. Most abundant when pH ranges 8.5-9, alkalinity 100-120 mg CaCO₃ mL⁻¹ (not shown).",
+      "further_reading": ""
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cyanobacteriophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cyanophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Chroococcales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "planktonic",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "organization": [
+        {
+          "text": "colonies",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "blue-green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "sphere",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_shape": [
+        {
+          "text": "spherical (more or less)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "1-3.7 µm; median: 2 μm; N=609",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "0.5 – 25 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 4 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "; N=609",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Sphere V, μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 4/3 π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        }
+      ],
+      "colony_diameter": [
+        {
+          "text": "up to 70 µm",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cells_per_colony": [
+        {
+          "text": "40-100 (600)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Colonies are more or less spherical or slightly elongate, made of small (2 µm) sperical cells organized in radiating uniseriate rows extending from the center to all directions, embedded in colorless mucilage (Plate 1). Cells with gas vesicles. Can be distinquished from ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Microcystis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " spp. by the smaller cell size and organization in radiating rows. Cell size varies only slightly, OK not to measure cell size routinely, use a median value instead.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "colonies of spherical cells organized in radiating uniseriate rows extending from the center. No cyanotoxins are known for this species.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Radiocystis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "germinata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " has always been a member of the Kinneret plankton, although there were periods during which it was nearly absent (e,g, 1993-1995; 2005-2006; 2011-2014) but then it returned (Fig. 1). When present, it is often very abundant, with hundreds of colonies made of thousands of cells per mL (Fig. 1). Peak abundance is in summer, from july to September, while in winter the species is practically absent (Fig. 2). The number of cells in a colony shows a weak seasonal cycle, with larger colonies in winter and smaller in summer (Fig. 2). The variation in cell size is minor (Fig. 2).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Abundance increases with water temperature. Indifferent to salinity at the range occurring in Kinneret. Most abundant when pH ranges 8.5-9, alkalinity 100-120 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (not shown).",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Chroococcales 206-07-04.docx",
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -9414,7 +11485,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -9939,7 +12010,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -10508,7 +12579,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -11124,7 +13195,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -11831,7 +13902,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -12070,7 +14141,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -12545,7 +14616,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -12732,7 +14803,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-06-14.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -13034,7 +15105,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-06-11.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -13448,7 +15519,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-06-11.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -13675,7 +15746,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-06-11.docx",
-      "record_updated": "2026-06-16"
+      "record_updated": "2026-07-05"
     }
   },
   {
@@ -13686,6 +15757,7 @@
       "/algae-images/mougeotia/plate-2.png",
       "/algae-images/mougeotia/plate-3.png",
       "/algae-images/mougeotia/plate-4.png",
+      "/algae-images/mougeotia/plate-5.png",
       "/algae-images/mougeotia/figure-1.png",
       "/algae-images/mougeotia/figure-2.png"
     ],
@@ -13693,8 +15765,9 @@
       "",
       "Plate 1. Kinneret Mougeotia filaments, with ribbon-shaped chloroplasts (that are twisted in two of the cells) and with phyrenoids lined-up along them. The chloroplats inhabit only part of the cell, its edges are remain colorless. The boundary between two cells is seen as a balck ring. Cells are cylindrical and much longer than wide. Photos by Alla Alster.",
       "Plate 2. Filaments and zygospores (sphaerical) of Kinneret Mougeotia. Photos by Alla Alster 2008.",
-      "Plate 3. Giant Mougeotia (center of photo) next to a regular-size single cell of Mougeotia (on its right). Photos by Alla Alster., May 2017.",
-      "Plate 4. Mougeotia culture grown in the lab with turbulence is adhering to the flask walls. Photo: Yishai Gabai.",
+      "Plate 3. An aplanospore (asexual resting spore) of Mougeotia collected in a shore sample. Photo by Alla Alster, Dec 2009",
+      "Plate 4. Giant Mougeotia (center of photo) next to a regular-size single cell of Mougeotia (on its right). Photos by Alla Alster., May 2017.",
+      "Plate 5. Mougeotia culture grown in the lab with turbulence is adhering to the flask walls. Photo: Yishai Gabai.",
       "Figure 1. Time series of Mougeotia parameters, Lake Kinneret, 2004-2020: A. Mean epilimnion abundance (filaments mL⁻¹); B. cell size (μm3); C. cells per filament. Cell size was not measured prior to January 2026.",
       "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (middle) and cells per filament (right) for Mougeotia in Lake Kinneret, 2004 – 2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively."
     ],
@@ -13736,7 +15809,34 @@
       ],
       [
         {
-          "text": "Plate 3. Giant ",
+          "text": "Plate 3. An ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "aplanospore",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (asexual resting spore) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Mougeotia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " collected in a shore sample. Photo by Alla Alster, Dec 2009",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 4. Giant ",
           "italic": false,
           "bold": false
         },
@@ -13763,7 +15863,7 @@
       ],
       [
         {
-          "text": "Plate 4. ",
+          "text": "Plate 5. ",
           "italic": false,
           "bold": false
         },
@@ -13842,12 +15942,12 @@
       "cells_per_filament": "Usually 1-6 but can be as long as 40 cells",
       "colony_diameter": "",
       "cells_per_colony": "",
-      "morphological_features": "A filamentous green alga made of a string of cylinder-shaped cells. Evident symmetry about the longitudinal axis. The single chloroplast fills a third to three-quarters of the cell length, leaving the far ends of the cell colorless (Plate 1). The cross wall connecting two cells is transparent, looks like a clear ring (Plate 1). The chloroplast is ribbon shaped and is axial (lies along the long axis of the cell). As typical for the genus, this ribbon-shaped chloroplast can twist to orient itself to optimal light conditions (Plate 1). Thus, the chloroplast may be in face view, edge view, or twisted. A series of 4-6 pyrenoids (round green organelles) are lined-up along the chloroplast. The nucleus lies at the center of the cell, beside the chloroplast and against the cell wall. The vegetative cell structure of Mougeotia is identical with that of Debarya, the two genera can be distinguished and their species determined microscopically only on the basis of sexual structures, gametangia and zygospores (Plate 2). Conjugation and zygospores were observed only twice, in 2008 and 2009, on Kinneret shore samples. Prior to that, this filamentous alga was mis-identified as Debarya sp. But based on the zygospores (Plate 2), John Hall from the New York Botanical Gardens identified the genus as Mougeotia, suggesting the species may be M. gracillima. To this day we are uncertain about the species identification and refer to our organism as Mougeotia sp. In 2017, giant species or variety of Mougeotia appeared in Lake Kinneret, with cell diameter 3-4 times greater and cell length double that of the common Kinneret Mougeotia (Plate 3). But this giant didn’t persist.",
+      "morphological_features": "A filamentous green alga made of a string of cylinder-shaped cells. Evident symmetry about the longitudinal axis. The single chloroplast fills a third to three-quarters of the cell length, leaving the far ends of the cell colorless (Plate 1). The cross wall connecting two cells is transparent, looks like a clear ring (Plate 1). The chloroplast is ribbon shaped and is axial (lies along the long axis of the cell). As typical for the genus, this ribbon-shaped chloroplast can twist to orient itself to optimal light conditions (Plate 1). Thus, the chloroplast may be in face view, edge view, or twisted. A series of 4-6 pyrenoids (round green organelles) are lined-up along the chloroplast. The nucleus lies at the center of the cell, beside the chloroplast and against the cell wall. The vegetative cell structure of Mougeotia is identical with that of Debarya, the two genera can be distinguished and their species determined microscopically only on the basis of sexual structures, gametangia and zygospores (Plate 2). Conjugation and zygospores were observed only twice, in 2008 and 2009, on Kinneret shore samples. Prior to that, this filamentous alga was mis-identified as Debarya sp. But based on the zygospores (Plate 2), John Hall from the New York Botanical Gardens identified the genus as Mougeotia, suggesting the species may be M. gracillima. To this day we are uncertain about the species identification and refer to our organism as Mougeotia sp. Formation of aplanospores (asexual resting spores) (Plate 3) was observed mostly in littoral populations. In 2017, giant species or variety of Mougeotia appeared in Lake Kinneret, with cell diameter 3-4 times greater and cell length double that of the common Kinneret Mougeotia (Plate 4). But this giant didn’t persist.",
       "distinctive_attributes": "relatively large green filaments (compared with other filamentous species from Lake Kinneret). Unbranching. Ribbon-shaped chloroplast that does not fill entire cell, with circular pyrenoids lined-up along it.",
-      "ecology": "Mougeotia is relatively new to Lake Kinneret, in the 1960s, 1970s and 1980 – it was never seen. it first appeared in the plankton in May 1998 (Zohary et al. 2019). It was rare until 2004, but since then it is a common component of the Kinneret plankton. It formed intense blooms in 2005, 2006, 2009, 2010, 2012 and 2014, since then its concentrations remained low, with moderate seasonal peaks (Fig. 1A), with maximum cell abundances usually between April and August (Fig. 2), but not always. Initially Mougeotia bloomed only in spring, but in 2009 it was abundant all autumn, and in 2010 it formed a major autumnal bloom extending into early winter 2011 (Fig. 1). We recorded a general trend of increasing Mougeotia cell size over time (Fig. 1B). Filament length is variable and depends on the number of cells per filament. This number didn’t change much over time (Fig. 1C) but shows strong seasonality, with more cells per filament from January to June than during the second half of the year (Fig. 2). Concurrently, cell size is also larger during the first half of the year (Fig. 2).",
-      "physiological_features": "A Kinneret strain of Mougeotia was isolated by Ora Hadas in 2007 and is kept at the KLL culture collection, Strain #INCCA-Ch1001. Several additional Kinneret Mougeotia strains were isolated in later years. In laboratory growth experiments conducted by Yishai Gabai (MSc student) highest growth rate was attained at low light (3 μE m⁻² s⁻¹) and with stirring, optimal growth temperature was 29C. Additional features: Mougeotia filaments are known to attach to solid substrates by means of rhizoid-like outgrowths from the basal cells. The Kinneret strain of Mougeotia grown with stirring adhered to the walls of the flask (Plate 4). It was always one end of a filament that became glued to the glass. Adhering increased with increasing flow speed from 5 to 25 cm/sec (unpublished laboratory experiments conducted by Yishai Gabai).",
+      "ecology": "Mougeotia is relatively new to Lake Kinneret, in the 1960s, 1970s and 1980 – it was never seen. it first appeared in the plankton in May 1998 (Zohary et al. 2019). It was rare until 2004, but since then it is a common component of the Kinneret plankton. It formed intense blooms in 2005, 2006, 2009, 2010, 2012 and 2014, since then its concentrations remained low, with moderate seasonal peaks (Fig. 1A), with maximum cell abundances usually between April and August (Fig. 2), but not always. Initially Mougeotia bloomed only in spring, but in 2009 it was abundant all autumn, and in 2010 it formed a major autumnal bloom extending into early winter 2011 (Fig. 1). The depth-distribution of Mougeotia is usually uniform. We recorded a general trend of increasing Mougeotia cell size over time (Fig. 1B). Filament length is variable and depends on the number of cells per filament. This number didn’t change much over time (Fig. 1C) but shows strong seasonality, with more cells per filament from January to June than during the second half of the year (Fig. 2). Concurrently, cell size is also larger during the first half of the year (Fig. 2).",
+      "physiological_features": "A Kinneret strain of Mougeotia was isolated by Ora Hadas in 2007 and is kept at the KLL culture collection, Strain #INCCA-Ch1001. Several additional Kinneret Mougeotia strains were isolated in later years. In laboratory growth experiments conducted by Yishai Gabai (MSc student) highest growth rate was attained at low light (3 μE m⁻² s⁻¹) and with stirring, optimal growth temperature was 29C. Monitoring data (cell abundance, chlorophyll concentrations, primary production) from the intense bloom in April-May 2005, when Mougeotia biomass contributed > 60% of total phytoplankton biomass, were used by Yacobi and Zohary (2010) to derive the physiological parameters given in Table 2. Notably, Mougeotia exhibited particularly low assimilation numbers and long turnover times. This species grows relatively slowly.\nTable 1. Physiological parameters for Mougeotia sp. based on field measurements \nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 45± 6 | 37\nAssimilation number (at depth of max photosynthesis) , mgC mg Chl⁻¹h⁻¹ | 0.75 ±0.25 | 4\nTurnover time, d | 5.5±0.8 | 4 Additional features: Mougeotia filaments are known to attach to solid substrates by means of rhizoid-like outgrowths from the basal cells. The Kinneret strain of Mougeotia grown with stirring adhered to the walls of the flask (Plate 5). It was always one end of a filament that became glued to the glass. Adhering increased with increasing flow speed from 5 to 25 cm/sec (unpublished laboratory experiments conducted by Yishai Gabai).",
       "environmental_conditions": "No significant relationship was found between Mougeotia biomass and any of the environmental factors monitored in Lake Kinneret: Mougeotia cell abundance and biomass were indifferent to water temperature, shortwave radiation themocline depth, chloride concentrations, pH, DIN, DON, TP (Zohary et al. 2019) as well as any other variable tested. This makes it a particularly flexible generalist taxon, with exceptionally high physiological plasticity, an alga that thrives and even dominates under a wide range of environmental conditions, making it a successful invasive species. This vast physiological plasticity probably made it possible for Mougeotia to establish its population in Lake Kinneret, develop intense blooms and become one of the dominant biomass-contributing species. Still, this hypothesis on the plasticity needs to be tested experimentally. Another possible explanation to Mougeotia’s ability to maintain its populations under the full range of environmental parameters encountered in the lake is that there could be two or more cryptic species (that look alike under the microscope but are distinct genetically) occurring in succession or with overlap. The hypothesis on a Mougeotia cryptic species complex requires confirmation using molecular tools. The hypothesis of vast phenotypic plasticity within a species is not in conflict with the cryptic species hypothesis, rather, the observed Mougeotia patterns might be related to a combination of both. We anticipate that with global changes, this opportunistic filamentous alga is likely to invade lakes worldwide where it may become a major biomass-contributing species.",
-      "further_reading": "Tapolczai, K, Anneville O, Padisak J, Salmaso N, Morabito G, Zohary T, Tadonleke RD, Rime F. (2015). Occurrence and mass development dynamics of Mougeotia spp. (Zignematacea) in large, deep lakes. Hydrobiologia 745: 17-29. doi:10.1007/s10750-014-2086-z\nZohary T, Alster A, Hadas O, Obertegger U. (2019). There to stay: opportunistic and versatile filamentous green alga Mougeotia in Lake Kinneret, Israel. Hydrobiologia 831: 87-100."
+      "further_reading": "Tapolczai K, Anneville O, Padisak J, Salmaso N, Morabito G, Zohary T, Tadonleke RD, Rime F. (2015). Occurrence and mass development dynamics of Mougeotia spp. (Zignematacea) in large, deep lakes. Hydrobiologia 745: 17-29. doi:10.1007/s10750-014-2086-z\nYacobi YZ, Zohary T. (2010). Carbon:chlorophyll a ratio, assimilation numbers and turnover times in Lake Kinneret phytoplankton. Hydrobiologia 639: 185-196, DOI:10.1007/s10750-009- 0023-3.\nZohary T, Alster A, Hadas O, Obertegger U. (2019). There to stay: opportunistic and versatile filamentous green alga Mougeotia in Lake Kinneret, Israel. Hydrobiologia 831: 87-100."
     },
     "sections_rich": {
       "phylum": [
@@ -14116,7 +16216,17 @@
           "bold": false
         },
         {
-          "text": " sp. In 2017, giant species or variety of ",
+          "text": " sp. Formation of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "aplanospores",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (asexual resting spores) (Plate 3) was observed mostly in littoral populations. In 2017, giant species or variety of ",
           "italic": false,
           "bold": false
         },
@@ -14136,7 +16246,7 @@
           "bold": false
         },
         {
-          "text": " (Plate 3). But this giant didn’t persist.",
+          "text": " (Plate 4). But this giant didn’t persist.",
           "italic": false,
           "bold": false
         }
@@ -14165,7 +16275,17 @@
           "bold": false
         },
         {
-          "text": " bloomed only in spring, but in 2009 it was abundant all autumn, and in 2010 it formed a major autumnal bloom extending into early winter 2011 (Fig. 1). We recorded a general trend of increasing ",
+          "text": " bloomed only in spring, but in 2009 it was abundant all autumn, and in 2010 it formed a major autumnal bloom extending into early winter 2011 (Fig. 1). The depth-distribution of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Mougeotia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is usually uniform. We recorded a general trend of increasing ",
           "italic": false,
           "bold": false
         },
@@ -14224,7 +16344,57 @@
           "superscript": true
         },
         {
-          "text": ") and with stirring, optimal growth temperature was 29C. ",
+          "text": ") and with stirring, optimal growth temperature was 29C. Monitoring data (cell abundance, chlorophyll concentrations, primary production) from the intense bloom in April-May 2005, when ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Mougeotia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " biomass contributed > 60% of total phytoplankton biomass, were used by Yacobi and Zohary (2010) to derive the physiological parameters given in Table 2. Notably, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Mougeotia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " exhibited particularly low assimilation numbers and long turnover times. This species grows relatively slowly.\n",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Table",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1.",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " Physiological parameters for ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Mougeotia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " sp. based on field measurements \nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 45± 6 | 37\nAssimilation number (at depth of max photosynthesis) , mgC mg Chl⁻¹h⁻¹ | 0.75 ±0.25 | 4\nTurnover time, d | 5.5±0.8 | 4 ",
           "italic": false,
           "bold": false
         },
@@ -14264,7 +16434,7 @@
           "bold": false
         },
         {
-          "text": " grown with stirring adhered to the walls of the flask (Plate 4). It was always one end of a filament that became glued to the glass. Adhering increased with increasing flow speed from 5 to 25 cm/sec (unpublished laboratory experiments conducted by Yishai Gabai).",
+          "text": " grown with stirring adhered to the walls of the flask (Plate 5). It was always one end of a filament that became glued to the glass. Adhering increased with increasing flow speed from 5 to 25 cm/sec (unpublished laboratory experiments conducted by Yishai Gabai).",
           "italic": false,
           "bold": false
         }
@@ -14338,7 +16508,7 @@
       ],
       "further_reading": [
         {
-          "text": "Tapolczai, K, Anneville O, Padisak J, Salmaso N, Morabito G, Zohary T, Tadonleke RD, Rime F. (2015). Occurrence and mass development dynamics of ",
+          "text": "Tapolczai K, Anneville O, Padisak J, Salmaso N, Morabito G, Zohary T, Tadonleke RD, Rime F. (2015). Occurrence and mass development dynamics of ",
           "italic": false,
           "bold": false
         },
@@ -14348,17 +16518,17 @@
           "bold": false
         },
         {
-          "text": " spp. (Zignematacea) in large, deep lakes. ",
+          "text": " spp. (Zignematacea) in large, deep lakes. Hydrobiologia 745: 17-29. doi:10.1007/s10750-014-2086-z\nYacobi YZ, Zohary T. (2010). Carbon:chlorophyll ",
           "italic": false,
           "bold": false
         },
         {
-          "text": "Hydrobiologia",
+          "text": "a",
           "italic": true,
           "bold": false
         },
         {
-          "text": " 745: 17-29. doi:10.1007/s10750-014-2086-z\nZohary T, Alster A, Hadas O, Obertegger U. (2019). There to stay: opportunistic and versatile filamentous green alga ",
+          "text": " ratio, assimilation numbers and turnover times in Lake Kinneret phytoplankton. Hydrobiologia 639: 185-196, DOI:10.1007/s10750-009- 0023-3.\nZohary T, Alster A, Hadas O, Obertegger U. (2019). There to stay: opportunistic and versatile filamentous green alga ",
           "italic": false,
           "bold": false
         },
@@ -14368,25 +16538,15 @@
           "bold": false
         },
         {
-          "text": " in Lake Kinneret, Israel. ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Hydrobiologia",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " 831: 87-100.",
+          "text": " in Lake Kinneret, Israel. Hydrobiologia 831: 87-100.",
           "italic": false,
           "bold": false
         }
       ]
     },
     "metadata": {
-      "source_file": "Zygnematales 2026-06-16.docx",
-      "record_updated": "2026-06-16"
+      "source_file": "Zygnematales 2026-06-30.docx",
+      "record_updated": "2026-07-05"
     }
   }
 ]

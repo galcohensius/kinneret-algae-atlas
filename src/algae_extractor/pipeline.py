@@ -238,7 +238,26 @@ def _looks_like_prose_remainder(remainder: str | None) -> bool:
     Real taxon headers may include authority tails, but not long sentence prose.
     """
     tail = (remainder or "").strip()
-    if not tail or len(tail) < 120:
+    if not tail:
+        return False
+    first = tail.split(maxsplit=1)[0].strip("()[],:;").lower()
+    if first in {
+        "is",
+        "are",
+        "was",
+        "were",
+        "has",
+        "have",
+        "had",
+        "occurs",
+        "occur",
+        "occurred",
+        "shows",
+        "show",
+        "showing",
+    }:
+        return True
+    if len(tail) < 120:
         return False
     return bool(re.search(r"[.!?]", tail))
 

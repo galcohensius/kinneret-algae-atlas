@@ -96,13 +96,13 @@ def parse_glossary_lines(lines: list[str]) -> tuple[str, list[dict[str, Any]]]:
     return title, entries
 
 
-def parse_glossary_text(text: str) -> dict[str, Any]:
+def parse_glossary_text(text: str, record_updated: str | None = None) -> dict[str, Any]:
     """Parse full glossary document text into JSON-serializable dict."""
     normalized = text.replace("\r\n", "\n").replace("\r", "\n")
     lines = normalized.split("\n")
     title, entries = parse_glossary_lines(lines)
     return {
         "title": title,
-        "record_updated": date.today().isoformat(),
+        "record_updated": record_updated or date.today().isoformat(),
         "entries": entries,
     }

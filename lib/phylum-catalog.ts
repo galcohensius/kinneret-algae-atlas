@@ -12,12 +12,13 @@ import type { AlgaeRecord } from "./algae-types";
  *   Charophyta
  *
  * No color in the name; hue chosen for distinction and typical field appearance:
- *   Cryptista, Dinoflagellata, Euglenophyta, Haptophyta
+ *   Cryptista, Cyanobacteriophyta, Dinoflagellata, Euglenophyta, Haptophyta
  */
 const PHYLUM_ACCENTS: Record<string, string> = {
   chlorophyta: "#15803d", // chloros = green
   rhodophyta: "#be123c", // rhodon = rose-red
   charophyta: "#22c55e", // green algae; bright spring green, kept lighter than Chlorophyta's dark forest green to stay distinct
+  cyanobacteriophyta: "#0891b2", // blue-green cyanobacteria
   dinoflagellata: "#7e22ce", // purple
   cryptista: "#ca8a04", // light brown / amber
   euglenophyta: "#84cc16", // green-yellow
@@ -29,6 +30,7 @@ const FALLBACK_PALETTE = [
   PHYLUM_ACCENTS.chlorophyta,
   PHYLUM_ACCENTS.rhodophyta,
   PHYLUM_ACCENTS.cryptista,
+  PHYLUM_ACCENTS.cyanobacteriophyta,
   PHYLUM_ACCENTS.dinoflagellata,
   PHYLUM_ACCENTS.euglenophyta,
   PHYLUM_ACCENTS.haptophyta,

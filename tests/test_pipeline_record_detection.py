@@ -11,6 +11,7 @@ if str(_SRC) not in sys.path:
 
 from algae_extractor.pipeline import (
     _infer_scientific_name_fallback,
+    _looks_like_prose_remainder,
     _should_reject_fake_record_name,
     _strip_leading_list_markers,
 )
@@ -34,6 +35,23 @@ class TestRejectFakeRecordName(unittest.TestCase):
         self.assertTrue(_should_reject_fake_record_name("Previous names", blocked))
         self.assertTrue(_should_reject_fake_record_name("Previously used", blocked))
         self.assertFalse(_should_reject_fake_record_name("Gymnodinium sp.", blocked))
+
+
+class TestRejectProseRecordRemainder(unittest.TestCase):
+    def test_rejects_binomial_followed_by_prose_verb(self) -> None:
+        self.assertTrue(
+            _looks_like_prose_remainder(
+                "was more abundant at warmer water temperatures, lower alkalinities, and higher pH."
+            )
+        )
+        self.assertTrue(
+            _looks_like_prose_remainder(
+                "is more abundant at temperature > 22 C. It occurs at all chloride concentrations."
+            )
+        )
+
+    def test_keeps_short_authority_tail(self) -> None:
+        self.assertFalse(_looks_like_prose_remainder("Nägeli 1849"))
 
 
 class TestInferScientificNameFallback(unittest.TestCase):
