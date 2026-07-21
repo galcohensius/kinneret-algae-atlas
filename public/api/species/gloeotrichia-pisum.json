@@ -1,0 +1,32 @@
+{
+  "slug": "gloeotrichia-pisum",
+  "scientific_name": "Gloeotrichia pisum Thuret ex Bornet & Flahault 1886",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/gloeotrichia-pisum",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Nostocales"
+  },
+  "record_updated": "2026-07-21",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 21 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonial",
+    "cell_shape": "cylinder",
+    "colony_shape": "half sphere, made of an aggregate of filaments",
+    "cell_diameter_d": "4-7 μm",
+    "cell_length_l": "4-12 μm",
+    "biovolume_per_cell": "100 – 350 μm³",
+    "biovolume_equation": "Cylinder, V, μm³ = π L (D/2)²",
+    "filament_length": "hundreds of microns",
+    "colony_diameter": "0.1–1.5 cm"
+  },
+  "narrative": {
+    "morphology": "Hemisphaerical colonies that are attached to plant material, (usually branches of Phragmites australis, but not exclusively) several mm or even cm in diameter, i.e. large enough to be seen with a naked eye (Plate 1). The colonies are khaki-brown, hard and slimy to the touch, they peal off the stems with slight pressure. Young colonies distant from other ones on the same stem are mostly perfect hemispheres (Plate 1A); when in masses the colonies form a continous mantle with rounded margins (Plate 1B). Colonies are made of thin, long cylindrical filaments, embedded in firm mucilage. The filaments adher to a common center, giving the colony a shape of half a pompon (Plate 2). The individual filaments, also called trichomes, begin with a spherical heterocyte located towards the inside of the colony (Plate 3); the apical cell is conical and ends in a hair that extends beyond the sheath (Plate 4). Akinetes are cylindrical, smooth, colorless and are placed next to the basal heterocyst.",
+    "ecology": "With climate change, the relative importance of benthic cyanobacteria is mounting. With increased amplitude of water level fluctuations in Lake Kinneret, littoral zone habitats are changing as well as their biota (Zohary and Gasith 2025). Following a rapid rise of lake water level due to a high rainfall winter, in summer 2020 Gloeotrichia pisum appeared as an abundant epiphyte on recently inundated stems of Phragmites australis. This was the first time this species was recorded to occur in Israel (Lang-Yona et al. 2023). Genomic community composition analysis revealed that G. pisum colonies host a diverse microbial community of microalgae, cyanobacteriophyta, bacteria, and archaea with a conserved and characteristic taxonomic composition.",
+    "environmental_conditions": "Epiphytic on inundated branches of Phragmites australis. Found also on adventitious roots of Tamarix sp. and other hard surfaces.",
+    "further_reading": "Lang-Yona N, Alster A, Cummings D, Freiman Z, Kaplan-Levy R, Lupu A, Malinsky-Rushansky N, Ninio S, Sukenik A, Viner-Mozzini Y, Zohary, T. 2022. Gloeotrichia pisum in Lake Kinneret: a successful epiphytic cyanobacterium. Journal of Phycology 59: 97-110. DOI: 10.1111/jpy.13301.\nZohary T, Gasith A. 2025. Opinion: Climate change-driven water level regimes regulate lakeshore structure and function. Inland Waters 15: 2480886. https://doi.org/10.1080/20442041.2025.2480886"
+  }
+}

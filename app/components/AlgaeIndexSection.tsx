@@ -46,7 +46,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
     >
       <p className="muted algae-index-summary">
         {records.length} species, grouped by phylum; A–Z by scientific name within each
-        phylum.
+        phylum. Work in progress to include ~150 species of microalgae from Lake Kinneret.
       </p>
 
       {phylumGroups.length > 1 ? (

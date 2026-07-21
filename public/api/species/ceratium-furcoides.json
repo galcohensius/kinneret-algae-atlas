@@ -7,9 +7,9 @@
     "class": "Dinophyceae",
     "order": "Gonyaulacales"
   },
-  "record_updated": "2026-07-05",
+  "record_updated": "2026-07-21",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 21 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -21,8 +21,8 @@
   },
   "narrative": {
     "morphology": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. Cells of C. furcoides are slender, longer than wide, strongly dorsiventrally flattened. Epitheca gradually tapers into a long apical horn without shoulders. Hypotheca broad and short, drawn out into 2 (occasionally 1 or 3) posterior horns of different lengths. Nucleus prominent in epicone. Cysts are smooth-walled, triangular, with one narrow horn extending from each corner. Ceratium furcoides is narrower and slenderer than the more common C. hirundinella.",
-    "ecology": "Historically this species was identified as Ceratium hirunidnella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.",
+    "ecology": "Historically this species was identified as Ceratium hirundinella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.",
     "environmental_conditions": "",
-    "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology. 66(2):107-41."
+    "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino province, Italy. Journal of Limnology 66(2):107-41.\nHickel B. 1988. Sexual reproduction and life cycle of Ceratium furcoides (Dinophyceae) in situ in the lake Plußsee (FR). Hydrobiologia 161(1): 41-48."
   }
 }

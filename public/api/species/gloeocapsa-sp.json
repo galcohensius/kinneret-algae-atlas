@@ -1,0 +1,30 @@
+{
+  "slug": "gloeocapsa-sp",
+  "scientific_name": "Gloeocapsa sp. 1948 Kützing 1843",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/gloeocapsa-sp",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcidiopsidales"
+  },
+  "record_updated": "2026-07-21",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 21 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonial",
+    "cell_shape": "sphere",
+    "colony_shape": "irregular",
+    "cell_diameter_d": "~ 5 μm",
+    "biovolume_per_cell": "~ 65 μm³",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³.",
+    "cells_per_colony": "many"
+  },
+  "narrative": {
+    "morphology": "multicellular mucilaginous, amorphous colonies, made of sphaerical, subspherical or hemispherical (after division) cells in multiple envelopes that do not copy exactly the cell shape. Cells with homogeneous blue-green content (Plates 1, 2). Cells and their immediate groups are surrounded by lamellated envelopes.",
+    "ecology": "a rare benthic species that occurs only in the littoral zone. When present, colonies are large enough to be seen macroscopically as strongly colored blue-green aggregates on stones in the shallow water.",
+    "environmental_conditions": "",
+    "further_reading": ""
+  }
+}

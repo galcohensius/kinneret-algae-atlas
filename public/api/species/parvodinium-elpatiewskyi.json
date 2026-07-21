@@ -7,9 +7,9 @@
     "class": "Dinophyceae",
     "order": "Peridiniales"
   },
-  "record_updated": "2026-07-05",
+  "record_updated": "2026-07-21",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 21 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -24,6 +24,6 @@
     "morphology": "Cells are pentangular (having 5 sides) or ovoid in shape and slightly flattened dorsi-ventrally. The epitheca is conical, with a “mouth” shaped apex (uppermost end) and is larger than the hypotheca, which is rounded but excavated on the antapex (base, opposite to the apex). The cingulum encircles the cell; the sulcus widens along the hypotheca. Several spines or teeth-like projections are present on the hypotheca, typically some of them are lined up as in a brush (Plate 1). The chloroplasts are numerous and discoid. A red body is occasionally seen (Plate 1). SEM shows that the plates are concave and ornamented by rows of fine punctae, and that the sulcus extends all the way to the concave base of the hypotheca. The resting cysts (not shown) are somewhat oval with a thick cell wall, 36 μm x 28 μm. Parvodinium elpatiewskyi is similar to P. cunningtonii in size and shape, and they tend to co-occur. See here our tips for distinguishing between these two species under the light microscope.",
     "ecology": "Parvodinium elpatiewskyi is one of the common algal species in the Kinneret plankton, present in the water at all times of the year. In the absence of Peridinium gatunense in recent years, Parvodinium elpatiewskyi seems to be more abundant than in Peridinium bloom years, although 1999 was an exception (Fig. 1). It always occurs with a second species of the same genus - Parvodinium cunningtonii (Figs. 1, 2). Its abundance has a typical annual cycle with a peak between April and June (Fig. 3). Cell size also fluctuates seasonally, being smaller in summer, larger in winter (Fig. 3). Peak cell size (February-March) precedes peak abundance by 2-3 months. These seasonal cycles are shared with Parvodinium cunningtonii and Peridiniopsis borgei. The multiannual average contribution of this dinoflagellate to total phytoplankton biomass is 3%. Its maximum biomass ever recorded was 53 g m⁻² - 41% of total biomass, in April 2006, a “no-Peridinium” year.",
     "environmental_conditions": "Parvodinium elpatiewskyi > 5 g m⁻² or > 25 cells mL⁻¹ occurred more frequently but not exclusively at calcium concentrations > 45 mg L⁻¹, pH > 8.5, dissolved oxygen > 10 mg L⁻¹, showing greater abundance at low NH4 and TDP, wide range of DON (Fig. 4). Furthermore (not shown), the higher biomasses usually occur at chloride > 230 mg L⁻¹, conductivity > 1050 μS cm⁻¹, alkalinity > 115 mg CaCO₃ L⁻¹, at a relatively narrow range of long wave radiation (300-370 Watt m⁻²), but over the full range of short-wave radiation (100-350 Watt m⁻²) and water temperatures (14-30oC), when the lake is stratified. Cell size declines with increasing temperature, especially at temperatures below 23C, and increases with calcium and alkalinity (Fig. 5).",
-    "further_reading": "Hansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141."
+    "further_reading": "Hansen G, Flaim G (2007) Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209."
   }
 }

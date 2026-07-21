@@ -1,0 +1,30 @@
+{
+  "slug": "chroococcus-limneticus",
+  "scientific_name": "Chroococcus limneticus Lemmermann 1898",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-limneticus",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-07-21",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 21 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonies of 2-8 cells, rarely as single cells",
+    "cell_shape": "sphere",
+    "colony_shape": "spherical",
+    "cell_diameter_d": "4 – 10 μm",
+    "biovolume_per_cell": "35 – 500 μm³",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³",
+    "cells_per_colony": "4-30"
+  },
+  "narrative": {
+    "morphology": "Colonies of 4-30 sperical cells that remain attached after cell division (Plate 1, 2). With wide colorless translucent gelatinous slime (Plates 1, 2). With envelopes around cells. No gas vacuoles.",
+    "ecology": "The species rarely occurs (Fig. 1).",
+    "environmental_conditions": "Chroococcus limneticus was more abundant at warmer water temperatures, lower alkalinities, and higher pH – to a limit of pH 9.0 (Fig. 2).",
+    "further_reading": ""
+  }
+}
