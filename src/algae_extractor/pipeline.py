@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import Any
 import re
 import shutil
+import sys
 
 from PIL import Image
 
@@ -176,7 +177,17 @@ def _finalize_record(
 
     sections, sections_rich = _normalize_structured_fields(raw_sections_plain, raw_sections_styles)
 
-    if not record["scientific_name"] and not any(sections.values()):
+    # A real record always carries at least one populated section or an image.
+    # Drop content-less records -- e.g. a "Cite this record as:" citation line
+    # mis-detected as a taxon header -- so they never surface as broken,
+    # name-only species pages.
+    if not any(sections.values()) and not record["images"]:
+        if record["scientific_name"]:
+            print(
+                "Dropping content-less record (no sections or images): "
+                f"{record['scientific_name']!r}",
+                file=sys.stderr,
+            )
         return None
 
     rules = morphology_supplement_links or []

@@ -10,10 +10,19 @@ if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
 from algae_extractor.pipeline import (
+    _append_section_line,
+    _finalize_record,
     _infer_scientific_name_fallback,
     _looks_like_prose_remainder,
+    _new_record,
     _should_reject_fake_record_name,
     _strip_leading_list_markers,
+)
+
+CITATION_TEMPLATE = (
+    "Tamar Zohary, Alla Alster. [Date when Item was last updated]. "
+    "Electronic publication. Israel Oceanographic & Limnological Research. "
+    "[Date when last accessed]"
 )
 
 
@@ -64,6 +73,31 @@ class TestInferScientificNameFallback(unittest.TestCase):
             "sections_buffer": {},
         }
         self.assertEqual(_infer_scientific_name_fallback(rec), "Gymnodinium sp.")
+
+
+class TestFinalizeContentLessRecord(unittest.TestCase):
+    def test_drops_named_record_with_no_sections_or_images(self) -> None:
+        # A stray "Cite this record as:" citation mis-detected as a taxon header
+        # yields a record with a name but no populated sections and no images.
+        record = _new_record(source_file="Chroococcales.docx")
+        record["scientific_name"] = CITATION_TEMPLATE
+        self.assertIsNone(_finalize_record(record))
+
+    def test_keeps_record_with_a_populated_section(self) -> None:
+        record = _new_record(source_file="Chroococcales.docx")
+        record["scientific_name"] = "Chroococcus turgidus (Kützing) Nägeli 1849"
+        _append_section_line(record, "phylum", "Cyanobacteriophyta")
+        finalized = _finalize_record(record)
+        self.assertIsNotNone(finalized)
+        self.assertEqual(
+            finalized.scientific_name, "Chroococcus turgidus (Kützing) Nägeli 1849"
+        )
+
+    def test_keeps_record_with_only_an_image(self) -> None:
+        record = _new_record(source_file="Chroococcales.docx")
+        record["scientific_name"] = "Gloeocapsa sp. Kützing 1843"
+        record["images"] = ["/algae-images/gloeocapsa-sp/thumbnail-1.png"]
+        self.assertIsNotNone(_finalize_record(record))
 
 
 if __name__ == "__main__":
