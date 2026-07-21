@@ -497,15 +497,17 @@ main.home {
 }
 
 .algae-index-summary {
-  margin: 0 0 1rem;
+  margin: 0 auto 1rem;
   font-size: 0.9rem;
   line-height: 1.45;
   max-width: 42rem;
+  text-align: center;
 }
 
 .phylum-jump-nav {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 0.35rem 0.45rem;
   margin: 0 0 1.25rem;
   padding-bottom: 1rem;
