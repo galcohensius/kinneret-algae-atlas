@@ -1,6 +1,6 @@
 {
   "title": "Glossary: terms used in species descriptions",
-  "record_updated": "2026-06-10",
+  "record_updated": "2026-07-23",
   "entries": [
     {
       "term": "acicular",
@@ -18,6 +18,15 @@
       "letter": "A",
       "match_phrases": [
         "acute"
+      ]
+    },
+    {
+      "term": "akinete",
+      "slug": "akinete",
+      "definition": "in cyanobacteriophyta: a type of spore formed by the transformation of a vegetative cell into a thick-walled resting cell, containing concentrated food material",
+      "letter": "A",
+      "match_phrases": [
+        "akinete"
       ]
     },
     {
@@ -187,7 +196,7 @@
     {
       "term": "capitate",
       "slug": "capitate",
-      "definition": "having a part that is enlarged and rounded see Cox (1996) Plate 2",
+      "definition": "having a part that is enlarged and rounded (like a head) see Cox (1996) Plate 2",
       "letter": "C",
       "match_phrases": [
         "capitate"
@@ -379,6 +388,15 @@
       ]
     },
     {
+      "term": "heterocyte",
+      "slug": "heterocyte",
+      "definition": "a thick-walled, non-pigmented cell of nostocalean cyanobacteriophyta that is different from adjacent vegetative cells and where N-fixation takes place.",
+      "letter": "H",
+      "match_phrases": [
+        "heterocyte"
+      ]
+    },
+    {
       "term": "heteropolar",
       "slug": "heteropolar",
       "definition": "having different poles. In diatoms: with apices of differing size and/or shape",
@@ -435,16 +453,34 @@
     {
       "term": "isthmus",
       "slug": "isthmus",
-      "definition": "in desmids: the narrow mid-region of the cell connecting the two semicells. The nucleus is located in this mid-region",
+      "definition": "in desmids: the narrow mid-region of the cell connecting the two semicells; the nucleus is located in this mid-region",
       "letter": "I",
       "match_phrases": [
         "isthmus"
       ]
     },
     {
+      "term": "lamellate",
+      "slug": "lamellate",
+      "definition": "composed of thin layers or plates. Also used to refer to successive layers of mucilage",
+      "letter": "L",
+      "match_phrases": [
+        "lamellate"
+      ]
+    },
+    {
+      "term": "laminate",
+      "slug": "laminate",
+      "definition": "reefers to layers or plates overlying one another",
+      "letter": "L",
+      "match_phrases": [
+        "laminate"
+      ]
+    },
+    {
       "term": "lanceolate",
       "slug": "lanceolate",
-      "definition": "see Cox (1996) Plate 1",
+      "definition": "lance-shaped, with the broadest part usually about 1/3 of the distance from abse and usually tapering towards each endsee Cox (1996) Plate 1",
       "letter": "L",
       "match_phrases": [
         "lanceolate"
@@ -650,9 +686,18 @@
       ]
     },
     {
+      "term": "reticulate",
+      "slug": "reticulate",
+      "definition": "net-shaped (with holes)",
+      "letter": "R",
+      "match_phrases": [
+        "reticulate"
+      ]
+    },
+    {
       "term": "retuse",
       "slug": "retuse",
-      "definition": "having the end rounded and slightly indented; like a retuse leaf",
+      "definition": "having the end rounded with slight indentation; like a retuse leaf",
       "letter": "R",
       "match_phrases": [
         "retuse"
@@ -696,6 +741,15 @@
       ]
     },
     {
+      "term": "sheath",
+      "slug": "sheath",
+      "definition": "covering or envelope surrounding the cell wall, usually mucilaginous",
+      "letter": "S",
+      "match_phrases": [
+        "sheath"
+      ]
+    },
+    {
       "term": "sinus",
       "slug": "sinus",
       "definition": "in desmids: the median incision dividing the desmid cell into two semicells",
@@ -714,6 +768,15 @@
       ]
     },
     {
+      "term": "stellate",
+      "slug": "stellate",
+      "definition": "star-shaped",
+      "letter": "S",
+      "match_phrases": [
+        "stellate"
+      ]
+    },
+    {
       "term": "sternum",
       "slug": "sternum",
       "definition": "in diatoms: a hyaline region, without striae, running a long the long axis of a valve in araphid diatoms",
@@ -725,7 +788,7 @@
     {
       "term": "stigma",
       "slug": "stigma",
-      "definition": "see; eyespot",
+      "definition": "see: eyespot",
       "letter": "S",
       "match_phrases": [
         "stigma"
@@ -739,6 +802,15 @@
       "match_phrases": [
         "stria",
         "striae"
+      ]
+    },
+    {
+      "term": "subaerophytic",
+      "slug": "subaerophytic",
+      "definition": "from terrestrial habitats which receive occasional or partial moisture, such as dripping rocks",
+      "letter": "S",
+      "match_phrases": [
+        "subaerophytic"
       ]
     },
     {
@@ -833,6 +905,15 @@
       ]
     },
     {
+      "term": "trichome",
+      "slug": "trichome",
+      "definition": "in cyanobacteriophyta: a filament, but without the sheath. The term is synonymous with filament for forms which never possess a sheath, but for those which do, the filament consists of a trichome and a sheath",
+      "letter": "T",
+      "match_phrases": [
+        "trichome"
+      ]
+    },
+    {
       "term": "trichocyst",
       "slug": "trichocyst",
       "definition": "in cryptophytes, dinoflagellates and raphidophytes: membrane surrounded organelle lying beneath the cell surface, which ejects threads of mucilage on stimulation",
@@ -844,7 +925,7 @@
     {
       "term": "truncate",
       "slug": "truncate",
-      "definition": "cut off, trimmed",
+      "definition": "cut off, trimmed, as opposed to being rounded or pointed.",
       "letter": "T",
       "match_phrases": [
         "truncate"
@@ -981,5 +1062,5 @@
       "src": "/glossary-images/cox-1996-plate-2.png"
     }
   ],
-  "source_file": "1-Glossary 2026-06-11.docx"
+  "source_file": "1-Glossary 2026-07-25.docx"
 }

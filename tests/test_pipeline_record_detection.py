@@ -45,6 +45,12 @@ class TestRejectFakeRecordName(unittest.TestCase):
         self.assertTrue(_should_reject_fake_record_name("Previously used", blocked))
         self.assertFalse(_should_reject_fake_record_name("Gymnodinium sp.", blocked))
 
+    def test_rejects_citation_author_lines(self) -> None:
+        blocked = ["tamar zohary"]
+        self.assertTrue(
+            _should_reject_fake_record_name("Tamar Zohary, Alla Alster", blocked)
+        )
+
 
 class TestRejectProseRecordRemainder(unittest.TestCase):
     def test_rejects_binomial_followed_by_prose_verb(self) -> None:

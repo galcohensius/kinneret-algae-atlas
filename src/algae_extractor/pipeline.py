@@ -238,7 +238,13 @@ def _should_reject_fake_record_name(
         return False
     key = detected_name.strip().lower()
     for prefix in blocked_starts:
-        if key == prefix or key.startswith(prefix + " "):
+        if key == prefix:
+            return True
+        if key.startswith(prefix):
+            next_char_index = len(prefix)
+            if next_char_index < len(key) and not key[next_char_index].isalnum():
+                return True
+        if key.startswith(prefix + " "):
             return True
     return False
 

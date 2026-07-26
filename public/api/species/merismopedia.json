@@ -1,0 +1,29 @@
+{
+  "slug": "merismopedia",
+  "scientific_name": "Merismopedia Meyen 1839",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/merismopedia",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-07-26",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 26 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonial",
+    "cell_shape": "spherical or ovoid",
+    "colony_shape": "rectangular",
+    "cell_diameter_d": "0.5 – 4 μm",
+    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³",
+    "cells_per_colony": "4-32 cells, rarely much larger"
+  },
+  "narrative": {
+    "morphology": "colonies of spherical or ovoid cells, hemispherical after division, organized in parallel rows to form a single-layered flat sheet of cells (Plate 1). Often with several subcolonies remaining together. Cells are embedded in colorless mucilage that is unseen unless stained (Plate 2). Species in this genus divide in only two directions, creating the characteristic grid-like pattern. Reproduction is by disintegration of colonies. Several different morphological types occur in Lake Kinneret, their allocation to species is not always clear and needs confirmation by DNA sequencing. The most common species occurring in Kinneret is a species of very small cells, < 1 µm diameter, historically referred to as M. minima Beck 1897. But according to Komarek and Anagnostidis (1999) M. minima is subaerophytic on wet rocks mainly in mountains, rarely metaphytic in clear mountain springs. They suggest that similrly looking planktonic types may belong to another species, M. warmingiana Lagerheim 1883. So it is possible that our common Merismopedia was misidentified at the species level. Other species occurring in Lake Kinneret include M. punctata (Plate 1), M. glauca (Plate 2), and two additional unidentified to species level (Plates 3, 4).",
+    "ecology": "Merismopedia spp. are abundant in winter, from November to January (Fig. 1, 2), when they are found in hundreds of colonies/mL (Fig. 1) and thousands of cells/mL (Fig. 2) at all depths of the water column. But due to the minute cell size their contribution to total phytoplankton biomass is negligible. In summer, when the lake is stratified, Merismopedia spp. are absent in the epilimnion although they may be found in the metalimnion, near or below the thermocline. Often they are the only phytoplankton taxon found in samples from 30 m depth.",
+    "environmental_conditions": "",
+    "further_reading": "Komarek J and Anagnostidis K. 1999. Cyanoprokaryota: Chroococcales. In Susswasser Flora von Mitteleuropa 19/1. Gustav Fischer , Jena 1-548."
+  }
+}
