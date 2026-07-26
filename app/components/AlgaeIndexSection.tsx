@@ -3,13 +3,40 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { AlgaeRecord } from "../../lib/algae-types";
-import { groupAlgaeByPhylum } from "../../lib/phylum-catalog";
+import { groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
 import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
 import TaxonItalicName from "./TaxonItalicName";
 
 type AlgaeIndexSectionProps = {
   records: AlgaeRecord[];
 };
+
+/** Split phylum jump links into two rows with similar total label length. */
+function splitPhylumJumpRows(groups: PhylumCatalogGroup[]): PhylumCatalogGroup[][] {
+  if (groups.length <= 1) {
+    return [groups];
+  }
+
+  const labelLength = (group: PhylumCatalogGroup) =>
+    `${group.phylum} (${group.records.length})`.length;
+
+  let bestSplit = Math.ceil(groups.length / 2);
+  let bestDiff = Number.POSITIVE_INFINITY;
+  const minSplit = Math.max(1, Math.floor(groups.length / 3));
+  const maxSplit = Math.min(groups.length - 1, Math.ceil((2 * groups.length) / 3));
+
+  for (let split = minSplit; split <= maxSplit; split += 1) {
+    const left = groups.slice(0, split).reduce((sum, group) => sum + labelLength(group), 0);
+    const right = groups.slice(split).reduce((sum, group) => sum + labelLength(group), 0);
+    const diff = Math.abs(left - right);
+    if (diff < bestDiff) {
+      bestDiff = diff;
+      bestSplit = split;
+    }
+  }
+
+  return [groups.slice(0, bestSplit), groups.slice(bestSplit)];
+}
 
 function AlgaeListCard({ record }: { record: AlgaeRecord }) {
   const { plateImage } = partitionPlateAndGalleryImages(record.images, record.imageCaptions);
@@ -37,6 +64,7 @@ function AlgaeListCard({ record }: { record: AlgaeRecord }) {
 
 export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
   const phylumGroups = groupAlgaeByPhylum(records);
+  const phylumJumpRows = splitPhylumJumpRows(phylumGroups);
 
   return (
     <section
@@ -51,15 +79,19 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
 
       {phylumGroups.length > 1 ? (
         <nav className="phylum-jump-nav" aria-label="Jump to phylum">
-          {phylumGroups.map((group) => (
-            <a
-              key={group.slug}
-              href={`#phylum-${group.slug}`}
-              style={{ "--phylum-accent": group.accent } as CSSProperties}
-            >
-              {group.phylum}
-              <span className="phylum-jump-count"> ({group.records.length})</span>
-            </a>
+          {phylumJumpRows.map((row, rowIndex) => (
+            <div key={`phylum-jump-row-${rowIndex}`} className="phylum-jump-row">
+              {row.map((group) => (
+                <a
+                  key={group.slug}
+                  href={`#phylum-${group.slug}`}
+                  style={{ "--phylum-accent": group.accent } as CSSProperties}
+                >
+                  {group.phylum}
+                  <span className="phylum-jump-count"> ({group.records.length})</span>
+                </a>
+              ))}
+            </div>
           ))}
         </nav>
       ) : null}

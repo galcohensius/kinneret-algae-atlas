@@ -506,12 +506,19 @@ main.home {
 
 .phylum-jump-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.35rem 0.45rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
   margin: 0 0 1.25rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
+}
+
+.phylum-jump-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.45rem;
 }
 
 .phylum-jump-nav a {
