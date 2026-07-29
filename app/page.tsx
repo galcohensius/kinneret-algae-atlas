@@ -75,7 +75,21 @@ export default function HomePage() {
             </a>
           </p>
           <p className="home-hero-affiliation">
-            Kinneret Limnological Institute, Israel Oceanographic and Limnological Research
+            <a
+              href="https://www.ocean.org.il/%d7%94%d7%9e%d7%9b%d7%95%d7%9f-%d7%9c%d7%97%d7%a7%d7%a8-%d7%94%d7%9b%d7%a0%d7%a8%d7%aa/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Kinneret Limnological Institute
+            </a>
+            {", "}
+            <a
+              href="https://www.ocean.org.il/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Israel Oceanographic and Limnological Research
+            </a>
           </p>
         </div>
       </div>
