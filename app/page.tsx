@@ -1,5 +1,9 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import {
+  ALLA_ALSTER_PROFILE_URL,
+  TAMAR_ZOHARY_PROFILE_URL,
+} from "../lib/collaborator-profile-links";
 import { publicAssetPath } from "../lib/public-path";
 import AlgaeIndexSectionShell from "./components/AlgaeIndexSectionShell";
 import { buildAtlasAttribution } from "../lib/cite-this-record";
@@ -59,7 +63,7 @@ export default function HomePage() {
           <h1>Atlas of Kinneret Microalgae</h1>
           <p className="home-hero-lead">
             <a
-              href="https://scholar.google.com/citations?user=hwxUAKsAAAAJ&hl=en"
+              href={TAMAR_ZOHARY_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -67,7 +71,7 @@ export default function HomePage() {
             </a>
             {" & "}
             <a
-              href="https://www.linkedin.com/in/alla-alster-5876a422/"
+              href={ALLA_ALSTER_PROFILE_URL}
               target="_blank"
               rel="noopener noreferrer"
             >

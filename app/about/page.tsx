@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getAbout } from "../../lib/about-server";
+import {
+  ALLA_ALSTER_PROFILE_URL,
+  TAMAR_ZOHARY_PROFILE_URL,
+} from "../../lib/collaborator-profile-links";
 import { fixScientificTypography } from "../../lib/scientific-text";
 
 export const metadata: Metadata = {
@@ -10,6 +14,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kinneret-algae-atlas.org/about/",
   },
+};
+
+const COLLABORATOR_PROFILE_URL: Record<string, string> = {
+  tamar_zohary: TAMAR_ZOHARY_PROFILE_URL,
+  alla_alster: ALLA_ALSTER_PROFILE_URL,
 };
 
 export default async function AboutPage() {
@@ -69,35 +78,31 @@ export default async function AboutPage() {
               Our collaborators
             </h2>
             <div className="about-collaborators">
-              {about.collaborators.map((person) => (
-                <section
-                  key={person.id}
-                  className="about-person"
-                  aria-labelledby={`person-${person.id}`}
-                >
-                  <h3 id={`person-${person.id}`} className="about-person-name">
-                    {person.name}
-                  </h3>
-                  <div className="algae-prose">
-                    {person.paragraphs.map((para, i) => (
-                      <p key={`${person.id}-${i}`}>{fixScientificTypography(para)}</p>
-                    ))}
-                  </div>
-                  {person.links.length > 0 ? (
-                    <ul className="about-person-links">
-                      {person.links.map((href) => (
-                        <li key={href}>
-                          <a href={href} target="_blank" rel="noopener noreferrer">
-                            {href.includes("scholar.google")
-                              ? "Google Scholar"
-                              : href.replace(/^https?:\/\//, "")}
-                          </a>
-                        </li>
+              {about.collaborators.map((person) => {
+                const profileUrl = COLLABORATOR_PROFILE_URL[person.id];
+                return (
+                  <section
+                    key={person.id}
+                    className="about-person"
+                    aria-labelledby={`person-${person.id}`}
+                  >
+                    <h3 id={`person-${person.id}`} className="about-person-name">
+                      {profileUrl ? (
+                        <a href={profileUrl} target="_blank" rel="noopener noreferrer">
+                          {person.name}
+                        </a>
+                      ) : (
+                        person.name
+                      )}
+                    </h3>
+                    <div className="algae-prose">
+                      {person.paragraphs.map((para, i) => (
+                        <p key={`${person.id}-${i}`}>{fixScientificTypography(para)}</p>
                       ))}
-                    </ul>
-                  ) : null}
-                </section>
-              ))}
+                    </div>
+                  </section>
+                );
+              })}
             </div>
           </section>
         ) : null}
