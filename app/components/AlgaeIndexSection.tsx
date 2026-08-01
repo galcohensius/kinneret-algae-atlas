@@ -97,6 +97,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
       ) : null}
 
       <nav className="home-aux-links home-aux-links-top" aria-label="Reference material">
+        <Link href="/about/">About</Link>
         <Link href="/glossary/">Glossary</Link>
         <Link href="/supplements/">Supplementary Material</Link>
       </nav>

@@ -4,6 +4,7 @@ import json
 import re
 from pathlib import Path
 
+from algae_extractor.config import load_config
 from algae_extractor.pipeline import extract_records, prune_catalog_images
 
 
@@ -167,11 +168,11 @@ def main():
     parser.add_argument(
         "--exclude-glob",
         action="append",
-        default=["*suppl*.docx", "*glossary*.docx"],
+        default=["*suppl*.docx", "*glossary*.docx", "*about*.docx"],
         help=(
             "Glob pattern (against filename) excluded from raw-dir auto-discovery. "
-            "Supplements (*suppl*) and the glossary (*glossary*) have their own "
-            "extractors and are excluded by default. Repeat for multiple patterns."
+            "Supplements (*suppl*), the glossary (*glossary*), and About (*about*) "
+            "have their own handling and are excluded by default. Repeat for multiple patterns."
         ),
     )
     parser.add_argument(
@@ -227,9 +228,18 @@ def main():
 
     data = _merge_records(data)
 
+    config = load_config(args.config)
+    protected_slugs = {
+        str(entry.get("slug") or "").strip()
+        for entry in (config.get("supplements") or [])
+        if isinstance(entry, dict) and entry.get("slug")
+    }
+
     images_dir = Path(args.images_dir)
     if images_dir.is_dir():
-        files_removed, dirs_removed = prune_catalog_images(data, images_dir)
+        files_removed, dirs_removed = prune_catalog_images(
+            data, images_dir, protected_slugs=protected_slugs
+        )
         if files_removed or dirs_removed:
             print(
                 f"Pruned {files_removed} stale image file(s) and "

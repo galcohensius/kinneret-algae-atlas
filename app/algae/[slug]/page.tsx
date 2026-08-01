@@ -19,11 +19,14 @@ import {
 import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 import {
-  additionalGallerySectionTitle,
   galleryEnlargeAriaLabel,
   galleryImageAlt,
 } from "../../../lib/gallery-image-meta";
-import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
+import {
+  partitionEcologyAndLaterFigures,
+  partitionPlateAndGalleryImages,
+  type PlateFigureSlot,
+} from "../../../lib/partition-plate-images";
 import { buildCitationBundle } from "../../../lib/cite-this-record";
 
 type AlgaeDetailPageProps = {
@@ -84,7 +87,8 @@ const QUICK_FACT_KEYS = [
 
 const QUICK_FACT_BODY_KEYS = QUICK_FACT_KEYS.filter((key) => key !== "previous_name_used");
 
-// Render "Further reading" after "Additional figures" (site requirement).
+// Narrative order: Ecology → Physiological features → Environmental conditions.
+// Figures 1–2 sit after Ecology; Figures 3+ after Environmental conditions (no gallery heading).
 const NARRATIVE_AFTER_PLATE_KEYS = [
   "ecology",
   "physiological_features",
@@ -93,6 +97,30 @@ const NARRATIVE_AFTER_PLATE_KEYS = [
 
 function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
+}
+
+function FigureGalleryBlock({
+  figures,
+  recordTitle,
+  startIndex,
+}: {
+  figures: PlateFigureSlot[];
+  recordTitle: string;
+  startIndex: number;
+}) {
+  return (
+    <section className="figures-section">
+      <ExpandableFiguresGrid
+        figures={figures.map((slot, index) => ({
+          src: slot.src,
+          alt: galleryImageAlt(recordTitle, slot.src, startIndex + index),
+          caption: slot.caption,
+          captionRich: slot.captionRich,
+          enlargeAriaLabel: galleryEnlargeAriaLabel(slot.src, startIndex + index),
+        }))}
+      />
+    </section>
+  );
 }
 
 function FurtherReadingList({
@@ -179,8 +207,11 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
     record.imageCaptions,
     record.imageCaptionsRich
   );
-  const extraFigures = galleryImages;
-  const extraFigureCaptions = galleryCaptions;
+  const { ecologyFigures, laterFigures } = partitionEcologyAndLaterFigures(
+    galleryImages,
+    galleryCaptions,
+    galleryCaptionsRich
+  );
   const hasQuickFacts = QUICK_FACT_BODY_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
   const previousNamePlain = sections.previous_name_used?.trim() ?? "";
   const citation = buildCitationBundle(record.recordUpdated);
@@ -289,38 +320,52 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
 
         {NARRATIVE_AFTER_PLATE_KEYS.map((key) => {
           const value = sections[key]?.trim();
-          if (!value) return null;
+          const sectionBlock =
+            value ? (
+              <section className="narrative-block" aria-labelledby={`${key}-heading`}>
+                <h2 id={`${key}-heading`} className="section-heading">
+                  {toDisplayLabel(key)}
+                </h2>
+                <div className="algae-prose">
+                  {(record.sectionsRich?.[key] ?? []).length > 0 ? (
+                    <GlossaryAwareRichText segments={record.sectionsRich[key]} />
+                  ) : (
+                    <GlossaryAwarePlainText text={value} />
+                  )}
+                </div>
+              </section>
+            ) : null;
+
+          const figuresAfter =
+            key === "ecology"
+              ? ecologyFigures
+              : key === "environmental_conditions" && value
+                ? laterFigures
+                : [];
+
+          if (!sectionBlock && figuresAfter.length === 0) return null;
+
           return (
-            <section className="narrative-block" key={key} aria-labelledby={`${key}-heading`}>
-              <h2 id={`${key}-heading`} className="section-heading">
-                {toDisplayLabel(key)}
-              </h2>
-              <div className="algae-prose">
-                {(record.sectionsRich?.[key] ?? []).length > 0 ? (
-                  <GlossaryAwareRichText segments={record.sectionsRich[key]} />
-                ) : (
-                  <GlossaryAwarePlainText text={value} />
-                )}
-              </div>
-            </section>
+            <Fragment key={key}>
+              {sectionBlock}
+              {figuresAfter.length > 0 ? (
+                <FigureGalleryBlock
+                  figures={figuresAfter}
+                  recordTitle={record.title}
+                  startIndex={key === "ecology" ? 0 : ecologyFigures.length}
+                />
+              ) : null}
+            </Fragment>
           );
         })}
 
-        {extraFigures.length > 0 ? (
-          <section className="figures-section" aria-labelledby="figures-heading">
-            <h2 id="figures-heading" className="section-heading">
-              {additionalGallerySectionTitle(extraFigures)}
-            </h2>
-            <ExpandableFiguresGrid
-              figures={extraFigures.map((imagePath, index) => ({
-                src: imagePath,
-                alt: galleryImageAlt(record.title, imagePath, index),
-                caption: extraFigureCaptions[index],
-                captionRich: galleryCaptionsRich[index],
-                enlargeAriaLabel: galleryEnlargeAriaLabel(imagePath, index),
-              }))}
-            />
-          </section>
+        {/* Figures 3+ when Environmental conditions section is absent */}
+        {!sections.environmental_conditions?.trim() && laterFigures.length > 0 ? (
+          <FigureGalleryBlock
+            figures={laterFigures}
+            recordTitle={record.title}
+            startIndex={ecologyFigures.length}
+          />
         ) : null}
 
         <CiteThisRecordBlock recordUpdatedIso={record.recordUpdated} />

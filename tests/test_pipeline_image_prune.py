@@ -45,6 +45,33 @@ class TestPruneCatalogImages(unittest.TestCase):
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
 
+    def test_protects_supplement_image_dirs(self) -> None:
+        tmp = Path(tempfile.mkdtemp())
+        try:
+            species = tmp / "durinskia-oculata"
+            species.mkdir()
+            (species / "plate-1.png").write_bytes(b"keep")
+            supplement = tmp / "cunningtonii-vs-elpatiewskyi"
+            supplement.mkdir()
+            (supplement / "figure-1.png").write_bytes(b"supplement")
+
+            records = [
+                {
+                    "scientific_name": "Durinskia oculata (Stein) Gert Hansen et Flaim 2007",
+                    "images": ["/algae-images/durinskia-oculata/plate-1.png"],
+                }
+            ]
+            files_removed, dirs_removed = prune_catalog_images(
+                records,
+                tmp,
+                protected_slugs={"cunningtonii-vs-elpatiewskyi"},
+            )
+            self.assertEqual(files_removed, 0)
+            self.assertEqual(dirs_removed, 0)
+            self.assertTrue((supplement / "figure-1.png").is_file())
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
     def test_save_image_replaces_other_extensions_for_same_stem(self) -> None:
         tmp = Path(tempfile.mkdtemp())
         try:

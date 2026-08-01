@@ -57,6 +57,8 @@ export default async function SupplementsIndexPage() {
       <p className="algae-detail-nav">
         <Link href="/#algae-index">← Algae index</Link>
         {" · "}
+        <Link href="/about/">About</Link>
+        {" · "}
         <Link href="/glossary/">Glossary</Link>
       </p>
 

@@ -107,7 +107,16 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    names sort newest-last). Pass `--input` to force a specific file. Legacy `.doc` glossary
    files are no longer supported; save glossary updates as `.docx`.
 
-8. **LLM/static API files** (after any atlas, supplement, or glossary data change):
+8. **About** (when `data/raw/*about*.docx` changes):
+
+   ```bash
+   python src/extract_about.py
+   ```
+
+   With no `--input`, the newest `data/raw/*about*.docx` is auto-discovered.
+   About files are excluded from algae extraction by default (`*about*.docx`).
+
+9. **LLM/static API files** (after any atlas, supplement, glossary, or about data change):
 
    ```bash
    npm run generate:llms
@@ -116,9 +125,9 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    This regenerates `public/llms.txt`, `public/llms-full.txt`, and static JSON under
    `public/api/` for LLM and machine-readable access.
 
-9. **Local preview:** `npm run dev`
+10. **Local preview:** `npm run dev`
 
-10. **Publish:** Commit the updated `data/processed/algae_records.json`, `data/processed/glossary.json`, `data/processed/supplements.json`, `public/algae-images/`, `public/glossary-images/`, `public/api/`, `public/llms*.txt`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
+11. **Publish:** Commit the updated `data/processed/algae_records.json`, `data/processed/glossary.json`, `data/processed/supplements.json`, `data/processed/about.json`, `public/algae-images/`, `public/glossary-images/`, `public/api/`, `public/llms*.txt`, and any `src/` or config changes, then push to **`main`**. GitHub Actions builds and deploys GitHub Pages when the workflow passes.
 
 **One-shot extract + validate + production build** (still commit and push yourself):
 
@@ -126,7 +135,7 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 npm run sync:atlas
 ```
 
-`sync:atlas` now runs algae extraction, supplement extraction, glossary extraction, LLM/static
+`sync:atlas` now runs algae extraction, supplement extraction, glossary extraction, About extraction, LLM/static
 API generation, validation, and a production build.
 
 Structural or recurring extraction bugs belong in `src/algae_extractor/` (and re-run step 3) — not in hand-edits to `algae_records.json` that the next extract would overwrite.

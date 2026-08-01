@@ -51,6 +51,14 @@ class TestRejectFakeRecordName(unittest.TestCase):
             _should_reject_fake_record_name("Tamar Zohary, Alla Alster", blocked)
         )
 
+    def test_rejects_word_template_placeholder(self) -> None:
+        self.assertTrue(
+            _should_reject_fake_record_name("Genus species Authority Year", [])
+        )
+        self.assertFalse(
+            _should_reject_fake_record_name("Gymnodinium F. Stein 1878", [])
+        )
+
 
 class TestRejectProseRecordRemainder(unittest.TestCase):
     def test_rejects_binomial_followed_by_prose_verb(self) -> None:

@@ -1,0 +1,47 @@
+{
+  "title": "About",
+  "record_updated": "2026-08-01",
+  "sections": {
+    "our_vision": [
+      "This atlas of the microalgae of Lake Kinneret is based on data, knowledge and experience gained from monitoring the phytoplankton of the lake over several decades, as part of the government-funded Kinneret Monitoring Program initiated in 1969 and ongoing. Lake Kinneret has been and continues to be a strategic source of drinking water for the State of Israel. Monitoring its phytoplankton jointly with physical, chemical and other biological components is crucial for being able to follow extreme events, and short- and long-term trends in ecological processes taking place in the lake, understand lake functioning, and provide decision makers with knowledgeable recommendations for lake management that will ensure high water quality. For detailed information about this monitoring program see Sukenik et al. 2014.",
+      "The phytoplankton data collected for the monitoring program are stored in a database and have been used for a variety of investigations leading to scientific publications. But mostly, the data used were biomass of taxonomic groups (cyanobacteria, diatoms, dinoflagellates etc.) rather than information on individual species. Over the years, only ~ 20-30 of the nearly 200 species of phytoplankton occurring in Lake Kinneret received focused scientific attention. These were mostly species that impact the ecosystem and especially water quality: species that form blooms or possess unique physiological capabilities (e.g. N-fixation, toxin production). But the monitoring data for most of the species remains buried in annual reports and was never published.",
+      "This atlas attempts to address this gap and present the data. It is prepared as a service to the community of those interested in the algae of Lake Kinneret: researchers, students, teachers, nature lovers. For each species it includes hints on how to identify it and tell it apart from similarly looking species in Kinneret water; the best microscope photos we took; its long-term abundance time-series; what time of the year is best to find it; what environmental parameters are correlated with its increased abundance; any additional interesting information we have for it.",
+      "Several parameters are recorded for every species of phytoplankton counted in each sample: its abundance as cells mL-1; its linear dimensions from which the volume per cell is computed, and its biomass – as the product of cells mL-1 x volume cell-1 assuming a specific gravity of 1. For colonial (including filamentous) species we also present data on colony size (cells per colony) and abundance (colonies mL-1)."
+    ],
+    "how_to_use": [],
+    "how_to_use_pending": true
+  },
+  "collaborators": [
+    {
+      "id": "tamar_zohary",
+      "name": "Tamar Zohary",
+      "paragraphs": [
+        "Dr. Tamar Zohary is an emeritus senior research scientist at the Kinneret Limnological Institute, Israel Oceanographic and Limnological Research, where she has been working for more than 35 years, during which she also served as the Institute’s director for 10 years. Her research focuses on phytoplankton ecology, and she has been responsible for the monitoring of the Kinneret phytoplankton from 1996 till 2024. It has been her vision for many years to create such an atlas, and now that she has retired, this dream is materializing, with the close assistance of her dedicated and talented research assistant Alla Alster, and her innovative and inspiring son, Gal Cohensius.",
+        "Tamar obtained her BA in Psychology and Biology, MSc in Oceanography at the Hebrew University of Jerusalem, Israel, and her PhD at the University of Natal, South Africa."
+      ],
+      "links": [
+        "https://scholar.google.co.il/citations?hl=en&user=hwxUAKsAAAAJ"
+      ]
+    },
+    {
+      "id": "alla_alster",
+      "name": "Alla Alster",
+      "paragraphs": [
+        "Dr. Alla Alster is an algal taxonomist working as a research assistant at the Kinneret Limnological Institute, Israel Oceanographic and Limnological Research since 2011. She is the analyst conducting the Kinneret phytoplankton counts and measurements since January 2013, has taken nearly all the microscope photos presented in this atlas, and is the authority when it comes to taxonomic ID.",
+        "Alla completed her BSc degree in Biology and MSc in Hydrobiology at the University of Odessa, Ukraine, PhD at Bar Ilan University, Israel, and post-doc training with Prof. Jiri Komarek in the Czech Republic."
+      ],
+      "links": []
+    },
+    {
+      "id": "gal_cohensius",
+      "name": "Gal Cohensius",
+      "paragraphs": [
+        "Dr. Gal Cohensius is a data scientist with a PhD in Game Theory and AI from the Technion. He designed and built this online atlas and keeps it updated."
+      ],
+      "links": []
+    }
+  ],
+  "metadata": {
+    "source_file": "1-About.docx"
+  }
+}

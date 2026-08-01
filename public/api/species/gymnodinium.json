@@ -7,21 +7,21 @@
     "class": "Dinophyceae",
     "order": "Gymnodiniales"
   },
-  "record_updated": "2026-07-26",
+  "record_updated": "2026-08-01",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 26 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 1 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
     "organization": "flagellated single cells",
     "cell_shape": "mushroom-like, close to a sphere",
-    "cell_diameter_d": "7.6 – 12.3 μm, median: 9.7 μm (N=587). Cell diameter varies significantly over time, making it necessary to measure it routinely.",
+    "cell_diameter_d": "7.6 – 12.3 μm, median: 9.7 μm (N=587).\nCell diameter varies significantly over time, making it necessary to measure it routinely.",
     "biovolume_per_cell": "230 - 1000 μm³, median: 470 μm³.",
     "biovolume_equation": "Sphere, V, μm³ = 4/3 π (D/2)³. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere."
   },
   "narrative": {
     "morphology": "Gymnodinium is a classic naked dinoflagellate, the genus includes both photosynthetic and heterotrophic species. The cingulum bisects the cell into two halves, or cones, of somewhat different shapes, the lower or hypocone is a half-sphere, the top or epicone is a bit larger and more conical. With those two cones placed one on top of the other, the cell often looks like a mushroom (Plate 1). Gymnodinium has two unequal flagella, the longitudinal whiplash flagellum extending from the bottom side of the mushroom is seen in Plate 1, the second, transverse flagellum is hidden in the cingulum.",
-    "ecology": "Several species of naked dinoflagellates of the genera Gymnodinium and Glenodinium occur in Lake Kinneret, they were never identified to species level. Of those, a small species of Gymnodinium (cell volume ~ 500 μm³) is most common. The data presented here are for this small Gymnodinium sp. Gymnodinium never forms blooms but occurs quite often at low cell densities, usually < 50 cells/mL, contributing to total phytoplankton biomass up to a maximum of ~3 g m⁻² (Fig. 1). It can appear in the plankton at all times of the year but is more abundant during stratification, from May to December, with highest cell abundances occur in June-July (Fig. 2). Cell size fluctuates seasonally, with largest cell-size in summer (Fig. 2). This is different from the cell size of other Kinneret dinoflagellates, that is usually largest in winter. The reason could be that more than a single species has been counted as Gymnodinium, with a larger species more common in summer. Higher cell abundances are associated with water temperatures > 23oC (Fig. 3). Gymnodinium occurs over the full range of conductivity, Cl, Ca, alkalinity, SO₄, Si, water levels and solar radiation levels recorded in the lake, mostly when transparency is high (at lower ambient concentrations of chlorophyll a, and when euphotic zone depth is around 10 m. It is more abundant when ammonium and nitrate are low (Fig. 3), but DON is abundant (not shown), suggesting potential heterotrophic nutrition in addition to photosynthesis by a mixotroph.",
+    "ecology": "Several species of naked dinoflagellates of the genera Gymnodinium and Glenodinium occur in Lake Kinneret, they were never identified to species level. Of those, a small species of Gymnodinium (cell volume ~ 500 μm³) is most common. The data presented here are for this small Gymnodinium sp. Gymnodinium never forms blooms but occurs quite often at low cell densities, usually < 50 cells/mL, contributing to total phytoplankton biomass up to a maximum of ~3 g m⁻² (Fig. 1). It can appear in the plankton at all times of the year but is more abundant during stratification, from May to December, with highest cell abundances occur in June-July (Fig. 2). Cell size fluctuates seasonally, with largest cell-size in summer (Fig. 2). This is different from the cell size of other Kinneret dinoflagellates, that is usually largest in winter. The reason could be that more than a single species has been counted as Gymnodinium, with a larger species more common in summer.\nHigher cell abundances are associated with water temperatures > 23oC (Fig. 3). Gymnodinium occurs over the full range of conductivity, Cl, Ca, alkalinity, SO₄, Si, water levels and solar radiation levels recorded in the lake, mostly when transparency is high (at lower ambient concentrations of chlorophyll a, and when euphotic zone depth is around 10 m. It is more abundant when ammonium and nitrate are low (Fig. 3), but DON is abundant (not shown), suggesting potential heterotrophic nutrition in addition to photosynthesis by a mixotroph.",
     "environmental_conditions": "",
     "further_reading": ""
   }

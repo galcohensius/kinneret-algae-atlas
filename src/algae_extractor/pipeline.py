@@ -142,29 +142,15 @@ def _finalize_record(
 
         styles_parts: list[list[int]] = [item["char_styles"] for item in lines if item["text"]]
 
-        # further_reading: preserve paragraph boundaries so the frontend can split
-        # on newlines — each paragraph in Word is one citation.
-        # Table captions ("Table N …") also get a newline separator so they appear
-        # on their own line above the table in the rendered output.
-        _TABLE_CAPTION_RE = re.compile(r"^Table\s+\d", re.IGNORECASE)
-        if section == "further_reading":
-            joined_plain = "\n".join(plain_parts).strip()
-            joined_styles: list[int] = []
-            for i, styles in enumerate(styles_parts):
-                joined_styles.extend(styles)
-                if i + 1 < len(styles_parts):
-                    joined_styles.append(0)  # neutral newline
-        else:
-            text_chunks: list[str] = []
-            joined_styles = []
-            for i, (part, styles) in enumerate(zip(plain_parts, styles_parts)):
-                if i > 0:
-                    sep = "\n" if _TABLE_CAPTION_RE.match(part) else " "
-                    text_chunks.append(sep)
-                    joined_styles.append(0)  # neutral separator
-                text_chunks.append(part)
-                joined_styles.extend(styles)
-            joined_plain = "".join(text_chunks).strip()
+        # Preserve Word paragraph boundaries with newlines so the site can render
+        # multiple paragraphs under one subheading (ecology, morphology, …).
+        # further_reading also relies on this: one paragraph = one citation.
+        joined_plain = "\n".join(plain_parts).strip()
+        joined_styles: list[int] = []
+        for i, styles in enumerate(styles_parts):
+            joined_styles.extend(styles)
+            if i + 1 < len(styles_parts):
+                joined_styles.append(0)  # neutral newline
 
         # `strip()` should not change length (paragraph text is already stripped),
         # but keep it safe.
@@ -237,6 +223,12 @@ def _should_reject_fake_record_name(
     if not detected_name:
         return False
     key = detected_name.strip().lower()
+    # Placeholder header left at the end of some Word drafts.
+    if key.startswith("genus species"):
+        return True
+    # Chart titles / template leftovers sometimes look like binomials ("Time series").
+    if key in {"time series", "annual pattern", "fonts"} or key.startswith("time series "):
+        return True
     for prefix in blocked_starts:
         if key == prefix:
             return True
@@ -247,6 +239,11 @@ def _should_reject_fake_record_name(
         if key.startswith(prefix + " "):
             return True
     return False
+
+
+def _is_word_template_placeholder_header(text: str) -> bool:
+    """True for the blank species template header pasted at the end of some drafts."""
+    return (text or "").strip().lower().startswith("genus species")
 
 
 def _looks_like_prose_remainder(remainder: str | None) -> bool:
@@ -788,7 +785,7 @@ def move_inline_environmental_conditions_from_ecology_rich(
     if existing_plain:
         if not existing_styles or len(existing_styles) != len(existing_plain):
             existing_styles = _neutral_char_styles(existing_plain)
-        fields_plain["environmental_conditions"] = f"{existing_plain} {tail_plain}".strip()
+        fields_plain["environmental_conditions"] = f"{existing_plain}\n{tail_plain}".strip()
         fields_styles["environmental_conditions"] = existing_styles + [0] + tail_styles
     else:
         fields_plain["environmental_conditions"] = tail_plain
@@ -840,7 +837,7 @@ def move_inline_physiological_features_from_ecology_rich(
     if existing_plain:
         if not existing_styles or len(existing_styles) != len(existing_plain):
             existing_styles = _neutral_char_styles(existing_plain)
-        fields_plain["physiological_features"] = f"{existing_plain} {tail_plain}".strip()
+        fields_plain["physiological_features"] = f"{existing_plain}\n{tail_plain}".strip()
         fields_styles["physiological_features"] = existing_styles + [0] + tail_styles
     else:
         fields_plain["physiological_features"] = tail_plain
@@ -1034,12 +1031,12 @@ def _normalize_structured_fields_rich(
             if value:
                 plain_parts.append(value)
                 styles_parts.append(raw_sections_styles.get(section, _neutral_char_styles(value)))
-        source_plain = " ".join(plain_parts).strip()
+        source_plain = "\n".join(plain_parts).strip()
         joined_styles: list[int] = []
         for i, styles in enumerate(styles_parts):
             joined_styles.extend(styles)
             if i + 1 < len(styles_parts):
-                joined_styles.append(0)
+                joined_styles.append(0)  # neutral newline
         source_styles = joined_styles
 
     fields_plain: dict[str, str] = {field_name: "" for field_name, _ in FIELD_ORDER}
@@ -1081,8 +1078,8 @@ def _normalize_structured_fields_rich(
                 slice_styles = _neutral_char_styles(value_plain)
 
             if fields_plain[field_name]:
-                fields_plain[field_name] = f"{fields_plain[field_name]} {value_plain}".strip()
-                fields_styles[field_name].append(0)  # separator space
+                fields_plain[field_name] = f"{fields_plain[field_name]}\n{value_plain}".strip()
+                fields_styles[field_name].append(0)  # separator newline
                 fields_styles[field_name].extend(slice_styles)
             else:
                 fields_plain[field_name] = value_plain
@@ -1213,10 +1210,15 @@ def _unlink_stem_extension_variants(
 def prune_catalog_images(
     records: list[dict[str, Any]],
     images_output_dir: Path,
+    *,
+    protected_slugs: set[str] | None = None,
 ) -> tuple[int, int]:
     """
     After extraction, drop image files not referenced in merged JSON and remove
     species folders that no longer appear in the catalog.
+
+    Folders in `protected_slugs` (e.g. supplement image dirs that share
+    public/algae-images/) are never deleted as "obsolete species" folders.
     """
     if not images_output_dir.is_dir():
         return 0, 0
@@ -1233,6 +1235,8 @@ def prune_catalog_images(
         else:
             keep_by_slug[slug] = filenames
 
+    protected = {s for s in (protected_slugs or set()) if s}
+
     files_removed = 0
     for slug, keep_names in keep_by_slug.items():
         species_dir = images_output_dir / slug
@@ -1245,7 +1249,7 @@ def prune_catalog_images(
 
     dirs_removed = 0
     for child in images_output_dir.iterdir():
-        if not child.is_dir() or child.name in keep_by_slug:
+        if not child.is_dir() or child.name in keep_by_slug or child.name in protected:
             continue
         shutil.rmtree(child)
         dirs_removed += 1
@@ -1325,8 +1329,11 @@ def extract_records(
 
     blocks = list(iter_docx_content_blocks(docx_path, use_word_renderer=use_word_renderer))
     pending_relaxed_record_markers = False
+    skip_template_appendix = False
 
     for index, block in enumerate(blocks):
+        if skip_template_appendix:
+            continue
         if block["type"] == "page_break":
             if expect_image_caption:
                 _flush_missing_image_caption(current)
@@ -1416,6 +1423,12 @@ def extract_records(
             continue
 
         text = block["text"]
+        if _is_word_template_placeholder_header(text):
+            # Draft Word files sometimes append a blank species template; ignore it
+            # and everything after so chart titles / placeholder fields cannot become
+            # fake records or pollute the preceding species.
+            skip_template_appendix = True
+            continue
         if expect_image_caption:
             if _looks_like_image_caption(text):
                 char_styles = block.get("char_styles")
@@ -1500,7 +1513,11 @@ def extract_records(
             continue
 
         if not should_block and following_markers:
-            if _looks_like_explicit_record_header_line(text):
+            header_name = _strip_leading_list_markers(text).strip()
+            if (
+                _looks_like_explicit_record_header_line(text)
+                and not _should_reject_fake_record_name(header_name, blocked_starts)
+            ):
                 paragraphs_ahead: list[dict[str, Any]] = []
                 for candidate in blocks[index + 1 :]:
                     if candidate["type"] != "paragraph":
@@ -1528,7 +1545,7 @@ def extract_records(
                         records.append(finalized)
 
                     current = _new_record(source_file=source_file)
-                    current["scientific_name"] = _strip_leading_list_markers(text).strip()
+                    current["scientific_name"] = header_name
                     current_section = default_section
                     continue
 

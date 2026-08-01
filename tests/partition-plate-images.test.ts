@@ -1,5 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { partitionPlateAndGalleryImages } from "../lib/partition-plate-images";
+import {
+  partitionEcologyAndLaterFigures,
+  partitionPlateAndGalleryImages,
+} from "../lib/partition-plate-images";
 
 describe("partitionPlateAndGalleryImages", () => {
   it("keeps consecutive plates together before figures", () => {
@@ -29,5 +32,30 @@ describe("partitionPlateAndGalleryImages", () => {
     expect(out.plateFigures).toHaveLength(2);
     expect(out.galleryImages).toEqual(["/a/stray.png"]);
     expect(out.galleryCaptions).toEqual(["S"]);
+  });
+});
+
+describe("partitionEcologyAndLaterFigures", () => {
+  it("puts figures 1–2 after ecology and 3+ later", () => {
+    const out = partitionEcologyAndLaterFigures(
+      [
+        "/a/figure-1.png",
+        "/a/figure-2.png",
+        "/a/figure-3.png",
+        "/a/figure-4.png",
+        "/a/stray.png",
+      ],
+      ["F1", "F2", "F3", "F4", "S"],
+      [undefined, undefined, undefined, undefined, undefined]
+    );
+    expect(out.ecologyFigures.map((f) => f.src)).toEqual([
+      "/a/figure-1.png",
+      "/a/figure-2.png",
+    ]);
+    expect(out.laterFigures.map((f) => f.src)).toEqual([
+      "/a/figure-3.png",
+      "/a/figure-4.png",
+      "/a/stray.png",
+    ]);
   });
 });

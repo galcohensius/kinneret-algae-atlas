@@ -43,6 +43,8 @@ export default async function GlossaryPage() {
       <p className="algae-detail-nav">
         <Link href="/#algae-index">← Algae index</Link>
         {" · "}
+        <Link href="/about/">About</Link>
+        {" · "}
         <Link href="/supplements/">Supplementary material</Link>
       </p>
 

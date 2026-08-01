@@ -3,6 +3,8 @@ import { isThumbnailImagePath } from "./thumbnail-path-pattern";
 
 /** Matches extractor output: `plate-1.png`, etc. (hero image in detail view). */
 const PLATE_IMAGE_PATH_RE = /\/plate-\d+/i;
+/** Figure number from extractor filenames (`figure-1.png`, …). */
+const FIGURE_NUMBER_PATH_RE = /\/figure-(\d+)/i;
 
 function dropThumbnailPaths(
   images: string[],
@@ -34,6 +36,13 @@ export type PlateFigureSlot = {
 
 function isPlatePath(src: string): boolean {
   return PLATE_IMAGE_PATH_RE.test(src);
+}
+
+function figureNumberFromPath(src: string): number | null {
+  const m = src.match(FIGURE_NUMBER_PATH_RE);
+  if (!m) return null;
+  const n = Number(m[1]);
+  return Number.isFinite(n) ? n : null;
 }
 
 /**
@@ -126,4 +135,38 @@ export function partitionPlateAndGalleryImages(
     galleryCaptions,
     galleryCaptionsRich,
   };
+}
+
+/**
+ * Split non-plate gallery images for species-page placement:
+ * - Figures 1–2 (time series / annual cycles) after Ecology
+ * - Figures 3+ and any other non-plate images after Environmental conditions
+ */
+export function partitionEcologyAndLaterFigures(
+  galleryImages: string[],
+  galleryCaptions: string[],
+  galleryCaptionsRich: (RichSegment[] | undefined)[]
+): {
+  ecologyFigures: PlateFigureSlot[];
+  laterFigures: PlateFigureSlot[];
+} {
+  const ecologyFigures: PlateFigureSlot[] = [];
+  const laterFigures: PlateFigureSlot[] = [];
+
+  for (let i = 0; i < galleryImages.length; i++) {
+    const src = galleryImages[i]!;
+    const slot: PlateFigureSlot = {
+      src,
+      caption: galleryCaptions[i] ?? "",
+      captionRich: galleryCaptionsRich[i],
+    };
+    const figNum = figureNumberFromPath(src);
+    if (figNum !== null && figNum <= 2) {
+      ecologyFigures.push(slot);
+    } else {
+      laterFigures.push(slot);
+    }
+  }
+
+  return { ecologyFigures, laterFigures };
 }

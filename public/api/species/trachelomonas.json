@@ -7,9 +7,9 @@
     "class": "Euglenophyceae",
     "order": "Euglenales"
   },
-  "record_updated": "2026-07-26",
+  "record_updated": "2026-08-01",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 26 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 1 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -20,7 +20,7 @@
     "biovolume_equation": "sphere, V, μm³ = ¾ π (D/2)³"
   },
   "narrative": {
-    "morphology": "Trachelomonas cells are similar to those of Euglena, except that they are completely encased in a mucilaginous rigid envelope outside the plasma membrane called lorica (Plates 1, 2). This lorica is highly mineralized and dark brown in color. The cell is flagellated and capable of euglenoid movement within the lorica as well as swimming out of it (Plate 2). The lorica has a bottle-neck-shaped opening through which the flagellum emerges and through which the cell may swim out for cell division or when conditions require, then may swim back into it. Trachelomonas is distinguishable from other spherical unicellular species occurring in Lake Kinneret by the bottle-neck-shaped opening of its lorica, at the top part of the cell (arrow in Plate 1). This structure can be seen only when the cell is observed from the side, not when it is observed from above or below.",
+    "morphology": "Trachelomonas cells are similar to those of Euglena, except that they are completely encased in a mucilaginous rigid envelope outside the plasma membrane called lorica (Plates 1, 2). This lorica is highly mineralized and dark brown in color. The cell is flagellated and capable of euglenoid movement within the lorica as well as swimming out of it (Plate 2). The lorica has a bottle-neck-shaped opening through which the flagellum emerges and through which the cell may swim out for cell division or when conditions require, then may swim back into it.\nTrachelomonas is distinguishable from other spherical unicellular species occurring in Lake Kinneret by the bottle-neck-shaped opening of its lorica, at the top part of the cell (arrow in Plate 1). This structure can be seen only when the cell is observed from the side, not when it is observed from above or below.",
     "ecology": "Trachelomonas is the only euglenoid seen in Kinneret pelagic plankton samples quite often, although this genus too is never abundant, maximum cell density ever recorded was ~50/mL (Fig. 1). Trachelomonas can be viewed at any time of the year but tends to appear more often in spring (March-April) and rarely from August to October. (Fig. 2). Cell size varies only slightly, with no distinct annual pattern (Fig. 2).",
     "environmental_conditions": "The abundance of Trachelomonas spp. in the pelagic water of Lake Kinneret was indifferent to water temperature, ambient chloride concentration (Fig. 3), water level, pH, Ca, Alkalinity, Si, NO₃, NH₄ and Zₘᵢₓ/Zₑᵤ ratio (not shown). Higher abundances of the genus were recorded when depth-integrated (0-15 m) chlorophyll concentrations were < 500 mg m⁻², and organic N > 0.15 mg N L⁻¹ (Fig. 3).",
     "further_reading": ""

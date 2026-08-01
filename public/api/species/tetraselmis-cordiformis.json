@@ -7,9 +7,9 @@
     "class": "Chlorodendrophyceae",
     "order": "Chlorodendrales"
   },
-  "record_updated": "2026-07-26",
+  "record_updated": "2026-08-01",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 26 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 1 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,11 +18,11 @@
     "cell_diameter_d": "10.2–15.9 μm, median: 13.1 μm (N=526).",
     "cell_length_l": "13.4–18.7 μm, median: 15.9 μm (N=526)",
     "biovolume_per_cell": "730-2400 μm³, median: 1400 μm³.",
-    "biovolume_equation": "prolate spheroid V, μm³ = 4/3 p L/2 (D/2)² (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid: V= 1.9507*D².⁵⁶⁵¹"
+    "biovolume_equation": "prolate spheroid V, μm³ = 4/3 p L/2 (D/2)² (or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid:\nV= 1.9507*D².⁵⁶⁵¹"
   },
   "narrative": {
     "morphology": "One of the larger flagellated species of Lake Kinneret (after the dinoflagellates), and the only one with four flagella (Plate1). It is heart-shaped (=cordiform, as it’s name) or cherry-shaped, ellipsoidal or almost sphaerical, never twisted, with four equal-length flagella emerging out of a pit or depression in the upper side of the cell (Plate 1). It has a red eyespot or stigma, and a single cup-shaped chloroplast usually with a basal pyrenoid. Two contractile vacuoles are present near the base of the flagella.",
-    "ecology": "Tetraselmis cordiformis usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m⁻² (not shown). It is more abundant between February and April and again from August till November but absent in July and rare in December and January (Fig. 2). A technician-effect is noted in our data: a technician was replaced on 1 Jan 2013. It is evident in Fig. 1 that the newer technician counted this species more frequqently than the previous one. On a single unusual occassion in February 1996 Tetraselmis cordiformis formed an intense bloom that colored the entire lake with a strong grass-green color. This intense bloom disappeared within a few days and was missed by our weekly sampling, but photographic records remain (Plate 2). On another occassion, a massive bloom of this flagellated alga took place in a series of experimental tanks behind the Kinneret Limnological Institute. Again the bloom was short lived and disappeared within days. A distinct annual cycle of cell size is evident from our data: cells are smaller size in summer, larger in winter (Figs. 2, 3A). Cell size correlates well with water temperature (R²=0.48, Fig. 3B).",
+    "ecology": "Tetraselmis cordiformis usually occurs in the Kinnret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomas not more than 4 g m⁻² (not shown). It is more abundant between February and April and again from August till November but absent in July and rare in December and January (Fig. 2). A technician-effect is noted in our data: a technician was replaced on 1 Jan 2013. It is evident in Fig. 1 that the newer technician counted this species more frequqently than the previous one.\nOn a single unusual occassion in February 1996 Tetraselmis cordiformis formed an intense bloom that colored the entire lake with a strong grass-green color. This intense bloom disappeared within a few days and was missed by our weekly sampling, but photographic records remain (Plate 2). On another occassion, a massive bloom of this flagellated alga took place in a series of experimental tanks behind the Kinneret Limnological Institute. Again the bloom was short lived and disappeared within days.\nA distinct annual cycle of cell size is evident from our data: cells are smaller size in summer, larger in winter (Figs. 2, 3A). Cell size correlates well with water temperature (R²=0.48, Fig. 3B).",
     "environmental_conditions": "T. cordiformis occurred at the full range of water temperatures occurring in the lake, at conductivities > 1000 μS cm⁻¹ and Chloride > 210 mg L⁻¹, when Secchi transparency was 2-4 m, euphotic zone depth > 5 m, mostly at pH between 8–9, Chlorophyll < 400 mg m⁻², at alkalinities > 100 mg L⁻¹, when NH₄ was low but NO₃, Norg and DON were moderate (Fig. 4).",
     "further_reading": ""
   }
