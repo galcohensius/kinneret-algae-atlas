@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getAbout } from "../../lib/about-server";
 import {
   ALLA_ALSTER_PROFILE_URL,
+  GAL_COHENSIUS_PROFILE_URL,
   TAMAR_ZOHARY_PROFILE_URL,
 } from "../../lib/collaborator-profile-links";
 import { fixScientificTypography } from "../../lib/scientific-text";
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
 const COLLABORATOR_PROFILE_URL: Record<string, string> = {
   tamar_zohary: TAMAR_ZOHARY_PROFILE_URL,
   alla_alster: ALLA_ALSTER_PROFILE_URL,
+  gal_cohensius: GAL_COHENSIUS_PROFILE_URL,
 };
 
 export default async function AboutPage() {

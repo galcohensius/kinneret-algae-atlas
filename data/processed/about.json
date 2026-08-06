@@ -1,6 +1,6 @@
 {
   "title": "About",
-  "record_updated": "2026-08-01",
+  "record_updated": "2026-08-06",
   "sections": {
     "our_vision": [
       "This atlas of the microalgae of Lake Kinneret is based on data, knowledge and experience gained from monitoring the phytoplankton of the lake over several decades, as part of the government-funded Kinneret Monitoring Program initiated in 1969 and ongoing. Lake Kinneret has been and continues to be a strategic source of drinking water for the State of Israel. Monitoring its phytoplankton jointly with physical, chemical and other biological components is crucial for being able to follow extreme events, and short- and long-term trends in ecological processes taking place in the lake, understand lake functioning, and provide decision makers with knowledgeable recommendations for lake management that will ensure high water quality. For detailed information about this monitoring program see Sukenik et al. 2014.",
@@ -36,7 +36,7 @@
       "id": "gal_cohensius",
       "name": "Gal Cohensius",
       "paragraphs": [
-        "Dr. Gal Cohensius is a data scientist with a PhD in Game Theory and AI from the Technion. He designed and built this online atlas as a gift to his mom."
+        "Dr. Gal Cohensius is a data scientist with a PhD in Game Theory and AI from the Technion. He built this atlas as a gift to his mom."
       ],
       "links": []
     }

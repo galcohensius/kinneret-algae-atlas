@@ -4,3 +4,5 @@ export const TAMAR_ZOHARY_PROFILE_URL =
 
 export const ALLA_ALSTER_PROFILE_URL =
   "https://www.linkedin.com/in/alla-alster-5876a422/";
+
+export const GAL_COHENSIUS_PROFILE_URL = "https://galcohensius.github.io/";
