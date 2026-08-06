@@ -2,6 +2,7 @@ import io
 import re
 import tempfile
 import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta
 from zipfile import ZipFile
 from pathlib import Path
 
@@ -11,7 +12,7 @@ from docx.oxml.table import CT_Tbl
 from docx.oxml.text.paragraph import CT_P
 from docx.table import Table
 from docx.text.paragraph import Paragraph
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageFont
 
 
 def normalize_whitespace(text: str) -> str:
@@ -284,6 +285,64 @@ def _chart_series_points(chart_root: ET.Element) -> list[list[tuple[float, float
     return all_series
 
 
+def _chart_axis_title(ax: ET.Element | None) -> str:
+    if ax is None:
+        return ""
+    texts = [
+        (node.text or "").strip()
+        for node in ax.findall(".//a:t", _CHART_NS)
+        if (node.text or "").strip()
+    ]
+    return " ".join(texts).strip()
+
+
+def _chart_axis_limits(ax: ET.Element | None) -> tuple[float | None, float | None]:
+    if ax is None:
+        return None, None
+    scaling = ax.find("c:scaling", _CHART_NS)
+    if scaling is None:
+        return None, None
+    mn = scaling.find("c:min", _CHART_NS)
+    mx = scaling.find("c:max", _CHART_NS)
+    return (
+        _safe_float(mn.get("val") if mn is not None else None),
+        _safe_float(mx.get("val") if mx is not None else None),
+    )
+
+
+def _looks_like_excel_serial_dates(values: list[float]) -> bool:
+    """Excel day-serials for ~1960–2035 fall roughly in 22000–46000."""
+    if len(values) < 2:
+        return False
+    sample = values[: min(50, len(values))]
+    return all(20000 <= v <= 50000 for v in sample)
+
+
+def _excel_serial_to_year(serial: float) -> int:
+    # Excel's 1900-date system (with the legacy leap-year bug) → days since 1899-12-30.
+    dt = datetime(1899, 12, 30) + timedelta(days=float(serial))
+    return dt.year
+
+
+def _format_axis_tick(value: float, *, as_year: bool) -> str:
+    if as_year:
+        return str(_excel_serial_to_year(value))
+    if abs(value) >= 100 or float(value).is_integer():
+        return f"{value:.0f}"
+    if abs(value) >= 10:
+        return f"{value:.1f}"
+    return f"{value:.2g}"
+
+
+def _tick_values(v_min: float, v_max: float, count: int = 5) -> list[float]:
+    if v_max <= v_min:
+        return [v_min]
+    if count < 2:
+        return [v_min, v_max]
+    step = (v_max - v_min) / (count - 1)
+    return [v_min + step * i for i in range(count)]
+
+
 def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
     try:
         root = ET.fromstring(chart_blob)
@@ -302,20 +361,70 @@ def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
     y_vals = [p[1] for p in all_points]
     x_min, x_max = min(x_vals), max(x_vals)
     y_min, y_max = min(y_vals), max(y_vals)
+
+    cat_ax = root.find(".//c:catAx", _CHART_NS)
+    date_ax = root.find(".//c:dateAx", _CHART_NS)
+    val_axes = root.findall(".//c:valAx", _CHART_NS)
+    # Scatter charts often expose two valAx nodes (X then Y).
+    x_ax = cat_ax if cat_ax is not None else (date_ax if date_ax is not None else (val_axes[0] if val_axes else None))
+    y_ax = None
+    if len(val_axes) >= 2:
+        y_ax = val_axes[1]
+    elif len(val_axes) == 1 and x_ax is not cat_ax and x_ax is not date_ax and x_ax is not val_axes[0]:
+        y_ax = val_axes[0]
+    elif len(val_axes) == 1 and (cat_ax is not None or date_ax is not None):
+        y_ax = val_axes[0]
+    elif len(val_axes) == 1:
+        # Single valAx on a scatter chart is usually Y; X may also be valAx[0] when duplicated.
+        y_ax = val_axes[0]
+
+    x_title = _chart_axis_title(x_ax)
+    y_title = _chart_axis_title(y_ax)
+    # Prefer titled valAx as Y when both valAx exist.
+    if len(val_axes) >= 2:
+        titled = [(ax, _chart_axis_title(ax)) for ax in val_axes]
+        titled_y = next((ax for ax, title in titled if title), None)
+        if titled_y is not None:
+            y_ax = titled_y
+            y_title = _chart_axis_title(y_ax)
+            other = next((ax for ax in val_axes if ax is not y_ax), x_ax)
+            if cat_ax is None and date_ax is None:
+                x_ax = other
+                x_title = _chart_axis_title(x_ax)
+
+    ax_x_min, ax_x_max = _chart_axis_limits(x_ax)
+    ax_y_min, ax_y_max = _chart_axis_limits(y_ax)
+    if ax_x_min is not None:
+        x_min = ax_x_min
+    if ax_x_max is not None:
+        x_max = ax_x_max
+    if ax_y_min is not None:
+        y_min = ax_y_min
+    if ax_y_max is not None:
+        y_max = ax_y_max
+
     if x_min == x_max:
         x_max = x_min + 1.0
     if y_min == y_max:
         y_max = y_min + 1.0
 
+    x_as_year = _looks_like_excel_serial_dates(x_vals)
+
     width, height = 1400, 840
-    margin_left, margin_top, margin_right, margin_bottom = 105, 40, 35, 85
+    margin_left = 120 if y_title else 90
+    margin_right = 40
+    margin_top = 36
+    margin_bottom = 100 if x_title or x_as_year else 78
     plot_w = width - margin_left - margin_right
     plot_h = height - margin_top - margin_bottom
 
     image = Image.new("RGB", (width, height), (255, 255, 255))
     draw = ImageDraw.Draw(image)
+    try:
+        font = ImageFont.load_default()
+    except Exception:
+        font = None
 
-    # Plot frame + subtle horizontal grid for readability.
     frame_color = (70, 70, 70)
     grid_color = (228, 232, 238)
     draw.rectangle(
@@ -323,19 +432,19 @@ def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
         outline=frame_color,
         width=2,
     )
-    for i in range(1, 5):
-        y = margin_top + int(plot_h * (i / 5))
-        draw.line(
-            [(margin_left, y), (margin_left + plot_w, y)],
-            fill=grid_color,
-            width=1,
-        )
+
+    x_ticks = _tick_values(x_min, x_max, 6 if x_as_year else 5)
+    y_ticks = _tick_values(y_min, y_max, 5)
 
     def x_to_px(x: float) -> int:
         return margin_left + int((x - x_min) / (x_max - x_min) * plot_w)
 
     def y_to_px(y: float) -> int:
         return margin_top + int((1.0 - (y - y_min) / (y_max - y_min)) * plot_h)
+
+    for y in y_ticks[1:-1]:
+        yy = y_to_px(y)
+        draw.line([(margin_left, yy), (margin_left + plot_w, yy)], fill=grid_color, width=1)
 
     for idx, seq in enumerate(series):
         color = _SERIES_COLORS[idx % len(_SERIES_COLORS)]
@@ -345,11 +454,38 @@ def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
         for x, y in pts:
             draw.ellipse((x - 2, y - 2, x + 2, y + 2), fill=color)
 
-    # Minimal axis labels: numeric min/max values.
-    draw.text((margin_left, height - margin_bottom + 12), f"{x_min:.0f}", fill=frame_color)
-    draw.text((margin_left + plot_w - 40, height - margin_bottom + 12), f"{x_max:.0f}", fill=frame_color)
-    draw.text((12, margin_top + plot_h - 8), f"{y_min:.2g}", fill=frame_color)
-    draw.text((12, margin_top - 8), f"{y_max:.2g}", fill=frame_color)
+    # Axis tick labels.
+    for x in x_ticks:
+        xx = x_to_px(x)
+        draw.line([(xx, margin_top + plot_h), (xx, margin_top + plot_h + 6)], fill=frame_color, width=1)
+        label = _format_axis_tick(x, as_year=x_as_year)
+        draw.text((xx - 14, margin_top + plot_h + 10), label, fill=frame_color, font=font)
+
+    for y in y_ticks:
+        yy = y_to_px(y)
+        draw.line([(margin_left - 6, yy), (margin_left, yy)], fill=frame_color, width=1)
+        label = _format_axis_tick(y, as_year=False)
+        draw.text((8, yy - 6), label, fill=frame_color, font=font)
+
+    if x_title:
+        # Centered under the plot.
+        approx_w = len(x_title) * 6
+        draw.text(
+            (margin_left + max(0, (plot_w - approx_w) // 2), height - 36),
+            x_title,
+            fill=frame_color,
+            font=font,
+        )
+    if y_title:
+        # Draw vertical-ish label as stacked characters near the left edge.
+        # (PIL default font has no easy rotate without a temp image.)
+        title = y_title.strip()
+        tmp = Image.new("RGBA", (len(title) * 8 + 8, 18), (255, 255, 255, 0))
+        tmp_draw = ImageDraw.Draw(tmp)
+        tmp_draw.text((2, 1), title, fill=frame_color + (255,), font=font)
+        rotated = tmp.rotate(90, expand=True)
+        ry = margin_top + max(0, (plot_h - rotated.size[1]) // 2)
+        image.paste(rotated, (4, ry), rotated)
 
     out = io.BytesIO()
     image.save(out, format="PNG")
