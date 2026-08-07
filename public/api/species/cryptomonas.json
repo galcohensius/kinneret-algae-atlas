@@ -7,9 +7,9 @@
     "class": "Cryptophyceae",
     "order": "Cryptomonadales"
   },
-  "record_updated": "2026-08-06",
+  "record_updated": "2026-08-07",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 6 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,7 +18,7 @@
     "cell_diameter_d": "6 – 17 μm, median: 9.2 μm (N=2400).",
     "cell_length_l": "10 – 30 μm, median: 14 μm (N=424).",
     "biovolume_per_cell": "400 – 2000 μm³, median: 700 μm³. Larger cell size in winter, smaller in summer (see Figs. 2, 4).",
-    "biovolume_equation": "V=0.7076D³.⁰⁷⁷² (regression eqn. based on 424 measurements of both D and L with V computed for a prolate sphaeroid)."
+    "biovolume_equation": "V=0.7076D³.⁰⁷⁷² (regression eqn. based on 424 measurements of both D and L with V computed for a prolate spheroid)."
   },
   "narrative": {
     "morphology": "Relatively large free-swimming cells, dark brown in color, shaped as an elongated monad with two equal or subequal length flagella extending out of a gullet (longitudinal groove on the cell surface) in the upper part of the cell. The bottom end is rounded. With 1 or 2 chloroplasts per cell located at the cell periphery, phycoerythrin as the principal accessory pigment (giving the deep brown color), and a single large and central pyrenoid. Cryptomonas is differentiated from Plagioselmis in being the larger cryptophyte found in Lake Kinneret. Three species of Cryptomonas occur in the lake, including C. ovata, C. marssonii and C. curvata (Plates 1-3). Dues to the similar size and limited diagnostic characters, for the routine monitoring the 3 species have all been counted under a single code for the genus Cryptomonas, and the data presented in figures 1-4 are for the genus.",
