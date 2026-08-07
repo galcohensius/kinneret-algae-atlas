@@ -41,6 +41,10 @@ export default function HomePage() {
     },
     citation: buildAtlasAttribution(),
     license: "All rights reserved",
+    sameAs: [
+      "https://kinneret-algae-atlas.org/about/",
+      "https://kinneret-algae-atlas.org/llms.txt",
+    ],
   };
 
   return (

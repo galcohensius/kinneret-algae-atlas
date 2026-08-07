@@ -10,7 +10,7 @@ Species count: 36
 
 ## Species: Gymnodinium F. Stein 1878
 - Slug: gymnodinium
-- Canonical URL: https://kinneret-algae-atlas.org/algae/gymnodinium
+- Canonical URL: https://kinneret-algae-atlas.org/algae/gymnodinium/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Gymnodiniales
 - Habitat: plankton
 - Organization: flagellated single cells
@@ -26,7 +26,7 @@ Species count: 36
 
 ## Species: Ceratium furcoides (Levander) Langhans 1925
 - Slug: ceratium-furcoides
-- Canonical URL: https://kinneret-algae-atlas.org/algae/ceratium-furcoides
+- Canonical URL: https://kinneret-algae-atlas.org/algae/ceratium-furcoides/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Gonyaulacales
 - Habitat: plankton
 - Organization: flagellated single cells
@@ -42,7 +42,7 @@ Species count: 36
 
 ## Species: Ceratium hirundinella (O.F. Muller) Dujardin 1841
 - Slug: ceratium-hirundinella
-- Canonical URL: https://kinneret-algae-atlas.org/algae/ceratium-hirundinella
+- Canonical URL: https://kinneret-algae-atlas.org/algae/ceratium-hirundinella/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Gonyaulacales
 - Habitat: plankton
 - Organization: flagellated single cells
@@ -58,7 +58,7 @@ Species count: 36
 
 ## Species: Diplopsalis acuta (Apstein) Entz 1906
 - Slug: diplopsalis-acuta
-- Canonical URL: https://kinneret-algae-atlas.org/algae/diplopsalis-acuta
+- Canonical URL: https://kinneret-algae-atlas.org/algae/diplopsalis-acuta/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, littoral (more abundant) and pelagial,
 - Organization: flagellated single cells
@@ -75,7 +75,7 @@ Species count: 36
 
 ## Species: Peridiniopsis borgei Lemmermann 1904
 - Slug: peridiniopsis-borgei
-- Canonical URL: https://kinneret-algae-atlas.org/algae/peridiniopsis-borgei
+- Canonical URL: https://kinneret-algae-atlas.org/algae/peridiniopsis-borgei/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
@@ -92,7 +92,7 @@ Species count: 36
 
 ## Species: Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022
 - Slug: parvodinium-cunningtonii
-- Canonical URL: https://kinneret-algae-atlas.org/algae/parvodinium-cunningtonii
+- Canonical URL: https://kinneret-algae-atlas.org/algae/parvodinium-cunningtonii/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
@@ -109,7 +109,7 @@ Species count: 36
 
 ## Species: Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926
 - Slug: peridiniopsis-cunningtonii-var-quinquecuspidata
-- Canonical URL: https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata
+- Canonical URL: https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
@@ -124,7 +124,7 @@ Species count: 36
 
 ## Species: Parvodinium elpatiewskyi (Ostenfeld) Kretschmann et al 2019
 - Slug: parvodinium-elpatiewskyi
-- Canonical URL: https://kinneret-algae-atlas.org/algae/parvodinium-elpatiewskyi
+- Canonical URL: https://kinneret-algae-atlas.org/algae/parvodinium-elpatiewskyi/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, pelagial
 - Organization: flagellated single cells
@@ -141,7 +141,7 @@ Species count: 36
 
 ## Species: Durinskia oculata (Stein) Gert Hansen et Flaim 2007
 - Slug: durinskia-oculata
-- Canonical URL: https://kinneret-algae-atlas.org/algae/durinskia-oculata
+- Canonical URL: https://kinneret-algae-atlas.org/algae/durinskia-oculata/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, mostly littoral
 - Organization: single cells
@@ -157,7 +157,7 @@ Species count: 36
 
 ## Species: Glochidinium penardiforme (Lemmermann) Boltovskoy 2000
 - Slug: glochidinium-penardiforme
-- Canonical URL: https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme
+- Canonical URL: https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, littoral
 - Organization: flagellated single cells
@@ -174,7 +174,7 @@ Species count: 36
 
 ## Species: Naiadinium polonicum (Woloszynska) Carty 2014
 - Slug: naiadinium-polonicum
-- Canonical URL: https://kinneret-algae-atlas.org/algae/naiadinium-polonicum
+- Canonical URL: https://kinneret-algae-atlas.org/algae/naiadinium-polonicum/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Thoracosphaerales
 - Habitat: plankton, littoral
 - Organization: flagellated single cells
@@ -191,7 +191,7 @@ Species count: 36
 
 ## Species: Peridinium gatunense Nygaard 1925
 - Slug: peridinium-gatunense
-- Canonical URL: https://kinneret-algae-atlas.org/algae/peridinium-gatunense
+- Canonical URL: https://kinneret-algae-atlas.org/algae/peridinium-gatunense/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
 - Habitat: plankton, pelagial, littoral
 - Organization: flagellated single cells
@@ -208,7 +208,7 @@ Species count: 36
 
 ## Species: Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824
 - Slug: bangia-atropurpurea
-- Canonical URL: https://kinneret-algae-atlas.org/algae/bangia-atropurpurea
+- Canonical URL: https://kinneret-algae-atlas.org/algae/bangia-atropurpurea/
 - Taxonomy: phylum=Rhodophyta; class=Bangiophyceae; order=Bangiales
 - Habitat: benthos, periphyton
 - Organization: filamentous (initially uniseriate, later multiseriate)
@@ -223,7 +223,7 @@ Species count: 36
 
 ## Species: Aphanocapsa sp. Nägeli 1849
 - Slug: aphanocapsa-sp
-- Canonical URL: https://kinneret-algae-atlas.org/algae/aphanocapsa-sp
+- Canonical URL: https://kinneret-algae-atlas.org/algae/aphanocapsa-sp/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: plankton
 - Organization: colonies
@@ -242,7 +242,7 @@ Species count: 36
 
 ## Species: Aphanothece stagnina (Sprengel) A. Braun 1863
 - Slug: aphanothece-stagnina
-- Canonical URL: https://kinneret-algae-atlas.org/algae/aphanothece-stagnina
+- Canonical URL: https://kinneret-algae-atlas.org/algae/aphanothece-stagnina/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: benthos, littoral
 - Organization: colonial
@@ -259,7 +259,7 @@ Species count: 36
 
 ## Species: Chroococcus limneticus Lemmermann 1898
 - Slug: chroococcus-limneticus
-- Canonical URL: https://kinneret-algae-atlas.org/algae/chroococcus-limneticus
+- Canonical URL: https://kinneret-algae-atlas.org/algae/chroococcus-limneticus/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: planktonic
 - Organization: colonies of 2-8 cells, rarely as single cells
@@ -277,7 +277,7 @@ Species count: 36
 
 ## Species: Chroococcus minutus (Kützing) Nägeli 1849
 - Slug: chroococcus-minutus
-- Canonical URL: https://kinneret-algae-atlas.org/algae/chroococcus-minutus
+- Canonical URL: https://kinneret-algae-atlas.org/algae/chroococcus-minutus/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: planktonic
 - Organization: single cells or colonies of 2 (most common) to 8 cells
@@ -294,7 +294,7 @@ Species count: 36
 
 ## Species: Chroococcus turgidus (Kützing) Nägeli 1849
 - Slug: chroococcus-turgidus
-- Canonical URL: https://kinneret-algae-atlas.org/algae/chroococcus-turgidus
+- Canonical URL: https://kinneret-algae-atlas.org/algae/chroococcus-turgidus/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: planktonic
 - Organization: single cells or colonies of 2 (most common) to 8 cells
@@ -311,7 +311,7 @@ Species count: 36
 
 ## Species: Cyanodictyon imperfectum Cronberg et Weibull 1981
 - Slug: cyanodictyon-imperfectum
-- Canonical URL: https://kinneret-algae-atlas.org/algae/cyanodictyon-imperfectum
+- Canonical URL: https://kinneret-algae-atlas.org/algae/cyanodictyon-imperfectum/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: plankton
 - Organization: colonies
@@ -330,7 +330,7 @@ Species count: 36
 
 ## Species: Radiocystis geminata Skuja 1948
 - Slug: radiocystis-geminata
-- Canonical URL: https://kinneret-algae-atlas.org/algae/radiocystis-geminata
+- Canonical URL: https://kinneret-algae-atlas.org/algae/radiocystis-geminata/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: planktonic
 - Organization: colonies
@@ -349,7 +349,7 @@ Species count: 36
 
 ## Species: Cryptomonas Ehrenberg 1831
 - Slug: cryptomonas
-- Canonical URL: https://kinneret-algae-atlas.org/algae/cryptomonas
+- Canonical URL: https://kinneret-algae-atlas.org/algae/cryptomonas/
 - Taxonomy: phylum=Cryptista; class=Cryptophyceae; order=Cryptomonadales
 - Habitat: plankton pelagic/littoral
 - Organization: flagellated single cells
@@ -366,7 +366,7 @@ Species count: 36
 
 ## Species: Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994
 - Slug: plagioselmis-nannoplanctica
-- Canonical URL: https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica
+- Canonical URL: https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica/
 - Taxonomy: phylum=Cryptista; class=Cryptophyceae; order=Cryptomonadales
 - Habitat: plankton, pelagic/littoral Distinctive featureses: heavily grazed by zooplankton, contains phycoerythrin (like cyanobacteria) – fluorecses orange when stained with DAPI. Always pr…
 - Organization: flagellated single cells
@@ -383,7 +383,7 @@ Species count: 36
 
 ## Species: Tetraselmis cordiformis (Carter) Stein 1878
 - Slug: tetraselmis-cordiformis
-- Canonical URL: https://kinneret-algae-atlas.org/algae/tetraselmis-cordiformis
+- Canonical URL: https://kinneret-algae-atlas.org/algae/tetraselmis-cordiformis/
 - Taxonomy: phylum=Chlorophyta; class=Chlorodendrophyceae; order=Chlorodendrales
 - Habitat: plankton
 - Organization: flagellated single cells
@@ -400,7 +400,7 @@ Species count: 36
 
 ## Species: Chrysochromulina parva Lackey 1939
 - Slug: chrysochromulina-parva
-- Canonical URL: https://kinneret-algae-atlas.org/algae/chrysochromulina-parva
+- Canonical URL: https://kinneret-algae-atlas.org/algae/chrysochromulina-parva/
 - Taxonomy: phylum=Haptophyta; class=Coccolithophyceae; order=Prymnesiales
 - Habitat: plankton, pelagic/littoral
 - Organization: flagellated single cells
@@ -416,7 +416,7 @@ Species count: 36
 
 ## Species: Euglena Ehrenberg 1830
 - Slug: euglena
-- Canonical URL: https://kinneret-algae-atlas.org/algae/euglena
+- Canonical URL: https://kinneret-algae-atlas.org/algae/euglena/
 - Taxonomy: phylum=Euglenophyta; class=Euglenophyceae; order=Euglenales
 - Habitat: plankton, mostly littoral
 - Organization: single flagellated cells
@@ -433,7 +433,7 @@ Species count: 36
 
 ## Species: Phacus longicauda (Ehrenberg) Dujardin 1841
 - Slug: phacus-longicauda
-- Canonical URL: https://kinneret-algae-atlas.org/algae/phacus-longicauda
+- Canonical URL: https://kinneret-algae-atlas.org/algae/phacus-longicauda/
 - Taxonomy: phylum=Euglenophyta; class=Euglenophyceae; order=Euglenales
 - Habitat: plankton/benthos, littoral
 - Organization: flagellated single cells
@@ -446,7 +446,7 @@ Species count: 36
 
 ## Species: Trachelomonas Ehrenberg 1833
 - Slug: trachelomonas
-- Canonical URL: https://kinneret-algae-atlas.org/algae/trachelomonas
+- Canonical URL: https://kinneret-algae-atlas.org/algae/trachelomonas/
 - Taxonomy: phylum=Euglenophyta; class=Euglenophyceae; order=Euglenales
 - Habitat: plankton, pelagic
 - Organization: single flagellated cells
@@ -462,7 +462,7 @@ Species count: 36
 
 ## Species: Colacium Ehrenberg 1833
 - Slug: colacium
-- Canonical URL: https://kinneret-algae-atlas.org/algae/colacium
+- Canonical URL: https://kinneret-algae-atlas.org/algae/colacium/
 - Taxonomy: phylum=Euglenophyta; class=Euglenophyceae; order=Euglenales
 - Habitat: epibiont on zooplankton
 - Organization: colonies
@@ -475,7 +475,7 @@ Species count: 36
 
 ## Species: Gloeocapsa sp. 1948 Kützing 1843
 - Slug: gloeocapsa-sp
-- Canonical URL: https://kinneret-algae-atlas.org/algae/gloeocapsa-sp
+- Canonical URL: https://kinneret-algae-atlas.org/algae/gloeocapsa-sp/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcidiopsidales
 - Habitat: benthic, on stones in shallow waters
 - Organization: colonial
@@ -493,7 +493,7 @@ Species count: 36
 
 ## Species: Gloeotrichia pisum Thuret ex Bornet & Flahault 1886
 - Slug: gloeotrichia-pisum
-- Canonical URL: https://kinneret-algae-atlas.org/algae/gloeotrichia-pisum
+- Canonical URL: https://kinneret-algae-atlas.org/algae/gloeotrichia-pisum/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Nostocales
 - Habitat: benthic (epiphytic), littoral
 - Organization: colonial
@@ -513,7 +513,7 @@ Species count: 36
 
 ## Species: Merismopedia Meyen 1839
 - Slug: merismopedia
-- Canonical URL: https://kinneret-algae-atlas.org/algae/merismopedia
+- Canonical URL: https://kinneret-algae-atlas.org/algae/merismopedia/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: planktonic
 - Organization: colonial
@@ -530,7 +530,7 @@ Species count: 36
 
 ## Species: Microcystis wesenbergii (Komárek) Komárek ex Komárek 2006
 - Slug: microcystis-wesenbergii
-- Canonical URL: https://kinneret-algae-atlas.org/algae/microcystis-wesenbergii
+- Canonical URL: https://kinneret-algae-atlas.org/algae/microcystis-wesenbergii/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
 - Habitat: planktonic, pelagic
 - Organization: colonial
@@ -549,7 +549,7 @@ Species count: 36
 
 ## Species: Mougeotia Agardh 1824
 - Slug: mougeotia
-- Canonical URL: https://kinneret-algae-atlas.org/algae/mougeotia
+- Canonical URL: https://kinneret-algae-atlas.org/algae/mougeotia/
 - Taxonomy: phylum=Charophyta; class=Zygnematophyceae; order=Zygnematales
 - Habitat: plankton
 - Organization: filamentous
@@ -569,7 +569,7 @@ Species count: 36
 
 ## Species: Chlamydomonas sp. Ehrenberg 1833
 - Slug: chlamydomonas-sp
-- Canonical URL: https://kinneret-algae-atlas.org/algae/chlamydomonas-sp
+- Canonical URL: https://kinneret-algae-atlas.org/algae/chlamydomonas-sp/
 - Taxonomy: phylum=Chlorophyta; class=Chlorophyceae; order=Volvocales
 - Habitat: plankton
 - Organization: flagellated single cells
@@ -585,7 +585,7 @@ Species count: 36
 
 ## Species: Eudorina elegans Ehrenberg 1832
 - Slug: eudorina-elegans
-- Canonical URL: https://kinneret-algae-atlas.org/algae/eudorina-elegans
+- Canonical URL: https://kinneret-algae-atlas.org/algae/eudorina-elegans/
 - Taxonomy: phylum=Chlorophyta; class=Chlorophyceae; order=Volvocales
 - Habitat: plankton
 - Organization: flagellated coenobia
@@ -604,7 +604,7 @@ Species count: 36
 
 ## Species: Pandorina morum (O. Müller) Bory 1826
 - Slug: pandorina-morum
-- Canonical URL: https://kinneret-algae-atlas.org/algae/pandorina-morum
+- Canonical URL: https://kinneret-algae-atlas.org/algae/pandorina-morum/
 - Taxonomy: phylum=Chlorophyta; class=Chlorophyceae; order=Volvocales
 - Habitat: plankaton - littoral
 - Organization: flagellated coenobia

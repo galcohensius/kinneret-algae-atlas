@@ -25,9 +25,31 @@ const COLLABORATOR_PROFILE_URL: Record<string, string> = {
 
 export default async function AboutPage() {
   const about = await getAbout();
+  const aboutJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About – Kinneret Algae Atlas",
+    url: "https://kinneret-algae-atlas.org/about/",
+    description:
+      "Vision, collaborators, and background for the Atlas of Kinneret Microalgae by Dr. Tamar Zohary and Dr. Alla Alster.",
+    isPartOf: {
+      "@type": "WebSite",
+      name: "Kinneret Algae Atlas",
+      url: "https://kinneret-algae-atlas.org/",
+    },
+    about: {
+      "@type": "Dataset",
+      name: "Kinneret Algae Atlas",
+      url: "https://kinneret-algae-atlas.org/",
+    },
+  };
 
   return (
     <main className="algae-detail about-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
+      />
       <p className="algae-detail-nav">
         <Link href="/#algae-index">← Algae index</Link>
         {" · "}

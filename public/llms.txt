@@ -5,9 +5,11 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 
 Primary resources:
 - Site index: https://kinneret-algae-atlas.org/#algae-index
-- Species pages: https://kinneret-algae-atlas.org/algae/{slug}
+- About: https://kinneret-algae-atlas.org/about/
+- Species pages: https://kinneret-algae-atlas.org/algae/{slug}/
 - Glossary: https://kinneret-algae-atlas.org/glossary/
 - Supplementary material: https://kinneret-algae-atlas.org/supplements/
+- Sitemap: https://kinneret-algae-atlas.org/sitemap.xml
 
 Machine-readable endpoints:
 - https://kinneret-algae-atlas.org/api/species.json

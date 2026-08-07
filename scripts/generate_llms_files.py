@@ -121,9 +121,11 @@ def _build_llms_txt() -> str:
         "",
         "Primary resources:",
         "- Site index: https://kinneret-algae-atlas.org/#algae-index",
-        "- Species pages: https://kinneret-algae-atlas.org/algae/{slug}",
+        "- About: https://kinneret-algae-atlas.org/about/",
+        "- Species pages: https://kinneret-algae-atlas.org/algae/{slug}/",
         "- Glossary: https://kinneret-algae-atlas.org/glossary/",
         "- Supplementary material: https://kinneret-algae-atlas.org/supplements/",
+        "- Sitemap: https://kinneret-algae-atlas.org/sitemap.xml",
         "",
         "Machine-readable endpoints:",
         "- https://kinneret-algae-atlas.org/api/species.json",
@@ -144,7 +146,7 @@ def _species_block(record: dict[str, Any], slug: str) -> str:
     sections = record.get("sections") or {}
     metadata = record.get("metadata") or {}
     scientific_name = (record.get("scientific_name") or "").strip()
-    canonical_url = f"{ATLAS_URL}/algae/{slug}"
+    canonical_url = f"{ATLAS_URL}/algae/{slug}/"
     updated = metadata.get("record_updated") if isinstance(metadata.get("record_updated"), str) else None
 
     lines: list[str] = [
@@ -217,7 +219,7 @@ def _build_species_index_item(record: dict[str, Any], slug: str) -> dict[str, An
     return {
         "slug": slug,
         "scientific_name": (record.get("scientific_name") or "").strip(),
-        "canonical_url": f"{ATLAS_URL}/algae/{slug}",
+        "canonical_url": f"{ATLAS_URL}/algae/{slug}/",
         "taxonomy": {
             "phylum": (sections.get("phylum") or "").strip(),
             "class": (sections.get("class") or "").strip(),

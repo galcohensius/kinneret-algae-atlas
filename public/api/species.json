@@ -4,7 +4,7 @@
     {
       "slug": "gymnodinium",
       "scientific_name": "Gymnodinium F. Stein 1878",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/gymnodinium",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/gymnodinium/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -19,7 +19,7 @@
     {
       "slug": "ceratium-furcoides",
       "scientific_name": "Ceratium furcoides (Levander) Langhans 1925",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/ceratium-furcoides",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/ceratium-furcoides/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -34,7 +34,7 @@
     {
       "slug": "ceratium-hirundinella",
       "scientific_name": "Ceratium hirundinella (O.F. Muller) Dujardin 1841",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/ceratium-hirundinella",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/ceratium-hirundinella/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -49,7 +49,7 @@
     {
       "slug": "diplopsalis-acuta",
       "scientific_name": "Diplopsalis acuta (Apstein) Entz 1906",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/diplopsalis-acuta",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/diplopsalis-acuta/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -64,7 +64,7 @@
     {
       "slug": "peridiniopsis-borgei",
       "scientific_name": "Peridiniopsis borgei Lemmermann 1904",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridiniopsis-borgei",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridiniopsis-borgei/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -79,7 +79,7 @@
     {
       "slug": "parvodinium-cunningtonii",
       "scientific_name": "Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/parvodinium-cunningtonii",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/parvodinium-cunningtonii/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -94,7 +94,7 @@
     {
       "slug": "peridiniopsis-cunningtonii-var-quinquecuspidata",
       "scientific_name": "Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -109,7 +109,7 @@
     {
       "slug": "parvodinium-elpatiewskyi",
       "scientific_name": "Parvodinium elpatiewskyi (Ostenfeld) Kretschmann et al 2019",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/parvodinium-elpatiewskyi",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/parvodinium-elpatiewskyi/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -124,7 +124,7 @@
     {
       "slug": "durinskia-oculata",
       "scientific_name": "Durinskia oculata (Stein) Gert Hansen et Flaim 2007",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/durinskia-oculata",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/durinskia-oculata/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -139,7 +139,7 @@
     {
       "slug": "glochidinium-penardiforme",
       "scientific_name": "Glochidinium penardiforme (Lemmermann) Boltovskoy 2000",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -154,7 +154,7 @@
     {
       "slug": "naiadinium-polonicum",
       "scientific_name": "Naiadinium polonicum (Woloszynska) Carty 2014",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/naiadinium-polonicum",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/naiadinium-polonicum/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -169,7 +169,7 @@
     {
       "slug": "peridinium-gatunense",
       "scientific_name": "Peridinium gatunense Nygaard 1925",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridinium-gatunense",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/peridinium-gatunense/",
       "taxonomy": {
         "phylum": "Dinoflagellata",
         "class": "Dinophyceae",
@@ -184,7 +184,7 @@
     {
       "slug": "bangia-atropurpurea",
       "scientific_name": "Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/bangia-atropurpurea",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/bangia-atropurpurea/",
       "taxonomy": {
         "phylum": "Rhodophyta",
         "class": "Bangiophyceae",
@@ -199,7 +199,7 @@
     {
       "slug": "aphanocapsa-sp",
       "scientific_name": "Aphanocapsa sp. Nägeli 1849",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/aphanocapsa-sp",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/aphanocapsa-sp/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -214,7 +214,7 @@
     {
       "slug": "aphanothece-stagnina",
       "scientific_name": "Aphanothece stagnina (Sprengel) A. Braun 1863",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/aphanothece-stagnina",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/aphanothece-stagnina/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -229,7 +229,7 @@
     {
       "slug": "chroococcus-limneticus",
       "scientific_name": "Chroococcus limneticus Lemmermann 1898",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-limneticus",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-limneticus/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -244,7 +244,7 @@
     {
       "slug": "chroococcus-minutus",
       "scientific_name": "Chroococcus minutus (Kützing) Nägeli 1849",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-minutus",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-minutus/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -259,7 +259,7 @@
     {
       "slug": "chroococcus-turgidus",
       "scientific_name": "Chroococcus turgidus (Kützing) Nägeli 1849",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-turgidus",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/chroococcus-turgidus/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -274,7 +274,7 @@
     {
       "slug": "cyanodictyon-imperfectum",
       "scientific_name": "Cyanodictyon imperfectum Cronberg et Weibull 1981",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/cyanodictyon-imperfectum",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/cyanodictyon-imperfectum/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -289,7 +289,7 @@
     {
       "slug": "radiocystis-geminata",
       "scientific_name": "Radiocystis geminata Skuja 1948",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/radiocystis-geminata",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/radiocystis-geminata/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -304,7 +304,7 @@
     {
       "slug": "cryptomonas",
       "scientific_name": "Cryptomonas Ehrenberg 1831",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/cryptomonas",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/cryptomonas/",
       "taxonomy": {
         "phylum": "Cryptista",
         "class": "Cryptophyceae",
@@ -319,7 +319,7 @@
     {
       "slug": "plagioselmis-nannoplanctica",
       "scientific_name": "Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica/",
       "taxonomy": {
         "phylum": "Cryptista",
         "class": "Cryptophyceae",
@@ -334,7 +334,7 @@
     {
       "slug": "tetraselmis-cordiformis",
       "scientific_name": "Tetraselmis cordiformis (Carter) Stein 1878",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/tetraselmis-cordiformis",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/tetraselmis-cordiformis/",
       "taxonomy": {
         "phylum": "Chlorophyta",
         "class": "Chlorodendrophyceae",
@@ -349,7 +349,7 @@
     {
       "slug": "chrysochromulina-parva",
       "scientific_name": "Chrysochromulina parva Lackey 1939",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/chrysochromulina-parva",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/chrysochromulina-parva/",
       "taxonomy": {
         "phylum": "Haptophyta",
         "class": "Coccolithophyceae",
@@ -364,7 +364,7 @@
     {
       "slug": "euglena",
       "scientific_name": "Euglena Ehrenberg 1830",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/euglena",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/euglena/",
       "taxonomy": {
         "phylum": "Euglenophyta",
         "class": "Euglenophyceae",
@@ -379,7 +379,7 @@
     {
       "slug": "phacus-longicauda",
       "scientific_name": "Phacus longicauda (Ehrenberg) Dujardin 1841",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/phacus-longicauda",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/phacus-longicauda/",
       "taxonomy": {
         "phylum": "Euglenophyta",
         "class": "Euglenophyceae",
@@ -394,7 +394,7 @@
     {
       "slug": "trachelomonas",
       "scientific_name": "Trachelomonas Ehrenberg 1833",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/trachelomonas",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/trachelomonas/",
       "taxonomy": {
         "phylum": "Euglenophyta",
         "class": "Euglenophyceae",
@@ -409,7 +409,7 @@
     {
       "slug": "colacium",
       "scientific_name": "Colacium Ehrenberg 1833",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/colacium",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/colacium/",
       "taxonomy": {
         "phylum": "Euglenophyta",
         "class": "Euglenophyceae",
@@ -424,7 +424,7 @@
     {
       "slug": "gloeocapsa-sp",
       "scientific_name": "Gloeocapsa sp. 1948 Kützing 1843",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/gloeocapsa-sp",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/gloeocapsa-sp/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -439,7 +439,7 @@
     {
       "slug": "gloeotrichia-pisum",
       "scientific_name": "Gloeotrichia pisum Thuret ex Bornet & Flahault 1886",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/gloeotrichia-pisum",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/gloeotrichia-pisum/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -454,7 +454,7 @@
     {
       "slug": "merismopedia",
       "scientific_name": "Merismopedia Meyen 1839",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/merismopedia",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/merismopedia/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -469,7 +469,7 @@
     {
       "slug": "microcystis-wesenbergii",
       "scientific_name": "Microcystis wesenbergii (Komárek) Komárek ex Komárek 2006",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/microcystis-wesenbergii",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/microcystis-wesenbergii/",
       "taxonomy": {
         "phylum": "Cyanobacteriophyta",
         "class": "Cyanophyceae",
@@ -484,7 +484,7 @@
     {
       "slug": "mougeotia",
       "scientific_name": "Mougeotia Agardh 1824",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/mougeotia",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/mougeotia/",
       "taxonomy": {
         "phylum": "Charophyta",
         "class": "Zygnematophyceae",
@@ -499,7 +499,7 @@
     {
       "slug": "chlamydomonas-sp",
       "scientific_name": "Chlamydomonas sp. Ehrenberg 1833",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/chlamydomonas-sp",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/chlamydomonas-sp/",
       "taxonomy": {
         "phylum": "Chlorophyta",
         "class": "Chlorophyceae",
@@ -514,7 +514,7 @@
     {
       "slug": "eudorina-elegans",
       "scientific_name": "Eudorina elegans Ehrenberg 1832",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/eudorina-elegans",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/eudorina-elegans/",
       "taxonomy": {
         "phylum": "Chlorophyta",
         "class": "Chlorophyceae",
@@ -529,7 +529,7 @@
     {
       "slug": "pandorina-morum",
       "scientific_name": "Pandorina morum (O. Müller) Bory 1826",
-      "canonical_url": "https://kinneret-algae-atlas.org/algae/pandorina-morum",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/pandorina-morum/",
       "taxonomy": {
         "phylum": "Chlorophyta",
         "class": "Chlorophyceae",

@@ -24,4 +24,17 @@ describe("schema JSON-LD presence", () => {
     expect(src).toContain("application/ld+json");
     expect(src).toContain('"@type": "DefinedTermSet"');
   });
+
+  it("about page includes AboutPage JSON-LD", () => {
+    const src = read("app/about/page.tsx");
+    expect(src).toContain("application/ld+json");
+    expect(src).toContain('"@type": "AboutPage"');
+  });
+});
+
+describe("crawler discovery files", () => {
+  it("defines sitemap and robots routes", () => {
+    expect(read("app/sitemap.ts")).toContain("kinneret-algae-atlas.org");
+    expect(read("app/robots.ts")).toContain("sitemap.xml");
+  });
 });
