@@ -322,11 +322,12 @@ main.home {
 
 .about-person-name a {
   color: var(--link);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 .about-person-name a:hover {
-  text-decoration: underline;
+  color: var(--link-hover);
 }
 
 .glossary-intro {
@@ -705,8 +706,8 @@ a:hover {
 
 .algae-list-card-link:hover .algae-list-card,
 .algae-list-card-link:focus-visible .algae-list-card {
-  background: color-mix(in srgb, var(--link) 12%, var(--card-bg));
-  border-color: color-mix(in srgb, var(--link) 46%, var(--border));
+  background: color-mix(in srgb, var(--phylum-accent, var(--link)) 12%, var(--card-bg));
+  border-color: color-mix(in srgb, var(--phylum-accent, var(--link)) 46%, var(--border));
   box-shadow: 0 3px 12px rgb(15 23 42 / 10%);
 }
 

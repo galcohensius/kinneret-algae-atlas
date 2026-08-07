@@ -18,8 +18,14 @@ SECTION_HEADINGS = {
 
 PEOPLE_HEADINGS = {
     "tamar zohary": "tamar_zohary",
+    "dr. tamar zohary": "tamar_zohary",
+    "dr tamar zohary": "tamar_zohary",
     "alla alster": "alla_alster",
+    "dr. alla alster": "alla_alster",
+    "dr alla alster": "alla_alster",
     "gal cohensius": "gal_cohensius",
+    "dr. gal cohensius": "gal_cohensius",
+    "dr gal cohensius": "gal_cohensius",
 }
 
 

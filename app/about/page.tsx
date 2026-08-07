@@ -44,7 +44,7 @@ export default async function AboutPage() {
         {about.sections.our_vision.length > 0 ? (
           <section className="narrative-block" aria-labelledby="vision-heading">
             <h2 id="vision-heading" className="section-heading">
-              Our vision
+              Vision
             </h2>
             <div className="algae-prose">
               {about.sections.our_vision.map((para, i) => (
@@ -77,7 +77,7 @@ export default async function AboutPage() {
         {about.collaborators.length > 0 ? (
           <section className="narrative-block" aria-labelledby="collaborators-heading">
             <h2 id="collaborators-heading" className="section-heading">
-              Our collaborators
+              Collaborators
             </h2>
             <div className="about-collaborators">
               {about.collaborators.map((person) => {
