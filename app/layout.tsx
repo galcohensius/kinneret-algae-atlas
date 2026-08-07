@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Kinneret Algae Atlas",
   description: "Index of algae species observed in Lake Kinneret.",
   icons: {
-    icon: "/favicon.jpg",
+    icon: "/favicon.png",
   },
 };
 
