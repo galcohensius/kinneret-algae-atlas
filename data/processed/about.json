@@ -8,8 +8,7 @@
       "This atlas attempts to address this gap and present the data. It is prepared as a service to the community of those interested in the algae of Lake Kinneret: researchers, students, teachers, nature lovers. For each species it includes hints on how to identify it and tell it apart from similarly looking species in Kinneret water; the best microscope photos we took; its long-term abundance time-series; what time of the year is best to find it; what environmental parameters are correlated with its increased abundance; any additional interesting information we have for it.",
       "Several parameters are recorded for every species of phytoplankton counted in each sample: its abundance as cells mL-1; its linear dimensions from which the volume per cell is computed, and its biomass – as the product of cells mL-1 x volume cell-1 assuming a specific gravity of 1. For colonial (including filamentous) species we also present data on colony size (cells per colony) and abundance (colonies mL-1)."
     ],
-    "how_to_use": [],
-    "how_to_use_pending": true
+    "how_to_use": []
   },
   "collaborators": [
     {

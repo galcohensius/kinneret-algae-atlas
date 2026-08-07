@@ -70,16 +70,15 @@ def parse_about_docx(docx_path: Path) -> dict:
                 current_section = "collaborators"
             continue
 
-        # "How to use this atlas [to be written]." is a placeholder heading+body.
+        # "How to use this atlas [to be written]." is a placeholder — skip until real copy exists.
         if lower.startswith("how to use this atlas"):
             current_section = "how_to_use"
             current_person = None
+            if "[to be written]" in lower:
+                continue
             remainder = text.split("]", 1)[-1].strip(" .") if "]" in text else ""
-            # Keep placeholder note only if there is no real body yet.
-            if remainder and remainder.lower() != "to be written":
+            if remainder:
                 sections["how_to_use"].append(remainder)
-            elif "[to be written]" in lower:
-                sections["how_to_use"].append("[to be written]")
             continue
 
         person_key = PEOPLE_HEADINGS.get(lower)
@@ -116,9 +115,6 @@ def parse_about_docx(docx_path: Path) -> dict:
             "how_to_use": [
                 p for p in sections["how_to_use"] if p != "[to be written]"
             ],
-            "how_to_use_pending": any(
-                p == "[to be written]" for p in sections["how_to_use"]
-            ),
         },
         "collaborators": people,
         "metadata": {

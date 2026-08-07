@@ -65,13 +65,6 @@ export default async function AboutPage() {
               ))}
             </div>
           </section>
-        ) : about.sections.how_to_use_pending ? (
-          <section className="narrative-block" aria-labelledby="how-to-heading">
-            <h2 id="how-to-heading" className="section-heading">
-              How to use this atlas
-            </h2>
-            <p className="muted">This section is being prepared.</p>
-          </section>
         ) : null}
 
         {about.collaborators.length > 0 ? (

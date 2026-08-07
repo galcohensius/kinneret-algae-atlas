@@ -11,7 +11,6 @@ export type AboutData = {
   sections: {
     our_vision: string[];
     how_to_use: string[];
-    how_to_use_pending: boolean;
   };
   collaborators: AboutCollaborator[];
   metadata?: Record<string, unknown>;
