@@ -9,6 +9,7 @@ import sys
 from PIL import Image
 
 from .config import load_config
+from .image_optimize import optimize_image_blob
 from .models import AlgaeRecord
 from .parsers.scientific_name import compile_scientific_name_patterns, detect_record_start
 from .parsers.sections import build_section_alias_lookup, detect_section_heading
@@ -1289,6 +1290,7 @@ def _save_image(
     if ext in _TIFF_EXTENSIONS:
         blob = _tiff_blob_to_png_bytes(blob)
         ext = ".png"
+    blob, ext = optimize_image_blob(blob, ext, filename_stem)
     _unlink_stem_extension_variants(algae_images_dir, filename_stem, ext)
     filename = f"{filename_stem}{ext}"
     output_file = algae_images_dir / filename

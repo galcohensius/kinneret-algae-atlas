@@ -104,6 +104,8 @@ export default async function SupplementsIndexPage() {
                                 className="algae-thumb"
                                 src={thumb}
                                 alt={`${s.title} thumbnail`}
+                                loading="lazy"
+                                decoding="async"
                               />
                             ) : (
                               <div className="algae-thumb algae-thumb-placeholder">No image</div>

@@ -83,6 +83,11 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    Re-running extraction **prunes** each species image folder: files not listed in the new
    JSON are deleted (so replaced or removed pictures in Word do not leave stale files on disk).
 
+   Extracted images are optimized for the web on save (`src/algae_extractor/image_optimize.py`):
+   photos/plates and thumbnails are downscaled and re-encoded as progressive JPEG, while
+   charts (`figure-*`) stay PNG so axis text stays crisp. This keeps the shipped image payload
+   small for mobile; no manual compression step is needed.
+
    You do **not** need to edit `package.json` or extractor defaults when a Word filename changes — discovery is by glob under `data/raw/`.
 
 3. **Validate processed data** (matches CI; algae + glossary today):

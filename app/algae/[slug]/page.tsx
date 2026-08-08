@@ -305,6 +305,8 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <img
               src={slot.src}
               alt={galleryImageAlt(record.title, slot.src, idx)}
+              loading={idx === 0 ? "eager" : "lazy"}
+              decoding="async"
             />
             <figcaption className="muted">
               {slot.captionRich && slot.captionRich.length > 0 ? (

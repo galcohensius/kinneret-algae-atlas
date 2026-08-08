@@ -2,8 +2,8 @@
   {
     "scientific_name": "Gymnodinium F. Stein 1878",
     "images": [
-      "/algae-images/gymnodinium/thumbnail-1.png",
-      "/algae-images/gymnodinium/plate-1.png",
+      "/algae-images/gymnodinium/thumbnail-1.jpg",
+      "/algae-images/gymnodinium/plate-1.jpg",
       "/algae-images/gymnodinium/figure-1.png",
       "/algae-images/gymnodinium/figure-2.png",
       "/algae-images/gymnodinium/figure-3.png"
@@ -460,7 +460,7 @@
   {
     "scientific_name": "Ceratium furcoides (Levander) Langhans 1925",
     "images": [
-      "/algae-images/ceratium-furcoides/thumbnail-1.png",
+      "/algae-images/ceratium-furcoides/thumbnail-1.jpg",
       "/algae-images/ceratium-furcoides/plate-1.jpg"
     ],
     "image_captions": [
@@ -831,8 +831,8 @@
   {
     "scientific_name": "Ceratium hirundinella (O.F. Muller) Dujardin 1841",
     "images": [
-      "/algae-images/ceratium-hirundinella/thumbnail-1.png",
-      "/algae-images/ceratium-hirundinella/plate-1.png",
+      "/algae-images/ceratium-hirundinella/thumbnail-1.jpg",
+      "/algae-images/ceratium-hirundinella/plate-1.jpg",
       "/algae-images/ceratium-hirundinella/figure-1.png",
       "/algae-images/ceratium-hirundinella/figure-2.png",
       "/algae-images/ceratium-hirundinella/figure-3.png"
@@ -1427,8 +1427,8 @@
   {
     "scientific_name": "Diplopsalis acuta (Apstein) Entz 1906",
     "images": [
-      "/algae-images/diplopsalis-acuta/thumbnail-1.png",
-      "/algae-images/diplopsalis-acuta/plate-1.png",
+      "/algae-images/diplopsalis-acuta/thumbnail-1.jpg",
+      "/algae-images/diplopsalis-acuta/plate-1.jpg",
       "/algae-images/diplopsalis-acuta/figure-1.png",
       "/algae-images/diplopsalis-acuta/figure-2.png",
       "/algae-images/diplopsalis-acuta/figure-3.png"
@@ -1936,8 +1936,8 @@
   {
     "scientific_name": "Peridiniopsis borgei Lemmermann 1904",
     "images": [
-      "/algae-images/peridiniopsis-borgei/thumbnail-1.png",
-      "/algae-images/peridiniopsis-borgei/plate-1.png",
+      "/algae-images/peridiniopsis-borgei/thumbnail-1.jpg",
+      "/algae-images/peridiniopsis-borgei/plate-1.jpg",
       "/algae-images/peridiniopsis-borgei/figure-1.png",
       "/algae-images/peridiniopsis-borgei/figure-2.png",
       "/algae-images/peridiniopsis-borgei/figure-3.png"
@@ -2563,8 +2563,8 @@
   {
     "scientific_name": "Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022",
     "images": [
-      "/algae-images/parvodinium-cunningtonii/thumbnail-1.png",
-      "/algae-images/parvodinium-cunningtonii/plate-1.png",
+      "/algae-images/parvodinium-cunningtonii/thumbnail-1.jpg",
+      "/algae-images/parvodinium-cunningtonii/plate-1.jpg",
       "/algae-images/parvodinium-cunningtonii/figure-1.png",
       "/algae-images/parvodinium-cunningtonii/figure-2.png",
       "/algae-images/parvodinium-cunningtonii/figure-3.png",
@@ -3464,8 +3464,8 @@
   {
     "scientific_name": "Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926",
     "images": [
-      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/thumbnail-1.jpeg",
-      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/plate-1.png"
+      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/thumbnail-1.jpg",
+      "/algae-images/peridiniopsis-cunningtonii-var-quinquecuspidata/plate-1.jpg"
     ],
     "image_captions": [
       "",
@@ -3816,8 +3816,8 @@
   {
     "scientific_name": "Parvodinium elpatiewskyi (Ostenfeld) Kretschmann et al 2019",
     "images": [
-      "/algae-images/parvodinium-elpatiewskyi/thumbnail-1.png",
-      "/algae-images/parvodinium-elpatiewskyi/plate-1.png",
+      "/algae-images/parvodinium-elpatiewskyi/thumbnail-1.jpg",
+      "/algae-images/parvodinium-elpatiewskyi/plate-1.jpg",
       "/algae-images/parvodinium-elpatiewskyi/figure-1.png",
       "/algae-images/parvodinium-elpatiewskyi/figure-2.png",
       "/algae-images/parvodinium-elpatiewskyi/figure-3.png",
@@ -4756,10 +4756,10 @@
   {
     "scientific_name": "Durinskia oculata (Stein) Gert Hansen et Flaim 2007",
     "images": [
-      "/algae-images/durinskia-oculata/thumbnail-1.png",
-      "/algae-images/durinskia-oculata/plate-1.png",
-      "/algae-images/durinskia-oculata/plate-2.png",
-      "/algae-images/durinskia-oculata/plate-3.png"
+      "/algae-images/durinskia-oculata/thumbnail-1.jpg",
+      "/algae-images/durinskia-oculata/plate-1.jpg",
+      "/algae-images/durinskia-oculata/plate-2.jpg",
+      "/algae-images/durinskia-oculata/plate-3.jpg"
     ],
     "image_captions": [
       "",
@@ -5223,10 +5223,10 @@
   {
     "scientific_name": "Glochidinium penardiforme (Lemmermann) Boltovskoy 2000",
     "images": [
-      "/algae-images/glochidinium-penardiforme/thumbnail-1.png",
-      "/algae-images/glochidinium-penardiforme/plate-1.png",
+      "/algae-images/glochidinium-penardiforme/thumbnail-1.jpg",
+      "/algae-images/glochidinium-penardiforme/plate-1.jpg",
       "/algae-images/glochidinium-penardiforme/plate-2.jpg",
-      "/algae-images/glochidinium-penardiforme/plate-3.png",
+      "/algae-images/glochidinium-penardiforme/plate-3.jpg",
       "/algae-images/glochidinium-penardiforme/figure-1.png"
     ],
     "image_captions": [
@@ -5660,8 +5660,8 @@
   {
     "scientific_name": "Naiadinium polonicum (Woloszynska) Carty 2014",
     "images": [
-      "/algae-images/naiadinium-polonicum/thumbnail-1.jpeg",
-      "/algae-images/naiadinium-polonicum/plate-1.png",
+      "/algae-images/naiadinium-polonicum/thumbnail-1.jpg",
+      "/algae-images/naiadinium-polonicum/plate-1.jpg",
       "/algae-images/naiadinium-polonicum/figure-1.png",
       "/algae-images/naiadinium-polonicum/figure-2.png",
       "/algae-images/naiadinium-polonicum/figure-3.png"
@@ -6122,7 +6122,7 @@
   {
     "scientific_name": "Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824",
     "images": [
-      "/algae-images/bangia-atropurpurea/thumbnail-1.png",
+      "/algae-images/bangia-atropurpurea/thumbnail-1.jpg",
       "/algae-images/bangia-atropurpurea/plate-1.jpg",
       "/algae-images/bangia-atropurpurea/plate-2.jpg",
       "/algae-images/bangia-atropurpurea/plate-3.jpg",
@@ -6474,7 +6474,7 @@
   {
     "scientific_name": "Aphanocapsa sp. Nägeli 1849",
     "images": [
-      "/algae-images/aphanocapsa-sp/thumbnail-1.png",
+      "/algae-images/aphanocapsa-sp/thumbnail-1.jpg",
       "/algae-images/aphanocapsa-sp/plate-1.jpg"
     ],
     "image_captions": [
@@ -6683,7 +6683,7 @@
     "images": [
       "/algae-images/aphanothece-stagnina/thumbnail-1.jpg",
       "/algae-images/aphanothece-stagnina/plate-1.jpg",
-      "/algae-images/aphanothece-stagnina/plate-2.png",
+      "/algae-images/aphanothece-stagnina/plate-2.jpg",
       "/algae-images/aphanothece-stagnina/plate-3.jpg"
     ],
     "image_captions": [
@@ -6911,7 +6911,7 @@
     "images": [
       "/algae-images/chroococcus-limneticus/thumbnail-1.jpg",
       "/algae-images/chroococcus-limneticus/plate-1.jpg",
-      "/algae-images/chroococcus-limneticus/plate-2.png",
+      "/algae-images/chroococcus-limneticus/plate-2.jpg",
       "/algae-images/chroococcus-limneticus/figure-1.png",
       "/algae-images/chroococcus-limneticus/figure-2.png"
     ],
@@ -7240,8 +7240,8 @@
   {
     "scientific_name": "Chroococcus minutus (Kützing) Nägeli 1849",
     "images": [
-      "/algae-images/chroococcus-minutus/thumbnail-1.png",
-      "/algae-images/chroococcus-minutus/plate-1.png",
+      "/algae-images/chroococcus-minutus/thumbnail-1.jpg",
+      "/algae-images/chroococcus-minutus/plate-1.jpg",
       "/algae-images/chroococcus-minutus/figure-1.png",
       "/algae-images/chroococcus-minutus/figure-2.png"
     ],
@@ -7838,9 +7838,9 @@
   {
     "scientific_name": "Chroococcus turgidus (Kützing) Nägeli 1849",
     "images": [
-      "/algae-images/chroococcus-turgidus/thumbnail-1.png",
-      "/algae-images/chroococcus-turgidus/plate-1.png",
-      "/algae-images/chroococcus-turgidus/plate-2.png",
+      "/algae-images/chroococcus-turgidus/thumbnail-1.jpg",
+      "/algae-images/chroococcus-turgidus/plate-1.jpg",
+      "/algae-images/chroococcus-turgidus/plate-2.jpg",
       "/algae-images/chroococcus-turgidus/figure-1.png",
       "/algae-images/chroococcus-turgidus/figure-2.png"
     ],
@@ -8460,7 +8460,7 @@
     "scientific_name": "Cyanodictyon imperfectum Cronberg et Weibull 1981",
     "images": [
       "/algae-images/cyanodictyon-imperfectum/thumbnail-1.jpg",
-      "/algae-images/cyanodictyon-imperfectum/plate-1.png",
+      "/algae-images/cyanodictyon-imperfectum/plate-1.jpg",
       "/algae-images/cyanodictyon-imperfectum/figure-1.png",
       "/algae-images/cyanodictyon-imperfectum/figure-2.png",
       "/algae-images/cyanodictyon-imperfectum/figure-3.png",
@@ -9009,8 +9009,8 @@
   {
     "scientific_name": "Radiocystis geminata Skuja 1948",
     "images": [
-      "/algae-images/radiocystis-geminata/thumbnail-1.png",
-      "/algae-images/radiocystis-geminata/plate-1.png",
+      "/algae-images/radiocystis-geminata/thumbnail-1.jpg",
+      "/algae-images/radiocystis-geminata/plate-1.jpg",
       "/algae-images/radiocystis-geminata/figure-1.png",
       "/algae-images/radiocystis-geminata/figure-2.png"
     ],
@@ -9355,10 +9355,10 @@
   {
     "scientific_name": "Cryptomonas Ehrenberg 1831",
     "images": [
-      "/algae-images/cryptomonas/thumbnail-1.png",
-      "/algae-images/cryptomonas/plate-1.png",
-      "/algae-images/cryptomonas/plate-2.png",
-      "/algae-images/cryptomonas/plate-3.png",
+      "/algae-images/cryptomonas/thumbnail-1.jpg",
+      "/algae-images/cryptomonas/plate-1.jpg",
+      "/algae-images/cryptomonas/plate-2.jpg",
+      "/algae-images/cryptomonas/plate-3.jpg",
       "/algae-images/cryptomonas/figure-1.png",
       "/algae-images/cryptomonas/figure-2.png",
       "/algae-images/cryptomonas/figure-3.png",
@@ -10094,9 +10094,9 @@
   {
     "scientific_name": "Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994",
     "images": [
-      "/algae-images/plagioselmis-nannoplanctica/thumbnail-1.png",
-      "/algae-images/plagioselmis-nannoplanctica/plate-1.png",
-      "/algae-images/plagioselmis-nannoplanctica/plate-2.png",
+      "/algae-images/plagioselmis-nannoplanctica/thumbnail-1.jpg",
+      "/algae-images/plagioselmis-nannoplanctica/plate-1.jpg",
+      "/algae-images/plagioselmis-nannoplanctica/plate-2.jpg",
       "/algae-images/plagioselmis-nannoplanctica/figure-1.png",
       "/algae-images/plagioselmis-nannoplanctica/figure-2.png",
       "/algae-images/plagioselmis-nannoplanctica/figure-3.png"
@@ -10648,9 +10648,9 @@
   {
     "scientific_name": "Tetraselmis cordiformis (Carter) Stein 1878",
     "images": [
-      "/algae-images/tetraselmis-cordiformis/thumbnail-1.png",
-      "/algae-images/tetraselmis-cordiformis/plate-1.png",
-      "/algae-images/tetraselmis-cordiformis/plate-2.png",
+      "/algae-images/tetraselmis-cordiformis/thumbnail-1.jpg",
+      "/algae-images/tetraselmis-cordiformis/plate-1.jpg",
+      "/algae-images/tetraselmis-cordiformis/plate-2.jpg",
       "/algae-images/tetraselmis-cordiformis/figure-1.png",
       "/algae-images/tetraselmis-cordiformis/figure-2.png",
       "/algae-images/tetraselmis-cordiformis/figure-3.png",
@@ -11206,9 +11206,9 @@
   {
     "scientific_name": "Chrysochromulina parva Lackey 1939",
     "images": [
-      "/algae-images/chrysochromulina-parva/thumbnail-1.png",
-      "/algae-images/chrysochromulina-parva/plate-1.png",
-      "/algae-images/chrysochromulina-parva/plate-2.png",
+      "/algae-images/chrysochromulina-parva/thumbnail-1.jpg",
+      "/algae-images/chrysochromulina-parva/plate-1.jpg",
+      "/algae-images/chrysochromulina-parva/plate-2.jpg",
       "/algae-images/chrysochromulina-parva/figure-1.png",
       "/algae-images/chrysochromulina-parva/figure-2.png",
       "/algae-images/chrysochromulina-parva/figure-3.png"
@@ -11811,11 +11811,11 @@
   {
     "scientific_name": "Euglena Ehrenberg 1830",
     "images": [
-      "/algae-images/euglena/thumbnail-1.png",
+      "/algae-images/euglena/thumbnail-1.jpg",
       "/algae-images/euglena/plate-1.jpg",
-      "/algae-images/euglena/plate-2.png",
-      "/algae-images/euglena/plate-3.png",
-      "/algae-images/euglena/plate-4.png",
+      "/algae-images/euglena/plate-2.jpg",
+      "/algae-images/euglena/plate-3.jpg",
+      "/algae-images/euglena/plate-4.jpg",
       "/algae-images/euglena/figure-1.png",
       "/algae-images/euglena/figure-2.png"
     ],
@@ -12507,8 +12507,8 @@
   {
     "scientific_name": "Phacus longicauda (Ehrenberg) Dujardin 1841",
     "images": [
-      "/algae-images/phacus-longicauda/thumbnail-1.png",
-      "/algae-images/phacus-longicauda/plate-1.png"
+      "/algae-images/phacus-longicauda/thumbnail-1.jpg",
+      "/algae-images/phacus-longicauda/plate-1.jpg"
     ],
     "image_captions": [
       "",
@@ -12746,10 +12746,10 @@
   {
     "scientific_name": "Trachelomonas Ehrenberg 1833",
     "images": [
-      "/algae-images/trachelomonas/thumbnail-1.png",
-      "/algae-images/trachelomonas/plate-1.png",
-      "/algae-images/trachelomonas/plate-2.png",
-      "/algae-images/trachelomonas/plate-3.png",
+      "/algae-images/trachelomonas/thumbnail-1.jpg",
+      "/algae-images/trachelomonas/plate-1.jpg",
+      "/algae-images/trachelomonas/plate-2.jpg",
+      "/algae-images/trachelomonas/plate-3.jpg",
       "/algae-images/trachelomonas/figure-1.png",
       "/algae-images/trachelomonas/figure-2.png",
       "/algae-images/trachelomonas/figure-3.png"
@@ -13239,8 +13239,8 @@
   {
     "scientific_name": "Colacium Ehrenberg 1833",
     "images": [
-      "/algae-images/colacium/thumbnail-1.png",
-      "/algae-images/colacium/plate-1.png"
+      "/algae-images/colacium/thumbnail-1.jpg",
+      "/algae-images/colacium/plate-1.jpg"
     ],
     "image_captions": [
       "",
@@ -13426,9 +13426,9 @@
   {
     "scientific_name": "Gloeocapsa sp. 1948 Kützing 1843",
     "images": [
-      "/algae-images/gloeocapsa-sp/thumbnail-1.jpeg",
-      "/algae-images/gloeocapsa-sp/plate-1.png",
-      "/algae-images/gloeocapsa-sp/plate-2.png"
+      "/algae-images/gloeocapsa-sp/thumbnail-1.jpg",
+      "/algae-images/gloeocapsa-sp/plate-1.jpg",
+      "/algae-images/gloeocapsa-sp/plate-2.jpg"
     ],
     "image_captions": [
       "",
@@ -13639,11 +13639,11 @@
   {
     "scientific_name": "Gloeotrichia pisum Thuret ex Bornet & Flahault 1886",
     "images": [
-      "/algae-images/gloeotrichia-pisum/thumbnail-1.png",
-      "/algae-images/gloeotrichia-pisum/plate-1.png",
-      "/algae-images/gloeotrichia-pisum/plate-2.png",
-      "/algae-images/gloeotrichia-pisum/plate-3.png",
-      "/algae-images/gloeotrichia-pisum/plate-4.png"
+      "/algae-images/gloeotrichia-pisum/thumbnail-1.jpg",
+      "/algae-images/gloeotrichia-pisum/plate-1.jpg",
+      "/algae-images/gloeotrichia-pisum/plate-2.jpg",
+      "/algae-images/gloeotrichia-pisum/plate-3.jpg",
+      "/algae-images/gloeotrichia-pisum/plate-4.jpg"
     ],
     "image_captions": [
       "",
@@ -14222,10 +14222,10 @@
     "scientific_name": "Merismopedia Meyen 1839",
     "images": [
       "/algae-images/merismopedia/thumbnail-1.jpg",
-      "/algae-images/merismopedia/plate-1.png",
-      "/algae-images/merismopedia/plate-2.png",
-      "/algae-images/merismopedia/plate-3.png",
-      "/algae-images/merismopedia/plate-4.png",
+      "/algae-images/merismopedia/plate-1.jpg",
+      "/algae-images/merismopedia/plate-2.jpg",
+      "/algae-images/merismopedia/plate-3.jpg",
+      "/algae-images/merismopedia/plate-4.jpg",
       "/algae-images/merismopedia/figure-1.png",
       "/algae-images/merismopedia/figure-2.png"
     ],
@@ -14696,9 +14696,9 @@
   {
     "scientific_name": "Microcystis wesenbergii (Komárek) Komárek ex Komárek 2006",
     "images": [
-      "/algae-images/microcystis-wesenbergii/thumbnail-1.png",
-      "/algae-images/microcystis-wesenbergii/plate-1.png",
-      "/algae-images/microcystis-wesenbergii/plate-2.png",
+      "/algae-images/microcystis-wesenbergii/thumbnail-1.jpg",
+      "/algae-images/microcystis-wesenbergii/plate-1.jpg",
+      "/algae-images/microcystis-wesenbergii/plate-2.jpg",
       "/algae-images/microcystis-wesenbergii/figure-1.png",
       "/algae-images/microcystis-wesenbergii/figure-2.png"
     ],
@@ -15208,12 +15208,12 @@
   {
     "scientific_name": "Mougeotia Agardh 1824",
     "images": [
-      "/algae-images/mougeotia/thumbnail-1.png",
-      "/algae-images/mougeotia/plate-1.png",
-      "/algae-images/mougeotia/plate-2.png",
-      "/algae-images/mougeotia/plate-3.png",
-      "/algae-images/mougeotia/plate-4.png",
-      "/algae-images/mougeotia/plate-5.png",
+      "/algae-images/mougeotia/thumbnail-1.jpg",
+      "/algae-images/mougeotia/plate-1.jpg",
+      "/algae-images/mougeotia/plate-2.jpg",
+      "/algae-images/mougeotia/plate-3.jpg",
+      "/algae-images/mougeotia/plate-4.jpg",
+      "/algae-images/mougeotia/plate-5.jpg",
       "/algae-images/mougeotia/figure-1.png",
       "/algae-images/mougeotia/figure-2.png"
     ],
@@ -16020,11 +16020,11 @@
     "scientific_name": "Peridinium gatunense Nygaard 1925",
     "images": [
       "/algae-images/peridinium-gatunense/thumbnail-1.jpg",
-      "/algae-images/peridinium-gatunense/plate-1.png",
-      "/algae-images/peridinium-gatunense/plate-2.png",
-      "/algae-images/peridinium-gatunense/plate-3.png",
-      "/algae-images/peridinium-gatunense/plate-4.png",
-      "/algae-images/peridinium-gatunense/plate-5.png",
+      "/algae-images/peridinium-gatunense/plate-1.jpg",
+      "/algae-images/peridinium-gatunense/plate-2.jpg",
+      "/algae-images/peridinium-gatunense/plate-3.jpg",
+      "/algae-images/peridinium-gatunense/plate-4.jpg",
+      "/algae-images/peridinium-gatunense/plate-5.jpg",
       "/algae-images/peridinium-gatunense/figure-1.png",
       "/algae-images/peridinium-gatunense/figure-2.png",
       "/algae-images/peridinium-gatunense/figure-3.png"
@@ -18102,8 +18102,8 @@
   {
     "scientific_name": "Chlamydomonas sp. Ehrenberg 1833",
     "images": [
-      "/algae-images/chlamydomonas-sp/thumbnail-1.png",
-      "/algae-images/chlamydomonas-sp/plate-1.png",
+      "/algae-images/chlamydomonas-sp/thumbnail-1.jpg",
+      "/algae-images/chlamydomonas-sp/plate-1.jpg",
       "/algae-images/chlamydomonas-sp/figure-1.png",
       "/algae-images/chlamydomonas-sp/figure-2.png"
     ],
@@ -18414,8 +18414,8 @@
   {
     "scientific_name": "Eudorina elegans Ehrenberg 1832",
     "images": [
-      "/algae-images/eudorina-elegans/thumbnail-1.png",
-      "/algae-images/eudorina-elegans/plate-1.png",
+      "/algae-images/eudorina-elegans/thumbnail-1.jpg",
+      "/algae-images/eudorina-elegans/plate-1.jpg",
       "/algae-images/eudorina-elegans/figure-1.png"
     ],
     "image_captions": [
@@ -18828,8 +18828,8 @@
   {
     "scientific_name": "Pandorina morum (O. Müller) Bory 1826",
     "images": [
-      "/algae-images/pandorina-morum/thumbnail-1.png",
-      "/algae-images/pandorina-morum/plate-1.png"
+      "/algae-images/pandorina-morum/thumbnail-1.jpg",
+      "/algae-images/pandorina-morum/plate-1.jpg"
     ],
     "image_captions": [
       "",

@@ -20,6 +20,7 @@ import re
 from docx import Document
 from PIL import Image
 
+from .image_optimize import optimize_image_blob
 from .reader import iter_docx_content_blocks, unmap_script_glyphs
 
 
@@ -108,15 +109,22 @@ def _save_image(
     img_dir = images_output_dir / slug
     img_dir.mkdir(parents=True, exist_ok=True)
 
-    if extension.lower() in (".tif", ".tiff"):
-        out_path = img_dir / f"{stem}.png"
-        img = Image.open(BytesIO(blob))
-        img.save(out_path, format="PNG")
-        return f"{images_public_prefix}/{slug}/{stem}.png"
+    ext = extension.lower()
+    if ext in (".tif", ".tiff"):
+        buf = BytesIO()
+        Image.open(BytesIO(blob)).save(buf, format="PNG")
+        blob = buf.getvalue()
+        ext = ".png"
 
-    out_path = img_dir / f"{stem}{extension}"
+    blob, ext = optimize_image_blob(blob, ext, stem)
+
+    for existing in img_dir.glob(f"{stem}.*"):
+        if existing.suffix.lower() != ext:
+            existing.unlink()
+
+    out_path = img_dir / f"{stem}{ext}"
     out_path.write_bytes(blob)
-    return f"{images_public_prefix}/{slug}/{stem}{extension}"
+    return f"{images_public_prefix}/{slug}/{stem}{ext}"
 
 
 # ---------------------------------------------------------------------------

@@ -83,6 +83,8 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
               <img
                 src={slot.src}
                 alt={galleryImageAlt(supplement.title, slot.src, idx)}
+                loading={idx === 0 ? "eager" : "lazy"}
+                decoding="async"
               />
               {slot.caption.trim() || (slot.captionRich && slot.captionRich.length > 0) ? (
                 <figcaption className="muted">

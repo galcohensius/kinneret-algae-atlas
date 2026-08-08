@@ -50,6 +50,8 @@ function AlgaeListCard({ record }: { record: AlgaeRecord }) {
             className="algae-thumb"
             src={listImage}
             alt={`${record.title} thumbnail`}
+            loading="lazy"
+            decoding="async"
           />
         ) : (
           <div className="algae-thumb algae-thumb-placeholder">No image</div>
