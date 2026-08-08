@@ -7,9 +7,9 @@
     "class": "Dinophyceae",
     "order": "Peridiniales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-08-08",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,12 +18,12 @@
     "cell_diameter_d": "29 – 40.5 μm, median: 34 μm (N=580)",
     "cell_length_l": "32 – 44 μm, median: 39 μm (N=262)",
     "biovolume_per_cell": "14,000 – 40,500 μm³, median: 21,300 μm³. Larger cell size in winter, smaller in summer (see Fig. 2b).",
-    "biovolume_equation": "V, μm³ = 0.9405 D².⁸⁵⁹⁶ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate sphaeroid)."
+    "biovolume_equation": "V = 0.9405 D².⁸⁵⁹⁶ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate spheroid)."
   },
   "narrative": {
     "morphology": "Peridiniopsis borgei is the largest of several species of Peridiniopsis, Durinskia, Glechodinium, Naiadinium, and Parvodinium occurring in the lake. Its shape is almost a sphere (Plate 1), with the cingulum, or girdle, markedly transversing it in the middle. The epitheca is conical with a mouth-like tip at the apex (highest point), the hypotheca is broadly rounded. Sometimes the hypotheca has an extension at its bottom end, like a small “foot”. Chloroplasts are numerous and ribbon shaped.\nDiagnostic features seen with electron microscopy: the sulcus slightly extends into the epitheca, it widens in the hypotheca, it does not reach the antapex (Plate 1 d,e). Sulcal margins sometimes have raised edges.",
     "ecology": "Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The contribution of Peridiniopsis borgei to total biomass was usually < 10% but on rare occasions it reached 40%. Peridiniopsis borgei shows an annual cycle also of cell size (Fig. 2b). Its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 μm, volume: 31,000 μm³) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 μm, volume: 11,000 μm³) at about the same time as the minimum cell abundance. Peridiniopsis borgei is potentially capable of using HCO₃ as C source for photosynthesis when pH is high and CO₂ availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of Peridinium gatunense (Zohary et al. 1994).",
-    "environmental_conditions": "Peridiniopsis borgei biomass > 5 g m⁻² occurred more frequently but not exclusively at pH > 8.5, alkalinity < 130 mg L⁻¹, chloride <280 mg L⁻¹, at water temperatures >17 C (Fig. 3), and over the full range of TDP and calcium concentrations, when the lake was stratified (not shown).",
-    "further_reading": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO₂ availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr. 39:1822-1834.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043."
+    "environmental_conditions": "Peridiniopsis borgei biomass > 5 g m⁻² occurred more frequently but not exclusively at pH > 8.5, alkalinity < 130 mg L⁻¹, chloride <280 mg L⁻¹, at water temperatures >17°C (Fig. 3), and over the full range of TDP and calcium concentrations, when the lake was stratified (not shown).",
+    "further_reading": "Berman-Frank I, Zohary T, Erez J, Dubinsky Z. 1994. CO₂ availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol. Oceanogr. 39:1822-1834.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch. Hydrobiol. 120:267-285.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M. 1994. Seasonality of stable carbon isotopes within the pelagic food web of Lake Kinneret. Limnol. Oceanogr. 39:1030-1043."
   }
 }

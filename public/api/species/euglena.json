@@ -7,9 +7,9 @@
     "class": "Euglenophyceae",
     "order": "Euglenales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-08-08",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,12 +18,12 @@
     "cell_diameter_d": "13-19 μm, median 10 μm (N=173)",
     "cell_length_l": "length 28-53 μm, median 27 μm (N=173)",
     "biovolume_per_cell": "500 - 9000 μm³, median: 1200 μm³.",
-    "biovolume_equation": "prolate spheroid V, μm³ = 4/3 π (D/2)² L/2"
+    "biovolume_equation": "prolate spheroid V = 4/3 π (D/2)² L/2"
   },
   "narrative": {
     "morphology": "Euglena is the most common euglenoid genus worldwide. It is a large, flagellated algae with a distinct orange-red eyespot. The motile cells are ovoid-cylindrical to narrowly fusiform, frequently with a narrow, elongated posterior caudus (“tail”), and may change their shape while they move under the microscope. Euglena has a single flagellum used for swimming, and a second very short flagellum that is not seen under a light microscope. The cells can turn spherical by an end-to-end contraction, followed by a quick expansion. They are also capable of actively contorting themselves in a variety of shapes through peristaltic-like motions, as well as twisting around an apical axis. The orange to red colored eyespot, noticeable near the base of the flagellum, is much larger than the eyespot in flagellated green algae. A single vacuole, capable of contracting, may be conspicuous when it is expanded. The shape, number and position of the chloroplasts along with the presence or absence of pyrenoids were traditionally key taxonomic features along with cell size and apical shapes. In apical view Euglena is circular although at times it could be twisted.\nSeveral species of Euglena occur in Lake Kinneret, including E. proxima (Plates 1, 2) and E. acus (Plate 3, now considered a synonym of Lepocynclis acus). In our routine counts all species of Euglena are aggregated into a single counting code.",
     "ecology": "Euglena spp. are rare in the Kinneret pelagic zone, but occasionally abundant in littoral samples, especially if collected from niches with high concentrations of organic matter, such as shallow waters among seasonally inundated shore vegetation, or temporary shore-pools created in bottom depressions with decomposing vegetation when the water level declines at a fast pace. In Agmon Wetlands in the peat soils of the Hula valley, Euglena species (as well as other Euglenoids) are much more abundant than in Kinneret. Occasionally, the toxin-producing Euglena sanguinea forms massive blooms that paint the surface water red (Plate 4). The distinctive euglenoid pigment astaxanthin is responsible for the distinctive red color.",
-    "environmental_conditions": "The cell abundance data shown in Figs. 1, 2 are for a sum of individuals belonging to the Euglena genus recorded at the pelagic water of Lake Kinneret. Euglena spp. abundance was indifferent to chloride concentrations, Secchi depth, TDP, DON. Higher cell concentrations were found in summer (Fig. 1), at higher water temperatures (> 25C), when the mixing depth ranged 15-20 m, dissolved oxygen between 6-8 mg L⁻¹ (Fig. 2), pH between 8.0 and 8.6, NH₄ < 0.06 mg N L⁻¹, Organic N between 0.2-0.4 mg N L⁻¹ (not shown).",
+    "environmental_conditions": "The cell abundance data shown in Figs. 1, 2 are for a sum of individuals belonging to the Euglena genus recorded at the pelagic water of Lake Kinneret. Euglena spp. abundance was indifferent to chloride concentrations, Secchi depth, TDP, DON. Higher cell concentrations were found in summer (Fig. 1), at higher water temperatures (> 25°C), when the mixing depth ranged 15-20 m, dissolved oxygen between 6-8 mg L⁻¹ (Fig. 2), pH between 8.0 and 8.6, NH₄ < 0.06 mg N L⁻¹, Organic N between 0.2-0.4 mg N L⁻¹ (not shown).",
     "further_reading": "Dillard, G.E. (2000). Freshwater algae of the southeastern United States, Part 7. Pigmented Euglenophyceae. Bibliotheca Phycologica 106: 1–135.\nWołowski, K. (2011). Euglenophyta (Euglenoids). In: The freshwater algal flora of the British Isles. An identification guide to freshwater and terrestrial algae. Second edition. (John, D.M., Whitton, B.A. & Brook, A.J. Eds), pp. 181-239. Cambridge: Cambridge University Press."
   }
 }

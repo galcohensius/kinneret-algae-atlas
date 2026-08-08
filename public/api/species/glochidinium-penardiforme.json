@@ -7,9 +7,9 @@
     "class": "Dinophyceae",
     "order": "Peridiniales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-08-08",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,10 +18,10 @@
     "cell_diameter_d": "17 - 24 μm, median: 21 μm (N=160)",
     "cell_length_l": "20 – 27.5 μm, median: 23 μm (N=160)",
     "biovolume_per_cell": "3050 - 8200 μm³, median: 5450 μm³.",
-    "biovolume_equation": "V, μm³ = (4/3)π L (D/2)² (prolate sphaeroid)"
+    "biovolume_equation": "V = (4/3)π L (D/2)² (prolate spheroid)"
   },
   "narrative": {
-    "morphology": "Cells are pentangular (having 5 sides) and flattened dorsi-ventrally (Plates 1, 2, 3). The epitheca is conical and apiculate; the hypotheca is excavated at the antapex (its bottom side, Plates 2,3), both theca are equal in size. The wide, deep cingulum encircles the cell, the sulcus is broad, deep and reaches the antapex. It produces a marked concavity in the antapical profile. Chloroplasts are present. The protoplasm may have a dark granular appearance, such that it is grayish in color. Numerous highly refractive granules may or may not be present in the cell periphery (Plates 1, 2).",
+    "morphology": "Cells are pentangular (having 5 sides) and flattened dorsi-ventrally (Plates 1, 2, 3). The epitheca is conical and apiculate; the hypotheca is excavated at the antapex (its bottom side, Plates 2,3), both thecae are equal in size. The wide, deep cingulum encircles the cell, the sulcus is broad, deep and reaches the antapex. It produces a marked concavity in the antapical profile. Chloroplasts are present. The protoplasm may have a dark granular appearance, such that it is grayish in color. Numerous highly refractive granules may or may not be present in the cell periphery (Plates 1, 2).",
     "ecology": "Glochidinium penardiforme is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008 (Fig. 1). Its mean water column abundance never exceeded 20 cells mL⁻¹. Little is known about this species.",
     "environmental_conditions": "",
     "further_reading": ""

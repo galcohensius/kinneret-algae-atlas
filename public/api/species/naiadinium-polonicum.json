@@ -7,9 +7,9 @@
     "class": "Dinophyceae",
     "order": "Thoracosphaerales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-08-08",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,7 +18,7 @@
     "cell_diameter_d": "29-36 μm, median: 32 μm (N=32)",
     "cell_length_l": "32-42 μm, median: 38 μm (N=32)",
     "biovolume_per_cell": "7,000-14,000 μm³, median: 10,000 μm³",
-    "biovolume_equation": "V, μm³ = ((4/3)π L (D/2)²)/2 (half the volume of a prolate sphaeroid)"
+    "biovolume_equation": "V = ((4/3)π L (D/2)²)/2 (half the volume of a prolate spheroid)"
   },
   "narrative": {
     "morphology": "A medium-sized thecate dinoflagellate. The flagellated cells are oval, with the ventral side pressed in towards the other side as if it received a punch. As a result, the cell perimeter is convex when viewed from one side but concave when viewed from another (Plate 1). This concave/convex form is easily seen on a live, swimming cell: as it turns about its longitudinal axis its profile changes dramatically (Plate 1e). This feature is the most obvious for identifying this species. An additional diagnostic feature is the smooth and rounded cell shape (Plate 1). The epitheca is helmet-shaped and pointed and is approximately the same size as the broadly rounded hypotheca. The chloroplasts are small and discoid or ribbon shaped. A stigma (eyespot) may be present. Resting cysts are spherical with their thick cell wall covered by dense hairlike projections (not shown).",

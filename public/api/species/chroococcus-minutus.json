@@ -7,9 +7,9 @@
     "class": "Cyanophyceae",
     "order": "Chroococcales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-08-08",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -23,7 +23,7 @@
   "narrative": {
     "morphology": "Individual spherical blue-green colored cells are surrounded by a wide colorless homogeneous sheath (Plate 1). The species is polymorphic with numerous morpho-and ecotypes. Chroococcus turgidus and Chroococcus minutus are difficult to tell apart. The most notable difference is that the sheath of C. minutus is usually homogeneous with no layering while that of C. turgidus is laminated (layered). Furthermore, on average C. minutus cells are smaller, but both species show large size variation and the sizes overlap.",
     "ecology": "An alanlyst effect is apparent in the long-term record of C. minutus and C. turgidus shown in Fig. 1. In particular, it is evident that Analyst 5 (1996-2012) counted more C. minutus whereas Analyst 6 (2013-2020) counted more C. turgidus, probably due to different taxon names given to the same organisms. Chroococcus minutus / turgidus has always been common in lake Kinneret, with long periods of thousands of (mostly 2-celled) colonies mL⁻¹ (Fig. 1). Prior to the decline of Peridinium gatunense and appearance of nostocalean cyanobacteria in the mid 1990s Chroococcus was the most abundant Kinneret cyanobacterial taxon. Peak abundance is from August to October (Fig. 2). Like several other Kinneret species, cells are smaller in summer, larger in winter (Fig. 2).",
-    "environmental_conditions": "Advantaged by high water temperatures (>25oC) and a well-stratified water column. Indifferent to chloride concentrations.",
+    "environmental_conditions": "Advantaged by high water temperatures (>25°C) and a well-stratified water column. Indifferent to chloride concentrations.",
     "further_reading": "Pollingher U. 1971. A long-term study of Chroococcus population in Lake Kinneret (Israel). Algological Studies/Archiv für Hydrobiologie, Supplement Volumes 64:377-83."
   }
 }

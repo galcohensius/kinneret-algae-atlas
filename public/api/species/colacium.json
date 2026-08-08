@@ -7,9 +7,9 @@
     "class": "Euglenophyceae",
     "order": "Euglenales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-08-08",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,7 +18,7 @@
   },
   "narrative": {
     "morphology": "Colacium species are sessile although free-swimming after cell division. The sessile cells are attached to their biotic substrate (zooplankton in Lake Kinneret) with a branching mucilaginous stalk. Several cells are attached each to one of the branches of the stalk to form loosely bounds colonies of several cells. Motile cells look like Euglena: they are naked, with a single emergent flagellum, an eyespot and numerous disk-like chloroplasts. On settling the cells shed their flagellum, rarely divide, and secrete a mucilaginous sheath.",
-    "ecology": "Colacium colonies are occasionally seen as epibions on zooplankton, especially on copepods and rotifers (Plate 1). Since they are sessile, they are not observed in our phytoplankton samples, were never counted and we have no corresponding environmental data.",
+    "ecology": "Colacium colonies are occasionally seen as epibionts on zooplankton, especially on copepods and rotifers (Plate 1). Since they are sessile, they are not observed in our phytoplankton samples, were never counted and we have no corresponding environmental data.",
     "environmental_conditions": "",
     "further_reading": ""
   }

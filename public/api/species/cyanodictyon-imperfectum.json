@@ -7,9 +7,9 @@
     "class": "Cyanophyceae",
     "order": "Chroococcales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-08-08",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -25,7 +25,7 @@
   "narrative": {
     "morphology": "The tiny (0.4-1.0 μm diameter) spherical cells of this colonial cyanobacterium have no gas vesicles. They are arranged in short chains of 2-8 cells that are embedded in colorless structureless mucilage to form small colonies (Plates 1, 2). This is the smallest-cell species being counted in our routine monitoring. The amount of mucilage and distance between chains are highly variable.",
     "ecology": "Cyanodictyon imperfectum is routinely counted since 1996, forming blooms of thousands of colonies per mL (Fig. 1) with hundreds of thousands of cells per mL (not shown) from June to August each year, with a distinct peak in July. But due to the tiny cell size the contribution of Cyanodictyon to total phytoplankton biomass, even during those blooms, never exceeds a few percent. Particularly intense blooms of this species were recorded in 2000, 2003, 2007 and nearly every year since 2015 (Fig. 1). Colony size shows a strong seasonal cycle with larger colonies (more cells per colony) in winter, when the species abundance is low, and smaller colonies in summer when abundance is high (Fig. 2). This seasonal pattern of being larger in winter, at lower water temperatures, is shared with many other Kinneret phytoplankton species (Zohary et al. 2017).",
-    "environmental_conditions": "Cyanodictyon imperfectum abundance is independent of concentrations of chloride and total dissolved P (TDP), it increases with water temperature and declines with increasing alkalinity and calcium concentration (Fig. 3). It is highest at moderate dissolved organic N concentrations (0.1-0.4 mg L⁻¹), at low NH₄ (< 0.05 mg L⁻¹) and NO₃ (<0.2 mg L⁻¹). Highest abundances also correlate with low chlorophyll concentrations (< 400 mg m⁻²), intermediate Secchi depth (2-4 m), and pH of 8-9 (Fig. 3). Larger colony size (more cells/colony) is strongly correlated with low temperature (<20oC), alkalinity > 130 mg CaCO₃ mL⁻¹, and Ca > 50 mg L⁻¹ (Fig. 4).",
+    "environmental_conditions": "Cyanodictyon imperfectum abundance is independent of concentrations of chloride and total dissolved P (TDP), it increases with water temperature and declines with increasing alkalinity and calcium concentration (Fig. 3). It is highest at moderate dissolved organic N concentrations (0.1-0.4 mg L⁻¹), at low NH₄ (< 0.05 mg L⁻¹) and NO₃ (<0.2 mg L⁻¹). Highest abundances also correlate with low chlorophyll concentrations (< 400 mg m⁻²), intermediate Secchi depth (2-4 m), and pH of 8-9 (Fig. 3). Larger colony size (more cells/colony) is strongly correlated with low temperature (<20°C), alkalinity > 130 mg CaCO₃ mL⁻¹, and Ca > 50 mg L⁻¹ (Fig. 4).",
     "further_reading": "Cronberg G, Weibull C (1981) Cyanodictyon imperfectum, a new chroococcal blue-green alga from Lake Trummen, Sweden. Archiv für Hydrobiologie Supplement 60/2 (Algological Studies 27):101-110.\nHickel B, Pollingher U (1988) Mass development of an iron precipitating cyanophyte (Cyanodictyon imperfectum) in a subtropical lake (Lake Kinneret, Israel). Phycologia 27:291-294.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209."
   }
 }
