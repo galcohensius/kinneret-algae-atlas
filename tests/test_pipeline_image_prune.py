@@ -73,24 +73,25 @@ class TestPruneCatalogImages(unittest.TestCase):
             shutil.rmtree(tmp, ignore_errors=True)
 
     def test_save_image_replaces_other_extensions_for_same_stem(self) -> None:
+        # A figure keeps PNG on save, so a stale same-stem .jpg must be removed.
         tmp = Path(tempfile.mkdtemp())
         try:
             (tmp / "bangia-atropurpurea").mkdir()
-            jpg = tmp / "bangia-atropurpurea" / "thumbnail-1.jpg"
-            jpg.write_bytes(b"old")
+            stale = tmp / "bangia-atropurpurea" / "figure-1.jpg"
+            stale.write_bytes(b"old")
 
             buf = BytesIO()
             Image.new("RGB", (2, 2), color=(1, 2, 3)).save(buf, format="PNG")
             _save_image(
                 buf.getvalue(),
                 ".png",
-                "thumbnail-1",
+                "figure-1",
                 "Bangia atropurpurea",
                 tmp,
                 "/algae-images",
             )
-            self.assertFalse(jpg.exists())
-            self.assertTrue((tmp / "bangia-atropurpurea" / "thumbnail-1.png").is_file())
+            self.assertFalse(stale.exists())
+            self.assertTrue((tmp / "bangia-atropurpurea" / "figure-1.png").is_file())
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
 
