@@ -7,9 +7,9 @@
     "class": "Chlorophyceae",
     "order": "Volvocales"
   },
-  "record_updated": "2026-08-08",
+  "record_updated": "2026-08-19",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 8 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 19 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -26,6 +26,6 @@
     "morphology": "The coenobia are made of 8 or 16 cells compressed into a dense spherical aggregate that is surrounded by an envelope of hyaline mucilage. Each cell has two equal-length flagella that are longer than the cell. With a cup-shaped chloroplast, 1 or more pyrenoids, 2 contractile vacuoles an anterior red eyespot.",
     "ecology": "Pandorina morum is common in the littoral zone of Lake Kinneret, but practically never seen in the pelagic water. Hence there are no ecological data for it. The species is common in stratified shallow lakes rich in nitrate. The specimen in Plate 1 was collected at the shore by the Kinneret Limnological Institute in March 2006.",
     "environmental_conditions": "",
-    "further_reading": ""
+    "further_reading": "Kaplan-Levy RN, Alster-Gloukhovski A, Benyamini Y, Zohary T. 2016. Lake Kinneret phytoplankton: integrating classical and molecular taxonomy. Hydrobiologia 764(1):283-302."
   }
 }
