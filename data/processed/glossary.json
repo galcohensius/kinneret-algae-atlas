@@ -1,6 +1,6 @@
 {
   "title": "Glossary: terms used in species descriptions",
-  "record_updated": "2026-07-23",
+  "record_updated": "2026-08-22",
   "entries": [
     {
       "term": "acicular",
@@ -222,6 +222,15 @@
       ]
     },
     {
+      "term": "clathrate",
+      "slug": "clathrate",
+      "definition": "forming a net. Refers to mucilaginous colonies of cyanobacteria and a few chlorophytes which include extensive internal “holes” or spaces that are in contact with the external environment.",
+      "letter": "C",
+      "match_phrases": [
+        "clathrate"
+      ]
+    },
+    {
       "term": "conductivity",
       "slug": "conductivity",
       "definition": "specific conductance, μS cm⁻¹",
@@ -247,6 +256,42 @@
       "match_phrases": [
         "costa",
         "costae"
+      ]
+    },
+    {
+      "term": "DO",
+      "slug": "do",
+      "definition": "dissolved oxygen",
+      "letter": "D",
+      "match_phrases": [
+        "DO"
+      ]
+    },
+    {
+      "term": "DOC",
+      "slug": "doc",
+      "definition": "dissolved organic carbon",
+      "letter": "D",
+      "match_phrases": [
+        "DOC"
+      ]
+    },
+    {
+      "term": "DON",
+      "slug": "don",
+      "definition": "dissolved organic nitrogen",
+      "letter": "D",
+      "match_phrases": [
+        "DON"
+      ]
+    },
+    {
+      "term": "DOP",
+      "slug": "dop",
+      "definition": "dissolved organic phosphorus",
+      "letter": "D",
+      "match_phrases": [
+        "DOP"
       ]
     },
     {
@@ -1062,5 +1107,5 @@
       "src": "/glossary-images/cox-1996-plate-2.png"
     }
   ],
-  "source_file": "1-Glossary 2026-07-25.docx"
+  "source_file": "1-Glossary 2026-08-22.docx"
 }

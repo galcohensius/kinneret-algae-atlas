@@ -7,9 +7,9 @@
     "class": "Cyanophyceae",
     "order": "Chroococcales"
   },
-  "record_updated": "2026-08-19",
+  "record_updated": "2026-08-23",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 19 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,14 +18,14 @@
     "colony_shape": "spherical, elongate or lobate",
     "cell_diameter_d": "3.4 – 7.5 μm, median: 5.5 μm (N=402)",
     "biovolume_per_cell": "20 – 220 μm³, median: 90 μm³",
-    "biovolume_equation": "Sphere V, µm³ = 4/3 p (D/2)³",
+    "biovolume_equation": "Sphere, V= 4/3 π (D/2)³",
     "colony_diameter": "~ 100 µm",
     "cells_per_colony": "10-300"
   },
   "narrative": {
-    "morphology": "Colonies initially spherical, later becoming elongate and intensely lobate, often with distinct holes (clathrate), sometimes composed of sub-colonies. Cells arranged randomly rarely densely, in young colonies near the colony surface. The cells are embedded in colorless smooth, firm distinctly delimited mucilage with a refractive outline. The gelatinous margin extends 3-6 µm beyond the cell aggregations. Cells are spherical with distinct aerotopes, 4.0-7.5 µm in diameter (McGregor et al. 2007).",
+    "morphology": "Colonies initially spherical, later becoming elongate and intensely lobate, often with distinct holes (clathrate), sometimes composed of sub-colonies. Cells arranged randomly, rarely densely, in young colonies near the colony surface. The cells are embedded in colorless smooth, firm distinctly delimited mucilage with a refractive outline. The gelatinous margin extends 3-6 µm beyond the cell aggregations. Cells are spherical with distinct aerotopes, 4.0-7.5 µm in diameter (McGregor et al. 2007).",
     "ecology": "Microcystis wesenbergii is one of the common species of cyanobacteria occurring in Lake Kinneret (Fig. 1), but it was never dominant and never recorded to form a bloom (although it did form a bloom in Agmon-Hula in summer 2020). The species was not counted at all prior to 1998. It was more abundant during 1998-2009 than later (Fig. 1). Since July 2024 and until writing this item (July 2026) it was not found at all in Kinneret phytoplankton samples (data not shown). The species is more abundant from March to August, less abundant in winter (Fig. 2a). Colony size shows the opposite annual cycle, with more cells per colony in winter, less in summer (Fig. 2b). Cell volume fluctuates within a small amplitude around the multiannual median of 90 µm³ (Fig. 2c).",
-    "environmental_conditions": "M. wesenbergii abundance is independent of water temperature, mixing depth, euphotic zone depth, alkalinity and calcium concentrations. Abundance increases with pH, from pH 8 till about pH 9.2, and with DON, till about 0.3 mg L⁻¹. All abundance peaks occurred at NH₄ < 25 µg L⁻¹ and Norg around 0.4 mg L⁻¹. Colony size (=number of cells per colony) declined with increasing temperature, increased with calcium and alkalinity and was independent of nitrate, ammonium and DON concentrations.",
+    "environmental_conditions": "M. wesenbergii abundance is independent of water temperature, mixing depth, euphotic zone depth, alkalinity and calcium concentrations. Abundance increases with pH, from pH 8 till about pH 9.2, and with DON, till about 0.3 mg L⁻¹. All abundance peaks occurred at NH₄ < 25 µg L⁻¹ and organic-N around 0.4 mg L⁻¹. Colony size (=number of cells per colony) declined with increasing temperature, increased with calcium and alkalinity and was independent of nitrate, ammonium and DON concentrations.",
     "further_reading": "Komárek J, Anagnostidis K. 1999. Cyanoprokaryota. 1. Chroococcales. In: Süßwasserflora von Mitteleuropa. Begründet von A. Pascher. Band 19/1. (Ettl H, Gärtner G, Heynig H, Mollenhauer D, Eds), pp. 1-548. Heidelberg & Berlin: Spektrum, Akademischer Verlag.\nMcGregor G, Fabbro LD, Lobegeiger JS. 2007. Freshwater planktic Chroococcales (Cyanoprokaryota) from North-Eastern Australia: a morphological evaluation. Nova Hedwigia 84(3/4): 299-331."
   }
 }

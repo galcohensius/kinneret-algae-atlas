@@ -1,10 +1,10 @@
 {
   "title": "Glossary: terms used in species descriptions",
   "canonical_url": "https://kinneret-algae-atlas.org/glossary/",
-  "record_updated": "2026-07-23",
-  "source_file": "1-Glossary 2026-07-25.docx",
+  "record_updated": "2026-08-22",
+  "source_file": "1-Glossary 2026-08-22.docx",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 23 July 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 22 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "plates": [
@@ -165,6 +165,12 @@
       "letter": "C"
     },
     {
+      "term": "clathrate",
+      "slug": "clathrate",
+      "definition": "forming a net. Refers to mucilaginous colonies of cyanobacteria and a few chlorophytes which include extensive internal “holes” or spaces that are in contact with the external environment.",
+      "letter": "C"
+    },
+    {
       "term": "conductivity",
       "slug": "conductivity",
       "definition": "specific conductance, μS cm⁻¹",
@@ -181,6 +187,30 @@
       "slug": "costa",
       "definition": "rib-like longitudinal cell wall thickening",
       "letter": "C"
+    },
+    {
+      "term": "DO",
+      "slug": "do",
+      "definition": "dissolved oxygen",
+      "letter": "D"
+    },
+    {
+      "term": "DOC",
+      "slug": "doc",
+      "definition": "dissolved organic carbon",
+      "letter": "D"
+    },
+    {
+      "term": "DON",
+      "slug": "don",
+      "definition": "dissolved organic nitrogen",
+      "letter": "D"
+    },
+    {
+      "term": "DOP",
+      "slug": "dop",
+      "definition": "dissolved organic phosphorus",
+      "letter": "D"
     },
     {
       "term": "dorsal",

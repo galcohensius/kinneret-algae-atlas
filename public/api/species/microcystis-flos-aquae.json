@@ -1,0 +1,31 @@
+{
+  "slug": "microcystis-flos-aquae",
+  "scientific_name": "Microcystis flos-aquae (Wittrock) Kirchner 1898",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/microcystis-flos-aquae/",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-08-23",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonial",
+    "cell_shape": "sphere",
+    "colony_shape": "mostly spherical",
+    "cell_diameter_d": "2 – 6.5 μm, median: 3 μm (N=3200)",
+    "biovolume_per_cell": "2.5 – 150 μm³, median: 14 μm³",
+    "biovolume_equation": "Sphere, V = 4/3 π (D/2)³",
+    "colony_diameter": "~ 50 -200 µm",
+    "cells_per_colony": "30-7000; median 270"
+  },
+  "narrative": {
+    "morphology": "Colonies microscopic, compact, more or less shperical, globose, obovoid, ellipsoidal or irregular in outline but not lobate, with densely packed spherical cells, only rarely with indistinct holes in older colonies. Mucilage indistinct, fine, hyaline, colorless, diffluent. Mucilaginous envelopes not exceediing the margin of the colony by more than 1 µm. Cells spherical or hemispherical when dividing, with aerotopes, ~3 µm in diameter. This species may be confused with young colonies of Microcystis aeruginosa. It differes by its more compact arrangement of cells without holes in mature colonies and propagation of colonies (McGregor et al. 2007).",
+    "ecology": "Microcystis flos-aquae is the most abundant species of the genus Microcystis occurring in Lake Kinneret. It formed a major bloom in 1964 (Pollingher and Kimor 1970), was a common component of the phytoplankton in the early 1970s (Fig. 1), then declined to near-elimination during the 1980s and early 1990s (Fig. 1). Then, in January 1995 it re-appeared in huge abundance, forming a major bloom, several months after the first ever bloom of Aphanizomenon ovalisporum in fall 1994. Since then it is present in the water most of the time, at higher abundance in winter (Fig. 2), especially in winters when Peridinium gatunense fails to bloom. On calm winter days it floats to the surface where it accumulates and forms thin films that are pushed by gentle winds to lee shores where it accumulates.",
+    "environmental_conditions": "M. flos-aquae biomass was independent of water level, chloride concentration, pH, dissolved oxygen, nitrate. It was higher when mixing depth was > 35 m (destratification); when water temperature < 20°C; alkalinity > 120 mg L⁻¹; Ca > 50 mg L⁻¹; at lower DON, NH₄ (Fig. 3).",
+    "further_reading": "Kaplan-Levy RN, Alster-Gloukhovski A, Benyamini Y, Zohary T. 2016. Lake Kinneret phytoplankton: integrating classical and molecular taxonomy. Hydrobiologia 764(1):283-302.\nKomárek J, Anagnostidis K. 1999. Cyanoprokaryota. 1. Chroococcales. In: Süßwasserflora von Mitteleuropa. Begründet von A. Pascher. Band 19/1. (Ettl H, Gärtner G, Heynig H, Mollenhauer D, Eds), pp. 1-548. Heidelberg & Berlin: Spektrum, Akademischer Verlag.\nMcGregor G, Fabbro LD, Lobegeiger JS. 2007. Freshwater planktic Chroococcales (Cyanoprokaryota) from North-Eastern Australia: a morphological evaluation. Nova Hedwigia 84(3/4): 299-331.\nPollingher U, Kimor B. 1970. Seasonal and bathymetric changes in the composition of the phytoplankton populations of Lake Tiberias based on biomass estimations during the years 1964-1967. State of Israel, Ministry of Agriculture, Department of Fisheries, Sea Fisheries Research Station.\nZohary T, Yacobi YZ, Alster A, Fishbein T, Lippman S, Tibor G. 2014. Phytoplankton. Chap. 10 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 161-190. Springer, Heidelberg."
+  }
+}

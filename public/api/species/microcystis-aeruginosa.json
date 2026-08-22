@@ -1,0 +1,31 @@
+{
+  "slug": "microcystis-aeruginosa",
+  "scientific_name": "Microcystis aeruginosa (Wittrock) Kirchner 1898",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/microcystis-aeruginosa/",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-08-23",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonial",
+    "cell_shape": "sphere",
+    "colony_shape": "irregular",
+    "cell_diameter_d": "2 – 5 μm, median: 3 μm (N=2500)",
+    "biovolume_per_cell": "4 – 65 μm³, median: 13 μm³",
+    "biovolume_equation": "Sphere, V = 4/3 π (D/2)³",
+    "colony_diameter": "100-1000 μm",
+    "cells_per_colony": "20-10000; median: 300"
+  },
+  "narrative": {
+    "morphology": "Colonies are net-like (clathrate) with distinct holes or composed of sub-colonies with irregular outline, made of hundreds of irregularly gathered cells situated in a fine, colorless and diffuse mucilage with refractive outline. Cells are spherical, ~3 µm in diameter, with gas vesicles. Division in 3 perpendicular planes with a return development to the original spherical cell shape before the next succeeding division. Polymorphic species.",
+    "ecology": "The species was not counted prior to 1996, when Analyst 5 began counting, probably because earlier M. aeruginosa and M. flos-aquae were considered as two forma of a single species. Microcystis aeruginosa is less abundant than M. flos-aquae, but usually both species co-occur (Plate 2). The species is more abundant from March to June, less abundant from August to December (Fig. 2a). The number of cells per colony ranges 100-2000 with no distinct annual pattern (Fig. 2b). Cell volume is usually 10-40 µm³, being largest from May to August (Fig. 2c).",
+    "environmental_conditions": "M. aeruginosa biomass was indifferent to water temperature, pH, alkalinity, chloride, calcium and DON concentrations (Fig. 3). Biomass was higher when water level was lower than -211 m a.s.l., Secchi was < 3.2 m, zₑᵤ < 10 m and nitrate < 0.4 mg L⁻¹.",
+    "further_reading": "Komárek J, Anagnostidis K. 1999. Cyanoprokaryota. 1. Chroococcales. In: Süßwasserflora von Mitteleuropa. Begründet von A. Pascher. Band 19/1. (Ettl H, Gärtner G, Heynig H, Mollenhauer D, Eds), pp. 1-548. Heidelberg & Berlin: Spektrum, Akademischer Verlag.\nMcGregor G, Fabbro LD, Lobegeiger JS. 2007. Freshwater planktic Chroococcales (Cyanoprokaryota) from North-Eastern Australia: a morphological evaluation. Nova Hedwigia 84(3/4): 299-331."
+  }
+}

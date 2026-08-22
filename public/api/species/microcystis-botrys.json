@@ -1,0 +1,30 @@
+{
+  "slug": "microcystis-botrys",
+  "scientific_name": "Microcystis botrys Teiling 1942",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/microcystis-botrys/",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Chroococcales"
+  },
+  "record_updated": "2026-08-23",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "colonial",
+    "cell_shape": "sphere",
+    "colony_shape": "mostly spherical",
+    "cell_diameter_d": "3– 7 μm, median: 5.2 μm (N=1220)",
+    "biovolume_per_cell": "20 – 180 μm³, median: 75 μm³",
+    "biovolume_equation": "Sphere, V = 4/3 π (D/2)³",
+    "cells_per_colony": "30-5000; median: 200"
+  },
+  "narrative": {
+    "morphology": "Colonies are more or less spherical, with cells irregularly and densely aggregated in mucilaginous, spherical groups. The Mucilage around conlinies is wide, gelatinous, fine, colorless, sometimes indistinct, enveloping clusters of cells and extending distinctly beyond their margin, usually by more than 1 µm. Spherical cells with gas vacuoles, ~5 µm in diameter.",
+    "ecology": "Microcystis botrys is common in Lake Kinneret (Fig. 1), but never dominant and never formed a major bloom. The species was recorded from 1974-1981, then not recorded at all until 2007 (Fig. 1). The species is more abundant from May to July, less abundant from August till February (Fig. 2a). Colony size shows a different annual pattern, with more cells per colony in winter-spring, less in summer (Fig. 2b). Cell volume varies only slightly such that after two full years of measurements a fixed volume per cell was applied for biomass calculations (not shown).",
+    "environmental_conditions": "M. botrys abundance was independent of water temperature, mixing depth, euphotic zone depth, alkalinity, calcium, nitrare and chloride concentrations.. All abundance peaks occurred at NH₄ < 30 µg L⁻¹.",
+    "further_reading": "Komárek J, Anagnostidis K. 1999. Cyanoprokaryota. 1. Chroococcales. In: Süßwasserflora von Mitteleuropa. Begründet von A. Pascher. Band 19/1. (Ettl H, Gärtner G, Heynig H, Mollenhauer D, Eds), pp. 1-548. Heidelberg & Berlin: Spektrum, Akademischer Verlag.\nMcGregor G, Fabbro LD, Lobegeiger JS. 2007. Freshwater planktic Chroococcales (Cyanoprokaryota) from North-Eastern Australia: a morphological evaluation. Nova Hedwigia 84(3/4): 299-331."
+  }
+}
