@@ -112,13 +112,79 @@ def _compact_text(text: str, max_len: int = 220) -> str:
     return compact[: max_len - 1].rstrip() + "…"
 
 
-def _build_llms_txt() -> str:
+def _load_study_area() -> dict[str, Any]:
+    path = Path("data/study-area.json")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _format_study_area_decimal(study_area: dict[str, Any]) -> str:
+    lat = float(study_area["latitude"])
+    lon = float(study_area["longitude"])
+    lat_suffix = "N" if lat >= 0 else "S"
+    lon_suffix = "E" if lon >= 0 else "W"
+    return f"{abs(lat):.3f}° {lat_suffix}, {abs(lon):.3f}° {lon_suffix}"
+
+
+def _study_area_block(study_area: dict[str, Any]) -> list[str]:
+    lake = study_area["lake_name"]
+    alt = study_area["alternate_name"]
+    coords = _format_study_area_decimal(study_area)
+    datum = study_area["geodetic_datum"]
+    return [
+        "## Study area",
+        f"- Lake: {lake} ({alt})",
+        f"- Country: {study_area['country']} ({study_area['country_code']})",
+        f"- Administrative area: {study_area['state_province']}",
+        f"- Region: {study_area['region']}",
+        f"- Coordinates (lake center): {coords} ({datum})",
+        f"- Elevation (approx.): {study_area['elevation_m']} m",
+        f"- OpenStreetMap: https://www.openstreetmap.org/?mlat={study_area['latitude']}&mlon={study_area['longitude']}#map=10/{study_area['latitude']}/{study_area['longitude']}",
+        "",
+    ]
+
+
+def _build_atlas_api(study_area: dict[str, Any]) -> dict[str, Any]:
+    lake = study_area["lake_name"]
+    alt = study_area["alternate_name"]
+    coords = _format_study_area_decimal(study_area)
+    datum = study_area["geodetic_datum"]
+    return {
+        "name": "Kinneret Algae Atlas",
+        "canonical_url": ATLAS_CITE_URL,
+        "study_area": {
+            "lake_name": lake,
+            "alternate_name": alt,
+            "country": study_area["country"],
+            "country_code": study_area["country_code"],
+            "state_province": study_area["state_province"],
+            "region": study_area["region"],
+            "coordinates": {
+                "decimal_degrees": coords,
+                "latitude": study_area["latitude"],
+                "longitude": study_area["longitude"],
+                "geodetic_datum": datum,
+            },
+            "elevation_m": study_area["elevation_m"],
+            "citation_line": (
+                f"{lake} ({alt}), {study_area['state_province']}, {study_area['country']} "
+                f"({coords}, {datum})"
+            ),
+            "map_image": study_area["map_image"],
+        },
+        "citation": {
+            "atlas_attribution": _atlas_attribution(),
+        },
+    }
+
+
+def _build_llms_txt(study_area: dict[str, Any]) -> str:
     lines = [
         "# Kinneret Algae Atlas — LLM Discovery",
         "",
         "Canonical URL: https://kinneret-algae-atlas.org/",
         "Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.",
         "",
+        *_study_area_block(study_area),
         "Primary resources:",
         "- Site index: https://kinneret-algae-atlas.org/#algae-index",
         "- About: https://kinneret-algae-atlas.org/about/",
@@ -131,6 +197,7 @@ def _build_llms_txt() -> str:
         "- https://kinneret-algae-atlas.org/api/species.json",
         "- https://kinneret-algae-atlas.org/api/species/{slug}.json",
         "- https://kinneret-algae-atlas.org/api/glossary.json",
+        "- https://kinneret-algae-atlas.org/api/atlas.json",
         "",
         "Compact corpus:",
         "- https://kinneret-algae-atlas.org/llms-full.txt",
@@ -288,7 +355,11 @@ def _build_glossary_api(glossary: dict[str, Any]) -> dict[str, Any]:
     }
 
 
-def _build_llms_full(records_with_slugs: list[tuple[dict[str, Any], str]], glossary: dict[str, Any]) -> str:
+def _build_llms_full(
+    records_with_slugs: list[tuple[dict[str, Any], str]],
+    glossary: dict[str, Any],
+    study_area: dict[str, Any],
+) -> str:
     lines = [
         "# Kinneret Algae Atlas — Compact LLM Corpus",
         "",
@@ -296,6 +367,7 @@ def _build_llms_full(records_with_slugs: list[tuple[dict[str, Any], str]], gloss
         f"Atlas URL: {ATLAS_CITE_URL}",
         f"Atlas attribution: {_atlas_attribution()}",
         "",
+        *_study_area_block(study_area),
         "Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.",
         "",
         f"Species count: {len(records_with_slugs)}",
@@ -313,6 +385,7 @@ def _build_llms_full(records_with_slugs: list[tuple[dict[str, Any], str]], gloss
 def _write_static_api_files(
     records_with_slugs: list[tuple[dict[str, Any], str]],
     glossary: dict[str, Any],
+    study_area: dict[str, Any],
     out_dir: Path,
 ) -> None:
     api_dir = out_dir / "api"
@@ -340,8 +413,13 @@ def _write_static_api_files(
         json.dumps(_build_glossary_api(glossary), ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
+    (api_dir / "atlas.json").write_text(
+        json.dumps(_build_atlas_api(study_area), ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     print(f"Wrote {(api_dir / 'species.json')}")
     print(f"Wrote {(api_dir / 'glossary.json')}")
+    print(f"Wrote {(api_dir / 'atlas.json')}")
     print(f"Wrote {len(records_with_slugs)} files under {species_dir}")
 
 
@@ -371,14 +449,15 @@ def main() -> None:
 
     records = json.loads(algae_path.read_text(encoding="utf-8"))
     glossary = json.loads(glossary_path.read_text(encoding="utf-8"))
+    study_area = _load_study_area()
     records_with_slugs = _records_with_unique_slugs(records)
 
-    llms_txt = _build_llms_txt()
-    llms_full = _build_llms_full(records_with_slugs, glossary)
+    llms_txt = _build_llms_txt(study_area)
+    llms_full = _build_llms_full(records_with_slugs, glossary, study_area)
 
     (out_dir / "llms.txt").write_text(llms_txt, encoding="utf-8")
     (out_dir / "llms-full.txt").write_text(llms_full, encoding="utf-8")
-    _write_static_api_files(records_with_slugs, glossary, out_dir)
+    _write_static_api_files(records_with_slugs, glossary, study_area, out_dir)
     print(f"Wrote {(out_dir / 'llms.txt')}")
     print(f"Wrote {(out_dir / 'llms-full.txt')}")
 

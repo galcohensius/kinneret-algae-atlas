@@ -3,6 +3,15 @@
 Canonical URL: https://kinneret-algae-atlas.org/
 Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
 
+## Study area
+- Lake: Lake Kinneret (Sea of Galilee)
+- Country: Israel (IL)
+- Administrative area: Northern District
+- Region: northeastern Israel, Jordan Rift Valley
+- Coordinates (lake center): 32.833° N, 35.583° E (WGS84)
+- Elevation (approx.): -209 m
+- OpenStreetMap: https://www.openstreetmap.org/?mlat=32.833&mlon=35.583#map=10/32.833/35.583
+
 Primary resources:
 - Site index: https://kinneret-algae-atlas.org/#algae-index
 - About: https://kinneret-algae-atlas.org/about/
@@ -15,6 +24,7 @@ Machine-readable endpoints:
 - https://kinneret-algae-atlas.org/api/species.json
 - https://kinneret-algae-atlas.org/api/species/{slug}.json
 - https://kinneret-algae-atlas.org/api/glossary.json
+- https://kinneret-algae-atlas.org/api/atlas.json
 
 Compact corpus:
 - https://kinneret-algae-atlas.org/llms-full.txt

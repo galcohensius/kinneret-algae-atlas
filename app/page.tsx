@@ -6,7 +6,9 @@ import {
 } from "../lib/collaborator-profile-links";
 import { publicAssetPath } from "../lib/public-path";
 import AlgaeIndexSectionShell from "./components/AlgaeIndexSectionShell";
+import StudyAreaBlock from "./components/StudyAreaBlock";
 import { buildAtlasAttribution } from "../lib/cite-this-record";
+import { buildStudyAreaJsonLd } from "../lib/study-area";
 
 export const metadata: Metadata = {
   title: "Kinneret Algae Atlas",
@@ -41,6 +43,7 @@ export default function HomePage() {
     },
     citation: buildAtlasAttribution(),
     license: "All rights reserved",
+    spatialCoverage: buildStudyAreaJsonLd(),
     sameAs: [
       "https://kinneret-algae-atlas.org/about/",
       "https://kinneret-algae-atlas.org/llms.txt",
@@ -99,6 +102,7 @@ export default function HomePage() {
               Israel Oceanographic and Limnological Research
             </a>
           </p>
+          <StudyAreaBlock variant="compact" />
         </div>
       </div>
 

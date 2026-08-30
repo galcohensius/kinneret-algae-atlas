@@ -7,6 +7,8 @@ import {
   TAMAR_ZOHARY_PROFILE_URL,
 } from "../../lib/collaborator-profile-links";
 import { fixScientificTypography } from "../../lib/scientific-text";
+import StudyAreaBlock from "../components/StudyAreaBlock";
+import { buildStudyAreaJsonLd } from "../../lib/study-area";
 
 export const metadata: Metadata = {
   title: "About – Kinneret Algae Atlas",
@@ -41,6 +43,7 @@ export default async function AboutPage() {
       "@type": "Dataset",
       name: "Kinneret Algae Atlas",
       url: "https://kinneret-algae-atlas.org/",
+      spatialCoverage: buildStudyAreaJsonLd(),
     },
   };
 
@@ -65,6 +68,8 @@ export default async function AboutPage() {
       </header>
 
       <article className="card algae-profile about-card">
+        <StudyAreaBlock variant="full" />
+
         {about.sections.our_vision.length > 0 ? (
           <section className="narrative-block" aria-labelledby="vision-heading">
             <h2 id="vision-heading" className="section-heading">

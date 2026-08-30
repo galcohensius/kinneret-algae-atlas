@@ -4,6 +4,15 @@ Scope: compact machine-readable digest of species and glossary data.
 Atlas URL: https://kinneret-algae-atlas.org/
 Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
 
+## Study area
+- Lake: Lake Kinneret (Sea of Galilee)
+- Country: Israel (IL)
+- Administrative area: Northern District
+- Region: northeastern Israel, Jordan Rift Valley
+- Coordinates (lake center): 32.833° N, 35.583° E (WGS84)
+- Elevation (approx.): -209 m
+- OpenStreetMap: https://www.openstreetmap.org/?mlat=32.833&mlon=35.583#map=10/32.833/35.583
+
 Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.
 
 Species count: 41

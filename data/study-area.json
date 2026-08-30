@@ -1,0 +1,13 @@
+{
+  "lake_name": "Lake Kinneret",
+  "alternate_name": "Sea of Galilee",
+  "country": "Israel",
+  "country_code": "IL",
+  "state_province": "Northern District",
+  "region": "northeastern Israel, Jordan Rift Valley",
+  "latitude": 32.833,
+  "longitude": 35.583,
+  "geodetic_datum": "WGS84",
+  "elevation_m": -209,
+  "map_image": "/study-area-map.svg"
+}

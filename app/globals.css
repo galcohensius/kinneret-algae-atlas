@@ -260,6 +260,76 @@ main.home {
   opacity: 0.92;
 }
 
+.home-hero-location {
+  margin: 0.85rem 0 0;
+  max-width: 40rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+  line-height: 1.45;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+}
+
+/* Study area (About page + shared) */
+.study-area-full {
+  margin-bottom: 1.35rem;
+}
+
+.study-area-full-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+  gap: 1.25rem 1.5rem;
+  align-items: start;
+}
+
+.study-area-map-figure {
+  margin: 0;
+}
+
+.study-area-map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface-subtle);
+}
+
+.study-area-map-caption {
+  margin-top: 0.45rem;
+  font-size: 0.84rem;
+  line-height: 1.35;
+}
+
+.study-area-coords {
+  margin: 0.85rem 0 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.study-area-coords dt {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.study-area-coords dd {
+  margin: 0.1rem 0 0;
+  color: var(--text-primary);
+}
+
+.study-area-map-links {
+  margin: 0.85rem 0 0;
+}
+
+@media (max-width: 720px) {
+  .study-area-full-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 .home-below-hero {
   max-width: 980px;
   margin: 0 auto;
