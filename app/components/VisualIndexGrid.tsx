@@ -3,6 +3,7 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { VisualIndexCell } from "../../lib/visual-index-layout";
+import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import TaxonItalicName from "./TaxonItalicName";
 
 type VisualIndexGridProps = {
@@ -32,19 +33,24 @@ export default function VisualIndexGrid({ cells }: VisualIndexGridProps) {
   const cols = Math.max(...cells.map((cell) => cell.col)) + 1;
   const rows = Math.max(...cells.map((cell) => cell.row)) + 1;
   const legend = buildPhylumLegend(cells);
+  const legendRows = splitIntoBalancedRows(legend, (entry) => entry.phylum.length);
 
   return (
     <>
       <nav className="visual-index-legend" aria-label="Phylum colors">
-        {legend.map((entry) => (
-          <span
-            key={entry.phylum}
-            className="visual-index-legend-item"
-            style={{ "--phylum-accent": entry.accent } as CSSProperties}
-          >
-            <span className="visual-index-legend-dot" aria-hidden />
-            {entry.phylum}
-          </span>
+        {legendRows.map((row, rowIndex) => (
+          <div key={`legend-row-${rowIndex}`} className="visual-index-legend-row">
+            {row.map((entry) => (
+              <span
+                key={entry.phylum}
+                className="visual-index-legend-item"
+                style={{ "--phylum-accent": entry.accent } as CSSProperties}
+              >
+                <span className="visual-index-legend-dot" aria-hidden />
+                {entry.phylum}
+              </span>
+            ))}
+          </div>
         ))}
       </nav>
 
