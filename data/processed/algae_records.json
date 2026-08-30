@@ -148,6 +148,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Gymnodinium is a classic naked dinoflagellate, the genus includes both photosynthetic and heterotrophic species. The cingulum bisects the cell into two halves, or cones, of somewhat different shapes, the lower or hypocone is a half-sphere, the top or epicone is a bit larger and more conical. With those two cones placed one on top of the other, the cell often looks like a mushroom (Plate 1). Gymnodinium has two unequal flagella, the longitudinal whiplash flagellum extending from the bottom side of the mushroom is seen in Plate 1, the second, transverse flagellum is hidden in the cingulum.",
       "distinctive_attributes": "",
       "ecology": "Several species of naked dinoflagellates of the genera Gymnodinium and Glenodinium occur in Lake Kinneret, they were never identified to species level. Of those, a small species of Gymnodinium (cell volume ~ 500 μm³) is most common. The data presented here are for this small Gymnodinium sp. Gymnodinium never forms blooms but occurs quite often at low cell densities, usually < 50 cells/mL, contributing to total phytoplankton biomass up to a maximum of ~3 g m⁻² (Fig. 1). It can appear in the plankton at all times of the year but is more abundant during stratification, from May to December, with highest cell abundances occur in June-July (Fig. 2). Cell size fluctuates seasonally, with largest cell-size in summer (Fig. 2). This is different from the cell size of other Kinneret dinoflagellates, that is usually largest in winter. The reason could be that more than a single species has been counted as Gymnodinium, with a larger species more common in summer.\nHigher cell abundances are associated with water temperatures > 23°C (Fig. 3). Gymnodinium occurs over the full range of conductivity, Cl, Ca, alkalinity, SO₄, Si, water levels and solar radiation levels recorded in the lake, mostly when transparency is high (at lower ambient concentrations of chlorophyll a, and when euphotic zone depth is around 10 m. It is more abundant when ammonium and nitrate are low (Fig. 3), but DON is abundant (not shown), suggesting potential heterotrophic nutrition in addition to photosynthesis by a mixotroph.",
@@ -454,7 +455,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -530,6 +531,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. Cells of C. furcoides are slender, longer than wide, strongly dorsiventrally flattened. Epitheca gradually tapers into a long apical horn without shoulders. Hypotheca broad and short, drawn out into 2 (occasionally 1 or 3) posterior horns of different lengths. Nucleus prominent in epicone. Cysts are smooth-walled, triangular, with one narrow horn extending from each corner. Ceratium furcoides is narrower and slenderer than the more common C. hirundinella.",
       "distinctive_attributes": "",
       "ecology": "Historically this species was identified as Ceratium hirundinella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.",
@@ -825,7 +827,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -973,6 +975,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "The genus Ceratium has a distinct shape of a central body from which several horns extend to opposite directions, making the cell longer than wide (Plate 1), this shape can’t be mistaken with any other genus occurring in Lake Kinneret. In C. hirundinella, all or part of the horns are usually colorless, the gold-pigmented protoplast (living part of the cell) is concentrated in the cell’s center. Small red bodies are often present. The helmet shaped epitheca narrows from just above the cingulum gradually forming a long horn. The cingulum is slightly narrow. The body of the hypotheca is broad and short. It is divided into a varying number of posterior horns, usually 3, sometimes only 1. The central or median horn formed by the antapical plates is the longest. Chloroplasts are numerous and oval shaped. Occasionally, the longitudinal flagellum can be observed microscopically (Plate 1a). Resting cysts of C. hirundinella are triangular with one horn on each end (Plate 1c).\nSeveral morphotypes of this species occur in Lake Kinneret, the most common is var. robustum Bachman, shaped like the Eifel Tower (Plate 1a,b). Other forms found in L Kinneret are forma gracile, type scoticum and the variety furcoides, now allocated to a separate species, C. furcoides.",
       "distinctive_attributes": "Too large to be grazed by Kinneret zooplankton. Nutrirtion is autotrophic and holozoic by means of pseudopodia.",
       "ecology": "C. hirundinella is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cells mL⁻¹ (Fig. 1), and <10% contribution to total biomass. An exception was a spring bloom in 2010, a year when Peridinium gatunense didn’t bloom. Cell concentration in the epilimnion reached 50 cells mL-¹ on14 March 2010, with biomass of 150 g m⁻² (Fig. 1), contributing > 70% to total biomass.\nThis species appears in the water column in January, peaks between March and June, then disappear from the water till next spring (Fig. 2). The mean abundance of C. hirundinella has increased since the mid 1990s and tends to be higher in years with no or moderate intensity Peridinium gatunense blooms.\nVegetative and sexual reproduction is known.\nCeratium cysts commonly appear in the Kinneret plankton in March and April (Fig. 2). They are more numerous than cysts of Peridinium gatunense even though the abundance of Ceratium vegetative cells is an order of magnitude lower than that of Peridinium.",
@@ -1421,7 +1424,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -1591,6 +1594,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Diplopsalis acuta is the only known heterotrophic (non-pigmented) thecate dinoflagellate in the lake’s pelagic waters. Its shape is distinct, of a half sphere with a Chinese hat on top of it (Plate 1). Another feature differentiating it from other Kinneret dinoflagellates is that its diameter at the cingulum is greater than its height. Its thecae are thick and distinct. Chloroplasts and stigma are lacking (heterotrophic). The protoplast is pink. The hypotheca is broadly rounded and slightly flattened dorsiventrally. Plates are not sculptured and have no reticulations.",
       "distinctive_attributes": "the only non-pigmented thecate dinoflagellate of Lake Kinneret.",
       "ecology": "Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL⁻¹ (Fig. 1). It appears in the plankton from November (onset of destratification) to July, with peak abundance in March (Fig. 2), before the lake stratifies, and earlier than most other Kinneret dinoflagellates. It is more common in littoral samples.\nBeing heterotrophic, Diplopsalis acuta is excluded from the computation of total phytoplankton biomass in our routine monitoring.",
@@ -1930,7 +1934,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -2078,6 +2082,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Peridiniopsis borgei is the largest of several species of Peridiniopsis, Durinskia, Glechodinium, Naiadinium, and Parvodinium occurring in the lake. Its shape is almost a sphere (Plate 1), with the cingulum, or girdle, markedly transversing it in the middle. The epitheca is conical with a mouth-like tip at the apex (highest point), the hypotheca is broadly rounded. Sometimes the hypotheca has an extension at its bottom end, like a small “foot”. Chloroplasts are numerous and ribbon shaped.\nDiagnostic features seen with electron microscopy: the sulcus slightly extends into the epitheca, it widens in the hypotheca, it does not reach the antapex (Plate 1 d,e). Sulcal margins sometimes have raised edges.",
       "distinctive_attributes": "mixotroph, heavily grazed by zooplankton, capable of using bicarbonate for photosynthesis.",
       "ecology": "Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The contribution of Peridiniopsis borgei to total biomass was usually < 10% but on rare occasions it reached 40%. Peridiniopsis borgei shows an annual cycle also of cell size (Fig. 2b). Its cellular volume increases during the bloom increase phase, reaching maximum size (diameter: 37 μm, volume: 31,000 μm³) before reaching peak cell abundance, then cell size declines to a minimum (diameter: 27 μm, volume: 11,000 μm³) at about the same time as the minimum cell abundance. Peridiniopsis borgei is potentially capable of using HCO₃ as C source for photosynthesis when pH is high and CO₂ availability low (Berman-Frank et al. 1994). It is an important food source for zooplankton in late spring, after the decline of Peridinium gatunense (Zohary et al. 1994).",
@@ -2557,7 +2562,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -2846,6 +2851,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Cells shape is of half sphere (hypotheca) + half cone (epitheca) of about the same diameter above it, with the cingulum traversing the cell where they connect (Plate 1). The apex of the epitheca has a “mouth” shape. Two to six spines extend from the hypotheca. The sulcus barely extends into the epitheca, it widens along the hypotheca where it does not reach the antapex. Red bodies often seen (Plate 1a-c). Resting cysts (not shown) are oval with a thick cell wall. Parvodinium cunningtonii is like P. elpatiewskyi in size and shape, and they tend to co-occur. See here our tips for distinguishing between these two species under the light microscope.",
       "distinctive_attributes": "Co-occurs with Parvodinium elpatiewskyi",
       "ecology": "Parvodinium cunningtonii is one of the species always present in the water column, contributing to total phytoplankton biomass up to 20-30%. The species was less abundant before the mid 1990s, when Peridinium gatunense bloomed every year, but has become more abundant with the decline of Peridinium gatunense in recent years (Fig. 1). Parvodinium cunningtonii tends to co-occur with Ps elpatiewskyi (Figs. 1, 2).\nParvodinium cunningtonii abundance shows a typical annual cycle of population increase in March, peak in April and decline in May-June, with low abundances but continuous presence throughout the summer (Fig. 3). Cell size fluctuates seasonally, with largest size in winter, smallest in summer (Fig. 3). This feature is shared with several other Kinneret dinoflagellates.",
@@ -3458,7 +3464,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -3579,6 +3585,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "This is a smaller variety of the species named today Parvodinium cunningtonii, with cell shape that is close to a sphere (Plate 1). It is common in the lake. It was named and counted as Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard. Today, the variety is considered a species of its own, Peridiniopsis quinquecuspidata (Hansen and Flaim 2007) – but the organism they describe looks different to what we named Peridiniopsis cunningtonii var quinquecuspidata. As a result, we are uncertain about its correct taxonomic allocation and provide here no further data.",
       "distinctive_attributes": "",
       "ecology": "",
@@ -3810,7 +3817,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -4139,6 +4146,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Cells are pentangular (having 5 sides) or ovoid in shape and slightly flattened dorsi-ventrally. The epitheca is conical, with a “mouth” shaped apex (uppermost end) and is larger than the hypotheca, which is rounded but excavated on the antapex (base, opposite to the apex). The cingulum encircles the cell; the sulcus widens along the hypotheca. Several spines or teeth-like projections are present on the hypotheca, typically some of them are lined up as in a brush (Plate 1). The chloroplasts are numerous and discoid. A red body is occasionally seen (Plate 1). SEM shows that the plates are concave and ornamented by rows of fine punctae, and that the sulcus extends all the way to the concave base of the hypotheca. The resting cysts (not shown) are somewhat oval with a thick cell wall, 36 μm x 28 μm. Parvodinium elpatiewskyi is similar to P. cunningtonii in size and shape, and they tend to co-occur. See here our tips for distinguishing between these two species under the light microscope.",
       "distinctive_attributes": "Co-occurs with P. cunningtonii",
       "ecology": "Parvodinium elpatiewskyi is one of the common algal species in the Kinneret plankton, present in the water at all times of the year. In the absence of Peridinium gatunense in recent years, Parvodinium elpatiewskyi seems to be more abundant than in Peridinium bloom years, although 1999 was an exception (Fig. 1). It always occurs with a second species of the same genus - Parvodinium cunningtonii (Figs. 1, 2). Its abundance has a typical annual cycle with a peak between April and June (Fig. 3). Cell size also fluctuates seasonally, being smaller in summer, larger in winter (Fig. 3). Peak cell size (February-March) precedes peak abundance by 2-3 months. These seasonal cycles are shared with Parvodinium cunningtonii and Peridiniopsis borgei. The multiannual average contribution of this dinoflagellate to total phytoplankton biomass is 3%. Its maximum biomass ever recorded was 53 g m⁻² - 41% of total biomass, in April 2006, a “no-Peridinium” year.",
@@ -4750,7 +4758,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -4899,6 +4907,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Cells are ovoid or spherical and slightly flattened dorsiventrally. The epitheca and hypotheca are both half-sphere shaped, making together a sphere. The cingulum surrounds the cell at its middle (Plates 1a,b, 2). The sulcus is wide and does not reach the antapex. Chloroplasts are numerous, disc or club shaped and parietal. A stigma is present. Vegetative cells are often embedded in mucilage. Thecae are barely seen on live cells therefore it was initially considered to be Glenodinium, a naked dinoflagellate, but the theca is evident after the cell sheds it (Plate 1c, 4).",
       "distinctive_attributes": "",
       "ecology": "Durinskia oculata is rare in the pelagic water, it appeared in our samples in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples. Little is known about this species.",
@@ -5217,7 +5226,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -5376,6 +5385,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Cells are pentangular (having 5 sides) and flattened dorsi-ventrally (Plates 1, 2, 3). The epitheca is conical and apiculate; the hypotheca is excavated at the antapex (its bottom side, Plates 2,3), both thecae are equal in size. The wide, deep cingulum encircles the cell, the sulcus is broad, deep and reaches the antapex. It produces a marked concavity in the antapical profile. Chloroplasts are present. The protoplasm may have a dark granular appearance, such that it is grayish in color. Numerous highly refractive granules may or may not be present in the cell periphery (Plates 1, 2).",
       "distinctive_attributes": "",
       "ecology": "Glochidinium penardiforme is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008 (Fig. 1). Its mean water column abundance never exceeded 20 cells mL⁻¹. Little is known about this species.",
@@ -5654,7 +5664,7 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -5812,6 +5822,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "A medium-sized thecate dinoflagellate. The flagellated cells are oval, with the ventral side pressed in towards the other side as if it received a punch. As a result, the cell perimeter is convex when viewed from one side but concave when viewed from another (Plate 1). This concave/convex form is easily seen on a live, swimming cell: as it turns about its longitudinal axis its profile changes dramatically (Plate 1e). This feature is the most obvious for identifying this species. An additional diagnostic feature is the smooth and rounded cell shape (Plate 1). The epitheca is helmet-shaped and pointed and is approximately the same size as the broadly rounded hypotheca. The chloroplasts are small and discoid or ribbon shaped. A stigma (eyespot) may be present. Resting cysts are spherical with their thick cell wall covered by dense hairlike projections (not shown).",
       "distinctive_attributes": "convex-concave shape, seen when it circles around itself while swimming",
       "ecology": "Naiadinium polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL⁻¹ (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during summer-fall (Fig. 2).",
@@ -6116,7 +6127,1075 @@
     },
     "metadata": {
       "source_file": "1 Dinoflagellates 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
+    }
+  },
+  {
+    "scientific_name": "Aulacoseira granulata (Ehrenberg) Simonsen 1979",
+    "images": [
+      "/algae-images/aulacoseira-granulata/thumbnail-1.jpg",
+      "/algae-images/aulacoseira-granulata/plate-1.jpg",
+      "/algae-images/aulacoseira-granulata/figure-1.png",
+      "/algae-images/aulacoseira-granulata/figure-2.png",
+      "/algae-images/aulacoseira-granulata/figure-3.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Aulacoseira granulata from Lake Kinneret. (a) A typical actively growing planktonic filament, with equal length marginal spines at the perimeter of the end-cell, these are the so-called linking spines which hold adjacent cells together. The chloroplasts fill the entire cells. (b) Auxospore (made by sexual reproduction) at the end of a filament. (c) End cell with apical spines. (d) Aulacoseira granulata (thick filament) next to Aulacoseira granulata var angustissima (thin filament). (e) A filament that was resuspended from the sediments not long before sampling. The chloroplasts are compacted and do not fill the entire cell volume. Photos by Alla Alster.",
+      "Figure 1. Time series of Aulacoseira granulata depth-integrated wet-weight biomass (g m⁻², upper panel) and mean epilimnion cell abundance (cells mL⁻¹, lower panel), Lake Kinneret, 1970-2020.",
+      "Figure 2. Morphological characteristics and seasonal patterns in Aulacoseira granulata: (a) the negative relationship between cell diameter and cell length; (b) frequency distribution for the number of cells per filament; (c) the annual cycle of cell abundance; (d) the annual cycle of the number of cells per filament. Data are for field populations from Lake Kinneret, 1982-2020.",
+      "Fig. 3. Time series of A. granulata biomass and Si concentration (0-10 m average), Lake Kinneret at Sta. A, 1997-2004, showing a sharp decline of Si in winters with a substantial A. granulata bloom, but that Si never declines below 4 mg L⁻¹."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret. (a) A typical actively growing planktonic filament, with equal length marginal spines at the perimeter of the end-cell, these are the so-called linking spines which hold adjacent cells together. The chloroplasts fill the entire cells. (b) Auxospore (made by sexual reproduction) at the end of a filament. (c) End cell with apical spines. (d) ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (thick filament) next to ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "angustissima",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (thin filament). (e) A filament that was resuspended from the sediments not long before sampling. The chloroplasts are compacted and do not fill the entire cell volume. Photos by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " depth-integrated wet-weight biomass (g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", upper panel) and mean epilimnion cell abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", lower panel), Lake Kinneret, 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. Morphological characteristics and seasonal patterns in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ": (a) the negative relationship between cell diameter and cell length; (b) frequency distribution for the number of cells per filament; (c) the annual cycle of cell abundance; (d) the annual cycle of the number of cells per filament. Data are for field populations from Lake Kinneret, 1982-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Fig. 3. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " biomass and Si concentration (0-10 m average), Lake Kinneret at Sta. A, 1997-2004, showing a sharp decline of Si in winters with a substantial ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " bloom, but that Si never declines below 4 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Bacillariophyta",
+      "class": "Melosirophyceae",
+      "order": "Melosirales",
+      "habitat": "plankton, benthos",
+      "previous_name_used": "Melosira granulata (Ehrenberg) Ralfs 1861",
+      "organization": "filamentous",
+      "color": "golden-brown",
+      "cell_shape": "cylinder",
+      "colony_shape": "filament, made of a chain of cylindrical cells",
+      "cell_diameter_d": "9-16 µm (median 12.6) (N=241).",
+      "cell_length_l": "27-37 µm (median 31 µm).",
+      "biovolume_per_cell": "2000-9000 μm³, median: 4000 μm³.",
+      "biovolume_equation": "Cylinder, V = 2 π L (D/2)². Or: regression eqn. based on >500 measurements of both D and L with V computed for a cylinder: V=50.538D¹.⁷¹⁹⁷).",
+      "filament_length": "150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b).",
+      "cells_per_filament": "5-28 (median: 14)",
+      "colony_diameter": "",
+      "cells_per_colony": "",
+      "indicator_species": "oligohalobious-indifferent, alkaliphilous, oligosaprobic to mesosaprobic, inhabits eutrophic waters. The variety angustissima is an indicator of greater water eutrophication. It is oligohalobious-indifferent, alkaliphilous, mesosaprobic (Ehrlich 1995).",
+      "morphological_features": "A filamentous centric diatom, with cylinder-shaped cells, interconnected by means of delicate spines in one cell that interlock into matching grooves in the neighboring cell. The spines can be seen in end-cells (Plate 1a, c) and are diagnostic of the species. Each cell is made of two valves that fit into each other like the two parts of a petri dish. In lake Kinneret, cell diameter ranges 9-16 µm (median 11.5), cell length 27-37 µm (median 31 µm); the filaments are straight, with 5-28 cells per filament. The valves are decorated with rows of areoles (perforations), 9-15 such rows (= striae) per 10 µm, straight or slightly curved (Plate 1b, c, e). Straight and curved striae may occur together on adjacent cells of a single filament or even in one cell. The areoles vary greatly in size. In Lake Kinneret the filaments are always straight, the curled morphotype is absent.\nUnder light microscope A. granulata frustules are usually seen in girdle view, showing the long, straight filaments (Plate 1). Aulacoseira granulata is polymorphic regarding size, diameter/length ratio and striation. Strongly silicified forms with coarse, irregularly spaced areoles are termed Aulacoseira (Melosira) granulata var. valida (Hustedt) Simonsen 1979. In Lake Kinneret intermediate forms between this variety and the nominate are frequent (Ehrlich 1995).\nVegetative cell division is the asexual, ordinary way of Aulacoseira granulata reproduction. Cell division results in progressively smaller frustules until a specific minimum valve diameter is attained. A reestablishment of the maximum size is then achieved by sexual reproduction with auxospore (zygote) formation (Plate 1b; O’Farrel et al. 2001). The huge auxospore of A. granulata “resets” the cell size for the next growing season. In Lake Kinneret Aulacoseira granulata auxospores were seen rarely.\nA variety of the species found in Lake Kinneret is Aulacoseira granulata var. angustissima (O.F. Müller) Simonsen 1979 (Plate 1d). This variety differs from the nominate variety by its very narrow valve. Cell diameter < 4 µm (as opposed to 9-16 µm in the nominate variety), cell length 12 – 25 µm, diameter/length ratio is about 1/5 – 1/8 (Ehrlich 1995).",
+      "distinctive_attributes": "filamentous, abundant in winter, sharp spines at end cell.",
+      "ecology": "The species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis (Jan-Feb) when it occupies the entire 40 m water column. Major A. granulata blooms were recorded in Jan-Feb 1988; 1999; 2001 (Fig. 1). This is the only species in Lake Kinneret besides Peridinium gatunense that ever-reaches depth-integrated biomass exceeding 100 g m⁻² and on 3 occasions > 250 g m⁻² (Fig. 1). In recent years its abundance has declined.\nThe strongly silicified forms of Lake Kinneret A. granulata require optimal turbulence to maintain them in the fully mixed water column in winter (Ehrlich 1995). Once stratification sets off in March, they sink to the sediments and rest there in a dormant form with compressed chloroplasts (Plate 1e) till resuspended with turnover in the following winter (Fig. 2c). A strong negative relationship exists between cell-diameter and cell-length (R² = 0.37 on field material; Fig. 2a). Filament size is highly variable; most filaments will contain between 5 and 28 cells (Fig. 2b). Filament size shows a strong seasonal pattern, being largest in winter, smallest in summer (Fig. 2d). Zohary et al. (2017) hypothesized that this seasonal pattern may be to reduce sinking rates in winter.\nThe need for Si for its frustule is apparent: during blooms the Si concentration in the epilimnion of Lake Kinneret declines dramatically (Fig. 3). But it never declines below 4 mg L⁻¹, suggesting that another factor causes the bloom decline.\nInternationally, this cosmopolitan species is widespread in the phytoplankton of lakes, ponds, reservoirs and rivers. It is typical of carbonate-rich, moderately eutrophic to eutrophic waters. It is used as indicator species of water with relatively low salts concentrations, pH < 9, and high silica concentrations. The variety angustissima is rare in Kinneret compared to the nominate variety. It is known to be mesosaprobic, common in more eutrophic water bodies than the nominate variety, indicator of water eutrophication.",
+      "physiological_features": "Monitoring data (cell abundance, chlorophyll concentrations, primary production) from bloom events, when A. granulata biomass contributed > 60% of total phytoplankton biomass, were used by Yacobi & Zohary (2010) to derive the physiological parameters given in Table 1. Notably, A. granulata exhibited particularly low assimilation numbers and long turnover times. This species grows relatively slowly.\nTable 1. Physiological parameters for A. granulata based on field measurements\n\nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 26 ± 11 | 87\nAssimilation number (at depth of max photosynthesis), mgC mg Chl⁻¹ h⁻¹ | 2.0 ± 0.4 | 7\nTurnover time, d | 1.5 ± 0.7 | 7",
+      "environmental_conditions": "A. granulata is an indicator species of water with low concentrations of salts, pH less than 9 (Talling and Talling 1965) and high silica concentration (Kilham 1971). This species occurs in Lake Kinneret when water temperatures are below 18⁰C, at short wave radiation levels <200 Watt m⁻², at conductivity > 1000 μS cm⁻¹ and Cl⁻ concentrations spanning most of the range observed but not exceeding 300 mg L⁻¹. Its higher abundances occurred at Ca concentration >45 mg L⁻¹, alkalinity >120 mg CaCO₃ L⁻¹, at the higher levels of total dissolved phosphorus, nitrate and ammonium recorded in the lake, and at pH below 8.8.",
+      "further_reading": "Ehrlich A. 1995. Atlas of the inland-water diatom flora of Israel. Flora Palaestina. Jerusalem: The Israeli Academy of Sciences and Humanities, 166 pp.\nKilham P. 1971. A hypothesis concerning silica and the freshwater planktonic diatoms. Limnology and oceanography. 16:8-10.\nKilham SS, Kilham P. 1975. Melosira granulata (Ehr.) Ralfs: morphology and ecology of a cosmopolitan freshwater diatom. Internationale Vereinigung für theoretische und angewandte Limnologie: Verhandlungen. 19(4):2716-21.\nO’Farrell I, Tell G, Podlejski A. 2001. Morphological variability of Aulacoseira granulata (Her.) Simonsen (Bacillariophyceae) in the Lower Parana River (Argentina). Limnology 2: 65-71.\nPollingher U. 1986. Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nTalling JF, Talling IB. 1965. The chemical composition of African lake waters. Internationale Revue der gesamten Hydrobiologie und Hydrographie. 50: 421-463.\nYacobi YZ, Zohary T. 2010. Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L. 2017. Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7(2): 200-209."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Bacillariophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Melosirophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Melosirales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton, benthos",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "previous_name_used": [
+        {
+          "text": "Melosira",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "(Ehrenberg)",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ralfs",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1861",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      "organization": [
+        {
+          "text": "filamentous",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "golden-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "cylinder",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "colony_shape": [
+        {
+          "text": "filament, made of a chain of cylindrical cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "9-16 µm (median 12.6) (N=241).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "27-37 µm (median 31 µm).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "2000-9000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 4000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Cylinder, V = 2 π L (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Or: regression eqn. based on >500 measurements of both D and L with V computed for a cylinder: V=50.538D",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1.7197",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ").",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "filament_length": [
+        {
+          "text": "150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cells_per_filament": [
+        {
+          "text": "5-28 (median: 14)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "indicator_species": [
+        {
+          "text": "oligohalobious-indifferent, alkaliphilous, oligosaprobic to mesosaprobic, inhabits eutrophic waters. The variety ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "angustissima",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is an indicator of greater water eutrophication. It is oligohalobious-indifferent, alkaliphilous, mesosaprobic (Ehrlich 1995).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "A filamentous centric diatom, with cylinder-shaped cells, interconnected by means of delicate spines in one cell that interlock into matching grooves in the neighboring cell. The spines can be seen in end-cells (Plate 1a, c) and are diagnostic of the species. Each cell is made of two valves that fit into each other like the two parts of a petri dish. In lake Kinneret, cell diameter ranges 9-16 µm (median 11.5), cell length 27-37 µm (median 31 µm); the filaments are straight, with 5-28 cells per filament. The valves are decorated with rows of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "areoles",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (perforations), 9-15 such rows (= ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "striae",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ") per 10 µm, straight or slightly curved (Plate 1b, c, e). Straight and curved striae may occur together on adjacent cells of a single filament or even in one cell. The areoles vary greatly in size. In Lake Kinneret the filaments are always straight, the curled morphotype is absent.\nUnder light microscope ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " frustules are usually seen in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "girdle",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "view",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ", showing the long, straight filaments (Plate 1). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is polymorphic regarding size, diameter/length ratio and striation. Strongly silicified forms with coarse, irregularly spaced areoles are termed ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "(Melosira)",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " var. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "valida",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Hustedt) Simonsen 1979. In Lake Kinneret intermediate forms between this variety and the nominate are frequent (Ehrlich 1995).\nVegetative cell division is the asexual, ordinary way of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " reproduction. Cell division results in progressively smaller frustules until a specific minimum valve diameter is attained. A reestablishment of the maximum size is then achieved by sexual reproduction with ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "auxospore",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (zygote) formation (Plate 1b; O’Farrel et al. 2001). The huge auxospore of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " “resets” the cell size for the next growing season. In Lake Kinneret ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " auxospores were seen rarely.\nA variety of the species found in Lake Kinneret is Aulacoseira granulata var. angustissima (O.F. Müller) Simonsen 1979 (Plate 1d). This variety differs from the nominate variety by its very narrow valve. Cell diameter < 4 µm (as opposed to 9-16 µm in the nominate variety), cell length 12 – 25 µm, diameter/length ratio is about 1/5 – 1/8 (Ehrlich 1995).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "filamentous, abundant in winter, sharp spines at end cell.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "The species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis (Jan-Feb) when it occupies the entire 40 m water column. Major ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " blooms were recorded in Jan-Feb 1988; 1999; 2001 (Fig. 1). This is the only species in Lake Kinneret besides ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " that ever-reaches depth-integrated biomass exceeding 100 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " and on 3 occasions > 250 g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " (Fig. 1). In recent years its abundance has declined.\nThe strongly silicified forms of Lake Kinneret ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " require optimal turbulence to maintain them in the fully mixed water column in winter (Ehrlich 1995). Once stratification sets off in March, they sink to the sediments and rest there in a dormant form with compressed chloroplasts (Plate 1e) till resuspended with turnover in the following winter (Fig. 2c). A strong negative relationship exists between cell-diameter and cell-length (R",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = 0.37 on field material; Fig. 2a). Filament size is highly variable; most filaments will contain between 5 and 28 cells (Fig. 2b). Filament size shows a strong seasonal pattern, being largest in winter, smallest in summer (Fig. 2d). Zohary et al. (2017) hypothesized that this seasonal pattern may be to reduce sinking rates in winter.\nThe need for Si for its frustule is apparent: during blooms the Si concentration in the epilimnion of Lake Kinneret declines dramatically (Fig. 3). But it never declines below 4 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", suggesting that another factor causes the bloom decline.\nInternationally, this cosmopolitan species is widespread in the phytoplankton of lakes, ponds, reservoirs and rivers. It is typical of carbonate-rich, moderately eutrophic to eutrophic waters. It is used as indicator species of water with relatively low salts concentrations, pH < 9, and high silica concentrations. The variety ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "angustissima",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is rare in Kinneret compared to the nominate variety. It is known to be mesosaprobic, common in more eutrophic water bodies than the nominate variety, indicator of water eutrophication.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "physiological_features": [
+        {
+          "text": "Monitoring data (cell abundance, chlorophyll concentrations, primary production) from bloom events, when ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " biomass contributed > 60% of total phytoplankton biomass, were used by Yacobi & Zohary (2010) to derive the physiological parameters given in Table 1. Notably, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " exhibited particularly low assimilation numbers and long turnover times. This species grows relatively slowly.\n",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Table",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1.",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " Physiological parameters for ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " based on field measurements\n\nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 26 ± 11 | 87\nAssimilation number (at depth of max photosynthesis), mgC mg Chl⁻¹ h⁻¹ | 2.0 ± 0.4 | 7\nTurnover time, d | 1.5 ± 0.7 | 7",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is an indicator species of water with low concentrations of salts, pH less than 9 (Talling and Talling 1965) and high silica concentration (Kilham 1971). This species occurs in Lake Kinneret when water temperatures are below 18",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "0",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "C, at short wave radiation levels <200 Watt m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", at conductivity > 1000 μS cm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " and Cl",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " concentrations spanning most of the range observed but not exceeding 300 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ". Its higher abundances occurred at Ca concentration >45 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", alkalinity >120 mg CaCO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", at the higher levels of total dissolved phosphorus, nitrate and ammonium recorded in the lake, and at pH below 8.8.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Ehrlich A. 1995. Atlas of the inland-water diatom flora of Israel. Flora Palaestina",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " Jerusalem: The Israeli Academy of Sciences and Humanities, 166 pp.\nKilham P. 1971. A hypothesis concerning silica and the freshwater planktonic diatoms. Limnology and oceanography. 16:8-10.\nKilham SS, Kilham P. 1975. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Melosira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Ehr.) Ralfs: morphology and ecology of a cosmopolitan freshwater diatom. Internationale Vereinigung für theoretische und angewandte Limnologie: Verhandlungen. 19(4):2716-21.\nO’Farrell I, Tell G, Podlejski A. 2001. Morphological variability of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Her.) Simonsen (Bacillariophyceae) in the Lower Parana River (Argentina). Limnology 2: 65-71.\nPollingher U. 1986. Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nTalling JF, Talling IB. 1965. The chemical composition of African lake waters. Internationale Revue der gesamten Hydrobiologie und Hydrographie. 50: 421-463.\nYacobi YZ, Zohary T. 2010. Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L. 2017. Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Inland",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Waters",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " 7(2): 200-209.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Aulacoseira granulata.docx",
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -6284,6 +7363,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Bangia colonies made of filament aggregation are visible to the naked eye and distinct by their reddish-dark brown to black color (Plate 1). The colonies are attached to surfaces by down-growing , usually in dense purple-black to rust-colored clumps. The individual filaments are gelatinous, unbranched. Young filaments are uniseriate (Plate 2), old filaments are multiseriate (Plate 3). A star-shaped chloroplast with a prominent pyrenoid in the center of each cell is typical of the genus. So are cell elongations (Plate 4) occurring from intercalary cells, they are formed as a step in the reproductive cycle (Gargiulo et al. 2001).",
       "distinctive_attributes": "filaments form dark fur-like fleecy mats at air-water interface in shallow waters (few cm) close to the waterline. The species is found in both marine and fresh waters.",
       "ecology": "Seasonally occurring as a fleecy mat in the eulittoral zone of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in following years. Since it is absent in the pelagial, where samples for our monitoring program are collected, we have no abundance nor size data for it.\nMost Rhodophytes are marine. Only ~ 3% of the ca. 5000 species of Rhodophytes occur in freshwaters, Bangia atropurpurea is one of them.",
@@ -6468,7 +7548,7 @@
     },
     "metadata": {
       "source_file": "Bangia atropurpurea 2026-06-03.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -6519,6 +7599,7 @@
       "cells_per_filament": "",
       "colony_diameter": "~50-200 μm",
       "cells_per_colony": "hundreds to thousands",
+      "indicator_species": "",
       "morphological_features": "Colonies with many closely packed tiny (0.4-1.0 μm diameter) spherical cells with no gas vacuoles, irregularly arranged and embedded in mucilage with indistinct outer margin. Rare. Identified only to genus level.",
       "distinctive_attributes": "spherical colonies of densely packed minute-size cells.",
       "ecology": "Rare in Lake Kinneret, we have no ecological data for this genus.",
@@ -6675,7 +7756,7 @@
     },
     "metadata": {
       "source_file": "Chroococcales 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -6794,6 +7875,7 @@
       "cells_per_filament": "",
       "colony_diameter": "up to 1-2 cm",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "large brown to olive-green colonies made of densely packed ovoid cells, floating in shallow water near the lake’s waterline. Colonies can reach diameter >1 cm and are seen with a naked eye. Prokaryotic cells with no individual sheath.",
       "distinctive_attributes": "colonial, forming masses in ankle-deep water near shore",
       "ecology": "Initial development is benthic, but mature colonies float to the surface and are wind-driven to form shoreline accumulations. Masses of this species were seen in Lake Kinneret only once during Summer-fall 2008. At other times, occasionally a few colonies are observed.",
@@ -6903,7 +7985,7 @@
     },
     "metadata": {
       "source_file": "Chroococcales 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -7073,6 +8155,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "4-30",
+      "indicator_species": "",
       "morphological_features": "Colonies of 4-30 spherical cells that remain attached after cell division (Plate 1, 2). With wide colorless translucent gelatinous slime (Plates 1, 2). With envelopes around cells. No gas vacuoles.",
       "distinctive_attributes": "rare.",
       "ecology": "The species rarely occurs (Fig. 1).",
@@ -7234,7 +8317,7 @@
     },
     "metadata": {
       "source_file": "Chroococcales 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -7384,6 +8467,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Individual spherical blue-green colored cells are surrounded by a wide colorless homogeneous sheath (Plate 1). The species is polymorphic with numerous morpho-and ecotypes. Chroococcus turgidus and Chroococcus minutus are difficult to tell apart. The most notable difference is that the sheath of C. minutus is usually homogeneous with no layering while that of C. turgidus is laminated (layered). Furthermore, on average C. minutus cells are smaller, but both species show large size variation and the sizes overlap.",
       "distinctive_attributes": "single spherical cells or couples of hemispherical cells after cell division, surrounded by a wide colorless homogeneous sheath.",
       "ecology": "An alanlyst effect is apparent in the long-term record of C. minutus and C. turgidus shown in Fig. 1. In particular, it is evident that Analyst 5 (1996-2012) counted more C. minutus whereas Analyst 6 (2013-2020) counted more C. turgidus, probably due to different taxon names given to the same organisms. Chroococcus minutus / turgidus has always been common in lake Kinneret, with long periods of thousands of (mostly 2-celled) colonies mL⁻¹ (Fig. 1). Prior to the decline of Peridinium gatunense and appearance of nostocalean cyanobacteria in the mid 1990s Chroococcus was the most abundant Kinneret cyanobacterial taxon. Peak abundance is from August to October (Fig. 2). Like several other Kinneret species, cells are smaller in summer, larger in winter (Fig. 2).",
@@ -7832,7 +8916,7 @@
     },
     "metadata": {
       "source_file": "Chroococcales 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -8011,6 +9095,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Individual spherical cells are surrounded by hyaline lamellate sheaths. After division the original sheath remains around each new cell but an additional sheath envelopes both cells, now hemispherical in their shape, that remain attached (Plates 1). The cells are strongly colored, the envelopes are colorless but distinct (Plate 2). Chroococcus turgidus and Chroococcus minutus are difficult to tell apart. The only easy to notice difference is that the envelopes of C. turgidus are laminated (layered), whereas that of C. minutus typically show no layering. On average, C. minutus cells are smaller, but both species show large size variation and the sizes overlap.",
       "distinctive_attributes": "single strongly pigmented cells or more often two cells, or occasionally small colonies of few cells in distinct, thick colorless envelope(s).",
       "ecology": "An alanlyst effect is apparent in the long-term record of C. minutus and C. turgidus shown in Fig. 1. In particular, it is evident that Analyst 5 (1996-2012) counted more C. minutus whereas Analyst 6 (2013-2020) counted more C. turgidus, probably due to different taxon names given to the same organisms. Chroococcus minutus / turgidus has always been common in lake Kinneret, with long periods of thousands of (mostly 2-celled) colonies mL⁻¹ (Fig. 1). Prior to the decline of Peridinium gatunense and appearance of nostocalean cyanobacteria in the mid 1990s Chroococcus was the most abundant Kinneret cyanobacterial taxon. Like several other Kinneret species, cells are smaller in summer, larger in winter (Fig. 2).",
@@ -8453,7 +9538,7 @@
     },
     "metadata": {
       "source_file": "Chroococcales 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -8652,6 +9737,7 @@
       "cells_per_filament": "",
       "colony_diameter": "10-100 μm",
       "cells_per_colony": "2 to hundreds",
+      "indicator_species": "",
       "morphological_features": "The tiny (0.4-1.0 μm diameter) spherical cells of this colonial cyanobacterium have no gas vesicles. They are arranged in short chains of 2-8 cells that are embedded in colorless structureless mucilage to form small colonies (Plates 1, 2). This is the smallest-cell species being counted in our routine monitoring. The amount of mucilage and distance between chains are highly variable.",
       "distinctive_attributes": "tiny colonies of minute cells, extremely abundant from June to August. No cyanotoxins are known for this species.",
       "ecology": "Cyanodictyon imperfectum is routinely counted since 1996, forming blooms of thousands of colonies per mL (Fig. 1) with hundreds of thousands of cells per mL (not shown) from June to August each year, with a distinct peak in July. But due to the tiny cell size the contribution of Cyanodictyon to total phytoplankton biomass, even during those blooms, never exceeds a few percent. Particularly intense blooms of this species were recorded in 2000, 2003, 2007 and nearly every year since 2015 (Fig. 1). Colony size shows a strong seasonal cycle with larger colonies (more cells per colony) in winter, when the species abundance is low, and smaller colonies in summer when abundance is high (Fig. 2). This seasonal pattern of being larger in winter, at lower water temperatures, is shared with many other Kinneret phytoplankton species (Zohary et al. 2017).",
@@ -9003,7 +10089,7 @@
     },
     "metadata": {
       "source_file": "Chroococcales 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -9133,6 +10219,7 @@
       "cells_per_filament": "",
       "colony_diameter": "up to 70 µm",
       "cells_per_colony": "40-100 (600)",
+      "indicator_species": "",
       "morphological_features": "Colonies are made of small (~2 µm diameter) more or less spherical or slightly elongate cells, organized in radiating uniseriate rows extending from the center to all directions, embedded in colorless mucilage (Plate 1). Cells with gas vesicles. Can be distinguished from Microcystis spp. by the smaller cell size and organization in radiating rows. Cell size varies only slightly, OK not to measure cell size routinely, to use a median value instead.",
       "distinctive_attributes": "colonies of spherical cells organized in radiating uniseriate rows extending from the center. No cyanotoxins are known for this species.",
       "ecology": "Radiocystis geminata has always been a member of the Kinneret plankton, although there were periods during which it was nearly absent (e,g, 1993-1995; 2005-2006; 2011-2014) but then it returned (Fig. 1). When present, it is often very abundant, with hundreds of colonies made of thousands of cells per mL (Fig. 1). Peak abundance is in summer, from July to September, while in winter the species is practically absent (Fig. 2). The number of cells in a colony shows a weak seasonal cycle, with larger colonies in winter and smaller in summer (Fig. 2). The variation in cell size is minor (Fig. 2).",
@@ -9349,7 +10436,7 @@
     },
     "metadata": {
       "source_file": "Chroococcales 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -9656,6 +10743,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Relatively large free-swimming cells, dark brown in color, shaped as an elongated monad with two equal or subequal length flagella extending out of a gullet (longitudinal groove on the cell surface) in the upper part of the cell. The bottom end is rounded. With 1 or 2 chloroplasts per cell located at the cell periphery, phycoerythrin as the principal accessory pigment (giving the deep brown color), and a single large and central pyrenoid. Cryptomonas is differentiated from Plagioselmis in being the larger cryptophyte found in Lake Kinneret. Three species of Cryptomonas occur in the lake, including C. ovata, C. marssonii and C. curvata (Plates 1-3). Dues to the similar size and limited diagnostic characters, for the routine monitoring the 3 species have all been counted under a single code for the genus Cryptomonas, and the data presented in figures 1-4 are for the genus.",
       "distinctive_attributes": "heavily grazed by zooplankton, contains phycoerythrin (like cyanobacteria), its chloroplast fluoresces orange when observed under epifluorescent microscope. Always present in the water column of Lake Kinneret, with peak biomass in winter and another peak in summer. Distinctively larger size than Plagioselmis. Probably mixotrophic.",
       "ecology": "Cryptopmonas spp. are always present in the water column (Fig. 1), with higher abundances in winter (Dec to Feb) but also in summer (Jul - Sep) and lowest in April-May, at the time of the Peridinium bloom (Fig. 2). It is possible that the two seasonal abundance peaks are due to two different Cryptopmonas species. Abundance is usually < 250 cells/mL (Fig. 2). A noteworthy exception occurred during the cold winter of 1992, when the Peridinium bloom developed later than usual and Cryptomonas abundance in February exceeded 1000/mL (Fig. 1). Overall, when Peridinium gatunense is abundant in the water, Cryptomonas spp. abundance is low, and visa-versa (Fig. 3). Cell size of Cryptomonas varies seasonally, with larger cell volume in winter (Fig. 4a).",
@@ -10138,7 +11226,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -10367,6 +11455,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "A small drop-shaped monad with two slightly unequal flagella (Plate 1), this is the smaller cryptophyte of Lake Kinneret. A single red (contains phycoerythrin) chloroplast is dorsal with ventral margins. A central large pyrenoid surrounded by a thick starch sheath of 2 hemispherical halves. The nucleus is posterior. Its chloroplast fluoresces orange (autofluorescence) when observed under an epifluorescent microscope.",
       "distinctive_attributes": "heavily grazed by zooplankton, contains phycoerythrin (like cyanobacteria) – fluoresces orange when stained with DAPI. Always present in the water column. Distinctively smaller size than Cryptomonas. Probably mixotrophic.",
       "ecology": "Plagioselmis nannoplanctica is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter holomixis (Dec. to Mar.), lowest in summer (Jun. to Oct.; Fig. 2). Indifferent to increasing salinity (or chloride conc.; Fig. 3). Like Cryptomonas, it is present in both the pelagic and littoral zones and is highly grazed by zooplankton.",
@@ -10729,7 +11818,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -10937,6 +12026,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "One of the larger flagellated species of Lake Kinneret (after the dinoflagellates), and the only one with four flagella (Plate 1). It is heart-shaped (=cordiform, as its name) or cherry-shaped, ellipsoidal or almost spherical, never twisted, with four equal-length flagella emerging out of a pit or depression in the upper side of the cell (Plate 1). It has a red eyespot or stigma, and a single cup-shaped chloroplast usually with a basal pyrenoid. Two contractile vacuoles are present near the base of the flagella.",
       "distinctive_attributes": "relatively large cell size with 4 flagella.",
       "ecology": "Tetraselmis cordiformis usually occurs in the Kinneret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomass not more than 4 g m⁻² (not shown). It is more abundant between February and April and again from August till November but absent in July and rare in December and January (Fig. 2). A technician-effect is noted in our data: a technician was replaced on 1 Jan 2013. It is evident in Fig. 1 that the newer technician counted this species more frequently than the previous one.\nOn a single unusual occasion in February 1996 Tetraselmis cordiformis formed an intense bloom that colored the entire lake with a strong grass-green color. This intense bloom disappeared within a few days and was missed by our weekly sampling, but photographic records remain (Plate 2). On another occasion, a massive bloom of this flagellated alga took place in a series of experimental tanks behind the Kinneret Limnological Institute. Again, the bloom was short lived and disappeared within days.\nA distinct annual cycle of cell size is evident from our data: cells are smaller size in summer, larger in winter (Figs. 2, 3A). Cell size correlates well with water temperature (R²=0.48, Fig. 3B).",
@@ -11344,7 +12434,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -11562,6 +12652,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "This species comprises the smallest (3 - 5 μm diameter), but very common flagellates of Lake Kinneret (Plate 1). Cells have a bilateral symmetry, spheroid shape except when dividing (Plate 2A), with 2 flagella of equal or near-equal length, 1 haptonema (Plate 2B), 2 chloroplasts, 2 contractile vacuoles, and a stigma (Plates 1, 2). The flagella are much longer than the cell. During swimming, one flagellum is directed forward, whereas the other trails behind. The haptonema that may be mistaken for a third flagellum, is a thread-like organelle used for attachment and catching prey. It is thinner and more delicate than the flagella and rarely seen under a light microscope, because it often contracts and hides against the cell wall. During cell division there is a stage when the two daughter cells are still contained within the same cell wall thus the cell seems particularly wide and with 4 flagella (Plate 2A).\nSkuja, who first described Erkenia subaequiciliata in 1948, didn’t see its haptonema and placed it with the Chrysophyta, although in all other attributes it resembled the haptophyte Chrysochromulina parva Lackey 1939. With more advanced microscopy it was shown in the 1960s that the two species are identical, and the earlier name, Chrysochromulina parva, took over.",
       "distinctive_attributes": "A tiny flagellated species that is seasonally extremely abundant (thousands of cells/mL), probably mixotroph, heavily grazed by zooplankton.",
       "ecology": "Chrysochromulina parva is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL⁻¹; an all-time maximum of 11,900 cells mL⁻¹ was recorded in April 2019 (Fig. 1). Despite their high abundance, their minute size makes their contribution to total phytoplankton biomass usually negligible, on average only 0.4%. The max biomass contribution ever recorded was 7.9 g m⁻² and 13% of the total biomass. Chrysochromulina parva is abundant in winter – spring, it is rare or completely absent from the water column in the summer and re-appears in the fall (Fig. 2).",
@@ -12006,7 +13097,7 @@
     },
     "metadata": {
       "source_file": "Cryptophytes 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -12275,6 +13366,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Euglena is the most common euglenoid genus worldwide. It is a large, flagellated algae with a distinct orange-red eyespot. The motile cells are ovoid-cylindrical to narrowly fusiform, frequently with a narrow, elongated posterior caudus (“tail”), and may change their shape while they move under the microscope. Euglena has a single flagellum used for swimming, and a second very short flagellum that is not seen under a light microscope. The cells can turn spherical by an end-to-end contraction, followed by a quick expansion. They are also capable of actively contorting themselves in a variety of shapes through peristaltic-like motions, as well as twisting around an apical axis. The orange to red colored eyespot, noticeable near the base of the flagellum, is much larger than the eyespot in flagellated green algae. A single vacuole, capable of contracting, may be conspicuous when it is expanded. The shape, number and position of the chloroplasts along with the presence or absence of pyrenoids were traditionally key taxonomic features along with cell size and apical shapes. In apical view Euglena is circular although at times it could be twisted.\nSeveral species of Euglena occur in Lake Kinneret, including E. proxima (Plates 1, 2) and E. acus (Plate 3, now considered a synonym of Lepocynclis acus). In our routine counts all species of Euglena are aggregated into a single counting code.",
       "distinctive_attributes": "large, flagellated cells (only 1 flagellum can be seen), mixotroph, changes shape continuously. Distinct red eyespot.",
       "ecology": "Euglena spp. are rare in the Kinneret pelagic zone, but occasionally abundant in littoral samples, especially if collected from niches with high concentrations of organic matter, such as shallow waters among seasonally inundated shore vegetation, or temporary shore-pools created in bottom depressions with decomposing vegetation when the water level declines at a fast pace. In Agmon Wetlands in the peat soils of the Hula valley, Euglena species (as well as other Euglenoids) are much more abundant than in Kinneret. Occasionally, the toxin-producing Euglena sanguinea forms massive blooms that paint the surface water red (Plate 4). The distinctive euglenoid pigment astaxanthin is responsible for the distinctive red color.",
@@ -12702,7 +13794,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -12763,6 +13855,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Phacus species (see thumbnail photo) are single-celled, grass-colored, leaf-shaped (i.e. flat and very thin), often twisted, with straight or slightly bent sharply pointed caudus (or ‘tail’). It is striped, all the stripes start at the flagellum opening and end in the ’tail’ covering the cell like longitude lines covering a globe. With numerous discoid chloroplasts, no pyrenoids. Phacus does not change its shape like Euglena does. The cells are motile, their locomotion flagellum emerges from a canal at the top side of the cell. A second flagellum is very short and not emerging, cannot be seen by light microscopy. A red eyespot is usually seen near the top of the cell. One or two large paramylon (a carbohydrate) storage body is often seen as an elongated white body.",
       "distinctive_attributes": "elegant swimming, striped and thin like a sheet of paper, with distinct eyespot and a sharply pointed tail. Rare – never counted in our samples.",
       "ecology": "Phacus species are extremely rare in Lake Kinneret. They have never been abundant enough to be counted in our routine monitoring, but occasionally a specimen is found in the littoral zone, usually of the species Phacus longicauda (Plate 1) or Phacus caudatus.",
@@ -12941,7 +14034,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -13149,6 +14242,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Trachelomonas cells are like those of Euglena, except that they are completely encased in a mucilaginous rigid case outside the plasma membrane called lorica (Plates 1, 2). This lorica is highly mineralized and dark brown in color (Plates 2, 3). The cell is flagellated and capable of euglenoid movement within the lorica as well as swimming out of it (Plate 2). The lorica has a bottle-neck-shaped opening through which the flagellum emerges and through which the cell may swim out for cell division or when conditions require, then may swim back into it.\nTrachelomonas is distinguishable from other spherical unicellular species occurring in Lake Kinneret by the bottle-neck-shaped opening of its lorica, at the top part of the cell (arrow in Plate 1). This structure can be seen only when the cell is observed from the side, not when it is observed from above or below.",
       "distinctive_attributes": "Near-spherical flagellated cells encapsulated in a brown lorica with a distinctive “mouth” opening through which the locomotive flagellum emerges.",
       "ecology": "Trachelomonas is the only euglenoid seen in Kinneret pelagic plankton samples quite often, although this genus too is never abundant, maximum cell density ever recorded was ~50/mL (Fig. 1). Trachelomonas can be viewed at any time of the year but tends to appear more often in spring (March-April) and rarely from August to October (Fig. 2). Cell size varies only slightly, with no distinct annual pattern (Fig. 2).",
@@ -13434,7 +14528,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -13520,6 +14614,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Colacium species are sessile although free-swimming after cell division. The sessile cells are attached to their biotic substrate (zooplankton in Lake Kinneret) with a branching mucilaginous stalk. Several cells are attached each to one of the branches of the stalk to form loosely bounds colonies of several cells. Motile cells look like Euglena: they are naked, with a single emergent flagellum, an eyespot and numerous disk-like chloroplasts. On settling the cells shed their flagellum, rarely divide, and secrete a mucilaginous sheath.",
       "distinctive_attributes": "attached to zooplankton, mostly copepods and rotifers.",
       "ecology": "Colacium colonies are occasionally seen as epibionts on zooplankton, especially on copepods and rotifers (Plate 1). Since they are sessile, they are not observed in our phytoplankton samples, were never counted and we have no corresponding environmental data.",
@@ -13621,7 +14716,7 @@
     },
     "metadata": {
       "source_file": "Euglenophytes 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -13691,6 +14786,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "many",
+      "indicator_species": "",
       "morphological_features": "Multicellular mucilaginous, amorphous colonies, made of spherical, subspherical or hemispherical (after division) cells in multiple envelopes that do not copy exactly the cell shape. Cells with homogeneous blue-green content (Plates 1, 2). Cells and their immediate groups are surrounded by lamellated envelopes.",
       "distinctive_attributes": "Rare species of multicellular mucilaginous, amorphous colonies, made of spherical to ovoid cells in multiple envelopes, seen macroscopically as small blue-green aggregates.",
       "ecology": "A rare benthic species that occurs only in the littoral zone. When present, colonies are large enough to be seen macroscopically as strongly colored blue-green aggregates on stones in the shallow water.",
@@ -13834,7 +14930,7 @@
     },
     "metadata": {
       "source_file": "Gloeocapsa 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -14022,6 +15118,7 @@
       "cells_per_filament": "",
       "colony_diameter": "0.1–1.5 cm",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Hemispherical colonies that are attached to plant material, (usually branches of Phragmites australis, but not exclusively) several mm or even cm in diameter, i.e. large enough to be seen with a naked eye (Plate 1). The colonies are khaki-brown, hard and slimy to the touch, they peel off the stems with slight pressure. Young colonies distant from other ones on the same stem are mostly perfect hemispheres (Plate 1A); when in masses the colonies form a continuous mantle with rounded margins (Plate 1B). Colonies are made of thin, long cylindrical filaments, embedded in firm mucilage. The filaments adhere to a common center, giving the colony a shape of half a pompon (Plate 2). The individual filaments, also called trichomes, begin with a spherical heterocyte located towards the inside of the colony (Plate 3); the apical cell is conical and ends in a hair that extends beyond the sheath (Plate 4). Akinetes are cylindrical, smooth, colorless and are placed next to the basal heterocyst.",
       "distinctive_attributes": "half pompon-shaped hemispherical epiphytic colonies made of many filaments embedded in firm mucilage.",
       "ecology": "With climate change, the relative importance of benthic cyanobacteria is mounting. With increased amplitude of water level fluctuations in Lake Kinneret, littoral zone habitats are changing as well as their biota (Zohary and Gasith 2025). Following a rapid rise of lake water level due to a high rainfall winter, in summer 2020 Gloeotrichia pisum appeared as an abundant epiphyte on recently inundated stems of Phragmites australis. This was the first time this species was recorded to occur in Israel (Lang-Yona et al. 2023).\nGenomic community composition analysis revealed that G. pisum colonies host a diverse microbial community of microalgae, cyanobacteriophyta, bacteria, and archaea with a conserved and characteristic taxonomic composition.",
@@ -14416,7 +15513,7 @@
     },
     "metadata": {
       "source_file": "Gloeotrichia 2026-08-06.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -14613,6 +15710,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "4-32 cells, rarely much larger",
+      "indicator_species": "",
       "morphological_features": "colonies of spherical or ovoid cells, hemispherical after division, organized in parallel rows to form a single-layered flat sheet of cells (Plate 1). Often with several subcolonies remaining together. Cells are embedded in colorless mucilage that is unseen unless stained (Plate 2). Species in this genus divide in only two directions, creating the characteristic grid-like pattern. Reproduction is by disintegration of colonies. Several different morphological types occur in Lake Kinneret, their allocation to species is not always clear and needs confirmation by DNA sequencing. The most common species occurring in Kinneret is a species of very small cells, < 1 µm diameter, historically referred to as M. minima Beck 1897. But according to Komarek and Anagnostidis (1999) M. minima is subaerophytic on wet rocks mainly in mountains, rarely metaphytic in clear mountain springs. They suggest that similrly looking planktonic types may belong to another species, M. warmingiana Lagerheim 1883. So it is possible that our common Merismopedia was misidentified at the species level. Other species occurring in Lake Kinneret include M. punctata (Plate 1), M. glauca (Plate 2), and two additional unidentified to species level (Plates 3, 4).",
       "distinctive_attributes": "sheet-shaped flat colonies of minute spherical to ovoid cells, organized in parallel lines connected by mucilage to form a single-layered rectangular colony. Often the only genus occurring at depth > 20 m",
       "ecology": "Merismopedia spp. are abundant in winter, from November to January (Fig. 1, 2), when they are found in hundreds of colonies/mL (Fig. 1) and thousands of cells/mL (Fig. 2) at all depths of the water column. But due to the minute cell size their contribution to total phytoplankton biomass is negligible. In summer, when the lake is stratified, Merismopedia spp. are absent in the epilimnion although they may be found in the metalimnion, near or below the thermocline. Often they are the only phytoplankton taxon found in samples from 30 m depth.",
@@ -14891,7 +15989,7 @@
     },
     "metadata": {
       "source_file": "Merismopedia 2026-07-26.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -14899,18 +15997,37 @@
     "images": [
       "/algae-images/microcystis/thumbnail-1.jpg",
       "/algae-images/microcystis/plate-1.jpg",
-      "/algae-images/microcystis/plate-2.jpg"
+      "/algae-images/microcystis/plate-2.jpg",
+      "/algae-images/microcystis/plate-3.jpg"
     ],
     "image_captions": [
       "",
-      "Plate 1. Surface scum of “green Microcystis” from Lake Kinneret. Photo by Tamar Zohary, April 2009.",
-      "Plate 2. Surface scum of “brown Microcystis” from Lake Kinneret. Photo by Tamar Zohary, March 2006."
+      "Plate 1. The four main species of Microcystis occurring in Lake Kinneret. Photos: Alla Alster.",
+      "Plate 2. Surface scum of “green Microcystis” from Lake Kinneret. Photo by Tamar Zohary, April 2009.",
+      "Plate 3. Surface scum of “brown Microcystis” from Lake Kinneret. Photo by Tamar Zohary, March 2006."
     ],
     "image_captions_rich": [
       [],
       [
         {
-          "text": "Plate 1. Surface scum of “green ",
+          "text": "Plate 1. The four main species of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Microcystis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " occurring in Lake Kinneret. Photos: Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. Surface scum of “green ",
           "italic": false,
           "bold": false
         },
@@ -14927,7 +16044,7 @@
       ],
       [
         {
-          "text": "Plate 2. Surface scum of “brown ",
+          "text": "Plate 3. Surface scum of “brown ",
           "italic": false,
           "bold": false
         },
@@ -14961,9 +16078,10 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
-      "morphological_features": "In Lake Kinneret, several species of the genus Microcystis are important components of the winter plankton. They are colonial species made of small (3-7 µm) spherical cells (hemispherical after cell division) that contain gas vesicles, and are organized sparsely or densely in a common colorless mucilage, with no envelopes around individual cells. The colonies vary in shape from spherical to oval or elongate, lobate to irregular, in some species clathrate (with holes). Cell division is by binary fission in 3 perpendicular planes in regular cubic arrangement. Reproduction is by disintegration of colonies into small clusters of cells or even into single cells. The species occurring in Lake Kinneret are M. aeruginosa, M. botrys, M. flos-aquae, M. viridis and M. wesenbergii, each will be dealt separately. Here we address issues common to all those species.\nCounting Microcystis cells is a difficult task, especially for M. flos-aquae and M. aeruginosa, colonies that are often made of hundreds to thousands of densely packed small-sized cells. For accurate cell counts it is essential to break the colonies into single cells (e.g. with a sonicator or high-speed blender) that can be dispersed evenly on a counting slide. But the procedure damages other more delicate species, and once broken into single cells it is impossible to count colonies and identify the cells to species level. We count Microcystis without breaking the colonies and take into consideration that the cell counts and therefore also biomass estimates for Microcystis species have a large measurement error.",
+      "indicator_species": "",
+      "morphological_features": "In Lake Kinneret, several species of the genus Microcystis are important components of the winter plankton. They are colonial species made of small (3-7 µm) spherical cells (hemispherical after cell division) that contain gas vesicles, and are organized sparsely or densely in a common colorless mucilage, with no envelopes around individual cells. The colonies vary in shape from spherical to oval or elongate, lobate to irregular, in some species clathrate (with holes). Cell division is by binary fission in 3 perpendicular planes in regular cubic arrangement. Reproduction is by disintegration of colonies into small clusters of cells or even into single cells. The species occurring in Lake Kinneret are M. aeruginosa, M. botrys, M. flos-aquae and M. wesenbergii (Plate 1), each will be dealt separately. Here we address issues common to all those species.\nCounting Microcystis cells is a difficult task, especially for M. flos-aquae and M. aeruginosa, colonies that are often made of hundreds to thousands of densely packed small-sized cells. For accurate cell counts it is essential to break the colonies into single cells (e.g. with a sonicator or high-speed blender) that can be dispersed evenly on a counting slide. But once broken into single cells it is impossible to count colonies and identify the cells to species level. Furthermore, the procedure damages other more delicate species present in the sample, causing a measurement error. We count Microcystis without breaking the colonies and take into consideration that the cell counts and therefore also biomass estimates for Microcystis species have a large measurement error.",
       "distinctive_attributes": "abundant in Lake Kinneret in winter. During calm weather Microcystis colonies float to create a strongly pigmented (green or brown) surface film/scum, visible to the naked eye.",
-      "ecology": "While in general “cyanobacteria blooms like it hot” (Paerl and Huisman 2008), and this is typical for Microcystis around the world, in Lake Kinneret Microcystis blooms occur in winter-spring, mostly between January and March. The main reason for this may be in Kinneret winter temperatures are warm enough, whereas in summer nutrient availability is low, and N-fixing cyanobacteria dominate. When abundant, on calm days, Microcystis floats to form green or brown surface films (Plates 1, 2). Those surface films are blown by gentle winds and accumulate near lee shores to create visible surface scums.\nMicrocystis blooms were reported to occur in Kinneret already in the 1960s, before the onset of the Kinneret monitoring program, with an exceptionally intensive bloom reported in winter 1964 (Pollingher and Kimor 1970; Serruya and Pollingher 1971, Pollingher 1978) and again in 1995 (Zohary 2004).",
+      "ecology": "While in general “cyanobacteria blooms like it hot” (Paerl and Huisman 2008), and this is typical for Microcystis around the world, in Lake Kinneret Microcystis blooms occur in winter-spring, mostly between January and March. The main reason for this may be in Kinneret winter temperatures are warm enough, whereas in summer nutrient availability is low, and N-fixing cyanobacteria dominate. When abundant, on calm days, Microcystis floats to form green or brown surface films (Plates 2, 3). Those surface films are blown by gentle winds and accumulate near lee shores to create visible surface scums.\nMicrocystis blooms were reported to occur in Kinneret already in the 1960s, before the onset of the Kinneret monitoring program, with an exceptionally intensive bloom reported in winter 1964 (Pollingher and Kimor 1970; Serruya and Pollingher 1971, Pollingher 1978) and again in 1995 (Zohary 2004).",
       "physiological_features": "Microcystis contains gas vacuoles and can float and regulate its position in the water column. It floats to the surface where it dominates the light climate, suppressing competition from other species. When it has sufficient N, P and light it forms excessive biomasses that accumulate to form thick surface scums, in extreme cases - ‘hyperscums’ (Zohary and Breen 1989) that rot at the surface releasing pungent odors. But these occur in hypertrophic lakes, not in Kinneret.\nMicrocystis produces microcystins – hepato-toxins that are toxic to humans and other mammals. Hence, it is a health hazard, and its blooms impair water quality.\nA studied characteristic of Microcystis in Lake Kinneret is its allelopathic interactions with Peridinium gatunense: when abundant, Microcystis inhibits the growth and photosynthesis of P. gatunense, and visa-versa – when the dinoflagellate is abundant, it inhibits Microcystis (Sukenik et al. 2002; Vardi et al. 2002).\nWhen cultured in liquid medium, Microcystis colonies break to single cells.",
       "environmental_conditions": "",
       "further_reading": "Hadas O, Kaplan A, Sukenik A. 2015. Long-term changes in cyanobacteria populations in Lake Kinneret (Sea of Galilee), Israel: an eco-physiological outlook. Life. 5(1):418-431.\nHozumi A, Ostrovsky I, Sukenik A, Gildor H. 2020. Turbulence regulation of Microcystis surface scum formation and dispersion during a cyanobacteria bloom event. Inland Waters 10(1):51-70.\nKaplan-Levy RN, Alster-Gloukhovski A, Benyamini Y, Zohary T. 2016. Lake Kinneret phytoplankton: integrating classical and molecular taxonomy. Hydrobiologia 764(1):283-302.\nNinio S, Lupo A, Viner-Mozzini Y, Zohary T, Sukenik A. (2020). Microcystis bloom dynamics – multiannual shift in species dominance. Harmful Algae 92: 101710. DOI: 10.1016/j.hal.2019.101710.\nPaerl HW, Huisman J. 2008. Blooms like it hot. Science. 320(5872):57-58.\nPollingher U, Kimor B. 1970. Seasonal and bathymetric changes in the composition of the phytoplankton populations of Lake Tiberias based on biomass estimations during the years 1964-1967. State of Israel, Ministry of Agriculture, Department of Fisheries, Sea Fisheries Research Station.\nPollingher U. 1978. Annual pattern of algal succession. In: Serruya C. (Ed). Lake Kinneret, vol 32, Monographiae Biologicae. Junk. Hugue pp 243-246.\nSchweitzer‐Natan O, Ofek‐Lalzar M, Sher D, Sukenik A. 2023. The microbial community spatially varies during a Microcystis bloom event in Lake Kinneret. Freshwater Biology. 68(2):349-63.\nSchweitzer-Natan O, Ofek-Lalzar M, Sher D, Sukenik A. 2019. Particle-associated microbial community in a subtropical lake during thermal mixing and phytoplankton succession. Frontiers in Microbiology 10:2142.\nSerruya C, Pollingher U. 1971. An attempt at forecasting the Peridinium bloom in Lake Kinneret (Lake Tiberias). Internationale Vereinigung für Theoretische und Angewandte Limnologie: Mitteilungen. 19(1):277-91.\nSukenik A, Eshkol R, Livne A, Hadas O, Rom M, Tchernov D, Vardi A, Kaplan A. 2002. Inhibition of growth and photosynthesis of the dinoflagellate Peridinium gatunense by Microcystis sp.(cyanobacteria): a novel allelopathic mechanism. Limnology and Oceanography. 47:1656-1663.\nSukenik A, Hadas O, Kaplan A. 2014. Chap. 12. Cyanobacteria. In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 213-226. Springer, Heidelberg.\nSukenik A, Kaplan A. 2021. Cyanobacterial harmful algal blooms in aquatic ecosystems: A comprehensive outlook on current and emerging mitigation and control approaches. Microorganisms. 9(7):1472.\nSukenik A, Rosin C, Teltsch B, Banker R, Carmeli S. 1998. Toxins from cyanobacteria and their potential impact on water quality of Lake Kinneret, Israel. Israel journal of plant sciences. 46(2):109-15.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A. 2002. Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current biology. 12:1767-72.\nWeisthal Algor S, Sukenik A, Carmeli S. 2024. Sulfated Aeruginosins from Lake Kinneret: Microcystis Bloom, Isolation, Structure Elucidation, and Biological Activity. Marine Drugs. 22(9):389.\nZohary T. 2004. Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwater Biology 49: 1355-1371.\nZohary T., Breen CM. 1989. Environmental factors favoring the formation of Microcystis aeruginosa hyperscums in a hypertrophic lake. Hydrobiologia 178: 179192."
@@ -15092,27 +16210,7 @@
           "bold": false
         },
         {
-          "text": "flos-aquae,",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "M.",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "viridis",
+          "text": "flos-aquae",
           "italic": true,
           "bold": false
         },
@@ -15132,7 +16230,17 @@
           "bold": false
         },
         {
-          "text": "wesenbergii,",
+          "text": "wesenbergii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Plate 1)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ",",
           "italic": true,
           "bold": false
         },
@@ -15187,7 +16295,7 @@
           "bold": false
         },
         {
-          "text": ", colonies that are often made of hundreds to thousands of densely packed small-sized cells. For accurate cell counts it is essential to break the colonies into single cells (e.g. with a sonicator or high-speed blender) that can be dispersed evenly on a counting slide. But the procedure damages other more delicate species, and once broken into single cells it is impossible to count colonies and identify the cells to species level. We count ",
+          "text": ", colonies that are often made of hundreds to thousands of densely packed small-sized cells. For accurate cell counts it is essential to break the colonies into single cells (e.g. with a sonicator or high-speed blender) that can be dispersed evenly on a counting slide. But once broken into single cells it is impossible to count colonies and identify the cells to species level. Furthermore, the procedure damages other more delicate species present in the sample, causing a measurement error. We count ",
           "italic": false,
           "bold": false
         },
@@ -15261,7 +16369,7 @@
           "bold": false
         },
         {
-          "text": " floats to form green or brown surface films (Plates 1, 2). Those surface films are blown by gentle winds and accumulate near lee shores to create visible surface scums.\n",
+          "text": " floats to form green or brown surface films (Plates 2, 3). Those surface films are blown by gentle winds and accumulate near lee shores to create visible surface scums.\n",
           "italic": false,
           "bold": false
         },
@@ -15537,8 +16645,8 @@
       ]
     },
     "metadata": {
-      "source_file": "Microcystis 2026-08-22.docx",
-      "record_updated": "2026-08-23"
+      "source_file": "Microcystis 2026-08-23.docx",
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -15757,6 +16865,7 @@
       "cells_per_filament": "",
       "colony_diameter": "100-1000 μm",
       "cells_per_colony": "20-10000; median: 300",
+      "indicator_species": "",
       "morphological_features": "Colonies are net-like (clathrate) with distinct holes or composed of sub-colonies with irregular outline, made of hundreds of irregularly gathered cells situated in a fine, colorless and diffuse mucilage with refractive outline. Cells are spherical, ~3 µm in diameter, with gas vesicles. Division in 3 perpendicular planes with a return development to the original spherical cell shape before the next succeeding division. Polymorphic species.",
       "distinctive_attributes": "irregular 3D colony shape often with holes. Spherical cells, similar size or slightly larger than those of M. flos-aquae. Usually, both species co-occur.",
       "ecology": "The species was not counted prior to 1996, when Analyst 5 began counting, probably because earlier M. aeruginosa and M. flos-aquae were considered as two forma of a single species. Microcystis aeruginosa is less abundant than M. flos-aquae, but usually both species co-occur (Plate 2). The species is more abundant from March to June, less abundant from August to December (Fig. 2a). The number of cells per colony ranges 100-2000 with no distinct annual pattern (Fig. 2b). Cell volume is usually 10-40 µm³, being largest from May to August (Fig. 2c).",
@@ -16122,7 +17231,7 @@
     },
     "metadata": {
       "source_file": "Microcystis aeruginosa 2026-08-22.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -16272,6 +17381,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "30-5000; median: 200",
+      "indicator_species": "",
       "morphological_features": "Colonies are more or less spherical, with cells irregularly and densely aggregated in mucilaginous, spherical groups. The Mucilage around conlinies is wide, gelatinous, fine, colorless, sometimes indistinct, enveloping clusters of cells and extending distinctly beyond their margin, usually by more than 1 µm. Spherical cells with gas vacuoles, ~5 µm in diameter.",
       "distinctive_attributes": "A less abundant but common species of Microcystis in Lake Kinneret.",
       "ecology": "Microcystis botrys is common in Lake Kinneret (Fig. 1), but never dominant and never formed a major bloom. The species was recorded from 1974-1981, then not recorded at all until 2007 (Fig. 1). The species is more abundant from May to July, less abundant from August till February (Fig. 2a). Colony size shows a different annual pattern, with more cells per colony in winter-spring, less in summer (Fig. 2b). Cell volume varies only slightly such that after two full years of measurements a fixed volume per cell was applied for biomass calculations (not shown).",
@@ -16544,7 +17654,7 @@
     },
     "metadata": {
       "source_file": "Microcystis botrys 2026-08-22.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -16773,6 +17883,7 @@
       "cells_per_filament": "",
       "colony_diameter": "~ 50 -200 µm",
       "cells_per_colony": "30-7000; median 270",
+      "indicator_species": "",
       "morphological_features": "Colonies microscopic, compact, more or less shperical, globose, obovoid, ellipsoidal or irregular in outline but not lobate, with densely packed spherical cells, only rarely with indistinct holes in older colonies. Mucilage indistinct, fine, hyaline, colorless, diffluent. Mucilaginous envelopes not exceediing the margin of the colony by more than 1 µm. Cells spherical or hemispherical when dividing, with aerotopes, ~3 µm in diameter. This species may be confused with young colonies of Microcystis aeruginosa. It differes by its more compact arrangement of cells without holes in mature colonies and propagation of colonies (McGregor et al. 2007).",
       "distinctive_attributes": "the main bloom-forming species of Microcystis in Lake Kinneret",
       "ecology": "Microcystis flos-aquae is the most abundant species of the genus Microcystis occurring in Lake Kinneret. It formed a major bloom in 1964 (Pollingher and Kimor 1970), was a common component of the phytoplankton in the early 1970s (Fig. 1), then declined to near-elimination during the 1980s and early 1990s (Fig. 1). Then, in January 1995 it re-appeared in huge abundance, forming a major bloom, several months after the first ever bloom of Aphanizomenon ovalisporum in fall 1994. Since then it is present in the water most of the time, at higher abundance in winter (Fig. 2), especially in winters when Peridinium gatunense fails to bloom. On calm winter days it floats to the surface where it accumulates and forms thin films that are pushed by gentle winds to lee shores where it accumulates.",
@@ -17169,7 +18280,7 @@
     },
     "metadata": {
       "source_file": "Microcystis flos aquae 2026-08-22.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -17328,6 +18439,7 @@
       "cells_per_filament": "",
       "colony_diameter": "~ 100 µm",
       "cells_per_colony": "10-300",
+      "indicator_species": "",
       "morphological_features": "Colonies initially spherical, later becoming elongate and intensely lobate, often with distinct holes (clathrate), sometimes composed of sub-colonies. Cells arranged randomly, rarely densely, in young colonies near the colony surface. The cells are embedded in colorless smooth, firm distinctly delimited mucilage with a refractive outline. The gelatinous margin extends 3-6 µm beyond the cell aggregations. Cells are spherical with distinct aerotopes, 4.0-7.5 µm in diameter (McGregor et al. 2007).",
       "distinctive_attributes": "The largest-cell species of the chroococcalean cyanobacteria in Lake Kinneret. Colonies of spherical cells embedded in mucilage that has a distinct border. Common but never dominant.",
       "ecology": "Microcystis wesenbergii is one of the common species of cyanobacteria occurring in Lake Kinneret (Fig. 1), but it was never dominant and never recorded to form a bloom (although it did form a bloom in Agmon-Hula in summer 2020). The species was not counted at all prior to 1998. It was more abundant during 1998-2009 than later (Fig. 1). Since July 2024 and until writing this item (July 2026) it was not found at all in Kinneret phytoplankton samples (data not shown). The species is more abundant from March to August, less abundant in winter (Fig. 2a). Colony size shows the opposite annual cycle, with more cells per colony in winter, less in summer (Fig. 2b). Cell volume fluctuates within a small amplitude around the multiannual median of 90 µm³ (Fig. 2c).",
@@ -17680,7 +18792,7 @@
     },
     "metadata": {
       "source_file": "Microcystis wesenbergii 2026-08-22.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -17887,6 +18999,7 @@
       "cells_per_filament": "Usually 1-6 but can be as long as 40 cells",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "A filamentous green alga made of a string of cylinder-shaped cells. Evident symmetry about the longitudinal axis. The single chloroplast fills a third to three-quarters of the cell length, leaving the far ends of the cell colorless (Plate 1). The cross wall connecting two cells is transparent, looks like a clear ring (Plate 1). The chloroplast is ribbon shaped and is axial (lies along the long axis of the cell). As typical for the genus, this ribbon-shaped chloroplast can twist to orient itself to optimal light conditions (Plate 1). Thus, the chloroplast may be in face view, edge view, or twisted. A series of 4-6 pyrenoids (round green organelles) are lined-up along the chloroplast. The nucleus lies at the center of the cell, beside the chloroplast and against the cell wall.\nThe vegetative cell structure of Mougeotia is identical with that of Debarya, the two genera can be distinguished and their species determined microscopically only based on sexual structures, gametangia and zygospores. Conjugation and zygospores were observed only twice, in 2008 and 2009, on Kinneret shore samples. Prior to that, this filamentous alga was mis-identified as Debarya sp. But based on the zygospores (Plate 2), John Hall from the New York Botanical Gardens identified the genus as Mougeotia, suggesting the species may be M. gracillima. To this day we are uncertain about the species identification and refer to our organism as Mougeotia sp. Formation of aplanospores (asexual resting spores) (Plate 3) was observed mostly in littoral populations.\nIn 2017, giant species or variety of Mougeotia appeared in Lake Kinneret, with cell diameter 3-4 times greater and cell length double that of the common Kinneret Mougeotia (Plate 4). But this giant didn’t persist.",
       "distinctive_attributes": "relatively large green filaments (compared with other filamentous species from Lake Kinneret). Unbranching. Ribbon-shaped chloroplast that does not fill entire cell, with circular pyrenoids lined-up along it.",
       "ecology": "Mougeotia is relatively new to Lake Kinneret, in the 1960s, 1970s and 1980 it was never seen. It first appeared in the plankton in May 1998 (Zohary et al. 2019). It was rare until 2004, but since then it is a common component of the Kinneret plankton. It formed intense blooms in 2005, 2006, 2009, 2010, 2012 and 2014, since then its concentrations remained low, with moderate seasonal peaks (Fig. 1A), with maximum cell abundances usually between April and August (Fig. 2), but not always. Initially Mougeotia bloomed only in spring, but in 2009 it was abundant all autumn, and in 2010 it formed a major autumnal bloom extending into early winter 2011 (Fig. 1). The depth-distribution of Mougeotia is usually uniform.\nWe recorded a general trend of increasing Mougeotia cell size over time (Fig. 1B). Filament length is variable and depends on the number of cells per filament. This number didn’t change much over time (Fig. 1C) but shows strong seasonality, with more cells per filament from January to June than during the second half of the year (Fig. 2). Concurrently, cell size is also larger during the first half of the year (Fig. 2).",
@@ -18541,7 +19654,7 @@
     },
     "metadata": {
       "source_file": "Mougeotia 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -18887,6 +20000,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "This is the second largest dinoflagellate in Lake Kinneret (after Ceratium hirundinella). Under the light microscope, those large, spherical single cells are distinct by having thick, colorless thecae (shell) enveloping the strongly brown-colored living cell or protoplast (Plate 1a,b). The epitheca and hypotheca, are conical and of similar size. The cingulum is wide, deep, and displaced about one cingular width (Plate 2). The sulcus widens slightly and reaches the antapex. The plates are reticulated or rarely rugose and irregularly arranged. Chloroplasts are numerous and parietal (along cell walls). See Hansen and Flaim (2007) for a more detailed taxonomic description.\nUnder unfavorable conditions the cells shed their thecae, and a naked protoplast emerges which will later excrete new thecae. The thecae are also shed before cell division (Plate 1c). After division, each of the two daughter cells excretes its own new thecae. Mitotic cell division is “phased”: it occurs only at night, between midnight and 4 am (Serruya and Pollingher 1976). Sexual reproduction was never observed in Lake Kinneret, possibly because it also occurs at night.\nPeridinium gatunense resting cysts are spherical, with a thick and distinct cell wall, and two distinct red spots, or eyespots (Plate 3). Throughout the bloom development period, a small proportion of the cells (~ 1 %, Alster et al. 2006) change their morphology to become resting cysts, which sink to the sediments to remain there as an inoculum for future growth. Vegetative cells emerging from resting cysts keep the two red spots. After cell division each daughter cell keeps one red spot. With later divisions those red spots get diluted. Presence of those red spots are thus an indication of the origin of the cell from a resting cyst.",
       "distinctive_attributes": "mixotroph. Too large to be grazed by zooplankton. Major food source for Cichlid fishes. Performs daily vertical migrations. When it blooms in spring it constitutes > 95% of total phytoplankton biomass. Its bloom can be seen as patches of coffee brown colored water. Peridinium gatunense is certainly the most studied organism in Lake Kinneret, with hundreds of publications addressing it. For a review article see Zohary et al. 2014.",
       "ecology": "From the beginning of monitoring in Lake Kinneret in the 1960s, the regular late-winter-spring bloom of P. gatunense was the most salient feature of the Kinneret phytoplankton (Zohary et al. 2014). Those intense blooms could be observed as large patches of coffee-brown colored water (Plate 4), reaching up to several square kilometers in area. At the bloom peak P. gatunense reached mean epilimnion concentrations > 500 cells mL⁻¹ (Figs. 1, 2), or 150-250 g m⁻² of wet weight biomass and comprised >95% of total phytoplankton biomass. The blooms declined sharply in May-June (Fig. 2), shortly after water temperature exceeded 25ºC, thermal stratification was established, and nutrients became scarce, leaving behind resting cysts on the lake sediments. Another trigger to the bloom decline is CO₂ limitation as ambient pH increases with increasing photosynthesis (Berman-Frank et al. 1995). During the summer months P. gatunense concentrations in the water column were low, usually <5 cells mL⁻¹ (Fig. 2). Autumn turnover caused re-suspension of the cysts from the sediments, leading to their excystation and the initiation of the next year’s bloom. After many years of recorded constancy, in the mid-1990s, the regular pattern of late-winter spring P. gatunense blooms broke down, P. gatunense blooms have become irregular (Fig. 1) occurring only in high-rainfall years (Zohary et al. 2012), and in more recent years, not even in all of them. As in several other Kinneret dinoflagellates, cell size varies seasonally (Fig. 2), with largest sizes recorded in January-February, when nutrients are most plentiful, and smallest sizes in summer, after the bloom crash. In 2019 and 2020, when the lake’s water level rose after several years of being remarkably low and inundated for the first time shores that were overgrown by dense vegetation – exceptionally dense patches of P. gatunense (~1600 cells mL⁻¹) developed between flooded Tamarix trees (Zohary et al. 2026).\nPeridinium gatunense cells are too large to be grazed by crustacean zooplankton (Hambright et al. 2007). The native Cichlid fish feed primarily on Peridinium (Zohary et al. 1994) but overall, grazing has only a minor impact on the population. The primary loss of cells is due to death and decomposition in the water column. Second in importance is sinking to bottom sediments, where decomposition processes prevail but some grazing also takes place. An additional, less important losses is by parasitism by chytrid fungi in the water column (Alster and Zohary 2007, Leshem et al. 2016).",
@@ -20624,7 +21738,7 @@
     },
     "metadata": {
       "source_file": "Peridinium gatunense 2026-08-07.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -20713,6 +21827,7 @@
       "cells_per_filament": "",
       "colony_diameter": "",
       "cells_per_colony": "",
+      "indicator_species": "",
       "morphological_features": "Spherical flagellated green single cells, with two flagella about same length as cell and a cup-shaped chloroplast. Several hundreds of species of Chlamydomonas were described, they are difficult to distinguish by light microscopy, we did not identify the Kinneret Chlamydomonas to species level, and it is possible that there is more than one species.",
       "distinctive_attributes": "small bi-flagellated single cells with cup-shaped chloroplast.",
       "ecology": "Abundance data for this taxon was heavily biased by the person counting it: Analyst 4 (1983 – 1995) counted more Chlamydomonas individuals in her samples than the two other analysts and Analyst 5 counted the least (Fig. 1). This “analyst effect”, dominant to other pattern in the cell abundance data, is a big limitation of long-term phytoplankton data sets based on microscope counts, it is not unique to Lake Kinneret. The discrepancies between analysts exist for all species, but at varying levels, depending on the taxon being counted: species that are easier to misidentify are more susceptible. For the annual cycle (Fig. 2) we present only data counted by Technician 3. It shows Chlamydomonas spp. are present in the water at all times of the year, with a tendency to higher abundance from October till February. Cell size remains close to constant over time, with no apparent annual pattern.",
@@ -20943,7 +22058,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -21033,6 +22148,7 @@
       "cells_per_filament": "",
       "colony_diameter": "40-150 μm",
       "cells_per_colony": "4-16",
+      "indicator_species": "",
       "morphological_features": "Eudorina elegans coenobia in Lake Kinneret are spherical or ellipsoidal, 60-200 μm in diameter, with 4 to 16 cells per colony. Individual cells are spherical or slightly pear-shaped, regularly arranged at periphery of a mucilaginous envelope. With cup-shaped chloroplast and up to 5 pyrenoids per cell, anterior eyespot, two contractile apical vacuoles. The two equal-length flagella are longer than the cell. They protrude through the mucilaginous envelope and enable movement of the colony as a single unit.",
       "distinctive_attributes": "flagellated colonies, cells more or less evenly distributed within a common spherical envelope",
       "ecology": "Eudorina elegans is rare in our Kinneret samples, in 50 years of monitoring the species was counted <20 times, most of them since 2013 (Fig. 1).",
@@ -21357,7 +22473,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   },
   {
@@ -21418,6 +22534,7 @@
       "cells_per_filament": "",
       "colony_diameter": "20-60 μm",
       "cells_per_colony": "8-16",
+      "indicator_species": "",
       "morphological_features": "The coenobia are made of 8 or 16 cells compressed into a dense spherical aggregate that is surrounded by an envelope of hyaline mucilage. Each cell has two equal-length flagella that are longer than the cell. With a cup-shaped chloroplast, 1 or more pyrenoids, 2 contractile vacuoles an anterior red eyespot.",
       "distinctive_attributes": "flagellated colonies of densely-packed cells, often with eyespots",
       "ecology": "Pandorina morum is common in the littoral zone of Lake Kinneret, but practically never seen in the pelagic water. Hence there are no ecological data for it. The species is common in stratified shallow lakes rich in nitrate. The specimen in Plate 1 was collected at the shore by the Kinneret Limnological Institute in March 2006.",
@@ -21591,7 +22708,7 @@
     },
     "metadata": {
       "source_file": "Volvocales 2026-08-17.docx",
-      "record_updated": "2026-08-23"
+      "record_updated": "2026-08-30"
     }
   }
 ]

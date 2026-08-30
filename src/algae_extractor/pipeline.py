@@ -387,6 +387,7 @@ FIELD_ORDER: list[tuple[str, list[str]]] = [
     ("cells_per_filament", ["cells per filament", "cells/filament"]),
     ("colony_diameter", ["colony diameter"]),
     ("cells_per_colony", ["cells per colony", "cells/colony"]),
+    ("indicator_species", ["indicator species"]),
     ("morphological_features", ["morphological features"]),
     (
         "distinctive_attributes",
@@ -512,6 +513,7 @@ def strip_inline_cite_this_record_from_narrative_fields_rich(
     metadata instead.
     """
     for field in (
+        "indicator_species",
         "morphological_features",
         "ecology",
         "physiological_features",

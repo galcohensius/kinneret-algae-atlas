@@ -13,8 +13,12 @@ import type { AlgaeRecord } from "./algae-types";
  *
  * No color in the name; hue chosen for distinction and typical field appearance:
  *   Cryptista, Cyanobacteriophyta, Dinoflagellata, Euglenophyta, Haptophyta
+ *
+ * Bacillariophyta — bacillum (rod); diatoms; golden-brown silica frustules:
+ *   Bacillariophyta
  */
 const PHYLUM_ACCENTS: Record<string, string> = {
+  bacillariophyta: "#b45309", // diatoms; golden-brown silica frustules
   chlorophyta: "#15803d", // chloros = green
   rhodophyta: "#be123c", // rhodon = rose-red
   charophyta: "#22c55e", // green algae; bright spring green, kept lighter than Chlorophyta's dark forest green to stay distinct

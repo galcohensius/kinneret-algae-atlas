@@ -1,6 +1,6 @@
 {
-  "title": "Glossary: terms used in species descriptions",
-  "record_updated": "2026-08-22",
+  "title": "Glossary: terms used in atlas",
+  "record_updated": "2026-08-30",
   "entries": [
     {
       "term": "acicular",
@@ -14,7 +14,7 @@
     {
       "term": "acute",
       "slug": "acute",
-      "definition": "sharp angle (<90 degrees)",
+      "definition": "sharp. Acute angle: <90 degrees",
       "letter": "A",
       "match_phrases": [
         "acute"
@@ -36,6 +36,24 @@
       "letter": "A",
       "match_phrases": [
         "alkalinity"
+      ]
+    },
+    {
+      "term": "alkalibiontic",
+      "slug": "alkalibiontic",
+      "definition": "occurring only in alkaline water at pH > 8.5",
+      "letter": "A",
+      "match_phrases": [
+        "alkalibiontic"
+      ]
+    },
+    {
+      "term": "alkaliphilous",
+      "slug": "alkaliphilous",
+      "definition": "occurring at pH around 7, best development at pH > 7",
+      "letter": "A",
+      "match_phrases": [
+        "alkaliphilous"
       ]
     },
     {
@@ -176,6 +194,15 @@
       ]
     },
     {
+      "term": "benthic (benthonic)",
+      "slug": "benthic",
+      "definition": "occurring on the bottom of a water body",
+      "letter": "B",
+      "match_phrases": [
+        "benthic (benthonic)"
+      ]
+    },
+    {
       "term": "bilateral symmetry",
       "slug": "bilateral-symmetry",
       "definition": "symmetry about a single middle line",
@@ -313,6 +340,33 @@
       ]
     },
     {
+      "term": "epilithic",
+      "slug": "epilithic",
+      "definition": "occurring on rocks and pebbles",
+      "letter": "E",
+      "match_phrases": [
+        "epilithic"
+      ]
+    },
+    {
+      "term": "epipelic",
+      "slug": "epipelic",
+      "definition": "occurring on mud",
+      "letter": "E",
+      "match_phrases": [
+        "epipelic"
+      ]
+    },
+    {
+      "term": "epiphytic",
+      "slug": "epiphytic",
+      "definition": "occurring on aquatic plants",
+      "letter": "E",
+      "match_phrases": [
+        "epiphytic"
+      ]
+    },
+    {
       "term": "epitheca",
       "slug": "epitheca",
       "definition": "in dinoflagellates: the upper theca of the dinoflagellate cellulose shell, which together with the hypotheca makes a full cell covering.",
@@ -408,7 +462,7 @@
     {
       "term": "girdle view",
       "slug": "girdle-view",
-      "definition": "in diatoms, the way the cell looks under the microscope when examined looking at the girdle of the cell (as opposed to the valve view, i.e. looking at the valve face of the cell)",
+      "definition": "in diatoms, the way the cell looks under the microscope when examined looking at the girdle of the cell (as opposed to the valve view, i.e. looking at the valve side of the cell)",
       "letter": "G",
       "match_phrases": [
         "girdle view"
@@ -525,7 +579,7 @@
     {
       "term": "lanceolate",
       "slug": "lanceolate",
-      "definition": "lance-shaped, with the broadest part usually about 1/3 of the distance from abse and usually tapering towards each endsee Cox (1996) Plate 1",
+      "definition": "lance-shaped, with the broadest part usually about 1/3 of the distance from base and usually tapering towards each end. see Cox (1996) Plate 1",
       "letter": "L",
       "match_phrases": [
         "lanceolate"
@@ -577,6 +631,33 @@
       ]
     },
     {
+      "term": "oligohalobious",
+      "slug": "oligohalobious",
+      "definition": "form developing in freshwater",
+      "letter": "O",
+      "match_phrases": [
+        "oligohalobious"
+      ]
+    },
+    {
+      "term": "oligohalobious-indifferent",
+      "slug": "oligohalobious-indifferent",
+      "definition": "form developing usually in freshwater but can tolerate small to moderate amounts of salts",
+      "letter": "O",
+      "match_phrases": [
+        "oligohalobious-indifferent"
+      ]
+    },
+    {
+      "term": "oligosaprobic",
+      "slug": "oligosaprobic",
+      "definition": "form developing optimally in slightly polluted water",
+      "letter": "O",
+      "match_phrases": [
+        "oligosaprobic"
+      ]
+    },
+    {
       "term": "oogamy (oogamous)",
       "slug": "oogamy",
       "definition": "sexual reproduction in which there is a fusion of a smaller flagellated male gamete (e.g. spermatozoid) with a larger, non-flagellated female gamete (e.g. egg or oogonium)",
@@ -588,7 +669,7 @@
     {
       "term": "oogonium (plural: oogonia)",
       "slug": "oogonium",
-      "definition": "large, single-celled female gametanium that may produce one or more eggs.",
+      "definition": "large, single-celled female gametangium that may produce one or more eggs.",
       "letter": "O",
       "match_phrases": [
         "oogonium",
@@ -620,6 +701,24 @@
       "letter": "P",
       "match_phrases": [
         "parietal"
+      ]
+    },
+    {
+      "term": "periphytic",
+      "slug": "periphytic",
+      "definition": "occurring on the bottom a water bodies and on submerged objects (biotic and abiotic); can be attached or free",
+      "letter": "P",
+      "match_phrases": [
+        "periphytic"
+      ]
+    },
+    {
+      "term": "pH-indifferent",
+      "slug": "ph-indifferent",
+      "definition": "best development around pH 7",
+      "letter": "P",
+      "match_phrases": [
+        "pH-indifferent"
       ]
     },
     {
@@ -742,7 +841,7 @@
     {
       "term": "retuse",
       "slug": "retuse",
-      "definition": "having the end rounded with slight indentation; like a retuse leaf",
+      "definition": "having a rounded end but with slight indentation; like a retuse leaf",
       "letter": "R",
       "match_phrases": [
         "retuse"
@@ -888,7 +987,7 @@
     {
       "term": "suture",
       "slug": "suture",
-      "definition": "Line or groove, especially in desmids, marking the limits between adjacent semicells. In filamentous zygnematales: groove around zygospore. In armored dinoflagellates: groove between the plates",
+      "definition": "Line or groove, especially in desmids, marking the limits between adjacent semicells. In filamentous Zygnematales: groove around zygospore. In armored dinoflagellates: groove between the plates",
       "letter": "S",
       "match_phrases": [
         "suture"
@@ -1033,7 +1132,7 @@
     {
       "term": "valve view",
       "slug": "valve-view",
-      "definition": "in diatoms, the way the cell looks under the microscope when examined looking at the valve face of the cell (as opposed to the girdle view, i.e. looking at the side face of the cell)",
+      "definition": "in diatoms, the way the cell looks under the microscope when examined looking at the valve face of the cell (as opposed to the girdle view, i.e. looking at the girdle face of the cell)",
       "letter": "V",
       "match_phrases": [
         "valve view"
@@ -1107,5 +1206,5 @@
       "src": "/glossary-images/cox-1996-plate-2.png"
     }
   ],
-  "source_file": "1-Glossary 2026-08-22.docx"
+  "source_file": "1-Glossary 2026-08-30.docx"
 }

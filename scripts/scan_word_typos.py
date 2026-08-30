@@ -158,6 +158,7 @@ def section_cue(paragraphs: list[str], idx: int) -> str:
         low = t.lower().rstrip(":")
         if low in {
             "ecology",
+            "indicator species",
             "morphological features",
             "physiological features",
             "environmental conditions",

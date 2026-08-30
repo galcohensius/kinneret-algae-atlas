@@ -51,6 +51,7 @@ const FIELD_LABELS: Record<string, string> = {
   cells_per_filament: "Cells per filament",
   colony_diameter: "Colony diameter",
   cells_per_colony: "Cells per colony",
+  indicator_species: "Indicator species",
   morphological_features: "Morphological features",
   distinctive_attributes: "Distinctive features",
   ecology: "Ecology",
@@ -195,6 +196,8 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   }
 
   const sections = record.sections;
+  const indicatorSpecies = sections.indicator_species?.trim() ?? "";
+  const indicatorSpeciesRich = record.sectionsRich?.indicator_species ?? [];
   const morphological = sections.morphological_features?.trim() ?? "";
   const morphologicalRich = record.sectionsRich?.morphological_features ?? [];
   const {
@@ -282,6 +285,21 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
                 );
               })}
             </dl>
+          </section>
+        ) : null}
+
+        {indicatorSpecies ? (
+          <section className="narrative-block" aria-labelledby="indicator-heading">
+            <h2 id="indicator-heading" className="section-heading">
+              {toDisplayLabel("indicator_species")}
+            </h2>
+            <div className="algae-prose">
+              {indicatorSpeciesRich.length > 0 ? (
+                <GlossaryAwareRichText segments={indicatorSpeciesRich} />
+              ) : (
+                <GlossaryAwarePlainText text={indicatorSpecies} />
+              )}
+            </div>
           </section>
         ) : null}
 

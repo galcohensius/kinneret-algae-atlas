@@ -6,7 +6,7 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 
 Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.
 
-Species count: 40
+Species count: 41
 
 ## Species: Gymnodinium F. Stein 1878
 - Slug: gymnodinium
@@ -19,9 +19,9 @@ Species count: 40
 - Cell biovolume: 230 - 1000 μm³, median: 470 μm³.
 - Biovolume equation: sphere, V = 4/3 π (D/2)³. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.
 - Ecology (compact): Several species of naked dinoflagellates of the genera Gymnodinium and Glenodinium occur in Lake Kinneret, they were never identified to species level. Of those, a small species of Gymnodinium (cell volume ~ 500 μm³) is most common. The da…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Ceratium furcoides (Levander) Langhans 1925
@@ -35,9 +35,9 @@ Species count: 40
 - Cell length (L): 165-260 μm long (literature values)
 - Cell biovolume: 70,000 μm³ (literature value, we do not routinely measure this species)
 - Ecology (compact): Historically this species was identified as Ceratium hirundinella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Ceratium hirundinella (O.F. Muller) Dujardin 1841
@@ -51,9 +51,9 @@ Species count: 40
 - Cell length (L): 155-200 μm (literature values)
 - Cell biovolume: 73,000 μm³ (literature value, we do not routinely measure this species)
 - Ecology (compact): C. hirundinella is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cel…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Diplopsalis acuta (Apstein) Entz 1906
@@ -68,9 +68,9 @@ Species count: 40
 - Cell biovolume: 15,000 – 40,000 μm³, median: 22,000 μm³.
 - Biovolume equation: V, μm³ = (π/12) *D² *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999).
 - Ecology (compact): Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL⁻¹ (Fig. 1). It appears in the plankton from November (onset of destratification) to Ju…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Peridiniopsis borgei Lemmermann 1904
@@ -85,9 +85,9 @@ Species count: 40
 - Cell biovolume: 14,000 – 40,500 μm³, median: 21,300 μm³. Larger cell size in winter, smaller in summer (see Fig. 2b).
 - Biovolume equation: V = 0.9405 D².⁸⁵⁹⁶ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate spheroid).
 - Ecology (compact): Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022
@@ -102,9 +102,9 @@ Species count: 40
 - Cell biovolume: 6300 - 17500 μm³, median: 10500 μm³.
 - Biovolume equation: V = 2.099 D².⁶²³
 - Ecology (compact): Parvodinium cunningtonii is one of the species always present in the water column, contributing to total phytoplankton biomass up to 20-30%. The species was less abundant before the mid 1990s, when Peridinium gatunense bloomed every year,…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926
@@ -117,9 +117,9 @@ Species count: 40
 - Cell diameter (D): (D): 13 - 18 μm, median: 15.5 μm (N=450)
 - Cell biovolume: 17500 - 4300 μm³, median: 2900 μm³.
 - Biovolume equation: V = (4/3) π D³ (sphere)
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Parvodinium elpatiewskyi (Ostenfeld) Kretschmann et al 2019
@@ -134,9 +134,9 @@ Species count: 40
 - Cell biovolume: 6600 - 17500 μm³, median: 11500 μm³.
 - Biovolume equation: V, μm³ = 1.2514 D².⁷⁹³ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate spheroid).
 - Ecology (compact): Parvodinium elpatiewskyi is one of the common algal species in the Kinneret plankton, present in the water at all times of the year. In the absence of Peridinium gatunense in recent years, Parvodinium elpatiewskyi seems to be more abundant…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Durinskia oculata (Stein) Gert Hansen et Flaim 2007
@@ -150,9 +150,9 @@ Species count: 40
 - Cell biovolume: 2600 - 9500 μm³, median: 5300 μm³.
 - Biovolume equation: V, μm³ = (4/3) π (D/2)³. (sphere equation)
 - Ecology (compact): Durinskia oculata is rare in the pelagic water, it appeared in our samples in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples. Lit…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Glochidinium penardiforme (Lemmermann) Boltovskoy 2000
@@ -167,9 +167,9 @@ Species count: 40
 - Cell biovolume: 3050 - 8200 μm³, median: 5450 μm³.
 - Biovolume equation: V = (4/3)π L (D/2)² (prolate spheroid)
 - Ecology (compact): Glochidinium penardiforme is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008 (Fig. 1). Its mean water column abundanc…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
 
 ## Species: Naiadinium polonicum (Woloszynska) Carty 2014
@@ -184,10 +184,30 @@ Species count: 40
 - Cell biovolume: 7,000-14,000 μm³, median: 10,000 μm³
 - Biovolume equation: V = ((4/3)π L (D/2)²)/2 (half the volume of a prolate spheroid)
 - Ecology (compact): Naiadinium polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL⁻¹ (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: 1 Dinoflagellates 2026-08-07.docx
+
+## Species: Aulacoseira granulata (Ehrenberg) Simonsen 1979
+- Slug: aulacoseira-granulata
+- Canonical URL: https://kinneret-algae-atlas.org/algae/aulacoseira-granulata/
+- Taxonomy: phylum=Bacillariophyta; class=Melosirophyceae; order=Melosirales
+- Habitat: plankton, benthos
+- Organization: filamentous
+- Cell shape: cylinder
+- Colony shape: filament, made of a chain of cylindrical cells
+- Cell diameter (D): 9-16 µm (median 12.6) (N=241).
+- Cell length (L): 27-37 µm (median 31 µm).
+- Cell biovolume: 2000-9000 μm³, median: 4000 μm³.
+- Biovolume equation: Cylinder, V = 2 π L (D/2)². Or: regression eqn. based on >500 measurements of both D and L with V computed for a cylinder: V=50.538D¹.⁷¹⁹⁷).
+- Filament length: 150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b).
+- Cells per filament: 5-28 (median: 14)
+- Ecology (compact): The species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis (Jan-Feb) when it occupies the entire 40 m water column. Major A. granulata blooms were recorded in Jan-Feb 1988; 1999; 2001 (Fig.…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
+- Record updated (source extraction): 2026-08-30
+- Source file: Aulacoseira granulata.docx
 
 ## Species: Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824
 - Slug: bangia-atropurpurea
@@ -199,9 +219,9 @@ Species count: 40
 - Cell diameter (D): ~ 20 μm (but highly variable)
 - Filament length: Several centimeters
 - Ecology (compact): Seasonally occurring as a fleecy mat in the eulittoral zone of Lake Kinneret on near-shore hard surfaces (often concrete) in extremely shallow waters. It appears in December each year, for a few weeks, then disappears, to re-appear in foll…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Bangia atropurpurea 2026-06-03.docx
 
 ## Species: Aphanocapsa sp. Nägeli 1849
@@ -218,9 +238,9 @@ Species count: 40
 - Colony diameter: ~50-200 μm
 - Cells per colony: hundreds to thousands
 - Ecology (compact): Rare in Lake Kinneret, we have no ecological data for this genus.
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Chroococcales 2026-08-07.docx
 
 ## Species: Aphanothece stagnina (Sprengel) A. Braun 1863
@@ -235,9 +255,9 @@ Species count: 40
 - Cell length (L): 4–11 μm
 - Colony diameter: up to 1-2 cm
 - Ecology (compact): Initial development is benthic, but mature colonies float to the surface and are wind-driven to form shoreline accumulations. Masses of this species were seen in Lake Kinneret only once during Summer-fall 2008. At other times, occasionally…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Chroococcales 2026-08-07.docx
 
 ## Species: Chroococcus limneticus Lemmermann 1898
@@ -253,9 +273,9 @@ Species count: 40
 - Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³
 - Cells per colony: 4-30
 - Ecology (compact): The species rarely occurs (Fig. 1).
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Chroococcales 2026-08-07.docx
 
 ## Species: Chroococcus minutus (Kützing) Nägeli 1849
@@ -270,9 +290,9 @@ Species count: 40
 - Cell biovolume: 20 – 500 μm³, median: 110 μm³. Larger cell size in winter, smaller in summer (see Fig. 2).
 - Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³.
 - Ecology (compact): An alanlyst effect is apparent in the long-term record of C. minutus and C. turgidus shown in Fig. 1. In particular, it is evident that Analyst 5 (1996-2012) counted more C. minutus whereas Analyst 6 (2013-2020) counted more C. turgidus, p…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Chroococcales 2026-08-07.docx
 
 ## Species: Chroococcus turgidus (Kützing) Nägeli 1849
@@ -287,9 +307,9 @@ Species count: 40
 - Cell biovolume: 40 – 200 μm³. Larger cell size in winter, smaller in summer (see Fig. 2).
 - Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³.
 - Ecology (compact): An alanlyst effect is apparent in the long-term record of C. minutus and C. turgidus shown in Fig. 1. In particular, it is evident that Analyst 5 (1996-2012) counted more C. minutus whereas Analyst 6 (2013-2020) counted more C. turgidus, p…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Chroococcales 2026-08-07.docx
 
 ## Species: Cyanodictyon imperfectum Cronberg et Weibull 1981
@@ -306,9 +326,9 @@ Species count: 40
 - Colony diameter: 10-100 μm
 - Cells per colony: 2 to hundreds
 - Ecology (compact): Cyanodictyon imperfectum is routinely counted since 1996, forming blooms of thousands of colonies per mL (Fig. 1) with hundreds of thousands of cells per mL (not shown) from June to August each year, with a distinct peak in July. But due t…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Chroococcales 2026-08-07.docx
 
 ## Species: Radiocystis geminata Skuja 1948
@@ -325,9 +345,9 @@ Species count: 40
 - Colony diameter: up to 70 µm
 - Cells per colony: 40-100 (600)
 - Ecology (compact): Radiocystis geminata has always been a member of the Kinneret plankton, although there were periods during which it was nearly absent (e,g, 1993-1995; 2005-2006; 2011-2014) but then it returned (Fig. 1). When present, it is often very abun…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Chroococcales 2026-08-07.docx
 
 ## Species: Cryptomonas Ehrenberg 1831
@@ -342,9 +362,9 @@ Species count: 40
 - Cell biovolume: 400 – 2000 μm³, median: 700 μm³. Larger cell size in winter, smaller in summer (see Figs. 2, 4).
 - Biovolume equation: V=0.7076D³.⁰⁷⁷² (regression eqn. based on 424 measurements of both D and L with V computed for a prolate spheroid).
 - Ecology (compact): Cryptopmonas spp. are always present in the water column (Fig. 1), with higher abundances in winter (Dec to Feb) but also in summer (Jul - Sep) and lowest in April-May, at the time of the Peridinium bloom (Fig. 2). It is possible that the…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Cryptophytes 2026-08-17.docx
 
 ## Species: Plagioselmis nannoplanctica (Skuja) Novarino et al. 1994
@@ -359,9 +379,9 @@ Species count: 40
 - Cell biovolume: 40 – 150 μm³, median: 82 μm³.
 - Biovolume equation: V=1.841D².⁵²⁶⁴ (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R²=0.93).
 - Ecology (compact): Plagioselmis nannoplanctica is present in the Kinneret water column, in the pelagial and littoral, at all times of year, and has been present continuously since 1970 (Fig. 1). It has a distinct annual cycle of peak abundance during winter…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Cryptophytes 2026-08-17.docx
 
 ## Species: Tetraselmis cordiformis (Carter) Stein 1878
@@ -376,9 +396,9 @@ Species count: 40
 - Cell biovolume: 730-2400 μm³, median: 1400 μm³.
 - Biovolume equation: prolate spheroid, V = 4/3 π L/2 (D/2)² or: regression eqn. based on >500 measurements of both D and L with V computed for a prolate spheroid: V= 1.9507*D².⁵⁶⁵¹
 - Ecology (compact): Tetraselmis cordiformis usually occurs in the Kinneret plankton in small numbers of < 50 cells/mL (Fig. 1) and biomass not more than 4 g m⁻² (not shown). It is more abundant between February and April and again from August till November bu…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Cryptophytes 2026-08-17.docx
 
 ## Species: Chrysochromulina parva Lackey 1939
@@ -392,9 +412,9 @@ Species count: 40
 - Cell biovolume: 13 – 76 μm³, median: 34 μm³.
 - Biovolume equation: sphere V = 4/3 π *(D/2)³.
 - Ecology (compact): Chrysochromulina parva is the smallest flagellated species occurring in Lake Kinneret. At times it is incredibly abundant, reaching concentrations of > 1000 cells mL⁻¹; an all-time maximum of 11,900 cells mL⁻¹ was recorded in April 2019 (F…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Cryptophytes 2026-08-17.docx
 
 ## Species: Euglena Ehrenberg 1830
@@ -409,9 +429,9 @@ Species count: 40
 - Cell biovolume: 500 - 9000 μm³, median: 1200 μm³.
 - Biovolume equation: prolate spheroid V = 4/3 π (D/2)² L/2
 - Ecology (compact): Euglena spp. are rare in the Kinneret pelagic zone, but occasionally abundant in littoral samples, especially if collected from niches with high concentrations of organic matter, such as shallow waters among seasonally inundated shore vege…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Euglenophytes 2026-08-07.docx
 
 ## Species: Phacus longicauda (Ehrenberg) Dujardin 1841
@@ -422,9 +442,9 @@ Species count: 40
 - Organization: flagellated single cells
 - Cell shape: leaf-shaped
 - Ecology (compact): Phacus species are extremely rare in Lake Kinneret. They have never been abundant enough to be counted in our routine monitoring, but occasionally a specimen is found in the littoral zone, usually of the species Phacus longicauda (Plate 1)…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Euglenophytes 2026-08-07.docx
 
 ## Species: Trachelomonas Ehrenberg 1833
@@ -438,9 +458,9 @@ Species count: 40
 - Cell biovolume: 370 - 2000 μm³, median: 800 μm³.
 - Biovolume equation: sphere, V = ¾ π (D/2)³
 - Ecology (compact): Trachelomonas is the only euglenoid seen in Kinneret pelagic plankton samples quite often, although this genus too is never abundant, maximum cell density ever recorded was ~50/mL (Fig. 1). Trachelomonas can be viewed at any time of the ye…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Euglenophytes 2026-08-07.docx
 
 ## Species: Colacium Ehrenberg 1833
@@ -451,9 +471,9 @@ Species count: 40
 - Organization: colonies
 - Cell shape: oval
 - Ecology (compact): Colacium colonies are occasionally seen as epibionts on zooplankton, especially on copepods and rotifers (Plate 1). Since they are sessile, they are not observed in our phytoplankton samples, were never counted and we have no corresponding…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Euglenophytes 2026-08-07.docx
 
 ## Species: Gloeocapsa sp. 1948 Kützing 1843
@@ -469,9 +489,9 @@ Species count: 40
 - Biovolume equation: sphere, V = 4/3 π (D/2)³.
 - Cells per colony: many
 - Ecology (compact): A rare benthic species that occurs only in the littoral zone. When present, colonies are large enough to be seen macroscopically as strongly colored blue-green aggregates on stones in the shallow water.
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Gloeocapsa 2026-08-07.docx
 
 ## Species: Gloeotrichia pisum Thuret ex Bornet & Flahault 1886
@@ -489,9 +509,9 @@ Species count: 40
 - Filament length: hundreds of microns
 - Colony diameter: 0.1–1.5 cm
 - Ecology (compact): With climate change, the relative importance of benthic cyanobacteria is mounting. With increased amplitude of water level fluctuations in Lake Kinneret, littoral zone habitats are changing as well as their biota (Zohary and Gasith 2025).…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Gloeotrichia 2026-08-06.docx
 
 ## Species: Merismopedia Meyen 1839
@@ -506,9 +526,9 @@ Species count: 40
 - Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³
 - Cells per colony: 4-32 cells, rarely much larger
 - Ecology (compact): Merismopedia spp. are abundant in winter, from November to January (Fig. 1, 2), when they are found in hundreds of colonies/mL (Fig. 1) and thousands of cells/mL (Fig. 2) at all depths of the water column. But due to the minute cell size t…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Merismopedia 2026-07-26.docx
 
 ## Species: Microcystis Kützing ex Lemmermann 1907
@@ -520,10 +540,10 @@ Species count: 40
 - Cell shape: sphere
 - Colony shape: ranges from spherical to irregularly lobate with holes
 - Ecology (compact): While in general “cyanobacteria blooms like it hot” (Paerl and Huisman 2008), and this is typical for Microcystis around the world, in Lake Kinneret Microcystis blooms occur in winter-spring, mostly between January and March. The main reas…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
-- Source file: Microcystis 2026-08-22.docx
+- Record updated (source extraction): 2026-08-30
+- Source file: Microcystis 2026-08-23.docx
 
 ## Species: Microcystis aeruginosa (Wittrock) Kirchner 1898
 - Slug: microcystis-aeruginosa
@@ -539,9 +559,9 @@ Species count: 40
 - Colony diameter: 100-1000 μm
 - Cells per colony: 20-10000; median: 300
 - Ecology (compact): The species was not counted prior to 1996, when Analyst 5 began counting, probably because earlier M. aeruginosa and M. flos-aquae were considered as two forma of a single species. Microcystis aeruginosa is less abundant than M. flos-aquae…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Microcystis aeruginosa 2026-08-22.docx
 
 ## Species: Microcystis botrys Teiling 1942
@@ -557,9 +577,9 @@ Species count: 40
 - Biovolume equation: Sphere, V = 4/3 π (D/2)³
 - Cells per colony: 30-5000; median: 200
 - Ecology (compact): Microcystis botrys is common in Lake Kinneret (Fig. 1), but never dominant and never formed a major bloom. The species was recorded from 1974-1981, then not recorded at all until 2007 (Fig. 1). The species is more abundant from May to July…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Microcystis botrys 2026-08-22.docx
 
 ## Species: Microcystis flos-aquae (Wittrock) Kirchner 1898
@@ -576,9 +596,9 @@ Species count: 40
 - Colony diameter: ~ 50 -200 µm
 - Cells per colony: 30-7000; median 270
 - Ecology (compact): Microcystis flos-aquae is the most abundant species of the genus Microcystis occurring in Lake Kinneret. It formed a major bloom in 1964 (Pollingher and Kimor 1970), was a common component of the phytoplankton in the early 1970s (Fig. 1),…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Microcystis flos aquae 2026-08-22.docx
 
 ## Species: Microcystis wesenbergii (Komárek) Komárek ex Komárek 2006
@@ -595,9 +615,9 @@ Species count: 40
 - Colony diameter: ~ 100 µm
 - Cells per colony: 10-300
 - Ecology (compact): Microcystis wesenbergii is one of the common species of cyanobacteria occurring in Lake Kinneret (Fig. 1), but it was never dominant and never recorded to form a bloom (although it did form a bloom in Agmon-Hula in summer 2020). The specie…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Microcystis wesenbergii 2026-08-22.docx
 
 ## Species: Mougeotia Agardh 1824
@@ -615,9 +635,9 @@ Species count: 40
 - Filament length: 130 - 800 μm
 - Cells per filament: Usually 1-6 but can be as long as 40 cells
 - Ecology (compact): Mougeotia is relatively new to Lake Kinneret, in the 1960s, 1970s and 1980 it was never seen. It first appeared in the plankton in May 1998 (Zohary et al. 2019). It was rare until 2004, but since then it is a common component of the Kinner…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Mougeotia 2026-08-17.docx
 
 ## Species: Peridinium gatunense Nygaard 1925
@@ -632,9 +652,9 @@ Species count: 40
 - Cell biovolume: 44,300 – 99,400 μm³, median: 67,000 μm³.
 - Biovolume equation: V = 1.31 D².⁷⁸³⁵. Regression eqn. based on >400 measurements of both D and L with V computed for a prolate spheroid.
 - Ecology (compact): From the beginning of monitoring in Lake Kinneret in the 1960s, the regular late-winter-spring bloom of P. gatunense was the most salient feature of the Kinneret phytoplankton (Zohary et al. 2014). Those intense blooms could be observed as…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Peridinium gatunense 2026-08-07.docx
 
 ## Species: Chlamydomonas sp. Ehrenberg 1833
@@ -648,9 +668,9 @@ Species count: 40
 - Cell biovolume: 200 – 1300 μm³, median: 520 μm³.
 - Biovolume equation: Sphere V, μm³ = 4/3 π (D/2)³.
 - Ecology (compact): Abundance data for this taxon was heavily biased by the person counting it: Analyst 4 (1983 – 1995) counted more Chlamydomonas individuals in her samples than the two other analysts and Analyst 5 counted the least (Fig. 1). This “analyst e…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Volvocales 2026-08-17.docx
 
 ## Species: Eudorina elegans Ehrenberg 1832
@@ -667,9 +687,9 @@ Species count: 40
 - Colony diameter: 40-150 μm
 - Cells per colony: 4-16
 - Ecology (compact): Eudorina elegans is rare in our Kinneret samples, in 50 years of monitoring the species was counted <20 times, most of them since 2013 (Fig. 1).
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Volvocales 2026-08-17.docx
 
 ## Species: Pandorina morum (O. Müller) Bory 1826
@@ -686,23 +706,25 @@ Species count: 40
 - Colony diameter: 20-60 μm
 - Cells per colony: 8-16
 - Ecology (compact): Pandorina morum is common in the littoral zone of Lake Kinneret, but practically never seen in the pelagic water. Hence there are no ecological data for it. The species is common in stratified shallow lakes rich in nitrate. The specimen in…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 23 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-23
+- Record updated (source extraction): 2026-08-30
 - Source file: Volvocales 2026-08-17.docx
 
 ## Glossary
 - Canonical URL: https://kinneret-algae-atlas.org/glossary/
-- Terms count: 120
-- Record updated: 2026-08-22
-- Source file: 1-Glossary 2026-08-22.docx
+- Terms count: 131
+- Record updated: 2026-08-30
+- Source file: 1-Glossary 2026-08-30.docx
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
 
 ### Glossary terms (compact)
 - acicular [acicular]: needle-shaped
-- acute [acute]: sharp angle (<90 degrees)
+- acute [acute]: sharp. Acute angle: <90 degrees
 - akinete [akinete]: in cyanobacteriophyta: a type of spore formed by the transformation of a vegetative cell into a thick-walled resting cell, containing concentrated food material
 - alkalinity [alkalinity]: mg CaCO₃ L⁻¹
+- alkalibiontic [alkalibiontic]: occurring only in alkaline water at pH > 8.5
+- alkaliphilous [alkaliphilous]: occurring at pH around 7, best development at pH > 7
 - amoeboid [amoeboid]: amoeba like
 - anterior [anterior]: situated at the front side, opposite of posterior
 - antapex [antapex]: the point opposite to the tip of the cell on its other end
@@ -718,6 +740,7 @@ Species count: 40
 - autogamy [autogamy]: non-sexual reproduction, self-fertilization or conjugation in an individual organism by division of its nucleus into two parts that in turn reunite to form a zygote
 - auxospore [auxospore]: large cell resulting from sexual reproduction or autogamy. In diatoms, they lack the rigid valves, instead they are covered by delicate siliceous scales or bands
 - axial [axial]: along the axis
+- benthic (benthonic) [benthic]: occurring on the bottom of a water body
 - bilateral symmetry [bilateral-symmetry]: symmetry about a single middle line
 - broad linear [broad-linear]: see Cox (1996) Plate 1
 - capitate [capitate]: having a part that is enlarged and rounded (like a head) see Cox (1996) Plate 2
@@ -733,6 +756,9 @@ Species count: 40
 - DOP [dop]: dissolved organic phosphorus
 - dorsal [dorsal]: back side, opposite of ventral
 - dorsiventral [dorsiventral]: in diatoms: a cell with different curvature to its two sides connecting the apices see Cox (1996) Plate 2
+- epilithic [epilithic]: occurring on rocks and pebbles
+- epipelic [epipelic]: occurring on mud
+- epiphytic [epiphytic]: occurring on aquatic plants
 - epitheca [epitheca]: in dinoflagellates: the upper theca of the dinoflagellate cellulose shell, which together with the hypotheca makes a full cell covering.
 - eulittoral zone [eulittoral-zone]: the lake region between maximum and minimum water level.
 - eyespot [eyespot]: light-sensitive, typically red-colored (carotenoid pigments) spot or organelle in algal cells
@@ -743,7 +769,7 @@ Species count: 40
 - gamete [gamete]: sex cell
 - gametangium (plural: gametangia) [gametangium]: a cell containing the gametes
 - girdle [girdle]: the region in a diatom frustule (shell) where the two valves overlap
-- girdle view [girdle-view]: in diatoms, the way the cell looks under the microscope when examined looking at the girdle of the cell (as opposed to the valve view, i.e. looking at the valve face of the cell)
+- girdle view [girdle-view]: in diatoms, the way the cell looks under the microscope when examined looking at the girdle of the cell (as opposed to the valve view, i.e. looking at the valve side of the cell)
 - gullet [gullet]: a longitudinal depression in the upper part of a cryptophyte, chrysophyte or euglenophyte cell from which a flagellum or flagella emerge
 - haptonema [haptonema]: a thread-like appendage between the 2 flagella of Haptophytes
 - heterocyte [heterocyte]: a thick-walled, non-pigmented cell of nostocalean cyanobacteriophyta that is different from adjacent vegetative cells and where N-fixation takes place.
@@ -756,17 +782,22 @@ Species count: 40
 - isthmus [isthmus]: in desmids: the narrow mid-region of the cell connecting the two semicells; the nucleus is located in this mid-region
 - lamellate [lamellate]: composed of thin layers or plates. Also used to refer to successive layers of mucilage
 - laminate [laminate]: reefers to layers or plates overlying one another
-- lanceolate [lanceolate]: lance-shaped, with the broadest part usually about 1/3 of the distance from abse and usually tapering towards each endsee Cox (1996) Plate 1
+- lanceolate [lanceolate]: lance-shaped, with the broadest part usually about 1/3 of the distance from base and usually tapering towards each end. see Cox (1996) Plate 1
 - linear [linear]: see Cox (1996) Plate 1
 - linear-lanceolate [linear-lanceolate]: see Cox (1996) Plate 1
 - lorica [lorica]: a protective case containing a naked (non-walled) cell
 - lunate [lunate]: shape of a moon in its first quarter. see Cox (1996) Plate 1
 - mantle [mantle]: see valve mantle
+- oligohalobious [oligohalobious]: form developing in freshwater
+- oligohalobious-indifferent [oligohalobious-indifferent]: form developing usually in freshwater but can tolerate small to moderate amounts of salts
+- oligosaprobic [oligosaprobic]: form developing optimally in slightly polluted water
 - oogamy (oogamous) [oogamy]: sexual reproduction in which there is a fusion of a smaller flagellated male gamete (e.g. spermatozoid) with a larger, non-flagellated female gamete (e.g. egg or oogonium)
-- oogonium (plural: oogonia) [oogonium]: large, single-celled female gametanium that may produce one or more eggs.
+- oogonium (plural: oogonia) [oogonium]: large, single-celled female gametangium that may produce one or more eggs.
 - papilla [papilla]: (plural: papillae) protuberance or swelling
 - paramylon [paramylon]: a carbohydrate stored in euglenophytes in ‘paramylon bodies’
 - parietal [parietal]: positioned by the cell wall
+- periphytic [periphytic]: occurring on the bottom a water bodies and on submerged objects (biotic and abiotic); can be attached or free
+- pH-indifferent [ph-indifferent]: best development around pH 7
 - pentangular [pentangular]: having 5 sides
 - pellicle [pellicle]: in euglenoids, the outer proteinaceous cell surface layer (or peripheral protoplasmic layer), often in a spiral arrangement
 - posterior [posterior]: situated at the rear or back side, opposite of anterior
@@ -780,7 +811,7 @@ Species count: 40
 - raphe [raphe]: in diatoms, a pair of slit-like structures in one or both valves associated with the gliding movement
 - reniform [reniform]: kidney shaped
 - reticulate [reticulate]: net-shaped (with holes)
-- retuse [retuse]: having the end rounded with slight indentation; like a retuse leaf
+- retuse [retuse]: having a rounded end but with slight indentation; like a retuse leaf
 - rostrate [rostrate]: see Cox (1996) Plate 2
 - scalariform conjugation [scalariform-conjugation]: ladder-like; in members of conjugatophycea a type of conjugation where the conjugation tube forms between two parallel filaments
 - septum (plural: septa) [septum]: in diatoms: cross-partitioning on a girdle element projecting into or dividing a cell into chambers
@@ -796,7 +827,7 @@ Species count: 40
 - subcapitate [subcapitate]: see Cox (1996) Plate 2
 - subrostrate [subrostrate]: see Cox (1996) Plate 2
 - sulcus [sulcus]: in dinoflagellates: a longitudinal groove in the ventral face of the cell, in hypotheca/hypocone that may extend into the epitheca/epicone; hold the longitudinal whiplash flagellum
-- suture [suture]: Line or groove, especially in desmids, marking the limits between adjacent semicells. In filamentous zygnematales: groove around zygospore. In armored dinoflagellates: groove betw…
+- suture [suture]: Line or groove, especially in desmids, marking the limits between adjacent semicells. In filamentous Zygnematales: groove around zygospore. In armored dinoflagellates: groove betw…
 - tapering [tapering]: narrowing, ending in a point
 - theca (Plural: thecae) [theca]: in dinoflagellates: a cell covering made of cellulose plates. Usually each cell has 2 thecae (an epi-theca and a hypo-theca), which together fully encase the cell
 - thecate [thecate]: in dinoflagellates: having thecae, being enclosed in a shell of cellulose plates which makes the cell look ‘armored’
@@ -812,7 +843,7 @@ Species count: 40
 - valve face [valve-face]: the round part of the valve
 - valve mantle [valve-mantle]: the marginal part of the valve, differentiated by slope and/or structure
 - valve margin [valve-margin]: the edge of the valve where the cingulum begins
-- valve view [valve-view]: in diatoms, the way the cell looks under the microscope when examined looking at the valve face of the cell (as opposed to the girdle view, i.e. looking at the side face of the ce…
+- valve view [valve-view]: in diatoms, the way the cell looks under the microscope when examined looking at the valve face of the cell (as opposed to the girdle view, i.e. looking at the girdle face of the…
 - ventral [ventral]: front side, opposite of dorsal
 - verruca (Plural: verrucae) [verruca]: wart(s) or spiny projection(s)
 - verrucose [verrucose]: covered with warty or spiny projections
