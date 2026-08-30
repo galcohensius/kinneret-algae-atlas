@@ -4,6 +4,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { AlgaeRecord } from "../../lib/algae-types";
 import { groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
+import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
 import TaxonItalicName from "./TaxonItalicName";
 
@@ -13,29 +14,10 @@ type AlgaeIndexSectionProps = {
 
 /** Split phylum jump links into two rows with similar total label length. */
 function splitPhylumJumpRows(groups: PhylumCatalogGroup[]): PhylumCatalogGroup[][] {
-  if (groups.length <= 1) {
-    return [groups];
-  }
-
-  const labelLength = (group: PhylumCatalogGroup) =>
-    `${group.phylum} (${group.records.length})`.length;
-
-  let bestSplit = Math.ceil(groups.length / 2);
-  let bestDiff = Number.POSITIVE_INFINITY;
-  const minSplit = Math.max(1, Math.floor(groups.length / 3));
-  const maxSplit = Math.min(groups.length - 1, Math.ceil((2 * groups.length) / 3));
-
-  for (let split = minSplit; split <= maxSplit; split += 1) {
-    const left = groups.slice(0, split).reduce((sum, group) => sum + labelLength(group), 0);
-    const right = groups.slice(split).reduce((sum, group) => sum + labelLength(group), 0);
-    const diff = Math.abs(left - right);
-    if (diff < bestDiff) {
-      bestDiff = diff;
-      bestSplit = split;
-    }
-  }
-
-  return [groups.slice(0, bestSplit), groups.slice(bestSplit)];
+  return splitIntoBalancedRows(
+    groups,
+    (group) => `${group.phylum} (${group.records.length})`.length
+  );
 }
 
 function AlgaeListCard({ record }: { record: AlgaeRecord }) {
@@ -101,6 +83,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
       <nav className="home-aux-links home-aux-links-top" aria-label="Reference material">
         <Link href="/about/">About</Link>
         <Link href="/glossary/">Glossary</Link>
+        <Link href="/visual-index/">Visual index</Link>
         <Link href="/supplements/">Supplementary Material</Link>
       </nav>
 

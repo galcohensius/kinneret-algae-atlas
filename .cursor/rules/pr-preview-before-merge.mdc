@@ -1,0 +1,24 @@
+---
+description: After UI/feature PRs, always preview on dev server before merge
+alwaysApply: true
+---
+
+# PR preview before merge
+
+When you open a **pull request** for a **user-visible change** (new page, layout, navigation, styling, interaction):
+
+1. **Do not merge** until the user has seen a preview and approved.
+2. **Always produce a preview** in the same turn (or immediately after CI passes):
+   - Run the app locally (`npm run dev` on the PR branch).
+   - Capture **walkthrough artifacts** (screenshot + short screen recording when the change is interactive).
+   - Show the key states: default view, hover/focus tooltip, and any new nav entry that leads to the page.
+3. **In your summary**, include:
+   - Link to the **PR**
+   - Link to **artifacts** (screenshots/video)
+   - Explicit note that **production** (https://kinneret-algae-atlas.org/) updates only after merge to `main`
+   - Ask whether to merge or adjust
+4. Mark the PR **draft** by default until the user says to merge (or mark ready after preview if they prefer).
+
+Purely internal changes (extractor-only, tests-only, copy in JSON with no new UI) do not require a visual preview unless the user asks.
+
+See the walkthrough-artifacts skill for recording and upload conventions.
