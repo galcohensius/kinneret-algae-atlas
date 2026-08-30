@@ -55,6 +55,8 @@ export default async function AboutPage() {
         {" · "}
         <Link href="/glossary/">Glossary</Link>
         {" · "}
+        <Link href="/visual-index/">Visual index</Link>
+        {" · "}
         <Link href="/supplements/">Supplementary material</Link>
       </p>
 

@@ -45,6 +45,8 @@ export default async function GlossaryPage() {
         {" · "}
         <Link href="/about/">About</Link>
         {" · "}
+        <Link href="/visual-index/">Visual index</Link>
+        {" · "}
         <Link href="/supplements/">Supplementary material</Link>
       </p>
 
