@@ -11,6 +11,7 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 - Coordinates (lake center): 32.833° N, 35.583° E (WGS84)
 - Elevation (approx.): -209 m
 - OpenStreetMap: https://www.openstreetmap.org/?mlat=32.833&mlon=35.583#map=10/32.833/35.583
+- Google Maps: https://www.google.com/maps/search/Lake+Kinneret+(Sea+of+Galilee)/@32.833,35.583,10z
 
 Primary resources:
 - Site index: https://kinneret-algae-atlas.org/#algae-index

@@ -9,6 +9,5 @@
   "longitude": 35.583,
   "geodetic_datum": "WGS84",
   "elevation_m": -209,
-  "map_zoom": 10,
-  "map_image": "/study-area-map.svg"
+  "map_zoom": 10
 }
