@@ -279,20 +279,20 @@ main.home {
 }
 
 .study-area-full-layout {
-  display: grid;
-  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
-  gap: 1.25rem 1.75rem;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
 }
 
 .study-area-map-figure {
-  margin: 0;
+  margin: 0.15rem auto 0;
+  max-width: 17.5rem;
 }
 
 .study-area-map-image {
   display: block;
   width: 100%;
-  max-height: 22rem;
+  max-height: 13rem;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -302,9 +302,10 @@ main.home {
 }
 
 .study-area-map-caption {
-  margin-top: 0.5rem;
-  font-size: 0.82rem;
-  line-height: 1.4;
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  text-align: center;
 }
 
 .study-area-details {
@@ -315,12 +316,6 @@ main.home {
 
 .study-area-map-links {
   margin: 0;
-}
-
-@media (max-width: 720px) {
-  .study-area-full-layout {
-    grid-template-columns: 1fr;
-  }
 }
 
 .home-below-hero {

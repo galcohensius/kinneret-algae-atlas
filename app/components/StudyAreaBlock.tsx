@@ -31,24 +31,6 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
         Study area
       </h2>
       <div className="study-area-full-layout">
-        <figure className="study-area-map-figure">
-          <img
-            src={publicAssetPath(STUDY_AREA.mapImage)}
-            alt={STUDY_AREA.mapImageAlt}
-            width={720}
-            height={960}
-            loading="lazy"
-            decoding="async"
-            className="study-area-map-image"
-          />
-          <figcaption className="muted study-area-map-caption">
-            {STUDY_AREA.mapAttribution}{" "}
-            <Link href={STUDY_AREA.mapSourceUrl} target="_blank" rel="noopener noreferrer">
-              Source image
-            </Link>
-            .
-          </figcaption>
-        </figure>
         <div className="study-area-details algae-prose">
           <p>
             This atlas documents microalgae from <strong>{formatStudyAreaLakeName()}</strong>, a
@@ -67,6 +49,24 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
             </Link>
           </p>
         </div>
+        <figure className="study-area-map-figure">
+          <img
+            src={publicAssetPath(STUDY_AREA.mapImage)}
+            alt={STUDY_AREA.mapImageAlt}
+            width={720}
+            height={960}
+            loading="lazy"
+            decoding="async"
+            className="study-area-map-image"
+          />
+          <figcaption className="muted study-area-map-caption">
+            {STUDY_AREA.mapAttribution}{" "}
+            <Link href={STUDY_AREA.mapSourceUrl} target="_blank" rel="noopener noreferrer">
+              Source image
+            </Link>
+            .
+          </figcaption>
+        </figure>
       </div>
     </section>
   );
