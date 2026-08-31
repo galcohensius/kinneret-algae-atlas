@@ -58,16 +58,6 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
             <strong>{STUDY_AREA.region}</strong>, at approximately{" "}
             <strong>{STUDY_AREA.elevationM} m</strong> elevation (below sea level).
           </p>
-          <dl className="study-area-coords">
-            <div>
-              <dt>Coordinates</dt>
-              <dd>{formatStudyAreaCoordinatesDecimal()}</dd>
-            </div>
-            <div>
-              <dt>Country code</dt>
-              <dd>{STUDY_AREA.countryCode}</dd>
-            </div>
-          </dl>
           <p className="study-area-map-links">
             <Link href={studyAreaOpenStreetMapUrl()} target="_blank" rel="noopener noreferrer">
               Open in OpenStreetMap
