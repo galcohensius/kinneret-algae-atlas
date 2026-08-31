@@ -278,13 +278,6 @@ main.home {
   margin-bottom: 1.35rem;
 }
 
-.study-area-full-layout {
-  display: grid;
-  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
-  gap: 1.25rem 1.75rem;
-  align-items: center;
-}
-
 .study-area-map-figure {
   margin: 0;
 }
@@ -292,19 +285,16 @@ main.home {
 .study-area-map-image {
   display: block;
   width: 100%;
-  max-height: 22rem;
   height: auto;
-  object-fit: cover;
-  object-position: center;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--surface-subtle);
 }
 
 .study-area-map-caption {
-  margin-top: 0.5rem;
-  font-size: 0.82rem;
-  line-height: 1.4;
+  margin-top: 0.45rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
 }
 
 .study-area-details {
@@ -317,9 +307,27 @@ main.home {
   margin: 0;
 }
 
+.about-vision-prose::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.about-vision-figure {
+  float: right;
+  width: min(100%, 22rem);
+  margin: 0.1rem 0 1rem 1.5rem;
+}
+
+.about-vision-figure .study-area-map-caption {
+  text-align: center;
+}
+
 @media (max-width: 720px) {
-  .study-area-full-layout {
-    grid-template-columns: 1fr;
+  .about-vision-figure {
+    float: none;
+    width: min(100%, 20rem);
+    margin: 0 auto 1.1rem;
   }
 }
 
