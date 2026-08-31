@@ -2,7 +2,6 @@ import Link from "next/link";
 import { publicAssetPath } from "../../lib/public-path";
 import {
   formatStudyAreaFooterLine,
-  formatStudyAreaCoordinatesDecimal,
   formatStudyAreaLakeName,
   STUDY_AREA,
   studyAreaGoogleMapsUrl,
@@ -47,7 +46,7 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
             <Link href={STUDY_AREA.mapSourceUrl} target="_blank" rel="noopener noreferrer">
               Source image
             </Link>
-            . Lake center: {formatStudyAreaCoordinatesDecimal()}.
+            .
           </figcaption>
         </figure>
         <div className="study-area-details algae-prose">
