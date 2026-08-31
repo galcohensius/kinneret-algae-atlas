@@ -54,46 +54,50 @@ export default function VisualIndexGrid({ cells }: VisualIndexGridProps) {
         ))}
       </nav>
 
-      <div
-        className="visual-index-grid"
-        style={
-          {
-            "--visual-index-cols": cols,
-            "--visual-index-rows": rows,
-          } as CSSProperties
-        }
-      >
-        {cells.map((cell) => (
-          <Link
-            key={cell.slug}
-            href={`/algae/${cell.slug}/`}
-            className="visual-index-cell"
-            style={
-              {
-                "--phylum-accent": cell.accent,
-                gridColumn: cell.col + 1,
-                gridRow: cell.row + 1,
-              } as CSSProperties
-            }
-            aria-label={`${cell.scientificName}, ${cell.phylum}`}
-          >
-            {cell.imageUrl ? (
-              <img
-                className="visual-index-thumb"
-                src={cell.imageUrl}
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <span className="visual-index-thumb visual-index-thumb-placeholder">No image</span>
-            )}
-            <span className="visual-index-tooltip" role="tooltip">
-              <TaxonItalicName taxon={cell.scientificName} className="algae-taxon" />
-              <span className="visual-index-tooltip-phylum">{cell.phylum}</span>
-            </span>
-          </Link>
-        ))}
+      <p className="muted visual-index-swipe-hint">Swipe sideways to see the full map.</p>
+
+      <div className="visual-index-grid-scroll">
+        <div
+          className="visual-index-grid"
+          style={
+            {
+              "--visual-index-cols": cols,
+              "--visual-index-rows": rows,
+            } as CSSProperties
+          }
+        >
+          {cells.map((cell) => (
+            <Link
+              key={cell.slug}
+              href={`/algae/${cell.slug}/`}
+              className="visual-index-cell"
+              style={
+                {
+                  "--phylum-accent": cell.accent,
+                  gridColumn: cell.col + 1,
+                  gridRow: cell.row + 1,
+                } as CSSProperties
+              }
+              aria-label={`${cell.scientificName}, ${cell.phylum}`}
+            >
+              {cell.imageUrl ? (
+                <img
+                  className="visual-index-thumb"
+                  src={cell.imageUrl}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+              ) : (
+                <span className="visual-index-thumb visual-index-thumb-placeholder">No image</span>
+              )}
+              <span className="visual-index-tooltip" role="tooltip">
+                <TaxonItalicName taxon={cell.scientificName} className="algae-taxon" />
+                <span className="visual-index-tooltip-phylum">{cell.phylum}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );
