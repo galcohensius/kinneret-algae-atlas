@@ -15,7 +15,10 @@
       "geodetic_datum": "WGS84"
     },
     "elevation_m": -209,
-    "citation_line": "Lake Kinneret (Sea of Galilee), Northern District, Israel (32.833° N, 35.583° E, WGS84)"
+    "citation_line": "Lake Kinneret (Sea of Galilee), Northern District, Israel (32.833° N, 35.583° E, WGS84)",
+    "map_image": "/study-area-satellite.jpg",
+    "map_attribution": "NASA Expedition 20 crew (ISS020-E-31066), 15 August 2009. Public domain.",
+    "map_source_url": "https://commons.wikimedia.org/wiki/File:Lake_Tiberias_(Sea_of_Galilee),_Northern_Israel.jpg"
   },
   "citation": {
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."

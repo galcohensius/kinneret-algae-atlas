@@ -170,6 +170,9 @@ def _build_atlas_api(study_area: dict[str, Any]) -> dict[str, Any]:
                 f"{lake} ({alt}), {study_area['state_province']}, {study_area['country']} "
                 f"({coords}, {datum})"
             ),
+            "map_image": study_area.get("map_image"),
+            "map_attribution": study_area.get("map_attribution"),
+            "map_source_url": study_area.get("map_source_url"),
         },
         "citation": {
             "atlas_attribution": _atlas_attribution(),

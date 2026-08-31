@@ -12,6 +12,10 @@ export type StudyArea = {
   geodeticDatum: string;
   elevationM: number;
   mapZoom: number;
+  mapImage: string;
+  mapImageAlt: string;
+  mapAttribution: string;
+  mapSourceUrl: string;
 };
 
 export const STUDY_AREA: StudyArea = {
@@ -26,6 +30,10 @@ export const STUDY_AREA: StudyArea = {
   geodeticDatum: studyAreaData.geodetic_datum,
   elevationM: studyAreaData.elevation_m,
   mapZoom: studyAreaData.map_zoom,
+  mapImage: studyAreaData.map_image,
+  mapImageAlt: studyAreaData.map_image_alt,
+  mapAttribution: studyAreaData.map_attribution,
+  mapSourceUrl: studyAreaData.map_source_url,
 };
 
 function formatDecimalDegrees(value: number, positiveSuffix: string, negativeSuffix: string): string {
@@ -118,6 +126,9 @@ export function buildStudyAreaApiPayload(): Record<string, unknown> {
     },
     elevation_m: STUDY_AREA.elevationM,
     citation_line: formatStudyAreaCitationLine(),
+    map_image: STUDY_AREA.mapImage,
+    map_attribution: STUDY_AREA.mapAttribution,
+    map_source_url: STUDY_AREA.mapSourceUrl,
     maps: {
       openstreetmap: studyAreaOpenStreetMapUrl(),
       google_maps: studyAreaGoogleMapsUrl(),
