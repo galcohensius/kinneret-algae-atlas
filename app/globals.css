@@ -304,26 +304,6 @@ main.home {
   line-height: 1.35;
 }
 
-.study-area-coords {
-  margin: 0.85rem 0 0;
-  display: grid;
-  gap: 0.55rem;
-}
-
-.study-area-coords dt {
-  margin: 0;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.study-area-coords dd {
-  margin: 0.1rem 0 0;
-  color: var(--text-primary);
-}
-
 .study-area-map-links {
   margin: 0.85rem 0 0;
 }

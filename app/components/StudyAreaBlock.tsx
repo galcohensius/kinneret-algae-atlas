@@ -3,7 +3,6 @@ import { publicAssetPath } from "../../lib/public-path";
 import {
   formatStudyAreaFooterLine,
   formatStudyAreaCoordinatesDecimal,
-  formatStudyAreaCoordinatesDms,
   formatStudyAreaLakeName,
   STUDY_AREA,
   studyAreaGoogleMapsUrl,
@@ -59,23 +58,6 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
             <strong>{STUDY_AREA.region}</strong>, at approximately{" "}
             <strong>{STUDY_AREA.elevationM} m</strong> elevation (below sea level).
           </p>
-          <dl className="study-area-coords">
-            <div>
-              <dt>Decimal degrees</dt>
-              <dd>
-                {formatStudyAreaCoordinatesDecimal()} ({STUDY_AREA.geodeticDatum} — standard GPS
-                coordinates)
-              </dd>
-            </div>
-            <div>
-              <dt>Degrees, minutes</dt>
-              <dd>{formatStudyAreaCoordinatesDms()}</dd>
-            </div>
-            <div>
-              <dt>Country code</dt>
-              <dd>{STUDY_AREA.countryCode}</dd>
-            </div>
-          </dl>
           <p className="study-area-map-links">
             <Link href={studyAreaOpenStreetMapUrl()} target="_blank" rel="noopener noreferrer">
               Open in OpenStreetMap
