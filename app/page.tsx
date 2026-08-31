@@ -102,12 +102,12 @@ export default function HomePage() {
               Israel Oceanographic and Limnological Research
             </a>
           </p>
-          <StudyAreaBlock variant="compact" />
         </div>
       </div>
 
       <div className="home-below-hero">
         <AlgaeIndexSectionShell />
+        <StudyAreaBlock variant="footer" />
       </div>
     </main>
   );

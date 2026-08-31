@@ -3,9 +3,10 @@ import {
   buildStudyAreaApiPayload,
   buildStudyAreaJsonLd,
   formatStudyAreaCitationLine,
-  formatStudyAreaCompactLine,
   formatStudyAreaCoordinatesDecimal,
   formatStudyAreaCoordinatesDms,
+  formatStudyAreaFooterLine,
+  formatStudyAreaShortLine,
   STUDY_AREA,
   studyAreaOpenStreetMapUrl,
 } from "../lib/study-area";
@@ -19,11 +20,11 @@ describe("study-area", () => {
     expect(formatStudyAreaCoordinatesDms()).toBe("32°50′ N, 35°35′ E");
   });
 
-  it("builds compact and citation locality lines", () => {
-    expect(formatStudyAreaCompactLine()).toContain("Lake Kinneret (Sea of Galilee)");
-    expect(formatStudyAreaCompactLine()).toContain("Northern District, Israel");
-    expect(formatStudyAreaCompactLine()).toContain("WGS84");
-    expect(formatStudyAreaCitationLine()).toContain("Lake Kinneret (Sea of Galilee)");
+  it("builds footer and citation locality lines", () => {
+    expect(formatStudyAreaFooterLine()).toBe(
+      "Lake Kinneret (Sea of Galilee), Northern District, Israel · 32.833° N, 35.583° E"
+    );
+    expect(formatStudyAreaShortLine()).toContain("Lake Kinneret (Sea of Galilee)");
     expect(formatStudyAreaCitationLine()).toContain("(32.833° N, 35.583° E, WGS84)");
   });
 

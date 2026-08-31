@@ -58,9 +58,9 @@ export function formatStudyAreaLakeName(): string {
   return `${STUDY_AREA.lakeName} (${STUDY_AREA.alternateName})`;
 }
 
-/** One line for the home hero (text + coordinates, option A). */
-export function formatStudyAreaCompactLine(): string {
-  return `${formatStudyAreaLakeName()}, ${STUDY_AREA.stateProvince}, ${STUDY_AREA.country} · ${formatStudyAreaCoordinatesDecimal()} (${STUDY_AREA.geodeticDatum})`;
+/** One line with locality and coordinates (no datum label — for public footer). */
+export function formatStudyAreaFooterLine(): string {
+  return `${formatStudyAreaShortLine()} · ${formatStudyAreaCoordinatesDecimal()}`;
 }
 
 /** Short locality without coordinates. */

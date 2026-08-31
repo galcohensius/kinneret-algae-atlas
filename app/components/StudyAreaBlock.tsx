@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { publicAssetPath } from "../../lib/public-path";
 import {
-  formatStudyAreaCompactLine,
+  formatStudyAreaFooterLine,
   formatStudyAreaCoordinatesDecimal,
   formatStudyAreaCoordinatesDms,
   formatStudyAreaLakeName,
@@ -11,15 +11,19 @@ import {
 } from "../../lib/study-area";
 
 type StudyAreaBlockProps = {
-  variant: "compact" | "full";
+  variant: "footer" | "full";
 };
 
 export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
-  if (variant === "compact") {
+  if (variant === "footer") {
     return (
-      <p className="study-area-compact home-hero-location">
-        {formatStudyAreaCompactLine()}
-      </p>
+      <footer className="study-area-footer" aria-label="Study area">
+        <p className="study-area-footer-line muted">
+          {formatStudyAreaFooterLine()}
+          {" · "}
+          <Link href="/about/#study-area-heading">Map and details</Link>
+        </p>
+      </footer>
     );
   }
 
@@ -40,8 +44,7 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
             className="study-area-map-image"
           />
           <figcaption className="muted study-area-map-caption">
-            Schematic regional map; lake center at {formatStudyAreaCoordinatesDecimal()} (
-            {STUDY_AREA.geodeticDatum}).
+            Schematic regional map; lake center at {formatStudyAreaCoordinatesDecimal()}.
           </figcaption>
         </figure>
         <div className="study-area-details algae-prose">
@@ -56,7 +59,8 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
             <div>
               <dt>Decimal degrees</dt>
               <dd>
-                {formatStudyAreaCoordinatesDecimal()} ({STUDY_AREA.geodeticDatum})
+                {formatStudyAreaCoordinatesDecimal()} ({STUDY_AREA.geodeticDatum} — standard GPS
+                coordinates)
               </dd>
             </div>
             <div>

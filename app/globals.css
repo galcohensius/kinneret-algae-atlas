@@ -260,13 +260,17 @@ main.home {
   opacity: 0.92;
 }
 
-.home-hero-location {
-  margin: 0.85rem 0 0;
-  max-width: 40rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-  line-height: 1.45;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.55);
+.study-area-footer {
+  margin: 2rem 0 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.study-area-footer-line {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 /* Study area (About page + shared) */
