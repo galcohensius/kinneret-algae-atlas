@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="study-area-map-title study-area-map-desc">
   <title id="study-area-map-title">Lake Kinneret regional map</title>
   <desc id="study-area-map-desc">Schematic map showing Lake Kinneret in northeastern Israel, east of the Mediterranean coast.</desc>
@@ -10,9 +11,6 @@
       <stop offset="0%" stop-color="#fef3c7"/>
       <stop offset="100%" stop-color="#fde68a"/>
     </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#0f172a" flood-opacity="0.18"/>
-    </filter>
   </defs>
   <rect width="420" height="300" fill="#f8fafc"/>
   <rect x="18" y="28" width="120" height="244" rx="8" fill="url(#sea)"/>
@@ -21,10 +19,10 @@
   <path d="M150 42 L360 28 L395 118 L382 210 L320 262 L210 272 L150 230 L138 140 Z" fill="url(#land)" stroke="#ca8a04" stroke-width="2"/>
   <text x="268" y="248" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#78350f">Israel</text>
   <text x="268" y="266" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#92400e">Northern District</text>
-  <ellipse cx="292" cy="98" rx="22" ry="12" fill="#38bdf8" stroke="#0369a1" stroke-width="1.5" filter="url(#shadow)"/>
+  <ellipse cx="292" cy="98" rx="22" ry="12" fill="#38bdf8" stroke="#0369a1" stroke-width="1.5"/>
   <circle cx="292" cy="98" r="5" fill="#dc2626" stroke="#fff" stroke-width="1.5"/>
   <line x1="292" y1="103" x2="292" y2="118" stroke="#dc2626" stroke-width="1.5"/>
   <text x="292" y="84" text-anchor="middle" font-family="Georgia, serif" font-size="12" font-style="italic" fill="#0f172a">Lake Kinneret</text>
-  <text x="292" y="136" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#334155">32.833° N, 35.583° E</text>
-  <text x="210" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Jordan Rift Valley · northeastern Israel</text>
+  <text x="292" y="136" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#334155">32.833&#176; N, 35.583&#176; E</text>
+  <text x="210" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Jordan Rift Valley &#183; northeastern Israel</text>
 </svg>
