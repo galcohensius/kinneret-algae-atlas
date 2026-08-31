@@ -16,8 +16,8 @@ export default function StudyAreaMapFigure({ className }: StudyAreaMapFigureProp
       <img
         src={publicAssetPath(STUDY_AREA.mapImage)}
         alt={STUDY_AREA.mapImageAlt}
-        width={720}
-        height={960}
+        width={800}
+        height={1204}
         loading="lazy"
         decoding="async"
         className="study-area-map-image"

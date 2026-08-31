@@ -286,8 +286,6 @@ main.home {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: cover;
-  object-position: center;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--surface-subtle);
@@ -317,13 +315,8 @@ main.home {
 
 .about-vision-figure {
   float: right;
-  width: min(100%, 20rem);
+  width: min(100%, 22rem);
   margin: 0.1rem 0 1rem 1.5rem;
-}
-
-.about-vision-figure .study-area-map-image {
-  max-height: none;
-  object-fit: contain;
 }
 
 .about-vision-figure .study-area-map-caption {
@@ -333,7 +326,7 @@ main.home {
 @media (max-width: 720px) {
   .about-vision-figure {
     float: none;
-    width: min(100%, 18rem);
+    width: min(100%, 20rem);
     margin: 0 auto 1.1rem;
   }
 }
