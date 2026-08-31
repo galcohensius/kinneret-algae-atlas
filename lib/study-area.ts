@@ -11,6 +11,7 @@ export type StudyArea = {
   longitude: number;
   geodeticDatum: string;
   elevationM: number;
+  mapZoom: number;
   mapImage: string;
 };
 
@@ -25,6 +26,7 @@ export const STUDY_AREA: StudyArea = {
   longitude: studyAreaData.longitude,
   geodeticDatum: studyAreaData.geodetic_datum,
   elevationM: studyAreaData.elevation_m,
+  mapZoom: studyAreaData.map_zoom,
   mapImage: studyAreaData.map_image,
 };
 
@@ -74,13 +76,14 @@ export function formatStudyAreaCitationLine(): string {
 }
 
 export function studyAreaOpenStreetMapUrl(): string {
-  const { latitude, longitude } = STUDY_AREA;
-  return `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=10/${latitude}/${longitude}`;
+  const { latitude, longitude, mapZoom } = STUDY_AREA;
+  return `https://www.openstreetmap.org/?mlat=${latitude}&mlon=${longitude}#map=${mapZoom}/${latitude}/${longitude}`;
 }
 
 export function studyAreaGoogleMapsUrl(): string {
-  const { latitude, longitude } = STUDY_AREA;
-  return `https://www.google.com/maps?q=${latitude},${longitude}`;
+  const { latitude, longitude, mapZoom } = STUDY_AREA;
+  const place = encodeURIComponent(formatStudyAreaLakeName());
+  return `https://www.google.com/maps/search/${place}/@${latitude},${longitude},${mapZoom}z`;
 }
 
 export function buildStudyAreaJsonLd(): Record<string, unknown> {

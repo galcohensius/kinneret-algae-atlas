@@ -138,7 +138,8 @@ def _study_area_block(study_area: dict[str, Any]) -> list[str]:
         f"- Region: {study_area['region']}",
         f"- Coordinates (lake center): {coords} ({datum})",
         f"- Elevation (approx.): {study_area['elevation_m']} m",
-        f"- OpenStreetMap: https://www.openstreetmap.org/?mlat={study_area['latitude']}&mlon={study_area['longitude']}#map=10/{study_area['latitude']}/{study_area['longitude']}",
+        f"- OpenStreetMap: https://www.openstreetmap.org/?mlat={study_area['latitude']}&mlon={study_area['longitude']}#map={study_area.get('map_zoom', 10)}/{study_area['latitude']}/{study_area['longitude']}",
+        f"- Google Maps: https://www.google.com/maps/search/Lake+Kinneret+(Sea+of+Galilee)/@{study_area['latitude']},{study_area['longitude']},{study_area.get('map_zoom', 10)}z",
         "",
     ]
 

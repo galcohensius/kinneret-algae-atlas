@@ -8,6 +8,7 @@ import {
   formatStudyAreaFooterLine,
   formatStudyAreaShortLine,
   STUDY_AREA,
+  studyAreaGoogleMapsUrl,
   studyAreaOpenStreetMapUrl,
 } from "../lib/study-area";
 
@@ -49,6 +50,8 @@ describe("study-area", () => {
     expect(payload.country_code).toBe("IL");
     expect(payload.map_image).toBe("/study-area-map.svg");
     expect(studyAreaOpenStreetMapUrl()).toContain("openstreetmap.org");
-    expect(studyAreaOpenStreetMapUrl()).toContain(String(STUDY_AREA.latitude));
+    expect(studyAreaOpenStreetMapUrl()).toContain("#map=10/");
+    expect(studyAreaGoogleMapsUrl()).toContain("google.com/maps/search/");
+    expect(studyAreaGoogleMapsUrl()).toContain(",10z");
   });
 });
