@@ -280,9 +280,9 @@ main.home {
 
 .study-area-full-layout {
   display: grid;
-  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
-  gap: 1.25rem 1.5rem;
-  align-items: start;
+  grid-template-columns: minmax(200px, 280px) minmax(0, 1fr);
+  gap: 1.25rem 1.75rem;
+  align-items: center;
 }
 
 .study-area-map-figure {
@@ -292,20 +292,29 @@ main.home {
 .study-area-map-image {
   display: block;
   width: 100%;
+  max-height: 22rem;
   height: auto;
+  object-fit: cover;
+  object-position: center;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: var(--surface-subtle);
 }
 
 .study-area-map-caption {
-  margin-top: 0.45rem;
-  font-size: 0.84rem;
-  line-height: 1.35;
+  margin-top: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.study-area-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .study-area-map-links {
-  margin: 0.85rem 0 0;
+  margin: 0;
 }
 
 @media (max-width: 720px) {

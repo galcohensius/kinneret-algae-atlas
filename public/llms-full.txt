@@ -8,7 +8,7 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 - Lake: Lake Kinneret (Sea of Galilee)
 - Country: Israel (IL)
 - Administrative area: Northern District
-- Region: northeastern Israel, Jordan Rift Valley
+- Region: Jordan Rift Valley
 - Coordinates (lake center): 32.833° N, 35.583° E (WGS84)
 - Elevation (approx.): -209 m
 - OpenStreetMap: https://www.openstreetmap.org/?mlat=32.833&mlon=35.583#map=10/32.833/35.583
