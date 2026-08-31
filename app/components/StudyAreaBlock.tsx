@@ -3,7 +3,6 @@ import { publicAssetPath } from "../../lib/public-path";
 import {
   formatStudyAreaFooterLine,
   formatStudyAreaCoordinatesDecimal,
-  formatStudyAreaCoordinatesDms,
   formatStudyAreaLakeName,
   STUDY_AREA,
   studyAreaGoogleMapsUrl,
@@ -61,12 +60,8 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
           </p>
           <dl className="study-area-coords">
             <div>
-              <dt>Decimal degrees</dt>
+              <dt>Coordinates</dt>
               <dd>{formatStudyAreaCoordinatesDecimal()}</dd>
-            </div>
-            <div>
-              <dt>Degrees, minutes</dt>
-              <dd>{formatStudyAreaCoordinatesDms()}</dd>
             </div>
             <div>
               <dt>Country code</dt>
