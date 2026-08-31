@@ -62,10 +62,7 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
           <dl className="study-area-coords">
             <div>
               <dt>Decimal degrees</dt>
-              <dd>
-                {formatStudyAreaCoordinatesDecimal()} ({STUDY_AREA.geodeticDatum} — standard GPS
-                coordinates)
-              </dd>
+              <dd>{formatStudyAreaCoordinatesDecimal()}</dd>
             </div>
             <div>
               <dt>Degrees, minutes</dt>
