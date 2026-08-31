@@ -8,6 +8,7 @@ import {
 } from "../../lib/collaborator-profile-links";
 import { fixScientificTypography } from "../../lib/scientific-text";
 import StudyAreaBlock from "../components/StudyAreaBlock";
+import StudyAreaMapFigure from "../components/StudyAreaMapFigure";
 import { buildStudyAreaJsonLd } from "../../lib/study-area";
 
 export const metadata: Metadata = {
@@ -75,7 +76,8 @@ export default async function AboutPage() {
             <h2 id="vision-heading" className="section-heading">
               Vision
             </h2>
-            <div className="algae-prose">
+            <div className="algae-prose about-vision-prose">
+              <StudyAreaMapFigure className="about-vision-figure" />
               {about.sections.our_vision.map((para, i) => (
                 <p key={`vision-${i}`}>{fixScientificTypography(para)}</p>
               ))}

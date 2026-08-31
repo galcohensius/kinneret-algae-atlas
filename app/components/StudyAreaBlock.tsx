@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { publicAssetPath } from "../../lib/public-path";
 import {
   formatStudyAreaFooterLine,
   formatStudyAreaLakeName,
@@ -30,43 +29,23 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
       <h2 id="study-area-heading" className="section-heading">
         Study area
       </h2>
-      <div className="study-area-full-layout">
-        <div className="study-area-details algae-prose">
-          <p>
-            This atlas documents microalgae from <strong>{formatStudyAreaLakeName()}</strong>, a
-            freshwater lake in the <strong>{STUDY_AREA.stateProvince}</strong>,{" "}
-            <strong>{STUDY_AREA.country}</strong>. The lake lies in the{" "}
-            <strong>{STUDY_AREA.region}</strong>, at approximately{" "}
-            <strong>{STUDY_AREA.elevationM} m</strong> elevation (below sea level).
-          </p>
-          <p className="study-area-map-links">
-            <Link href={studyAreaOpenStreetMapUrl()} target="_blank" rel="noopener noreferrer">
-              Open in OpenStreetMap
-            </Link>
-            {" · "}
-            <Link href={studyAreaGoogleMapsUrl()} target="_blank" rel="noopener noreferrer">
-              Open in Google Maps
-            </Link>
-          </p>
-        </div>
-        <figure className="study-area-map-figure">
-          <img
-            src={publicAssetPath(STUDY_AREA.mapImage)}
-            alt={STUDY_AREA.mapImageAlt}
-            width={720}
-            height={960}
-            loading="lazy"
-            decoding="async"
-            className="study-area-map-image"
-          />
-          <figcaption className="muted study-area-map-caption">
-            {STUDY_AREA.mapAttribution}{" "}
-            <Link href={STUDY_AREA.mapSourceUrl} target="_blank" rel="noopener noreferrer">
-              Source image
-            </Link>
-            .
-          </figcaption>
-        </figure>
+      <div className="study-area-details algae-prose">
+        <p>
+          This atlas documents microalgae from <strong>{formatStudyAreaLakeName()}</strong>, a
+          freshwater lake in the <strong>{STUDY_AREA.stateProvince}</strong>,{" "}
+          <strong>{STUDY_AREA.country}</strong>. The lake lies in the{" "}
+          <strong>{STUDY_AREA.region}</strong>, at approximately{" "}
+          <strong>{STUDY_AREA.elevationM} m</strong> elevation (below sea level).
+        </p>
+        <p className="study-area-map-links">
+          <Link href={studyAreaOpenStreetMapUrl()} target="_blank" rel="noopener noreferrer">
+            Open in OpenStreetMap
+          </Link>
+          {" · "}
+          <Link href={studyAreaGoogleMapsUrl()} target="_blank" rel="noopener noreferrer">
+            Open in Google Maps
+          </Link>
+        </p>
       </div>
     </section>
   );

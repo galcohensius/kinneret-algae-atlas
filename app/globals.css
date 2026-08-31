@@ -278,21 +278,13 @@ main.home {
   margin-bottom: 1.35rem;
 }
 
-.study-area-full-layout {
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-}
-
 .study-area-map-figure {
-  margin: 0.15rem auto 0;
-  max-width: 17.5rem;
+  margin: 0;
 }
 
 .study-area-map-image {
   display: block;
   width: 100%;
-  max-height: 13rem;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -305,7 +297,6 @@ main.home {
   margin-top: 0.45rem;
   font-size: 0.8rem;
   line-height: 1.35;
-  text-align: center;
 }
 
 .study-area-details {
@@ -316,6 +307,34 @@ main.home {
 
 .study-area-map-links {
   margin: 0;
+}
+
+.about-vision-prose::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.about-vision-figure {
+  float: right;
+  width: min(100%, 13.5rem);
+  margin: 0.1rem 0 0.85rem 1.25rem;
+}
+
+.about-vision-figure .study-area-map-image {
+  max-height: 10.5rem;
+}
+
+.about-vision-figure .study-area-map-caption {
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .about-vision-figure {
+    float: none;
+    width: min(100%, 14rem);
+    margin: 0 auto 1rem;
+  }
 }
 
 .home-below-hero {
