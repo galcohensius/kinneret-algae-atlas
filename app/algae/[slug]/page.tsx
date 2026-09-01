@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import BackToIndexLink from "../../components/BackToIndexLink";
 import CiteThisRecordBlock from "../../components/CiteThisRecordBlock";
@@ -18,6 +19,7 @@ import {
 } from "../../../lib/further-reading";
 import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
+import { listAlgaeInAtlasOrder } from "../../../lib/phylum-catalog";
 import {
   galleryEnlargeAriaLabel,
   galleryImageAlt,
@@ -99,6 +101,10 @@ const NARRATIVE_AFTER_PLATE_KEYS = [
 
 function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
+}
+
+function phylumOf(record: { sections: Record<string, string> }): string {
+  return (record.sections.phylum ?? "").trim();
 }
 
 function FigureGalleryBlock({
@@ -206,6 +212,14 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   if (!record) {
     notFound();
   }
+
+  const atlasOrder = listAlgaeInAtlasOrder(await getAllAlgae());
+  const orderIndex = atlasOrder.findIndex((r) => r.slug === record.slug);
+  const prevRecord = orderIndex > 0 ? atlasOrder[orderIndex - 1] : null;
+  const nextRecord =
+    orderIndex >= 0 && orderIndex < atlasOrder.length - 1
+      ? atlasOrder[orderIndex + 1]
+      : null;
 
   const sections = record.sections;
   const indicatorSpecies = sections.indicator_species?.trim() ?? "";
@@ -417,6 +431,43 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           </section>
         ) : null}
       </article>
+
+        <nav className="algae-detail-pager" aria-label="Previous and next species">
+          {prevRecord ? (
+            <Link
+              href={`/algae/${prevRecord.slug}/`}
+              rel="prev"
+              className="algae-pager-link algae-pager-prev"
+            >
+              <span>
+                <span aria-hidden>&larr; </span>
+                <TaxonItalicName taxon={prevRecord.scientificName} className="algae-taxon" />
+              </span>
+              {phylumOf(prevRecord) !== phylumOf(record) ? (
+                <span className="algae-pager-phylum muted">{phylumOf(prevRecord)}</span>
+              ) : null}
+            </Link>
+          ) : (
+            <span />
+          )}
+          {nextRecord ? (
+            <Link
+              href={`/algae/${nextRecord.slug}/`}
+              rel="next"
+              className="algae-pager-link algae-pager-next"
+            >
+              <span>
+                <TaxonItalicName taxon={nextRecord.scientificName} className="algae-taxon" />
+                <span aria-hidden> &rarr;</span>
+              </span>
+              {phylumOf(nextRecord) !== phylumOf(record) ? (
+                <span className="algae-pager-phylum muted">{phylumOf(nextRecord)}</span>
+              ) : null}
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
 
         <p className="algae-detail-nav algae-detail-nav-end">
           <BackToIndexLink />

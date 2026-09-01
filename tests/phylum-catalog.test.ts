@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { groupAlgaeByPhylum, phylumToSlug } from "../lib/phylum-catalog";
+import {
+  groupAlgaeByPhylum,
+  listAlgaeInAtlasOrder,
+  phylumToSlug,
+} from "../lib/phylum-catalog";
 import type { AlgaeRecord } from "../lib/algae-types";
 
 function stubRecord(phylum: string, slug: string, scientificName: string): AlgaeRecord {
@@ -21,6 +25,19 @@ function stubRecord(phylum: string, slug: string, scientificName: string): Algae
     recordUpdated: null,
   };
 }
+
+describe("listAlgaeInAtlasOrder", () => {
+  it("flattens the catalog groups covering every record exactly once", () => {
+    const records = [
+      stubRecord("B", "b-1", "Beta one"),
+      stubRecord("B", "b-2", "Beta two"),
+      stubRecord("A", "a-1", "Alpha one"),
+    ];
+    const ordered = listAlgaeInAtlasOrder(records);
+    expect(ordered.map((r) => r.slug)).toEqual(["b-1", "b-2", "a-1"]);
+    expect(new Set(ordered.map((r) => r.slug)).size).toBe(records.length);
+  });
+});
 
 describe("groupAlgaeByPhylum", () => {
   it("groups consecutive records with the same phylum", () => {

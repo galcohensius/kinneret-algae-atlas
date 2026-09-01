@@ -74,6 +74,11 @@ export function getPhylumAccent(phylum: string): string {
  * Group consecutive records by phylum. Input should already be sorted
  * (see sortAlgaeRecordsForCatalog).
  */
+/** Atlas browse order: the phylum-catalog groups flattened (phylum, then A-Z within it). */
+export function listAlgaeInAtlasOrder(records: AlgaeRecord[]): AlgaeRecord[] {
+  return groupAlgaeByPhylum(records).flatMap((group) => group.records);
+}
+
 export function groupAlgaeByPhylum(records: AlgaeRecord[]): PhylumCatalogGroup[] {
   const groups: PhylumCatalogGroup[] = [];
 
