@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, type CSSProperties } from "react";
+import { Fragment, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import type { AlgaeRecord } from "../../lib/algae-types";
 import { filterAlgaeByQuery } from "../../lib/algae-filter";
-import { formatRecordUpdatedLong } from "../../lib/cite-this-record";
 import { selectRecentlyUpdated } from "../../lib/recently-updated";
 import { groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
@@ -15,6 +14,18 @@ type AlgaeIndexSectionProps = {
   records: AlgaeRecord[];
 };
 
+/** `YYYY-MM-DD` as e.g. `30 Aug 2026`, compact enough for the one-line strip. */
+function formatShortDate(isoDate: string): string {
+  const [y, m, d] = isoDate.trim().split("-").map(Number);
+  if (!y || !m || !d) return isoDate;
+  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
 /** Split phylum jump links into two rows with similar total label length. */
 function splitPhylumJumpRows(groups: PhylumCatalogGroup[]): PhylumCatalogGroup[][] {
   return splitIntoBalancedRows(
@@ -23,7 +34,7 @@ function splitPhylumJumpRows(groups: PhylumCatalogGroup[]): PhylumCatalogGroup[]
   );
 }
 
-function AlgaeListCard({ record, subtitle }: { record: AlgaeRecord; subtitle?: string }) {
+function AlgaeListCard({ record }: { record: AlgaeRecord }) {
   const { plateImage } = partitionPlateAndGalleryImages(record.images, record.imageCaptions);
   const listImage = record.thumbnailUrl ?? plateImage;
 
@@ -44,7 +55,6 @@ function AlgaeListCard({ record, subtitle }: { record: AlgaeRecord; subtitle?: s
         <h3 className="algae-list-card-title">
           <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
         </h3>
-        {subtitle ? <p className="muted algae-list-card-subtitle">{subtitle}</p> : null}
       </article>
     </Link>
   );
@@ -115,18 +125,20 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
       </nav>
 
       {!isFiltering && recentlyUpdated.length > 0 ? (
-        <section className="recently-updated" aria-label="Recently updated species">
-          <h2 className="recently-updated-heading">Recently updated</h2>
-          <div className="algae-list-grid recently-updated-grid">
-            {recentlyUpdated.map((record) => (
-              <AlgaeListCard
-                key={record.slug}
-                record={record}
-                subtitle={formatRecordUpdatedLong(record.recordUpdated ?? "")}
-              />
-            ))}
-          </div>
-        </section>
+        <p className="muted recently-updated-line" aria-label="Recently updated species">
+          Recently updated:{" "}
+          {recentlyUpdated.map((record, index) => (
+            <Fragment key={record.slug}>
+              {index > 0 ? <span aria-hidden> &middot; </span> : null}
+              <Link href={`/algae/${record.slug}/`}>
+                <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
+              </Link>{" "}
+              <span className="recently-updated-date">
+                ({formatShortDate(record.recordUpdated ?? "")})
+              </span>
+            </Fragment>
+          ))}
+        </p>
       ) : null}
 
       {isFiltering && filteredRecords.length === 0 ? (
