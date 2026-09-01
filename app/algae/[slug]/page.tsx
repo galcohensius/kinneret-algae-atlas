@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
+import BackToIndexLink from "../../components/BackToIndexLink";
 import CiteThisRecordBlock from "../../components/CiteThisRecordBlock";
 import TaxonItalicName from "../../components/TaxonItalicName";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
@@ -242,7 +242,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(speciesJsonLd) }}
         />
         <p className="algae-detail-nav">
-          <Link href="/#algae-index">← Back to algae index</Link>
+          <BackToIndexLink />
         </p>
 
       <header className="algae-detail-header">
@@ -407,7 +407,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
       </article>
 
         <p className="algae-detail-nav algae-detail-nav-end">
-          <Link href="/#algae-index">← Back to algae index</Link>
+          <BackToIndexLink />
         </p>
       </main>
     </GlossaryLinkScopeProvider>

@@ -3,6 +3,7 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { VisualIndexCell } from "../../lib/visual-index-layout";
+import { ORIGIN_PARAM, VISUAL_INDEX_ORIGIN } from "./BackToIndexLink";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import TaxonItalicName from "./TaxonItalicName";
 
@@ -69,7 +70,7 @@ export default function VisualIndexGrid({ cells }: VisualIndexGridProps) {
           {cells.map((cell) => (
             <Link
               key={cell.slug}
-              href={`/algae/${cell.slug}/`}
+              href={`/algae/${cell.slug}/?${ORIGIN_PARAM}=${VISUAL_INDEX_ORIGIN}`}
               className="visual-index-cell"
               style={
                 {
