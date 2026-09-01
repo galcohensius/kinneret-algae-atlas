@@ -4,6 +4,8 @@ import { useState, type CSSProperties } from "react";
 import Link from "next/link";
 import type { AlgaeRecord } from "../../lib/algae-types";
 import { filterAlgaeByQuery } from "../../lib/algae-filter";
+import { formatRecordUpdatedLong } from "../../lib/cite-this-record";
+import { selectRecentlyUpdated } from "../../lib/recently-updated";
 import { groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
@@ -21,7 +23,7 @@ function splitPhylumJumpRows(groups: PhylumCatalogGroup[]): PhylumCatalogGroup[]
   );
 }
 
-function AlgaeListCard({ record }: { record: AlgaeRecord }) {
+function AlgaeListCard({ record, subtitle }: { record: AlgaeRecord; subtitle?: string }) {
   const { plateImage } = partitionPlateAndGalleryImages(record.images, record.imageCaptions);
   const listImage = record.thumbnailUrl ?? plateImage;
 
@@ -42,6 +44,7 @@ function AlgaeListCard({ record }: { record: AlgaeRecord }) {
         <h3 className="algae-list-card-title">
           <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
         </h3>
+        {subtitle ? <p className="muted algae-list-card-subtitle">{subtitle}</p> : null}
       </article>
     </Link>
   );
@@ -53,6 +56,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
   const filteredRecords = filterAlgaeByQuery(records, query);
   const phylumGroups = groupAlgaeByPhylum(filteredRecords);
   const phylumJumpRows = splitPhylumJumpRows(phylumGroups);
+  const recentlyUpdated = selectRecentlyUpdated(records);
 
   return (
     <section
@@ -109,6 +113,21 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
         <Link href="/visual-index/">Visual index</Link>
         <Link href="/supplements/">Supplementary Material</Link>
       </nav>
+
+      {!isFiltering && recentlyUpdated.length > 0 ? (
+        <section className="recently-updated" aria-label="Recently updated species">
+          <h2 className="recently-updated-heading">Recently updated</h2>
+          <div className="algae-list-grid recently-updated-grid">
+            {recentlyUpdated.map((record) => (
+              <AlgaeListCard
+                key={record.slug}
+                record={record}
+                subtitle={formatRecordUpdatedLong(record.recordUpdated ?? "")}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
 
       {isFiltering && filteredRecords.length === 0 ? (
         <p className="muted algae-index-summary" role="status">

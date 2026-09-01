@@ -816,6 +816,26 @@ main.home {
   width: min(420px, 100%);
 }
 
+.recently-updated {
+  margin: 0 auto 2rem;
+  max-width: 42rem;
+}
+
+.recently-updated-heading {
+  font-size: 1.05rem;
+  text-align: center;
+  margin: 0 0 0.75rem;
+}
+
+.recently-updated-grid {
+  justify-content: center;
+}
+
+.algae-list-card-subtitle {
+  margin: 0.15rem 0 0;
+  font-size: 0.75rem;
+}
+
 .phylum-jump-nav {
   display: flex;
   flex-direction: column;

@@ -13,7 +13,7 @@ from .image_optimize import optimize_image_blob
 from .models import AlgaeRecord
 from .parsers.scientific_name import compile_scientific_name_patterns, detect_record_start
 from .parsers.sections import build_section_alias_lookup, detect_section_heading
-from .reader import iter_docx_content_blocks, unmap_script_glyphs
+from .reader import iter_docx_content_blocks, source_modified_date, unmap_script_glyphs
 
 
 def _strict_record_start_patterns(
@@ -61,7 +61,10 @@ def _find_inline_record_split(
     return best
 
 
-def _new_record(source_file: str) -> dict[str, Any]:
+def _new_record(source_file: str, record_updated: str | None = None) -> dict[str, Any]:
+    metadata: dict[str, Any] = {"source_file": source_file}
+    if record_updated:
+        metadata["record_updated"] = record_updated
     return {
         "scientific_name": None,
         "images": [],
@@ -77,7 +80,7 @@ def _new_record(source_file: str) -> dict[str, Any]:
         # char_styles is a per-character style bitmask aligned to `text`.
         # bit 1: italic, bit 2: bold, bit 0: neutral
         "sections_buffer": {},
-        "metadata": {"source_file": source_file},
+        "metadata": metadata,
     }
 
 
@@ -186,7 +189,9 @@ def _finalize_record(
         )
 
     metadata = dict(record.get("metadata") or {})
-    metadata["record_updated"] = date.today().isoformat()
+    # Source-doc date (from _new_record) wins; today is only a fallback for callers
+    # that did not supply one, so extraction reruns do not churn the JSON.
+    metadata.setdefault("record_updated", date.today().isoformat())
 
     return AlgaeRecord(
         scientific_name=record["scientific_name"],
@@ -1324,8 +1329,9 @@ def extract_records(
     marker_lookahead = int(config.get("record_following_marker_lookahead", 4))
 
     source_file = Path(docx_path).name
+    record_updated = source_modified_date(docx_path)
     records: list[AlgaeRecord] = []
-    current = _new_record(source_file=source_file)
+    current = _new_record(source_file=source_file, record_updated=record_updated)
     current_section = default_section
     resolved_images_output_dir = Path(images_output_dir) if images_output_dir else None
     expect_image_caption = False
@@ -1351,7 +1357,7 @@ def extract_records(
             )
             if finalized:
                 records.append(finalized)
-            current = _new_record(source_file=source_file)
+            current = _new_record(source_file=source_file, record_updated=record_updated)
             current_section = default_section
             pending_relaxed_record_markers = True
             continue
@@ -1508,7 +1514,7 @@ def extract_records(
             if finalized:
                 records.append(finalized)
 
-            current = _new_record(source_file=source_file)
+            current = _new_record(source_file=source_file, record_updated=record_updated)
             current["scientific_name"] = _full_scientific_header(
                 detected_name, remaining_text or ""
             )
@@ -1548,7 +1554,7 @@ def extract_records(
                     if finalized:
                         records.append(finalized)
 
-                    current = _new_record(source_file=source_file)
+                    current = _new_record(source_file=source_file, record_updated=record_updated)
                     current["scientific_name"] = header_name
                     current_section = default_section
                     continue
@@ -1585,7 +1591,7 @@ def extract_records(
                 if finalized:
                     records.append(finalized)
 
-                current = _new_record(source_file=source_file)
+                current = _new_record(source_file=source_file, record_updated=record_updated)
                 current["scientific_name"] = _full_scientific_header(
                     detected_name, remainder or ""
                 )

@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 
 from docx import Document
+
+from algae_extractor.reader import source_modified_date
 
 
 SECTION_HEADINGS = {
@@ -27,10 +28,6 @@ PEOPLE_HEADINGS = {
     "dr. gal cohensius": "gal_cohensius",
     "dr gal cohensius": "gal_cohensius",
 }
-
-
-def _source_modified_date(path: Path) -> str:
-    return datetime.fromtimestamp(path.stat().st_mtime, tz=timezone.utc).date().isoformat()
 
 
 def _discover_about_input(raw_dir: Path) -> Path | None:
@@ -109,7 +106,7 @@ def parse_about_docx(docx_path: Path) -> dict:
 
     return {
         "title": title,
-        "record_updated": _source_modified_date(docx_path),
+        "record_updated": source_modified_date(docx_path),
         "sections": {
             "our_vision": sections["our_vision"],
             "how_to_use": [

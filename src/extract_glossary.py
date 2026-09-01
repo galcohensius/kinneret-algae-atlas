@@ -5,10 +5,10 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from datetime import date, datetime
 from pathlib import Path
 from zipfile import ZipFile
 
+from algae_extractor.reader import source_modified_date
 from glossary_extractor.parse import parse_glossary_text
 
 
@@ -26,18 +26,6 @@ def read_glossary_source(path: Path) -> str:
     if suffix == ".docx":
         return _read_docx_paragraphs(path)
     raise SystemExit(f"Unsupported glossary format: {path}. Save glossary sources as .docx.")
-
-
-def _source_modified_date(path: Path) -> str:
-    from docx import Document
-
-    try:
-        modified = Document(str(path)).core_properties.modified
-    except Exception:
-        modified = None
-    if isinstance(modified, datetime):
-        return modified.date().isoformat()
-    return date.today().isoformat()
 
 
 def _extract_glossary_plates(
@@ -173,7 +161,7 @@ def main() -> None:
         raise SystemExit(f"Glossary input not found: {input_path}")
 
     text = read_glossary_source(input_path)
-    data = parse_glossary_text(text, record_updated=_source_modified_date(input_path))
+    data = parse_glossary_text(text, record_updated=source_modified_date(input_path))
     _normalize_cox_figure_references(data)
     data["plates"] = _extract_glossary_plates(
         source_path=input_path,
