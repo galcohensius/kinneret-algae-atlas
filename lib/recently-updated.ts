@@ -1,15 +1,16 @@
 import type { AlgaeRecord } from "./algae-types";
 
-export const RECENTLY_UPDATED_COUNT = 4;
+export const RECENTLY_UPDATED_MAX = 3;
 
 /**
- * Newest records by recordUpdated (ties break A-Z by scientific name).
- * Returns [] when fewer than two distinct dates exist -- right after a
- * first extraction every record shares one date and the strip is noise.
+ * The latest update batch: every record carrying the newest recordUpdated
+ * date, A-Z by scientific name, capped at `max`. Returns [] when fewer than
+ * two distinct dates exist -- after a bulk refresh every record shares one
+ * date and "recently updated" would be noise.
  */
 export function selectRecentlyUpdated(
   records: AlgaeRecord[],
-  count: number = RECENTLY_UPDATED_COUNT
+  max: number = RECENTLY_UPDATED_MAX
 ): AlgaeRecord[] {
   const dated = records.filter(
     (record): record is AlgaeRecord & { recordUpdated: string } =>
@@ -19,11 +20,9 @@ export function selectRecentlyUpdated(
   if (distinctDates.size < 2) {
     return [];
   }
-  return [...dated]
-    .sort((a, b) =>
-      a.recordUpdated === b.recordUpdated
-        ? a.scientificName.localeCompare(b.scientificName)
-        : b.recordUpdated.localeCompare(a.recordUpdated)
-    )
-    .slice(0, count);
+  const newestDate = [...distinctDates].sort().at(-1);
+  return dated
+    .filter((record) => record.recordUpdated === newestDate)
+    .sort((a, b) => a.scientificName.localeCompare(b.scientificName))
+    .slice(0, max);
 }

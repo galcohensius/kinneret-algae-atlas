@@ -23,17 +23,31 @@ function record(slug: string, recordUpdated: string | null): AlgaeRecord {
 }
 
 describe("selectRecentlyUpdated", () => {
-  it("returns newest first, ties A-Z, limited to count", () => {
+  it("returns only the newest date's records, A-Z", () => {
     const records = [
       record("b-old", "2026-01-01"),
       record("z-new", "2026-03-01"),
       record("a-new", "2026-03-01"),
       record("mid", "2026-02-01"),
     ];
-    expect(selectRecentlyUpdated(records, 3).map((r) => r.slug)).toEqual([
+    expect(selectRecentlyUpdated(records).map((r) => r.slug)).toEqual([
       "a-new",
       "z-new",
-      "mid",
+    ]);
+  });
+
+  it("caps the newest batch at max", () => {
+    const records = [
+      record("old", "2026-01-01"),
+      record("d", "2026-03-01"),
+      record("c", "2026-03-01"),
+      record("b", "2026-03-01"),
+      record("a", "2026-03-01"),
+    ];
+    expect(selectRecentlyUpdated(records, 3).map((r) => r.slug)).toEqual([
+      "a",
+      "b",
+      "c",
     ]);
   });
 
@@ -48,6 +62,6 @@ describe("selectRecentlyUpdated", () => {
       record("b", "2026-02-01"),
       record("undated", null),
     ];
-    expect(selectRecentlyUpdated(records).map((r) => r.slug)).toEqual(["b", "a"]);
+    expect(selectRecentlyUpdated(records).map((r) => r.slug)).toEqual(["b"]);
   });
 });

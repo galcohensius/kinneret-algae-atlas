@@ -126,16 +126,17 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
 
       {!isFiltering && recentlyUpdated.length > 0 ? (
         <p className="muted recently-updated-line" aria-label="Recently updated species">
-          Recently updated:{" "}
+          Last updated{" "}
+          <span className="recently-updated-date">
+            ({formatShortDate(recentlyUpdated[0].recordUpdated ?? "")})
+          </span>
+          :{" "}
           {recentlyUpdated.map((record, index) => (
             <Fragment key={record.slug}>
               {index > 0 ? <span aria-hidden> &middot; </span> : null}
               <Link href={`/algae/${record.slug}/`}>
                 <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
-              </Link>{" "}
-              <span className="recently-updated-date">
-                ({formatShortDate(record.recordUpdated ?? "")})
-              </span>
+              </Link>
             </Fragment>
           ))}
         </p>
