@@ -153,3 +153,15 @@ npm run sync:atlas
 `sync:atlas` runs algae extraction (auto-discover all taxon docs + `--use-word-renderer`), then supplements, glossary, About, LLM/static API generation, validation, and a production build. It does not hardcode individual Word filenames.
 
 Structural or recurring extraction bugs belong in `src/algae_extractor/` (and re-run step 2) — not in hand-edits to `algae_records.json` that the next extract would overwrite.
+
+## Visit analytics (GoatCounter)
+
+The layout emits an anonymous, cookie-free [GoatCounter](https://www.goatcounter.com/)
+counter **only** when the production build gets a site code. To enable it once:
+
+1. Create a free GoatCounter account and pick a site code (e.g. `kinneret-algae-atlas`).
+2. In the GitHub repo: Settings → Secrets and variables → Actions → **Variables** →
+   add `NEXT_PUBLIC_GOATCOUNTER_CODE` with that code.
+
+The next deploy starts counting. Local `npm run dev` and builds without the variable
+ship no analytics script at all.
