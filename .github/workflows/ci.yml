@@ -30,3 +30,5 @@ jobs:
         run: npm run test
       - name: Build Next.js app
         run: npm run build
+      - name: Check exported links and assets
+        run: npm run test:export
