@@ -1,8 +1,9 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 import Link from "next/link";
 import type { AlgaeRecord } from "../../lib/algae-types";
+import { filterAlgaeByQuery } from "../../lib/algae-filter";
 import { groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
@@ -47,7 +48,10 @@ function AlgaeListCard({ record }: { record: AlgaeRecord }) {
 }
 
 export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
-  const phylumGroups = groupAlgaeByPhylum(records);
+  const [query, setQuery] = useState("");
+  const isFiltering = query.trim().length > 0;
+  const filteredRecords = filterAlgaeByQuery(records, query);
+  const phylumGroups = groupAlgaeByPhylum(filteredRecords);
   const phylumJumpRows = splitPhylumJumpRows(phylumGroups);
 
   return (
@@ -60,6 +64,25 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
         {records.length} species, grouped by phylum; A–Z by scientific name within each
         phylum. Work in progress to include ~150 species of microalgae from Lake Kinneret.
       </p>
+
+      <div className="glossary-toolbar algae-index-search">
+        <label className="glossary-search-label" htmlFor="algae-search">
+          Search species
+        </label>
+        <input
+          id="algae-search"
+          type="search"
+          className="glossary-search"
+          placeholder="Scientific name, previous name, or phylum"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+        />
+        {isFiltering ? (
+          <p className="glossary-search-count muted" role="status">
+            {filteredRecords.length} of {records.length} species
+          </p>
+        ) : null}
+      </div>
 
       {phylumGroups.length > 1 ? (
         <nav className="phylum-jump-nav" aria-label="Jump to phylum">
@@ -86,6 +109,12 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
         <Link href="/visual-index/">Visual index</Link>
         <Link href="/supplements/">Supplementary Material</Link>
       </nav>
+
+      {isFiltering && filteredRecords.length === 0 ? (
+        <p className="muted algae-index-summary" role="status">
+          No species match &ldquo;{query.trim()}&rdquo;.
+        </p>
+      ) : null}
 
       <div className="phylum-catalog">
         {phylumGroups.map((group) => (
