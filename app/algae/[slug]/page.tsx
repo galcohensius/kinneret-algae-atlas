@@ -28,6 +28,7 @@ import {
   type PlateFigureSlot,
 } from "../../../lib/partition-plate-images";
 import { buildCitationBundle } from "../../../lib/cite-this-record";
+import { absoluteUrl, socialPreviewMetadata } from "../../../lib/site";
 
 type AlgaeDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -173,12 +174,23 @@ export async function generateMetadata({ params }: AlgaeDetailPageProps) {
   const record = await getAlgaBySlug(slug);
   if (!record) return {};
   const excerpt = record.ecology?.replace(/\s+/g, " ").slice(0, 160).trimEnd();
+  const { plateImage } = partitionPlateAndGalleryImages(
+    record.images,
+    record.imageCaptions
+  );
   return {
     title: `${record.scientificName} – Kinneret Algae Atlas`,
     ...(excerpt && { description: excerpt }),
     alternates: {
-      canonical: `https://kinneret-algae-atlas.org/algae/${record.slug}`,
+      canonical: absoluteUrl(`/algae/${record.slug}`),
     },
+    ...socialPreviewMetadata({
+      title: record.scientificName,
+      description: excerpt ?? `${record.scientificName} in the Kinneret Algae Atlas.`,
+      path: `/algae/${record.slug}/`,
+      image: plateImage ?? record.thumbnailUrl,
+      largeImage: Boolean(plateImage),
+    }),
   };
 }
 

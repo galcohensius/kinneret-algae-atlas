@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllAlgae } from "../lib/algae";
-
-const BASE = "https://kinneret-algae-atlas.org";
+import { SITE_ORIGIN as BASE } from "../lib/site";
 
 export const dynamic = "force-static";
 

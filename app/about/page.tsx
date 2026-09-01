@@ -10,6 +10,7 @@ import { fixScientificTypography } from "../../lib/scientific-text";
 import StudyAreaBlock from "../components/StudyAreaBlock";
 import StudyAreaMapFigure from "../components/StudyAreaMapFigure";
 import { buildStudyAreaJsonLd } from "../../lib/study-area";
+import { socialPreviewMetadata } from "../../lib/site";
 
 export const metadata: Metadata = {
   title: "About – Kinneret Algae Atlas",
@@ -18,6 +19,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kinneret-algae-atlas.org/about/",
   },
+  ...socialPreviewMetadata({
+    title: "About",
+    description:
+      "Vision, collaborators, and background for the Atlas of Kinneret Microalgae by Dr. Tamar Zohary and Dr. Alla Alster.",
+    path: "/about/",
+  }),
 };
 
 const COLLABORATOR_PROFILE_URL: Record<string, string> = {

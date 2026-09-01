@@ -4,6 +4,7 @@ import GlossaryPageClient from "../components/GlossaryPageClient";
 import { groupEntriesByLetter } from "../../lib/glossary";
 import { getGlossary } from "../../lib/glossary-server";
 import { buildCitationBundle } from "../../lib/cite-this-record";
+import { socialPreviewMetadata } from "../../lib/site";
 
 export const metadata: Metadata = {
   title: "Glossary – Kinneret Algae Atlas",
@@ -12,6 +13,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://kinneret-algae-atlas.org/glossary/",
   },
+  ...socialPreviewMetadata({
+    title: "Glossary",
+    description:
+      "Definitions of morphological and ecological terms used in the Kinneret Algae Atlas species descriptions.",
+    path: "/glossary/",
+  }),
 };
 
 export default async function GlossaryPage() {
