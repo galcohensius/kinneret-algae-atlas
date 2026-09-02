@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import {
   ALLA_ALSTER_PROFILE_URL,
@@ -65,14 +64,16 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }}
       />
       <div className="home-hero">
-        <Image
-          src={publicAssetPath("/kinneret-lake.jpg")}
-          alt="Lake Kinneret (Sea of Galilee), view from the eastern hills"
-          fill
-          priority
-          sizes="100vw"
-          className="home-hero-img"
-        />
+        <picture className="home-hero-picture">
+          <source srcSet={publicAssetPath("/kinneret-lake.webp")} type="image/webp" />
+          <img
+            src={publicAssetPath("/kinneret-lake.jpg")}
+            alt="Lake Kinneret (Sea of Galilee), view from the eastern hills"
+            className="home-hero-img"
+            decoding="async"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="home-hero-scrim" aria-hidden />
         <div className="home-hero-content">
           <h1>Atlas of Kinneret Microalgae</h1>
