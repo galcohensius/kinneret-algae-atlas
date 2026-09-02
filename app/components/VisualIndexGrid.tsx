@@ -3,6 +3,7 @@
 import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { VisualIndexCell } from "../../lib/visual-index-layout";
+import { formatPhylumLabel } from "../../lib/phylum-catalog";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import TaxonItalicName from "./TaxonItalicName";
 
@@ -12,6 +13,7 @@ type VisualIndexGridProps = {
 
 type PhylumLegendEntry = {
   phylum: string;
+  label: string;
   accent: string;
 };
 
@@ -19,7 +21,11 @@ function buildPhylumLegend(cells: VisualIndexCell[]): PhylumLegendEntry[] {
   const seen = new Map<string, PhylumLegendEntry>();
   for (const cell of cells) {
     if (!seen.has(cell.phylum)) {
-      seen.set(cell.phylum, { phylum: cell.phylum, accent: cell.accent });
+      seen.set(cell.phylum, {
+        phylum: cell.phylum,
+        label: formatPhylumLabel(cell.phylum),
+        accent: cell.accent,
+      });
     }
   }
   return [...seen.values()].sort((a, b) => a.phylum.localeCompare(b.phylum));
@@ -33,7 +39,7 @@ export default function VisualIndexGrid({ cells }: VisualIndexGridProps) {
   const cols = Math.max(...cells.map((cell) => cell.col)) + 1;
   const rows = Math.max(...cells.map((cell) => cell.row)) + 1;
   const legend = buildPhylumLegend(cells);
-  const legendRows = splitIntoBalancedRows(legend, (entry) => entry.phylum.length);
+  const legendRows = splitIntoBalancedRows(legend, (entry) => entry.label.length);
 
   return (
     <>
@@ -47,7 +53,7 @@ export default function VisualIndexGrid({ cells }: VisualIndexGridProps) {
                 style={{ "--phylum-accent": entry.accent } as CSSProperties}
               >
                 <span className="visual-index-legend-dot" aria-hidden />
-                {entry.phylum}
+                {entry.label}
               </span>
             ))}
           </div>
