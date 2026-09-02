@@ -6,10 +6,16 @@ import { getAllSupplements } from "../../lib/supplements";
 import { getAllAlgae } from "../../lib/algae";
 import { getPhylumAccent, phylumToSlug } from "../../lib/phylum-catalog";
 import { publicAssetPath } from "../../lib/public-path";
+import { socialPreviewMetadata } from "../../lib/site";
 
 export const metadata: Metadata = {
   title: "Supplementary Material – Kinneret Algae Atlas",
   description: "Supplementary guides and comparisons for species in the Kinneret Algae Atlas.",
+  ...socialPreviewMetadata({
+    title: "Supplementary Material",
+    description: "Supplementary guides and comparisons for species in the Kinneret Algae Atlas.",
+    path: "/supplements/",
+  }),
 };
 
 export default async function SupplementsIndexPage() {

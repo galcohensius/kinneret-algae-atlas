@@ -9,14 +9,22 @@ import AlgaeIndexSectionShell from "./components/AlgaeIndexSectionShell";
 import StudyAreaBlock from "./components/StudyAreaBlock";
 import { buildAtlasAttribution } from "../lib/cite-this-record";
 import { buildStudyAreaJsonLd } from "../lib/study-area";
+import { socialPreviewMetadata } from "../lib/site";
+
+const HOME_DESCRIPTION =
+  "Atlas of Kinneret microalgae by Dr. Tamar Zohary and Dr. Alla Alster, with species records, glossary definitions, and supplementary material.";
 
 export const metadata: Metadata = {
   title: "Kinneret Algae Atlas",
-  description:
-    "Atlas of Kinneret microalgae by Dr. Tamar Zohary and Dr. Alla Alster, with species records, glossary definitions, and supplementary material.",
+  description: HOME_DESCRIPTION,
   alternates: {
     canonical: "https://kinneret-algae-atlas.org/",
   },
+  ...socialPreviewMetadata({
+    title: "Kinneret Algae Atlas",
+    description: HOME_DESCRIPTION,
+    path: "/",
+  }),
 };
 
 export default function HomePage() {

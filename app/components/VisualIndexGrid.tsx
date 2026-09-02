@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { VisualIndexSection } from "../../lib/visual-index-layout";
 import { formatPhylumLabel } from "../../lib/phylum-catalog";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
+import { ORIGIN_PARAM, VISUAL_INDEX_ORIGIN } from "./BackToIndexLink";
 import TaxonItalicName from "./TaxonItalicName";
 
 type VisualIndexGridProps = {
@@ -51,7 +52,7 @@ function ShapeGroupGrid({ section }: { section: VisualIndexSection }) {
         {section.cells.map((cell) => (
           <Link
             key={cell.slug}
-            href={`/algae/${cell.slug}/`}
+            href={`/algae/${cell.slug}/?${ORIGIN_PARAM}=${VISUAL_INDEX_ORIGIN}`}
             className="visual-index-cell"
             style={
               {

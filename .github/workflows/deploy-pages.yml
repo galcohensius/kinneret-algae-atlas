@@ -41,6 +41,12 @@ jobs:
         run: npm run test
       - name: Build static export
         run: npm run build
+        env:
+          # Repo settings -> Secrets and variables -> Actions -> Variables.
+          # Unset until the GoatCounter account exists; the build then ships no analytics.
+          NEXT_PUBLIC_GOATCOUNTER_CODE: ${{ vars.NEXT_PUBLIC_GOATCOUNTER_CODE }}
+      - name: Check exported links and assets
+        run: npm run test:export
       - uses: actions/upload-pages-artifact@v3
         with:
           path: out

@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "tsc --noEmit",
     "test": "vitest run",
+    "test:export": "EXPORT_CHECK=1 vitest run tests/export-links.test.ts",
     "validate:data": "tsx scripts/validate-algae-data.ts",
     "extract:glossary": "python src/extract_glossary.py",
     "extract:supplements": "python src/extract_supplements.py",

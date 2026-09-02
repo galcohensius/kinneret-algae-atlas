@@ -2,7 +2,7 @@ import io
 import re
 import tempfile
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 from zipfile import ZipFile
 from pathlib import Path
 
@@ -13,6 +13,18 @@ from docx.oxml.text.paragraph import CT_P
 from docx.table import Table
 from docx.text.paragraph import Paragraph
 from PIL import Image, ImageDraw, ImageFont
+
+
+def source_modified_date(docx_path: str | Path) -> str:
+    """Use the DOCX metadata date so extraction reruns do not churn JSON."""
+    try:
+        modified = Document(str(docx_path)).core_properties.modified
+    except Exception:
+        modified = None
+
+    if isinstance(modified, datetime):
+        return modified.date().isoformat()
+    return date.today().isoformat()
 
 
 def normalize_whitespace(text: str) -> str:

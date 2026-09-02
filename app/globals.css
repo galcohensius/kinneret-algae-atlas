@@ -834,6 +834,52 @@ main.home {
   text-align: center;
 }
 
+.algae-index-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.algae-index-search .glossary-search {
+  width: min(420px, 100%);
+}
+
+.recently-updated-line {
+  margin: 0 auto 1.5rem;
+  max-width: 42rem;
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.recently-updated-date {
+  white-space: nowrap;
+}
+
+.algae-detail-pager {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.algae-pager-link {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  max-width: 48%;
+}
+
+.algae-pager-next {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.algae-pager-phylum {
+  font-size: 0.75rem;
+}
+
 .phylum-jump-nav {
   display: flex;
   flex-direction: column;

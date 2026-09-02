@@ -1,6 +1,7 @@
-import Link from "next/link";
 import { Fragment } from "react";
+import Link from "next/link";
 import { notFound } from "next/navigation";
+import BackToIndexLink from "../../components/BackToIndexLink";
 import CiteThisRecordBlock from "../../components/CiteThisRecordBlock";
 import TaxonItalicName from "../../components/TaxonItalicName";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
@@ -18,6 +19,7 @@ import {
 } from "../../../lib/further-reading";
 import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
+import { listAlgaeInAtlasOrder } from "../../../lib/phylum-catalog";
 import {
   galleryEnlargeAriaLabel,
   galleryImageAlt,
@@ -28,6 +30,7 @@ import {
   type PlateFigureSlot,
 } from "../../../lib/partition-plate-images";
 import { buildCitationBundle } from "../../../lib/cite-this-record";
+import { absoluteUrl, socialPreviewMetadata } from "../../../lib/site";
 
 type AlgaeDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -99,6 +102,10 @@ const NARRATIVE_AFTER_PLATE_KEYS = [
 
 function toDisplayLabel(fieldName: string): string {
   return FIELD_LABELS[fieldName] ?? fieldName.replace(/_/g, " ");
+}
+
+function phylumOf(record: { sections: Record<string, string> }): string {
+  return (record.sections.phylum ?? "").trim();
 }
 
 function FigureGalleryBlock({
@@ -174,12 +181,23 @@ export async function generateMetadata({ params }: AlgaeDetailPageProps) {
   const record = await getAlgaBySlug(slug);
   if (!record) return {};
   const excerpt = record.ecology?.replace(/\s+/g, " ").slice(0, 160).trimEnd();
+  const { plateImage } = partitionPlateAndGalleryImages(
+    record.images,
+    record.imageCaptions
+  );
   return {
     title: `${record.scientificName} – Kinneret Algae Atlas`,
     ...(excerpt && { description: excerpt }),
     alternates: {
-      canonical: `https://kinneret-algae-atlas.org/algae/${record.slug}`,
+      canonical: absoluteUrl(`/algae/${record.slug}`),
     },
+    ...socialPreviewMetadata({
+      title: record.scientificName,
+      description: excerpt ?? `${record.scientificName} in the Kinneret Algae Atlas.`,
+      path: `/algae/${record.slug}/`,
+      image: plateImage ?? record.thumbnailUrl,
+      largeImage: Boolean(plateImage),
+    }),
   };
 }
 
@@ -195,6 +213,14 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   if (!record) {
     notFound();
   }
+
+  const atlasOrder = listAlgaeInAtlasOrder(await getAllAlgae());
+  const orderIndex = atlasOrder.findIndex((r) => r.slug === record.slug);
+  const prevRecord = orderIndex > 0 ? atlasOrder[orderIndex - 1] : null;
+  const nextRecord =
+    orderIndex >= 0 && orderIndex < atlasOrder.length - 1
+      ? atlasOrder[orderIndex + 1]
+      : null;
 
   const sections = record.sections;
   const morphological = sections.morphological_features?.trim() ?? "";
@@ -241,7 +267,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(speciesJsonLd) }}
         />
         <p className="algae-detail-nav">
-          <Link href="/#algae-index">← Back to algae index</Link>
+          <BackToIndexLink />
         </p>
 
       <header className="algae-detail-header">
@@ -390,8 +416,45 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         ) : null}
       </article>
 
+        <nav className="algae-detail-pager" aria-label="Previous and next species">
+          {prevRecord ? (
+            <Link
+              href={`/algae/${prevRecord.slug}/`}
+              rel="prev"
+              className="algae-pager-link algae-pager-prev"
+            >
+              <span>
+                <span aria-hidden>&larr; </span>
+                <TaxonItalicName taxon={prevRecord.scientificName} className="algae-taxon" />
+              </span>
+              {phylumOf(prevRecord) !== phylumOf(record) ? (
+                <span className="algae-pager-phylum muted">{phylumOf(prevRecord)}</span>
+              ) : null}
+            </Link>
+          ) : (
+            <span />
+          )}
+          {nextRecord ? (
+            <Link
+              href={`/algae/${nextRecord.slug}/`}
+              rel="next"
+              className="algae-pager-link algae-pager-next"
+            >
+              <span>
+                <TaxonItalicName taxon={nextRecord.scientificName} className="algae-taxon" />
+                <span aria-hidden> &rarr;</span>
+              </span>
+              {phylumOf(nextRecord) !== phylumOf(record) ? (
+                <span className="algae-pager-phylum muted">{phylumOf(nextRecord)}</span>
+              ) : null}
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
+
         <p className="algae-detail-nav algae-detail-nav-end">
-          <Link href="/#algae-index">← Back to algae index</Link>
+          <BackToIndexLink />
         </p>
       </main>
     </GlossaryLinkScopeProvider>
