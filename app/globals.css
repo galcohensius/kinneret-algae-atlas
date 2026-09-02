@@ -817,18 +817,15 @@ main.home {
 }
 
 .algae-index-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
-.algae-index-search input {
-  width: 100%;
-  max-width: 360px;
-  padding: 0.5rem;
-  box-sizing: border-box;
-  background: var(--input-bg);
-  color: var(--text-primary);
-  border: 1px solid var(--border);
-  border-radius: 6px;
+.algae-index-search .glossary-search {
+  width: min(100%, 34rem);
+  max-width: none;
 }
 
 .algae-index-summary {
@@ -837,16 +834,6 @@ main.home {
   line-height: 1.45;
   max-width: 42rem;
   text-align: center;
-}
-
-.algae-index-search {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.algae-index-search .glossary-search {
-  width: min(420px, 100%);
 }
 
 .recently-updated-line {
