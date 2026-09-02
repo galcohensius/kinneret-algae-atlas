@@ -23,9 +23,9 @@ export default function StudyAreaMapFigure({ className }: StudyAreaMapFigureProp
         className="study-area-map-image"
       />
       <figcaption className="muted study-area-map-caption">
-        {STUDY_AREA.mapAttribution}{" "}
+        Picture by NASA, August 2009.{" "}
         <Link href={STUDY_AREA.mapSourceUrl} target="_blank" rel="noopener noreferrer">
-          Source image
+          Public domain
         </Link>
         .
       </figcaption>
