@@ -51,6 +51,11 @@ function gridManhattan(a: GridPlacement, b: GridPlacement): number {
   return Math.abs(a.col - b.col) + Math.abs(a.row - b.row);
 }
 
+function shapeGroupColumnCount(count: number): number {
+  if (count <= 5) return count;
+  return Math.max(1, Math.ceil(Math.sqrt(count)));
+}
+
 export function computeVisualIndexLayout(records: AlgaeRecord[]): GridPlacement[] {
   const placements: GridPlacement[] = [];
   let rowCursor = 0;
@@ -73,7 +78,7 @@ export function computeVisualIndexLayout(records: AlgaeRecord[]): GridPlacement[
     }
     isFirstGroup = false;
 
-    const cols = Math.max(1, Math.ceil(Math.sqrt(groupRecords.length)));
+    const cols = shapeGroupColumnCount(groupRecords.length);
 
     groupRecords.forEach((record, index) => {
       placements.push({

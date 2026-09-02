@@ -32,9 +32,7 @@ export default async function VisualIndexPage() {
       <header className="algae-detail-header">
         <h1>Visual index</h1>
         <p className="muted visual-index-lead">
-          Browse species by shape — filaments, colonial blue-greens, coenobia, flagellates, and
-          more cluster together. Color ring = phylum (popular name in the legend). Hover or focus
-          a picture to see the species name; tap on touch devices.
+          Browse species by shape. Color ring = phylum. Hover a picture to see the species name.
         </p>
       </header>
 

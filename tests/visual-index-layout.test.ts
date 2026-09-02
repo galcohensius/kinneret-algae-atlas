@@ -132,6 +132,15 @@ describe("visual-index-layout", () => {
     expect(smallDistance).toBeLessThan(unrelatedDistance);
   });
 
+  it("keeps small shape groups on one row", () => {
+    const placements = computeVisualIndexLayout(records);
+    const filamentSlugs = ["aulacoseira-granulata", "bangia-atropurpurea", "mougeotia"];
+    const rows = new Set(
+      filamentSlugs.map((slug) => placements.find((p) => p.slug === slug)?.row)
+    );
+    expect(rows.size).toBe(1);
+  });
+
   it("separates shape groups on the grid vertically", () => {
     const placements = computeVisualIndexLayout(records);
     const placementBySlug = new Map(placements.map((p) => [p.slug, p]));
