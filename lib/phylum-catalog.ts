@@ -1,22 +1,5 @@
 import type { AlgaeRecord } from "./algae-types";
 
-/**
- * Muted accent colors per phylum (readable on light and dark backgrounds).
- *
- * Name → color (Greek roots in the phylum name):
- *   Chlorophyta — chloros (green)
- *   Rhodophyta — rhodon (rose / red)
- *
- * Green by biology rather than name (freshwater green algae); kept lighter than
- * Chlorophyta's dark forest green to stay distinct:
- *   Charophyta
- *
- * No color in the name; hue chosen for distinction and typical field appearance:
- *   Cryptista, Cyanobacteriophyta, Dinoflagellata, Euglenophyta, Haptophyta
- *
- * Bacillariophyta — bacillum (rod); diatoms; golden-brown silica frustules:
- *   Bacillariophyta
- */
 const PHYLUM_ACCENTS: Record<string, string> = {
   bacillariophyta: "#b45309", // diatoms; golden-brown silica frustules
   chlorophyta: "#15803d", // chloros = green
@@ -28,6 +11,19 @@ const PHYLUM_ACCENTS: Record<string, string> = {
   euglenophyta: "#84cc16", // green-yellow
   haptophyta: "#2563eb", // no color in name; marine coccolithophores
   unclassified: "#64748b",
+};
+
+/** Common English names shown beside formal phylum labels. */
+export const PHYLUM_POPULAR_NAMES: Record<string, string> = {
+  bacillariophyta: "diatoms",
+  charophyta: "charophytes",
+  chlorophyta: "green algae",
+  cryptista: "cryptophytes",
+  cyanobacteriophyta: "blue-greens",
+  dinoflagellata: "dinoflagellates",
+  euglenophyta: "euglenophytes",
+  haptophyta: "haptophytes",
+  rhodophyta: "red algae",
 };
 
 const FALLBACK_PALETTE = [
@@ -56,6 +52,11 @@ export function phylumToSlug(phylum: string): string {
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
   return normalized || "unclassified";
+}
+
+export function formatPhylumLabel(phylum: string): string {
+  const popular = PHYLUM_POPULAR_NAMES[phylumToSlug(phylum)];
+  return popular ? `${phylum} (${popular})` : phylum;
 }
 
 export function getPhylumAccent(phylum: string): string {

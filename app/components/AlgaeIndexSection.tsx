@@ -3,9 +3,9 @@
 import { Fragment, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import type { AlgaeRecord } from "../../lib/algae-types";
+import { formatPhylumLabel, groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
 import { filterAlgaeByQuery } from "../../lib/algae-filter";
 import { selectRecentlyUpdated } from "../../lib/recently-updated";
-import { groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
 import TaxonItalicName from "./TaxonItalicName";
@@ -30,7 +30,7 @@ function formatShortDate(isoDate: string): string {
 function splitPhylumJumpRows(groups: PhylumCatalogGroup[]): PhylumCatalogGroup[][] {
   return splitIntoBalancedRows(
     groups,
-    (group) => `${group.phylum} (${group.records.length})`.length
+    (group) => `${formatPhylumLabel(group.phylum)} (${group.records.length})`.length
   );
 }
 
@@ -108,7 +108,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
                   href={`#phylum-${group.slug}`}
                   style={{ "--phylum-accent": group.accent } as CSSProperties}
                 >
-                  {group.phylum}
+                  {formatPhylumLabel(group.phylum)}
                   <span className="phylum-jump-count"> ({group.records.length})</span>
                 </a>
               ))}
@@ -164,7 +164,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
             <div className="phylum-catalog-rail" aria-hidden />
             <div className="phylum-catalog-body">
               <h2 id={`phylum-heading-${group.slug}`} className="phylum-catalog-heading">
-                {group.phylum}
+                {formatPhylumLabel(group.phylum)}
                 <span className="phylum-catalog-count muted">
                   {" "}
                   ({group.records.length})

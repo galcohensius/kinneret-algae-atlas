@@ -406,6 +406,25 @@ main.home {
   display: none;
 }
 
+.visual-index-shape-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.visual-index-shape-group {
+  margin: 0;
+}
+
+.visual-index-shape-heading {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  text-transform: none;
+}
+
 .visual-index-grid-scroll {
   overflow: visible;
 }
@@ -448,7 +467,7 @@ main.home {
   width: 100%;
   aspect-ratio: 1;
   border-radius: 10px;
-  border: 3px solid var(--phylum-accent, var(--border));
+  border: 5px solid var(--phylum-accent, var(--border));
   overflow: visible;
   color: inherit;
   text-decoration: none;
@@ -510,6 +529,15 @@ main.home {
   margin-top: 0.15rem;
   font-size: 0.78rem;
   color: var(--text-secondary);
+  font-style: normal;
+}
+
+.visual-index-tooltip .algae-taxon .taxon-scientific {
+  font-style: italic;
+}
+
+.visual-index-tooltip .algae-taxon .taxon-rank-abbr {
+  font-style: normal;
 }
 
 .visual-index-cell:hover .visual-index-tooltip,
@@ -573,7 +601,7 @@ main.home {
   }
 
   .visual-index-cell {
-    border-width: 2px;
+    border-width: 4px;
   }
 
   .visual-index-tooltip {

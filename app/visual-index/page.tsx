@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import VisualIndexGrid from "../components/VisualIndexGrid";
 import { getAllAlgae } from "../../lib/algae";
-import { buildVisualIndexCells } from "../../lib/visual-index-layout";
+import { buildVisualIndexSections } from "../../lib/visual-index-layout";
 import { socialPreviewMetadata } from "../../lib/site";
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default async function VisualIndexPage() {
   const records = await getAllAlgae();
-  const cells = buildVisualIndexCells(records);
+  const sections = buildVisualIndexSections(records);
 
   return (
     <main className="algae-detail visual-index-page">
@@ -39,13 +39,12 @@ export default async function VisualIndexPage() {
       <header className="algae-detail-header">
         <h1>Visual index</h1>
         <p className="muted visual-index-lead">
-          Browse species by appearance — similar shapes cluster together. Color ring = phylum.
-          Hover or focus a picture to see the name; tap on touch devices.
+          Browse species by shape. Color ring = phylum. Hover a picture to see the species name.
         </p>
       </header>
 
       <article className="card visual-index-card">
-        <VisualIndexGrid cells={cells} />
+        <VisualIndexGrid sections={sections} />
       </article>
     </main>
   );

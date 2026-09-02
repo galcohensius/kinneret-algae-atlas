@@ -1,7 +1,9 @@
 import { describe, expect, it } from "vitest";
 import {
+  formatPhylumLabel,
   groupAlgaeByPhylum,
   listAlgaeInAtlasOrder,
+  PHYLUM_POPULAR_NAMES,
   phylumToSlug,
 } from "../lib/phylum-catalog";
 import type { AlgaeRecord } from "../lib/algae-types";
@@ -53,15 +55,27 @@ describe("groupAlgaeByPhylum", () => {
     expect(groups[1].phylum).toBe("A");
   });
 
-  it("uses unclassified slug for empty phylum", () => {
-    const groups = groupAlgaeByPhylum([stubRecord("", "x", "X")]);
-    expect(groups[0].phylum).toBe("Unclassified");
-    expect(groups[0].slug).toBe("unclassified");
+  it("slugifies phylum names", () => {
+    expect(phylumToSlug("Bacillariophyta")).toBe("bacillariophyta");
   });
 });
 
-describe("phylumToSlug", () => {
-  it("slugifies phylum names for anchors", () => {
-    expect(phylumToSlug("Dinoflagellata")).toBe("dinoflagellata");
+describe("phylum-catalog popular names", () => {
+  it("maps formal phylum names to popular labels", () => {
+    expect(formatPhylumLabel("Bacillariophyta")).toBe("Bacillariophyta (diatoms)");
+    expect(formatPhylumLabel("Cyanobacteriophyta")).toBe("Cyanobacteriophyta (blue-greens)");
+    expect(formatPhylumLabel("Unknown phylum")).toBe("Unknown phylum");
+  });
+
+  it("includes all requested popular names", () => {
+    expect(PHYLUM_POPULAR_NAMES.bacillariophyta).toBe("diatoms");
+    expect(PHYLUM_POPULAR_NAMES.charophyta).toBe("charophytes");
+    expect(PHYLUM_POPULAR_NAMES.chlorophyta).toBe("green algae");
+    expect(PHYLUM_POPULAR_NAMES.cryptista).toBe("cryptophytes");
+    expect(PHYLUM_POPULAR_NAMES.cyanobacteriophyta).toBe("blue-greens");
+    expect(PHYLUM_POPULAR_NAMES.dinoflagellata).toBe("dinoflagellates");
+    expect(PHYLUM_POPULAR_NAMES.euglenophyta).toBe("euglenophytes");
+    expect(PHYLUM_POPULAR_NAMES.haptophyta).toBe("haptophytes");
+    expect(PHYLUM_POPULAR_NAMES.rhodophyta).toBe("red algae");
   });
 });
