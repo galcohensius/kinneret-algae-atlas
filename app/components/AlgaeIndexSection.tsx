@@ -87,7 +87,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
           id="algae-search"
           type="search"
           className="glossary-search"
-          placeholder="Scientific name, previous name, or phylum"
+          placeholder="Name, phylum (e.g. diatoms), color, organization, habitat…"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />
