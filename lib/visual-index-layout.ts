@@ -6,7 +6,9 @@ import {
 } from "./morphology-normalize";
 import {
   classifyVisualShapeGroup,
+  formatVisualShapeGroupLabel,
   VISUAL_SHAPE_GROUP_ORDER,
+  type VisualShapeGroup,
 } from "./visual-shape-group";
 import { getPhylumAccent } from "./phylum-catalog";
 import { partitionPlateAndGalleryImages } from "./partition-plate-images";
@@ -25,6 +27,13 @@ export type VisualIndexCell = {
   imageUrl: string | null;
   col: number;
   row: number;
+  shapeGroup: VisualShapeGroup;
+};
+
+export type VisualIndexSection = {
+  group: VisualShapeGroup;
+  label: string;
+  cells: VisualIndexCell[];
 };
 
 const ORGANIZATION_WEIGHT = 3;
@@ -56,10 +65,24 @@ function shapeGroupColumnCount(count: number): number {
   return Math.max(1, Math.ceil(Math.sqrt(count)));
 }
 
-export function computeVisualIndexLayout(records: AlgaeRecord[]): GridPlacement[] {
-  const placements: GridPlacement[] = [];
-  let rowCursor = 0;
-  let isFirstGroup = true;
+function buildCell(record: AlgaeRecord, col: number, row: number, shapeGroup: VisualShapeGroup): VisualIndexCell {
+  const phylum = (record.sections.phylum ?? "").trim() || "Unclassified";
+  const { plateImage } = partitionPlateAndGalleryImages(record.images, record.imageCaptions);
+
+  return {
+    slug: record.slug,
+    scientificName: record.scientificName,
+    phylum,
+    accent: getPhylumAccent(phylum),
+    imageUrl: record.thumbnailUrl ?? plateImage ?? null,
+    col,
+    row,
+    shapeGroup,
+  };
+}
+
+export function buildVisualIndexSections(records: AlgaeRecord[]): VisualIndexSection[] {
+  const sections: VisualIndexSection[] = [];
 
   for (const group of VISUAL_SHAPE_GROUP_ORDER) {
     const groupRecords = records
@@ -73,22 +96,43 @@ export function computeVisualIndexLayout(records: AlgaeRecord[]): GridPlacement[
 
     if (groupRecords.length === 0) continue;
 
+    const cols = shapeGroupColumnCount(groupRecords.length);
+    const cells = groupRecords.map((record, index) =>
+      buildCell(record, index % cols, Math.floor(index / cols), group)
+    );
+
+    sections.push({
+      group,
+      label: formatVisualShapeGroupLabel(group),
+      cells,
+    });
+  }
+
+  return sections;
+}
+
+export function computeVisualIndexLayout(records: AlgaeRecord[]): GridPlacement[] {
+  const placements: GridPlacement[] = [];
+  let rowCursor = 0;
+  let isFirstGroup = true;
+
+  for (const section of buildVisualIndexSections(records)) {
     if (!isFirstGroup) {
       rowCursor += 1;
     }
     isFirstGroup = false;
 
-    const cols = shapeGroupColumnCount(groupRecords.length);
+    const rows = Math.max(...section.cells.map((cell) => cell.row)) + 1;
 
-    groupRecords.forEach((record, index) => {
+    for (const cell of section.cells) {
       placements.push({
-        slug: record.slug,
-        col: index % cols,
-        row: rowCursor + Math.floor(index / cols),
+        slug: cell.slug,
+        col: cell.col,
+        row: rowCursor + cell.row,
       });
-    });
+    }
 
-    rowCursor += Math.ceil(groupRecords.length / cols);
+    rowCursor += rows;
   }
 
   return placements.sort((a, b) => {
@@ -98,34 +142,7 @@ export function computeVisualIndexLayout(records: AlgaeRecord[]): GridPlacement[
 }
 
 export function buildVisualIndexCells(records: AlgaeRecord[]): VisualIndexCell[] {
-  const placementBySlug = new Map(computeVisualIndexLayout(records).map((p) => [p.slug, p]));
-
-  return records
-    .map((record) => {
-      const placement = placementBySlug.get(record.slug);
-      if (!placement) return null;
-
-      const phylum = (record.sections.phylum ?? "").trim() || "Unclassified";
-      const { plateImage } = partitionPlateAndGalleryImages(
-        record.images,
-        record.imageCaptions
-      );
-
-      return {
-        slug: record.slug,
-        scientificName: record.scientificName,
-        phylum,
-        accent: getPhylumAccent(phylum),
-        imageUrl: record.thumbnailUrl ?? plateImage ?? null,
-        col: placement.col,
-        row: placement.row,
-      };
-    })
-    .filter((cell): cell is VisualIndexCell => cell !== null)
-    .sort((a, b) => {
-      if (a.row !== b.row) return a.row - b.row;
-      return a.col - b.col;
-    });
+  return buildVisualIndexSections(records).flatMap((section) => section.cells);
 }
 
 /** Compare grid distance for pairs with low vs high morphology distance (for tests). */

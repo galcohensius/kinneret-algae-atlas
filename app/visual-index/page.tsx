@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import VisualIndexGrid from "../components/VisualIndexGrid";
 import { getAllAlgae } from "../../lib/algae";
-import { buildVisualIndexCells } from "../../lib/visual-index-layout";
+import { buildVisualIndexSections } from "../../lib/visual-index-layout";
 
 export const metadata: Metadata = {
   title: "Visual index – Kinneret Algae Atlas",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default async function VisualIndexPage() {
   const records = await getAllAlgae();
-  const cells = buildVisualIndexCells(records);
+  const sections = buildVisualIndexSections(records);
 
   return (
     <main className="algae-detail visual-index-page">
@@ -37,7 +37,7 @@ export default async function VisualIndexPage() {
       </header>
 
       <article className="card visual-index-card">
-        <VisualIndexGrid cells={cells} />
+        <VisualIndexGrid sections={sections} />
       </article>
     </main>
   );

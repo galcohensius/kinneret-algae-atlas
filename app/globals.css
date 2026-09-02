@@ -406,6 +406,25 @@ main.home {
   display: none;
 }
 
+.visual-index-shape-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+}
+
+.visual-index-shape-group {
+  margin: 0;
+}
+
+.visual-index-shape-heading {
+  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  text-transform: none;
+}
+
 .visual-index-grid-scroll {
   overflow: visible;
 }

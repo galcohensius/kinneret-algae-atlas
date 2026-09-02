@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import { normalizeAlgaeRecords, type RawAlgaeRecord } from "../lib/algae";
 import {
   averageGridDistanceForMorphologyThreshold,
+  buildVisualIndexSections,
   computeVisualIndexLayout,
   morphologyDistance,
 } from "../lib/visual-index-layout";
@@ -133,25 +134,33 @@ describe("visual-index-layout", () => {
   });
 
   it("keeps small shape groups on one row", () => {
-    const placements = computeVisualIndexLayout(records);
-    const filamentSlugs = ["aulacoseira-granulata", "bangia-atropurpurea", "mougeotia"];
-    const rows = new Set(
-      filamentSlugs.map((slug) => placements.find((p) => p.slug === slug)?.row)
-    );
+    const sections = buildVisualIndexSections(records);
+    const filamentSection = sections.find((section) => section.group === "filamentous");
+    expect(filamentSection).toBeDefined();
+    const rows = new Set(filamentSection!.cells.map((cell) => cell.row));
     expect(rows.size).toBe(1);
   });
 
-  it("separates shape groups on the grid vertically", () => {
-    const placements = computeVisualIndexLayout(records);
-    const placementBySlug = new Map(placements.map((p) => [p.slug, p]));
-    const filament = placementBySlug.get("mougeotia")!;
-    const colonial = placementBySlug.get("microcystis-aeruginosa")!;
-    const large = placementBySlug.get("gymnodinium")!;
-    const small = placementBySlug.get("chrysochromulina-parva")!;
+  it("returns shape groups in catalog order with labels", () => {
+    const sections = buildVisualIndexSections(records);
+    expect(sections[0]?.group).toBe("filamentous");
+    expect(sections[0]?.label).toBe("Filamentous");
+    expect(sections.some((section) => section.group === "colonial_cyanobacteria")).toBe(true);
+    expect(sections.at(-1)?.group).not.toBe("filamentous");
+  });
 
-    expect(filament.row).toBeLessThan(colonial.row);
-    expect(colonial.row).toBeLessThan(large.row);
-    expect(large.row).toBeLessThan(small.row);
+  it("separates shape groups into distinct sections", () => {
+    const sections = buildVisualIndexSections(records);
+    const groupOrder = sections.map((section) => section.group);
+    const filamentIndex = groupOrder.indexOf("filamentous");
+    const colonialIndex = groupOrder.indexOf("colonial_cyanobacteria");
+    const largeIndex = groupOrder.indexOf("large_flagellate");
+    const smallIndex = groupOrder.indexOf("small_single_cell");
+
+    expect(filamentIndex).toBeGreaterThanOrEqual(0);
+    expect(colonialIndex).toBeGreaterThan(filamentIndex);
+    expect(largeIndex).toBeGreaterThan(colonialIndex);
+    expect(smallIndex).toBeGreaterThan(largeIndex);
   });
 
   it("assigns zero morphology distance to identical profiles", () => {

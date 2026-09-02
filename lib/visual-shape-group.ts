@@ -90,3 +90,16 @@ export function shapeGroupSortIndex(group: VisualShapeGroup): number {
   const index = VISUAL_SHAPE_GROUP_ORDER.indexOf(group);
   return index === -1 ? VISUAL_SHAPE_GROUP_ORDER.length : index;
 }
+
+export const VISUAL_SHAPE_GROUP_LABELS: Record<VisualShapeGroup, string> = {
+  filamentous: "Filamentous",
+  colonial_cyanobacteria: "Colonial cyanobacteria",
+  coenobial: "Coenobial",
+  large_flagellate: "Large flagellated cells",
+  small_single_cell: "Small single cells",
+  other: "Other",
+};
+
+export function formatVisualShapeGroupLabel(group: VisualShapeGroup): string {
+  return VISUAL_SHAPE_GROUP_LABELS[group];
+}
