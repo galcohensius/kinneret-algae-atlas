@@ -349,21 +349,26 @@ main.home {
   margin: 0 0 1.25rem;
 }
 
-.home-aux-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.25rem 0.55rem;
+.home-aux-links a,
+.algae-pager-link {
   border: 1px solid var(--link);
   border-radius: 999px;
   color: var(--link);
-  font-size: clamp(0.84rem, 0.8rem + 0.12vw, 0.9rem);
   font-weight: 600;
   text-decoration: none;
   transition: background 0.15s, color 0.15s;
 }
 
-.home-aux-links a:hover {
+.home-aux-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.55rem;
+  font-size: clamp(0.84rem, 0.8rem + 0.12vw, 0.9rem);
+}
+
+.home-aux-links a:hover,
+.algae-pager-link:hover {
   background: var(--link);
   color: #fff;
   text-decoration: none;
@@ -869,6 +874,12 @@ main.home {
   flex-direction: column;
   gap: 0.15rem;
   max-width: 48%;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.9rem;
+}
+
+.algae-pager-link:hover .algae-pager-phylum {
+  color: rgb(255 255 255 / 0.85);
 }
 
 .algae-pager-next {
