@@ -49,7 +49,7 @@ describe("study-area", () => {
     const payload = buildStudyAreaApiPayload();
     expect(payload.country_code).toBe("IL");
     expect(payload.map_image).toBe("/study-area-satellite.jpg");
-    expect(payload.map_attribution).toContain("NASA");
+    expect(payload.map_attribution).toBe("Picture by NASA, August 2009. Public domain.");
     expect(studyAreaOpenStreetMapUrl()).toContain("openstreetmap.org");
     expect(studyAreaOpenStreetMapUrl()).toContain("#map=10/");
     expect(studyAreaGoogleMapsUrl()).toContain("google.com/maps/search/");
