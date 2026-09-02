@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "prebuild": "npm run generate:search-index",
     "start": "next start",
     "lint": "tsc --noEmit",
     "test": "vitest run",
@@ -14,7 +15,8 @@
     "extract:supplements": "python src/extract_supplements.py",
     "extract:about": "python src/extract_about.py",
     "generate:llms": "python scripts/generate_llms_files.py",
-    "build:atlas": "npm run validate:data && next build",
+    "generate:search-index": "tsx scripts/generate-search-index.ts",
+    "build:atlas": "npm run validate:data && npm run generate:search-index && next build",
     "sync:atlas": "python src/extract_algae.py --output \"data/processed/algae_records.json\" --images-dir public/algae-images --use-word-renderer && npm run extract:supplements && npm run extract:glossary && npm run extract:about && npm run generate:llms && npm run build:atlas"
   },
   "dependencies": {

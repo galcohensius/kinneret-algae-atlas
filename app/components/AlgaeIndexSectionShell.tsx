@@ -1,7 +1,7 @@
-import { getAlgaeIndexRecords } from "../../lib/algae";
+import { getAlgaeCatalogRecords } from "../../lib/algae";
 import AlgaeIndexSection from "./AlgaeIndexSection";
 
 export default async function AlgaeIndexSectionShell() {
-  const records = await getAlgaeIndexRecords();
+  const records = await getAlgaeCatalogRecords();
   return <AlgaeIndexSection records={records} />;
 }
