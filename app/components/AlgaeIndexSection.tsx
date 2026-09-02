@@ -1,16 +1,18 @@
 "use client";
 
-import { Fragment, useState, type CSSProperties } from "react";
+import { Fragment, useCallback, useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
-import type { AlgaeIndexRecord } from "../../lib/algae-types";
+import type { AlgaeCatalogRecord } from "../../lib/algae-types";
+import type { AlgaeSearchIndexFile } from "../../lib/algae-search-index";
+import { filterCatalogBySearchIndex } from "../../lib/algae-search-index";
 import { formatPhylumLabel, groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
-import { filterAlgaeByQuery } from "../../lib/algae-filter";
+import { publicAssetPath } from "../../lib/public-path";
 import { selectRecentlyUpdated } from "../../lib/recently-updated";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import TaxonItalicName from "./TaxonItalicName";
 
 type AlgaeIndexSectionProps = {
-  records: AlgaeIndexRecord[];
+  records: AlgaeCatalogRecord[];
 };
 
 /** `YYYY-MM-DD` as e.g. `30 Aug 2026`, compact enough for the one-line strip. */
@@ -27,15 +29,15 @@ function formatShortDate(isoDate: string): string {
 
 /** Split phylum jump links into two rows with similar total label length. */
 function splitPhylumJumpRows(
-  groups: PhylumCatalogGroup<AlgaeIndexRecord>[]
-): PhylumCatalogGroup<AlgaeIndexRecord>[][] {
+  groups: PhylumCatalogGroup<AlgaeCatalogRecord>[]
+): PhylumCatalogGroup<AlgaeCatalogRecord>[][] {
   return splitIntoBalancedRows(
     groups,
     (group) => `${formatPhylumLabel(group.phylum)} (${group.records.length})`.length
   );
 }
 
-function AlgaeListCard({ record }: { record: AlgaeIndexRecord }) {
+function AlgaeListCard({ record }: { record: AlgaeCatalogRecord }) {
   return (
     <Link href={`/algae/${record.slug}/`} className="algae-list-card-link">
       <article className="card algae-list-card">
@@ -60,11 +62,47 @@ function AlgaeListCard({ record }: { record: AlgaeIndexRecord }) {
 
 export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
   const [query, setQuery] = useState("");
+  const [searchIndex, setSearchIndex] = useState<Map<string, string> | null>(null);
+  const [searchLoading, setSearchLoading] = useState(false);
+  const [searchError, setSearchError] = useState(false);
+
+  const loadSearchIndex = useCallback(async () => {
+    if (searchIndex || searchLoading) {
+      return;
+    }
+    setSearchLoading(true);
+    setSearchError(false);
+    try {
+      const response = await fetch(publicAssetPath("/api/search-index.json"));
+      if (!response.ok) {
+        throw new Error("search index unavailable");
+      }
+      const payload = (await response.json()) as AlgaeSearchIndexFile;
+      setSearchIndex(new Map(payload.entries.map((entry) => [entry.slug, entry.searchHaystack])));
+    } catch {
+      setSearchError(true);
+    } finally {
+      setSearchLoading(false);
+    }
+  }, [searchIndex, searchLoading]);
+
+  const activateSearch = useCallback(() => {
+    void loadSearchIndex();
+  }, [loadSearchIndex]);
+
   const isFiltering = query.trim().length > 0;
-  const filteredRecords = filterAlgaeByQuery(records, query);
+  const filteredRecords = useMemo(() => {
+    if (!isFiltering || !searchIndex) {
+      return records;
+    }
+    return filterCatalogBySearchIndex(records, searchIndex, query);
+  }, [isFiltering, query, records, searchIndex]);
+
   const phylumGroups = groupAlgaeByPhylum(filteredRecords);
   const phylumJumpRows = splitPhylumJumpRows(phylumGroups);
   const recentlyUpdated = selectRecentlyUpdated(records);
+  const searchPending = isFiltering && !searchIndex && searchLoading;
+  const searchBlocked = isFiltering && !searchIndex && searchError;
 
   return (
     <section
@@ -87,9 +125,24 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
           className="glossary-search"
           placeholder="Name, phylum (e.g. diatoms), color, organization, habitat…"
           value={query}
-          onChange={(event) => setQuery(event.target.value)}
+          onFocus={activateSearch}
+          onClick={activateSearch}
+          onChange={(event) => {
+            activateSearch();
+            setQuery(event.target.value);
+          }}
         />
-        {isFiltering ? (
+        {searchPending ? (
+          <p className="glossary-search-count muted" role="status">
+            Loading search…
+          </p>
+        ) : null}
+        {searchBlocked ? (
+          <p className="glossary-search-count muted" role="status">
+            Search is temporarily unavailable.
+          </p>
+        ) : null}
+        {isFiltering && searchIndex ? (
           <p className="glossary-search-count muted" role="status">
             {filteredRecords.length} of {records.length} species
           </p>
@@ -140,7 +193,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
         </p>
       ) : null}
 
-      {isFiltering && filteredRecords.length === 0 ? (
+      {isFiltering && searchIndex && filteredRecords.length === 0 ? (
         <p className="muted algae-index-summary" role="status">
           No species match &ldquo;{query.trim()}&rdquo;.
         </p>

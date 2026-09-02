@@ -36,12 +36,16 @@ export type AlgaeRecord = {
   recordUpdated: string | null;
 };
 
-/** Slim home-index row: card fields + precomputed search text (avoids shipping full records to the client). */
-export type AlgaeIndexRecord = {
+/** Slim home-index card row (no search text — loaded on demand when the user focuses search). */
+export type AlgaeCatalogRecord = {
   slug: string;
   scientificName: string;
   thumbnailUrl: string | null;
   sections: { phylum: string };
   recordUpdated: string | null;
+};
+
+/** @deprecated Use {@link AlgaeCatalogRecord} for the index; search haystacks live in search-index.json. */
+export type AlgaeIndexRecord = AlgaeCatalogRecord & {
   searchHaystack: string;
 };

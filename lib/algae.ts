@@ -32,8 +32,8 @@ const rawAlgaeArraySchema = z.array(rawAlgaeRecordSchema);
 
 export type RawAlgaeRecord = z.infer<typeof rawAlgaeRecordSchema>;
 
-export type { AlgaeRecord, AlgaeIndexRecord } from "./algae-types";
-import type { AlgaeIndexRecord, AlgaeRecord } from "./algae-types";
+export type { AlgaeRecord, AlgaeCatalogRecord, AlgaeIndexRecord } from "./algae-types";
+import type { AlgaeCatalogRecord, AlgaeIndexRecord, AlgaeRecord } from "./algae-types";
 
 const PRIMARY_SECTION_ORDER = ["morphology", "ecology", "physiological_features"];
 
@@ -177,7 +177,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
   });
 }
 
-export function toAlgaeIndexRecord(record: AlgaeRecord): AlgaeIndexRecord {
+export function toAlgaeCatalogRecord(record: AlgaeRecord): AlgaeCatalogRecord {
   return {
     slug: record.slug,
     scientificName: record.scientificName,
@@ -186,6 +186,13 @@ export function toAlgaeIndexRecord(record: AlgaeRecord): AlgaeIndexRecord {
       phylum: (record.sections.phylum ?? "").trim() || "Unclassified",
     },
     recordUpdated: record.recordUpdated,
+  };
+}
+
+/** @deprecated Use {@link toAlgaeCatalogRecord}. */
+export function toAlgaeIndexRecord(record: AlgaeRecord): AlgaeIndexRecord {
+  return {
+    ...toAlgaeCatalogRecord(record),
     searchHaystack: buildAlgaeSearchHaystack(record),
   };
 }
@@ -198,6 +205,12 @@ export const getAllAlgae = cache(async (): Promise<AlgaeRecord[]> => {
   return sortAlgaeRecordsForCatalog(normalizeAlgaeRecords(validated));
 });
 
+export async function getAlgaeCatalogRecords(): Promise<AlgaeCatalogRecord[]> {
+  const allAlgae = await getAllAlgae();
+  return allAlgae.map(toAlgaeCatalogRecord);
+}
+
+/** @deprecated Use {@link getAlgaeCatalogRecords}. */
 export async function getAlgaeIndexRecords(): Promise<AlgaeIndexRecord[]> {
   const allAlgae = await getAllAlgae();
   return allAlgae.map(toAlgaeIndexRecord);

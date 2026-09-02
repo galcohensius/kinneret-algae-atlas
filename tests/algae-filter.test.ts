@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { buildAlgaeSearchHaystack, filterAlgaeByQuery } from "../lib/algae-filter";
-import { toAlgaeIndexRecord } from "../lib/algae";
+import { toAlgaeCatalogRecord, toAlgaeIndexRecord } from "../lib/algae";
 import type { AlgaeRecord } from "../lib/algae-types";
 
 type FilterableRecord = {
@@ -108,8 +108,8 @@ describe("filterAlgaeByQuery", () => {
   });
 });
 
-describe("toAlgaeIndexRecord", () => {
-  it("keeps card fields and precomputes searchHaystack", () => {
+describe("toAlgaeCatalogRecord", () => {
+  it("keeps card fields without search text", () => {
     const full: AlgaeRecord = {
       slug: "mougeotia",
       title: "Mougeotia Agardh",
@@ -131,15 +131,38 @@ describe("toAlgaeIndexRecord", () => {
       recordUpdated: "2026-08-17",
     };
 
-    const slim = toAlgaeIndexRecord(full);
+    const slim = toAlgaeCatalogRecord(full);
     expect(slim).toEqual({
       slug: "mougeotia",
       scientificName: "Mougeotia",
       thumbnailUrl: "/algae-images/mougeotia/thumbnail-1.jpg",
       sections: { phylum: "Charophyta" },
       recordUpdated: "2026-08-17",
-      searchHaystack: buildAlgaeSearchHaystack(full),
     });
     expect(JSON.stringify(slim).length).toBeLessThan(JSON.stringify(full).length);
+  });
+});
+
+describe("toAlgaeIndexRecord", () => {
+  it("still precomputes searchHaystack when needed", () => {
+    const full: AlgaeRecord = {
+      slug: "mougeotia",
+      title: "Mougeotia Agardh",
+      scientificName: "Mougeotia",
+      nameAuthority: null,
+      thumbnailUrl: "/algae-images/mougeotia/thumbnail-1.jpg",
+      images: [],
+      imageCaptions: [],
+      imageCaptionsRich: [],
+      morphology: null,
+      ecology: null,
+      notes: null,
+      sections: { phylum: "Charophyta", organization: "Filamentous" },
+      sectionsRich: {},
+      metadata: {},
+      recordUpdated: "2026-08-17",
+    };
+
+    expect(toAlgaeIndexRecord(full).searchHaystack).toBe(buildAlgaeSearchHaystack(full));
   });
 });
