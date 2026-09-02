@@ -2,16 +2,15 @@
 
 import { Fragment, useState, type CSSProperties } from "react";
 import Link from "next/link";
-import type { AlgaeRecord } from "../../lib/algae-types";
+import type { AlgaeIndexRecord } from "../../lib/algae-types";
 import { formatPhylumLabel, groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
 import { filterAlgaeByQuery } from "../../lib/algae-filter";
 import { selectRecentlyUpdated } from "../../lib/recently-updated";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
-import { partitionPlateAndGalleryImages } from "../../lib/partition-plate-images";
 import TaxonItalicName from "./TaxonItalicName";
 
 type AlgaeIndexSectionProps = {
-  records: AlgaeRecord[];
+  records: AlgaeIndexRecord[];
 };
 
 /** `YYYY-MM-DD` as e.g. `30 Aug 2026`, compact enough for the one-line strip. */
@@ -27,25 +26,24 @@ function formatShortDate(isoDate: string): string {
 }
 
 /** Split phylum jump links into two rows with similar total label length. */
-function splitPhylumJumpRows(groups: PhylumCatalogGroup[]): PhylumCatalogGroup[][] {
+function splitPhylumJumpRows(
+  groups: PhylumCatalogGroup<AlgaeIndexRecord>[]
+): PhylumCatalogGroup<AlgaeIndexRecord>[][] {
   return splitIntoBalancedRows(
     groups,
     (group) => `${formatPhylumLabel(group.phylum)} (${group.records.length})`.length
   );
 }
 
-function AlgaeListCard({ record }: { record: AlgaeRecord }) {
-  const { plateImage } = partitionPlateAndGalleryImages(record.images, record.imageCaptions);
-  const listImage = record.thumbnailUrl ?? plateImage;
-
+function AlgaeListCard({ record }: { record: AlgaeIndexRecord }) {
   return (
     <Link href={`/algae/${record.slug}/`} className="algae-list-card-link">
       <article className="card algae-list-card">
-        {listImage ? (
+        {record.thumbnailUrl ? (
           <img
             className="algae-thumb"
-            src={listImage}
-            alt={`${record.title} thumbnail`}
+            src={record.thumbnailUrl}
+            alt={`${record.scientificName} thumbnail`}
             loading="lazy"
             decoding="async"
           />
@@ -87,7 +85,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
           id="algae-search"
           type="search"
           className="glossary-search"
-          placeholder="Scientific name, previous name, or phylum"
+          placeholder="Name, phylum (e.g. diatoms), color, organization, habitat…"
           value={query}
           onChange={(event) => setQuery(event.target.value)}
         />

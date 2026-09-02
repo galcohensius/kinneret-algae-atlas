@@ -35,3 +35,13 @@ export type AlgaeRecord = {
   /** ISO YYYY-MM-DD: modified date of the record's source Word file (see metadata.record_updated). */
   recordUpdated: string | null;
 };
+
+/** Slim home-index row: card fields + precomputed search text (avoids shipping full records to the client). */
+export type AlgaeIndexRecord = {
+  slug: string;
+  scientificName: string;
+  thumbnailUrl: string | null;
+  sections: { phylum: string };
+  recordUpdated: string | null;
+  searchHaystack: string;
+};

@@ -36,11 +36,11 @@ const FALLBACK_PALETTE = [
   PHYLUM_ACCENTS.haptophyta,
 ];
 
-export type PhylumCatalogGroup = {
+export type PhylumCatalogGroup<T extends { sections: Record<string, string> } = AlgaeRecord> = {
   phylum: string;
   slug: string;
   accent: string;
-  records: AlgaeRecord[];
+  records: T[];
 };
 
 export function phylumToSlug(phylum: string): string {
@@ -80,8 +80,10 @@ export function listAlgaeInAtlasOrder(records: AlgaeRecord[]): AlgaeRecord[] {
   return groupAlgaeByPhylum(records).flatMap((group) => group.records);
 }
 
-export function groupAlgaeByPhylum(records: AlgaeRecord[]): PhylumCatalogGroup[] {
-  const groups: PhylumCatalogGroup[] = [];
+export function groupAlgaeByPhylum<T extends { sections: Record<string, string> }>(
+  records: T[]
+): PhylumCatalogGroup<T>[] {
+  const groups: PhylumCatalogGroup<T>[] = [];
 
   for (const record of records) {
     const phylum = (record.sections.phylum ?? "").trim() || "Unclassified";

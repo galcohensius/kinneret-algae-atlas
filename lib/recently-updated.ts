@@ -9,9 +9,9 @@ export const RECENTLY_UPDATED_MAX = 3;
  * date and "recently updated" would be noise.
  */
 export function selectRecentlyUpdated(
-  records: AlgaeRecord[],
+  records: Pick<AlgaeRecord, "slug" | "scientificName" | "recordUpdated">[],
   max: number = RECENTLY_UPDATED_MAX
-): AlgaeRecord[] {
+): Pick<AlgaeRecord, "slug" | "scientificName" | "recordUpdated">[] {
   const dated = records.filter(
     (record): record is AlgaeRecord & { recordUpdated: string } =>
       Boolean(record.recordUpdated)

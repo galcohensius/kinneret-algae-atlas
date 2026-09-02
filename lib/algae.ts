@@ -1,8 +1,9 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
+import { cache } from "react";
 import { z } from "zod";
 import { fixScientificTypography } from "./scientific-text";
-import { filterAlgaeByQuery } from "./algae-filter";
+import { buildAlgaeSearchHaystack, filterAlgaeByQuery } from "./algae-filter";
 import { publicAssetPath } from "./public-path";
 import { resolveThumbnailUrl } from "./resolve-thumbnail";
 import { isThumbnailImagePath } from "./thumbnail-path-pattern";
@@ -31,9 +32,8 @@ const rawAlgaeArraySchema = z.array(rawAlgaeRecordSchema);
 
 export type RawAlgaeRecord = z.infer<typeof rawAlgaeRecordSchema>;
 
-import type { AlgaeRecord } from "./algae-types";
-
-export type { AlgaeRecord };
+export type { AlgaeRecord, AlgaeIndexRecord } from "./algae-types";
+import type { AlgaeIndexRecord, AlgaeRecord } from "./algae-types";
 
 const PRIMARY_SECTION_ORDER = ["morphology", "ecology", "physiological_features"];
 
@@ -47,7 +47,7 @@ function slugify(value: string): string {
     .replace(/-+/g, "-");
 }
 
-function normalizeSlugInput(input: string): string {
+export function normalizeSlugInput(input: string): string {
   const trimmed = input.trim();
   const withoutBrackets = trimmed.replace(/^\[+|\]+$/g, "");
   return slugify(withoutBrackets);
@@ -177,12 +177,30 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
   });
 }
 
-export async function getAllAlgae(): Promise<AlgaeRecord[]> {
+export function toAlgaeIndexRecord(record: AlgaeRecord): AlgaeIndexRecord {
+  return {
+    slug: record.slug,
+    scientificName: record.scientificName,
+    thumbnailUrl: record.thumbnailUrl,
+    sections: {
+      phylum: (record.sections.phylum ?? "").trim() || "Unclassified",
+    },
+    recordUpdated: record.recordUpdated,
+    searchHaystack: buildAlgaeSearchHaystack(record),
+  };
+}
+
+export const getAllAlgae = cache(async (): Promise<AlgaeRecord[]> => {
   const filePath = path.join(process.cwd(), "data", "processed", "algae_records.json");
   const content = await readFile(filePath, "utf8");
   const parsed = JSON.parse(content) as unknown;
   const validated = rawAlgaeArraySchema.parse(parsed);
   return sortAlgaeRecordsForCatalog(normalizeAlgaeRecords(validated));
+});
+
+export async function getAlgaeIndexRecords(): Promise<AlgaeIndexRecord[]> {
+  const allAlgae = await getAllAlgae();
+  return allAlgae.map(toAlgaeIndexRecord);
 }
 
 export async function getAlgaBySlug(slug: string): Promise<AlgaeRecord | null> {

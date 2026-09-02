@@ -18,7 +18,7 @@ import {
   splitFurtherReadingIndexed,
 } from "../../../lib/further-reading";
 import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
-import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
+import { getAlgaBySlug, getAllAlgae, normalizeSlugInput } from "../../../lib/algae";
 import { listAlgaeInAtlasOrder } from "../../../lib/phylum-catalog";
 import {
   galleryEnlargeAriaLabel,
@@ -208,13 +208,15 @@ export async function generateStaticParams() {
 
 export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) {
   const { slug } = await params;
-  const record = await getAlgaBySlug(slug);
+  const allAlgae = await getAllAlgae();
+  const normalized = normalizeSlugInput(slug);
+  const record = allAlgae.find((item) => item.slug === normalized) ?? null;
 
   if (!record) {
     notFound();
   }
 
-  const atlasOrder = listAlgaeInAtlasOrder(await getAllAlgae());
+  const atlasOrder = listAlgaeInAtlasOrder(allAlgae);
   const orderIndex = atlasOrder.findIndex((r) => r.slug === record.slug);
   const prevRecord = orderIndex > 0 ? atlasOrder[orderIndex - 1] : null;
   const nextRecord =
