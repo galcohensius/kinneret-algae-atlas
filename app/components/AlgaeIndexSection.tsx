@@ -5,7 +5,12 @@ import Link from "next/link";
 import type { AlgaeCatalogRecord } from "../../lib/algae-types";
 import type { AlgaeSearchIndexFile } from "../../lib/algae-search-index";
 import { filterCatalogBySearchIndex } from "../../lib/algae-search-index";
-import { formatPhylumLabel, groupAlgaeByPhylum, type PhylumCatalogGroup } from "../../lib/phylum-catalog";
+import {
+  formatPhylumLabel,
+  groupAlgaeByPhylum,
+  phylumPopularName,
+  type PhylumCatalogGroup,
+} from "../../lib/phylum-catalog";
 import { publicAssetPath } from "../../lib/public-path";
 import { selectRecentlyUpdated } from "../../lib/recently-updated";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
@@ -27,13 +32,17 @@ function formatShortDate(isoDate: string): string {
   });
 }
 
-/** Split phylum jump links into two rows with similar total label length. */
+/** Two rows overflow the 980px content column and wrap to four lines; three fit. */
+const PHYLUM_JUMP_ROWS = 3;
+
+/** Split phylum jump links into rows with similar total label length. */
 function splitPhylumJumpRows(
   groups: PhylumCatalogGroup<AlgaeCatalogRecord>[]
 ): PhylumCatalogGroup<AlgaeCatalogRecord>[][] {
   return splitIntoBalancedRows(
     groups,
-    (group) => `${formatPhylumLabel(group.phylum)} (${group.records.length})`.length
+    (group) => `${formatPhylumLabel(group.phylum)} (${group.records.length})`.length,
+    PHYLUM_JUMP_ROWS
   );
 }
 
@@ -123,7 +132,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
           id="algae-search"
           type="search"
           className="glossary-search"
-          placeholder="Name, phylum (e.g. diatoms), color, organization, habitat…"
+          placeholder="Species name, previous name, or phylum (e.g. diatoms)"
           value={query}
           onFocus={activateSearch}
           onClick={activateSearch}
@@ -159,7 +168,10 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
                   href={`#phylum-${group.slug}`}
                   style={{ "--phylum-accent": group.accent } as CSSProperties}
                 >
-                  {formatPhylumLabel(group.phylum)}
+                  {group.phylum}
+                  {phylumPopularName(group.phylum) ? (
+                    <span className="phylum-jump-popular"> ({phylumPopularName(group.phylum)})</span>
+                  ) : null}
                   <span className="phylum-jump-count"> ({group.records.length})</span>
                 </a>
               ))}

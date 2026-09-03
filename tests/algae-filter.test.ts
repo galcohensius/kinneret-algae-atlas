@@ -42,6 +42,16 @@ const RECORDS: FilterableRecord[] = [
       color: "Green",
     },
   },
+  {
+    title: "Tetraselmis cordiformis (Carter) Stein 1878",
+    scientificName: "Tetraselmis cordiformis",
+    nameAuthority: "(Carter) Stein 1878",
+    sections: {
+      phylum: "Chlorophyta",
+      morphological_features:
+        "One of the larger flagellated species of Lake Kinneret (after the dinoflagellates).",
+    },
+  },
 ];
 
 describe("buildAlgaeSearchHaystack", () => {
@@ -50,17 +60,19 @@ describe("buildAlgaeSearchHaystack", () => {
     expect(haystack).toContain("charophytes");
   });
 
-  it("includes feature fields", () => {
+  it("includes the previous name and phylum but no descriptive fields", () => {
     const haystack = buildAlgaeSearchHaystack(RECORDS[0]);
-    expect(haystack).toContain("colonial");
-    expect(haystack).toContain("blue-green");
+    expect(haystack).toContain("anacystis cyanea");
+    expect(haystack).toContain("cyanobacteriophyta");
     expect(haystack).toContain("blue-greens");
+    expect(haystack).not.toContain("colonial");
+    expect(haystack).not.toContain("planktonic");
   });
 });
 
 describe("filterAlgaeByQuery", () => {
   it("returns all records for an empty query", () => {
-    expect(filterAlgaeByQuery(RECORDS, "  ")).toHaveLength(3);
+    expect(filterAlgaeByQuery(RECORDS, "  ")).toHaveLength(RECORDS.length);
   });
 
   it("matches scientific name case-insensitively", () => {
@@ -80,10 +92,15 @@ describe("filterAlgaeByQuery", () => {
     expect(filterAlgaeByQuery(RECORDS, "blue-greens")).toEqual([RECORDS[0]]);
   });
 
-  it("matches feature fields such as organization and color", () => {
-    expect(filterAlgaeByQuery(RECORDS, "filamentous")).toEqual([RECORDS[2]]);
-    expect(filterAlgaeByQuery(RECORDS, "colonial")).toEqual([RECORDS[0]]);
-    expect(filterAlgaeByQuery(RECORDS, "planktonic")).toEqual([RECORDS[0]]);
+  it("ignores descriptive fields such as organization, color and habitat", () => {
+    expect(filterAlgaeByQuery(RECORDS, "filamentous")).toHaveLength(0);
+    expect(filterAlgaeByQuery(RECORDS, "colonial")).toHaveLength(0);
+    expect(filterAlgaeByQuery(RECORDS, "planktonic")).toHaveLength(0);
+  });
+
+  it("does not match a taxon that only appears in another record's description", () => {
+    expect(filterAlgaeByQuery(RECORDS, "dinoflagellates")).toEqual([RECORDS[1]]);
+    expect(filterAlgaeByQuery(RECORDS, "green algae")).toEqual([RECORDS[3]]);
   });
 
   it("uses precomputed searchHaystack when present", () => {

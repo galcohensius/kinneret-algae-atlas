@@ -46,4 +46,20 @@ describe("splitIntoBalancedRows", () => {
     expect(rows[0].length).toBeGreaterThanOrEqual(2);
     expect(rows[1].length).toBeGreaterThanOrEqual(2);
   });
+
+  it("splits nine phylum labels into three rows of at least two", () => {
+    const items = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
+    const rows = splitIntoBalancedRows(items, () => 10, 3);
+    expect(rows).toEqual([
+      ["A", "B", "C"],
+      ["D", "E", "F"],
+      ["G", "H", "I"],
+    ]);
+  });
+
+  it("falls back to one row when three rows cannot each hold two items", () => {
+    expect(splitIntoBalancedRows(["A", "B", "C", "D", "E"], (s) => s.length, 3)).toEqual([
+      ["A", "B", "C", "D", "E"],
+    ]);
+  });
 });

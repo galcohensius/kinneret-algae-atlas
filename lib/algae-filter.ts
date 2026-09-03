@@ -1,8 +1,11 @@
-import { PHYLUM_POPULAR_NAMES, phylumToSlug } from "./phylum-catalog";
+import { phylumPopularName } from "./phylum-catalog";
 
-/** Bibliography text adds noise; everything else on a record is searchable. */
-const EXCLUDED_SECTION_KEYS = new Set(["further_reading"]);
-
+/**
+ * Only the record's own names are indexed: its title (taxon + authority), the
+ * previous name used, and its phylum (formal and popular). Descriptive sections
+ * are left out on purpose -- they mention other taxa (e.g. a green alga compared
+ * to "the dinoflagellates"), which would surface as false matches.
+ */
 export type SearchableAlgaeRecord = {
   title?: string;
   scientificName?: string;
@@ -14,21 +17,20 @@ export type SearchableAlgaeRecord = {
 
 /** Plain-text tokens indexed by {@link filterAlgaeByQuery} (client- and server-safe). */
 export function buildAlgaeSearchHaystack(record: SearchableAlgaeRecord): string {
-  const parts = [record.title ?? "", record.scientificName ?? "", record.nameAuthority ?? ""];
-
-  if (record.sections) {
-    for (const [key, value] of Object.entries(record.sections)) {
-      if (EXCLUDED_SECTION_KEYS.has(key)) continue;
-      const trimmed = value.trim();
-      if (trimmed) parts.push(trimmed);
-    }
-
-    const phylum = record.sections.phylum ?? "";
-    const popular = PHYLUM_POPULAR_NAMES[phylumToSlug(phylum)];
-    if (popular) parts.push(popular);
-  }
-
-  return parts.join(" ").toLowerCase();
+  const phylum = record.sections?.phylum ?? "";
+  const parts = [
+    record.title ?? "",
+    record.scientificName ?? "",
+    record.nameAuthority ?? "",
+    record.sections?.previous_name_used ?? "",
+    phylum,
+    phylumPopularName(phylum) ?? "",
+  ];
+  return parts
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
 }
 
 function haystackFor(record: SearchableAlgaeRecord): string {

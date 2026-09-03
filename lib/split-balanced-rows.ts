@@ -1,38 +1,45 @@
 /**
- * Split phylum labels into two balanced rows (same strategy as the home algae index).
- * Avoids a lone item on the second row when there are enough entries to spread evenly.
+ * Split items into consecutive rows of similar total label length (home phylum
+ * strip, visual-index legend). Every row keeps at least two items so no row ends
+ * up with a lone orphan; when that is impossible, everything stays on one row.
  */
 export function splitIntoBalancedRows<T>(
   items: T[],
-  labelLength: (item: T) => number
+  labelLength: (item: T) => number,
+  rowCount = 2
 ): T[][] {
-  if (items.length <= 1) {
+  const minPerRow = Math.max(2, Math.floor(items.length / (rowCount + 1)));
+  if (rowCount < 2 || items.length < rowCount * minPerRow) {
     return [items];
   }
 
-  // Three items fit better on one row than 2 + 1.
-  if (items.length === 3) {
-    return [items];
-  }
+  const lengths = items.map(labelLength);
+  const rowTotal = (start: number, end: number) =>
+    lengths.slice(start, end).reduce((sum, n) => sum + n, 0);
 
-  let bestSplit = Math.ceil(items.length / 2);
-  let bestDiff = Number.POSITIVE_INFINITY;
-  const minSplit = Math.max(2, Math.floor(items.length / 3));
-  const maxSplit = Math.min(items.length - 2, Math.ceil((2 * items.length) / 3));
-
-  if (minSplit > maxSplit) {
-    return [items];
-  }
-
-  for (let split = minSplit; split <= maxSplit; split += 1) {
-    const left = items.slice(0, split).reduce((sum, item) => sum + labelLength(item), 0);
-    const right = items.slice(split).reduce((sum, item) => sum + labelLength(item), 0);
-    const diff = Math.abs(left - right);
-    if (diff < bestDiff) {
-      bestDiff = diff;
-      bestSplit = split;
+  let bestBounds: number[] = [];
+  let bestSpread = Number.POSITIVE_INFINITY;
+  // Candidates are enumerated in ascending order, so ties keep the earliest split.
+  for (const bounds of rowBounds(items.length, rowCount, minPerRow)) {
+    const totals = bounds.slice(1).map((end, i) => rowTotal(bounds[i], end));
+    const spread = Math.max(...totals) - Math.min(...totals);
+    if (spread < bestSpread) {
+      bestSpread = spread;
+      bestBounds = bounds;
     }
   }
+  return bestBounds.slice(1).map((end, i) => items.slice(bestBounds[i], end));
+}
 
-  return [items.slice(0, bestSplit), items.slice(bestSplit)];
+/** All `[0, cut1, ..., n]` boundaries carving `n` items into `rows` consecutive rows. */
+function rowBounds(n: number, rows: number, minPerRow: number, prefix = [0]): number[][] {
+  const start = prefix[prefix.length - 1];
+  if (rows === 1) {
+    return [[...prefix, n]];
+  }
+  const out: number[][] = [];
+  for (let cut = start + minPerRow; cut <= n - (rows - 1) * minPerRow; cut += 1) {
+    out.push(...rowBounds(n, rows - 1, minPerRow, [...prefix, cut]));
+  }
+  return out;
 }

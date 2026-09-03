@@ -51,7 +51,8 @@ describe("buildAlgaeSearchIndex", () => {
     const index = buildAlgaeSearchIndex(RECORDS);
     expect(index).toHaveLength(2);
     expect(index[0].slug).toBe("microcystis-aeruginosa");
-    expect(index[0].searchHaystack).toContain("colonial");
+    expect(index[0].searchHaystack).toContain("cyanobacteriophyta");
+    expect(index[0].searchHaystack).not.toContain("colonial");
     expect(index[1].searchHaystack).toContain("charophytes");
   });
 });

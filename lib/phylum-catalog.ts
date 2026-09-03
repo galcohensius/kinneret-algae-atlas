@@ -54,8 +54,12 @@ export function phylumToSlug(phylum: string): string {
   return normalized || "unclassified";
 }
 
+export function phylumPopularName(phylum: string): string | undefined {
+  return PHYLUM_POPULAR_NAMES[phylumToSlug(phylum)];
+}
+
 export function formatPhylumLabel(phylum: string): string {
-  const popular = PHYLUM_POPULAR_NAMES[phylumToSlug(phylum)];
+  const popular = phylumPopularName(phylum);
   return popular ? `${phylum} (${popular})` : phylum;
 }
 
