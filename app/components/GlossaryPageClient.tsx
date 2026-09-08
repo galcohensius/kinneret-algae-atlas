@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import type { GlossaryEntry, GlossaryPlate } from "../../lib/glossary-types";
+import { publicAssetPath } from "../../lib/public-path";
 
 type LetterGroup = {
   letter: string;
@@ -16,24 +17,24 @@ type GlossaryPageClientProps = {
   plates: (GlossaryPlate & { width?: number; height?: number })[];
 };
 
-function renderDefinitionWithPlateLinks(definition: string) {
-  const parts = definition.split(/(Cox \(1996\) Plate [12])/g);
-  return parts.map((part, index) => {
-    if (part === "Cox (1996) Plate 1") {
-      return (
-        <a key={`${index}-plate-1`} href="#cox-1996-plate-1">
-          {part}
-        </a>
-      );
-    }
-    if (part === "Cox (1996) Plate 2") {
-      return (
-        <a key={`${index}-plate-2`} href="#cox-1996-plate-2">
-          {part}
-        </a>
-      );
-    }
-    return <span key={`${index}-text`}>{part}</span>;
+function escapeRegExp(text: string): string {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/** Link every plate label (e.g. "Plate 2") in a definition to its figure. */
+function renderDefinitionWithPlateLinks(definition: string, plates: GlossaryPlate[]) {
+  if (plates.length === 0) return definition;
+  const byLabel = new Map(plates.map((plate) => [plate.label, plate]));
+  const pattern = new RegExp(`\\b(${plates.map((plate) => escapeRegExp(plate.label)).join("|")})\\b`, "g");
+  return definition.split(pattern).map((part, index) => {
+    const plate = byLabel.get(part);
+    return plate ? (
+      <a key={`${index}-${plate.id}`} href={`#${plate.id}`}>
+        {part}
+      </a>
+    ) : (
+      <span key={`${index}-text`}>{part}</span>
+    );
   });
 }
 
@@ -104,7 +105,7 @@ export default function GlossaryPageClient({
           {plates.map((plate) => (
             <figure key={plate.id} id={plate.id} className="plate-figure">
               <img
-                src={plate.src}
+                src={publicAssetPath(plate.src)}
                 alt={`Glossary ${plate.label} from Cox (1996)`}
                 width={plate.width}
                 height={plate.height}
@@ -132,7 +133,7 @@ export default function GlossaryPageClient({
               {group.entries.map((entry) => (
                 <div key={entry.slug} id={entry.slug} className="glossary-entry">
                   <dt>{entry.term}</dt>
-                  <dd>{renderDefinitionWithPlateLinks(entry.definition)}</dd>
+                  <dd>{renderDefinitionWithPlateLinks(entry.definition, plates)}</dd>
                 </div>
               ))}
             </dl>

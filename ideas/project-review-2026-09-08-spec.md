@@ -103,7 +103,7 @@ new shared module) and call them from both pipelines; `rstrip("/")` the prefix.
 
 ---
 
-### [ ] 6. Glossary plate links are hardcoded to two plates
+### [x] 6. Glossary plate links are hardcoded to two plates
 
 **Why.** `GlossaryPageClient.tsx` string-matches `"Cox (1996) Plate 1"` / `"Plate 2"` and
 hardcodes their anchors, while the actual anchors come from `plate.id` in the data. A third
