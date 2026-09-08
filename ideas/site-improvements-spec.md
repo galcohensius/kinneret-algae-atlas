@@ -1,5 +1,12 @@
 # Site improvements — spec
 
+> **Status: all six shipped (by 2026-09-08).** Kept for the reasoning; where the shipped
+> design differs from the text below: §1 search fetches `public/api/search-index.json` on
+> focus and filters with `filterCatalogBySearchIndex` (not `filterAlgaeByQuery`), and is
+> shown only in the "By phylum" view; §7 became a one-line "Last updated (date): species"
+> note in the home footer rather than a card strip. The two parked ideas live in
+> `ideas/parked-ideas.md`. Current work is tracked in `ideas/project-review-2026-09-08-spec.md`.
+
 Six improvements selected from the 2026-09-01 project review. All are independent of the
 ongoing content work (adding species records) and of each other; each section can ship as
 its own small PR. Ordered by value-for-effort.
