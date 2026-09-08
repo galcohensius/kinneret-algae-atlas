@@ -245,7 +245,7 @@ passes on a clean tree.
 
 ---
 
-### [ ] 14. README: pipeline diagram, setup, deploy, routes
+### [x] 14. README: pipeline diagram, setup, deploy, routes
 
 **Why.** `README.md` is 15 lines: no setup, no commands, no deploy, no route map, no diagram.
 The Mermaid diagram exists only in `docs/MAINTENANCE.md` and misattributes

@@ -24,7 +24,8 @@ flowchart LR
     sjson["data/processed/supplements.json"]
     ajson["data/processed/about.json"]
     imgs["public/algae-images/<br/>public/glossary-images/"]
-    llms["public/llms*.txt<br/>public/api/*.json"]
+    llms["scripts/generate_llms_files.py<br/>public/llms.txt, public/llms-full.txt<br/>public/api/species.json, api/species/*.json<br/>public/api/glossary.json, public/api/atlas.json"]
+    search["scripts/generate-search-index.ts (prebuild)<br/>public/api/search-index.json"]
   end
 
   subgraph Build["Build & deploy (Next.js)"]
@@ -42,7 +43,9 @@ flowchart LR
   gloss --> imgs
   json --> llms
   gjson --> llms
+  json --> search
   json --> validate --> next --> pages
+  search --> next
   gjson --> next
   sjson --> next
   ajson --> next
@@ -50,7 +53,7 @@ flowchart LR
   imgs --> next
 ```
 
-`npm run generate:llms` builds `public/llms*.txt` and `public/api/` from **algae + glossary** JSON. Supplement and About pages are linked from `llms.txt` as site URLs; they are not yet emitted as separate API JSON files.
+`npm run generate:llms` builds `public/llms*.txt` and the static API JSON under `public/api/` from **algae + glossary** JSON (plus `data/study-area.json` for `atlas.json`). `public/api/search-index.json` is not one of its outputs: `scripts/generate-search-index.ts` writes it, and npm runs that script automatically as `prebuild` before every `npm run build`. Supplement and About pages are linked from `llms.txt` as site URLs; they are not yet emitted as separate API JSON files.
 
 ## Updating the atlas from a new Word file
 
@@ -78,7 +81,7 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    python src/extract_algae.py --input "data/raw/<your-file>.docx" --output "data/processed/algae_records.json" --images-dir public/algae-images --use-word-renderer
    ```
 
-   `--use-word-renderer` needs Microsoft Word on Windows (better chart export). CI and Linux use the Pillow fallback.
+   `--use-word-renderer` needs Microsoft Word on Windows (better chart export). CI and Linux use the Pillow fallback. The Word-renderer path is only validated locally on Windows; no automated test or CI job exercises it.
 
    Re-running extraction **prunes** each species image folder: files not listed in the new
    JSON are deleted (so replaced or removed pictures in Word do not leave stale files on disk).
@@ -96,10 +99,11 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    npm run validate:data
    ```
 
-4. **Tests** (optional locally; required on push via GitHub Actions):
-   - Node: `npm run test`
-   - Python: `PYTHONPATH=src python -m unittest discover -s tests -p "test_*.py" -v`
-     (PowerShell: `$env:PYTHONPATH='src'; python -m unittest discover -s tests -p "test_*.py" -v`)
+4. **Tests** (optional locally; all of them run on push via GitHub Actions):
+   - `npm run lint` — TypeScript type check (`tsc --noEmit`).
+   - `npm run test` — Vitest suite. It skips the export link check unless `out/` exists, so it never needs a build.
+   - `npm run test:py` — Python suite, stdlib `unittest` (no pytest); the script sets `PYTHONPATH=src`, so only the venv needs to be activated.
+   - `npm run test:export` — link and asset check over `out/`; run it after `npm run build` (a missing `out/` fails here instead of skipping).
 
 5. **Supplements** (when `data/raw/*suppl*.docx` / `*supplement*.docx` changes, or after a full image rebuild):
 
@@ -138,7 +142,7 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    ```
 
    This regenerates `public/llms.txt`, `public/llms-full.txt`, and static JSON under
-   `public/api/` (species index, per-species JSON, glossary JSON).
+   `public/api/` (species index, per-species JSON, glossary JSON, `atlas.json`).
 
 9. **Local preview:** `npm run dev`
 
