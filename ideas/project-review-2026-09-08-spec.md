@@ -120,7 +120,7 @@ component.
 
 ---
 
-### [ ] 7. Glossary first-occurrence tracking can drop every popover
+### [x] 7. Glossary first-occurrence tracking can drop every popover
 
 **Why.** `GlossaryLinkScopeProvider` records claimed slugs in a `useRef` `Set` that is never
 reset. Any second render pass (React StrictMode in dev, a retried render, a future stateful
@@ -136,7 +136,7 @@ render.
 
 ---
 
-### [ ] 8. Local Python venv is broken (repo moved)
+### [x] 8. Local Python venv is broken (repo moved)
 
 **Why.** `.venv/pyvenv.cfg` and `.venv/bin/pip` still point at
 `~/Developer/kinneret-algae-atlas`; the repo now lives under `~/Developer/others/`. Any `pip
