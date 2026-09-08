@@ -173,7 +173,7 @@ prevents regressions when phyla are added.
 
 ---
 
-### [ ] 10. View switch has no keyboard support; panel structure is wrong
+### [x] 10. View switch has no keyboard support; panel structure is wrong
 
 **Why.** `role="tablist"` / `role="tab"` without arrow-key handling, roving `tabIndex`, or
 `aria-controls`; both tabs are in the tab order. The search box and phylum chips sit

@@ -146,16 +146,14 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
       <div
         id={HOME_VISUAL_INDEX_HASH.slice(1)}
         className="index-view-switch"
-        role="tablist"
+        role="group"
         aria-label="Index view"
       >
         {INDEX_VIEWS.map((option) => (
           <button
             key={option.id}
-            id={`index-view-tab-${option.id}`}
             type="button"
-            role="tab"
-            aria-selected={view === option.id}
+            aria-pressed={view === option.id}
             className="index-view-tab"
             onClick={() => selectView(option.id)}
           >
@@ -234,15 +232,11 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
       ) : null}
 
       {view === "appearance" ? (
-        <article
-          className="card visual-index-card home-visual-index"
-          role="tabpanel"
-          aria-labelledby="index-view-tab-appearance"
-        >
+        <article className="card visual-index-card home-visual-index">
           <VisualIndexGrid sections={visualSections} />
         </article>
       ) : (
-      <div className="phylum-catalog" role="tabpanel" aria-labelledby="index-view-tab-phylum">
+      <div className="phylum-catalog">
         {phylumGroups.map((group) => (
           <section
             key={group.slug}
