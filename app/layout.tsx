@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import Link from "next/link";
 import SiteHeader from "./components/SiteHeader";
+import { SITE_NAME, SITE_ORIGIN } from "../lib/site";
 import VisitCounter from "./components/VisitCounter";
 import "./globals.css";
 
@@ -19,11 +19,9 @@ const GOATCOUNTER_CODE =
     : undefined;
 
 export const metadata: Metadata = {
-  title: "Kinneret Algae Atlas",
+  metadataBase: new URL(SITE_ORIGIN),
+  title: { default: SITE_NAME, template: `%s – ${SITE_NAME}` },
   description: "Index of algae species observed in Lake Kinneret.",
-  icons: {
-    icon: "/favicon.png",
-  },
 };
 
 type RootLayoutProps = {

@@ -270,7 +270,7 @@ tests are stdlib `unittest`). Verify diagrams in the IDE preview.
 
 ---
 
-### [ ] 15. Ideas spec is fully shipped
+### [x] 15. Ideas spec is fully shipped
 
 **Why.** All six items in `ideas/site-improvements-spec.md` are in `main`, but the file still
 reads as a backlog and describes designs that were changed in implementation (search, the
@@ -324,7 +324,7 @@ view.
 
 ---
 
-### [ ] 18. Sitemap and page metadata gaps
+### [x] 18. Sitemap and page metadata gaps
 
 **Why.** `app/sitemap.ts` omits the supplement detail route. `/supplements/` has social tags
 but no canonical; `/supplements/[slug]` has title only. The site origin is hardcoded in six
@@ -348,7 +348,7 @@ canonical; `grep -r "kinneret-algae-atlas.org" app lib` finds only `lib/site.ts`
 
 ---
 
-### [ ] 19. One name for the supplements section
+### [x] 19. One name for the supplements section
 
 **Why.** Header says "Supplements"; the page H1 and `<title>` say "Supplementary Material";
 the detail back link says "Supplementary material"; the home description and `llms.txt` say

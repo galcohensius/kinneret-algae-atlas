@@ -10,16 +10,16 @@ import RecentlyUpdatedLine from "./components/RecentlyUpdatedLine";
 import StudyAreaBlock from "./components/StudyAreaBlock";
 import { buildAtlasAttribution } from "../lib/cite-this-record";
 import { buildStudyAreaJsonLd } from "../lib/study-area";
-import { socialPreviewMetadata } from "../lib/site";
+import { absoluteUrl, SITE_NAME, socialPreviewMetadata } from "../lib/site";
 
 const HOME_DESCRIPTION =
   "Atlas of Kinneret microalgae by Dr. Tamar Zohary and Dr. Alla Alster, with species records, glossary definitions, and supplementary material.";
 
 export const metadata: Metadata = {
-  title: "Kinneret Algae Atlas",
+  title: { absolute: SITE_NAME },
   description: HOME_DESCRIPTION,
   alternates: {
-    canonical: "https://kinneret-algae-atlas.org/",
+    canonical: absoluteUrl("/"),
   },
   ...socialPreviewMetadata({
     title: "Kinneret Algae Atlas",
@@ -34,7 +34,7 @@ export default async function HomePage() {
     "@context": "https://schema.org",
     "@type": "Dataset",
     name: "Kinneret Algae Atlas",
-    url: "https://kinneret-algae-atlas.org/",
+    url: absoluteUrl("/"),
     description:
       "Atlas of Kinneret microalgae with species profiles, glossary terms, and supplementary material.",
     creator: [
@@ -54,10 +54,7 @@ export default async function HomePage() {
     citation: buildAtlasAttribution(),
     license: "All rights reserved",
     spatialCoverage: buildStudyAreaJsonLd(),
-    sameAs: [
-      "https://kinneret-algae-atlas.org/about/",
-      "https://kinneret-algae-atlas.org/llms.txt",
-    ],
+    sameAs: [absoluteUrl("/about/"), absoluteUrl("/llms.txt")],
   };
 
   return (

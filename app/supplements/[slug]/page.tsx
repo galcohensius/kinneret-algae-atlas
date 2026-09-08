@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { absoluteUrl, socialPreviewMetadata } from "../../../lib/site";
 import { notFound } from "next/navigation";
 import { RichText } from "../../components/RichText";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
@@ -21,8 +22,19 @@ export async function generateMetadata({ params }: SupplementDetailPageProps) {
   const { slug } = await params;
   const supplement = await getSupplementBySlug(slug);
   if (!supplement) return {};
+  const description = `${supplement.title} — supplementary material in the Kinneret Algae Atlas.`;
   return {
-    title: `${supplement.title} – Kinneret Algae Atlas`,
+    title: supplement.title,
+    description,
+    alternates: {
+      canonical: absoluteUrl(`/supplements/${supplement.slug}/`),
+    },
+    ...socialPreviewMetadata({
+      title: supplement.title,
+      description,
+      path: `/supplements/${supplement.slug}/`,
+      image: supplement.images[0] ?? null,
+    }),
   };
 }
 
@@ -52,7 +64,7 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
     <GlossaryLinkScopeProvider>
       <main className="algae-detail">
         <p className="algae-detail-nav">
-          <Link href="/supplements/">← Supplementary material</Link>
+          <Link href="/supplements/">← Supplementary Material</Link>
         </p>
 
         <header className="algae-detail-header">

@@ -1,5 +1,7 @@
+import { absoluteUrl } from "./site";
+
 /** Canonical atlas URL for “how to cite” (HTTPS). */
-export const ATLAS_CITE_URL = "https://kinneret-algae-atlas.org/";
+export const ATLAS_CITE_URL = absoluteUrl("/");
 export const CANONICAL_AUTHORS = ["Dr. Tamar Zohary", "Dr. Alla Alster"] as const;
 export const CANONICAL_PUBLISHER = "Israel Oceanographic & Limnological Research";
 export const CANONICAL_AFFILIATION =

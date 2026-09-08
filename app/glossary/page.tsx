@@ -3,15 +3,15 @@ import GlossaryPageClient from "../components/GlossaryPageClient";
 import { groupEntriesByLetter } from "../../lib/glossary";
 import { getGlossary } from "../../lib/glossary-server";
 import { buildCitationBundle } from "../../lib/cite-this-record";
-import { socialPreviewMetadata } from "../../lib/site";
+import { absoluteUrl, socialPreviewMetadata } from "../../lib/site";
 import { publicImageDimensions } from "../../lib/image-dimensions";
 
 export const metadata: Metadata = {
-  title: "Glossary – Kinneret Algae Atlas",
+  title: "Glossary",
   description:
     "Definitions of morphological and ecological terms used in the Kinneret Algae Atlas species descriptions.",
   alternates: {
-    canonical: "https://kinneret-algae-atlas.org/glossary/",
+    canonical: absoluteUrl("/glossary/"),
   },
   ...socialPreviewMetadata({
     title: "Glossary",
@@ -29,7 +29,7 @@ export default async function GlossaryPage() {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
     name: index.data.title,
-    url: "https://kinneret-algae-atlas.org/glossary/",
+    url: absoluteUrl("/glossary/"),
     description:
       "Definitions of morphological and ecological terms used in Kinneret Algae Atlas records.",
     hasDefinedTerm: index.data.entries.slice(0, 25).map((entry) => ({

@@ -188,10 +188,10 @@ export async function generateMetadata({ params }: AlgaeDetailPageProps) {
     record.imageCaptions
   );
   return {
-    title: `${record.scientificName} – Kinneret Algae Atlas`,
+    title: record.scientificName,
     ...(excerpt && { description: excerpt }),
     alternates: {
-      canonical: absoluteUrl(`/algae/${record.slug}`),
+      canonical: absoluteUrl(`/algae/${record.slug}/`),
     },
     ...socialPreviewMetadata({
       title: record.scientificName,
@@ -252,13 +252,13 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
     "@type": "DefinedTerm",
     name: record.scientificName,
     termCode: record.slug,
-    url: `https://kinneret-algae-atlas.org/algae/${record.slug}`,
+    url: absoluteUrl(`/algae/${record.slug}/`),
     description: (sections.ecology ?? sections.morphological_features ?? "").trim().slice(0, 320),
-    inDefinedTermSet: "https://kinneret-algae-atlas.org/#algae-index",
+    inDefinedTermSet: absoluteUrl("/#algae-index"),
     isPartOf: {
       "@type": "Dataset",
       name: "Kinneret Algae Atlas",
-      url: "https://kinneret-algae-atlas.org/",
+      url: absoluteUrl("/"),
     },
     citation: [citation.recordCitation, citation.atlasAttribution],
   };

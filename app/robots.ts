@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { absoluteUrl, SITE_ORIGIN } from "../lib/site";
 
 export const dynamic = "force-static";
 
@@ -10,7 +11,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://kinneret-algae-atlas.org/sitemap.xml",
-    host: "https://kinneret-algae-atlas.org",
+    sitemap: absoluteUrl("/sitemap.xml"),
+    host: SITE_ORIGIN,
   };
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
 /** `/algae?q=` → `/?q=` (static export cannot use server redirect()). */
@@ -15,7 +16,9 @@ export default function AlgaeLegacyRedirect() {
 
   return (
     <main className="algae-redirect">
-      <p>Redirecting…</p>
+      <p>
+        Redirecting… <Link href="/#algae-index">Open the species index</Link>
+      </p>
     </main>
   );
 }

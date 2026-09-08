@@ -9,14 +9,14 @@ import { fixScientificTypography } from "../../lib/scientific-text";
 import StudyAreaBlock from "../components/StudyAreaBlock";
 import StudyAreaMapFigure from "../components/StudyAreaMapFigure";
 import { buildStudyAreaJsonLd } from "../../lib/study-area";
-import { socialPreviewMetadata } from "../../lib/site";
+import { absoluteUrl, socialPreviewMetadata } from "../../lib/site";
 
 export const metadata: Metadata = {
-  title: "About – Kinneret Algae Atlas",
+  title: "About",
   description:
     "Vision, collaborators, and background for the Atlas of Kinneret Microalgae by Dr. Tamar Zohary and Dr. Alla Alster.",
   alternates: {
-    canonical: "https://kinneret-algae-atlas.org/about/",
+    canonical: absoluteUrl("/about/"),
   },
   ...socialPreviewMetadata({
     title: "About",
@@ -38,18 +38,18 @@ export default async function AboutPage() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: "About – Kinneret Algae Atlas",
-    url: "https://kinneret-algae-atlas.org/about/",
+    url: absoluteUrl("/about/"),
     description:
       "Vision, collaborators, and background for the Atlas of Kinneret Microalgae by Dr. Tamar Zohary and Dr. Alla Alster.",
     isPartOf: {
       "@type": "WebSite",
       name: "Kinneret Algae Atlas",
-      url: "https://kinneret-algae-atlas.org/",
+      url: absoluteUrl("/"),
     },
     about: {
       "@type": "Dataset",
       name: "Kinneret Algae Atlas",
-      url: "https://kinneret-algae-atlas.org/",
+      url: absoluteUrl("/"),
       spatialCoverage: buildStudyAreaJsonLd(),
     },
   };

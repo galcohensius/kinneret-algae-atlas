@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import VisualIndexRedirect from "./VisualIndexRedirect";
 
 export const metadata: Metadata = {
-  title: "Visual index – Kinneret Algae Atlas",
+  title: "Visual index",
   robots: { index: false },
 };
 
