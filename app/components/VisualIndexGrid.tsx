@@ -1,6 +1,6 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import { useState, type CSSProperties } from "react";
 import Link from "next/link";
 import type { VisualIndexSection } from "../../lib/visual-index-layout";
 import { ORIGIN_PARAM, VISUAL_INDEX_ORIGIN } from "../../lib/index-view";
@@ -29,7 +29,13 @@ function buildPhylumLegend(sections: VisualIndexSection[]): PhylumLegendEntry[] 
   return [...seen.values()].sort((a, b) => a.phylum.localeCompare(b.phylum));
 }
 
-function ShapeGroupGrid({ section }: { section: VisualIndexSection }) {
+function ShapeGroupGrid({
+  section,
+  highlightedPhylum,
+}: {
+  section: VisualIndexSection;
+  highlightedPhylum: string | null;
+}) {
   const cols = Math.max(...section.cells.map((cell) => cell.col)) + 1;
   const rows = Math.max(...section.cells.map((cell) => cell.row)) + 1;
 
@@ -48,7 +54,11 @@ function ShapeGroupGrid({ section }: { section: VisualIndexSection }) {
           <Link
             key={cell.slug}
             href={`/algae/${cell.slug}/?${ORIGIN_PARAM}=${VISUAL_INDEX_ORIGIN}`}
-            className="visual-index-cell"
+            className={
+              highlightedPhylum && cell.phylum !== highlightedPhylum
+                ? "visual-index-cell visual-index-cell--dimmed"
+                : "visual-index-cell"
+            }
             style={
               {
                 "--phylum-accent": cell.accent,
@@ -81,6 +91,8 @@ function ShapeGroupGrid({ section }: { section: VisualIndexSection }) {
 }
 
 export default function VisualIndexGrid({ sections }: VisualIndexGridProps) {
+  const [highlightedPhylum, setHighlightedPhylum] = useState<string | null>(null);
+
   if (sections.length === 0) {
     return <p className="muted">No species available.</p>;
   }
@@ -90,22 +102,29 @@ export default function VisualIndexGrid({ sections }: VisualIndexGridProps) {
 
   return (
     <>
-      <nav className="visual-index-legend" aria-label="Phylum colors">
+      <div className="visual-index-legend" role="group" aria-label="Highlight a phylum">
         {legendRows.map((row, rowIndex) => (
           <div key={`legend-row-${rowIndex}`} className="visual-index-legend-row">
             {row.map((entry) => (
-              <span
+              <button
                 key={entry.phylum}
+                type="button"
                 className="visual-index-legend-item"
+                aria-pressed={highlightedPhylum === entry.phylum}
+                onClick={() =>
+                  setHighlightedPhylum((current) =>
+                    current === entry.phylum ? null : entry.phylum
+                  )
+                }
                 style={{ "--phylum-accent": entry.accent } as CSSProperties}
               >
                 <span className="visual-index-legend-dot" aria-hidden />
                 {entry.label}
-              </span>
+              </button>
             ))}
           </div>
         ))}
-      </nav>
+      </div>
 
       <p className="muted visual-index-swipe-hint">Swipe sideways to see the full map.</p>
 
@@ -119,7 +138,7 @@ export default function VisualIndexGrid({ sections }: VisualIndexGridProps) {
             <h2 id={`visual-index-shape-${section.group}`} className="visual-index-shape-heading">
               {section.label}
             </h2>
-            <ShapeGroupGrid section={section} />
+            <ShapeGroupGrid section={section} highlightedPhylum={highlightedPhylum} />
           </section>
         ))}
       </div>

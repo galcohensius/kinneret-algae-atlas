@@ -498,8 +498,31 @@ main.home {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  padding: 0.2rem 0.55rem;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  font: inherit;
   font-size: 0.88rem;
   color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.visual-index-legend-item:hover {
+  background: var(--surface-subtle);
+  color: var(--text-primary);
+}
+
+.visual-index-legend-item:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.visual-index-legend-item[aria-pressed="true"] {
+  background: color-mix(in srgb, var(--phylum-accent, var(--link)) 22%, var(--card-bg));
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .visual-index-legend-dot {
@@ -556,7 +579,17 @@ main.home {
   overflow: visible;
   color: inherit;
   text-decoration: none;
-  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s, opacity 0.2s;
+}
+
+/* Legend highlight: cells of every other phylum fade back but stay clickable. */
+.visual-index-cell--dimmed {
+  opacity: 0.18;
+}
+
+.visual-index-cell--dimmed:hover,
+.visual-index-cell--dimmed:focus-visible {
+  opacity: 1;
 }
 
 .visual-index-cell:hover,

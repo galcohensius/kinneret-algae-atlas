@@ -139,7 +139,7 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
         {records.length} species,{" "}
         {view === "phylum"
           ? "grouped by phylum; A–Z by scientific name within each phylum."
-          : "grouped by shape; color ring = phylum. Hover a picture to see the species name."}{" "}
+          : "grouped by shape; color ring = phylum. Click a phylum name to highlight its species; hover a picture for its name."}{" "}
         Work in progress to include ~150 species of microalgae from Lake Kinneret.
       </p>
 
