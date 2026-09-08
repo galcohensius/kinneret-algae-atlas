@@ -4,6 +4,7 @@ import { groupEntriesByLetter } from "../../lib/glossary";
 import { getGlossary } from "../../lib/glossary-server";
 import { buildCitationBundle } from "../../lib/cite-this-record";
 import { socialPreviewMetadata } from "../../lib/site";
+import { publicImageDimensions } from "../../lib/image-dimensions";
 
 export const metadata: Metadata = {
   title: "Glossary – Kinneret Algae Atlas",
@@ -56,7 +57,10 @@ export default async function GlossaryPage() {
           recordUpdated={index.data.record_updated}
           letters={index.letters}
           groups={groups}
-          plates={index.data.plates ?? []}
+          plates={(index.data.plates ?? []).map((plate) => ({
+            ...plate,
+            ...publicImageDimensions(plate.src),
+          }))}
         />
       </article>
     </main>

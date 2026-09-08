@@ -11,6 +11,9 @@ export type ExpandableFigure = {
   captionRich?: RichSegment[];
   /** When set, used for the thumbnail button's aria-label (e.g. "Enlarge plate 2"). */
   enlargeAriaLabel?: string;
+  /** Intrinsic size so the browser reserves the box before the image loads. */
+  width?: number;
+  height?: number;
 };
 
 type ExpandableFiguresGridProps = {
@@ -45,7 +48,7 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
     <>
       <div className="figures-grid">
         {figures.map((fig, index) => (
-          <figure key={fig.src} className="figures-grid-item">
+          <figure key={`${fig.src}-${index}`} className="figures-grid-item">
             <button
               type="button"
               className="figures-expand-trigger"
@@ -54,7 +57,7 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
               aria-expanded={openIndex === index}
               aria-label={fig.enlargeAriaLabel ?? `Enlarge figure ${index + 1}`}
             >
-              <img src={fig.src} alt={fig.alt} loading="lazy" />
+              <img src={fig.src} alt={fig.alt} width={fig.width} height={fig.height} loading="lazy" />
             </button>
             {fig.captionRich && fig.captionRich.length > 0 ? (
               <figcaption className="muted">
@@ -82,7 +85,13 @@ export default function ExpandableFiguresGrid({ figures }: ExpandableFiguresGrid
               ×
             </button>
             <div className="figure-lightbox-inner" onClick={(e) => e.stopPropagation()}>
-              <img className="figure-lightbox-img" src={current.src} alt={current.alt} />
+              <img
+                className="figure-lightbox-img"
+                src={current.src}
+                alt={current.alt}
+                width={current.width}
+                height={current.height}
+              />
             </div>
             {current.captionRich && current.captionRich.length > 0 ? (
               <figcaption className="muted">

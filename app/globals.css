@@ -204,22 +204,21 @@ html.dark .theme-toggle {
   box-shadow: 0 1px 3px rgb(0 0 0 / 35%);
 }
 
-.theme-toggle:hover:not(:disabled) {
+.theme-toggle:hover {
   background: var(--surface-muted);
-}
-
-.theme-toggle:disabled {
-  cursor: wait;
-  opacity: 0.7;
 }
 
 .theme-toggle-icon {
   display: block;
 }
 
-.theme-toggle-icon-wrap {
-  display: flex;
-  opacity: 0.45;
+.theme-toggle-icon--sun,
+html.dark .theme-toggle-icon--moon {
+  display: none;
+}
+
+html.dark .theme-toggle-icon--sun {
+  display: block;
 }
 
 main {
@@ -1560,4 +1559,20 @@ a:hover {
 
 .figure-lightbox-close:hover {
   background: var(--lightbox-close-bg-hover);
+}
+
+/* Respect the OS "reduce motion" setting: no hover lifts, fades or slides. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  .visual-index-cell:hover,
+  .visual-index-cell:focus-visible,
+  .algae-list-card-link:hover .algae-list-card {
+    transform: none;
+  }
 }

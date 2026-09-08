@@ -11,6 +11,7 @@ import { getAllAlgae } from "../../../lib/algae";
 import { publicAssetPath } from "../../../lib/public-path";
 import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
 import { galleryImageAlt, galleryEnlargeAriaLabel, additionalGallerySectionTitle } from "../../../lib/gallery-image-meta";
+import { publicImageDimensions } from "../../../lib/image-dimensions";
 
 type SupplementDetailPageProps = {
   params: Promise<{ slug: string }>;
@@ -82,6 +83,7 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
               <img
                 src={slot.src}
                 alt={galleryImageAlt(supplement.title, slot.src, idx)}
+                {...publicImageDimensions(slot.src)}
                 loading={idx === 0 ? "eager" : "lazy"}
                 decoding="async"
               />
@@ -109,6 +111,7 @@ export default async function SupplementDetailPage({ params }: SupplementDetailP
                   caption: galleryCaptions[index],
                   captionRich: galleryCaptionsRich[index],
                   enlargeAriaLabel: galleryEnlargeAriaLabel(imagePath, index),
+                  ...publicImageDimensions(imagePath),
                 }))}
               />
             </section>

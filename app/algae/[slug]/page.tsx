@@ -24,6 +24,7 @@ import {
   galleryEnlargeAriaLabel,
   galleryImageAlt,
 } from "../../../lib/gallery-image-meta";
+import { publicImageDimensions } from "../../../lib/image-dimensions";
 import {
   partitionEcologyAndLaterFigures,
   partitionPlateAndGalleryImages,
@@ -126,6 +127,7 @@ function FigureGalleryBlock({
           caption: slot.caption,
           captionRich: slot.captionRich,
           enlargeAriaLabel: galleryEnlargeAriaLabel(slot.src, startIndex + index),
+          ...publicImageDimensions(slot.src),
         }))}
       />
     </section>
@@ -335,6 +337,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
             <img
               src={slot.src}
               alt={galleryImageAlt(record.title, slot.src, idx)}
+              {...publicImageDimensions(slot.src)}
               loading={idx === 0 ? "eager" : "lazy"}
               decoding="async"
             />

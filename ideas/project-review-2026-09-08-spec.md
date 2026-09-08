@@ -208,7 +208,7 @@ redundant per-component focus rules.
 
 ---
 
-### [ ] 12. Motion, theme toggle, image dimensions
+### [x] 12. Motion, theme toggle, image dimensions
 
 **Why.** No `prefers-reduced-motion` guard for ~30 transitions/transforms. The theme toggle is
 `disabled` until hydration although the pre-paint script already knows the theme. Nine

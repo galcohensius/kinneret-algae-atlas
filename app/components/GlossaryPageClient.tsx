@@ -13,7 +13,7 @@ type GlossaryPageClientProps = {
   recordUpdated: string;
   letters: string[];
   groups: LetterGroup[];
-  plates: GlossaryPlate[];
+  plates: (GlossaryPlate & { width?: number; height?: number })[];
 };
 
 function renderDefinitionWithPlateLinks(definition: string) {
@@ -103,7 +103,12 @@ export default function GlossaryPageClient({
           </h2>
           {plates.map((plate) => (
             <figure key={plate.id} id={plate.id} className="plate-figure">
-              <img src={plate.src} alt={`Glossary ${plate.label} from Cox (1996)`} />
+              <img
+                src={plate.src}
+                alt={`Glossary ${plate.label} from Cox (1996)`}
+                width={plate.width}
+                height={plate.height}
+              />
               <figcaption className="muted">{plate.label}</figcaption>
             </figure>
           ))}
