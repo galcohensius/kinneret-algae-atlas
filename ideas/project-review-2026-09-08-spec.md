@@ -2,8 +2,8 @@
 
 Findings from a full read-only scan of the web app (`app/`, `lib/`), the Python pipeline
 (`src/`, `scripts/`, `tests/`), the docs, and CI. Each section is one reviewable, separately
-committable change. Status is tracked in the header line of each section; tick it when the
-commit lands.
+committable change. Each heading carries a checkbox; it is ticked (`[x]`) only after the change
+is implemented, verified, and committed.
 
 Priority: **P1** fix soon (user-visible or data-affecting) · **P2** accessibility and
 robustness · **P3** docs and process · **P4** cleanup. Within a group, sections are in the
@@ -17,7 +17,7 @@ page's "How to use this atlas [to be written]" placeholder.
 
 ## P1 — Bugs
 
-### 1. Legacy `/algae?q=` search links land unfiltered — status: open
+### [ ] 1. Legacy `/algae?q=` search links land unfiltered
 
 **Why.** `app/algae/AlgaeLegacyRedirect.tsx` redirects `/algae?q=term` to `/?q=term`, but
 `AlgaeIndexSection` starts with an empty query and never reads `?q=`. Bookmarked or shared
@@ -33,7 +33,7 @@ when present, set the query and call `activateSearch()` so the index loads.
 
 ---
 
-### 2. Hero image script squashes non-square photos — status: open
+### [ ] 2. Hero image script squashes non-square photos
 
 **Why.** `scripts/optimize-hero-image.py` resizes to a fixed `max_px × max_px` square. It
 only worked because the current photo is square. It also overwrites its input in place.
@@ -48,7 +48,7 @@ script to the docs as a manual tool (see §14).
 
 ---
 
-### 3. Chart-renderer test skips forever; two diagnostic scripts cannot run — status: open
+### [ ] 3. Chart-renderer test skips forever; two diagnostic scripts cannot run
 
 **Why.** `tests/test_chart_fallback_render.py` looks for
 `data/raw/1 Dinoflagellates 2026-06-10.docx`; the repo has the 2026-08-07 file, so the only
@@ -66,7 +66,7 @@ nothing references them.
 
 ---
 
-### 4. `about.json` date will move backwards on the next extraction — status: open
+### [ ] 4. `about.json` date will move backwards on the next extraction
 
 **Why.** Committed `record_updated` is 2026-08-07; the Word file's core-properties modified
 date is 2026-08-01, which is what `extract_about.py` reads. The next run rewrites the
@@ -85,7 +85,7 @@ into `about.json`.
 
 ---
 
-### 5. Supplement images use a weaker TIFF conversion than species images — status: open
+### [ ] 5. Supplement images use a weaker TIFF conversion than species images
 
 **Why.** `supplement_pipeline.py` converts TIFF with a bare `Image.open(...).save(...)`: no
 mode conversion (CMYK/palette would raise), no context manager. `pipeline.py` has
@@ -103,7 +103,7 @@ new shared module) and call them from both pipelines; `rstrip("/")` the prefix.
 
 ---
 
-### 6. Glossary plate links are hardcoded to two plates — status: open
+### [ ] 6. Glossary plate links are hardcoded to two plates
 
 **Why.** `GlossaryPageClient.tsx` string-matches `"Cox (1996) Plate 1"` / `"Plate 2"` and
 hardcodes their anchors, while the actual anchors come from `plate.id` in the data. A third
@@ -120,7 +120,7 @@ component.
 
 ---
 
-### 7. Glossary first-occurrence tracking can drop every popover — status: open
+### [ ] 7. Glossary first-occurrence tracking can drop every popover
 
 **Why.** `GlossaryLinkScopeProvider` records claimed slugs in a `useRef` `Set` that is never
 reset. Any second render pass (React StrictMode in dev, a retried render, a future stateful
@@ -136,7 +136,7 @@ render.
 
 ---
 
-### 8. Local Python venv is broken (repo moved) — status: open
+### [ ] 8. Local Python venv is broken (repo moved)
 
 **Why.** `.venv/pyvenv.cfg` and `.venv/bin/pip` still point at
 `~/Developer/kinneret-algae-atlas`; the repo now lives under `~/Developer/others/`. Any `pip
@@ -152,7 +152,7 @@ requirements.txt` (3.12 to match CI; see §16).
 
 ## P2 — Accessibility
 
-### 9. Phylum chip text fails colour contrast in both themes — status: open
+### [ ] 9. Phylum chip text fails colour contrast in both themes
 
 **Why.** `.phylum-jump-nav a` uses the phylum accent as text colour. On the light card,
 euglenophyta is 1.98:1, charophyta 2.28:1, cryptista 2.94:1, cyanobacteriophyta 3.68:1; in
@@ -173,7 +173,7 @@ prevents regressions when phyla are added.
 
 ---
 
-### 10. View switch has no keyboard support; panel structure is wrong — status: open
+### [ ] 10. View switch has no keyboard support; panel structure is wrong
 
 **Why.** `role="tablist"` / `role="tab"` without arrow-key handling, roving `tabIndex`, or
 `aria-controls`; both tabs are in the tab order. The search box and phylum chips sit
@@ -191,7 +191,7 @@ simpler, and the pattern is already used by the legend.
 
 ---
 
-### 11. Focus visibility — status: open
+### [ ] 11. Focus visibility
 
 **Why.** `.glossary-term-trigger:focus-visible` sets `outline: none` (focus conveyed by colour
 only). No `:focus-visible` rule exists for `.site-nav a`, `.site-brand`,
@@ -208,7 +208,7 @@ redundant per-component focus rules.
 
 ---
 
-### 12. Motion, theme toggle, image dimensions — status: open
+### [ ] 12. Motion, theme toggle, image dimensions
 
 **Why.** No `prefers-reduced-motion` guard for ~30 transitions/transforms. The theme toggle is
 `disabled` until hydration although the pre-paint script already knows the theme. Nine
@@ -226,7 +226,7 @@ Give thumbnails and plates `width`/`height` attributes or an `aspect-ratio` rule
 
 ## P3 — Docs, CI, metadata
 
-### 13. CI does not type-check; the two workflows duplicate each other — status: open
+### [ ] 13. CI does not type-check; the two workflows duplicate each other
 
 **Why.** `ci.yml` and `deploy-pages.yml` run unittest, `validate:data`, vitest, build, and
 the export check, but never `npm run lint` (`tsc --noEmit`), the only type check covering
@@ -245,7 +245,7 @@ passes on a clean tree.
 
 ---
 
-### 14. README: pipeline diagram, setup, deploy, routes — status: open
+### [ ] 14. README: pipeline diagram, setup, deploy, routes
 
 **Why.** `README.md` is 15 lines: no setup, no commands, no deploy, no route map, no diagram.
 The Mermaid diagram exists only in `docs/MAINTENANCE.md` and misattributes
@@ -270,7 +270,7 @@ tests are stdlib `unittest`). Verify diagrams in the IDE preview.
 
 ---
 
-### 15. Ideas spec is fully shipped — status: open
+### [ ] 15. Ideas spec is fully shipped
 
 **Why.** All six items in `ideas/site-improvements-spec.md` are in `main`, but the file still
 reads as a backlog and describes designs that were changed in implementation (search, the
@@ -284,7 +284,7 @@ identification helper) into a short new `ideas/` file if they are still wanted.
 
 ---
 
-### 16. Python dependency and version hygiene — status: open
+### [ ] 16. Python dependency and version hygiene
 
 **Why.** `requirements.txt` pins nothing except `Pillow>=10`; `lxml` is imported directly but
 only present transitively. No Python version is declared (local venv 3.14, CI 3.12). No Node
@@ -305,7 +305,7 @@ suite.
 
 ---
 
-### 17. Machine-readable index (`llms.txt`) is stale — status: open
+### [ ] 17. Machine-readable index (`llms.txt`) is stale
 
 **Why.** `scripts/generate_llms_files.py` lists `/#algae-index`, About, species, Glossary,
 Supplements. It never mentions the morphotype view (`/#visual-index`), the Cox (1996)
@@ -324,7 +324,7 @@ view.
 
 ---
 
-### 18. Sitemap and page metadata gaps — status: open
+### [ ] 18. Sitemap and page metadata gaps
 
 **Why.** `app/sitemap.ts` omits the supplement detail route. `/supplements/` has social tags
 but no canonical; `/supplements/[slug]` has title only. The site origin is hardcoded in six
@@ -348,7 +348,7 @@ canonical; `grep -r "kinneret-algae-atlas.org" app lib` finds only `lib/site.ts`
 
 ---
 
-### 19. One name for the supplements section — status: open
+### [ ] 19. One name for the supplements section
 
 **Why.** Header says "Supplements"; the page H1 and `<title>` say "Supplementary Material";
 the detail back link says "Supplementary material"; the home description and `llms.txt` say
@@ -365,7 +365,7 @@ formal name on the page, short label in navigation.
 
 ## P4 — Cleanup
 
-### 20. Dead code, web app — status: open
+### [ ] 20. Dead code, web app
 
 - Unused CSS: `.algae-index-title`, `.section-title`, `.field-row`, `.gallery*`,
   `.glossary-intro`.
@@ -396,7 +396,7 @@ empty except for the intended fixes.
 
 ---
 
-### 21. Dead code and duplication, Python — status: open
+### [ ] 21. Dead code and duplication, Python
 
 - `pipeline.py`: `_normalize_structured_fields` is defined twice; the first is a
   `RuntimeError` stub shadowed by the real one. Delete the stub.
@@ -438,7 +438,7 @@ normalisation must tolerate missing keys — it already does via `?? null`).
 
 ## UI polish (requested by Gal)
 
-### 22. "Search species" label on the same row as the box — status: open
+### [ ] 22. "Search species" label on the same row as the box
 
 **Why.** In the By phylum view the label sits on its own line above the input, adding a row
 to an area that is already stacked (summary, switch, search, chips).
