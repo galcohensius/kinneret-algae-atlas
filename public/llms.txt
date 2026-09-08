@@ -14,10 +14,11 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 - Google Maps: https://www.google.com/maps/search/Lake+Kinneret+(Sea+of+Galilee)/@32.833,35.583,10z
 
 Primary resources:
-- Site index: https://kinneret-algae-atlas.org/#algae-index
+- Species index (default: by phylum): https://kinneret-algae-atlas.org/#algae-index
+- Species index, morphotype view (by cell/colony shape): https://kinneret-algae-atlas.org/#visual-index
 - About: https://kinneret-algae-atlas.org/about/
 - Species pages: https://kinneret-algae-atlas.org/algae/{slug}/
-- Glossary: https://kinneret-algae-atlas.org/glossary/
+- Glossary (terms plus the Cox (1996) plates): https://kinneret-algae-atlas.org/glossary/
 - Supplementary material: https://kinneret-algae-atlas.org/supplements/
 - Sitemap: https://kinneret-algae-atlas.org/sitemap.xml
 
@@ -26,6 +27,7 @@ Machine-readable endpoints:
 - https://kinneret-algae-atlas.org/api/species/{slug}.json
 - https://kinneret-algae-atlas.org/api/glossary.json
 - https://kinneret-algae-atlas.org/api/atlas.json
+- https://kinneret-algae-atlas.org/api/search-index.json (internal: powers the site search box; schema is not stable, prefer species.json)
 
 Compact corpus:
 - https://kinneret-algae-atlas.org/llms-full.txt

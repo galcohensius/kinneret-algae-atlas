@@ -28,6 +28,13 @@ class TestLlmsOutputs(unittest.TestCase):
         self.assertIn("/api/species/{slug}.json", llms_txt)
         self.assertIn("/api/glossary.json", llms_txt)
 
+    def test_llms_txt_names_both_index_views_and_plates(self) -> None:
+        llms_txt = (ROOT / "public" / "llms.txt").read_text(encoding="utf-8")
+        self.assertIn("/#algae-index", llms_txt)
+        self.assertIn("morphotype view", llms_txt)
+        self.assertIn("/#visual-index", llms_txt)
+        self.assertIn("Cox (1996) plates", llms_txt)
+
     def test_generated_species_api_matches_processed_records(self) -> None:
         records = json.loads((ROOT / "data" / "processed" / "algae_records.json").read_text(encoding="utf-8"))
         species_api = json.loads((ROOT / "public" / "api" / "species.json").read_text(encoding="utf-8"))
