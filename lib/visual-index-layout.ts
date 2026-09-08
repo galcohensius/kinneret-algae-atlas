@@ -141,10 +141,6 @@ export function computeVisualIndexLayout(records: AlgaeRecord[]): GridPlacement[
   });
 }
 
-export function buildVisualIndexCells(records: AlgaeRecord[]): VisualIndexCell[] {
-  return buildVisualIndexSections(records).flatMap((section) => section.cells);
-}
-
 /** Compare grid distance for pairs with low vs high morphology distance (for tests). */
 export function averageGridDistanceForMorphologyThreshold(
   records: AlgaeRecord[],

@@ -120,14 +120,6 @@ export function normalizeMorphology(sections: Record<string, string>): Morpholog
 }
 
 /** Semantic axis positions in [0, 1] for force-layout seeding. */
-export const ORGANIZATION_AXIS: Record<OrganizationBucket, number> = {
-  single_flagellate: 0.1,
-  single_non_flagellate: 0.25,
-  colonial: 0.55,
-  filament: 0.85,
-  other: 0.5,
-};
-
 export const COLOR_AXIS: Record<ColorBucket, number> = {
   green: 0.1,
   blue_green: 0.3,

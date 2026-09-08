@@ -2,11 +2,12 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import SiteHeader from "./components/SiteHeader";
 import { SITE_NAME, SITE_ORIGIN } from "../lib/site";
+import { THEME_STORAGE_KEY } from "../lib/theme";
 import VisitCounter from "./components/VisitCounter";
 import "./globals.css";
 
 /** Runs before paint so the first frame matches saved or system theme. */
-const THEME_BOOTSTRAP_SCRIPT = `!function(){try{var k='kinneret-atlas-theme',s=localStorage.getItem(k),d=s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}}();`;
+const THEME_BOOTSTRAP_SCRIPT = `!function(){try{var k='${THEME_STORAGE_KEY}',s=localStorage.getItem(k),d=s==='dark'||(s!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',d)}catch(e){}}();`;
 
 /**
  * Anonymous, cookie-free visit counts (GoatCounter). Emitted only when the

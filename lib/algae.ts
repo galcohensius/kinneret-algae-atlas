@@ -3,7 +3,6 @@ import path from "node:path";
 import { cache } from "react";
 import { z } from "zod";
 import { fixScientificTypography } from "./scientific-text";
-import { buildAlgaeSearchHaystack, filterAlgaeByQuery } from "./algae-filter";
 import { publicAssetPath } from "./public-path";
 import { resolveThumbnailUrl } from "./resolve-thumbnail";
 import { isThumbnailImagePath } from "./thumbnail-path-pattern";
@@ -32,8 +31,8 @@ const rawAlgaeArraySchema = z.array(rawAlgaeRecordSchema);
 
 export type RawAlgaeRecord = z.infer<typeof rawAlgaeRecordSchema>;
 
-export type { AlgaeRecord, AlgaeCatalogRecord, AlgaeIndexRecord } from "./algae-types";
-import type { AlgaeCatalogRecord, AlgaeIndexRecord, AlgaeRecord } from "./algae-types";
+export type { AlgaeRecord, AlgaeCatalogRecord } from "./algae-types";
+import type { AlgaeCatalogRecord, AlgaeRecord } from "./algae-types";
 
 const PRIMARY_SECTION_ORDER = ["morphology", "ecology", "physiological_features"];
 
@@ -120,9 +119,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
     for (const [key, value] of Object.entries(sections)) {
       fixedSections[key] = fixScientificTypography(value);
     }
-    const morphology = fixedSections.morphology ?? null;
     const ecology = fixedSections.ecology ?? null;
-    const notes = fixedSections.notes ?? null;
 
     const recordUpdatedRaw = raw.metadata?.record_updated;
     const recordUpdated =
@@ -154,9 +151,7 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
           ...(seg.href ? { href: seg.href } : {}),
         }))
       ),
-      morphology,
       ecology,
-      notes,
       sections: fixedSections,
       sectionsRich: Object.fromEntries(
         Object.entries(raw.sections_rich ?? {}).map(([key, segments]) => [
@@ -189,14 +184,6 @@ export function toAlgaeCatalogRecord(record: AlgaeRecord): AlgaeCatalogRecord {
   };
 }
 
-/** @deprecated Use {@link toAlgaeCatalogRecord}. */
-export function toAlgaeIndexRecord(record: AlgaeRecord): AlgaeIndexRecord {
-  return {
-    ...toAlgaeCatalogRecord(record),
-    searchHaystack: buildAlgaeSearchHaystack(record),
-  };
-}
-
 export const getAllAlgae = cache(async (): Promise<AlgaeRecord[]> => {
   const filePath = path.join(process.cwd(), "data", "processed", "algae_records.json");
   const content = await readFile(filePath, "utf8");
@@ -210,21 +197,10 @@ export async function getAlgaeCatalogRecords(): Promise<AlgaeCatalogRecord[]> {
   return allAlgae.map(toAlgaeCatalogRecord);
 }
 
-/** @deprecated Use {@link getAlgaeCatalogRecords}. */
-export async function getAlgaeIndexRecords(): Promise<AlgaeIndexRecord[]> {
-  const allAlgae = await getAllAlgae();
-  return allAlgae.map(toAlgaeIndexRecord);
-}
-
 export async function getAlgaBySlug(slug: string): Promise<AlgaeRecord | null> {
   const allAlgae = await getAllAlgae();
   const normalized = normalizeSlugInput(slug);
   return allAlgae.find((item) => item.slug === normalized) ?? null;
-}
-
-export async function searchAlgae(query: string): Promise<AlgaeRecord[]> {
-  const allAlgae = await getAllAlgae();
-  return filterAlgaeByQuery(allAlgae, query);
 }
 
 export async function validateAlgaeDataFile(): Promise<{ count: number }> {

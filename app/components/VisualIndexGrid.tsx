@@ -13,7 +13,6 @@ type VisualIndexGridProps = {
 
 type PhylumLegendEntry = {
   phylum: string;
-  label: string;
   accent: string;
 };
 
@@ -22,7 +21,7 @@ function buildPhylumLegend(sections: VisualIndexSection[]): PhylumLegendEntry[] 
   for (const section of sections) {
     for (const cell of section.cells) {
       if (!seen.has(cell.phylum)) {
-        seen.set(cell.phylum, { phylum: cell.phylum, label: cell.phylum, accent: cell.accent });
+        seen.set(cell.phylum, { phylum: cell.phylum, accent: cell.accent });
       }
     }
   }
@@ -93,7 +92,7 @@ export default function VisualIndexGrid({ sections }: VisualIndexGridProps) {
   }
 
   const legend = buildPhylumLegend(sections);
-  const legendRows = splitIntoBalancedRows(legend, (entry) => entry.label.length);
+  const legendRows = splitIntoBalancedRows(legend, (entry) => entry.phylum.length);
 
   return (
     <>
@@ -114,7 +113,7 @@ export default function VisualIndexGrid({ sections }: VisualIndexGridProps) {
                 style={{ "--phylum-accent": entry.accent } as CSSProperties}
               >
                 <span className="visual-index-legend-dot" aria-hidden />
-                {entry.label}
+                {entry.phylum}
               </button>
             ))}
           </div>

@@ -26,9 +26,7 @@ export type AlgaeRecord = {
   imageCaptions: string[];
   /** Parallel to imageCaptions when extracted from Word with run styles. */
   imageCaptionsRich: RichSegment[][];
-  morphology: string | null;
   ecology: string | null;
-  notes: string | null;
   sections: Record<string, string>;
   sectionsRich: Record<string, RichSegment[]>;
   metadata: Record<string, unknown>;
@@ -43,9 +41,4 @@ export type AlgaeCatalogRecord = {
   thumbnailUrl: string | null;
   sections: { phylum: string };
   recordUpdated: string | null;
-};
-
-/** @deprecated Use {@link AlgaeCatalogRecord} for the index; search haystacks live in search-index.json. */
-export type AlgaeIndexRecord = AlgaeCatalogRecord & {
-  searchHaystack: string;
 };

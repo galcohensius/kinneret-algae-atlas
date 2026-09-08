@@ -710,11 +710,6 @@ main.home {
   color: var(--link-hover);
 }
 
-.glossary-intro {
-  margin: 0 0 0.75rem;
-  line-height: 1.5;
-}
-
 .glossary-meta {
   margin: 0 0 1.25rem;
   font-size: 0.9rem;
@@ -880,13 +875,6 @@ main.home {
   scroll-margin-top: 1rem;
 }
 
-.algae-index-title {
-  margin: 0 0 0.5rem;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
 /* Label and box on one row; the count line wraps underneath. */
 .algae-index-search {
   display: flex;
@@ -962,6 +950,11 @@ main.home {
 
 .algae-pager-link:hover .algae-pager-phylum {
   color: rgb(255 255 255 / 0.85);
+}
+
+.algae-pager-prev {
+  text-align: left;
+  align-items: flex-start;
 }
 
 .algae-pager-next {
@@ -1114,34 +1107,6 @@ a:hover {
 
 .muted {
   color: var(--text-muted);
-}
-
-.section-title {
-  margin-bottom: 0.25rem;
-}
-
-.field-row {
-  line-height: 1.55;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 0.75rem;
-}
-
-.gallery-item {
-  margin: 0;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  overflow: hidden;
-  background: var(--surface-muted);
-}
-
-.gallery-item img {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
 .algae-list-card {
@@ -1575,4 +1540,18 @@ a:hover {
   .algae-list-card-link:hover .algae-list-card {
     transform: none;
   }
+}
+
+/* Redirect stubs (/algae, /visual-index) */
+.algae-redirect {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Glossary reference plates sit between the letter strip and the entries */
+.glossary-plates {
+  margin-bottom: 1.5rem;
 }

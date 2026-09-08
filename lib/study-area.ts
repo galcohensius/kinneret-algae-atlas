@@ -109,29 +109,3 @@ export function buildStudyAreaJsonLd(): Record<string, unknown> {
   };
 }
 
-export function buildStudyAreaApiPayload(): Record<string, unknown> {
-  return {
-    lake_name: STUDY_AREA.lakeName,
-    alternate_name: STUDY_AREA.alternateName,
-    country: STUDY_AREA.country,
-    country_code: STUDY_AREA.countryCode,
-    state_province: STUDY_AREA.stateProvince,
-    region: STUDY_AREA.region,
-    coordinates: {
-      decimal_degrees: formatStudyAreaCoordinatesDecimal(),
-      dms: formatStudyAreaCoordinatesDms(),
-      latitude: STUDY_AREA.latitude,
-      longitude: STUDY_AREA.longitude,
-      geodetic_datum: STUDY_AREA.geodeticDatum,
-    },
-    elevation_m: STUDY_AREA.elevationM,
-    citation_line: formatStudyAreaCitationLine(),
-    map_image: STUDY_AREA.mapImage,
-    map_attribution: STUDY_AREA.mapAttribution,
-    map_source_url: STUDY_AREA.mapSourceUrl,
-    maps: {
-      openstreetmap: studyAreaOpenStreetMapUrl(),
-      google_maps: studyAreaGoogleMapsUrl(),
-    },
-  };
-}

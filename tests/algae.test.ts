@@ -18,9 +18,7 @@ describe("sortAlgaeRecordsForCatalog", () => {
         images: [],
         imageCaptions: [],
         imageCaptionsRich: [],
-        morphology: null,
         ecology: null,
-        notes: null,
         sections: {
           phylum: "B",
           class: "B1",
@@ -39,9 +37,7 @@ describe("sortAlgaeRecordsForCatalog", () => {
         images: [],
         imageCaptions: [],
         imageCaptionsRich: [],
-        morphology: null,
         ecology: null,
-        notes: null,
         sections: {
           phylum: "B",
           class: "B1",
@@ -60,9 +56,7 @@ describe("sortAlgaeRecordsForCatalog", () => {
         images: [],
         imageCaptions: [],
         imageCaptionsRich: [],
-        morphology: null,
         ecology: null,
-        notes: null,
         sections: {
           phylum: "A",
           class: "A1",

@@ -1,6 +1,6 @@
 "use client";
 
-const STORAGE_KEY = "kinneret-atlas-theme";
+import { THEME_STORAGE_KEY } from "../../lib/theme";
 
 const iconProps = {
   width: 20,
@@ -40,7 +40,7 @@ export default function ThemeToggle() {
   function toggle() {
     const next = !document.documentElement.classList.contains("dark");
     document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem(STORAGE_KEY, next ? "dark" : "light");
+    localStorage.setItem(THEME_STORAGE_KEY, next ? "dark" : "light");
   }
 
   return (

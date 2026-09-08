@@ -103,7 +103,7 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
   const [searchError, setSearchError] = useState(false);
 
   const loadSearchIndex = useCallback(async () => {
-    if (searchIndex || searchLoading) {
+    if (searchIndex || searchLoading || searchError) {
       return;
     }
     setSearchLoading(true);
@@ -120,7 +120,7 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
     } finally {
       setSearchLoading(false);
     }
-  }, [searchIndex, searchLoading]);
+  }, [searchIndex, searchLoading, searchError]);
 
   const activateSearch = useCallback(() => {
     void loadSearchIndex();

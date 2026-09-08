@@ -365,7 +365,7 @@ formal name on the page, short label in navigation.
 
 ## P4 — Cleanup
 
-### [ ] 20. Dead code, web app
+### [x] 20. Dead code, web app
 
 - Unused CSS: `.algae-index-title`, `.section-title`, `.field-row`, `.gallery*`,
   `.glossary-intro`.

@@ -18,7 +18,7 @@ import {
   splitFurtherReadingIndexed,
 } from "../../../lib/further-reading";
 import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
-import { getAlgaBySlug, getAllAlgae, normalizeSlugInput } from "../../../lib/algae";
+import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 import { listAlgaeInAtlasOrder } from "../../../lib/phylum-catalog";
 import {
   galleryEnlargeAriaLabel,
@@ -210,9 +210,7 @@ export async function generateStaticParams() {
 
 export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) {
   const { slug } = await params;
-  const allAlgae = await getAllAlgae();
-  const normalized = normalizeSlugInput(slug);
-  const record = allAlgae.find((item) => item.slug === normalized) ?? null;
+  const [record, allAlgae] = await Promise.all([getAlgaBySlug(slug), getAllAlgae()]);
 
   if (!record) {
     notFound();

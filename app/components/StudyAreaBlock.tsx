@@ -1,5 +1,7 @@
 import Link from "next/link";
 import {
+  formatStudyAreaCoordinatesDecimal,
+  formatStudyAreaCoordinatesDms,
   formatStudyAreaFooterLine,
   formatStudyAreaLakeName,
   STUDY_AREA,
@@ -36,6 +38,10 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
           <strong>{STUDY_AREA.country}</strong>. The lake lies in the{" "}
           <strong>{STUDY_AREA.region}</strong>, at approximately{" "}
           <strong>{STUDY_AREA.elevationM} m</strong> elevation (below sea level).
+        </p>
+        <p>
+          Coordinates: <strong>{formatStudyAreaCoordinatesDecimal()}</strong> (
+          {formatStudyAreaCoordinatesDms()}), {STUDY_AREA.geodeticDatum}.
         </p>
         <p className="study-area-map-links">
           <Link href={studyAreaOpenStreetMapUrl()} target="_blank" rel="noopener noreferrer">

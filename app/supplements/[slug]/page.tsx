@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { absoluteUrl, socialPreviewMetadata } from "../../../lib/site";
 import { notFound } from "next/navigation";
-import { RichText } from "../../components/RichText";
 import ExpandableFiguresGrid from "../../components/ExpandableFiguresGrid";
 import TaxonItalicName from "../../components/TaxonItalicName";
 import GlossaryAwarePlainText from "../../components/GlossaryAwarePlainText";

@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import type { GlossaryEntry, GlossaryPlate } from "../../lib/glossary-types";
 import { publicAssetPath } from "../../lib/public-path";
+import { formatRecordUpdated } from "../../lib/cite-this-record";
 
 type LetterGroup = {
   letter: string;
@@ -68,7 +69,7 @@ export default function GlossaryPageClient({
   return (
     <>
       <p className="glossary-meta muted">
-        {title} · Last updated {recordUpdated} · {totalCount} terms
+        {title} · Last updated {formatRecordUpdated(recordUpdated)} · {totalCount} terms
       </p>
 
       <div className="glossary-toolbar">
