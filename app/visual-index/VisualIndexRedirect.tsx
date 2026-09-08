@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { HOME_VISUAL_INDEX_HASH } from "../../lib/index-view";
 
-/** `/visual-index/` → home in the "By appearance" view (static export cannot use server redirect()). */
+/** `/visual-index/` → home in the "By morphotype" view (static export cannot use server redirect()). */
 export default function VisualIndexRedirect() {
   const router = useRouter();
 

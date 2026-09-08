@@ -27,7 +27,7 @@ type IndexView = "phylum" | "appearance";
 
 const INDEX_VIEWS: { id: IndexView; label: string }[] = [
   { id: "phylum", label: "By phylum" },
-  { id: "appearance", label: "By appearance" },
+  { id: "appearance", label: "By morphotype" },
 ];
 
 /** Two rows overflow the 980px content column and wrap to four lines; three fit. */
@@ -71,7 +71,7 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
   const [view, setView] = useState<IndexView>("phylum");
   const [query, setQuery] = useState("");
 
-  // /#visual-index (header link, species back link, old /visual-index/ URL) opens the appearance view.
+  // /#visual-index (header link, species back link, old /visual-index/ URL) opens the morphotype view.
   useEffect(() => {
     function openViewFromHash() {
       if (window.location.hash === HOME_VISUAL_INDEX_HASH) {
@@ -139,7 +139,7 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
         {records.length} species,{" "}
         {view === "phylum"
           ? "grouped by phylum; A–Z by scientific name within each phylum."
-          : "grouped by shape; color ring = phylum. Click a phylum name to highlight its species; hover a picture for its name."}{" "}
+          : "grouped by morphotype; color ring = phylum. Click a phylum name to highlight its species; hover a picture for its name."}{" "}
         Work in progress to include ~150 species of microalgae from Lake Kinneret.
       </p>
 
