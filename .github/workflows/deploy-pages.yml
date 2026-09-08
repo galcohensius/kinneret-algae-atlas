@@ -1,4 +1,5 @@
-# Build static site and deploy to GitHub Pages (site at domain root; see README for /repo-name/ builds).
+# Build static site and deploy to GitHub Pages (site at domain root; see README "Deploy"
+# for /repo-name/ builds via NEXT_PUBLIC_BASE_PATH).
 # Repo settings → Pages → Build: GitHub Actions.
 
 name: Deploy to GitHub Pages
@@ -19,37 +20,9 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-      - name: Python extractor tests
-        run: PYTHONPATH=src python -m unittest discover -s tests -p "test_*.py" -v
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-      - name: Install dependencies
-        run: npm ci
-      - name: Validate algae JSON
-        run: npm run validate:data
-      - name: Run tests
-        run: npm run test
-      - name: Build static export
-        run: npm run build
-        env:
-          # Repo settings -> Secrets and variables -> Actions -> Variables.
-          # Unset until the GoatCounter account exists; the build then ships no analytics.
-          NEXT_PUBLIC_GOATCOUNTER_CODE: ${{ vars.NEXT_PUBLIC_GOATCOUNTER_CODE }}
-      - name: Check exported links and assets
-        run: npm run test:export
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: out
+    uses: ./.github/workflows/checks.yml
+    with:
+      upload-pages-artifact: true
 
   deploy:
     needs: build

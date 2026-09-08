@@ -226,7 +226,7 @@ Give thumbnails and plates `width`/`height` attributes or an `aspect-ratio` rule
 
 ## P3 — Docs, CI, metadata
 
-### [ ] 13. CI does not type-check; the two workflows duplicate each other
+### [x] 13. CI does not type-check; the two workflows duplicate each other
 
 **Why.** `ci.yml` and `deploy-pages.yml` run unittest, `validate:data`, vitest, build, and
 the export check, but never `npm run lint` (`tsc --noEmit`), the only type check covering
