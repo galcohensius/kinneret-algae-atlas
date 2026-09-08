@@ -534,10 +534,6 @@ main.home {
   flex-shrink: 0;
 }
 
-.visual-index-swipe-hint {
-  display: none;
-}
-
 .visual-index-shape-groups {
   display: flex;
   flex-direction: column;
@@ -557,14 +553,9 @@ main.home {
   text-transform: none;
 }
 
-.visual-index-grid-scroll {
-  overflow: visible;
-}
-
 .visual-index-grid {
   display: grid;
   grid-template-columns: repeat(var(--visual-index-cols, 7), minmax(72px, 96px));
-  grid-template-rows: repeat(var(--visual-index-rows, 7), minmax(72px, 96px));
   gap: 0.65rem;
   justify-content: center;
 }
@@ -683,29 +674,10 @@ main.home {
     font-size: 0.8rem;
   }
 
-  .visual-index-swipe-hint {
-    display: block;
-    margin: 0 0 0.7rem;
-    text-align: center;
-    font-size: 0.84rem;
-  }
-
-  .visual-index-grid-scroll {
-    overflow-x: auto;
-    overflow-y: visible;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
-    margin-inline: -0.15rem;
-    padding: 0.15rem 0.35rem 0.55rem;
-  }
-
+  /* Reflow to at most four fluid columns; tracks shrink from 96px to fit the card. */
   .visual-index-grid {
-    grid-template-columns: repeat(var(--visual-index-cols, 7), 76px);
-    grid-template-rows: repeat(var(--visual-index-rows, 7), 76px);
+    grid-template-columns: repeat(var(--visual-index-cols-narrow, 4), minmax(0, 96px));
     gap: 0.55rem;
-    justify-content: start;
-    width: max-content;
-    min-width: 100%;
   }
 
   .visual-index-cell {

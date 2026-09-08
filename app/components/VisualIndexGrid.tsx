@@ -29,6 +29,9 @@ function buildPhylumLegend(sections: VisualIndexSection[]): PhylumLegendEntry[] 
   return [...seen.values()].sort((a, b) => a.phylum.localeCompare(b.phylum));
 }
 
+/** Phones reflow every shape group to at most this many columns instead of scrolling sideways. */
+const NARROW_MAX_COLS = 4;
+
 function ShapeGroupGrid({
   section,
   highlightedPhylum,
@@ -36,56 +39,48 @@ function ShapeGroupGrid({
   section: VisualIndexSection;
   highlightedPhylum: string | null;
 }) {
+  // Cells arrive in reading order, so CSS auto-placement reproduces the layout at any column count.
   const cols = Math.max(...section.cells.map((cell) => cell.col)) + 1;
-  const rows = Math.max(...section.cells.map((cell) => cell.row)) + 1;
 
   return (
-    <div className="visual-index-grid-scroll">
-      <div
-        className="visual-index-grid"
-        style={
-          {
-            "--visual-index-cols": cols,
-            "--visual-index-rows": rows,
-          } as CSSProperties
-        }
-      >
-        {section.cells.map((cell) => (
-          <Link
-            key={cell.slug}
-            href={`/algae/${cell.slug}/?${ORIGIN_PARAM}=${VISUAL_INDEX_ORIGIN}`}
-            className={
-              highlightedPhylum && cell.phylum !== highlightedPhylum
-                ? "visual-index-cell visual-index-cell--dimmed"
-                : "visual-index-cell"
-            }
-            style={
-              {
-                "--phylum-accent": cell.accent,
-                gridColumn: cell.col + 1,
-                gridRow: cell.row + 1,
-              } as CSSProperties
-            }
-            aria-label={`${cell.scientificName}, ${cell.phylum}`}
-          >
-            {cell.imageUrl ? (
-              <img
-                className="visual-index-thumb"
-                src={cell.imageUrl}
-                alt=""
-                loading="lazy"
-                decoding="async"
-              />
-            ) : (
-              <span className="visual-index-thumb visual-index-thumb-placeholder">No image</span>
-            )}
-            <span className="visual-index-tooltip" role="tooltip">
-              <TaxonItalicName taxon={cell.scientificName} className="algae-taxon" />
-              <span className="visual-index-tooltip-phylum">{cell.phylum}</span>
-            </span>
-          </Link>
-        ))}
-      </div>
+    <div
+      className="visual-index-grid"
+      style={
+        {
+          "--visual-index-cols": cols,
+          "--visual-index-cols-narrow": Math.min(cols, NARROW_MAX_COLS),
+        } as CSSProperties
+      }
+    >
+      {section.cells.map((cell) => (
+        <Link
+          key={cell.slug}
+          href={`/algae/${cell.slug}/?${ORIGIN_PARAM}=${VISUAL_INDEX_ORIGIN}`}
+          className={
+            highlightedPhylum && cell.phylum !== highlightedPhylum
+              ? "visual-index-cell visual-index-cell--dimmed"
+              : "visual-index-cell"
+          }
+          style={{ "--phylum-accent": cell.accent } as CSSProperties}
+          aria-label={`${cell.scientificName}, ${cell.phylum}`}
+        >
+          {cell.imageUrl ? (
+            <img
+              className="visual-index-thumb"
+              src={cell.imageUrl}
+              alt=""
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <span className="visual-index-thumb visual-index-thumb-placeholder">No image</span>
+          )}
+          <span className="visual-index-tooltip" role="tooltip">
+            <TaxonItalicName taxon={cell.scientificName} className="algae-taxon" />
+            <span className="visual-index-tooltip-phylum">{cell.phylum}</span>
+          </span>
+        </Link>
+      ))}
     </div>
   );
 }
@@ -125,8 +120,6 @@ export default function VisualIndexGrid({ sections }: VisualIndexGridProps) {
           </div>
         ))}
       </div>
-
-      <p className="muted visual-index-swipe-hint">Swipe sideways to see the full map.</p>
 
       <div className="visual-index-shape-groups">
         {sections.map((section) => (
