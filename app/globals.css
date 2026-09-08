@@ -47,6 +47,14 @@ body {
   color: var(--text-primary);
 }
 
+/* One visible focus ring for every link and control. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
 /* ---------- Site header: brand, reference links, theme toggle ---------- */
 html {
   /* Anchor jumps land below the sticky header. */
@@ -203,11 +211,6 @@ html.dark .theme-toggle {
 .theme-toggle:disabled {
   cursor: wait;
   opacity: 0.7;
-}
-
-.theme-toggle:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
 }
 
 .theme-toggle-icon {
@@ -445,8 +448,6 @@ main.home {
 }
 
 .index-view-tab:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
   position: relative;
 }
 
@@ -521,11 +522,6 @@ main.home {
   color: var(--text-primary);
 }
 
-.visual-index-legend-item:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
-}
-
 .visual-index-legend-item[aria-pressed="true"] {
   background: color-mix(in srgb, var(--phylum-accent, var(--link)) 22%, var(--card-bg));
   color: var(--text-primary);
@@ -595,11 +591,6 @@ main.home {
   transform: translateY(-2px);
   box-shadow: 0 4px 14px rgb(15 23 42 / 14%);
   z-index: 2;
-}
-
-.visual-index-cell:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
 }
 
 .visual-index-thumb {
@@ -847,7 +838,6 @@ main.home {
 .glossary-term-trigger:focus-visible {
   color: var(--link);
   border-bottom-style: solid;
-  outline: none;
 }
 
 .glossary-popover {
@@ -1181,8 +1171,6 @@ a:hover {
 }
 
 .algae-list-card-link:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
   border-radius: 10px;
 }
 
@@ -1515,11 +1503,6 @@ a:hover {
   color: inherit;
 }
 
-.figures-expand-trigger:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
-}
-
 .figures-expand-trigger img {
   vertical-align: middle;
 }
@@ -1577,9 +1560,4 @@ a:hover {
 
 .figure-lightbox-close:hover {
   background: var(--lightbox-close-bg-hover);
-}
-
-.figure-lightbox-close:focus-visible {
-  outline: 2px solid var(--focus-ring);
-  outline-offset: 2px;
 }

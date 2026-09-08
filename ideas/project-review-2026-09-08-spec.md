@@ -191,7 +191,7 @@ simpler, and the pattern is already used by the legend.
 
 ---
 
-### [ ] 11. Focus visibility
+### [x] 11. Focus visibility
 
 **Why.** `.glossary-term-trigger:focus-visible` sets `outline: none` (focus conveyed by colour
 only). No `:focus-visible` rule exists for `.site-nav a`, `.site-brand`,
