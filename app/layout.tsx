@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
 import SiteHeader from "./components/SiteHeader";
+import VisitCounter from "./components/VisitCounter";
 import "./globals.css";
 
 /** Runs before paint so the first frame matches saved or system theme. */
@@ -40,13 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <SiteHeader />
         {children}
-        {GOATCOUNTER_CODE ? (
-          <script
-            data-goatcounter={`https://${GOATCOUNTER_CODE}.goatcounter.com/count`}
-            async
-            src="https://gc.zgo.at/count.js"
-          />
-        ) : null}
+        {GOATCOUNTER_CODE ? <VisitCounter code={GOATCOUNTER_CODE} /> : null}
       </body>
     </html>
   );

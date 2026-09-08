@@ -165,3 +165,8 @@ counter **only** when the production build gets a site code. To enable it once:
 
 The next deploy starts counting. Local `npm run dev` and builds without the variable
 ship no analytics script at all.
+
+The site is a static export with client-side navigation, so the stock script would count
+only the first page of each visit. `app/components/VisitCounter.tsx` reports every later
+route change as well. This was added on 2026-09-08; per-page numbers before that date are
+landing pages only and are not comparable with later ones.
