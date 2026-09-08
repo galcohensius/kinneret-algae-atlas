@@ -152,7 +152,7 @@ requirements.txt` (3.12 to match CI; see §16).
 
 ## P2 — Accessibility
 
-### [ ] 9. Phylum chip text fails colour contrast in both themes
+### [x] 9. Phylum chip text fails colour contrast in both themes
 
 **Why.** `.phylum-jump-nav a` uses the phylum accent as text colour. On the light card,
 euglenophyta is 1.98:1, charophyta 2.28:1, cryptista 2.94:1, cyanobacteriophyta 3.68:1; in

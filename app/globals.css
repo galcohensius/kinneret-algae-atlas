@@ -1001,26 +1001,38 @@ main.home {
   gap: 0.45rem 0.55rem;
 }
 
+/* Accent carries the phylum colour on the ring and dot; the label stays readable in both themes. */
 .phylum-jump-nav a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
   border: 1.5px solid var(--phylum-accent, var(--border));
   font-size: clamp(0.9rem, 0.86rem + 0.15vw, 0.98rem);
   font-weight: 600;
-  color: var(--phylum-accent, var(--text-secondary));
+  color: var(--text-primary);
   text-decoration: none;
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
+.phylum-jump-nav a::before {
+  content: "";
+  width: 0.6em;
+  height: 0.6em;
+  border-radius: 999px;
+  background: var(--phylum-accent, var(--border));
+  flex-shrink: 0;
+}
+
 .phylum-jump-nav a:hover {
   background: color-mix(in srgb, var(--phylum-accent, var(--text-secondary)) 14%, transparent);
-  color: var(--phylum-accent, var(--text-primary));
   text-decoration: none;
 }
 
 .phylum-jump-popular {
   font-weight: 400;
+  color: var(--text-muted);
 }
 
 .phylum-jump-count {
