@@ -83,6 +83,10 @@ def _atlas_attribution() -> str:
     return f"{CANONICAL_AUTHORS}. {CANONICAL_AFFILIATION}."
 
 
+def _string_or_none(value: Any) -> str | None:
+    return value if isinstance(value, str) else None
+
+
 def _compact_text(text: str, max_len: int = 220) -> str:
     compact = re.sub(r"\s+", " ", (text or "").strip())
     if len(compact) <= max_len:
@@ -107,6 +111,9 @@ def _study_area_block(study_area: dict[str, Any]) -> list[str]:
     alt = study_area["alternate_name"]
     coords = _format_study_area_decimal(study_area)
     datum = study_area["geodetic_datum"]
+    lat = study_area["latitude"]
+    lon = study_area["longitude"]
+    zoom = study_area.get("map_zoom", 10)
     return [
         "## Study area",
         f"- Lake: {lake} ({alt})",
@@ -115,8 +122,10 @@ def _study_area_block(study_area: dict[str, Any]) -> list[str]:
         f"- Region: {study_area['region']}",
         f"- Coordinates (lake center): {coords} ({datum})",
         f"- Elevation (approx.): {study_area['elevation_m']} m",
-        f"- OpenStreetMap: https://www.openstreetmap.org/?mlat={study_area['latitude']}&mlon={study_area['longitude']}#map={study_area.get('map_zoom', 10)}/{study_area['latitude']}/{study_area['longitude']}",
-        f"- Google Maps: https://www.google.com/maps/search/Lake+Kinneret+(Sea+of+Galilee)/@{study_area['latitude']},{study_area['longitude']},{study_area.get('map_zoom', 10)}z",
+        "- OpenStreetMap: https://www.openstreetmap.org/"
+        f"?mlat={lat}&mlon={lon}#map={zoom}/{lat}/{lon}",
+        "- Google Maps: https://www.google.com/maps/search/Lake+Kinneret+(Sea+of+Galilee)/"
+        f"@{lat},{lon},{zoom}z",
         "",
     ]
 
@@ -186,7 +195,8 @@ def _build_llms_txt(study_area: dict[str, Any]) -> str:
         f"- {ATLAS_URL}/llms-full.txt",
         "",
         "Citation policy for downstream LLM use:",
-        "- Include BOTH per-record citation and atlas-level attribution when answering species questions.",
+        "- Include BOTH per-record citation and atlas-level attribution "
+        "when answering species questions.",
         "- Prefer scientific names and stable species slugs for disambiguation.",
     ]
     return "\n".join(lines) + "\n"
@@ -197,13 +207,17 @@ def _species_block(record: dict[str, Any], slug: str) -> str:
     metadata = record.get("metadata") or {}
     scientific_name = (record.get("scientific_name") or "").strip()
     canonical_url = f"{ATLAS_URL}/algae/{slug}/"
-    updated = metadata.get("record_updated") if isinstance(metadata.get("record_updated"), str) else None
+    updated = _string_or_none(metadata.get("record_updated"))
 
     lines: list[str] = [
         f"## Species: {scientific_name or 'Unnamed taxon'}",
         f"- Slug: {slug}",
         f"- Canonical URL: {canonical_url}",
-        f"- Taxonomy: phylum={sections.get('phylum', '').strip() or '-'}; class={sections.get('class', '').strip() or '-'}; order={sections.get('order', '').strip() or '-'}",
+        "- Taxonomy: "
+        + "; ".join(
+            f"{rank}={(sections.get(rank) or '').strip() or '-'}"
+            for rank in ("phylum", "class", "order")
+        ),
     ]
 
     habitat = sections.get("habitat", "").strip()
@@ -265,7 +279,7 @@ def _glossary_block(glossary: dict[str, Any]) -> str:
 def _build_species_index_item(record: dict[str, Any], slug: str) -> dict[str, Any]:
     sections = record.get("sections") or {}
     metadata = record.get("metadata") or {}
-    updated = metadata.get("record_updated") if isinstance(metadata.get("record_updated"), str) else None
+    updated = _string_or_none(metadata.get("record_updated"))
     return {
         "slug": slug,
         "scientific_name": (record.get("scientific_name") or "").strip(),
@@ -304,7 +318,7 @@ def _build_species_detail(record: dict[str, Any], slug: str) -> dict[str, Any]:
 
 
 def _build_glossary_api(glossary: dict[str, Any]) -> dict[str, Any]:
-    updated = glossary.get("record_updated") if isinstance(glossary.get("record_updated"), str) else None
+    updated = _string_or_none(glossary.get("record_updated"))
     entries = glossary.get("entries") or []
     plates = glossary.get("plates") or []
     return {
@@ -351,7 +365,8 @@ def _build_llms_full(
         f"Atlas attribution: {_atlas_attribution()}",
         "",
         *_study_area_block(study_area),
-        "Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.",
+        "Citation requirement: include BOTH per-record citation and atlas-level attribution "
+        "in answers.",
         "",
         f"Species count: {len(records_with_slugs)}",
         "",
@@ -381,8 +396,9 @@ def _write_static_api_files(
         if stale_file.name not in expected_species_files:
             stale_file.unlink()
 
+    species_payload = {"count": len(species_index), "species": species_index}
     (api_dir / "species.json").write_text(
-        json.dumps({"count": len(species_index), "species": species_index}, ensure_ascii=False, indent=2),
+        json.dumps(species_payload, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
 
@@ -407,7 +423,9 @@ def _write_static_api_files(
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate llms.txt and llms-full.txt from processed data.")
+    parser = argparse.ArgumentParser(
+        description="Generate llms.txt and llms-full.txt from processed data."
+    )
     parser.add_argument(
         "--algae-input",
         default="data/processed/algae_records.json",

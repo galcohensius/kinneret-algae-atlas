@@ -4,8 +4,8 @@ import re
 import tempfile
 import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta
-from zipfile import ZipFile
 from pathlib import Path
+from zipfile import ZipFile
 
 from docx import Document
 from docx.oxml.ns import qn
@@ -278,7 +278,7 @@ def _chart_series_points(chart_root: ET.Element) -> list[list[tuple[float, float
         for ser in scatter.findall("c:ser", _CHART_NS):
             x_values = _num_cache_values(ser.find("c:xVal", _CHART_NS))
             y_values = _num_cache_values(ser.find("c:yVal", _CHART_NS))
-            points = list(zip(x_values, y_values))
+            points = list(zip(x_values, y_values, strict=False))
             if points:
                 all_series.append(points)
         if all_series:
@@ -288,7 +288,7 @@ def _chart_series_points(chart_root: ET.Element) -> list[list[tuple[float, float
     for ser in chart_root.findall(".//c:ser", _CHART_NS):
         x_values = _num_cache_values(ser.find("c:cat", _CHART_NS))
         y_values = _num_cache_values(ser.find("c:val", _CHART_NS))
-        points = list(zip(x_values, y_values))
+        points = list(zip(x_values, y_values, strict=False))
         if points:
             all_series.append(points)
 
@@ -376,7 +376,9 @@ def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
     date_ax = root.find(".//c:dateAx", _CHART_NS)
     val_axes = root.findall(".//c:valAx", _CHART_NS)
     # Scatter charts often expose two valAx nodes (X then Y).
-    x_ax = cat_ax if cat_ax is not None else (date_ax if date_ax is not None else (val_axes[0] if val_axes else None))
+    x_ax = cat_ax if cat_ax is not None else date_ax
+    if x_ax is None:
+        x_ax = val_axes[0] if val_axes else None
     y_ax = None
     if len(val_axes) >= 2:
         y_ax = val_axes[1]
@@ -463,7 +465,9 @@ def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
     # Axis tick labels.
     for x in x_ticks:
         xx = x_to_px(x)
-        draw.line([(xx, margin_top + plot_h), (xx, margin_top + plot_h + 6)], fill=frame_color, width=1)
+        draw.line(
+            [(xx, margin_top + plot_h), (xx, margin_top + plot_h + 6)], fill=frame_color, width=1
+        )
         label = _format_axis_tick(x, as_year=x_as_year)
         draw.text((xx - 14, margin_top + plot_h + 10), label, fill=frame_color, font=font)
 
@@ -748,6 +752,24 @@ def _yield_images_from_drawing_element(
 
 
 
+def _take_paragraph_dict(
+    buf_chars: list[tuple[str, int]], para_style: str
+) -> dict[str, object] | None:
+    """Flush buffered (char, style) pairs into a paragraph block; None when nothing to emit."""
+    if not buf_chars:
+        return None
+    plain, styles = _normalize_text_and_styles(buf_chars)
+    buf_chars.clear()
+    if not plain:
+        return None
+    return {
+        "type": "paragraph",
+        "text": plain,
+        "char_styles": styles,
+        "style": para_style,
+    }
+
+
 def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool = False):
     """
     Yield content in document order: paragraph text, tables, page breaks, and images
@@ -773,20 +795,6 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
         buf_chars: list[tuple[str, int]] = []
         para_style = getattr(paragraph.style, "name", "") if paragraph.style else ""
 
-        def take_paragraph_dict() -> dict[str, object] | None:
-            if not buf_chars:
-                return None
-            plain, styles = _normalize_text_and_styles(buf_chars)
-            buf_chars.clear()
-            if not plain:
-                return None
-            return {
-                "type": "paragraph",
-                "text": plain,
-                "char_styles": styles,
-                "style": para_style,
-            }
-
         for run in paragraph.runs:
             bold = bool(getattr(run, "bold", False))
             italic = bool(getattr(run, "italic", False))
@@ -804,7 +812,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                 tag = el.tag.split("}")[-1]
 
                 if tag == "drawing" or tag == "pict":
-                    sent = take_paragraph_dict()
+                    sent = _take_paragraph_dict(buf_chars, para_style)
                     if sent is not None:
                         yield sent
                     yield from _yield_images_from_drawing_element(
@@ -824,7 +832,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                             for inner in choice:
                                 inner_tag = inner.tag.split("}")[-1]
                                 if inner_tag in ("drawing", "pict"):
-                                    sent = take_paragraph_dict()
+                                    sent = _take_paragraph_dict(buf_chars, para_style)
                                     if sent is not None:
                                         yield sent
                                     yield from _yield_images_from_drawing_element(
@@ -842,7 +850,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                                 for inner in fallback:
                                     inner_tag = inner.tag.split("}")[-1]
                                     if inner_tag in ("drawing", "pict"):
-                                        sent = take_paragraph_dict()
+                                        sent = _take_paragraph_dict(buf_chars, para_style)
                                         if sent is not None:
                                             yield sent
                                         yield from _yield_images_from_drawing_element(
@@ -854,7 +862,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                                 break
                 elif tag == "br":
                     br_type = el.get(qn("w:type"))
-                    sent = take_paragraph_dict()
+                    sent = _take_paragraph_dict(buf_chars, para_style)
                     if sent is not None:
                         yield sent
                     if br_type == "page":
@@ -868,6 +876,6 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                             run_text = _apply_script_map(run_text, _SUBSCRIPT_MAP)
                         buf_chars.extend((ch, style_int) for ch in run_text)
 
-        sent = take_paragraph_dict()
+        sent = _take_paragraph_dict(buf_chars, para_style)
         if sent is not None:
             yield sent

@@ -1,13 +1,6 @@
 """Tests for record-start blocking, fake-name rejection, and name inference."""
 
-import sys
 import unittest
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-_SRC = ROOT / "src"
-if str(_SRC) not in sys.path:
-    sys.path.insert(0, str(_SRC))
 
 from algae_extractor.pipeline import (
     _append_section_line,

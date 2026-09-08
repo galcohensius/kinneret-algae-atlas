@@ -1,22 +1,15 @@
 """Unit tests for ecology → further_reading split in the DOCX extractor."""
 
-import sys
 import unittest
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-_SRC = ROOT / "src"
-if str(_SRC) not in sys.path:
-    sys.path.insert(0, str(_SRC))
 
 from algae_extractor.pipeline import (
+    _normalize_structured_fields_rich,
     move_cell_biovolume_prefix_from_ecology_rich,
     move_inline_further_reading_from_ecology_rich,
     move_orphan_prose_after_sample_size_from_measurement_fields_rich,
     normalize_further_reading_citation_boundaries,
     normalize_further_reading_citation_boundaries_rich,
     strip_inline_cite_this_record_from_narrative_fields_rich,
-    _normalize_structured_fields_rich,
 )
 
 
@@ -43,7 +36,9 @@ class TestMoveOrphanProseAfterSampleSize(unittest.TestCase):
             fields_plain["ecology"],
             "its cellular volume increases. Peridiniopsis borgei is common.",
         )
-        self.assertEqual(len(fields_styles["cell_diameter_d"]), len(fields_plain["cell_diameter_d"]))
+        self.assertEqual(
+            len(fields_styles["cell_diameter_d"]), len(fields_plain["cell_diameter_d"])
+        )
         self.assertEqual(len(fields_styles["ecology"]), len(fields_plain["ecology"]))
 
     def test_normalize_notes_splits_borgei_style_blob(self) -> None:
@@ -75,7 +70,9 @@ class TestCellBiovolumeEcologyPrefix(unittest.TestCase):
         move_cell_biovolume_prefix_from_ecology_rich(fields_plain, fields_styles)
         self.assertEqual(fields_plain["biovolume_per_cell"], "17500 - 4300 µm3, median: 2900 µm3.")
         self.assertEqual(fields_plain["ecology"], "")
-        self.assertEqual(len(fields_styles["biovolume_per_cell"]), len(fields_plain["biovolume_per_cell"]))
+        self.assertEqual(
+            len(fields_styles["biovolume_per_cell"]), len(fields_plain["biovolume_per_cell"])
+        )
         self.assertEqual(fields_styles["ecology"], [])
 
     def test_moves_prefix_then_ecology_prose(self) -> None:
@@ -99,7 +96,8 @@ class TestCellBiovolumeEcologyPrefix(unittest.TestCase):
 class TestDistinctiveFeaturesMarker(unittest.TestCase):
     def test_splits_inline_from_biovolume(self) -> None:
         notes = (
-            "Biovolume/cell: 73,000 µm3 (literature value, we do not routinely measure this species) "
+            "Biovolume/cell: 73,000 µm3 (literature value, we do not routinely measure "
+            "this species) "
             "Distinctive features: Mixotroph. Too large to be grazed by zooplankton."
         )
         plain, _styles = _normalize_structured_fields_rich(
@@ -176,7 +174,9 @@ class TestMoveInlineFurtherReadingFromEcology(unittest.TestCase):
 
     def test_moves_last_further_reading_block(self) -> None:
         eco_main = "Alpha beta. Fig. 3. Gamma ends here."
-        citations = "Pollingher U, Hickel B (1991) Arch. 120:267-285. Hansen G (2007) Limnology 1:1-2."
+        citations = (
+            "Pollingher U, Hickel B (1991) Arch. 120:267-285. Hansen G (2007) Limnology 1:1-2."
+        )
         fields = {
             "ecology": f"{eco_main} Further reading: {citations}",
             "further_reading": "",

@@ -11,14 +11,13 @@ Section splitting heuristic:
   - Everything else accumulates as rich-text lines under the current section.
 """
 
+import re
 from pathlib import Path
 from typing import Any
-import re
 
 from .image_optimize import save_web_image
 from .reader import iter_docx_content_blocks, source_modified_date
 from .rich_text import char_styles_to_rich_segments
-
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -167,11 +166,11 @@ def extract_supplement(
     sections_rich: dict[str, list[dict[str, Any]]] = {}
 
     for section_key, lines in sections_buffer.items():
-        non_empty = [l for l in lines if l["text"]]
+        non_empty = [entry for entry in lines if entry["text"]]
         if not non_empty:
             continue
 
-        sections[section_key] = "\n".join(l["text"] for l in non_empty)
+        sections[section_key] = "\n".join(entry["text"] for entry in non_empty)
 
         rich: list[dict[str, Any]] = []
         for i, line in enumerate(non_empty):

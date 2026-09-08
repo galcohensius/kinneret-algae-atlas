@@ -16,8 +16,12 @@ class TestSlugify(unittest.TestCase):
         self.assertEqual(slugify("***"), "unnamed")
 
     def test_taxon_name_strips_list_number_and_authority(self) -> None:
-        self.assertEqual(taxon_name_for_slug("1. Peridinium gatunense Nygaard 1925"), "Peridinium gatunense")
-        self.assertEqual(taxon_name_for_slug("Microcystis Kützing ex Lemmermann 1907"), "Microcystis")
+        self.assertEqual(
+            taxon_name_for_slug("1. Peridinium gatunense Nygaard 1925"), "Peridinium gatunense"
+        )
+        self.assertEqual(
+            taxon_name_for_slug("Microcystis Kützing ex Lemmermann 1907"), "Microcystis"
+        )
         self.assertEqual(
             taxon_name_for_slug("Peridiniopsis cunningtonii var. quinquecuspidata (Lemm.)"),
             "Peridiniopsis cunningtonii var. quinquecuspidata",
@@ -41,7 +45,8 @@ class TestSlugsMatchPublishedData(unittest.TestCase):
         by_name = {item["scientific_name"]: item["slug"] for item in api["species"]}
         self.assertEqual(len(by_name), len(self.records))
         for record in self.records:
-            self.assertEqual(by_name[record["scientific_name"]], taxon_slug(record["scientific_name"]))
+            name = record["scientific_name"]
+            self.assertEqual(by_name[name], taxon_slug(name))
 
 
 if __name__ == "__main__":

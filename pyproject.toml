@@ -1,0 +1,14 @@
+[project]
+name = "kinneret-algae-atlas-extractor"
+version = "0.1.0"
+description = "Word-to-JSON extraction pipeline behind the Kinneret Algae Atlas"
+requires-python = ">=3.12"
+# Runtime dependencies are pinned in requirements.txt; ruff in requirements-dev.txt.
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

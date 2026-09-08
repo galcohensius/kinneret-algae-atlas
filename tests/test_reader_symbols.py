@@ -6,20 +6,13 @@ units like m^-2 / NO_3 as superscript/subscript runs. These must be recovered as
 real Unicode during extraction.
 """
 
-import sys
 import unittest
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-_SRC = ROOT / "src"
-if str(_SRC) not in sys.path:
-    sys.path.insert(0, str(_SRC))
 
 from algae_extractor.reader import (
-    _apply_script_map,
-    _remap_symbol_text,
     _SUBSCRIPT_MAP,
     _SUPERSCRIPT_MAP,
+    _apply_script_map,
+    _remap_symbol_text,
 )
 
 

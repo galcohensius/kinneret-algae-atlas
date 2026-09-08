@@ -1,13 +1,6 @@
 """Unit tests for image caption detection in the DOCX extractor."""
 
-import sys
 import unittest
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-_SRC = ROOT / "src"
-if str(_SRC) not in sys.path:
-    sys.path.insert(0, str(_SRC))
 
 from algae_extractor.pipeline import _looks_like_image_caption
 

@@ -7,14 +7,7 @@ can wrap them in <sup>/<sub>. This also recovers the decimal point in exponents
 like D2.5264, which has no superscript glyph and otherwise lands on the baseline.
 """
 
-import sys
 import unittest
-from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-_SRC = ROOT / "src"
-if str(_SRC) not in sys.path:
-    sys.path.insert(0, str(_SRC))
 
 from algae_extractor.reader import unmap_script_glyphs
 from algae_extractor.rich_text import char_styles_to_rich_segments

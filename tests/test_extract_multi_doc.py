@@ -1,14 +1,8 @@
 """Tests for multi-doc algae extraction merge helpers."""
 
-import sys
 import tempfile
 import unittest
 from pathlib import Path
-
-ROOT = Path(__file__).resolve().parents[1]
-_SRC = ROOT / "src"
-if str(_SRC) not in sys.path:
-    sys.path.insert(0, str(_SRC))
 
 from extract_algae import _discover_inputs, _merge_records, _record_merge_key
 

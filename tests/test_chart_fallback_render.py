@@ -2,21 +2,17 @@
 
 from __future__ import annotations
 
-import sys
 import unittest
 from pathlib import Path
 from zipfile import ZipFile
 
-ROOT = Path(__file__).resolve().parents[1]
-_SRC = ROOT / "src"
-if str(_SRC) not in sys.path:
-    sys.path.insert(0, str(_SRC))
-
-from algae_extractor.reader import (  # noqa: E402
+from algae_extractor.reader import (
     _excel_serial_to_year,
     _looks_like_excel_serial_dates,
     _render_chart_to_png,
 )
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def _newest_chart_part(raw_dir: Path) -> bytes | None:

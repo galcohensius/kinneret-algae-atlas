@@ -123,7 +123,10 @@ def main() -> None:
     config = load_config(args.config)
     supplements_config: list[dict] = config.get("supplements") or []
 
-    inputs = [Path(p) for p in args.input] if args.input else _discover_supplement_inputs(Path(args.raw_dir))
+    if args.input:
+        inputs = [Path(p) for p in args.input]
+    else:
+        inputs = _discover_supplement_inputs(Path(args.raw_dir))
     if not inputs:
         sys.exit(
             "No supplement DOCX files found. Pass --input or add files under "

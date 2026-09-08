@@ -58,7 +58,10 @@ def _merge_record_metadata(existing: dict, incoming: dict) -> dict:
     incoming_record_updated = (incoming or {}).get("record_updated")
     current_record_updated = merged.get("record_updated")
     if isinstance(incoming_record_updated, str):
-        if not isinstance(current_record_updated, str) or incoming_record_updated > current_record_updated:
+        if (
+            not isinstance(current_record_updated, str)
+            or incoming_record_updated > current_record_updated
+        ):
             merged["record_updated"] = incoming_record_updated
 
     for key, value in (incoming or {}).items():

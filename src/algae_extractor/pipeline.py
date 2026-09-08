@@ -1,9 +1,9 @@
-from datetime import date
-from pathlib import Path
-from typing import Any
 import logging
 import re
 import shutil
+from datetime import date
+from pathlib import Path
+from typing import Any
 
 from .config import load_config
 from .image_optimize import save_web_image
@@ -72,7 +72,8 @@ def _new_record(source_file: str, record_updated: str | None = None) -> dict[str
         "deferred_images": [],
         "image_captions": [],
         "image_captions_rich": [],
-        # First image after the taxon header (and any inline previous-name prose) is the list/detail thumbnail.
+        # First image after the taxon header (and any inline previous-name prose) is the
+        # list/detail thumbnail.
         "thumbnail_assigned": False,
         "image_counter": 1,
         "plate_image_counter": 1,
@@ -304,7 +305,8 @@ def _infer_scientific_name_fallback(record: dict[str, Any]) -> str | None:
     for cap in record.get("image_captions") or []:
         if not cap or not cap.strip():
             continue
-        # Prefer explicit "Genus sp." anywhere (e.g. "Figure 1. Time series of Gymnodinium sp., Lake…")
+        # Prefer explicit "Genus sp." anywhere
+        # (e.g. "Figure 1. Time series of Gymnodinium sp., Lake…").
         # so we do not treat "Time series" as a fake binomial after "Figure 1.".
         m = re.search(r"(?i)\b([A-Z][a-zA-Z-]+\s+sp\.)\b", cap)
         if m:

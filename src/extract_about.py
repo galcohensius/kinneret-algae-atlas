@@ -10,7 +10,6 @@ from docx import Document
 
 from algae_extractor.reader import paragraph_clean_text, source_modified_date
 
-
 SECTION_HEADINGS = {
     "our vision": "our_vision",
     "how to use this atlas": "how_to_use",
