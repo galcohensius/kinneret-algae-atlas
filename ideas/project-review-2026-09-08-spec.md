@@ -33,7 +33,7 @@ when present, set the query and call `activateSearch()` so the index loads.
 
 ---
 
-### [ ] 2. Hero image script squashes non-square photos
+### [x] 2. Hero image script squashes non-square photos
 
 **Why.** `scripts/optimize-hero-image.py` resizes to a fixed `max_px × max_px` square. It
 only worked because the current photo is square. It also overwrites its input in place.
@@ -48,7 +48,7 @@ script to the docs as a manual tool (see §14).
 
 ---
 
-### [ ] 3. Chart-renderer test skips forever; two diagnostic scripts cannot run
+### [x] 3. Chart-renderer test skips forever; two diagnostic scripts cannot run
 
 **Why.** `tests/test_chart_fallback_render.py` looks for
 `data/raw/1 Dinoflagellates 2026-06-10.docx`; the repo has the 2026-08-07 file, so the only
@@ -66,7 +66,7 @@ nothing references them.
 
 ---
 
-### [ ] 4. `about.json` date will move backwards on the next extraction
+### [x] 4. `about.json` date will move backwards on the next extraction
 
 **Why.** Committed `record_updated` is 2026-08-07; the Word file's core-properties modified
 date is 2026-08-01, which is what `extract_about.py` reads. The next run rewrites the
@@ -85,7 +85,7 @@ into `about.json`.
 
 ---
 
-### [ ] 5. Supplement images use a weaker TIFF conversion than species images
+### [x] 5. Supplement images use a weaker TIFF conversion than species images
 
 **Why.** `supplement_pipeline.py` converts TIFF with a bare `Image.open(...).save(...)`: no
 mode conversion (CMYK/palette would raise), no context manager. `pipeline.py` has
@@ -284,7 +284,7 @@ identification helper) into a short new `ideas/` file if they are still wanted.
 
 ---
 
-### [ ] 16. Python dependency and version hygiene
+### [x] 16. Python dependency and version hygiene
 
 **Why.** `requirements.txt` pins nothing except `Pillow>=10`; `lxml` is imported directly but
 only present transitively. No Python version is declared (local venv 3.14, CI 3.12). No Node
@@ -305,7 +305,7 @@ suite.
 
 ---
 
-### [ ] 17. Machine-readable index (`llms.txt`) is stale
+### [x] 17. Machine-readable index (`llms.txt`) is stale
 
 **Why.** `scripts/generate_llms_files.py` lists `/#algae-index`, About, species, Glossary,
 Supplements. It never mentions the morphotype view (`/#visual-index`), the Cox (1996)
@@ -396,7 +396,7 @@ empty except for the intended fixes.
 
 ---
 
-### [ ] 21. Dead code and duplication, Python
+### [x] 21. Dead code and duplication, Python
 
 - `pipeline.py`: `_normalize_structured_fields` is defined twice; the first is a
   `RuntimeError` stub shadowed by the real one. Delete the stub.
