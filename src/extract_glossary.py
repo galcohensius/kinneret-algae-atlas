@@ -11,6 +11,8 @@ from zipfile import ZipFile
 from algae_extractor.reader import source_modified_date
 from glossary_extractor.parse import parse_glossary_text
 
+_PLATE_EXTENSIONS = frozenset({".png", ".jpg", ".jpeg", ".gif", ".webp"})
+
 
 def _read_docx_paragraphs(path: Path) -> str:
     from docx import Document
@@ -38,20 +40,15 @@ def _extract_glossary_plates(
     Extract the final two glossary images as Cox plates and return metadata for rendering.
     The updated glossary source places these two figures at the end of the document.
     """
-    if source_path.suffix.lower() == ".docx":
-        working_docx = source_path
-    else:
-        return []
-
     output_dir.mkdir(parents=True, exist_ok=True)
     media_items: list[tuple[str, bytes]] = []
-    with ZipFile(str(working_docx)) as zf:
+    with ZipFile(str(source_path)) as zf:
         for name in sorted(zf.namelist()):
             lower = name.lower()
             if not lower.startswith("word/media/"):
                 continue
             ext = Path(lower).suffix
-            if ext not in {".png", ".jpg", ".jpeg", ".gif", ".webp"}:
+            if ext not in _PLATE_EXTENSIONS:
                 continue
             media_items.append((name, zf.read(name)))
 
@@ -65,10 +62,7 @@ def _extract_glossary_plates(
 
     plates: list[dict[str, str]] = []
     for index, (name, blob) in enumerate(selected, start=1):
-        extension = Path(name).suffix.lower()
-        if extension not in {".png", ".jpg", ".jpeg", ".gif", ".webp"}:
-            extension = ".png"
-        filename = f"cox-1996-plate-{index}{extension}"
+        filename = f"cox-1996-plate-{index}{Path(name).suffix.lower()}"
         target = output_dir / filename
         target.write_bytes(blob)
         plates.append(
@@ -131,6 +125,11 @@ def main() -> None:
         ),
     )
     parser.add_argument(
+        "--raw-dir",
+        default="data/raw",
+        help="Directory scanned for the glossary DOCX when --input is omitted.",
+    )
+    parser.add_argument(
         "--output",
         default="data/processed/glossary.json",
         help="Path to output JSON file.",
@@ -150,9 +149,11 @@ def main() -> None:
     if args.input:
         input_path = Path(args.input)
     else:
-        discovered = _discover_glossary_input(Path("data/raw"))
+        discovered = _discover_glossary_input(Path(args.raw_dir))
         if discovered is None:
-            raise SystemExit("No .docx glossary file found in data/raw (looked for *glossary*.docx).")
+            raise SystemExit(
+                f"No .docx glossary file found in {args.raw_dir} (looked for *glossary*.docx)."
+            )
         input_path = discovered
 
     output_path = Path(args.output)

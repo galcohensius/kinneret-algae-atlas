@@ -40,11 +40,7 @@ def _discover_about_input(raw_dir: Path) -> Path | None:
 def parse_about_docx(docx_path: Path) -> dict:
     doc = Document(str(docx_path))
     title = "About"
-    sections: dict[str, list[str]] = {
-        "our_vision": [],
-        "how_to_use": [],
-        "collaborators_intro": [],
-    }
+    sections: dict[str, list[str]] = {"our_vision": [], "how_to_use": []}
     people: list[dict] = []
     current_section: str | None = None
     current_person: dict | None = None
@@ -63,8 +59,6 @@ def parse_about_docx(docx_path: Path) -> dict:
         if section_key:
             current_section = section_key
             current_person = None
-            if section_key == "collaborators":
-                current_section = "collaborators"
             continue
 
         # "How to use this atlas [to be written]." is a placeholder — skip until real copy exists.
@@ -128,6 +122,11 @@ def main() -> None:
         help="Path to About .docx. If omitted, newest data/raw/*about*.docx is used.",
     )
     parser.add_argument(
+        "--raw-dir",
+        default="data/raw",
+        help="Directory scanned for the About DOCX when --input is omitted.",
+    )
+    parser.add_argument(
         "--output",
         default="data/processed/about.json",
         help="Output JSON path.",
@@ -137,9 +136,11 @@ def main() -> None:
     if args.input:
         input_path = Path(args.input)
     else:
-        discovered = _discover_about_input(Path("data/raw"))
+        discovered = _discover_about_input(Path(args.raw_dir))
         if discovered is None:
-            raise SystemExit("No .docx About file found in data/raw (looked for *about*.docx).")
+            raise SystemExit(
+                f"No .docx About file found in {args.raw_dir} (looked for *about*.docx)."
+            )
         input_path = discovered
 
     data = parse_about_docx(input_path)

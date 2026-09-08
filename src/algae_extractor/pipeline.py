@@ -1,16 +1,20 @@
 from datetime import date
 from pathlib import Path
 from typing import Any
+import logging
 import re
 import shutil
-import sys
 
 from .config import load_config
 from .image_optimize import save_web_image
 from .models import AlgaeRecord
 from .parsers.scientific_name import compile_scientific_name_patterns, detect_record_start
 from .parsers.sections import build_section_alias_lookup, detect_section_heading
-from .reader import iter_docx_content_blocks, source_modified_date, unmap_script_glyphs
+from .reader import iter_docx_content_blocks, source_modified_date
+from .rich_text import char_styles_to_rich_segments, neutral_char_styles
+from .slugs import SLUG_BINOMIAL_RE, taxon_slug
+
+logger = logging.getLogger(__name__)
 
 
 def _strict_record_start_patterns(
@@ -81,9 +85,6 @@ def _new_record(source_file: str, record_updated: str | None = None) -> dict[str
     }
 
 
-def _neutral_char_styles(text: str) -> list[int]:
-    # Neutral style for characters when we don't have run-level info.
-    return [0] * len(text)
 
 
 def _append_section_line(
@@ -96,7 +97,7 @@ def _append_section_line(
     section_lines.append(
         {
             "text": text,
-            "char_styles": char_styles if char_styles is not None else _neutral_char_styles(text),
+            "char_styles": char_styles if char_styles is not None else neutral_char_styles(text),
         }
     )
 
@@ -157,12 +158,14 @@ def _finalize_record(
         # but keep it safe.
         if joined_plain and len(joined_plain) != len(joined_styles):
             # Fallback: neutralize if lengths drift for any reason.
-            joined_styles = _neutral_char_styles(joined_plain)
+            joined_styles = neutral_char_styles(joined_plain)
 
         raw_sections_plain[section] = joined_plain
         raw_sections_styles[section] = joined_styles
 
-    sections, sections_rich = _normalize_structured_fields(raw_sections_plain, raw_sections_styles)
+    sections, sections_rich = _normalize_structured_fields_rich(
+        raw_sections_plain, raw_sections_styles
+    )
 
     # A real record always carries at least one populated section or an image.
     # Drop content-less records -- e.g. a "Cite this record as:" citation line
@@ -170,10 +173,9 @@ def _finalize_record(
     # name-only species pages.
     if not any(sections.values()) and not record["images"]:
         if record["scientific_name"]:
-            print(
-                "Dropping content-less record (no sections or images): "
-                f"{record['scientific_name']!r}",
-                file=sys.stderr,
+            logger.warning(
+                "Dropping content-less record (no sections or images): %r",
+                record["scientific_name"],
             )
         return None
 
@@ -199,13 +201,6 @@ def _finalize_record(
         sections_rich=sections_rich,
         metadata=metadata,
     )
-
-
-def _slugify(value: str) -> str:
-    normalized = re.sub(r"\s+", "-", value.strip().lower())
-    normalized = re.sub(r"[^a-z0-9-]", "", normalized)
-    normalized = re.sub(r"-{2,}", "-", normalized).strip("-")
-    return normalized or "unnamed"
 
 
 # Strip "1. ", "2) ", etc. so blocked headings still match after list numbering.
@@ -294,27 +289,6 @@ def _looks_like_explicit_record_header_line(text: str) -> bool:
     return bool(re.match(r"^(?:\d+\.?\s*)?[A-Z][A-Za-z-]+(?:\s+.+)?$", s))
 
 
-# Epithet / genus-only prefix of a taxon header (before authority), for image dirs and parity with web slugs.
-_TAXON_SLUG_BINOMIAL_RE = re.compile(
-    r"^(?:\d+\.?\s*)?"
-    r"([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)"
-)
-_TAXON_SLUG_GENUS_RE = re.compile(r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+)\b")
-
-
-def _taxon_name_for_slug(full_header: str) -> str:
-    s = (full_header or "").strip()
-    if not s:
-        return s
-    m = _TAXON_SLUG_BINOMIAL_RE.match(s)
-    if m:
-        return m.group(1).strip()
-    m = _TAXON_SLUG_GENUS_RE.match(s)
-    if m:
-        return m.group(1).strip()
-    return s
-
-
 def _full_scientific_header(detected_name: str, remainder: str) -> str:
     r = remainder.strip()
     if r:
@@ -357,7 +331,7 @@ def _infer_scientific_name_fallback(record: dict[str, Any]) -> str | None:
             t = (line.get("text") or "").strip()
             if not t:
                 continue
-            m = _TAXON_SLUG_BINOMIAL_RE.match(t)
+            m = SLUG_BINOMIAL_RE.match(t)
             if m:
                 return m.group(1).strip()
     return None
@@ -478,30 +452,6 @@ def _image_filename_stem_from_caption_peek(peek_text: str | None) -> str | None:
     return None
 
 
-def move_inline_further_reading_from_ecology(fields: dict[str, str]) -> None:
-    """
-    If ecology ends with an inline 'Further reading:' block (Word-style), move
-    the citation tail into further_reading so JSON matches the web app's section.
-    Uses the last match so accidental earlier mentions stay in ecology.
-    """
-    eco = fields.get("ecology", "").strip()
-    if not eco:
-        return
-
-    matches = list(re.finditer(r"(?i)\bfurther reading\s*:", eco))
-    if not matches:
-        return
-
-    m = matches[-1]
-    prefix = eco[: m.start()].rstrip()
-    tail = eco[m.end() :].strip()
-    fields["ecology"] = prefix
-    if not tail:
-        return
-    existing = fields.get("further_reading", "").strip()
-    fields["further_reading"] = (f"{existing} {tail}" if existing else tail).strip()
-
-
 _CITE_THIS_RECORD_START_RE = re.compile(r"(?i)Cite this record as\s*:")
 
 
@@ -534,7 +484,7 @@ def strip_inline_cite_this_record_from_narrative_fields_rich(
             continue
         styles = fields_styles.get(field, [])
         if not styles or len(styles) != len(plain):
-            styles = _neutral_char_styles(plain)
+            styles = neutral_char_styles(plain)
         fields_plain[field] = prefix_plain
         fields_styles[field] = styles[: len(prefix_plain)]
 
@@ -544,8 +494,10 @@ def move_inline_further_reading_from_ecology_rich(
     fields_styles: dict[str, list[int]],
 ) -> None:
     """
-    Same as `move_inline_further_reading_from_ecology`, but also trims the
-    per-character styles for the ecology field.
+    If ecology ends with an inline 'Further reading:' block (Word-style), move
+    the citation tail into further_reading so JSON matches the web app's section.
+    Uses the last match so accidental earlier mentions stay in ecology; the
+    per-character styles follow the text.
     """
     eco_plain = fields_plain.get("ecology", "").strip()
     if not eco_plain:
@@ -553,7 +505,7 @@ def move_inline_further_reading_from_ecology_rich(
 
     eco_styles = fields_styles.get("ecology", [])
     if not eco_styles or len(eco_styles) != len(eco_plain):
-        eco_styles = _neutral_char_styles(eco_plain)
+        eco_styles = neutral_char_styles(eco_plain)
 
     matches = list(re.finditer(r"(?i)\bfurther reading\s*:", eco_plain))
     if not matches:
@@ -582,7 +534,7 @@ def move_inline_further_reading_from_ecology_rich(
     existing_styles = fields_styles.get("further_reading", [])
     if existing_plain:
         if not existing_styles or len(existing_styles) != len(existing_plain):
-            existing_styles = _neutral_char_styles(existing_plain)
+            existing_styles = neutral_char_styles(existing_plain)
         fields_plain["further_reading"] = f"{existing_plain} {tail_plain}".strip()
         fields_styles["further_reading"] = existing_styles + [0] + tail_styles
     else:
@@ -631,7 +583,7 @@ def move_orphan_prose_after_sample_size_from_measurement_fields_rich(
 
         styles = fields_styles.get(field, [])
         if not styles or len(styles) != len(plain):
-            styles = _neutral_char_styles(plain)
+            styles = neutral_char_styles(plain)
         head_styles = styles[:head_len]
         tail_styles_raw = styles[head_len + left_trim :]
         right_trim = len(raw_tail) - len(raw_tail.rstrip())
@@ -640,9 +592,9 @@ def move_orphan_prose_after_sample_size_from_measurement_fields_rich(
         else:
             tail_styles = tail_styles_raw
         if len(head_styles) != len(head_plain):
-            head_styles = _neutral_char_styles(head_plain)
+            head_styles = neutral_char_styles(head_plain)
         if len(tail_styles) != len(tail_plain):
-            tail_styles = _neutral_char_styles(tail_plain)
+            tail_styles = neutral_char_styles(tail_plain)
 
         fields_plain[field] = head_plain
         fields_styles[field] = head_styles
@@ -651,7 +603,7 @@ def move_orphan_prose_after_sample_size_from_measurement_fields_rich(
         eco_styles = fields_styles.get("ecology", [])
         if eco_plain:
             if not eco_styles or len(eco_styles) != len(eco_plain):
-                eco_styles = _neutral_char_styles(eco_plain)
+                eco_styles = neutral_char_styles(eco_plain)
             fields_plain["ecology"] = f"{tail_plain} {eco_plain}".strip()
             fields_styles["ecology"] = tail_styles + [0] + eco_styles
         else:
@@ -686,7 +638,7 @@ def move_cell_biovolume_prefix_from_ecology_rich(
 
     eco_styles = fields_styles.get("ecology", [])
     if not eco_styles or len(eco_styles) != len(eco_plain):
-        eco_styles = _neutral_char_styles(eco_plain)
+        eco_styles = neutral_char_styles(eco_plain)
 
     value_start = m.end()
     rest = eco_plain[value_start:]
@@ -720,15 +672,15 @@ def move_cell_biovolume_prefix_from_ecology_rich(
         rem_styles = rem_styles_raw[left_r:]
 
     if len(value_styles) != len(value_plain):
-        value_styles = _neutral_char_styles(value_plain)
+        value_styles = neutral_char_styles(value_plain)
     if rem_plain and (len(rem_styles) != len(rem_plain)):
-        rem_styles = _neutral_char_styles(rem_plain)
+        rem_styles = neutral_char_styles(rem_plain)
 
     existing_plain = fields_plain.get("biovolume_per_cell", "").strip()
     existing_styles = fields_styles.get("biovolume_per_cell", [])
     if existing_plain:
         if not existing_styles or len(existing_styles) != len(existing_plain):
-            existing_styles = _neutral_char_styles(existing_plain)
+            existing_styles = neutral_char_styles(existing_plain)
         fields_plain["biovolume_per_cell"] = f"{existing_plain} {value_plain}".strip()
         fields_styles["biovolume_per_cell"] = existing_styles + [0] + value_styles
     else:
@@ -756,7 +708,7 @@ def move_inline_environmental_conditions_from_ecology_rich(
 
     eco_styles = fields_styles.get("ecology", [])
     if not eco_styles or len(eco_styles) != len(eco_plain):
-        eco_styles = _neutral_char_styles(eco_plain)
+        eco_styles = neutral_char_styles(eco_plain)
 
     matches = list(re.finditer(r"(?i)\benvironmental conditions\s*:", eco_plain))
     if not matches:
@@ -789,7 +741,7 @@ def move_inline_environmental_conditions_from_ecology_rich(
     existing_styles = fields_styles.get("environmental_conditions", [])
     if existing_plain:
         if not existing_styles or len(existing_styles) != len(existing_plain):
-            existing_styles = _neutral_char_styles(existing_plain)
+            existing_styles = neutral_char_styles(existing_plain)
         fields_plain["environmental_conditions"] = f"{existing_plain}\n{tail_plain}".strip()
         fields_styles["environmental_conditions"] = existing_styles + [0] + tail_styles
     else:
@@ -811,7 +763,7 @@ def move_inline_physiological_features_from_ecology_rich(
 
     eco_styles = fields_styles.get("ecology", [])
     if not eco_styles or len(eco_styles) != len(eco_plain):
-        eco_styles = _neutral_char_styles(eco_plain)
+        eco_styles = neutral_char_styles(eco_plain)
 
     matches = list(re.finditer(r"(?i)\bphysiological features\s*:", eco_plain))
     if not matches:
@@ -841,7 +793,7 @@ def move_inline_physiological_features_from_ecology_rich(
     existing_styles = fields_styles.get("physiological_features", [])
     if existing_plain:
         if not existing_styles or len(existing_styles) != len(existing_plain):
-            existing_styles = _neutral_char_styles(existing_plain)
+            existing_styles = neutral_char_styles(existing_plain)
         fields_plain["physiological_features"] = f"{existing_plain}\n{tail_plain}".strip()
         fields_styles["physiological_features"] = existing_styles + [0] + tail_styles
     else:
@@ -876,7 +828,7 @@ def normalize_further_reading_citation_boundaries_rich(
         return text, styles
     if len(styles) != len(text):
         new_plain = normalize_further_reading_citation_boundaries(text)
-        return new_plain, _neutral_char_styles(new_plain)
+        return new_plain, neutral_char_styles(new_plain)
     out_plain: list[str] = []
     out_styles: list[int] = []
     last = 0
@@ -895,54 +847,8 @@ def normalize_further_reading_citation_boundaries_rich(
     new_plain = "".join(out_plain)
     if len(new_plain) != len(out_styles):
         new_plain = normalize_further_reading_citation_boundaries(text)
-        return new_plain, _neutral_char_styles(new_plain)
+        return new_plain, neutral_char_styles(new_plain)
     return new_plain, out_styles
-
-
-def _normalize_structured_fields(raw_sections: dict[str, str]) -> dict[str, str]:
-    raise RuntimeError("Old signature removed; use _normalize_structured_fields_rich(...)")
-
-
-def _styles_int_to_segment_flags(style_int: int) -> tuple[bool, bool, bool, bool]:
-    italic = bool(style_int & 1)
-    bold = bool(style_int & 2)
-    superscript = bool(style_int & 4)
-    subscript = bool(style_int & 8)
-    return italic, bold, superscript, subscript
-
-
-def _make_rich_segment(chunk: str, style_int: int) -> dict[str, Any]:
-    italic, bold, superscript, subscript = _styles_int_to_segment_flags(style_int)
-    # Super/subscript runs are stored as ASCII plus a flag so the frontend can render
-    # <sup>/<sub>; the baked display glyphs are undone here.
-    if superscript or subscript:
-        chunk = unmap_script_glyphs(chunk)
-    segment: dict[str, Any] = {"text": chunk, "italic": italic, "bold": bold}
-    if superscript:
-        segment["superscript"] = True
-    if subscript:
-        segment["subscript"] = True
-    return segment
-
-
-def _char_styles_to_rich_segments(text: str, char_styles: list[int]) -> list[dict[str, Any]]:
-    if not text:
-        return []
-    styles = char_styles
-    if len(text) != len(styles):
-        styles = _neutral_char_styles(text)
-
-    segments: list[dict[str, Any]] = []
-    cur_style = styles[0]
-    start = 0
-    for i in range(1, len(text)):
-        if styles[i] != cur_style:
-            segments.append(_make_rich_segment(text[start:i], cur_style))
-            start = i
-            cur_style = styles[i]
-
-    segments.append(_make_rich_segment(text[start:], cur_style))
-    return segments
 
 
 def _inject_href_into_rich_segments(
@@ -1035,7 +941,7 @@ def _normalize_structured_fields_rich(
         for section, value in raw_sections_plain.items():
             if value:
                 plain_parts.append(value)
-                styles_parts.append(raw_sections_styles.get(section, _neutral_char_styles(value)))
+                styles_parts.append(raw_sections_styles.get(section, neutral_char_styles(value)))
         source_plain = "\n".join(plain_parts).strip()
         joined_styles: list[int] = []
         for i, styles in enumerate(styles_parts):
@@ -1080,7 +986,7 @@ def _normalize_structured_fields_rich(
 
             slice_styles = source_styles[start + left_trim : end - right_trim]
             if len(slice_styles) != len(value_plain):
-                slice_styles = _neutral_char_styles(value_plain)
+                slice_styles = neutral_char_styles(value_plain)
 
             if fields_plain[field_name]:
                 fields_plain[field_name] = f"{fields_plain[field_name]}\n{value_plain}".strip()
@@ -1092,9 +998,9 @@ def _normalize_structured_fields_rich(
 
     if not fields_plain["ecology"] and raw_sections_plain.get("ecology"):
         eco_plain = raw_sections_plain["ecology"].strip()
-        eco_styles = raw_sections_styles.get("ecology", _neutral_char_styles(eco_plain))
+        eco_styles = raw_sections_styles.get("ecology", neutral_char_styles(eco_plain))
         if len(eco_styles) != len(eco_plain):
-            eco_styles = _neutral_char_styles(eco_plain)
+            eco_styles = neutral_char_styles(eco_plain)
         fields_plain["ecology"] = eco_plain
         fields_styles["ecology"] = eco_styles
 
@@ -1102,17 +1008,17 @@ def _normalize_structured_fields_rich(
         if fields_plain[sec_key].strip() or not raw_sections_plain.get(sec_key, "").strip():
             continue
         sub_plain = raw_sections_plain[sec_key].strip()
-        sub_styles = raw_sections_styles.get(sec_key, _neutral_char_styles(sub_plain))
+        sub_styles = raw_sections_styles.get(sec_key, neutral_char_styles(sub_plain))
         if len(sub_styles) != len(sub_plain):
-            sub_styles = _neutral_char_styles(sub_plain)
+            sub_styles = neutral_char_styles(sub_plain)
         fields_plain[sec_key] = sub_plain
         fields_styles[sec_key] = sub_styles
 
     if raw_sections_plain.get("morphology") and not fields_plain["morphological_features"]:
         morph_plain = raw_sections_plain["morphology"].strip()
-        morph_styles = raw_sections_styles.get("morphology", _neutral_char_styles(morph_plain))
+        morph_styles = raw_sections_styles.get("morphology", neutral_char_styles(morph_plain))
         if len(morph_styles) != len(morph_plain):
-            morph_styles = _neutral_char_styles(morph_plain)
+            morph_styles = neutral_char_styles(morph_plain)
         fields_plain["morphological_features"] = morph_plain
         fields_styles["morphological_features"] = morph_styles
 
@@ -1120,9 +1026,9 @@ def _normalize_structured_fields_rich(
         "cite_this_record"
     ].strip():
         cite_plain = raw_sections_plain["cite_this_record"].strip()
-        cite_styles = raw_sections_styles.get("cite_this_record", _neutral_char_styles(cite_plain))
+        cite_styles = raw_sections_styles.get("cite_this_record", neutral_char_styles(cite_plain))
         if len(cite_styles) != len(cite_plain):
-            cite_styles = _neutral_char_styles(cite_plain)
+            cite_styles = neutral_char_styles(cite_plain)
         fields_plain["cite_this_record"] = cite_plain
         fields_styles["cite_this_record"] = cite_styles
 
@@ -1133,10 +1039,10 @@ def _normalize_structured_fields_rich(
     ].strip():
         fr_sec_plain = raw_sections_plain["further_reading"].strip()
         fr_sec_styles = raw_sections_styles.get(
-            "further_reading", _neutral_char_styles(fr_sec_plain)
+            "further_reading", neutral_char_styles(fr_sec_plain)
         )
         if len(fr_sec_styles) != len(fr_sec_plain):
-            fr_sec_styles = _neutral_char_styles(fr_sec_plain)
+            fr_sec_styles = neutral_char_styles(fr_sec_plain)
         fields_plain["further_reading"] = fr_sec_plain
         fields_styles["further_reading"] = fr_sec_styles
 
@@ -1160,9 +1066,9 @@ def _normalize_structured_fields_rich(
         if raw_st and len(raw_st) == len(fr_raw):
             fr_styles = raw_st[left : len(raw_st) - right] if right else raw_st[left:]
         else:
-            fr_styles = _neutral_char_styles(fr_plain)
+            fr_styles = neutral_char_styles(fr_plain)
         if len(fr_styles) != len(fr_plain):
-            fr_styles = _neutral_char_styles(fr_plain)
+            fr_styles = neutral_char_styles(fr_plain)
         new_fr, new_st = normalize_further_reading_citation_boundaries_rich(fr_plain, fr_styles)
         fields_plain["further_reading"] = new_fr
         fields_styles["further_reading"] = new_st
@@ -1177,22 +1083,12 @@ def _normalize_structured_fields_rich(
             continue
         value_styles = fields_styles.get(key, [])
         if len(value_styles) != len(value_plain):
-            value_styles = _neutral_char_styles(value_plain)
-        sections_rich[key] = _char_styles_to_rich_segments(value_plain, value_styles)
+            value_styles = neutral_char_styles(value_plain)
+        sections_rich[key] = char_styles_to_rich_segments(value_plain, value_styles)
 
-    return fields_plain, sections_rich
-
-
-def _normalize_structured_fields(
-    raw_sections_plain: dict[str, str],
-    raw_sections_styles: dict[str, list[int]],
-) -> tuple[dict[str, str], dict[str, list[dict[str, Any]]]]:
-    return _normalize_structured_fields_rich(raw_sections_plain, raw_sections_styles)
-
-
-def species_image_dir_slug(scientific_name: str) -> str:
-    """Folder name under ``public/algae-images`` for a record header."""
-    return _slugify(_taxon_name_for_slug(scientific_name))
+    # Ship only populated sections, like sections_rich; consumers read missing keys as empty.
+    sections = {key: value for key, value in fields_plain.items() if value.strip()}
+    return sections, sections_rich
 
 
 def prune_catalog_images(
@@ -1216,7 +1112,7 @@ def prune_catalog_images(
         name = (record.get("scientific_name") or "").strip()
         if not name:
             continue
-        slug = species_image_dir_slug(name)
+        slug = taxon_slug(name)
         filenames = {Path(p).name for p in (record.get("images") or []) if p}
         if slug in keep_by_slug:
             keep_by_slug[slug] |= filenames
@@ -1257,7 +1153,7 @@ def _save_image(
         blob,
         extension,
         images_output_dir=images_output_dir,
-        dir_slug=species_image_dir_slug(algae_name),
+        dir_slug=taxon_slug(algae_name),
         stem=filename_stem,
         images_public_prefix=images_public_prefix,
     )
@@ -1296,11 +1192,8 @@ def extract_records(
 
     blocks = list(iter_docx_content_blocks(docx_path, use_word_renderer=use_word_renderer))
     pending_relaxed_record_markers = False
-    skip_template_appendix = False
 
     for index, block in enumerate(blocks):
-        if skip_template_appendix:
-            continue
         if block["type"] == "page_break":
             if expect_image_caption:
                 _flush_missing_image_caption(current)
@@ -1385,7 +1278,7 @@ def extract_records(
                         current,
                         current_section,
                         styled,
-                        _neutral_char_styles(styled),
+                        neutral_char_styles(styled),
                     )
             continue
 
@@ -1394,16 +1287,15 @@ def extract_records(
             # Draft Word files sometimes append a blank species template; ignore it
             # and everything after so chart titles / placeholder fields cannot become
             # fake records or pollute the preceding species.
-            skip_template_appendix = True
-            continue
+            break
         if expect_image_caption:
             if _looks_like_image_caption(text):
                 char_styles = block.get("char_styles")
                 if isinstance(char_styles, list) and len(char_styles) == len(text):
-                    caption_rich = _char_styles_to_rich_segments(text, char_styles)
+                    caption_rich = char_styles_to_rich_segments(text, char_styles)
                 else:
-                    caption_rich = _char_styles_to_rich_segments(
-                        text, _neutral_char_styles(text)
+                    caption_rich = char_styles_to_rich_segments(
+                        text, neutral_char_styles(text)
                     )
                 current["image_captions"].append(text)
                 current["image_captions_rich"].append(caption_rich)

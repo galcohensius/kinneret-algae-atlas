@@ -5,9 +5,14 @@ from __future__ import annotations
 import argparse
 import json
 import re
-import unicodedata
+import sys
 from pathlib import Path
 from typing import Any
+
+# Run as `python scripts/generate_llms_files.py` from the repo root, so src/ is not on the path.
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+
+from algae_extractor.slugs import taxon_slug  # noqa: E402
 
 ATLAS_URL = "https://kinneret-algae-atlas.org"
 ATLAS_CITE_URL = f"{ATLAS_URL}/"
@@ -16,11 +21,6 @@ CANONICAL_AFFILIATION = (
     "Kinneret Limnological Institute, Israel Oceanographic and Limnological Research"
 )
 CANONICAL_PUBLISHER = "Israel Oceanographic & Limnological Research"
-
-_BINOMIAL_RE = re.compile(
-    r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)"
-)
-_GENUS_RE = re.compile(r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+)\b")
 
 _KEY_SIZE_FIELDS: list[tuple[str, str]] = [
     ("organization", "Organization"),
@@ -37,34 +37,12 @@ _KEY_SIZE_FIELDS: list[tuple[str, str]] = [
 ]
 
 
-def _slugify(value: str) -> str:
-    normalized = unicodedata.normalize("NFKD", value)
-    normalized = normalized.encode("ascii", "ignore").decode("ascii")
-    normalized = normalized.strip().lower()
-    normalized = re.sub(r"[^a-z0-9\s-]", "", normalized)
-    normalized = re.sub(r"\s+", "-", normalized)
-    normalized = re.sub(r"-{2,}", "-", normalized).strip("-")
-    return normalized or "unnamed"
-
-
-def _record_slug(scientific_name: str, index: int) -> str:
-    text = (scientific_name or "").strip()
-    if not text:
-        return f"unnamed-{index + 1}"
-    binomial = _BINOMIAL_RE.match(text)
-    if binomial:
-        return _slugify(binomial.group(1))
-    genus = _GENUS_RE.match(text)
-    if genus:
-        return _slugify(genus.group(1))
-    return _slugify(text)
-
-
 def _records_with_unique_slugs(records: list[dict[str, Any]]) -> list[tuple[dict[str, Any], str]]:
     seen: dict[str, int] = {}
     out: list[tuple[dict[str, Any], str]] = []
     for idx, record in enumerate(records):
-        base = _record_slug((record.get("scientific_name") or "").strip(), idx)
+        name = (record.get("scientific_name") or "").strip()
+        base = taxon_slug(name) if name else f"unnamed-{idx + 1}"
         count = seen.get(base, 0)
         seen[base] = count + 1
         slug = base if count == 0 else f"{base}-{count + 1}"
@@ -112,8 +90,7 @@ def _compact_text(text: str, max_len: int = 220) -> str:
     return compact[: max_len - 1].rstrip() + "…"
 
 
-def _load_study_area() -> dict[str, Any]:
-    path = Path("data/study-area.json")
+def _load_study_area(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
@@ -442,6 +419,11 @@ def main() -> None:
         help="Path to processed glossary JSON.",
     )
     parser.add_argument(
+        "--study-area-input",
+        default="data/study-area.json",
+        help="Path to the study-area JSON (lake name, coordinates, map attribution).",
+    )
+    parser.add_argument(
         "--output-dir",
         default="public",
         help="Directory where llms.txt and llms-full.txt are written.",
@@ -455,7 +437,7 @@ def main() -> None:
 
     records = json.loads(algae_path.read_text(encoding="utf-8"))
     glossary = json.loads(glossary_path.read_text(encoding="utf-8"))
-    study_area = _load_study_area()
+    study_area = _load_study_area(Path(args.study_area_input))
     records_with_slugs = _records_with_unique_slugs(records)
 
     llms_txt = _build_llms_txt(study_area)

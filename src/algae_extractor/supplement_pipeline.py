@@ -16,47 +16,13 @@ from typing import Any
 import re
 
 from .image_optimize import save_web_image
-from .reader import iter_docx_content_blocks, source_modified_date, unmap_script_glyphs
+from .reader import iter_docx_content_blocks, source_modified_date
+from .rich_text import char_styles_to_rich_segments
 
 
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
-
-def _char_styles_to_rich(text: str, char_styles: list[int]) -> list[dict[str, Any]]:
-    """Convert a parallel char_styles array into a list of rich segments."""
-    if not text:
-        return []
-    if not char_styles or len(char_styles) != len(text):
-        return [{"text": text, "italic": False, "bold": False}]
-
-    segments: list[dict[str, Any]] = []
-    i = 0
-    while i < len(text):
-        style = char_styles[i]
-        j = i + 1
-        while j < len(text) and char_styles[j] == style:
-            j += 1
-        chunk = text[i:j]
-        superscript = bool(style & 4)
-        subscript = bool(style & 8)
-        # Super/subscript runs are stored as ASCII plus a flag so the frontend can
-        # render <sup>/<sub>; the baked display glyphs are undone here.
-        if superscript or subscript:
-            chunk = unmap_script_glyphs(chunk)
-        segment: dict[str, Any] = {
-            "text": chunk,
-            "italic": bool(style & 1),
-            "bold": bool(style & 2),
-        }
-        if superscript:
-            segment["superscript"] = True
-        if subscript:
-            segment["subscript"] = True
-        segments.append(segment)
-        i = j
-    return segments
-
 
 def _is_heading_style(style_name: str) -> bool:
     name = (style_name or "").strip().lower()
@@ -173,7 +139,7 @@ def extract_supplement(
                 if any(lower.startswith(p) for p in ("figure", "fig.", "plate", "photo")):
                     images.append(pending_image)
                     image_captions.append(text)
-                    image_captions_rich.append(_char_styles_to_rich(text, char_styles))
+                    image_captions_rich.append(char_styles_to_rich_segments(text, char_styles))
                     pending_image = None
                     continue
                 else:
@@ -209,7 +175,7 @@ def extract_supplement(
 
         rich: list[dict[str, Any]] = []
         for i, line in enumerate(non_empty):
-            rich.extend(_char_styles_to_rich(line["text"], line["char_styles"]))
+            rich.extend(char_styles_to_rich_segments(line["text"], line["char_styles"]))
             if i + 1 < len(non_empty):
                 rich.append({"text": "\n", "italic": False, "bold": False})
         sections_rich[section_key] = rich

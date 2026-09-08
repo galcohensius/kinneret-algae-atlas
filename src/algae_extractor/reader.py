@@ -1,4 +1,5 @@
 import io
+import logging
 import re
 import tempfile
 import xml.etree.ElementTree as ET
@@ -14,16 +15,27 @@ from docx.table import Table
 from docx.text.paragraph import Paragraph
 from PIL import Image, ImageDraw, ImageFont
 
+logger = logging.getLogger(__name__)
+
 
 def source_modified_date(docx_path: str | Path) -> str:
-    """Use the DOCX metadata date so extraction reruns do not churn JSON."""
+    """Use the DOCX metadata date so extraction reruns do not churn JSON.
+
+    Word stores the modified time in UTC; it is converted to the local calendar
+    day so a file saved late in the evening is not dated the previous day.
+    """
     try:
         modified = Document(str(docx_path)).core_properties.modified
-    except Exception:
+    except Exception as exc:
+        logger.warning("Could not read core properties of %s: %s", docx_path, exc)
         modified = None
 
     if isinstance(modified, datetime):
-        return modified.date().isoformat()
+        return modified.astimezone().date().isoformat()
+    logger.warning(
+        "%s has no modified date; falling back to today, which will churn record_updated",
+        docx_path,
+    )
     return date.today().isoformat()
 
 
@@ -194,20 +206,6 @@ def paragraph_clean_text(paragraph: Paragraph) -> str:
     """
     converted = _paragraph_to_plain_and_styles(paragraph)
     return converted[0] if converted else ""
-
-
-def iter_docx_paragraphs(docx_path: str | Path):
-    document = Document(str(docx_path))
-    for paragraph in document.paragraphs:
-        converted = _paragraph_to_plain_and_styles(paragraph)
-        if not converted:
-            continue
-        text, char_styles = converted
-        yield {
-            "text": text,
-            "char_styles": char_styles,
-            "style": getattr(paragraph.style, "name", "") if paragraph.style else "",
-        }
 
 
 def _iter_document_blocks(document: Document):
@@ -382,12 +380,8 @@ def _render_chart_to_png(chart_blob: bytes) -> bytes | None:
     y_ax = None
     if len(val_axes) >= 2:
         y_ax = val_axes[1]
-    elif len(val_axes) == 1 and x_ax is not cat_ax and x_ax is not date_ax and x_ax is not val_axes[0]:
-        y_ax = val_axes[0]
-    elif len(val_axes) == 1 and (cat_ax is not None or date_ax is not None):
-        y_ax = val_axes[0]
     elif len(val_axes) == 1:
-        # Single valAx on a scatter chart is usually Y; X may also be valAx[0] when duplicated.
+        # Single valAx is Y whether X is a category/date axis or the same valAx duplicated.
         y_ax = val_axes[0]
 
     x_title = _chart_axis_title(x_ax)
@@ -513,7 +507,11 @@ def _export_word_chart_images(docx_path: str | Path) -> list[bytes]:
     try:
         import pythoncom
         import win32com.client  # type: ignore[import-untyped]
-    except Exception:
+    except Exception as exc:
+        logger.warning(
+            "Word COM renderer unavailable (%s); charts fall back to the built-in renderer",
+            exc,
+        )
         return []
 
     path = str(Path(docx_path).resolve())
@@ -550,7 +548,12 @@ def _export_word_chart_images(docx_path: str | Path) -> list[bytes]:
                 blob = img_path.read_bytes()
                 if blob:
                     chart_images.append(blob)
-    except Exception:
+    except Exception as exc:
+        logger.warning(
+            "Word COM chart export failed for %s (%s); charts fall back to the built-in renderer",
+            docx_path,
+            exc,
+        )
         return []
     finally:
         try:

@@ -1,37 +1,18 @@
 import argparse
 import fnmatch
 import json
-import re
 from pathlib import Path
 
 from algae_extractor.config import load_config
 from algae_extractor.pipeline import extract_records, prune_catalog_images
-
-
-_BINOMIAL_RE = re.compile(
-    r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)"
-)
-_GENUS_RE = re.compile(r"^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+)\b")
-
-
-def _slugify(value: str) -> str:
-    normalized = re.sub(r"\s+", "-", value.strip().lower())
-    normalized = re.sub(r"[^a-z0-9-]", "", normalized)
-    normalized = re.sub(r"-{2,}", "-", normalized).strip("-")
-    return normalized or "unnamed"
+from algae_extractor.slugs import taxon_slug
 
 
 def _record_merge_key(record: dict, index: int) -> str:
     scientific_name = (record.get("scientific_name") or "").strip()
     if not scientific_name:
         return f"unnamed-{index + 1}"
-    binomial = _BINOMIAL_RE.match(scientific_name)
-    if binomial:
-        return _slugify(binomial.group(1))
-    genus = _GENUS_RE.match(scientific_name)
-    if genus:
-        return _slugify(genus.group(1))
-    return _slugify(scientific_name)
+    return taxon_slug(scientific_name)
 
 
 def _merge_text(existing: str, incoming: str) -> str:
@@ -110,12 +91,14 @@ def _merge_records(records: list[dict]) -> list[dict]:
         existing_captions = target.setdefault("image_captions", [])
         existing_captions_rich = target.setdefault("image_captions_rich", [])
         seen_images = set(existing_images)
+        caps = record.get("image_captions") or []
+        caps_rich = record.get("image_captions_rich") or []
         for i, image_path in enumerate(record.get("images") or []):
             if image_path in seen_images:
                 continue
             existing_images.append(image_path)
-            existing_captions.append((record.get("image_captions") or [""] * (i + 1))[i] if i < len(record.get("image_captions") or []) else "")
-            existing_captions_rich.append((record.get("image_captions_rich") or [[]] * (i + 1))[i] if i < len(record.get("image_captions_rich") or []) else [])
+            existing_captions.append(caps[i] if i < len(caps) else "")
+            existing_captions_rich.append(caps_rich[i] if i < len(caps_rich) else [])
             seen_images.add(image_path)
 
         target_sections = target.setdefault("sections", {})

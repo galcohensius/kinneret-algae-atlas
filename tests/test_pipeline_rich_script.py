@@ -17,7 +17,7 @@ if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
 from algae_extractor.reader import unmap_script_glyphs
-from algae_extractor.pipeline import _char_styles_to_rich_segments
+from algae_extractor.rich_text import char_styles_to_rich_segments
 
 
 class TestUnmapScriptGlyphs(unittest.TestCase):
@@ -39,7 +39,7 @@ class TestRichSuperscriptSegments(unittest.TestCase):
         # decimal point keeps the superscript style bit even though it has no glyph.
         text = "D².⁵²⁶⁴"
         char_styles = [0] + [4] * (len(text) - 1)
-        segments = _char_styles_to_rich_segments(text, char_styles)
+        segments = char_styles_to_rich_segments(text, char_styles)
         self.assertEqual(
             segments,
             [
@@ -51,7 +51,7 @@ class TestRichSuperscriptSegments(unittest.TestCase):
     def test_subscript_run_sets_flag(self) -> None:
         text = "NH₄"  # "NH" neutral, "₄" subscript
         char_styles = [0, 0, 8]
-        segments = _char_styles_to_rich_segments(text, char_styles)
+        segments = char_styles_to_rich_segments(text, char_styles)
         self.assertEqual(
             segments,
             [

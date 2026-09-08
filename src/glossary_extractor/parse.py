@@ -11,7 +11,9 @@ _TERM_DEF_RE = re.compile(r"^\s*(.+?)\s+[–—]\s+(.+?)\s*$")
 _TITLE_RE = re.compile(r"^glossary\s*:", re.I)
 
 
-def _slugify(term: str) -> str:
+def glossary_term_slug(term: str) -> str:
+    """Anchor for a glossary term. Unlike species slugs (algae_extractor.slugs) it keeps
+    non-ASCII word characters and drops a trailing parenthetical qualifier."""
     base = term.strip().lower()
     # Drop parenthetical qualifiers for stable anchors (e.g. "Apex (plural: apices)" → apex).
     base = re.sub(r"\s*\([^)]*\)\s*$", "", base).strip()
@@ -74,7 +76,7 @@ def parse_glossary_lines(lines: list[str]) -> tuple[str, list[dict[str, Any]]]:
         if not term or not definition:
             continue
 
-        slug_base = _slugify(term)
+        slug_base = glossary_term_slug(term)
         count = seen_slugs.get(slug_base, 0)
         seen_slugs[slug_base] = count + 1
         slug = slug_base if count == 0 else f"{slug_base}-{count + 1}"
