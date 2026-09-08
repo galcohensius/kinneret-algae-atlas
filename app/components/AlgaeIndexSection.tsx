@@ -71,6 +71,16 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
   const [view, setView] = useState<IndexView>("phylum");
   const [query, setQuery] = useState("");
 
+  // Legacy /algae?q=term links redirect to /?q=term; seed the search from it once.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q")?.trim();
+    if (q) {
+      setQuery(q);
+      void loadSearchIndex();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- mount only
+  }, []);
+
   // /#visual-index (header link, species back link, old /visual-index/ URL) opens the morphotype view.
   useEffect(() => {
     function openViewFromHash() {

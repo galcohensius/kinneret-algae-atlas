@@ -17,7 +17,7 @@ page's "How to use this atlas [to be written]" placeholder.
 
 ## P1 — Bugs
 
-### [ ] 1. Legacy `/algae?q=` search links land unfiltered
+### [x] 1. Legacy `/algae?q=` search links land unfiltered
 
 **Why.** `app/algae/AlgaeLegacyRedirect.tsx` redirects `/algae?q=term` to `/?q=term`, but
 `AlgaeIndexSection` starts with an empty query and never reads `?q=`. Bookmarked or shared
