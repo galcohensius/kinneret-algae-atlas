@@ -116,9 +116,16 @@ html.dark .site-header {
 }
 
 @media (max-width: 640px) {
+  /* Second row of the header; tightened so all four links stay on one line down to 360px. */
   .site-nav {
     order: 3;
     flex-basis: 100%;
+    gap: 0 0.15rem;
+    font-size: 0.9rem;
+  }
+
+  .site-nav a {
+    padding: 0.5rem 0.25rem;
   }
 
   .site-brand {

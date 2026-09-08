@@ -14,7 +14,7 @@ export default function SiteHeader() {
           <Link href="/glossary/">Glossary</Link>
           {/* Plain anchor: a hash-only change must fire hashchange so the home index can switch view. */}
           <a href={`/${HOME_VISUAL_INDEX_HASH}`}>Visual index</a>
-          <Link href="/supplements/">Supplementary material</Link>
+          <Link href="/supplements/">Supplements</Link>
         </nav>
         <ThemeToggle />
       </div>
