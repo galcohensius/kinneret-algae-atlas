@@ -35,7 +35,7 @@ describe("schema JSON-LD presence", () => {
 describe("crawler discovery files", () => {
   it("defines sitemap and robots routes", () => {
     // The origin literal itself lives in lib/site.ts (SITE_ORIGIN).
-    expect(read("app/sitemap.ts")).toContain('SITE_ORIGIN as BASE } from "../lib/site"');
+    expect(read("app/sitemap.ts")).toContain('absoluteUrl } from "../lib/site"');
     expect(read("lib/site.ts")).toContain("kinneret-algae-atlas.org");
     expect(read("app/robots.ts")).toContain("sitemap.xml");
   });
