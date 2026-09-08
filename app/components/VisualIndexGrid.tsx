@@ -4,11 +4,35 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { VisualIndexSection } from "../../lib/visual-index-layout";
 import { ORIGIN_PARAM, VISUAL_INDEX_ORIGIN } from "../../lib/index-view";
+import { formatPhylumLabel } from "../../lib/phylum-catalog";
+import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import TaxonItalicName from "./TaxonItalicName";
 
 type VisualIndexGridProps = {
   sections: VisualIndexSection[];
 };
+
+type PhylumLegendEntry = {
+  phylum: string;
+  label: string;
+  accent: string;
+};
+
+function buildPhylumLegend(sections: VisualIndexSection[]): PhylumLegendEntry[] {
+  const seen = new Map<string, PhylumLegendEntry>();
+  for (const section of sections) {
+    for (const cell of section.cells) {
+      if (!seen.has(cell.phylum)) {
+        seen.set(cell.phylum, {
+          phylum: cell.phylum,
+          label: formatPhylumLabel(cell.phylum),
+          accent: cell.accent,
+        });
+      }
+    }
+  }
+  return [...seen.values()].sort((a, b) => a.phylum.localeCompare(b.phylum));
+}
 
 function ShapeGroupGrid({ section }: { section: VisualIndexSection }) {
   const cols = Math.max(...section.cells.map((cell) => cell.col)) + 1;
@@ -66,8 +90,28 @@ export default function VisualIndexGrid({ sections }: VisualIndexGridProps) {
     return <p className="muted">No species available.</p>;
   }
 
+  const legend = buildPhylumLegend(sections);
+  const legendRows = splitIntoBalancedRows(legend, (entry) => entry.label.length);
+
   return (
     <>
+      <nav className="visual-index-legend" aria-label="Phylum colors">
+        {legendRows.map((row, rowIndex) => (
+          <div key={`legend-row-${rowIndex}`} className="visual-index-legend-row">
+            {row.map((entry) => (
+              <span
+                key={entry.phylum}
+                className="visual-index-legend-item"
+                style={{ "--phylum-accent": entry.accent } as CSSProperties}
+              >
+                <span className="visual-index-legend-dot" aria-hidden />
+                {entry.label}
+              </span>
+            ))}
+          </div>
+        ))}
+      </nav>
+
       <p className="muted visual-index-swipe-hint">Swipe sideways to see the full map.</p>
 
       <div className="visual-index-shape-groups">

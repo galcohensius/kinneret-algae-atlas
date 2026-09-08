@@ -479,6 +479,38 @@ main.home {
   overflow-x: clip;
 }
 
+.visual-index-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1.15rem;
+}
+
+.visual-index-legend-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem 1rem;
+}
+
+.visual-index-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.visual-index-legend-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: var(--phylum-accent, var(--link));
+  border: 1px solid color-mix(in srgb, var(--phylum-accent, var(--link)) 70%, #000);
+  flex-shrink: 0;
+}
+
 .visual-index-swipe-hint {
   display: none;
 }
@@ -603,6 +635,19 @@ main.home {
 @media (max-width: 640px) {
   .visual-index-card {
     padding: 1rem 0.7rem 1.25rem;
+  }
+
+  .visual-index-legend {
+    margin-bottom: 0.75rem;
+    gap: 0.3rem;
+  }
+
+  .visual-index-legend-row {
+    gap: 0.4rem 0.7rem;
+  }
+
+  .visual-index-legend-item {
+    font-size: 0.8rem;
   }
 
   .visual-index-swipe-hint {

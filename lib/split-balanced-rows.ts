@@ -1,6 +1,6 @@
 /**
  * Split items into consecutive rows of similar total label length (home phylum
- * strip). Every row keeps at least two items so no row ends
+ * strip, visual-index legend). Every row keeps at least two items so no row ends
  * up with a lone orphan; when that is impossible, everything stays on one row.
  */
 export function splitIntoBalancedRows<T>(

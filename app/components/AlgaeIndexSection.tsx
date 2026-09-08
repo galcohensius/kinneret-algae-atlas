@@ -30,16 +30,6 @@ const INDEX_VIEWS: { id: IndexView; label: string }[] = [
   { id: "appearance", label: "By appearance" },
 ];
 
-/** Keep only cells whose species passed the search filter; drop shape groups left empty. */
-function filterVisualSections(
-  sections: VisualIndexSection[],
-  slugs: Set<string>
-): VisualIndexSection[] {
-  return sections
-    .map((section) => ({ ...section, cells: section.cells.filter((cell) => slugs.has(cell.slug)) }))
-    .filter((section) => section.cells.length > 0);
-}
-
 /** Two rows overflow the 980px content column and wrap to four lines; three fit. */
 const PHYLUM_JUMP_ROWS = 3;
 
@@ -79,7 +69,6 @@ function AlgaeListCard({ record }: { record: AlgaeCatalogRecord }) {
 
 export default function AlgaeIndexSection({ records, visualSections }: AlgaeIndexSectionProps) {
   const [view, setView] = useState<IndexView>("phylum");
-  const [pendingPhylumJump, setPendingPhylumJump] = useState<string | null>(null);
   const [query, setQuery] = useState("");
 
   // /#visual-index (header link, species back link, old /visual-index/ URL) opens the appearance view.
@@ -93,14 +82,6 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
     window.addEventListener("hashchange", openViewFromHash);
     return () => window.removeEventListener("hashchange", openViewFromHash);
   }, []);
-
-  // A phylum chip clicked in the appearance view switches views first; scroll once the target exists.
-  useEffect(() => {
-    if (view === "phylum" && pendingPhylumJump) {
-      document.getElementById(`phylum-${pendingPhylumJump}`)?.scrollIntoView();
-      setPendingPhylumJump(null);
-    }
-  }, [view, pendingPhylumJump]);
 
   function selectView(next: IndexView) {
     setView(next);
@@ -144,10 +125,6 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
   }, [isFiltering, query, records, searchIndex]);
 
   const phylumGroups = groupAlgaeByPhylum(filteredRecords);
-  const filteredVisualSections = useMemo(
-    () => filterVisualSections(visualSections, new Set(filteredRecords.map((r) => r.slug))),
-    [visualSections, filteredRecords]
-  );
   const phylumJumpRows = splitPhylumJumpRows(phylumGroups);
   const searchPending = isFiltering && !searchIndex && searchLoading;
   const searchBlocked = isFiltering && !searchIndex && searchError;
@@ -165,70 +142,6 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
           : "grouped by shape; color ring = phylum. Hover a picture to see the species name."}{" "}
         Work in progress to include ~150 species of microalgae from Lake Kinneret.
       </p>
-
-      <div className="glossary-toolbar algae-index-search">
-        <label className="glossary-search-label" htmlFor="algae-search">
-          Search species
-        </label>
-        <input
-          id="algae-search"
-          type="search"
-          className="glossary-search"
-          placeholder="Species name, previous name, or phylum (e.g. diatoms)"
-          value={query}
-          onFocus={activateSearch}
-          onClick={activateSearch}
-          onChange={(event) => {
-            activateSearch();
-            setQuery(event.target.value);
-          }}
-        />
-        {searchPending ? (
-          <p className="glossary-search-count muted" role="status">
-            Loading search…
-          </p>
-        ) : null}
-        {searchBlocked ? (
-          <p className="glossary-search-count muted" role="status">
-            Search is temporarily unavailable.
-          </p>
-        ) : null}
-        {isFiltering && searchIndex ? (
-          <p className="glossary-search-count muted" role="status">
-            {filteredRecords.length} of {records.length} species
-          </p>
-        ) : null}
-      </div>
-
-      {phylumGroups.length > 1 ? (
-        <nav className="phylum-jump-nav" aria-label="Jump to phylum">
-          {phylumJumpRows.map((row, rowIndex) => (
-            <div key={`phylum-jump-row-${rowIndex}`} className="phylum-jump-row">
-              {row.map((group) => (
-                <a
-                  key={group.slug}
-                  href={`#phylum-${group.slug}`}
-                  style={{ "--phylum-accent": group.accent } as CSSProperties}
-                  onClick={
-                    view === "appearance"
-                      ? () => {
-                          setPendingPhylumJump(group.slug);
-                          setView("phylum");
-                        }
-                      : undefined
-                  }
-                >
-                  {group.phylum}
-                  {phylumPopularName(group.phylum) ? (
-                    <span className="phylum-jump-popular"> ({phylumPopularName(group.phylum)})</span>
-                  ) : null}
-                  <span className="phylum-jump-count"> ({group.records.length})</span>
-                </a>
-              ))}
-            </div>
-          ))}
-        </nav>
-      ) : null}
 
       <div
         id={HOME_VISUAL_INDEX_HASH.slice(1)}
@@ -251,22 +164,83 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
         ))}
       </div>
 
-      {isFiltering && searchIndex && filteredRecords.length === 0 ? (
+      {view === "phylum" ? (
+        <>
+          <div className="glossary-toolbar algae-index-search">
+            <label className="glossary-search-label" htmlFor="algae-search">
+              Search species
+            </label>
+            <input
+              id="algae-search"
+              type="search"
+              className="glossary-search"
+              placeholder="Species name, previous name, or phylum (e.g. diatoms)"
+              value={query}
+              onFocus={activateSearch}
+              onClick={activateSearch}
+              onChange={(event) => {
+                activateSearch();
+                setQuery(event.target.value);
+              }}
+            />
+            {searchPending ? (
+              <p className="glossary-search-count muted" role="status">
+                Loading search…
+              </p>
+            ) : null}
+            {searchBlocked ? (
+              <p className="glossary-search-count muted" role="status">
+                Search is temporarily unavailable.
+              </p>
+            ) : null}
+            {isFiltering && searchIndex ? (
+              <p className="glossary-search-count muted" role="status">
+                {filteredRecords.length} of {records.length} species
+              </p>
+            ) : null}
+          </div>
+
+          {phylumGroups.length > 1 ? (
+            <nav className="phylum-jump-nav" aria-label="Jump to phylum">
+              {phylumJumpRows.map((row, rowIndex) => (
+                <div key={`phylum-jump-row-${rowIndex}`} className="phylum-jump-row">
+                  {row.map((group) => (
+                    <a
+                      key={group.slug}
+                      href={`#phylum-${group.slug}`}
+                      style={{ "--phylum-accent": group.accent } as CSSProperties}
+                    >
+                      {group.phylum}
+                      {phylumPopularName(group.phylum) ? (
+                        <span className="phylum-jump-popular">
+                          {" "}
+                          ({phylumPopularName(group.phylum)})
+                        </span>
+                      ) : null}
+                      <span className="phylum-jump-count"> ({group.records.length})</span>
+                    </a>
+                  ))}
+                </div>
+              ))}
+            </nav>
+          ) : null}
+        </>
+      ) : null}
+
+      {view === "phylum" && isFiltering && searchIndex && filteredRecords.length === 0 ? (
         <p className="muted algae-index-summary" role="status">
           No species match &ldquo;{query.trim()}&rdquo;.
         </p>
       ) : null}
 
       {view === "appearance" ? (
-        filteredVisualSections.length > 0 ? (
-          <article
-            className="card visual-index-card home-visual-index"
-            role="tabpanel"
-            aria-labelledby="index-view-tab-appearance"
-          >
-            <VisualIndexGrid sections={filteredVisualSections} />
-          </article>
-        ) : null
+        <article
+          className="card visual-index-card home-visual-index"
+          role="tabpanel"
+          aria-labelledby="index-view-tab-appearance"
+        >
+          <VisualIndexGrid sections={visualSections} />
+        </article>
       ) : (
       <div className="phylum-catalog" role="tabpanel" aria-labelledby="index-view-tab-phylum">
         {phylumGroups.map((group) => (
