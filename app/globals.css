@@ -898,16 +898,39 @@ main.home {
   color: var(--text-primary);
 }
 
+/* Label and box on one row; the count line wraps underneath. */
 .algae-index-search {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 0.35rem 0.75rem;
   margin-bottom: 1rem;
 }
 
+.algae-index-search .glossary-search-label {
+  margin-bottom: 0;
+}
+
 .algae-index-search .glossary-search {
-  width: min(100%, 34rem);
+  width: min(100%, 30rem);
   max-width: none;
+}
+
+.algae-index-search .glossary-search-count {
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .algae-index-search {
+    flex-direction: column;
+  }
+
+  .algae-index-search .glossary-search-label {
+    margin-bottom: 0.35rem;
+  }
 }
 
 .algae-index-summary {

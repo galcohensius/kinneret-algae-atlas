@@ -438,7 +438,7 @@ normalisation must tolerate missing keys — it already does via `?? null`).
 
 ## UI polish (requested by Gal)
 
-### [ ] 22. "Search species" label on the same row as the box
+### [x] 22. "Search species" label on the same row as the box
 
 **Why.** In the By phylum view the label sits on its own line above the input, adding a row
 to an area that is already stacked (summary, switch, search, chips).
