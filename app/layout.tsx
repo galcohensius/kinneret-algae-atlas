@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import Link from "next/link";
-import ThemeToggle from "./components/ThemeToggle";
+import SiteHeader from "./components/SiteHeader";
 import "./globals.css";
 
 /** Runs before paint so the first frame matches saved or system theme. */
@@ -38,7 +38,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         />
       </head>
       <body>
-        <ThemeToggle />
+        <SiteHeader />
         {children}
         {GOATCOUNTER_CODE ? (
           <script

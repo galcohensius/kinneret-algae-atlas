@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { getAbout } from "../../lib/about-server";
 import {
   ALLA_ALSTER_PROFILE_URL,
@@ -61,16 +60,6 @@ export default async function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutJsonLd) }}
       />
-      <p className="algae-detail-nav">
-        <Link href="/#algae-index">← Algae index</Link>
-        {" · "}
-        <Link href="/glossary/">Glossary</Link>
-        {" · "}
-        <Link href="/visual-index/">Visual index</Link>
-        {" · "}
-        <Link href="/supplements/">Supplementary material</Link>
-      </p>
-
       <header className="algae-detail-header">
         <h1>{about.title}</h1>
       </header>
@@ -140,10 +129,6 @@ export default async function AboutPage() {
           </section>
         ) : null}
       </article>
-
-      <p className="algae-detail-nav algae-detail-nav-end">
-        <Link href="/#algae-index">← Algae index</Link>
-      </p>
     </main>
   );
 }

@@ -1,8 +1,9 @@
 "use client";
 
-import { Fragment, useCallback, useMemo, useState, type CSSProperties } from "react";
+import { useCallback, useEffect, useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
 import type { AlgaeCatalogRecord } from "../../lib/algae-types";
+import type { VisualIndexSection } from "../../lib/visual-index-layout";
 import type { AlgaeSearchIndexFile } from "../../lib/algae-search-index";
 import { filterCatalogBySearchIndex } from "../../lib/algae-search-index";
 import {
@@ -12,24 +13,31 @@ import {
   type PhylumCatalogGroup,
 } from "../../lib/phylum-catalog";
 import { publicAssetPath } from "../../lib/public-path";
-import { selectRecentlyUpdated } from "../../lib/recently-updated";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
+import { HOME_VISUAL_INDEX_HASH } from "../../lib/index-view";
 import TaxonItalicName from "./TaxonItalicName";
+import VisualIndexGrid from "./VisualIndexGrid";
 
 type AlgaeIndexSectionProps = {
   records: AlgaeCatalogRecord[];
+  visualSections: VisualIndexSection[];
 };
 
-/** `YYYY-MM-DD` as e.g. `30 Aug 2026`, compact enough for the one-line strip. */
-function formatShortDate(isoDate: string): string {
-  const [y, m, d] = isoDate.trim().split("-").map(Number);
-  if (!y || !m || !d) return isoDate;
-  return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString("en-GB", {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
-  });
+type IndexView = "phylum" | "appearance";
+
+const INDEX_VIEWS: { id: IndexView; label: string }[] = [
+  { id: "phylum", label: "By phylum" },
+  { id: "appearance", label: "By appearance" },
+];
+
+/** Keep only cells whose species passed the search filter; drop shape groups left empty. */
+function filterVisualSections(
+  sections: VisualIndexSection[],
+  slugs: Set<string>
+): VisualIndexSection[] {
+  return sections
+    .map((section) => ({ ...section, cells: section.cells.filter((cell) => slugs.has(cell.slug)) }))
+    .filter((section) => section.cells.length > 0);
 }
 
 /** Two rows overflow the 980px content column and wrap to four lines; three fit. */
@@ -69,8 +77,36 @@ function AlgaeListCard({ record }: { record: AlgaeCatalogRecord }) {
   );
 }
 
-export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
+export default function AlgaeIndexSection({ records, visualSections }: AlgaeIndexSectionProps) {
+  const [view, setView] = useState<IndexView>("phylum");
+  const [pendingPhylumJump, setPendingPhylumJump] = useState<string | null>(null);
   const [query, setQuery] = useState("");
+
+  // /#visual-index (header link, species back link, old /visual-index/ URL) opens the appearance view.
+  useEffect(() => {
+    function openViewFromHash() {
+      if (window.location.hash === HOME_VISUAL_INDEX_HASH) {
+        setView("appearance");
+      }
+    }
+    openViewFromHash();
+    window.addEventListener("hashchange", openViewFromHash);
+    return () => window.removeEventListener("hashchange", openViewFromHash);
+  }, []);
+
+  // A phylum chip clicked in the appearance view switches views first; scroll once the target exists.
+  useEffect(() => {
+    if (view === "phylum" && pendingPhylumJump) {
+      document.getElementById(`phylum-${pendingPhylumJump}`)?.scrollIntoView();
+      setPendingPhylumJump(null);
+    }
+  }, [view, pendingPhylumJump]);
+
+  function selectView(next: IndexView) {
+    setView(next);
+    const base = `${window.location.pathname}${window.location.search}`;
+    history.replaceState(null, "", next === "appearance" ? `${base}${HOME_VISUAL_INDEX_HASH}` : base);
+  }
   const [searchIndex, setSearchIndex] = useState<Map<string, string> | null>(null);
   const [searchLoading, setSearchLoading] = useState(false);
   const [searchError, setSearchError] = useState(false);
@@ -108,8 +144,11 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
   }, [isFiltering, query, records, searchIndex]);
 
   const phylumGroups = groupAlgaeByPhylum(filteredRecords);
+  const filteredVisualSections = useMemo(
+    () => filterVisualSections(visualSections, new Set(filteredRecords.map((r) => r.slug))),
+    [visualSections, filteredRecords]
+  );
   const phylumJumpRows = splitPhylumJumpRows(phylumGroups);
-  const recentlyUpdated = selectRecentlyUpdated(records);
   const searchPending = isFiltering && !searchIndex && searchLoading;
   const searchBlocked = isFiltering && !searchIndex && searchError;
 
@@ -120,8 +159,11 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
       aria-label="Algae species index"
     >
       <p className="muted algae-index-summary">
-        {records.length} species, grouped by phylum; A–Z by scientific name within each
-        phylum. Work in progress to include ~150 species of microalgae from Lake Kinneret.
+        {records.length} species,{" "}
+        {view === "phylum"
+          ? "grouped by phylum; A–Z by scientific name within each phylum."
+          : "grouped by shape; color ring = phylum. Hover a picture to see the species name."}{" "}
+        Work in progress to include ~150 species of microalgae from Lake Kinneret.
       </p>
 
       <div className="glossary-toolbar algae-index-search">
@@ -167,6 +209,14 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
                   key={group.slug}
                   href={`#phylum-${group.slug}`}
                   style={{ "--phylum-accent": group.accent } as CSSProperties}
+                  onClick={
+                    view === "appearance"
+                      ? () => {
+                          setPendingPhylumJump(group.slug);
+                          setView("phylum");
+                        }
+                      : undefined
+                  }
                 >
                   {group.phylum}
                   {phylumPopularName(group.phylum) ? (
@@ -180,30 +230,26 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
         </nav>
       ) : null}
 
-      <nav className="home-aux-links home-aux-links-top" aria-label="Reference material">
-        <Link href="/about/">About</Link>
-        <Link href="/glossary/">Glossary</Link>
-        <Link href="/visual-index/">Visual index</Link>
-        <Link href="/supplements/">Supplementary Material</Link>
-      </nav>
-
-      {!isFiltering && recentlyUpdated.length > 0 ? (
-        <p className="muted recently-updated-line" aria-label="Recently updated species">
-          Last updated{" "}
-          <span className="recently-updated-date">
-            ({formatShortDate(recentlyUpdated[0].recordUpdated ?? "")})
-          </span>
-          :{" "}
-          {recentlyUpdated.map((record, index) => (
-            <Fragment key={record.slug}>
-              {index > 0 ? <span aria-hidden> &middot; </span> : null}
-              <Link href={`/algae/${record.slug}/`}>
-                <TaxonItalicName taxon={record.scientificName} className="algae-taxon" />
-              </Link>
-            </Fragment>
-          ))}
-        </p>
-      ) : null}
+      <div
+        id={HOME_VISUAL_INDEX_HASH.slice(1)}
+        className="index-view-switch"
+        role="tablist"
+        aria-label="Index view"
+      >
+        {INDEX_VIEWS.map((option) => (
+          <button
+            key={option.id}
+            id={`index-view-tab-${option.id}`}
+            type="button"
+            role="tab"
+            aria-selected={view === option.id}
+            className="index-view-tab"
+            onClick={() => selectView(option.id)}
+          >
+            {option.label}
+          </button>
+        ))}
+      </div>
 
       {isFiltering && searchIndex && filteredRecords.length === 0 ? (
         <p className="muted algae-index-summary" role="status">
@@ -211,7 +257,18 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
         </p>
       ) : null}
 
-      <div className="phylum-catalog">
+      {view === "appearance" ? (
+        filteredVisualSections.length > 0 ? (
+          <article
+            className="card visual-index-card home-visual-index"
+            role="tabpanel"
+            aria-labelledby="index-view-tab-appearance"
+          >
+            <VisualIndexGrid sections={filteredVisualSections} />
+          </article>
+        ) : null
+      ) : (
+      <div className="phylum-catalog" role="tabpanel" aria-labelledby="index-view-tab-phylum">
         {phylumGroups.map((group) => (
           <section
             key={group.slug}
@@ -242,6 +299,7 @@ export default function AlgaeIndexSection({ records }: AlgaeIndexSectionProps) {
           </section>
         ))}
       </div>
+      )}
     </section>
   );
 }

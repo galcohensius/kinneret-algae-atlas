@@ -60,14 +60,6 @@ export default async function SupplementsIndexPage() {
 
   return (
     <main className="algae-detail">
-      <p className="algae-detail-nav">
-        <Link href="/#algae-index">← Algae index</Link>
-        {" · "}
-        <Link href="/about/">About</Link>
-        {" · "}
-        <Link href="/glossary/">Glossary</Link>
-      </p>
-
       <header className="algae-detail-header">
         <h1>Supplementary Material</h1>
       </header>
@@ -130,10 +122,6 @@ export default async function SupplementsIndexPage() {
           </div>
         )}
       </div>
-
-      <p className="algae-detail-nav algae-detail-nav-end">
-        <Link href="/#algae-index">← Algae index</Link>
-      </p>
     </main>
   );
 }

@@ -47,7 +47,6 @@ describe("pages declare social preview metadata", () => {
     "app/algae/[slug]/page.tsx",
     "app/glossary/page.tsx",
     "app/supplements/page.tsx",
-    "app/visual-index/page.tsx",
     "app/about/page.tsx",
   ];
 

@@ -3,8 +3,10 @@ import {
   ALLA_ALSTER_PROFILE_URL,
   TAMAR_ZOHARY_PROFILE_URL,
 } from "../lib/collaborator-profile-links";
+import { getAlgaeCatalogRecords } from "../lib/algae";
 import { publicAssetPath } from "../lib/public-path";
 import AlgaeIndexSectionShell from "./components/AlgaeIndexSectionShell";
+import RecentlyUpdatedLine from "./components/RecentlyUpdatedLine";
 import StudyAreaBlock from "./components/StudyAreaBlock";
 import { buildAtlasAttribution } from "../lib/cite-this-record";
 import { buildStudyAreaJsonLd } from "../lib/study-area";
@@ -26,7 +28,8 @@ export const metadata: Metadata = {
   }),
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const records = await getAlgaeCatalogRecords();
   const datasetJsonLd = {
     "@context": "https://schema.org",
     "@type": "Dataset",
@@ -117,6 +120,7 @@ export default function HomePage() {
       <div className="home-below-hero">
         <AlgaeIndexSectionShell />
         <StudyAreaBlock variant="footer" />
+        <RecentlyUpdatedLine records={records} />
       </div>
     </main>
   );

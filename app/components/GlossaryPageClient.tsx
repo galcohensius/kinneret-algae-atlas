@@ -96,6 +96,20 @@ export default function GlossaryPageClient({
         ))}
       </nav>
 
+      {plates.length > 0 ? (
+        <section className="glossary-plates" aria-labelledby="glossary-plates-heading">
+          <h2 id="glossary-plates-heading" className="glossary-letter-heading">
+            Cox (1996) reference plates
+          </h2>
+          {plates.map((plate) => (
+            <figure key={plate.id} id={plate.id} className="plate-figure">
+              <img src={plate.src} alt={`Glossary ${plate.label} from Cox (1996)`} />
+              <figcaption className="muted">{plate.label}</figcaption>
+            </figure>
+          ))}
+        </section>
+      ) : null}
+
       {filteredGroups.length === 0 ? (
         <p className="muted">No terms match your search.</p>
       ) : (
@@ -121,19 +135,6 @@ export default function GlossaryPageClient({
         ))
       )}
 
-      {plates.length > 0 ? (
-        <section className="glossary-plates" aria-labelledby="glossary-plates-heading">
-          <h2 id="glossary-plates-heading" className="glossary-letter-heading">
-            Cox (1996) reference plates
-          </h2>
-          {plates.map((plate) => (
-            <figure key={plate.id} id={plate.id} className="plate-figure">
-              <img src={plate.src} alt={`Glossary ${plate.label} from Cox (1996)`} />
-              <figcaption className="muted">{plate.label}</figcaption>
-            </figure>
-          ))}
-        </section>
-      ) : null}
     </>
   );
 }

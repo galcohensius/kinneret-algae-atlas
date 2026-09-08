@@ -2,26 +2,26 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import {
+  HOME_VISUAL_INDEX_HASH,
+  ORIGIN_PARAM,
+  VISUAL_INDEX_ORIGIN,
+} from "../../lib/index-view";
 
-export const ORIGIN_PARAM = "from";
-export const VISUAL_INDEX_ORIGIN = "visual-index";
+const DEFAULT_BACK_LINK = { href: "/#algae-index", label: "← Back to algae index" };
+const VISUAL_INDEX_BACK_LINK = {
+  href: `/${HOME_VISUAL_INDEX_HASH}`,
+  label: "← Back to visual index",
+};
 
-function DefaultBackLink() {
-  return <Link href="/#algae-index">← Back to algae index</Link>;
-}
-
-function VisualIndexBackLink() {
-  return <Link href="/visual-index/">← Back to visual index</Link>;
-}
-
-/** Back link that returns to the visual index when reached via ?from=visual-index. */
+/** Back link that returns to whichever index view the visitor came from (?from=...). */
 export default function BackToIndexLink() {
-  const [fromVisualIndex, setFromVisualIndex] = useState(false);
+  const [target, setTarget] = useState(DEFAULT_BACK_LINK);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    setFromVisualIndex(params.get(ORIGIN_PARAM) === VISUAL_INDEX_ORIGIN);
+    const origin = new URLSearchParams(window.location.search).get(ORIGIN_PARAM);
+    setTarget(origin === VISUAL_INDEX_ORIGIN ? VISUAL_INDEX_BACK_LINK : DEFAULT_BACK_LINK);
   }, []);
 
-  return fromVisualIndex ? <VisualIndexBackLink /> : <DefaultBackLink />;
+  return <Link href={target.href}>{target.label}</Link>;
 }
