@@ -10,11 +10,15 @@ download. This module caps dimensions and re-encodes:
 
 `optimize_image_blob` is intentionally defensive: on any decode/encode error it
 returns the original bytes and extension unchanged.
+
+`save_web_image` is the one write path shared by the species and supplement
+pipelines: TIFF -> PNG, optimize, drop stale extension variants, return the URL.
 """
 
 from __future__ import annotations
 
 from io import BytesIO
+from pathlib import Path
 
 from PIL import Image
 
@@ -25,6 +29,9 @@ MAX_DIM_FIGURE = 1600
 
 JPEG_QUALITY = 82
 THUMBNAIL_JPEG_QUALITY = 80
+
+TIFF_EXTENSIONS = frozenset({".tif", ".tiff"})
+IMAGE_SAVE_EXTENSIONS = frozenset({".png", ".jpg", ".jpeg", ".gif", ".webp", ".tif", ".tiff"})
 
 
 def _kind_from_stem(stem: str) -> str:
@@ -104,3 +111,56 @@ def optimize_image_blob(blob: bytes, extension: str, stem: str) -> tuple[bytes, 
             return optimized, new_ext
     except Exception:
         return blob, ext
+
+
+def tiff_blob_to_png_bytes(blob: bytes) -> bytes:
+    """Decode TIFF bytes and re-encode as PNG for web browsers."""
+    with Image.open(BytesIO(blob)) as im:
+        im.load()
+        if im.mode == "CMYK":
+            im = im.convert("RGB")
+        elif im.mode in ("P", "LA"):
+            im = im.convert("RGBA")
+        elif im.mode not in ("RGB", "RGBA"):
+            im = im.convert("RGB")
+        out = BytesIO()
+        im.save(out, format="PNG", optimize=True)
+        return out.getvalue()
+
+
+def _unlink_stem_extension_variants(images_dir: Path, stem: str, keep_extension: str) -> None:
+    """Remove other extensions for the same stem (e.g. old thumbnail-1.jpg)."""
+    keep = keep_extension.lower()
+    for ext in IMAGE_SAVE_EXTENSIONS:
+        if ext == keep:
+            continue
+        path = images_dir / f"{stem}{ext}"
+        if path.is_file():
+            path.unlink()
+
+
+def save_web_image(
+    blob: bytes,
+    extension: str,
+    *,
+    images_output_dir: Path,
+    dir_slug: str,
+    stem: str,
+    images_public_prefix: str,
+) -> str:
+    """Write one extracted image under ``images_output_dir/dir_slug`` and return its URL.
+
+    TIFF is re-encoded as PNG first (browsers cannot show TIFF), the result is
+    optimized, and stale ``stem.<other ext>`` files from earlier runs are removed.
+    """
+    images_dir = images_output_dir / dir_slug
+    images_dir.mkdir(parents=True, exist_ok=True)
+    ext = extension.lower()
+    if ext in TIFF_EXTENSIONS:
+        blob = tiff_blob_to_png_bytes(blob)
+        ext = ".png"
+    blob, ext = optimize_image_blob(blob, ext, stem)
+    _unlink_stem_extension_variants(images_dir, stem, ext)
+    filename = f"{stem}{ext}"
+    (images_dir / filename).write_bytes(blob)
+    return f"{images_public_prefix.rstrip('/')}/{dir_slug}/{filename}"

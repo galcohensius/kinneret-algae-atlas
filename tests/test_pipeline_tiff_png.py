@@ -14,6 +14,7 @@ if str(_SRC) not in sys.path:
 
 from PIL import Image
 
+from algae_extractor.image_optimize import save_web_image
 from algae_extractor.pipeline import _save_image
 
 
@@ -62,6 +63,26 @@ class TestTiffToWebSave(unittest.TestCase):
             self.assertGreater(out.stat().st_size, 0)
             with Image.open(out) as saved:
                 self.assertEqual(saved.format, "JPEG")
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+    def test_save_web_image_converts_cmyk_tiff_and_strips_prefix_slash(self) -> None:
+        """Shared with the supplement pipeline: CMYK TIFF decodes; no '//' in the URL."""
+        buf = BytesIO()
+        Image.new("CMYK", (2, 2), color=(0, 200, 200, 0)).save(buf, format="TIFF")
+        tmp = Path(tempfile.mkdtemp())
+        try:
+            public_path = save_web_image(
+                buf.getvalue(),
+                ".tiff",
+                images_output_dir=tmp,
+                dir_slug="some-supplement",
+                stem="figure-1",
+                images_public_prefix="/algae-images/",
+            )
+            self.assertEqual(public_path, "/algae-images/some-supplement/figure-1.png")
+            with Image.open(tmp / "some-supplement" / "figure-1.png") as saved:
+                self.assertEqual(saved.format, "PNG")
         finally:
             shutil.rmtree(tmp, ignore_errors=True)
 

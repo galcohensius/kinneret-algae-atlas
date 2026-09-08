@@ -1,15 +1,12 @@
 from datetime import date
-from io import BytesIO
 from pathlib import Path
 from typing import Any
 import re
 import shutil
 import sys
 
-from PIL import Image
-
 from .config import load_config
-from .image_optimize import optimize_image_blob
+from .image_optimize import save_web_image
 from .models import AlgaeRecord
 from .parsers.scientific_name import compile_scientific_name_patterns, detect_record_start
 from .parsers.sections import build_section_alias_lookup, detect_section_heading
@@ -1193,26 +1190,9 @@ def _normalize_structured_fields(
     return _normalize_structured_fields_rich(raw_sections_plain, raw_sections_styles)
 
 
-_TIFF_EXTENSIONS = frozenset({".tif", ".tiff"})
-_IMAGE_SAVE_EXTENSIONS = frozenset({".png", ".jpg", ".jpeg", ".gif", ".webp", ".tif", ".tiff"})
-
-
 def species_image_dir_slug(scientific_name: str) -> str:
     """Folder name under ``public/algae-images`` for a record header."""
     return _slugify(_taxon_name_for_slug(scientific_name))
-
-
-def _unlink_stem_extension_variants(
-    algae_images_dir: Path, stem: str, keep_extension: str
-) -> None:
-    """Remove other extensions for the same stem (e.g. old thumbnail-1.jpg)."""
-    keep = keep_extension.lower()
-    for ext in _IMAGE_SAVE_EXTENSIONS:
-        if ext == keep:
-            continue
-        path = algae_images_dir / f"{stem}{ext}"
-        if path.is_file():
-            path.unlink()
 
 
 def prune_catalog_images(
@@ -1265,23 +1245,6 @@ def prune_catalog_images(
     return files_removed, dirs_removed
 
 
-def _tiff_blob_to_png_bytes(blob: bytes) -> bytes:
-    """Decode TIFF bytes and re-encode as PNG for web browsers."""
-    with Image.open(BytesIO(blob)) as im:
-        im.load()
-        if im.mode == "CMYK":
-            im = im.convert("RGB")
-        elif im.mode == "P":
-            im = im.convert("RGBA")
-        elif im.mode == "LA":
-            im = im.convert("RGBA")
-        elif im.mode not in ("RGB", "RGBA"):
-            im = im.convert("RGB")
-        out = BytesIO()
-        im.save(out, format="PNG", optimize=True)
-        return out.getvalue()
-
-
 def _save_image(
     blob: bytes,
     extension: str,
@@ -1290,20 +1253,14 @@ def _save_image(
     images_output_dir: Path,
     images_public_prefix: str,
 ) -> str:
-    safe_name = species_image_dir_slug(algae_name)
-    algae_images_dir = images_output_dir / safe_name
-    algae_images_dir.mkdir(parents=True, exist_ok=True)
-    ext = extension.lower()
-    if ext in _TIFF_EXTENSIONS:
-        blob = _tiff_blob_to_png_bytes(blob)
-        ext = ".png"
-    blob, ext = optimize_image_blob(blob, ext, filename_stem)
-    _unlink_stem_extension_variants(algae_images_dir, filename_stem, ext)
-    filename = f"{filename_stem}{ext}"
-    output_file = algae_images_dir / filename
-    output_file.write_bytes(blob)
-    public_prefix = images_public_prefix.rstrip("/")
-    return f"{public_prefix}/{safe_name}/{filename}"
+    return save_web_image(
+        blob,
+        extension,
+        images_output_dir=images_output_dir,
+        dir_slug=species_image_dir_slug(algae_name),
+        stem=filename_stem,
+        images_public_prefix=images_public_prefix,
+    )
 
 
 def _flush_missing_image_caption(current: dict[str, Any]) -> None:

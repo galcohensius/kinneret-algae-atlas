@@ -11,14 +11,11 @@ Section splitting heuristic:
   - Everything else accumulates as rich-text lines under the current section.
 """
 
-from io import BytesIO
 from pathlib import Path
 from typing import Any
 import re
 
-from PIL import Image
-
-from .image_optimize import optimize_image_blob
+from .image_optimize import save_web_image
 from .reader import iter_docx_content_blocks, source_modified_date, unmap_script_glyphs
 
 
@@ -84,35 +81,6 @@ def _section_key(heading: str) -> str:
     return key or "content"
 
 
-def _save_image(
-    blob: bytes,
-    extension: str,
-    images_output_dir: Path,
-    slug: str,
-    stem: str,
-    images_public_prefix: str,
-) -> str:
-    img_dir = images_output_dir / slug
-    img_dir.mkdir(parents=True, exist_ok=True)
-
-    ext = extension.lower()
-    if ext in (".tif", ".tiff"):
-        buf = BytesIO()
-        Image.open(BytesIO(blob)).save(buf, format="PNG")
-        blob = buf.getvalue()
-        ext = ".png"
-
-    blob, ext = optimize_image_blob(blob, ext, stem)
-
-    for existing in img_dir.glob(f"{stem}.*"):
-        if existing.suffix.lower() != ext:
-            existing.unlink()
-
-    out_path = img_dir / f"{stem}{ext}"
-    out_path.write_bytes(blob)
-    return f"{images_public_prefix}/{slug}/{stem}{ext}"
-
-
 # ---------------------------------------------------------------------------
 # Public API
 # ---------------------------------------------------------------------------
@@ -162,11 +130,11 @@ def extract_supplement(
             # Save image and hold it until we know if next paragraph is a caption.
             if images_output_dir is not None:
                 stem = f"figure-{image_counter}"
-                path = _save_image(
-                    blob=block["blob"],
-                    extension=block["extension"],
+                path = save_web_image(
+                    block["blob"],
+                    block["extension"],
                     images_output_dir=images_output_dir,
-                    slug=slug,
+                    dir_slug=slug,
                     stem=stem,
                     images_public_prefix=images_public_prefix,
                 )
