@@ -8,7 +8,7 @@ from pathlib import Path
 
 from docx import Document
 
-from algae_extractor.reader import source_modified_date
+from algae_extractor.reader import paragraph_clean_text, source_modified_date
 
 
 SECTION_HEADINGS = {
@@ -50,7 +50,7 @@ def parse_about_docx(docx_path: Path) -> dict:
     current_person: dict | None = None
 
     for para in doc.paragraphs:
-        text = (para.text or "").strip()
+        text = paragraph_clean_text(para).strip()
         if not text:
             continue
 
