@@ -4,7 +4,6 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import type { VisualIndexSection } from "../../lib/visual-index-layout";
 import { ORIGIN_PARAM, VISUAL_INDEX_ORIGIN } from "../../lib/index-view";
-import { formatPhylumLabel } from "../../lib/phylum-catalog";
 import { splitIntoBalancedRows } from "../../lib/split-balanced-rows";
 import TaxonItalicName from "./TaxonItalicName";
 
@@ -23,11 +22,7 @@ function buildPhylumLegend(sections: VisualIndexSection[]): PhylumLegendEntry[] 
   for (const section of sections) {
     for (const cell of section.cells) {
       if (!seen.has(cell.phylum)) {
-        seen.set(cell.phylum, {
-          phylum: cell.phylum,
-          label: formatPhylumLabel(cell.phylum),
-          accent: cell.accent,
-        });
+        seen.set(cell.phylum, { phylum: cell.phylum, label: cell.phylum, accent: cell.accent });
       }
     }
   }
