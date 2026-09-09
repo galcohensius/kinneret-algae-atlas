@@ -60,9 +60,11 @@ function gridManhattan(a: GridPlacement, b: GridPlacement): number {
   return Math.abs(a.col - b.col) + Math.abs(a.row - b.row);
 }
 
+/** Desktop column cap shared by every morphotype group that does not fit on one row. */
+export const SHAPE_GROUP_MAX_COLS = 5;
+
 function shapeGroupColumnCount(count: number): number {
-  if (count <= 5) return count;
-  return Math.max(1, Math.ceil(Math.sqrt(count)));
+  return Math.max(1, Math.min(count, SHAPE_GROUP_MAX_COLS));
 }
 
 function buildCell(record: AlgaeRecord, col: number, row: number, shapeGroup: VisualShapeGroup): VisualIndexCell {

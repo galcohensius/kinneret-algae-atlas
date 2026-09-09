@@ -557,7 +557,7 @@ main.home {
 
 .visual-index-grid {
   display: grid;
-  grid-template-columns: repeat(var(--visual-index-cols, 7), minmax(72px, 96px));
+  grid-template-columns: repeat(var(--visual-index-cols, 5), minmax(72px, 96px));
   gap: 0.65rem;
   justify-content: center;
 }

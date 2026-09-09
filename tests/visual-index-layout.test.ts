@@ -3,10 +3,11 @@ import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { normalizeAlgaeRecords, type RawAlgaeRecord } from "../lib/algae";
 import {
-  averageGridDistanceForMorphologyThreshold,
   buildVisualIndexSections,
   computeVisualIndexLayout,
   morphologyDistance,
+  SHAPE_GROUP_MAX_COLS,
+  type VisualIndexSection,
 } from "../lib/visual-index-layout";
 import { classifyVisualShapeGroup } from "../lib/visual-shape-group";
 import { normalizeMorphology } from "../lib/morphology-normalize";
@@ -28,6 +29,28 @@ function gridDistance(
     throw new Error(`Missing placement for ${slugA} or ${slugB}`);
   }
   return Math.abs(a.col - b.col) + Math.abs(a.row - b.row);
+}
+
+function sectionColumnCount(section: VisualIndexSection): number {
+  return Math.max(...section.cells.map((cell) => cell.col)) + 1;
+}
+
+function sectionRowCounts(section: VisualIndexSection): number[] {
+  const counts = new Map<number, number>();
+  for (const cell of section.cells) {
+    counts.set(cell.row, (counts.get(cell.row) ?? 0) + 1);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([, count]) => count);
+}
+
+function expectedRowCounts(count: number, cols: number): number[] {
+  const fullRows = Math.floor(count / cols);
+  const remainder = count % cols;
+  const rows = Array.from({ length: fullRows }, () => cols);
+  if (remainder > 0) rows.push(remainder);
+  return rows;
 }
 
 describe("visual-index-layout", () => {
@@ -139,6 +162,17 @@ describe("visual-index-layout", () => {
     expect(filamentSection).toBeDefined();
     const rows = new Set(filamentSection!.cells.map((cell) => cell.row));
     expect(rows.size).toBe(1);
+  });
+
+  it("uses a shared 5-column cap for every large morphotype group", () => {
+    const sections = buildVisualIndexSections(records);
+    expect(sections.length).toBeGreaterThan(0);
+
+    for (const section of sections) {
+      const cols = Math.min(section.cells.length, SHAPE_GROUP_MAX_COLS);
+      expect(sectionColumnCount(section)).toBe(cols);
+      expect(sectionRowCounts(section)).toEqual(expectedRowCounts(section.cells.length, cols));
+    }
   });
 
   it("returns shape groups in catalog order with labels", () => {
