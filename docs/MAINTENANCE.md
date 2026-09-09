@@ -1,7 +1,8 @@
 # Maintaining the Kinneret Algae Atlas
 
 This document is for maintainers. It covers how to update the published atlas when the
-source Word files change, and how the data pipeline fits together.
+source Word files change, and how the data pipeline fits together. Local setup, npm
+scripts, routes, and GitHub Pages deploy: [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ## Pipeline overview
 

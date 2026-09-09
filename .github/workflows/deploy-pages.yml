@@ -1,5 +1,5 @@
-# Build static site and deploy to GitHub Pages (site at domain root; see README "Deploy"
-# for /repo-name/ builds via NEXT_PUBLIC_BASE_PATH).
+# Build static site and deploy to GitHub Pages (site at domain root; see
+# docs/DEVELOPMENT.md "Deploy" for /repo-name/ builds via NEXT_PUBLIC_BASE_PATH).
 # Repo settings → Pages → Build: GitHub Actions.
 
 name: Deploy to GitHub Pages
