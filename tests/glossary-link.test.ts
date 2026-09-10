@@ -64,6 +64,29 @@ describe("linkGlossaryInPlainText", () => {
     expect(parts.some((p) => p.type === "term" && p.text === "pyrenoids")).toBe(true);
   });
 
+  it("links an all-caps acronym only in its uppercase form", () => {
+    const entries: GlossaryEntry[] = [
+      {
+        term: "DO",
+        slug: "do",
+        definition: "dissolved oxygen",
+        letter: "D",
+        match_phrases: ["DO"],
+      },
+    ];
+    const phrases = buildGlossaryMatchPhrases(entries);
+    expect(
+      linkGlossaryInPlainText("DO concentration was low", phrases).some(
+        (p) => p.type === "term" && p.text === "DO"
+      )
+    ).toBe(true);
+    expect(
+      linkGlossaryInPlainText("we do not have a culture of it", phrases).every(
+        (p) => p.type === "text"
+      )
+    ).toBe(true);
+  });
+
   it("links multi-word terms across segment boundaries when joined", () => {
     const entries: GlossaryEntry[] = [
       {

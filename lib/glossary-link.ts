@@ -27,10 +27,15 @@ function phraseToPattern(phrase: string): string {
   return `${esc}s?`;
 }
 
+/** All-caps headwords are acronyms (DO, DOC, DON, DOP) whose lowercase forms are ordinary English words. */
+function isAcronym(phrase: string): boolean {
+  return /^\p{Lu}{2,}$/u.test(phrase);
+}
+
 function compilePhraseRegex(phrase: string): RegExp {
   return new RegExp(
     `${WORD_BOUNDARY_BEFORE}${phraseToPattern(phrase)}${WORD_BOUNDARY_AFTER}`,
-    "giu"
+    isAcronym(phrase) ? "gu" : "giu"
   );
 }
 
