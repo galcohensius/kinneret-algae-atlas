@@ -6041,9 +6041,9 @@
     ],
     "image_captions": [
       "",
-      "Plate 1. Aulacoseira granulata from Lake Kinneret. (a) A typical actively growing planktonic filament, with equal length marginal spines at the perimeter of the end-cell, these are the so-called linking spines which hold adjacent cells together. The chloroplasts fill the entire cells. (b) Auxospore (made by sexual reproduction) at the end of a filament. (c) End cell with apical spines. (d) Aulacoseira granulata (thick filament) next to Aulacoseira granulata var angustissima (thin filament). (e) A filament that was resuspended from the sediments not long before sampling. The chloroplasts are compacted and do not fill the entire cell volume. Photos by Alla Alster.",
-      "Figure 1. Time series of Aulacoseira granulata depth-integrated wet-weight biomass (g m⁻², upper panel) and mean epilimnion cell abundance (cells mL⁻¹, lower panel), Lake Kinneret, 1970-2020.",
-      "Figure 2. Morphological characteristics and seasonal patterns in Aulacoseira granulata: (a) the negative relationship between cell diameter and cell length; (b) frequency distribution for the number of cells per filament; (c) the annual cycle of cell abundance; (d) the annual cycle of the number of cells per filament. Data are for field populations from Lake Kinneret, 1982-2020.",
+      "Plate 1. Aulacoseira granulata from Lake Kinneret. (a) A typical actively growing planktonic filament, with equal length marginal spines at the perimeter of the end-cell, these are the so-called linking spines which hold adjacent cells together. The chloroplasts fill the entire cells. (b) Auxospore (made by sexual reproduction) – the huge ellipsoid cell at the end of a filament. (c) End cell with apical spines. (d) Aulacoseira granulata (thick filament) next to Aulacoseira granulata var angustissima (thin filament). (e) A filament that was resuspended from the sediments not long before sampling. The chloroplasts are compacted and do not fill the entire cell volume. Photos by Alla Alster.",
+      "Figure 1. Time series of Aulacoseira granulata depth-integrated wet-weight biomass (g m⁻², upper panel) and mean water column cell abundance (cells mL⁻¹, lower panel), Lake Kinneret, 1970-2020.",
+      "Figure 2. Morphological characteristics and seasonal patterns in Aulacoseira granulata: (a) a significant negative relationship between cell diameter and cell length; (b) frequency distribution for the number of cells per filament; (c) the annual cycle of cell abundance; (d) the annual cycle of the filament size (cells/filament). Data are for field populations from Lake Kinneret, 1982-2020.",
       "Fig. 3. Time series of A. granulata biomass and Si concentration (0-10 m average), Lake Kinneret at Sta. A, 1997-2004, showing a sharp decline of Si in winters with a substantial A. granulata bloom, but that Si never declines below 4 mg L⁻¹."
     ],
     "image_captions_rich": [
@@ -6070,7 +6070,7 @@
           "bold": false
         },
         {
-          "text": " from Lake Kinneret. (a) A typical actively growing planktonic filament, with equal length marginal spines at the perimeter of the end-cell, these are the so-called linking spines which hold adjacent cells together. The chloroplasts fill the entire cells. (b) Auxospore (made by sexual reproduction) at the end of a filament. (c) End cell with apical spines. (d) ",
+          "text": " from Lake Kinneret. (a) A typical actively growing planktonic filament, with equal length marginal spines at the perimeter of the end-cell, these are the so-called linking spines which hold adjacent cells together. The chloroplasts fill the entire cells. (b) Auxospore (made by sexual reproduction) – the huge ellipsoid cell at the end of a filament. (c) End cell with apical spines. (d) ",
           "italic": false,
           "bold": false
         },
@@ -6158,7 +6158,7 @@
           "superscript": true
         },
         {
-          "text": ", upper panel) and mean epilimnion cell abundance (cells mL",
+          "text": ", upper panel) and mean water column cell abundance (cells mL",
           "italic": false,
           "bold": false
         },
@@ -6196,7 +6196,7 @@
           "bold": false
         },
         {
-          "text": ": (a) the negative relationship between cell diameter and cell length; (b) frequency distribution for the number of cells per filament; (c) the annual cycle of cell abundance; (d) the annual cycle of the number of cells per filament. Data are for field populations from Lake Kinneret, 1982-2020.",
+          "text": ": (a) a significant negative relationship between cell diameter and cell length; (b) frequency distribution for the number of cells per filament; (c) the annual cycle of cell abundance; (d) the annual cycle of the filament size (cells/filament). Data are for field populations from Lake Kinneret, 1982-2020.",
           "italic": false,
           "bold": false
         }
@@ -6270,17 +6270,17 @@
       "color": "golden-brown",
       "cell_shape": "cylinder",
       "colony_shape": "filament, made of a chain of cylindrical cells",
-      "cell_diameter_d": "9-16 µm (median 12.6) (N=241).",
-      "cell_length_l": "27-37 µm (median 31 µm).",
-      "biovolume_per_cell": "2000-9000 μm³, median: 4000 μm³.",
-      "biovolume_equation": "Cylinder, V = 2 π L (D/2)². Or: regression eqn. based on >500 measurements of both D and L with V computed for a cylinder: V=50.538D¹.⁷¹⁹⁷).",
-      "filament_length": "150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b).",
+      "cell_diameter_d": "9-16 µm (median 12.6) (N=241)",
+      "cell_length_l": "27-37 µm (median 31 µm)",
+      "biovolume_per_cell": "2000-9000 μm³, median: 4000 μm³",
+      "biovolume_equation": "Cylinder, V = 2 π L (D/2)². Or: regression eqn. based on >500 measurements of both D and L with V computed for a cylinder: V=50.538D¹.⁷¹⁹⁷)",
+      "filament_length": "150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b)",
       "cells_per_filament": "5-28 (median: 14)",
       "indicator_species": "oligohalobious-indifferent, alkaliphilous, oligosaprobic to mesosaprobic, inhabits eutrophic waters. The variety angustissima is an indicator of greater water eutrophication. It is oligohalobious-indifferent, alkaliphilous, mesosaprobic (Ehrlich 1995).",
-      "morphological_features": "A filamentous centric diatom, with cylinder-shaped cells, interconnected by means of delicate spines in one cell that interlock into matching grooves in the neighboring cell. The spines can be seen in end-cells (Plate 1a, c) and are diagnostic of the species. Each cell is made of two valves that fit into each other like the two parts of a petri dish. In lake Kinneret, cell diameter ranges 9-16 µm (median 11.5), cell length 27-37 µm (median 31 µm); the filaments are straight, with 5-28 cells per filament. The valves are decorated with rows of areoles (perforations), 9-15 such rows (= striae) per 10 µm, straight or slightly curved (Plate 1b, c, e). Straight and curved striae may occur together on adjacent cells of a single filament or even in one cell. The areoles vary greatly in size. In Lake Kinneret the filaments are always straight, the curled morphotype is absent.\nUnder light microscope A. granulata frustules are usually seen in girdle view, showing the long, straight filaments (Plate 1). Aulacoseira granulata is polymorphic regarding size, diameter/length ratio and striation. Strongly silicified forms with coarse, irregularly spaced areoles are termed Aulacoseira (Melosira) granulata var. valida (Hustedt) Simonsen 1979. In Lake Kinneret intermediate forms between this variety and the nominate are frequent (Ehrlich 1995).\nVegetative cell division is the asexual, ordinary way of Aulacoseira granulata reproduction. Cell division results in progressively smaller frustules until a specific minimum valve diameter is attained. A reestablishment of the maximum size is then achieved by sexual reproduction with auxospore (zygote) formation (Plate 1b; O’Farrel et al. 2001). The huge auxospore of A. granulata “resets” the cell size for the next growing season. In Lake Kinneret Aulacoseira granulata auxospores were seen rarely.\nA variety of the species found in Lake Kinneret is Aulacoseira granulata var. angustissima (O.F. Müller) Simonsen 1979 (Plate 1d). This variety differs from the nominate variety by its very narrow valve. Cell diameter < 4 µm (as opposed to 9-16 µm in the nominate variety), cell length 12 – 25 µm, diameter/length ratio is about 1/5 – 1/8 (Ehrlich 1995).",
-      "distinctive_attributes": "filamentous, abundant in winter, sharp spines at end cell.",
-      "ecology": "The species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis (Jan-Feb) when it occupies the entire 40 m water column. Major A. granulata blooms were recorded in Jan-Feb 1988; 1999; 2001 (Fig. 1). This is the only species in Lake Kinneret besides Peridinium gatunense that ever-reaches depth-integrated biomass exceeding 100 g m⁻² and on 3 occasions > 250 g m⁻² (Fig. 1). In recent years its abundance has declined.\nThe strongly silicified forms of Lake Kinneret A. granulata require optimal turbulence to maintain them in the fully mixed water column in winter (Ehrlich 1995). Once stratification sets off in March, they sink to the sediments and rest there in a dormant form with compressed chloroplasts (Plate 1e) till resuspended with turnover in the following winter (Fig. 2c). A strong negative relationship exists between cell-diameter and cell-length (R² = 0.37 on field material; Fig. 2a). Filament size is highly variable; most filaments will contain between 5 and 28 cells (Fig. 2b). Filament size shows a strong seasonal pattern, being largest in winter, smallest in summer (Fig. 2d). Zohary et al. (2017) hypothesized that this seasonal pattern may be to reduce sinking rates in winter.\nThe need for Si for its frustule is apparent: during blooms the Si concentration in the epilimnion of Lake Kinneret declines dramatically (Fig. 3). But it never declines below 4 mg L⁻¹, suggesting that another factor causes the bloom decline.\nInternationally, this cosmopolitan species is widespread in the phytoplankton of lakes, ponds, reservoirs and rivers. It is typical of carbonate-rich, moderately eutrophic to eutrophic waters. It is used as indicator species of water with relatively low salts concentrations, pH < 9, and high silica concentrations. The variety angustissima is rare in Kinneret compared to the nominate variety. It is known to be mesosaprobic, common in more eutrophic water bodies than the nominate variety, indicator of water eutrophication.",
-      "physiological_features": "Monitoring data (cell abundance, chlorophyll concentrations, primary production) from bloom events, when A. granulata biomass contributed > 60% of total phytoplankton biomass, were used by Yacobi & Zohary (2010) to derive the physiological parameters given in Table 1. Notably, A. granulata exhibited particularly low assimilation numbers and long turnover times. This species grows relatively slowly.\nTable 1. Physiological parameters for A. granulata based on field measurements\n\nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 26 ± 11 | 87\nAssimilation number (at depth of max photosynthesis), mgC mg Chl⁻¹ h⁻¹ | 2.0 ± 0.4 | 7\nTurnover time, d | 1.5 ± 0.7 | 7",
+      "morphological_features": "A filamentous centric diatom, with cylinder-shaped cells, interconnected by means of delicate spines in one cell that interlock into matching grooves in the neighboring cell. The spines can be seen in end-cells (Plate 1a, c) and are diagnostic of the species. Each cell is made of two valves that fit into each other like the two parts of a petri dish. In lake Kinneret, cell diameter ranges 9-16 µm (median 11.5), cell length 27-37 µm (median 31 µm); the filaments are straight, with 5-28 cells per filament. The valves are decorated with straight or slightly curved rows of areoles (pores, perforations), 9-15 such rows (= striae) per 10 µm (Plate 1b, c, e). Straight and curved striae may occur together on adjacent cells of a single filament or even in one cell. The areoles vary greatly in size.\nUnder light microscope A. granulata frustules are usually seen in girdle view, showing the long, filaments (Plate 1). In Lake Kinneret the filaments are always straight, the curled morphotype is absent. The species is known to be polymorphic regarding size, diameter/length ratio and striation. Strongly silicified forms with coarse, irregularly spaced areoles are termed Aulacoseira (Melosira) granulata var. valida (Hustedt) Simonsen 1979. In Lake Kinneret intermediate forms between this variety and the nominate are frequent (Ehrlich 1995).\nAsexual vegetative cell division is the ordinary way of Aulacoseira granulata reproduction. Cell division results in progressively smaller frustules until a specific minimum valve diameter is attained. A reestablishment of the maximum size is then achieved by sexual reproduction with auxospore (zygote) formation (Plate 1b; O’Farrel et al. 2001). The huge auxospore of A. granulata “resets” the cell size for the next growing season. In Lake Kinneret Aulacoseira granulata auxospores were seen rarely.\nA variety of the species found in Lake Kinneret is Aulacoseira granulata var. angustissima (O.F. Müller) Simonsen 1979 (Plate 1d). This variety differs from the nominate by its much narrower cells. Cell diameter < 4 µm (as opposed to 9-16 µm in the nominate variety), cell length 12 – 25 µm, diameter/length ratio is about 1/5 – 1/8 (Ehrlich 1995).",
+      "distinctive_attributes": "filamentous, sharp spines at end cell, abundant during winter holomixis",
+      "ecology": "The ecology of A. granulata is strongly tied to mixing, sinking, filament morphology and seasonal physical conditions. It is a planktonic, filament-forming diatom characteristic of well-mixed, relatively nutrient-rich waters. Its heavy silicified frustules make individual filaments relatively dense, in calm water they sink quicker than other phytoplankton and depend on turbulence to remain suspended in the water column. This explains why in stratified lakes like Kinneret Aulacoseira species occur during periods of strong vertical mixing.\nThe species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis when it occupies the entire 40 m water column. Major A. granulata blooms were recorded 1988; 1999; 2001 (Fig. 1). Those blooms always occur in Jan-Feb; at other times of the year it is occasionally present at low background levels (Fig. 2 c). A. granulata is the only species in Lake Kinneret besides Peridinium gatunense that ever-reaches depth-integrated biomass exceeding 100 g m⁻² and on 3 occasions > 250 g m⁻² (Fig. 1). In recent years its abundance has declined.\nThe strongly silicified forms of Lake Kinneret A. granulata require optimal turbulence to maintain them in the fully mixed water column in winter (Ehrlich 1995). Once stratification sets off in March, they sink to the sediments and rest there in a dormant form with compressed chloroplasts (Plate 1e) till resuspended with turnover in the following winter (Fig. 2c). A strong negative relationship exists between cell-diameter and cell-length (R² = 0.37 on field material; Fig. 2a). Filament size is highly variable; most filaments will contain between 5 and 28 cells (Fig. 2b). Filament size shows a strong seasonal pattern, being largest in winter, smallest in summer (Fig. 2d). Zohary et al. (2017) hypothesized that this seasonal pattern may be a strategy to prevent increased sinking rates under the cooler winter water temperatures.\nThe need for Si for its frustule is apparent: during blooms the Si concentration in the epilimnion of Lake Kinneret declines dramatically (Fig. 3). But it never declines below 4 mg L⁻¹, suggesting that another factor causes the bloom decline.\nInternationally, this cosmopolitan species is widespread in the phytoplankton of lakes, ponds, reservoirs and rivers. It is typical of carbonate-rich, moderately eutrophic to eutrophic waters. It is used as indicator species of water with relatively low salts concentrations, pH < 9, and high silica concentrations. The variety angustissima is rare in Kinneret compared to the nominate variety. It is known to be mesosaprobic, common in more eutrophic water bodies than the nominate variety, indicator of water eutrophication.",
+      "physiological_features": "Monitoring data (cell abundance, chlorophyll concentrations, primary production) from bloom events, when A. granulata biomass contributed > 60% of total phytoplankton biomass, were used by Yacobi & Zohary (2010) to derive the physiological parameters given in Table 1. Notably, A. granulata exhibited particularly low assimilation numbers and long turnover times. This species grows relatively slowly.\nTable 1. Physiological parameters for A. granulata based on field measurements\n\nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 26 ± 11 | 87\nAssimilation number (at depth of max photosynthesis), mg C mg Chl⁻¹ h⁻¹ | 2.0 ± 0.4 | 7\nTurnover time, d | 1.5 ± 0.7 | 7",
       "environmental_conditions": "A. granulata is an indicator species of water with low concentrations of salts, pH less than 9 (Talling and Talling 1965) and high silica concentration (Kilham 1971). This species occurs in Lake Kinneret when water temperatures are below 18⁰C, at short wave radiation levels <200 Watt m⁻², at conductivity > 1000 μS cm⁻¹ and Cl⁻ concentrations spanning most of the range observed but not exceeding 300 mg L⁻¹. Its higher abundances occurred at Ca concentration >45 mg L⁻¹, alkalinity >120 mg CaCO₃ L⁻¹, at the higher levels of total dissolved phosphorus, nitrate and ammonium recorded in the lake, and at pH below 8.8.",
       "further_reading": "Ehrlich A. 1995. Atlas of the inland-water diatom flora of Israel. Flora Palaestina. Jerusalem: The Israeli Academy of Sciences and Humanities, 166 pp.\nKilham P. 1971. A hypothesis concerning silica and the freshwater planktonic diatoms. Limnology and oceanography. 16:8-10.\nKilham SS, Kilham P. 1975. Melosira granulata (Ehr.) Ralfs: morphology and ecology of a cosmopolitan freshwater diatom. Internationale Vereinigung für theoretische und angewandte Limnologie: Verhandlungen. 19(4):2716-21.\nO’Farrell I, Tell G, Podlejski A. 2001. Morphological variability of Aulacoseira granulata (Her.) Simonsen (Bacillariophyceae) in the Lower Parana River (Argentina). Limnology 2: 65-71.\nPollingher U. 1986. Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nTalling JF, Talling IB. 1965. The chemical composition of African lake waters. Internationale Revue der gesamten Hydrobiologie und Hydrographie. 50: 421-463.\nYacobi YZ, Zohary T. 2010. Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L. 2017. Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7(2): 200-209."
     },
@@ -6390,14 +6390,14 @@
       ],
       "cell_diameter_d": [
         {
-          "text": "9-16 µm (median 12.6) (N=241).",
+          "text": "9-16 µm (median 12.6) (N=241)",
           "italic": false,
           "bold": false
         }
       ],
       "cell_length_l": [
         {
-          "text": "27-37 µm (median 31 µm).",
+          "text": "27-37 µm (median 31 µm)",
           "italic": false,
           "bold": false
         }
@@ -6424,11 +6424,6 @@
           "italic": false,
           "bold": false,
           "superscript": true
-        },
-        {
-          "text": ".",
-          "italic": false,
-          "bold": false
         }
       ],
       "biovolume_equation": [
@@ -6455,14 +6450,14 @@
           "superscript": true
         },
         {
-          "text": ").",
+          "text": ")",
           "italic": false,
           "bold": false
         }
       ],
       "filament_length": [
         {
-          "text": "150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b).",
+          "text": "150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b)",
           "italic": false,
           "bold": false
         }
@@ -6493,7 +6488,7 @@
       ],
       "morphological_features": [
         {
-          "text": "A filamentous centric diatom, with cylinder-shaped cells, interconnected by means of delicate spines in one cell that interlock into matching grooves in the neighboring cell. The spines can be seen in end-cells (Plate 1a, c) and are diagnostic of the species. Each cell is made of two valves that fit into each other like the two parts of a petri dish. In lake Kinneret, cell diameter ranges 9-16 µm (median 11.5), cell length 27-37 µm (median 31 µm); the filaments are straight, with 5-28 cells per filament. The valves are decorated with rows of ",
+          "text": "A filamentous centric diatom, with cylinder-shaped cells, interconnected by means of delicate spines in one cell that interlock into matching grooves in the neighboring cell. The spines can be seen in end-cells (Plate 1a, c) and are diagnostic of the species. Each cell is made of two valves that fit into each other like the two parts of a petri dish. In lake Kinneret, cell diameter ranges 9-16 µm (median 11.5), cell length 27-37 µm (median 31 µm); the filaments are straight, with 5-28 cells per filament. The valves are decorated with straight or slightly curved rows of ",
           "italic": false,
           "bold": false
         },
@@ -6503,7 +6498,7 @@
           "bold": true
         },
         {
-          "text": " (perforations), 9-15 such rows (= ",
+          "text": " (pores, perforations), 9-15 such rows (= ",
           "italic": false,
           "bold": false
         },
@@ -6513,7 +6508,7 @@
           "bold": true
         },
         {
-          "text": ") per 10 µm, straight or slightly curved (Plate 1b, c, e). Straight and curved striae may occur together on adjacent cells of a single filament or even in one cell. The areoles vary greatly in size. In Lake Kinneret the filaments are always straight, the curled morphotype is absent.\nUnder light microscope ",
+          "text": ") per 10 µm (Plate 1b, c, e). Straight and curved striae may occur together on adjacent cells of a single filament or even in one cell. The areoles vary greatly in size.\nUnder light microscope ",
           "italic": false,
           "bold": false
         },
@@ -6553,27 +6548,7 @@
           "bold": true
         },
         {
-          "text": ", showing the long, straight filaments (Plate 1). ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Aulacoseira",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "granulata",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " is polymorphic regarding size, diameter/length ratio and striation. Strongly silicified forms with coarse, irregularly spaced areoles are termed ",
+          "text": ", showing the long, filaments (Plate 1). In Lake Kinneret the filaments are always straight, the curled morphotype is absent. The species is known to be polymorphic regarding size, diameter/length ratio and striation. Strongly silicified forms with coarse, irregularly spaced areoles are termed ",
           "italic": false,
           "bold": false
         },
@@ -6613,7 +6588,7 @@
           "bold": false
         },
         {
-          "text": " (Hustedt) Simonsen 1979. In Lake Kinneret intermediate forms between this variety and the nominate are frequent (Ehrlich 1995).\nVegetative cell division is the asexual, ordinary way of ",
+          "text": " (Hustedt) Simonsen 1979. In Lake Kinneret intermediate forms between this variety and the nominate are frequent (Ehrlich 1995).\nAsexual vegetative cell division is the ordinary way of ",
           "italic": false,
           "bold": false
         },
@@ -6683,21 +6658,21 @@
           "bold": false
         },
         {
-          "text": " auxospores were seen rarely.\nA variety of the species found in Lake Kinneret is Aulacoseira granulata var. angustissima (O.F. Müller) Simonsen 1979 (Plate 1d). This variety differs from the nominate variety by its very narrow valve. Cell diameter < 4 µm (as opposed to 9-16 µm in the nominate variety), cell length 12 – 25 µm, diameter/length ratio is about 1/5 – 1/8 (Ehrlich 1995).",
+          "text": " auxospores were seen rarely.\nA variety of the species found in Lake Kinneret is Aulacoseira granulata var. angustissima (O.F. Müller) Simonsen 1979 (Plate 1d). This variety differs from the nominate by its much narrower cells. Cell diameter < 4 µm (as opposed to 9-16 µm in the nominate variety), cell length 12 – 25 µm, diameter/length ratio is about 1/5 – 1/8 (Ehrlich 1995).",
           "italic": false,
           "bold": false
         }
       ],
       "distinctive_attributes": [
         {
-          "text": "filamentous, abundant in winter, sharp spines at end cell.",
+          "text": "filamentous, sharp spines at end cell, abundant during winter holomixis",
           "italic": false,
           "bold": false
         }
       ],
       "ecology": [
         {
-          "text": "The species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis (Jan-Feb) when it occupies the entire 40 m water column. Major ",
+          "text": "The ecology of ",
           "italic": false,
           "bold": false
         },
@@ -6717,7 +6692,57 @@
           "bold": false
         },
         {
-          "text": " blooms were recorded in Jan-Feb 1988; 1999; 2001 (Fig. 1). This is the only species in Lake Kinneret besides ",
+          "text": " is strongly tied to mixing, sinking, filament morphology and seasonal physical conditions. It is a planktonic, filament-forming diatom characteristic of well-mixed, relatively nutrient-rich waters. Its heavy silicified frustules make individual filaments relatively dense, in calm water they sink quicker than other phytoplankton and depend on turbulence to remain suspended in the water column. This explains why in stratified lakes like Kinneret ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aulacoseira",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " species occur during periods of strong vertical mixing.\nThe species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis when it occupies the entire 40 m water column. Major ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " blooms were recorded 1988; 1999; 2001 (Fig. 1). Those blooms always occur in Jan-Feb; at other times of the year it is occasionally present at low background levels (Fig. 2 c). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "granulata",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is the only species in Lake Kinneret besides ",
           "italic": false,
           "bold": false
         },
@@ -6790,7 +6815,7 @@
           "superscript": true
         },
         {
-          "text": " = 0.37 on field material; Fig. 2a). Filament size is highly variable; most filaments will contain between 5 and 28 cells (Fig. 2b). Filament size shows a strong seasonal pattern, being largest in winter, smallest in summer (Fig. 2d). Zohary et al. (2017) hypothesized that this seasonal pattern may be to reduce sinking rates in winter.\nThe need for Si for its frustule is apparent: during blooms the Si concentration in the epilimnion of Lake Kinneret declines dramatically (Fig. 3). But it never declines below 4 mg L",
+          "text": " = 0.37 on field material; Fig. 2a). Filament size is highly variable; most filaments will contain between 5 and 28 cells (Fig. 2b). Filament size shows a strong seasonal pattern, being largest in winter, smallest in summer (Fig. 2d). Zohary et al. (2017) hypothesized that this seasonal pattern may be a strategy to prevent increased sinking rates under the cooler winter water temperatures.\nThe need for Si for its frustule is apparent: during blooms the Si concentration in the epilimnion of Lake Kinneret declines dramatically (Fig. 3). But it never declines below 4 mg L",
           "italic": false,
           "bold": false
         },
@@ -6898,7 +6923,7 @@
           "bold": false
         },
         {
-          "text": " based on field measurements\n\nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 26 ± 11 | 87\nAssimilation number (at depth of max photosynthesis), mgC mg Chl⁻¹ h⁻¹ | 2.0 ± 0.4 | 7\nTurnover time, d | 1.5 ± 0.7 | 7",
+          "text": " based on field measurements\n\nPhysiological parameter | Average ± SD | N\nC:Chl ratio | 26 ± 11 | 87\nAssimilation number (at depth of max photosynthesis), mg C mg Chl⁻¹ h⁻¹ | 2.0 ± 0.4 | 7\nTurnover time, d | 1.5 ± 0.7 | 7",
           "italic": false,
           "bold": false
         }
@@ -7065,7 +7090,17 @@
           "bold": false
         },
         {
-          "text": " (Her.) Simonsen (Bacillariophyceae) in the Lower Parana River (Argentina). Limnology 2: 65-71.\nPollingher U. 1986. Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nTalling JF, Talling IB. 1965. The chemical composition of African lake waters. Internationale Revue der gesamten Hydrobiologie und Hydrographie. 50: 421-463.\nYacobi YZ, Zohary T. 2010. Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L. 2017. Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. ",
+          "text": " (Her.) Simonsen (Bacillariophyceae) in the Lower Parana River (Argentina). Limnology 2: 65-71.\nPollingher U. 1986. Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nTalling JF, Talling IB. 1965. The chemical composition of African lake waters. Internationale Revue der gesamten Hydrobiologie und Hydrographie. 50: 421-463.\nYacobi YZ, Zohary T. 2010. Carbon:chlorophyll ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "a",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L. 2017. Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. ",
           "italic": false,
           "bold": false
         },
@@ -7092,8 +7127,8 @@
       ]
     },
     "metadata": {
-      "source_file": "Aulacoseira granulata.docx",
-      "record_updated": "2026-08-30"
+      "source_file": "Aulacoseira granulata 2026-09-01.docx",
+      "record_updated": "2026-09-01"
     }
   },
   {
@@ -12902,6 +12937,720 @@
     "metadata": {
       "source_file": "Cryptophytes 2026-08-17.docx",
       "record_updated": "2026-08-17"
+    }
+  },
+  {
+    "scientific_name": "Stephanocyclus meneghinianus (Kützing) Kukikovskiy, Genkal & Kociolek 2022",
+    "images": [
+      "/algae-images/stephanocyclus-meneghinianus/thumbnail-1.jpg",
+      "/algae-images/stephanocyclus-meneghinianus/plate-1.jpg",
+      "/algae-images/stephanocyclus-meneghinianus/plate-2.jpg",
+      "/algae-images/stephanocyclus-meneghinianus/figure-1.png",
+      "/algae-images/stephanocyclus-meneghinianus/figure-2.png",
+      "/algae-images/stephanocyclus-meneghinianus/figure-3.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Stephanocyclus meneghinianus seen from the side (girdle view). The S-shape of the valve in girdle view (distinct in the right-most cell) is diagnostic. Usually this species is unicellular, but occasionally after division two cells remain attached, as in the right specimen. Photo by Alla Alster.",
+      "Plate 2. Stephanocyclus meneghinianus from valve view. Note stria (=radiating lines) around cell periphery. Photo by Alla Alster.",
+      "Figure 1. Time series of Stephanocyclus meneghinianus mean epilimnion cell abundance (cells mL⁻¹), Lake Kinneret, 1970-2020.",
+      "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (right) of Stephanocyclus meneghinianus, based on data for 2005-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively. The high variability in cell size from May to December is partly due to few measurements, as the species is rare during those months.",
+      "Figure 3. Stephanocyclus meneghinianus abundance (cells mL⁻¹) vs. selected environmental parameters recorded at the site and time of sampling, showing higher cell concentrations when the lake is fully mixed (zₘᵢₓ >35 m), water temperature is low and Ca and alkalinity are high. Abundance increases with nitrate. Based on data for 2012-2020."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " seen from the side (girdle view). The S-shape of the valve in girdle view (distinct in the right-most cell) is diagnostic. Usually this species is unicellular, but occasionally after division two cells remain attached, as in the right specimen. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from valve view. Note stria (=radiating lines) around cell periphery. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " mean epilimnion cell abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (right) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on data for 2005-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively. The high variability in cell size from May to December is partly due to few measurements, as the species is rare during those months.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. selected environmental parameters recorded at the site and time of sampling, showing higher cell concentrations when the lake is fully mixed (z",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "mix",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " >35 m), water temperature is low and Ca and alkalinity are high. Abundance increases with nitrate. Based on data for 2012-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Bacillariophyta",
+      "class": "Thalassiosirophyceae",
+      "order": "Stephanodiscales",
+      "habitat": "planktonic",
+      "previous_name_used": "Cyclotella meneghiniana Kützing 1844",
+      "organization": "single cells",
+      "color": "golden-brown",
+      "cell_shape": "drum-like, short cylinder",
+      "cell_diameter_d": "10 – 28 μm, median: 18 μm (N=481). Cell diameter varies significantly making it necessary to measure it routinely.",
+      "cell_length_l": "5-16 μm, median: 9 μm (N=481).",
+      "biovolume_per_cell": "500 – 6000 μm³, median: 2300 μm³.",
+      "biovolume_equation": "Cylinder, V = L π (D/2)².",
+      "morphological_features": "Stephanocyclus meneghinianus is a single-celled centric diatom, having a circular valve. Until recently it was known as Cyclotella meneghiniana. Valve surface is gently undulated (=wavy, i.e. not completely flat), S-shaped when observed in girdle view (Plate 1). Cell shaped like a petri dish (or drum). Valve face with a distinct central region surrounded by radiating areolae (Plate 2) occupying a belt of 4-6 µm around the cell periphery, with 6-10 costae (= elongated, solid thickening of the valve) in 10 µm at margins. The central valve area is smooth. Discoid plastids are arranged around the margin of the cell. The species is typically less abundant than the similarly looking but smaller centric diatom Pantocsekiella polymorpha.\nBased on morphometric and molecular methods Beszteri et al. (2005; 2007) claimed that Cyclotella meneghiniana is a group of cryptic taxa.",
+      "distinctive_attributes": "winter species in Kinneret, requires Si, looks similar in shape to its relative Pantocsekiella (previously Cyclotella) polymorpha but larger in size",
+      "ecology": "Stephanocyclus meneghinianus is a common component of the Kinneret winter plankton (Jan-March), mostly reaching maxima of several tens of cells/mL, but on two exceptional occasions in the 1980s it peaked with ~ 1000 cells/mL (Figs. 1, 2).",
+      "physiological_features": "Like all diatoms, Stephanocyclus meneghinianus requires Si – which is always present in Lake Kinneret at concentrations >4 mg L⁻¹.",
+      "environmental_conditions": "Stephanocyclus meneghinianus abundance was independent of water level, euphotic zone depth, pH, and concentrations of chloride, organic N and turbidity within the ranges of values found in Lake Kinneret . Its higher concentratins occured when the lake was fully mixed (zₘᵢₓ >35 m). At that time of the year alkalinity was >130 mg L⁻¹, Calcium >50 mg L⁻¹, water temperature <18.5°C. Abundance inreased with nitrate concentration (Fig. 3).",
+      "further_reading": "Beszteri B, Ács É, Medlin L. 2005. Conventional and geometric morphometric studies of valve ultrastructural variation in two closely related Cyclotella species (Bacillariophyta). European Journal of Phycology. 40(1):89-103.\nBeszteri B, John U, Medlin LK. 2007. An assessment of cryptic genetic diversity within the Cyclotella meneghiniana species complex (Bacillariophyta) based on nuclear and plastid genes, and amplified fragment length polymorphisms. European Journal of Phycology. 42(1):47-60.\nKuznetsova, I., Kapustin, D., Gusev, E., Martynenko, N. & Kociolek, J.P. 2022. Resurrection of the diatom genus Stephanocyclus (Coscinodiscophyceae: Stephanodiscaceae) on the basis of an integrated molecular and morphological approach. Fottea 22(2): 181-191."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Bacillariophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Thalassiosirophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Stephanodiscales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "planktonic",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "previous_name_used": [
+        {
+          "text": "Cyclotella",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghiniana",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Kützing",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1844",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      "organization": [
+        {
+          "text": "single cells",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "golden-brown",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_shape": [
+        {
+          "text": "drum-like, short cylinder",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "10 – 28 μm, median: 18 μm (N=481). Cell diameter varies significantly making it necessary to measure it routinely.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "5-16 μm, median: 9 μm (N=481).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "500 – 6000 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", median: 2300 μm",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Cylinder, V = L π (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is a single-celled centric diatom, having a circular valve. Until recently it was known as ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyclotella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghiniana",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Valve surface is gently undulated (=wavy, i.e. not completely flat), S-shaped when observed in girdle view (Plate 1). Cell shaped like a petri dish (or drum). Valve face with a distinct central region surrounded by radiating ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "areolae",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (Plate 2) occupying a belt of 4-6 µm around the cell periphery, with 6-10 ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "costae",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (= elongated, solid thickening of the valve) in 10 µm at margins. The central valve area is smooth. Discoid plastids are arranged around the margin of the cell. The species is typically less abundant than the similarly looking but smaller centric diatom ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Pantocsekiella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "polymorpha",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ".\nBased on morphometric and molecular methods Beszteri et al. (2005; 2007) claimed that ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyclotella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghiniana",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is a group of cryptic taxa.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "winter species in Kinneret, requires Si, looks similar in shape to its relative ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Pantocsekiella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (previously ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyclotella)",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "polymorpha",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " but larger in size",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is a common component of the Kinneret winter plankton (Jan-March), mostly reaching maxima of several tens of cells/mL, but on two exceptional occasions in the 1980s it peaked with ~ 1000 cells/mL (Figs. 1, 2).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "physiological_features": [
+        {
+          "text": "Like all diatoms, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " requires Si – which is always present in Lake Kinneret at concentrations >4 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance was independent of water level, euphotic zone depth, pH, and concentrations of chloride, organic N and turbidity within the ranges of values found in Lake Kinneret . Its higher concentratins occured when the lake was fully mixed (z",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "mix",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " >35 m). At that time of the year alkalinity was >130 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", Calcium >50 mg L",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", water temperature <18.5°C. Abundance inreased with nitrate concentration (Fig. 3).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Beszteri B, Ács É, Medlin L. 2005. Conventional and geometric morphometric studies of valve ultrastructural variation in two closely related ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyclotella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " species (Bacillariophyta). European Journal of Phycology. 40(1):89-103.\nBeszteri B, John U, Medlin LK. 2007. An assessment of cryptic genetic diversity within the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cyclotella",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghiniana",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " species complex (Bacillariophyta) based on nuclear and plastid genes, and amplified fragment length polymorphisms. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "European",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Journal",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "of",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Phycology",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". 42(1):47-60.\nKuznetsova, I., Kapustin, D., Gusev, E., Martynenko, N. & Kociolek, J.P. 2022. Resurrection of the diatom genus ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Coscinodiscophyceae: Stephanodiscaceae) on the basis of an integrated molecular and morphological approach. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Fottea",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " 22(2): 181-191.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Cyclotella meneghiniana 2026-09-14.docx",
+      "record_updated": "2026-09-14"
     }
   },
   {

@@ -16,7 +16,7 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 
 Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.
 
-Species count: 41
+Species count: 42
 
 ## Species: Gymnodinium F. Stein 1878
 - Slug: gymnodinium
@@ -207,17 +207,17 @@ Species count: 41
 - Organization: filamentous
 - Cell shape: cylinder
 - Colony shape: filament, made of a chain of cylindrical cells
-- Cell diameter (D): 9-16 µm (median 12.6) (N=241).
-- Cell length (L): 27-37 µm (median 31 µm).
-- Cell biovolume: 2000-9000 μm³, median: 4000 μm³.
-- Biovolume equation: Cylinder, V = 2 π L (D/2)². Or: regression eqn. based on >500 measurements of both D and L with V computed for a cylinder: V=50.538D¹.⁷¹⁹⁷).
-- Filament length: 150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b).
+- Cell diameter (D): 9-16 µm (median 12.6) (N=241)
+- Cell length (L): 27-37 µm (median 31 µm)
+- Cell biovolume: 2000-9000 μm³, median: 4000 μm³
+- Biovolume equation: Cylinder, V = 2 π L (D/2)². Or: regression eqn. based on >500 measurements of both D and L with V computed for a cylinder: V=50.538D¹.⁷¹⁹⁷)
+- Filament length: 150-900 µm (median: 400 µm). Longer filaments in winter, shorter in summer (see Fig. 2b)
 - Cells per filament: 5-28 (median: 14)
-- Ecology (compact): The species is one of the most common diatoms of Lake Kinneret, with peak abundance during winter holomixis (Jan-Feb) when it occupies the entire 40 m water column. Major A. granulata blooms were recorded in Jan-Feb 1988; 1999; 2001 (Fig.…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 30 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Ecology (compact): The ecology of A. granulata is strongly tied to mixing, sinking, filament morphology and seasonal physical conditions. It is a planktonic, filament-forming diatom characteristic of well-mixed, relatively nutrient-rich waters. Its heavy sil…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 1 September 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-30
-- Source file: Aulacoseira granulata.docx
+- Record updated (source extraction): 2026-09-01
+- Source file: Aulacoseira granulata 2026-09-01.docx
 
 ## Species: Bangia atropurpurea (Mertens ex Roth) C. Agardh 1824
 - Slug: bangia-atropurpurea
@@ -426,6 +426,23 @@ Species count: 41
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
 - Record updated (source extraction): 2026-08-17
 - Source file: Cryptophytes 2026-08-17.docx
+
+## Species: Stephanocyclus meneghinianus (Kützing) Kukikovskiy, Genkal & Kociolek 2022
+- Slug: stephanocyclus-meneghinianus
+- Canonical URL: https://kinneret-algae-atlas.org/algae/stephanocyclus-meneghinianus/
+- Taxonomy: phylum=Bacillariophyta; class=Thalassiosirophyceae; order=Stephanodiscales
+- Habitat: planktonic
+- Organization: single cells
+- Cell shape: drum-like, short cylinder
+- Cell diameter (D): 10 – 28 μm, median: 18 μm (N=481). Cell diameter varies significantly making it necessary to measure it routinely.
+- Cell length (L): 5-16 μm, median: 9 μm (N=481).
+- Cell biovolume: 500 – 6000 μm³, median: 2300 μm³.
+- Biovolume equation: Cylinder, V = L π (D/2)².
+- Ecology (compact): Stephanocyclus meneghinianus is a common component of the Kinneret winter plankton (Jan-March), mostly reaching maxima of several tens of cells/mL, but on two exceptional occasions in the 1980s it peaked with ~ 1000 cells/mL (Figs. 1, 2).
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 14 September 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
+- Record updated (source extraction): 2026-09-14
+- Source file: Cyclotella meneghiniana 2026-09-14.docx
 
 ## Species: Euglena Ehrenberg 1830
 - Slug: euglena

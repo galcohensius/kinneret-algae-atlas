@@ -1,9 +1,13 @@
 {
-  "count": 41,
+  "count": 42,
   "entries": [
     {
       "slug": "aulacoseira-granulata",
       "searchHaystack": "aulacoseira granulata (ehrenberg) simonsen 1979 aulacoseira granulata (ehrenberg) simonsen 1979 melosira granulata (ehrenberg) ralfs 1861 bacillariophyta diatoms"
+    },
+    {
+      "slug": "stephanocyclus-meneghinianus",
+      "searchHaystack": "stephanocyclus meneghinianus (kützing) kukikovskiy, genkal & kociolek 2022 stephanocyclus meneghinianus (kützing) kukikovskiy, genkal & kociolek 2022 cyclotella meneghiniana kützing 1844 bacillariophyta diatoms"
     },
     {
       "slug": "mougeotia",
