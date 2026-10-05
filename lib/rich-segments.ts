@@ -32,3 +32,25 @@ export function sliceRichSegmentsByPlainRange(
   }
   return result;
 }
+
+/**
+ * Collapse whitespace runs to one space (across run boundaries) and trim the ends, so the
+ * joined text equals `text.replace(/\s+/g, " ").trim()` and normalized offsets slice it.
+ */
+export function collapseRichSegmentsWhitespace(segments: RichSegment[]): RichSegment[] {
+  const result: RichSegment[] = [];
+  let afterSpace = true;
+  for (const seg of segments) {
+    let text = seg.text.replace(/\s+/g, " ");
+    if (afterSpace && text.startsWith(" ")) text = text.slice(1);
+    if (!text) continue;
+    afterSpace = text.endsWith(" ");
+    result.push({ ...seg, text });
+  }
+  const last = result[result.length - 1];
+  if (last?.text.endsWith(" ")) {
+    last.text = last.text.slice(0, -1);
+    if (!last.text) result.pop();
+  }
+  return result;
+}

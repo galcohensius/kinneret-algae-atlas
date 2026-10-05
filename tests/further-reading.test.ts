@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { citationToScholarSearchUrl, splitFurtherReadingCitations } from "../lib/further-reading";
+import {
+  citationToScholarSearchUrl,
+  splitFurtherReadingCitations,
+  splitFurtherReadingIndexed,
+} from "../lib/further-reading";
+import { collapseRichSegmentsWhitespace, sliceRichSegmentsByPlainRange } from "../lib/rich-segments";
 
 /** Join lines with \n as the extractor produces (one paragraph = one citation). */
 function fr(...lines: string[]): string {
@@ -170,6 +175,27 @@ describe("splitFurtherReadingCitations", () => {
     const text = "Citation one.\n\n\nCitation two.";
     const parts = splitFurtherReadingCitations(text);
     expect(parts).toHaveLength(2);
+  });
+});
+
+describe("further-reading rich slices (species page path)", () => {
+  it("double spaces and run boundaries do not shift later citations", () => {
+    const text = "Smith A.  2001. Title one.\nJones B. 2005. \nSome  Journal 12-34.";
+    const segments = [
+      { text: "Smith A.  2001. Title one.\nJones B. 2005. ", italic: false, bold: false },
+      { text: "\nSome  Journal", italic: true, bold: false },
+      { text: " 12-34.", italic: false, bold: false },
+    ];
+    const collapsed = collapseRichSegmentsWhitespace(segments);
+    const slices = splitFurtherReadingIndexed(text).map((p) =>
+      sliceRichSegmentsByPlainRange(collapsed, p.normStart, p.normEnd)
+    );
+    expect(slices.map((runs) => runs.map((r) => r.text).join(""))).toEqual([
+      "Smith A. 2001. Title one.",
+      "Jones B. 2005.",
+      "Some Journal 12-34.",
+    ]);
+    expect(slices[2][0]).toMatchObject({ text: "Some Journal", italic: true });
   });
 });
 

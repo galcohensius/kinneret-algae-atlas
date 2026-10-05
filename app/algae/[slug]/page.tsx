@@ -17,7 +17,10 @@ import {
   normalizeFurtherReadingWhitespace,
   splitFurtherReadingIndexed,
 } from "../../../lib/further-reading";
-import { sliceRichSegmentsByPlainRange } from "../../../lib/rich-segments";
+import {
+  collapseRichSegmentsWhitespace,
+  sliceRichSegmentsByPlainRange,
+} from "../../../lib/rich-segments";
 import { getAlgaBySlug, getAllAlgae } from "../../../lib/algae";
 import { listAlgaeInAtlasOrder } from "../../../lib/phylum-catalog";
 import {
@@ -142,17 +145,18 @@ function FurtherReadingList({
   segments?: RichSegment[];
 }) {
   const indexed = splitFurtherReadingIndexed(text.trim());
-  const joined = (segments ?? []).map((s) => s.text).join("");
+  // Offsets index the whitespace-collapsed text, so slice runs collapsed the same way.
+  const collapsed = collapseRichSegmentsWhitespace(segments ?? []);
   const canRich =
-    (segments?.length ?? 0) > 0 &&
-    normalizeFurtherReadingWhitespace(joined) === normalizeFurtherReadingWhitespace(text.trim());
+    collapsed.length > 0 &&
+    collapsed.map((s) => s.text).join("") === normalizeFurtherReadingWhitespace(text.trim());
 
   return (
     <ol className="further-reading-list">
       {indexed.map((item, index) => {
         const sliced =
-          canRich && segments
-            ? sliceRichSegmentsByPlainRange(segments, item.normStart, item.normEnd)
+          canRich
+            ? sliceRichSegmentsByPlainRange(collapsed, item.normStart, item.normEnd)
             : [];
         const useRich = canRich && sliced.some((s) => s.text.length > 0);
         return (
