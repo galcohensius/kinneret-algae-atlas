@@ -58,10 +58,6 @@ export function splitFurtherReadingIndexed(blob: string): FurtherReadingIndexedP
   return result;
 }
 
-export function splitFurtherReadingCitations(text: string): string[] {
-  return splitFurtherReadingIndexed(text).map((p) => p.citation);
-}
-
 export function citationToScholarSearchUrl(citation: string): string {
   const q = citation.replace(/\s+/g, " ").trim();
   return SCHOLAR_BASE + encodeURIComponent(q);

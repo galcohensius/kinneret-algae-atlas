@@ -11,11 +11,9 @@ export type SearchableAlgaeRecord = {
   scientificName?: string;
   nameAuthority?: string | null;
   sections?: Record<string, string>;
-  /** When set (home index), search skips rebuilding from full section text. */
-  searchHaystack?: string;
 };
 
-/** Plain-text tokens indexed by {@link filterAlgaeByQuery} (client- and server-safe). */
+/** Plain-text tokens written to the search index (client- and server-safe). */
 export function buildAlgaeSearchHaystack(record: SearchableAlgaeRecord): string {
   const phylum = record.sections?.phylum ?? "";
   const parts = [
@@ -31,20 +29,4 @@ export function buildAlgaeSearchHaystack(record: SearchableAlgaeRecord): string 
     .filter(Boolean)
     .join(" ")
     .toLowerCase();
-}
-
-function haystackFor(record: SearchableAlgaeRecord): string {
-  return record.searchHaystack ?? buildAlgaeSearchHaystack(record);
-}
-
-/** Client-safe filter (no Node deps). Same rules as server-side search. */
-export function filterAlgaeByQuery<T extends SearchableAlgaeRecord>(
-  records: T[],
-  query: string
-): T[] {
-  const normalizedQuery = query.trim().toLowerCase();
-  if (!normalizedQuery) {
-    return records;
-  }
-  return records.filter((record) => haystackFor(record).includes(normalizedQuery));
 }

@@ -53,6 +53,8 @@ describe("index card title sizing", () => {
       })),
     ];
 
+    // Mirrors app/globals.css: .algae-list-grid minmax(360px), .algae-thumb 100px,
+    // .algae-list-card-title clamp(1.45rem, ..., 1.65rem). Update together.
     const cardMinWidthPx = 360;
     const cardPaddingPx = 32;
     const thumbnailWidthPx = 100;

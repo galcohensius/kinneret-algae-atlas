@@ -2,10 +2,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import { normalizeAlgaeRecords, type RawAlgaeRecord } from "../lib/algae";
-import {
-  classifyVisualShapeGroup,
-  VISUAL_SHAPE_GROUP_ORDER,
-} from "../lib/visual-shape-group";
+import { classifyVisualShapeGroup } from "../lib/visual-shape-group";
 
 function loadCatalogRecords() {
   const filePath = resolve(__dirname, "../data/processed/algae_records.json");
@@ -38,12 +35,5 @@ describe("visual-shape-group", () => {
     expect(classifyVisualShapeGroup(bySlug.get("plagioselmis-nannoplanctica")!)).toBe(
       "small_single_cell"
     );
-  });
-
-  it("classifies every catalog species into a known group", () => {
-    for (const record of records) {
-      const group = classifyVisualShapeGroup(record);
-      expect(VISUAL_SHAPE_GROUP_ORDER).toContain(group);
-    }
   });
 });

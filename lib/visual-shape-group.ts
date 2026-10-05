@@ -18,16 +18,6 @@ export const VISUAL_SHAPE_GROUP_ORDER: VisualShapeGroup[] = [
   "other",
 ];
 
-/** Vertical axis seed in [0, 1] for grid placement. */
-export const SHAPE_GROUP_AXIS: Record<VisualShapeGroup, number> = {
-  filamentous: 0.08,
-  colonial_cyanobacteria: 0.28,
-  coenobial: 0.48,
-  large_flagellate: 0.68,
-  small_single_cell: 0.88,
-  other: 0.5,
-};
-
 const SMALL_SINGLE_CELL_SLUGS = new Set([
   "chrysochromulina-parva",
   "plagioselmis-nannoplanctica",

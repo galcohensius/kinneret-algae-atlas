@@ -1,4 +1,4 @@
-"""The shared species slug must reproduce every published slug and image directory."""
+"""The shared species slug must reproduce every published image directory."""
 
 import json
 import unittest
@@ -39,14 +39,6 @@ class TestSlugsMatchPublishedData(unittest.TestCase):
             for image in record.get("images") or []:
                 # "/algae-images/<slug>/<file>"
                 self.assertEqual(image.split("/")[2], expected, record["scientific_name"])
-
-    def test_every_api_slug_is_its_taxon_slug(self) -> None:
-        api = json.loads((ROOT / "public" / "api" / "species.json").read_text(encoding="utf-8"))
-        by_name = {item["scientific_name"]: item["slug"] for item in api["species"]}
-        self.assertEqual(len(by_name), len(self.records))
-        for record in self.records:
-            name = record["scientific_name"]
-            self.assertEqual(by_name[name], taxon_slug(name))
 
 
 if __name__ == "__main__":

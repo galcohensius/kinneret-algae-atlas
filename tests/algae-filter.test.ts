@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { buildAlgaeSearchHaystack, filterAlgaeByQuery } from "../lib/algae-filter";
+import { buildAlgaeSearchHaystack } from "../lib/algae-filter";
+import { filterCatalogBySearchIndex } from "../lib/algae-search-index";
 import { toAlgaeCatalogRecord } from "../lib/algae";
 import type { AlgaeRecord } from "../lib/algae-types";
 
@@ -8,7 +9,6 @@ type FilterableRecord = {
   scientificName: string;
   nameAuthority?: string | null;
   sections?: Record<string, string>;
-  searchHaystack?: string;
 };
 
 const RECORDS: FilterableRecord[] = [
@@ -70,7 +70,14 @@ describe("buildAlgaeSearchHaystack", () => {
   });
 });
 
-describe("filterAlgaeByQuery", () => {
+/** The home page's search path: a haystack per record, filtered by substring. */
+function filterAlgaeByQuery<T extends FilterableRecord>(records: T[], query: string): T[] {
+  const keyed = records.map((record) => ({ record, slug: record.title }));
+  const index = new Map(keyed.map(({ record, slug }) => [slug, buildAlgaeSearchHaystack(record)]));
+  return filterCatalogBySearchIndex(keyed, index, query).map(({ record }) => record);
+}
+
+describe("search (haystack + search index filter)", () => {
   it("returns all records for an empty query", () => {
     expect(filterAlgaeByQuery(RECORDS, "  ")).toHaveLength(RECORDS.length);
   });
@@ -101,18 +108,6 @@ describe("filterAlgaeByQuery", () => {
   it("does not match a taxon that only appears in another record's description", () => {
     expect(filterAlgaeByQuery(RECORDS, "dinoflagellates")).toEqual([RECORDS[1]]);
     expect(filterAlgaeByQuery(RECORDS, "green algae")).toEqual([RECORDS[3]]);
-  });
-
-  it("uses precomputed searchHaystack when present", () => {
-    const slim = [
-      {
-        title: "Hidden",
-        scientificName: "Hidden",
-        searchHaystack: "custom token only",
-      },
-    ];
-    expect(filterAlgaeByQuery(slim, "custom token")).toHaveLength(1);
-    expect(filterAlgaeByQuery(slim, "hidden")).toHaveLength(0);
   });
 
   it("matches nothing for an unknown term", () => {

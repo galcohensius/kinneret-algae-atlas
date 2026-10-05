@@ -36,17 +36,6 @@ function loadAllRecords(): RawRecord[] {
 }
 
 describe("algae image naming", () => {
-  it("reports total image count across all species", () => {
-    const records = loadRecords();
-    const total = records.reduce((sum, r) => sum + (r.images?.length ?? 0), 0);
-    const bySpecies = records
-      .filter((r) => (r.images?.length ?? 0) > 0)
-      .map((r) => `  ${r.scientific_name}: ${r.images!.length}`)
-      .join("\n");
-    console.log(`\nTotal images: ${total} across ${records.length} species\n${bySpecies}`);
-    expect(total).toBeGreaterThan(0);
-  });
-
   it("every image is a thumbnail, plate, or figure — no uncaptioned image-N fallbacks", () => {
     const records = loadAllRecords();
     const violations: { species: string; image: string }[] = [];

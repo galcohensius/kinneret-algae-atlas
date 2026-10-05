@@ -139,4 +139,32 @@ function resolvesInExport(rootRelative: string): boolean {
     }
     expect(failures, failures.join("\n")).toEqual([]);
   });
+
+  it("pages carry their JSON-LD type and a social preview image", () => {
+    const pageDirs = (dir: string) =>
+      readdirSync(path.join(OUT_DIR, dir)).filter((entry) =>
+        existsSync(path.join(OUT_DIR, dir, entry, "index.html"))
+      );
+    const expected: [string, string | null][] = [
+      ["index.html", "Dataset"],
+      ["glossary/index.html", "DefinedTermSet"],
+      ["about/index.html", "AboutPage"],
+      ["supplements/index.html", null],
+      ...pageDirs("algae").map((slug): [string, string] => [`algae/${slug}/index.html`, "DefinedTerm"]),
+      ...pageDirs("supplements").map((slug): [string, null] => [`supplements/${slug}/index.html`, null]),
+    ];
+
+    const failures: string[] = [];
+    for (const [page, jsonLdType] of expected) {
+      const html = readFileSync(path.join(OUT_DIR, page), "utf8");
+      if (jsonLdType && !html.includes(`"@type":"${jsonLdType}"`)) failures.push(`${page}: no ${jsonLdType}`);
+      if (!html.includes('property="og:image"')) failures.push(`${page}: no og:image`);
+    }
+    expect(failures, failures.join("\n")).toEqual([]);
+  });
+
+  it("robots.txt points crawlers at the exported sitemap", () => {
+    expect(readFileSync(path.join(OUT_DIR, "robots.txt"), "utf8")).toContain(`${SITE_ORIGIN}/sitemap.xml`);
+    expect(existsSync(path.join(OUT_DIR, "sitemap.xml"))).toBe(true);
+  });
 });

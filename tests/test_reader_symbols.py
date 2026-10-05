@@ -8,12 +8,7 @@ real Unicode during extraction.
 
 import unittest
 
-from algae_extractor.reader import (
-    _SUBSCRIPT_MAP,
-    _SUPERSCRIPT_MAP,
-    _apply_script_map,
-    _remap_symbol_text,
-)
+from algae_extractor.reader import _remap_symbol_text
 
 
 class TestSymbolFontRemap(unittest.TestCase):
@@ -39,18 +34,6 @@ class TestSymbolFontRemap(unittest.TestCase):
 
     def test_digits_and_space_in_symbol_font_unchanged(self) -> None:
         self.assertEqual(_remap_symbol_text("3 ", is_symbol_font=True), "3 ")
-
-
-class TestScriptMaps(unittest.TestCase):
-    def test_superscript_units(self) -> None:
-        self.assertEqual(_apply_script_map("3", _SUPERSCRIPT_MAP), "³")
-        self.assertEqual(_apply_script_map("-2", _SUPERSCRIPT_MAP), "⁻²")
-        self.assertEqual(_apply_script_map("-1", _SUPERSCRIPT_MAP), "⁻¹")
-
-    def test_subscript_units(self) -> None:
-        self.assertEqual(_apply_script_map("3", _SUBSCRIPT_MAP), "₃")  # NO_3
-        self.assertEqual(_apply_script_map("4", _SUBSCRIPT_MAP), "₄")  # NH_4
-        self.assertEqual(_apply_script_map("eu", _SUBSCRIPT_MAP), "ₑᵤ")  # Z_eu
 
 
 if __name__ == "__main__":

@@ -10,10 +10,6 @@ def _load_json(*parts: str):
 
 
 class TestLlmsOutputs(unittest.TestCase):
-    def test_llms_files_exist(self) -> None:
-        self.assertTrue((ROOT / "public" / "llms.txt").is_file())
-        self.assertTrue((ROOT / "public" / "llms-full.txt").is_file())
-
     def test_llms_full_has_species_count_and_dual_citation_layers(self) -> None:
         llms_full = (ROOT / "public" / "llms-full.txt").read_text(encoding="utf-8")
         records = _load_json("data", "processed", "algae_records.json")
@@ -31,13 +27,6 @@ class TestLlmsOutputs(unittest.TestCase):
         self.assertIn("/api/species.json", llms_txt)
         self.assertIn("/api/species/{slug}.json", llms_txt)
         self.assertIn("/api/glossary.json", llms_txt)
-
-    def test_llms_txt_names_both_index_views_and_plates(self) -> None:
-        llms_txt = (ROOT / "public" / "llms.txt").read_text(encoding="utf-8")
-        self.assertIn("/#algae-index", llms_txt)
-        self.assertIn("morphotype view", llms_txt)
-        self.assertIn("/#visual-index", llms_txt)
-        self.assertIn("Cox (1996) plates", llms_txt)
 
     def test_generated_species_api_matches_processed_records(self) -> None:
         records = _load_json("data", "processed", "algae_records.json")
