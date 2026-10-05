@@ -1,5 +1,5 @@
 {
-  "count": 42,
+  "count": 43,
   "species": [
     {
       "slug": "gymnodinium",
@@ -568,6 +568,21 @@
       "record_updated": "2026-08-17",
       "citation": {
         "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 17 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "pantocsekiella-polymorpha",
+      "scientific_name": "Pantocsekiella polymorpha (Meyer & Hakansson) Kiss & Acs 2016",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/pantocsekiella-polymorpha/",
+      "taxonomy": {
+        "phylum": "Bacillariophyta",
+        "class": "Thalassiosirophyceae",
+        "order": "Stephanodiscales"
+      },
+      "record_updated": "2026-10-05",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
         "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
       }
     },

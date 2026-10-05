@@ -1,9 +1,13 @@
 {
-  "count": 42,
+  "count": 43,
   "entries": [
     {
       "slug": "aulacoseira-granulata",
       "searchHaystack": "aulacoseira granulata (ehrenberg) simonsen 1979 aulacoseira granulata (ehrenberg) simonsen 1979 melosira granulata (ehrenberg) ralfs 1861 bacillariophyta diatoms"
+    },
+    {
+      "slug": "pantocsekiella-polymorpha",
+      "searchHaystack": "pantocsekiella polymorpha (meyer & hakansson) kiss & acs 2016 pantocsekiella polymorpha (meyer & hakansson) kiss & acs 2016 cyclotella polymorpha meyer & hakansson 1996 bacillariophyta diatoms"
     },
     {
       "slug": "stephanocyclus-meneghinianus",

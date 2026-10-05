@@ -1,0 +1,29 @@
+{
+  "slug": "pantocsekiella-polymorpha",
+  "scientific_name": "Pantocsekiella polymorpha (Meyer & Hakansson) Kiss & Acs 2016",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/pantocsekiella-polymorpha/",
+  "taxonomy": {
+    "phylum": "Bacillariophyta",
+    "class": "Thalassiosirophyceae",
+    "order": "Stephanodiscales"
+  },
+  "record_updated": "2026-10-05",
+  "citation": {
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "single cells",
+    "cell_shape": "coin-like",
+    "cell_diameter_d": "5 – 16 μm, median: 8.1 μm (N=2189). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely.",
+    "cell_length_l": "3 – 10 μm, median: 4.7 μm (N=390).",
+    "biovolume_per_cell": "50 – 2500 μm³, median: 280 μm³. Larger cell size in winter, smaller in summer (see Fig. 2b).",
+    "biovolume_equation": "Cylinder, V = L π (D/2)²."
+  },
+  "narrative": {
+    "morphology": "Pantocsekiella polymorpha is a small (diameter: 5 - 16 µm) coin-shaped single-celled centric diatom that shows large morphological variability (Plate 1). The species was first described as Cyclotella polymorpha by Meyer and Håkansson in 1996 based on material from Lake Kinneret. In 2016, based on new molecular information, it was re-assigned by Kis and Acs (2016) to a new genus, Pantocsekiella. The peripheral area of the valve face has striae (rows of fine markings) that run perpendicular to the valve outline, with 18–24 striae per 10 µm (Meyer & Håkansson, 1996). The central area of the valve face is highly variable in structure, which is the reason for the species name polymorpha. Its appearance ranges from radial rows of puncta (small pores) within depressions, with granules on the raised areas between them, to a pattern of 3–5 larger depressions separated by papillae (small, rounded projections) (Plates 2, 3). Scanning electron microscopy reveals one or several fultoportula scattered across the central area of the valve face. Fultoportulae are also present on the valve mantle, occurring at every second to fifth interstria (costa). A single rimoportula is located on an interstria of the valve face, close to the junction between the valve face and the valve mantle.",
+    "ecology": "Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass concentrations, the maximum biomass ever attained was 40 g m⁻² in May 1990 whereas major Kinneret blooms are of biomass > 100 g m⁻².",
+    "environmental_conditions": "The species abundance increases with water temperature, declines with concentrations of chloride (Cl) and total dissolved P (TDP), and is more abundant at lower ammonium (NH4) concentrations (Fig. 3).",
+    "further_reading": "Acs E, Ari E, Duleba M, Dressler M, Genkal SI, Kiss KT. 2016. Pantocsekiella a new centric diatom genus based on morphological and genetic studies. Fottea 16(1): 56-78.\nKuznetsova, I., Kapustin, D., Gusev, E., Martynenko, N. & Kociolek, J.P. 2022. Resurrection of the diatom genus Stephanocyclus (Coscinodiscophyceae: Stephanodiscaceae) on the basis of an integrated molecular and morphological approach. Fottea 22(2): 181-191.\nMeyer B, Håkansson H. 1996. Morphological variation of Cyclotella polymorpha sp. nov. (Bacillariophyceae). Phycologia 35(1):64-69."
+  }
+}
