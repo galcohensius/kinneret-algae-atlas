@@ -84,6 +84,11 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 
    `--use-word-renderer` needs Microsoft Word on Windows (better chart export). CI and Linux use the Pillow fallback. The Word-renderer path is only validated locally on Windows; no automated test or CI job exercises it.
 
+   Extraction stops if a taxon Word file yields no species records (usually a taxon header
+   the extractor did not recognise), so a new file cannot silently drop out of the atlas.
+   CI re-runs all four extractors and fails if the committed JSON differs from their output,
+   so commit the processed JSON from the same Word files you commit.
+
    Re-running extraction **prunes** each species image folder: files not listed in the new
    JSON are deleted (so replaced or removed pictures in Word do not leave stale files on disk).
 

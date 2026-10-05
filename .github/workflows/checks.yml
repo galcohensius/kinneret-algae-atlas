@@ -30,6 +30,21 @@ jobs:
         run: npm ci
       - name: Python extractor tests
         run: npm run test:py
+      - name: Processed data matches the Word sources
+        # Re-extract every Word file and compare the JSON with the committed copy. Images
+        # are not compared: charts render differently without Word on Windows.
+        env:
+          # record_updated is the Word save date on the authors' calendar day.
+          TZ: Asia/Jerusalem
+        run: |
+          out="$RUNNER_TEMP/reextract"
+          python src/extract_algae.py --output "$out/algae_records.json" --images-dir "$out/algae-images"
+          python src/extract_supplements.py --output "$out/supplements.json" --images-dir "$out/algae-images"
+          python src/extract_glossary.py --output "$out/glossary.json" --images-dir "$out/glossary-images"
+          python src/extract_about.py --output "$out/about.json"
+          for f in algae_records supplements glossary about; do
+            diff -q "data/processed/$f.json" "$out/$f.json"
+          done
       - name: Validate algae JSON
         run: npm run validate:data
       - name: Typecheck

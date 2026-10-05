@@ -3,6 +3,7 @@ import path from "node:path";
 import { cache } from "react";
 import { z } from "zod";
 import { fixScientificTypography } from "./scientific-text";
+import { phylumPopularName } from "./phylum-catalog";
 import { publicAssetPath } from "./public-path";
 import { resolveThumbnailUrl } from "./resolve-thumbnail";
 import { isThumbnailImagePath } from "./thumbnail-path-pattern";
@@ -24,7 +25,8 @@ const rawAlgaeRecordSchema = z.object({
   image_captions_rich: z.array(z.array(richSegmentSchema)).optional().default([]),
   sections: z.record(z.string(), z.string()),
   sections_rich: z.record(z.string(), z.array(richSegmentSchema)).optional().default({}),
-  metadata: z.record(z.string(), z.unknown())
+  // record_updated drives "recently updated", sitemap lastmod and the citation date.
+  metadata: z.object({ record_updated: z.iso.date() }).catchall(z.unknown()),
 });
 
 const rawAlgaeArraySchema = z.array(rawAlgaeRecordSchema);
@@ -205,6 +207,14 @@ export async function getAlgaBySlug(slug: string): Promise<AlgaeRecord | null> {
 
 export async function validateAlgaeDataFile(): Promise<{ count: number }> {
   const algae = await getAllAlgae();
+  // An unlisted phylum still builds, with a fallback colour and its own catalog group.
+  const unknownPhylum = algae.filter((record) => !phylumPopularName(record.sections.phylum ?? ""));
+  if (unknownPhylum.length > 0) {
+    throw new Error(
+      "Unknown phylum (fix the Word file, or add it to lib/phylum-catalog.ts):\n" +
+        unknownPhylum.map((record) => `  ${record.slug}: "${record.sections.phylum ?? ""}"`).join("\n")
+    );
+  }
   return { count: algae.length };
 }
 

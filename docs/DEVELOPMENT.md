@@ -43,7 +43,7 @@ python3.12 -m venv .venv && source .venv/bin/activate && pip install -r requirem
 | `npm run test` | Vitest suite (`tests/*.test.ts`); skips the export check unless `out/` exists | Before pushing; CI |
 | `npm run test:export` | Link and asset check over `out/` (`EXPORT_CHECK=1`, fails if `out/` is missing) | After `npm run build`; CI |
 | `npm run test:py` | Python stdlib `unittest` suite (`tests/test_*.py`) with `PYTHONPATH=src` | After extractor changes; CI |
-| `npm run validate:data` | `scripts/validate-algae-data.ts`: schema-checks algae and glossary JSON | After any extraction; CI |
+| `npm run validate:data` | `scripts/validate-algae-data.ts`: schema-checks algae and glossary JSON (incl. `record_updated` as a real date) and rejects a phylum missing from `lib/phylum-catalog.ts` | After any extraction; CI |
 | `npm run extract:algae` | `src/extract_algae.py` over all taxon `.docx` (`--use-word-renderer`) | Taxon Word file or extractor changed |
 | `npm run extract:supplements` | `src/extract_supplements.py` | `*suppl*.docx` changed, or after an image rebuild |
 | `npm run extract:glossary` | `src/extract_glossary.py` | `*glossary*.docx` changed |
@@ -76,7 +76,7 @@ The sticky header shared by every page is `app/components/SiteHeader.tsx`. Redir
 
 ## Deploy
 
-Pushing to `main` runs `.github/workflows/deploy-pages.yml`, which calls the reusable `checks.yml` (pip install incl. dev, ruff, `npm ci`, `test:py`, `validate:data`, `lint`, `test`, a generated-files drift check that reruns `generate:search-index` and `generate:llms` and fails on `git diff`, `build`, `test:export`), uploads `out/` as the Pages artifact and deploys it. `ci.yml` calls the same `checks.yml` on every push and pull request without deploying.
+Pushing to `main` runs `.github/workflows/deploy-pages.yml`, which calls the reusable `checks.yml` (pip install incl. dev, ruff, `npm ci`, `test:py`, a re-extraction of every Word file under `TZ=Asia/Jerusalem` whose JSON must equal `data/processed/` (images are not compared), `validate:data`, `lint`, `test`, a generated-files drift check that reruns `generate:search-index` and `generate:llms` and fails on `git diff`, `build`, `test:export`), uploads `out/` as the Pages artifact and deploys it. `ci.yml` calls the same `checks.yml` on every push and pull request without deploying.
 
 - `NEXT_PUBLIC_GOATCOUNTER_CODE` (repo Actions variable): enables the GoatCounter visit counter in `app/layout.tsx`; unset means no analytics script.
 - `NEXT_PUBLIC_BASE_PATH`: set to `/repo-name` at build time to host under a sub-path (`next.config.ts`, `lib/public-path.ts`). Unset for the domain root, which is how the live site is built.

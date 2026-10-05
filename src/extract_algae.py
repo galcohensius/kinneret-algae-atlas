@@ -210,6 +210,8 @@ def main():
             images_public_prefix=args.images_public_prefix,
             use_word_renderer=args.use_word_renderer,
         )
+        if not records:
+            raise SystemExit(f"{docx_path} produced no species records; check its taxon headers.")
         data.extend(record.to_dict() for record in records)
 
     data = _merge_records(data)
