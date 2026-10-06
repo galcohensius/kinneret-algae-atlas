@@ -667,7 +667,7 @@ Species count: 43
 - Record updated (source extraction): 2026-08-17
 - Source file: Mougeotia 2026-08-17.docx
 
-## Species: Pantocsekiella polymorpha (Meyer & Hakansson) Kiss & Acs 2016
+## Species: Pantocsekiella polymorpha (Meyer & Håkansson) Kiss & Acs 2016
 - Slug: pantocsekiella-polymorpha
 - Canonical URL: https://kinneret-algae-atlas.org/algae/pantocsekiella-polymorpha/
 - Taxonomy: phylum=Bacillariophyta; class=Thalassiosirophyceae; order=Stephanodiscales
@@ -676,13 +676,13 @@ Species count: 43
 - Cell shape: coin-like
 - Cell diameter (D): 5 – 16 μm, median: 8.1 μm (N=2189). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely.
 - Cell length (L): 3 – 10 μm, median: 4.7 μm (N=390).
-- Cell biovolume: 50 – 2500 μm³, median: 280 μm³. Larger cell size in winter, smaller in summer (see Fig. 2b).
+- Cell biovolume: 50 – 2500 μm³, median: 280 μm³. Larger cell size in winter, smaller in summer (see Fig. 2).
 - Biovolume equation: Cylinder, V = L π (D/2)².
 - Ecology (compact): Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 5 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 6 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-10-05
-- Source file: Pantocsekiella polymorpha.docx
+- Record updated (source extraction): 2026-10-06
+- Source file: Pantocsekiella polymorpha 2026-10-06.docx
 
 ## Species: Peridinium gatunense Nygaard 1925
 - Slug: peridinium-gatunense

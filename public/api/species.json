@@ -573,16 +573,16 @@
     },
     {
       "slug": "pantocsekiella-polymorpha",
-      "scientific_name": "Pantocsekiella polymorpha (Meyer & Hakansson) Kiss & Acs 2016",
+      "scientific_name": "Pantocsekiella polymorpha (Meyer & Håkansson) Kiss & Acs 2016",
       "canonical_url": "https://kinneret-algae-atlas.org/algae/pantocsekiella-polymorpha/",
       "taxonomy": {
         "phylum": "Bacillariophyta",
         "class": "Thalassiosirophyceae",
         "order": "Stephanodiscales"
       },
-      "record_updated": "2026-10-05",
+      "record_updated": "2026-10-06",
       "citation": {
-        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 5 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 6 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
         "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
       }
     },
