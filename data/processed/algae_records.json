@@ -20110,7 +20110,7 @@
     }
   },
   {
-    "scientific_name": "Pantocsekiella polymorpha (Meyer & Håkansson) Kiss & Acs 2016",
+    "scientific_name": "Pantocsekiella polymorpha (Meyer & Håkansson) Kiss & Ács 2016",
     "images": [
       "/algae-images/pantocsekiella-polymorpha/thumbnail-1.jpg",
       "/algae-images/pantocsekiella-polymorpha/plate-1.jpg",
@@ -20123,7 +20123,7 @@
     "image_captions": [
       "",
       "Plate 1. Button-like cells of Pantocsekiella polymorpha seen in both valve view (spheres) and girdle view (elongated, the side-view of the button), showing distinct size-variability. Photo by Alla Alster, 2006.",
-      "Plate 2. Cells after treatment with H₂O₂ that removes all organic matter, exposing the stria (\"decoration” lines) around cell perimeter even with a light microscope. For greater detail a scanning electron microscope is needed. Photo by Alla Alster, 2007.",
+      "Plate 2. Cells after treatment with H₂O₂ that removes all organic matter, exposing the striae (\"decoration” lines) around cell perimeter even with a light microscope. For greater detail a scanning electron microscope is needed. Photo by Alla Alster, 2007.",
       "Plate 3. Pantocsekiella polymorpha. Photos are from the original species description based on material from Lake Kinneret (Meyer and Håkansson 1996). Left: light microscope photos showing spherical valve view and elongate girdle view (inset). Middle and right: SEM photos showing details of peripheral striae and pores in the valve center.",
       "Figure 1. Time series of Pantocsekiella polymorpha mean epilimnion cell abundance (cells mL⁻¹) Lake Kinneret, 1970-2020.",
       "Figure 2. The annual pattern of mean water column cell abundance (left) and volume per cell (right) of Pantocsekiella polymorpha, based on data for 1970-2020. Statistics shown are median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively.",
@@ -20187,7 +20187,7 @@
           "bold": false
         },
         {
-          "text": "stria",
+          "text": "striae",
           "italic": false,
           "bold": true
         },
@@ -20333,7 +20333,7 @@
       "class": "Thalassiosirophyceae",
       "order": "Stephanodiscales",
       "habitat": "plankton",
-      "previous_name_used": "Cyclotella polymorpha Meyer & Hakansson 1996",
+      "previous_name_used": "Cyclotella polymorpha Meyer & Håkansson 1996",
       "organization": "single cells",
       "color": "yellow to golden-brown",
       "cell_shape": "coin-like",
@@ -20341,11 +20341,11 @@
       "cell_length_l": "3 – 10 μm, median: 4.7 μm (N=390).",
       "biovolume_per_cell": "50 – 2500 μm³, median: 280 μm³. Larger cell size in winter, smaller in summer (see Fig. 2).",
       "biovolume_equation": "Cylinder, V = L π (D/2)².",
-      "morphological_features": "Pantocsekiella polymorpha is a small (diameter: 5 - 16 µm) coin-shaped single-celled centric diatom that shows large morphological variability (Plate 1). The species was first described as Cyclotella polymorpha by Meyer and Håkansson in 1996 based on material from Lake Kinneret. In 2016, based on new molecular information, it was re-assigned by Kis et al. (2016) to a new genus, Pantocsekiella. The peripheral area of the valve face has striae (rows of fine markings) that run perpendicular to the valve outline, with 18–24 striae per 10 µm (Meyer & Håkansson, 1996). The central area of the valve face is highly variable in structure, which is the reason for the species name polymorpha. Its appearance ranges from radial rows of puncta (small pores) within depressions, with granules on the raised areas between them, to a pattern of 3–5 larger depressions separated by papillae (small, rounded projections) (Plates 2, 3). Scanning electron microscopy reveals one or several fultoportula scattered across the central area of the valve face. Fultoportulae are also present on the valve mantle, occurring at every second to fifth interstria (costa). A single rimoportula is located on an interstria of the valve face, close to the junction between the valve face and the valve mantle.",
+      "morphological_features": "Pantocsekiella polymorpha is a small (diameter: 5 – 16 µm) coin-shaped single-celled centric diatom that shows large morphological variability (Plate 1). The species was first described as Cyclotella polymorpha by Meyer and Håkansson in 1996 based on material from Lake Kinneret. In 2016, based on new molecular information, it was re-assigned by Ács et al. (2016) to a new genus, Pantocsekiella. The peripheral area of the valve face has striae (rows of fine markings) that run perpendicular to the valve outline, with 18–24 striae per 10 µm (Meyer & Håkansson, 1996). The central area of the valve face is highly variable in structure, which is the reason for the species name polymorpha. Its appearance ranges from radial rows of puncta (small pores) within depressions, with granules on the raised areas between them, to a pattern of 3–5 larger depressions separated by papillae (small, rounded projections) (Plates 2, 3). Scanning electron microscopy reveals one or several fultoportulae scattered across the central area of the valve face. Fultoportulae are also present on the valve mantle, occurring at every second to fifth interstria (costa). A single rimoportula is located on an interstria of the valve face, close to the junction between the valve face and the valve mantle.",
       "distinctive_attributes": "coin-shaped small unicells with short mantle, present at all times of year, looks similar in shape to Stephanocyclus meneghinianus (previously Cyclotella meneghiniana) but smaller in diameter.",
-      "ecology": "Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass concentrations, the maximum biomass ever attained was 40 g m⁻² in May 1990 whereas major Kinneret blooms are of biomass > 100 g m⁻².",
+      "ecology": "Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass concentrations; the maximum biomass ever attained was 40 g m⁻² in May 1990 whereas major Kinneret blooms are of biomass > 100 g m⁻².",
       "environmental_conditions": "The species abundance increases with water temperature, declines with concentrations of chloride (Cl) and total dissolved P (TDP), and is more abundant at lower ammonium (NH4) concentrations (Fig. 3).",
-      "further_reading": "Acs E, Ari E, Duleba M, Dressler M, Genkal SI, Kiss KT. 2016. Pantocsekiella a new centric diatom genus based on morphological and genetic studies. Fottea 16(1): 56-78.\nKuznetsova, I., Kapustin, D., Gusev, E., Martynenko, N. & Kociolek, J.P. 2022. Resurrection of the diatom genus Stephanocyclus (Coscinodiscophyceae: Stephanodiscaceae) on the basis of an integrated molecular and morphological approach. Fottea 22(2): 181-191.\nMeyer B, Håkansson H. 1996. Morphological variation of Cyclotella polymorpha sp. nov. (Bacillariophyceae). Phycologia 35(1):64-69."
+      "further_reading": "Ács E, Ari E, Duleba M, Dressler M, Genkal SI, Kiss KT. 2016. Pantocsekiella, a new centric diatom genus based on morphological and genetic studies. Fottea 16(1): 56-78.\nKuznetsova, I., Kapustin, D., Gusev, E., Martynenko, N. & Kociolek, J.P. 2022. Resurrection of the diatom genus Stephanocyclus (Coscinodiscophyceae: Stephanodiscaceae) on the basis of an integrated molecular and morphological approach. Fottea 22(2): 181-191.\nMeyer B, Håkansson H. 1996. Morphological variation of Cyclotella polymorpha sp. nov. (Bacillariophyceae). Phycologia 35(1):64-69."
     },
     "sections_rich": {
       "phylum": [
@@ -20418,7 +20418,17 @@
           "bold": false
         },
         {
-          "text": "Hakansson",
+          "text": "H",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": "å",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "kansson",
           "italic": false,
           "bold": true
         },
@@ -20532,7 +20542,7 @@
           "bold": false
         },
         {
-          "text": " is a small (diameter: 5 - 16 µm) coin-shaped single-celled centric diatom that shows large morphological variability (Plate 1). The species was first described as ",
+          "text": " is a small (diameter: 5 – 16 µm) coin-shaped single-celled centric diatom that shows large morphological variability (Plate 1). The species was first described as ",
           "italic": false,
           "bold": false
         },
@@ -20552,7 +20562,7 @@
           "bold": false
         },
         {
-          "text": " by Meyer and Håkansson in 1996 based on material from Lake Kinneret. In 2016, based on new molecular information, it was re-assigned by Kis et al. (2016) to a new genus, ",
+          "text": " by Meyer and Håkansson in 1996 based on material from Lake Kinneret. In 2016, based on new molecular information, it was re-assigned by Ács et al. (2016) to a new genus, ",
           "italic": false,
           "bold": false
         },
@@ -20587,7 +20597,7 @@
           "bold": false
         },
         {
-          "text": "fultoportula",
+          "text": "fultoportulae",
           "italic": false,
           "bold": true
         },
@@ -20717,7 +20727,7 @@
           "superscript": true
         },
         {
-          "text": " (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass concentrations, the maximum biomass ever attained was 40 g m",
+          "text": " (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass concentrations; the maximum biomass ever attained was 40 g m",
           "italic": false,
           "bold": false
         },
@@ -20753,12 +20763,12 @@
       ],
       "further_reading": [
         {
-          "text": "Acs E, Ari E, Duleba M, Dressler M, Genkal SI, Kiss KT. 2016. ",
+          "text": "Ács E, Ari E, Duleba M, Dressler M, Genkal SI, Kiss KT. 2016. ",
           "italic": false,
           "bold": false
         },
         {
-          "text": "Pantocsekiella",
+          "text": "Pantocsekiella,",
           "italic": true,
           "bold": false
         },

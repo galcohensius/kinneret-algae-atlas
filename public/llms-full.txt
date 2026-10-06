@@ -667,7 +667,7 @@ Species count: 43
 - Record updated (source extraction): 2026-08-17
 - Source file: Mougeotia 2026-08-17.docx
 
-## Species: Pantocsekiella polymorpha (Meyer & Håkansson) Kiss & Acs 2016
+## Species: Pantocsekiella polymorpha (Meyer & Håkansson) Kiss & Ács 2016
 - Slug: pantocsekiella-polymorpha
 - Canonical URL: https://kinneret-algae-atlas.org/algae/pantocsekiella-polymorpha/
 - Taxonomy: phylum=Bacillariophyta; class=Thalassiosirophyceae; order=Stephanodiscales
