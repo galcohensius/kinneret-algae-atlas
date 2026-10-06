@@ -54,7 +54,7 @@ flowchart LR
   imgs --> next
 ```
 
-`npm run generate:llms` builds `public/llms*.txt` and the static API JSON under `public/api/` from **algae + glossary** JSON (plus `data/study-area.json` for `atlas.json`). `public/api/search-index.json` is not one of its outputs: `scripts/generate-search-index.ts` writes it, and npm runs that script automatically as `prebuild` before every `npm run build`. Supplement and About pages are linked from `llms.txt` as site URLs; they are not yet emitted as separate API JSON files.
+`npm run generate:llms` builds `public/llms*.txt` and the static API JSON under `public/api/` from **algae + glossary** JSON (plus `data/study-area.json` for `atlas.json`). `public/api/search-index.json` is not one of its outputs: `scripts/generate-search-index.ts` writes it, and npm runs that script automatically as `prebuild` before every `npm run build`. The file is also committed, and CI fails if it is stale, so regenerate it (step 8) whenever species data changes. Supplement and About pages are linked from `llms.txt` as site URLs; they are not yet emitted as separate API JSON files.
 
 ## Updating the atlas from a new Word file
 
@@ -141,14 +141,20 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    With no `--input`, the newest `data/raw/*about*.docx` is auto-discovered.
    About files are excluded from algae extraction by default (`*about*.docx`).
 
-8. **LLM/static API files** (after any algae or glossary data change; also refresh after publish so discovery files stay current):
+8. **LLM/static API files and search index** (after any algae or glossary data change; also refresh after publish so discovery files stay current):
 
    ```bash
    npm run generate:llms
    ```
 
-   This regenerates `public/llms.txt`, `public/llms-full.txt`, and static JSON under
-   `public/api/` (species index, per-species JSON, glossary JSON, `atlas.json`).
+   ```bash
+   npm run generate:search-index
+   ```
+
+   These regenerate `public/llms.txt`, `public/llms-full.txt`, static JSON under
+   `public/api/` (species index, per-species JSON, glossary JSON, `atlas.json`), and
+   `public/api/search-index.json`. CI regenerates all of them and fails if the committed
+   copies differ, so commit what these write.
 
 9. **Local preview:** `npm run dev`
 
