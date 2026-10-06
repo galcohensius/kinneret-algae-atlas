@@ -32,6 +32,7 @@ describe("linkGlossaryInPlainText", () => {
         slug: "apex",
         term: "Apex (plural: apices)",
         definition: "tip of a cell",
+        trailing: "",
       },
       { type: "text", text: " is visible." },
     ]);

@@ -811,6 +811,7 @@ main.home {
 .glossary-term-wrap {
   position: relative;
   display: inline;
+  white-space: nowrap;
 }
 
 .glossary-term-trigger {
@@ -852,6 +853,7 @@ main.home {
   font-weight: 400;
   line-height: 1.45;
   text-align: left;
+  white-space: normal;
 }
 
 .glossary-popover-term {

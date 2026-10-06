@@ -30,7 +30,8 @@ function GlossaryLinkedRichBlock({ segments }: { segments: RichSegment[] }) {
     <>
       {parts.map((part, i) => {
         const start = cursor;
-        const end = cursor + part.text.length;
+        const termEnd = cursor + part.text.length;
+        const end = part.type === "term" ? termEnd + part.trailing.length : termEnd;
         cursor = end;
 
         if (part.type === "text") {
@@ -54,6 +55,11 @@ function GlossaryLinkedRichBlock({ segments }: { segments: RichSegment[] }) {
             slug={part.slug}
             term={part.term}
             definition={part.definition}
+            trailing={
+              part.trailing ? (
+                <RichText segments={sliceRichSegmentsByPlainRange(segments, termEnd, end)} />
+              ) : null
+            }
           />
         );
       })}

@@ -30,7 +30,7 @@ export default function GlossaryAwareText({
         part.type === "text" ? (
           <Fragment key={i}>{part.text}</Fragment>
         ) : !claimFirstOccurrence(part.slug) ? (
-          <Fragment key={`${i}-${part.slug}-plain`}>{part.text}</Fragment>
+          <Fragment key={`${i}-${part.slug}-plain`}>{part.text + part.trailing}</Fragment>
         ) : (
           <GlossaryTerm
             key={`${i}-${part.slug}-${part.text}`}
@@ -38,6 +38,7 @@ export default function GlossaryAwareText({
             slug={part.slug}
             term={part.term}
             definition={part.definition}
+            trailing={part.trailing}
           />
         )
       )}

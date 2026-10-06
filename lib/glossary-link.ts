@@ -119,14 +119,17 @@ export function linkGlossaryInPlainText(
       parts.push({ type: "text", text: text.slice(pos, best.start) });
     }
 
+    const end = best.start + best.length;
+    const trailing = text.slice(end).match(/^[^\s\p{L}\p{N}]+/u)?.[0] ?? "";
     parts.push({
       type: "term",
       text: best.matched,
       slug: best.match.slug,
       term: best.match.term,
       definition: best.match.definition,
+      trailing,
     });
-    pos = best.start + best.length;
+    pos = end + trailing.length;
   }
 
   return parts.length > 0 ? parts : [{ type: "text", text }];

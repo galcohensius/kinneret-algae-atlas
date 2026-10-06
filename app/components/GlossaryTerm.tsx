@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { glossaryEntryHref } from "../../lib/glossary-href";
 
@@ -9,6 +10,8 @@ type GlossaryTermProps = {
   slug: string;
   term: string;
   definition: string;
+  /** A button is an atomic inline, so the browser may break right after it unless the punctuation sits in the same nowrap wrapper. */
+  trailing?: ReactNode;
 };
 
 export default function GlossaryTerm({
@@ -16,6 +19,7 @@ export default function GlossaryTerm({
   slug,
   term,
   definition,
+  trailing,
 }: GlossaryTermProps) {
   const [open, setOpen] = useState(false);
   const wrapRef = useRef<HTMLSpanElement>(null);
@@ -54,6 +58,7 @@ export default function GlossaryTerm({
       >
         {matchedText}
       </button>
+      {trailing}
       {open ? (
         <span
           id={popoverId}

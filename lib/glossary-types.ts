@@ -35,4 +35,6 @@ export type GlossaryTextPart =
       slug: string;
       term: string;
       definition: string;
+      /** Punctuation directly after the term, kept on the term's line. */
+      trailing: string;
     };
