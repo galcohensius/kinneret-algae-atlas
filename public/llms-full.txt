@@ -16,7 +16,7 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 
 Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.
 
-Species count: 43
+Species count: 44
 
 ## Species: Gymnodinium F. Stein 1878
 - Slug: gymnodinium
@@ -198,6 +198,23 @@ Species count: 43
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
 - Record updated (source extraction): 2026-08-07
 - Source file: 1 Dinoflagellates 2026-08-07.docx
+
+## Species: Umezakia ovalisporum (Forti) McGregor et al. 2023
+- Slug: umezakia-ovalisporum
+- Canonical URL: https://kinneret-algae-atlas.org/algae/umezakia-ovalisporum/
+- Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Nostocales
+- Habitat: plankton
+- Organization: filamentous
+- Cell diameter (D): 3.0–4.4 µm, median: 3.4 µm (N=3980). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely
+- Cell length (L): not measured, only filament length was measured
+- Cell biovolume: not computed, only filament volume was computed
+- Biovolume equation: Cylinder, V = 2 π L (D/2)², where L=filament length
+- Filament length: 20–1100 µm, median: 190 µm (N=3980)
+- Ecology (compact): Umezakia ovalisporum, a nitrogen-fixing cyanobacterium invaded Lake Kinneret in 1994 (Pollingher et al. 1998), shortly after the Hula Valley was hydrologically disconnected from Lake Kinneret when Lake Agmon was created (Hambright and Zoha…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 1 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
+- Record updated (source extraction): 2026-11-01
+- Source file: Aphanizomenon ovalisporum 2026-10-18.docx
 
 ## Species: Aulacoseira granulata (Ehrenberg) Simonsen 1979
 - Slug: aulacoseira-granulata
@@ -439,10 +456,10 @@ Species count: 43
 - Cell biovolume: 500 – 6000 μm³, median: 2300 μm³.
 - Biovolume equation: Cylinder, V = L π (D/2)².
 - Ecology (compact): Stephanocyclus meneghinianus is a common component of the Kinneret winter plankton (Jan-March), mostly reaching maxima of several tens of cells/mL, but on two exceptional occasions in the 1980s it peaked with ~ 1000 cells/mL (Figs. 1, 2).
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 14 September 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 18 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-09-14
-- Source file: Cyclotella meneghiniana 2026-09-14.docx
+- Record updated (source extraction): 2026-10-18
+- Source file: Cyclotella meneginiana 2026-10-18.docx
 
 ## Species: Euglena Ehrenberg 1830
 - Slug: euglena
@@ -678,11 +695,11 @@ Species count: 43
 - Cell length (L): 3 – 10 μm, median: 4.7 μm (N=390).
 - Cell biovolume: 50 – 2500 μm³, median: 280 μm³. Larger cell size in winter, smaller in summer (see Fig. 2).
 - Biovolume equation: Cylinder, V = L π (D/2)².
-- Ecology (compact): Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 6 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Ecology (compact): Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure, it does not reach high biomass…
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 18 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-10-06
-- Source file: Pantocsekiella polymorpha 2026-10-06.docx
+- Record updated (source extraction): 2026-10-18
+- Source file: Pantocsekiella polymorpha 2026-10-18.docx
 
 ## Species: Peridinium gatunense Nygaard 1925
 - Slug: peridinium-gatunense

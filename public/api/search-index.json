@@ -1,5 +1,5 @@
 {
-  "count": 43,
+  "count": 44,
   "entries": [
     {
       "slug": "aulacoseira-granulata",
@@ -100,6 +100,10 @@
     {
       "slug": "radiocystis-geminata",
       "searchHaystack": "radiocystis geminata skuja 1948 radiocystis geminata skuja 1948 cyanobacteriophyta blue-greens"
+    },
+    {
+      "slug": "umezakia-ovalisporum",
+      "searchHaystack": "umezakia ovalisporum (forti) mcgregor et al. 2023 umezakia ovalisporum (forti) mcgregor et al. 2023 aphanizomenon ovalisporum forti 1911 cyanobacteriophyta blue-greens"
     },
     {
       "slug": "ceratium-furcoides",

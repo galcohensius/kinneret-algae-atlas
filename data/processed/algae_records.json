@@ -6031,6 +6031,1217 @@
     }
   },
   {
+    "scientific_name": "Umezakia ovalisporum (Forti) McGregor et al. 2023",
+    "images": [
+      "/algae-images/umezakia-ovalisporum/thumbnail-1.jpg",
+      "/algae-images/umezakia-ovalisporum/plate-1.jpg",
+      "/algae-images/umezakia-ovalisporum/plate-2.jpg",
+      "/algae-images/umezakia-ovalisporum/plate-3.jpg",
+      "/algae-images/umezakia-ovalisporum/figure-1.png",
+      "/algae-images/umezakia-ovalisporum/figure-2.png",
+      "/algae-images/umezakia-ovalisporum/figure-3.png",
+      "/algae-images/umezakia-ovalisporum/figure-4.png"
+    ],
+    "image_captions": [
+      "",
+      "Plate 1. Three filaments of Umezakia ovalisporum from Lake Kinneret. Top filament – with an akinete (large egg-shaped central cell). Middle and top filaments – with a heterocyte (“empty rounded central cells). Photo by Alla Alster.",
+      "Plate 2. Filaments of Umezakia ovalisporum in a culture isolated from Lake Kinneret. When no heterocytes and/or akinete are seen, the species can be identified by its end cells, that are typically longer and thinner than other cells in the filament, and with hyaline (colorless) parts. Yellow scale bar = 10 µm. Photo by Alla Alster, June 2006.",
+      "Plate 3. Two filaments of Umezakia ovalisporum on either side of a single (central) filament of Raphidiopsis (previously Cylindrospermopsis) raciborskii. The distinction between species is by examination of the end cells. In U. ovalisporum they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending, as opposed to the pencil-/ needle-shaped ending or a terminal heterocyte in U. raciborskii. Cell diameter is also larger in U. ovalisporum. Photo by Alla Alster, June 2006.",
+      "Figure 1. Time series of Umezakia (Previously Aphanizomenon) ovalisporum depth-integrated wet-weight biomass (g m⁻²), Lake Kinneret, 1970-2020.",
+      "Figure 2. Box plots showing the seasonal pattern of statistics of water column filament abundance (left) and volume per filament (right) of Umezakia ovalisporum, based on data for 2004-2020.",
+      "Figure 3. Seasonal fluctuations in filament diameter of Umezakia ovalisporum, 2004-2012 (all measurements made by the same analyst), showing larger diameter in winter, smaller in summer. Vertical lines mark 1 January of each year.",
+      "Figure 3. pH tolerance of U. ovalisporum, based on Kinneret field data."
+    ],
+    "image_captions_rich": [
+      [],
+      [
+        {
+          "text": "Plate 1. Three filaments of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret. Top filament – with an akinete (large egg-shaped central cell). Middle and top filaments – with a heterocyte (“empty rounded central cells). Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 2. Filaments of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in a culture isolated from Lake Kinneret. When no heterocytes and/or akinete are seen, the species can be identified by its end cells, that are typically longer and thinner than other cells in the filament, and with hyaline (colorless) parts. Yellow scale bar = 10 µm. Photo by Alla Alster, June 2006.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 3. Two filaments of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " on either side of a single (central) filament of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Raphidiopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (previously ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cylindrospermopsis)",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "raciborskii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". The distinction between species is by examination of the end cells. In ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ",",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " as opposed to the pencil-/ needle-shaped ending or a terminal heterocyte in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "raciborskii.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Cell diameter is also larger in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Photo by Alla Alster, June 2006.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 1. Time series of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Previously ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon)",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " depth-integrated wet-weight biomass (g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "), Lake Kinneret, 1970-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 2. Box plots showing the seasonal pattern of statistics of water column filament abundance (left) and volume per filament (right) of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " based on data for 2004-2020.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. Seasonal fluctuations in filament diameter of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " 2004-2012 (all measurements made by the same analyst), showing larger diameter in winter, smaller in summer. Vertical lines mark 1 January of each year.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Figure 3. pH tolerance of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", based on Kinneret field data.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    ],
+    "sections": {
+      "phylum": "Cyanobacteriophyta",
+      "class": "Cyanophyceae",
+      "order": "Nostocales",
+      "habitat": "plankton",
+      "previous_name_used": "Aphanizomenon ovalisporum Forti 1911",
+      "organization": "filamentous",
+      "color": "pale blue-green\npale blue-green, but end cells often colorless. Heterocytes solitary, intercalary (between two other cells; never at end of trichome), nearly spherical or ellipsoidal, 2-6 µm wide (median: 3.4 µm) and 2.5-9 µm long (median: 5.30. Akinetes (resting cells) oval, usually separated by vegetative cells from heterocytes on the same trichome, up to 3-14 µm (median: 6.7 µm) wide and 5-23 µm long (median: 10.2 µm), with a yellow or brown envelope. Reproduction by fragmentation of trichomes and by germination of akinetes. The species can be distinguished from the other common nostocalean cyanobacterium, Raphidiopsis (previously Cylindrospermopsis) raciborskii by its end cells. In U. ovalisporum they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending (Plate 2), as opposed to the pencil-/needle-shaped ending or a terminal heterocyte in U. raciborskii. Cell diameter is also larger in U. ovalisporum (Plate 3).",
+      "cell_diameter_d": "3.0–4.4 µm, median: 3.4 µm (N=3980). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely",
+      "cell_length_l": "not measured, only filament length was measured",
+      "biovolume_per_cell": "not computed, only filament volume was computed",
+      "biovolume_equation": "Cylinder, V = 2 π L (D/2)², where L=filament length",
+      "filament_length": "20–1100 µm, median: 190 µm (N=3980)",
+      "morphological_features": "Solitary planktonic trichomes, straight or slightly curved, several hundred µm long, 3-4 µm wide, with bluntly rounded or slightly tapered end cells; scarcely constricted at the cross walls (Plates 1, 2). Vegetative cells are cylindrical, 1-3 times longer than wide, at the ends of the trichome, up to 6-7 times longer than wide, gradually becoming longer and often reaching 25-30 µm in length; with gas vesicles.",
+      "distinctive_attributes": "gas-vacuolated filamentous cyanobacterium, often with heterocytes and/or akinetes. End-cells are bluntly rounded, thinner than other cells, often colorless. Filament diameter larger than that of Raphidiopsis (previously Cylindrospermopsis) raciborskii.",
+      "ecology": "Umezakia ovalisporum, a nitrogen-fixing cyanobacterium invaded Lake Kinneret in 1994 (Pollingher et al. 1998), shortly after the Hula Valley was hydrologically disconnected from Lake Kinneret when Lake Agmon was created (Hambright and Zohary 1998). This disconnection reduced substantially the nitrate load entering Lake Kinneret and created in-lake conditions suitable for the proliferation of nitrogen fixers. Umezakia ovalisporum was the first of several species of nostocalean cyanobacteria never recorded previously that appeared in Lake Kinneret since 1994 and got established in the lake. In September-October 1994 U. ovalisporum formed a massive bloom in Kinneret (Fig. 1). Since 1994 it is a common component of the Kinneret summer phytoplankton. It occurs in the plankton only when the lake is stratified, peaking in September-October (Fig. 2). Towards the onset of winter, it forms akinetes (Plate 1) that sink to the sediment and wait for germination till the following summer. This species is usually evenly distributed throughout the epilimnion. In Kinneret it doesn’t form surface films and doesn’t cluster.",
+      "physiological_features": "Like other nostocalean species, it fixes atmospheric nitrogen. N-fixation happens in the heterocytes, where anoxic conditions are maintained. It produces the toxin cylindrospermopsin and hence considered bad for water quality. Potassium deficiency triggers the development of akinetes (Sukenik et al. 2013).",
+      "environmental_conditions": "Umezakia ovalisporum disappears when the pH exceeds 9 (Fig. 3) although its intense blooms push the pH towards this level. It is adapted to higher salinities, higher water temperatures, lower TP levels. In lab experiments, A. ovalisporum hardly grew under Na+ lower than 2.5 mM (Bar Yosef thesis, P.9, based on Kaplan et al. 1984. FEBS letters 176:166-168).\nFigure 4. U. ovalisporum abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling, showing...",
+      "further_reading": "Bar‐Yosef Y, Murik O, Sukenik A, Hadas O, Kaplan A. 2012. Multiannual variations in phytoplankton populations: what distinguished the blooms of Aphanizomenon ovalisporum in Lake Kinneret in 2010 from 2009? Environmental Microbiology Reports, 4:498-503.\nBar-Yosef Y, Sukenik A, Hadas O, Viner-Mozzini Y, Kaplan A. 2010. Enslavement in the water body by toxic Aphanizomenon ovalisporum, inducing alkaline phosphatase in phytoplanktons. Current biology, 20:1557-61.\nHadas O. 2014. Microbial processes within the nitrogen cycle. Chap. 22 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 381-396. Springer, Heidelberg.\nHadas O, Pinkas R, Malinsky‐Rushansky N, Nishri A, Kaplan A, Rimmer A, Sukenik A. 2012. Appearance and establishment of diazotrophic cyanobacteria in Lake Kinneret, Israel. Freshwater Biology, 57:1214-27.\nHadas O, Pinkas R, Malinsky-Rushansky N, Shalev-Alon G, Delphine E, Berner T, Sukenik A, Kaplan A. 2002. Physiological variables determined under laboratory conditions may explain the bloom of Aphanizomenon ovalisporum in Lake Kinneret. European Journal of Phycology, 37:259-267.\nHadas O, Kaplan A, Sukenik A. 2015. Long-term changes in cyanobacteria populations in Lake Kinneret (Sea of Galilee), Israel: an eco-physiological outlook. Life. 5:418-31.\nHambright KD, Zohary T. 1998. Lakes Hula and Agmon: destruction and creation of wetland ecosystems in northern Israel. Wetlands Ecol. Manag. 6: 83-89.\nHambright KD, Zohary T, Easton J, Azoulay B, Fishbein T. 2001. Effects of zooplankton grazing and nutrients on the bloom-forming, N₂-fixing cyanobacterium Aphanizomenon in Lake Kinneret. J. Plankton Res. 23:165–174.\n(Kaplan et al. 1984) FEBS letters 176(1) 166-168.\nMcGregor GB, Sendall BC, Niiyama Y, Tuji A, Willis A. 2023. Chrysosporum ovalisporum is synonymous with the true-branching cyanobacterium Umezakia natans (Nostocales/Aphanizomenaceae). Journal of Phycology 59: 326-341.\nPollingher U, Hadas O, Yacobi YZ, Zohary T, Berman T. 1998. Aphanizomenon ovalisporum (Forti) in Lake Kinneret (Israel). J. Plankton Res. 20: 1321-1339.\nSukenik A. Hadas O, Kaplan A. 2014. Cyanobacteria. Chapter 12 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 213-226. Springer, Heidelberg.\nSukenik A, Kaplan‐Levy RN, Viner‐Mozzini Y, Quesada A, Hadas O. 2013. Potassium deficiency triggers the development of dormant cells (akinetes) in Aphanizomenon ovalisporum (Nostocales, Cyanoprokaryota). Journal of phycology, 49:580-7.\nZohary T, Yacobi YZ, Alster A, Fishbein T, Lippman S, Tibor G. 2014. Phytoplankton. Chap. 10 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 161-190. Springer, Heidelberg."
+    },
+    "sections_rich": {
+      "phylum": [
+        {
+          "text": "Cyanobacteriophyta",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "class": [
+        {
+          "text": "Cyanophyceae",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "order": [
+        {
+          "text": "Nostocales",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "habitat": [
+        {
+          "text": "plankton",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "previous_name_used": [
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Forti",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "1911",
+          "italic": false,
+          "bold": true
+        }
+      ],
+      "organization": [
+        {
+          "text": "filamentous",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "color": [
+        {
+          "text": "pale blue-green\npale blue-green, but end cells often colorless. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Heterocyte",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": "s solitary, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "intercalary",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (between two other cells; never at end of trichome), nearly spherical or ellipsoidal, 2-6 µm wide (median: 3.4 µm) and 2.5-9 µm long (median: 5.30. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Akinete",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": "s (resting cells) oval, usually separated by vegetative cells from heterocytes on the same trichome, up to 3-14 µm (median: 6.7 µm) wide and 5-23 µm long (median: 10.2 µm), with a yellow or brown envelope. Reproduction by fragmentation of trichomes and by germination of akinetes. The species can be distinguished from the other common nostocalean cyanobacterium, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Raphidiopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (previously ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cylindrospermopsis)",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "raciborskii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " by its end cells. In ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending (Plate 2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": ",",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " as opposed to the pencil-/needle-shaped ending or a terminal heterocyte in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "raciborskii.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Cell diameter is also larger in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Plate 3).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "3.0–4.4 µm, median: 3.4 µm (N=3980). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "not measured, only filament length was measured",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "not computed, only filament volume was computed",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Cylinder, V = 2 π L (D/2)",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ", where L=filament length",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "filament_length": [
+        {
+          "text": "20–1100 µm, median: 190 µm (N=3980)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Solitary planktonic ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "trichome",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": "s, straight or slightly curved, several hundred µm long, 3-4 µm wide, with bluntly rounded or slightly tapered end cells; scarcely constricted at the cross walls (Plates 1, 2). Vegetative cells are cylindrical, 1-3 times longer than wide, at the ends of the trichome, up to 6-7 times longer than wide, gradually becoming longer and often reaching 25-30 µm in length; with gas vesicles.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "distinctive_attributes": [
+        {
+          "text": "gas-vacuolated filamentous cyanobacterium, often with heterocytes and/or akinetes. End-cells are bluntly rounded, thinner than other cells, often colorless. Filament diameter larger than that of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Raphidiopsis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (previously ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Cylindrospermopsis)",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "raciborskii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ".",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "ecology": [
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " a nitrogen-fixing cyanobacterium invaded Lake Kinneret in 1994 (Pollingher et al. 1998), shortly after the Hula Valley was hydrologically disconnected from Lake Kinneret when Lake Agmon was created (Hambright and Zohary 1998). This disconnection reduced substantially the nitrate load entering Lake Kinneret and created in-lake conditions suitable for the proliferation of nitrogen fixers. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " was the first of several species of nostocalean cyanobacteria never recorded previously that appeared in Lake Kinneret since 1994 and got established in the lake. In September-October 1994 ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " formed a massive bloom in Kinneret (Fig. 1). Since 1994 it is a common component of the Kinneret summer phytoplankton. It occurs in the plankton only when the lake is stratified, peaking in September-October (Fig. 2). Towards the onset of winter, it forms ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "akinetes",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " (Plate 1) that sink to the sediment and wait for germination till the following summer. This species is usually evenly distributed throughout the epilimnion. In Kinneret it doesn’t form surface films and doesn’t cluster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "physiological_features": [
+        {
+          "text": "Like other nostocalean species, it fixes atmospheric nitrogen. N-fixation happens in the heterocytes, where anoxic conditions are maintained. It produces the toxin cylindrospermopsin and hence considered bad for water quality. Potassium deficiency triggers the development of akinetes (Sukenik et al. 2013).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "environmental_conditions": [
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " disappears when the pH exceeds 9 (Fig. 3) although its intense blooms push the pH towards this level. It is adapted to higher salinities, higher water temperatures, lower TP levels. In lab experiments, ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "A.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " hardly grew under Na+ lower than 2.5 mM (Bar Yosef thesis, P.9, based on Kaplan et al. 1984. FEBS letters 176:166-168).\nFigure 4. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "U.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " abundance (cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling, showing...",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "further_reading": [
+        {
+          "text": "Bar‐Yosef Y, Murik O, Sukenik A, Hadas O, Kaplan A. 2012. Multiannual variations in phytoplankton populations: what distinguished the blooms of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in Lake Kinneret in 2010 from 2009? Environmental Microbiology Reports, 4:498-503.\nBar-Yosef Y, Sukenik A, Hadas O, Viner-Mozzini Y, Kaplan A. 2010. Enslavement in the water body by toxic ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", inducing alkaline phosphatase in phytoplanktons. Current biology, 20:1557-61.\nHadas O. 2014. Microbial processes within the nitrogen cycle. Chap. 22 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 381-396. Springer, Heidelberg.\nHadas O, Pinkas R, Malinsky‐Rushansky N, Nishri A, Kaplan A, Rimmer A, Sukenik A. 2012. Appearance and establishment of diazotrophic cyanobacteria in Lake Kinneret, Israel. Freshwater Biology, 57:1214-27.\nHadas O, Pinkas R, Malinsky-Rushansky N, Shalev-Alon G, Delphine E, Berner T, Sukenik A, Kaplan A. 2002. Physiological variables determined under laboratory conditions may explain the bloom of Aphanizomenon ovalisporum in Lake Kinneret. European Journal of Phycology, 37:259-267.\nHadas O, Kaplan A, Sukenik A. 2015. Long-term changes in cyanobacteria populations in Lake Kinneret (Sea of Galilee), Israel: an eco-physiological outlook. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Life.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " 5:418-31.\nHambright KD, Zohary T. 1998. Lakes Hula and Agmon: destruction and creation of wetland ecosystems in northern Israel. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Wetlands",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ecol.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Manag.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " 6: 83-89.\nHambright KD, Zohary T, Easton J, Azoulay B, Fishbein T. 2001. Effects of zooplankton grazing and nutrients on the bloom-forming, N",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": "-fixing cyanobacterium ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in Lake Kinneret. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "J.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plankton",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Res",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "23",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ":165–174.\n(Kaplan et al. 1984) FEBS letters 176(1) 166-168.\nMcGregor GB, Sendall BC, Niiyama Y, Tuji A, Willis A. 2023. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysosporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is synonymous with the true-branching cyanobacterium ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "natans",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Nostocales/Aphanizomenaceae). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Journal",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "of",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Phycology",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " 59: 326-341.\nPollingher U, Hadas O, Yacobi YZ, Zohary T, Berman T. 1998. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Forti) in Lake Kinneret (Israel). ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "J.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plankton",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Res",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". 20: 1321-1339.\nSukenik A. Hadas O, Kaplan A. 2014. Cyanobacteria. Chapter 12 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Lake",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Kinneret:",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ecology",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "and",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Management",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", pp. 213-226. Springer, Heidelberg.\nSukenik A, Kaplan‐Levy RN, Viner‐Mozzini Y, Quesada A, Hadas O. 2013. Potassium deficiency triggers the development of dormant cells (akinetes) in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Nostocales, Cyanoprokaryota). Journal of phycology, 49:580-7.\nZohary T, Yacobi YZ, Alster A, Fishbein T, Lippman S, Tibor G. 2014. Phytoplankton. Chap. 10 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Lake",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Kinneret:",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Ecology",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "and",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Management,",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " pp. 161-190. Springer, Heidelberg.",
+          "italic": false,
+          "bold": false
+        }
+      ]
+    },
+    "metadata": {
+      "source_file": "Aphanizomenon ovalisporum 2026-10-18.docx",
+      "record_updated": "2026-11-01"
+    }
+  },
+  {
     "scientific_name": "Aulacoseira granulata (Ehrenberg) Simonsen 1979",
     "images": [
       "/algae-images/aulacoseira-granulata/thumbnail-1.jpg",
@@ -12945,6 +14156,7 @@
       "/algae-images/stephanocyclus-meneghinianus/thumbnail-1.jpg",
       "/algae-images/stephanocyclus-meneghinianus/plate-1.jpg",
       "/algae-images/stephanocyclus-meneghinianus/plate-2.jpg",
+      "/algae-images/stephanocyclus-meneghinianus/plate-3.jpg",
       "/algae-images/stephanocyclus-meneghinianus/figure-1.png",
       "/algae-images/stephanocyclus-meneghinianus/figure-2.png",
       "/algae-images/stephanocyclus-meneghinianus/figure-3.png"
@@ -12953,6 +14165,7 @@
       "",
       "Plate 1. Stephanocyclus meneghinianus seen from the side (girdle view). The S-shape of the valve in girdle view (distinct in the right-most cell) is diagnostic. Usually this species is unicellular, but occasionally after division two cells remain attached, as in the right specimen. Photo by Alla Alster.",
       "Plate 2. Stephanocyclus meneghinianus from valve view. Note stria (=radiating lines) around cell periphery. Photo by Alla Alster.",
+      "Plate 3. Stephanocyclus meneghinianus from valve view, after H₂O₂ treatment to remove organic matter, showing stria around cell periphery. Photo by Alla Alster.",
       "Figure 1. Time series of Stephanocyclus meneghinianus mean epilimnion cell abundance (cells mL⁻¹), Lake Kinneret, 1970-2020.",
       "Figure 2. The annual pattern of water column cell abundance (left) and volume per cell (right) of Stephanocyclus meneghinianus, based on data for 2005-2020. Statistics shown are: median – middle line; 25th to 75th percentiles – box content; 90th and 10th percentiles - top and bottom bars, respectively. The high variability in cell size from May to December is partly due to few measurements, as the species is rare during those months.",
       "Figure 3. Stephanocyclus meneghinianus abundance (cells mL⁻¹) vs. selected environmental parameters recorded at the site and time of sampling, showing higher cell concentrations when the lake is fully mixed (zₘᵢₓ >35 m), water temperature is low and Ca and alkalinity are high. Abundance increases with nitrate. Based on data for 2012-2020."
@@ -13009,6 +14222,55 @@
         },
         {
           "text": " from valve view. Note stria (=radiating lines) around cell periphery. Photo by Alla Alster.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Plate 3. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Stephanocyclus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "meneghinianus",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from valve view, after H",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": "O",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "2",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " treatment to remove organic matter, showing stria around cell periphery. Photo by Alla Alster.",
           "italic": false,
           "bold": false
         }
@@ -13141,7 +14403,7 @@
       "cell_length_l": "5-16 μm, median: 9 μm (N=481).",
       "biovolume_per_cell": "500 – 6000 μm³, median: 2300 μm³.",
       "biovolume_equation": "Cylinder, V = L π (D/2)².",
-      "morphological_features": "Stephanocyclus meneghinianus is a single-celled centric diatom, having a circular valve. Until recently it was known as Cyclotella meneghiniana. Valve surface is gently undulated (=wavy, i.e. not completely flat), S-shaped when observed in girdle view (Plate 1). Cell shaped like a petri dish (or drum). Valve face with a distinct central region surrounded by radiating areolae (Plate 2) occupying a belt of 4-6 µm around the cell periphery, with 6-10 costae (= elongated, solid thickening of the valve) in 10 µm at margins. The central valve area is smooth. Discoid plastids are arranged around the margin of the cell. The species is typically less abundant than the similarly looking but smaller centric diatom Pantocsekiella polymorpha.\nBased on morphometric and molecular methods Beszteri et al. (2005; 2007) claimed that Cyclotella meneghiniana is a group of cryptic taxa.",
+      "morphological_features": "Stephanocyclus meneghinianus is a single-celled centric diatom, having a circular valve. Until recently it was known as Cyclotella meneghiniana. Valve surface is gently undulated (=wavy, i.e. not completely flat), S-shaped when observed in girdle view (Plate 1). Cell shaped like a petri dish (or drum). Valve face with a distinct central region surrounded by radiating areolae (Plates 2, 3) occupying a belt of 4-6 µm around the cell periphery, with 6-10 costae (= elongated, solid thickening of the valve) in 10 µm at margins. The central valve area is smooth. Discoid plastids are arranged around the margin of the cell. The species is typically less abundant than the similarly looking but smaller centric diatom Pantocsekiella polymorpha.\nBased on morphometric and molecular methods Beszteri et al. (2005; 2007) claimed that Cyclotella meneghiniana is a group of cryptic taxa.",
       "distinctive_attributes": "winter species in Kinneret, requires Si, looks similar in shape to its relative Pantocsekiella (previously Cyclotella) polymorpha but larger in size",
       "ecology": "Stephanocyclus meneghinianus is a common component of the Kinneret winter plankton (Jan-March), mostly reaching maxima of several tens of cells/mL, but on two exceptional occasions in the 1980s it peaked with ~ 1000 cells/mL (Figs. 1, 2).",
       "physiological_features": "Like all diatoms, Stephanocyclus meneghinianus requires Si – which is always present in Lake Kinneret at concentrations >4 mg L⁻¹.",
@@ -13343,7 +14605,7 @@
           "bold": true
         },
         {
-          "text": " (Plate 2) occupying a belt of 4-6 µm around the cell periphery, with 6-10 ",
+          "text": " (Plates 2, 3) occupying a belt of 4-6 µm around the cell periphery, with 6-10 ",
           "italic": false,
           "bold": false
         },
@@ -13649,8 +14911,8 @@
       ]
     },
     "metadata": {
-      "source_file": "Cyclotella meneghiniana 2026-09-14.docx",
-      "record_updated": "2026-09-14"
+      "source_file": "Cyclotella meneginiana 2026-10-18.docx",
+      "record_updated": "2026-10-18"
     }
   },
   {
@@ -20343,7 +21605,7 @@
       "biovolume_equation": "Cylinder, V = L π (D/2)².",
       "morphological_features": "Pantocsekiella polymorpha is a small (diameter: 5 – 16 µm) coin-shaped single-celled centric diatom that shows large morphological variability (Plate 1). The species was first described as Cyclotella polymorpha by Meyer and Håkansson in 1996 based on material from Lake Kinneret. In 2016, based on new molecular information, it was re-assigned by Ács et al. (2016) to a new genus, Pantocsekiella. The peripheral area of the valve face has striae (rows of fine markings) that run perpendicular to the valve outline, with 18–24 striae per 10 µm (Meyer & Håkansson, 1996). The central area of the valve face is highly variable in structure, which is the reason for the species name polymorpha. Its appearance ranges from radial rows of puncta (small pores) within depressions, with granules on the raised areas between them, to a pattern of 3–5 larger depressions separated by papillae (small, rounded projections) (Plates 2, 3). Scanning electron microscopy reveals one or several fultoportulae scattered across the central area of the valve face. Fultoportulae are also present on the valve mantle, occurring at every second to fifth interstria (costa). A single rimoportula is located on an interstria of the valve face, close to the junction between the valve face and the valve mantle.",
       "distinctive_attributes": "coin-shaped small unicells with short mantle, present at all times of year, looks similar in shape to Stephanocyclus meneghinianus (previously Cyclotella meneghiniana) but smaller in diameter.",
-      "ecology": "Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass concentrations; the maximum biomass ever attained was 40 g m⁻² in May 1990 whereas major Kinneret blooms are of biomass > 100 g m⁻².",
+      "ecology": "Pantocsekiella polymorpha is the most abundant centric diatom of Lake Kinneret, reaching in summer concentrations exceeding 1000 cells mL⁻¹ (Figs. 1, 2). Due to its small cell size and heavy grazing pressure, it does not reach high biomass concentrations; the maximum biomass ever attained was 40 g m⁻² in May 1990 whereas major Kinneret blooms are of biomass > 100 g m⁻².",
       "environmental_conditions": "The species abundance increases with water temperature, declines with concentrations of chloride (Cl) and total dissolved P (TDP), and is more abundant at lower ammonium (NH4) concentrations (Fig. 3).",
       "further_reading": "Ács E, Ari E, Duleba M, Dressler M, Genkal SI, Kiss KT. 2016. Pantocsekiella, a new centric diatom genus based on morphological and genetic studies. Fottea 16(1): 56-78.\nKuznetsova, I., Kapustin, D., Gusev, E., Martynenko, N. & Kociolek, J.P. 2022. Resurrection of the diatom genus Stephanocyclus (Coscinodiscophyceae: Stephanodiscaceae) on the basis of an integrated molecular and morphological approach. Fottea 22(2): 181-191.\nMeyer B, Håkansson H. 1996. Morphological variation of Cyclotella polymorpha sp. nov. (Bacillariophyceae). Phycologia 35(1):64-69."
     },
@@ -20727,7 +21989,7 @@
           "superscript": true
         },
         {
-          "text": " (Figs. 1, 2). Due to its small cell size and heavy grazing pressure it does not reach high biomass concentrations; the maximum biomass ever attained was 40 g m",
+          "text": " (Figs. 1, 2). Due to its small cell size and heavy grazing pressure, it does not reach high biomass concentrations; the maximum biomass ever attained was 40 g m",
           "italic": false,
           "bold": false
         },
@@ -20820,8 +22082,8 @@
       ]
     },
     "metadata": {
-      "source_file": "Pantocsekiella polymorpha 2026-10-06.docx",
-      "record_updated": "2026-10-06"
+      "source_file": "Pantocsekiella polymorpha 2026-10-18.docx",
+      "record_updated": "2026-10-18"
     }
   },
   {

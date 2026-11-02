@@ -1,5 +1,5 @@
 {
-  "count": 43,
+  "count": 44,
   "species": [
     {
       "slug": "gymnodinium",
@@ -163,6 +163,21 @@
       "record_updated": "2026-08-07",
       "citation": {
         "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+      }
+    },
+    {
+      "slug": "umezakia-ovalisporum",
+      "scientific_name": "Umezakia ovalisporum (Forti) McGregor et al. 2023",
+      "canonical_url": "https://kinneret-algae-atlas.org/algae/umezakia-ovalisporum/",
+      "taxonomy": {
+        "phylum": "Cyanobacteriophyta",
+        "class": "Cyanophyceae",
+        "order": "Nostocales"
+      },
+      "record_updated": "2026-11-01",
+      "citation": {
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 1 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
         "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
       }
     },
@@ -370,9 +385,9 @@
         "class": "Thalassiosirophyceae",
         "order": "Stephanodiscales"
       },
-      "record_updated": "2026-09-14",
+      "record_updated": "2026-10-18",
       "citation": {
-        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 14 September 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 18 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
         "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
       }
     },
@@ -580,9 +595,9 @@
         "class": "Thalassiosirophyceae",
         "order": "Stephanodiscales"
       },
-      "record_updated": "2026-10-06",
+      "record_updated": "2026-10-18",
       "citation": {
-        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 6 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+        "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 18 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
         "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
       }
     },

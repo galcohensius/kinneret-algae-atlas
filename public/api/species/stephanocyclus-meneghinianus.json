@@ -7,9 +7,9 @@
     "class": "Thalassiosirophyceae",
     "order": "Stephanodiscales"
   },
-  "record_updated": "2026-09-14",
+  "record_updated": "2026-10-18",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 14 September 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 18 October 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -21,7 +21,7 @@
     "biovolume_equation": "Cylinder, V = L π (D/2)²."
   },
   "narrative": {
-    "morphology": "Stephanocyclus meneghinianus is a single-celled centric diatom, having a circular valve. Until recently it was known as Cyclotella meneghiniana. Valve surface is gently undulated (=wavy, i.e. not completely flat), S-shaped when observed in girdle view (Plate 1). Cell shaped like a petri dish (or drum). Valve face with a distinct central region surrounded by radiating areolae (Plate 2) occupying a belt of 4-6 µm around the cell periphery, with 6-10 costae (= elongated, solid thickening of the valve) in 10 µm at margins. The central valve area is smooth. Discoid plastids are arranged around the margin of the cell. The species is typically less abundant than the similarly looking but smaller centric diatom Pantocsekiella polymorpha.\nBased on morphometric and molecular methods Beszteri et al. (2005; 2007) claimed that Cyclotella meneghiniana is a group of cryptic taxa.",
+    "morphology": "Stephanocyclus meneghinianus is a single-celled centric diatom, having a circular valve. Until recently it was known as Cyclotella meneghiniana. Valve surface is gently undulated (=wavy, i.e. not completely flat), S-shaped when observed in girdle view (Plate 1). Cell shaped like a petri dish (or drum). Valve face with a distinct central region surrounded by radiating areolae (Plates 2, 3) occupying a belt of 4-6 µm around the cell periphery, with 6-10 costae (= elongated, solid thickening of the valve) in 10 µm at margins. The central valve area is smooth. Discoid plastids are arranged around the margin of the cell. The species is typically less abundant than the similarly looking but smaller centric diatom Pantocsekiella polymorpha.\nBased on morphometric and molecular methods Beszteri et al. (2005; 2007) claimed that Cyclotella meneghiniana is a group of cryptic taxa.",
     "ecology": "Stephanocyclus meneghinianus is a common component of the Kinneret winter plankton (Jan-March), mostly reaching maxima of several tens of cells/mL, but on two exceptional occasions in the 1980s it peaked with ~ 1000 cells/mL (Figs. 1, 2).",
     "environmental_conditions": "Stephanocyclus meneghinianus abundance was independent of water level, euphotic zone depth, pH, and concentrations of chloride, organic N and turbidity within the ranges of values found in Lake Kinneret . Its higher concentratins occured when the lake was fully mixed (zₘᵢₓ >35 m). At that time of the year alkalinity was >130 mg L⁻¹, Calcium >50 mg L⁻¹, water temperature <18.5°C. Abundance inreased with nitrate concentration (Fig. 3).",
     "further_reading": "Beszteri B, Ács É, Medlin L. 2005. Conventional and geometric morphometric studies of valve ultrastructural variation in two closely related Cyclotella species (Bacillariophyta). European Journal of Phycology. 40(1):89-103.\nBeszteri B, John U, Medlin LK. 2007. An assessment of cryptic genetic diversity within the Cyclotella meneghiniana species complex (Bacillariophyta) based on nuclear and plastid genes, and amplified fragment length polymorphisms. European Journal of Phycology. 42(1):47-60.\nKuznetsova, I., Kapustin, D., Gusev, E., Martynenko, N. & Kociolek, J.P. 2022. Resurrection of the diatom genus Stephanocyclus (Coscinodiscophyceae: Stephanodiscaceae) on the basis of an integrated molecular and morphological approach. Fottea 22(2): 181-191."
