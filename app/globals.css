@@ -1210,6 +1210,7 @@ a:hover {
   margin: 0 0 0.35rem;
   color: var(--text-primary);
   font-family: Georgia, "Times New Roman", serif;
+  text-wrap: balance;
 }
 
 .algae-title .algae-taxon {
