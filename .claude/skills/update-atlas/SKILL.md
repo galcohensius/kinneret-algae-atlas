@@ -16,4 +16,4 @@ Trigger: user has copied new/replacement `.docx` files into `data/raw/` (from mo
 7. **Commit locally** (file list in `docs/MAINTENANCE.md` step 10). Do not push.
 8. **Hand off:** tell the user what's committed and ask them to push — pushing is a production deploy of kinneret-algae-atlas.org (see `kinneret-atlas-deploy` memory).
 9. **After they say it's pushed:** `gh run list --workflow deploy-pages.yml --limit 3` to confirm the deploy succeeded, then spot-check the live site for the new/changed content.
-10. **Draft the reply to mom** (draft only — never send): what was added/updated, plus every source issue flagged in step 6 as things for her to check or fix.
+10. **Draft the reply to mom** (draft only — never send). No greeting, no "thanks" — this is a favor to her, not the other way round. Structure: bullet list of what was added/updated, then "Site's already live with these changes.", then any source issues from step 6 last, phrased as a request to fix and resend — never offered as something we'll patch.
