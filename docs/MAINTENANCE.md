@@ -4,6 +4,9 @@ This document is for maintainers. It covers how to update the published atlas wh
 source Word files change, and how the data pipeline fits together. Local setup, npm
 scripts, routes, and GitHub Pages deploy: [DEVELOPMENT.md](DEVELOPMENT.md).
 
+Running this checklist as a Claude Code session (preview, hold the push, verify the deploy,
+draft the reply email): [.claude/skills/update-atlas/SKILL.md](../.claude/skills/update-atlas/SKILL.md).
+
 ## Pipeline overview
 
 ```mermaid
