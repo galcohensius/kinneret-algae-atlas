@@ -713,10 +713,10 @@ Species count: 44
 - Cell biovolume: 44,300 – 99,400 μm³, median: 67,000 μm³.
 - Biovolume equation: V = 1.31 D².⁷⁸³⁵. Regression eqn. based on >400 measurements of both D and L with V computed for a prolate spheroid.
 - Ecology (compact): From the beginning of monitoring in Lake Kinneret in the 1960s, the regular late-winter-spring bloom of P. gatunense was the most salient feature of the Kinneret phytoplankton (Zohary et al. 2014). Those intense blooms could be observed as…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 2 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 3 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-11-02
-- Source file: Peridinium gatunense 2026-11-02.docx
+- Record updated (source extraction): 2026-11-03
+- Source file: Peridinium gatunense 2026-11-03.docx
 
 ## Species: Chlamydomonas sp. Ehrenberg 1833
 - Slug: chlamydomonas-sp
