@@ -6044,13 +6044,13 @@
     ],
     "image_captions": [
       "",
-      "Plate 1. Three filaments of Umezakia ovalisporum from Lake Kinneret. Top filament – with an akinete (large egg-shaped central cell). Middle and top filaments – with a heterocyte (“empty rounded central cells). Photo by Alla Alster.",
+      "Plate 1. Three filaments of Umezakia ovalisporum from Lake Kinneret. Top filament – with an akinete (large egg-shaped central cell). Middle and bottom filaments – each with a heterocyte (empty rounded intercalary cells). Photo by Alla Alster.",
       "Plate 2. Filaments of Umezakia ovalisporum in a culture isolated from Lake Kinneret. When no heterocytes and/or akinete are seen, the species can be identified by its end cells, that are typically longer and thinner than other cells in the filament, and with hyaline (colorless) parts. Yellow scale bar = 10 µm. Photo by Alla Alster, June 2006.",
-      "Plate 3. Two filaments of Umezakia ovalisporum on either side of a single (central) filament of Raphidiopsis (previously Cylindrospermopsis) raciborskii. The distinction between species is by examination of the end cells. In U. ovalisporum they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending, as opposed to the pencil-/ needle-shaped ending or a terminal heterocyte in U. raciborskii. Cell diameter is also larger in U. ovalisporum. Photo by Alla Alster, June 2006.",
+      "Plate 3. Two filaments of Umezakia ovalisporum on either side of a single (central) filament of Raphidiopsis (previously Cylindrospermopsis) raciborskii. The distinction between species is by examination of the end cells. In U. ovalisporum end cells are thinner than the rest of the trichome cells and partly or completely hyaline with blunt ending, as opposed to the pencil-/needle-shaped ending or a terminal heterocyte in U. raciborskii. Cell diameter is also larger in U. ovalisporum. Photo by Alla Alster, June 2006.",
       "Figure 1. Time series of Umezakia (Previously Aphanizomenon) ovalisporum depth-integrated wet-weight biomass (g m⁻²), Lake Kinneret, 1970-2020.",
       "Figure 2. Box plots showing the seasonal pattern of statistics of water column filament abundance (left) and volume per filament (right) of Umezakia ovalisporum, based on data for 2004-2020.",
       "Figure 3. Seasonal fluctuations in filament diameter of Umezakia ovalisporum, 2004-2012 (all measurements made by the same analyst), showing larger diameter in winter, smaller in summer. Vertical lines mark 1 January of each year.",
-      "Figure 3. pH tolerance of U. ovalisporum, based on Kinneret field data."
+      "Figure 4. U. ovalisporum biomass (g m⁻²) vs. environmental parameters recorded at the site and time of sampling, showing its adaptation to higher ambient water temperatures, all Cl- concentrations and pH levels up to 9.2, beyond which it crashes."
     ],
     "image_captions_rich": [
       [],
@@ -6076,7 +6076,7 @@
           "bold": false
         },
         {
-          "text": " from Lake Kinneret. Top filament – with an akinete (large egg-shaped central cell). Middle and top filaments – with a heterocyte (“empty rounded central cells). Photo by Alla Alster.",
+          "text": " from Lake Kinneret. Top filament – with an akinete (large egg-shaped central cell). Middle and bottom filaments – each with a heterocyte (empty rounded intercalary cells). Photo by Alla Alster.",
           "italic": false,
           "bold": false
         }
@@ -6180,7 +6180,7 @@
           "bold": false
         },
         {
-          "text": " they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending",
+          "text": " end cells are thinner than the rest of the trichome cells and partly or completely hyaline with blunt ending",
           "italic": false,
           "bold": false
         },
@@ -6190,7 +6190,7 @@
           "bold": false
         },
         {
-          "text": " as opposed to the pencil-/ needle-shaped ending or a terminal heterocyte in ",
+          "text": " as opposed to the pencil-/needle-shaped ending or a terminal heterocyte in ",
           "italic": false,
           "bold": false
         },
@@ -6339,7 +6339,7 @@
       ],
       [
         {
-          "text": "Figure 3. pH tolerance of ",
+          "text": "Figure 4. ",
           "italic": false,
           "bold": false
         },
@@ -6359,7 +6359,18 @@
           "bold": false
         },
         {
-          "text": ", based on Kinneret field data.",
+          "text": " biomass (g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") vs. environmental parameters recorded at the site and time of sampling, showing its adaptation to higher ambient water temperatures, all Cl- concentrations and pH levels up to 9.2, beyond which it crashes.",
           "italic": false,
           "bold": false
         }
@@ -6372,18 +6383,18 @@
       "habitat": "plankton",
       "previous_name_used": "Aphanizomenon ovalisporum Forti 1911",
       "organization": "filamentous",
-      "color": "pale blue-green\npale blue-green, but end cells often colorless. Heterocytes solitary, intercalary (between two other cells; never at end of trichome), nearly spherical or ellipsoidal, 2-6 µm wide (median: 3.4 µm) and 2.5-9 µm long (median: 5.30. Akinetes (resting cells) oval, usually separated by vegetative cells from heterocytes on the same trichome, up to 3-14 µm (median: 6.7 µm) wide and 5-23 µm long (median: 10.2 µm), with a yellow or brown envelope. Reproduction by fragmentation of trichomes and by germination of akinetes. The species can be distinguished from the other common nostocalean cyanobacterium, Raphidiopsis (previously Cylindrospermopsis) raciborskii by its end cells. In U. ovalisporum they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending (Plate 2), as opposed to the pencil-/needle-shaped ending or a terminal heterocyte in U. raciborskii. Cell diameter is also larger in U. ovalisporum (Plate 3).",
+      "color": "pale blue-green",
       "cell_diameter_d": "3.0–4.4 µm, median: 3.4 µm (N=3980). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely",
       "cell_length_l": "not measured, only filament length was measured",
       "biovolume_per_cell": "not computed, only filament volume was computed",
       "biovolume_equation": "Cylinder, V = 2 π L (D/2)², where L=filament length",
       "filament_length": "20–1100 µm, median: 190 µm (N=3980)",
-      "morphological_features": "Solitary planktonic trichomes, straight or slightly curved, several hundred µm long, 3-4 µm wide, with bluntly rounded or slightly tapered end cells; scarcely constricted at the cross walls (Plates 1, 2). Vegetative cells are cylindrical, 1-3 times longer than wide, at the ends of the trichome, up to 6-7 times longer than wide, gradually becoming longer and often reaching 25-30 µm in length; with gas vesicles.",
+      "morphological_features": "Solitary planktonic trichomes, straight or slightly curved, several hundred µm long, 3-4 µm wide, with bluntly rounded or slightly tapered and often colorless end cells; scarcely constricted at the cross walls (Plates 1, 2). Vegetative cells are cylindrical, 1-3 times longer than wide, at the ends of the trichome, up to 6-7 times longer than wide, gradually becoming longer and often reaching 25-30 µm in length; with gas vesicles. Heterocytes solitary, intercalary (between two other cells; never at end of trichome), nearly spherical or ellipsoidal, 2-6 µm wide (median: 3.4 µm) and 2.5-9 µm long (median: 5.30. Akinetes (resting cells) oval, usually separated by vegetative cells from heterocytes on the same trichome, up to 3-14 µm (median: 6.7 µm) wide and 5-23 µm long (median: 10.2 µm), with a yellow or brown envelope. Reproduction by fragmentation of trichomes and by germination of akinetes. The species can be distinguished from the other common nostocalean cyanobacterium, Raphidiopsis (previously Cylindrospermopsis) raciborskii by its end cells. In U. ovalisporum they are thinner than the rest of the trichome cells and partly or completely hyaline with a blunt ending (Plate 2), as opposed to the pencil-/needle-shaped ending or a terminal heterocyte in U. raciborskii. Cell diameter is also larger in U. ovalisporum (Plate 3). Another, less common nostocalean cyanobacterium that should be distinguished from U. ovalisporum is Chrysosporum (previously Anabaena) bergii. (Stüken et al. 2009). The distinction is again by end cells (see item for Chrysosporum).",
       "distinctive_attributes": "gas-vacuolated filamentous cyanobacterium, often with heterocytes and/or akinetes. End-cells are bluntly rounded, thinner than other cells, often colorless. Filament diameter larger than that of Raphidiopsis (previously Cylindrospermopsis) raciborskii.",
-      "ecology": "Umezakia ovalisporum, a nitrogen-fixing cyanobacterium invaded Lake Kinneret in 1994 (Pollingher et al. 1998), shortly after the Hula Valley was hydrologically disconnected from Lake Kinneret when Lake Agmon was created (Hambright and Zohary 1998). This disconnection reduced substantially the nitrate load entering Lake Kinneret and created in-lake conditions suitable for the proliferation of nitrogen fixers. Umezakia ovalisporum was the first of several species of nostocalean cyanobacteria never recorded previously that appeared in Lake Kinneret since 1994 and got established in the lake. In September-October 1994 U. ovalisporum formed a massive bloom in Kinneret (Fig. 1). Since 1994 it is a common component of the Kinneret summer phytoplankton. It occurs in the plankton only when the lake is stratified, peaking in September-October (Fig. 2). Towards the onset of winter, it forms akinetes (Plate 1) that sink to the sediment and wait for germination till the following summer. This species is usually evenly distributed throughout the epilimnion. In Kinneret it doesn’t form surface films and doesn’t cluster.",
-      "physiological_features": "Like other nostocalean species, it fixes atmospheric nitrogen. N-fixation happens in the heterocytes, where anoxic conditions are maintained. It produces the toxin cylindrospermopsin and hence considered bad for water quality. Potassium deficiency triggers the development of akinetes (Sukenik et al. 2013).",
-      "environmental_conditions": "Umezakia ovalisporum disappears when the pH exceeds 9 (Fig. 3) although its intense blooms push the pH towards this level. It is adapted to higher salinities, higher water temperatures, lower TP levels. In lab experiments, A. ovalisporum hardly grew under Na+ lower than 2.5 mM (Bar Yosef thesis, P.9, based on Kaplan et al. 1984. FEBS letters 176:166-168).\nFigure 4. U. ovalisporum abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling, showing...",
-      "further_reading": "Bar‐Yosef Y, Murik O, Sukenik A, Hadas O, Kaplan A. 2012. Multiannual variations in phytoplankton populations: what distinguished the blooms of Aphanizomenon ovalisporum in Lake Kinneret in 2010 from 2009? Environmental Microbiology Reports, 4:498-503.\nBar-Yosef Y, Sukenik A, Hadas O, Viner-Mozzini Y, Kaplan A. 2010. Enslavement in the water body by toxic Aphanizomenon ovalisporum, inducing alkaline phosphatase in phytoplanktons. Current biology, 20:1557-61.\nHadas O. 2014. Microbial processes within the nitrogen cycle. Chap. 22 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 381-396. Springer, Heidelberg.\nHadas O, Pinkas R, Malinsky‐Rushansky N, Nishri A, Kaplan A, Rimmer A, Sukenik A. 2012. Appearance and establishment of diazotrophic cyanobacteria in Lake Kinneret, Israel. Freshwater Biology, 57:1214-27.\nHadas O, Pinkas R, Malinsky-Rushansky N, Shalev-Alon G, Delphine E, Berner T, Sukenik A, Kaplan A. 2002. Physiological variables determined under laboratory conditions may explain the bloom of Aphanizomenon ovalisporum in Lake Kinneret. European Journal of Phycology, 37:259-267.\nHadas O, Kaplan A, Sukenik A. 2015. Long-term changes in cyanobacteria populations in Lake Kinneret (Sea of Galilee), Israel: an eco-physiological outlook. Life. 5:418-31.\nHambright KD, Zohary T. 1998. Lakes Hula and Agmon: destruction and creation of wetland ecosystems in northern Israel. Wetlands Ecol. Manag. 6: 83-89.\nHambright KD, Zohary T, Easton J, Azoulay B, Fishbein T. 2001. Effects of zooplankton grazing and nutrients on the bloom-forming, N₂-fixing cyanobacterium Aphanizomenon in Lake Kinneret. J. Plankton Res. 23:165–174.\n(Kaplan et al. 1984) FEBS letters 176(1) 166-168.\nMcGregor GB, Sendall BC, Niiyama Y, Tuji A, Willis A. 2023. Chrysosporum ovalisporum is synonymous with the true-branching cyanobacterium Umezakia natans (Nostocales/Aphanizomenaceae). Journal of Phycology 59: 326-341.\nPollingher U, Hadas O, Yacobi YZ, Zohary T, Berman T. 1998. Aphanizomenon ovalisporum (Forti) in Lake Kinneret (Israel). J. Plankton Res. 20: 1321-1339.\nSukenik A. Hadas O, Kaplan A. 2014. Cyanobacteria. Chapter 12 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 213-226. Springer, Heidelberg.\nSukenik A, Kaplan‐Levy RN, Viner‐Mozzini Y, Quesada A, Hadas O. 2013. Potassium deficiency triggers the development of dormant cells (akinetes) in Aphanizomenon ovalisporum (Nostocales, Cyanoprokaryota). Journal of phycology, 49:580-7.\nZohary T, Yacobi YZ, Alster A, Fishbein T, Lippman S, Tibor G. 2014. Phytoplankton. Chap. 10 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 161-190. Springer, Heidelberg."
+      "ecology": "Umezakia ovalisporum, a nitrogen-fixing cyanobacterium, invaded Lake Kinneret in 1994 (Pollingher et al. 1998), shortly after the Hula Valley was hydrologically disconnected from Lake Kinneret when Lake Agmon was created (Hambright and Zohary 1998). This disconnection reduced substantially the nitrate load entering Lake Kinneret and created in-lake conditions suitable for the proliferation of nitrogen fixers. Umezakia ovalisporum was the first of several species of nostocalean cyanobacteria never recorded previously that appeared in Lake Kinneret since 1994 and got established in the lake. In September-October 1994 U. ovalisporum formed a massive bloom (Fig. 1). Since then, it is a common component of the Kinneret summer phytoplankton (Fig. 1). It occurs in the plankton only when the lake is stratified, peaking in September-October (Fig. 2). Cell diameter also fluctuates seasonally, having maximal diameter in winter, smallest in summer (Fig. 3). Towards the onset of winter, it forms akinetes (Plate 1) that sink to the sediment and wait for germination till the following summer. This species is usually evenly distributed throughout the epilimnion. In Kinneret it doesn’t form surface films or bundles.",
+      "physiological_features": "Like other nostocalean species, it fixes atmospheric nitrogen. N-fixation happens in the heterocytes, where anoxic conditions are maintained. It produces the hepatotoxin cylindrospermopsin (Banker et al. 1997; 2000) and hence considered bad for water quality. Cylindrospermopsin production was shown to increase supply of inorganic P by inducing secretion of the enzyme Alkaline Phosphatase by other phytoplankton, a process called “enslavement” (Bar Yosef et al. 2010). Potassium deficiency triggers the development of akinetes (Sukenik et al. 2013).",
+      "environmental_conditions": "Umezakia ovalisporum is adapted to higher ambient water temperatures, indifferent to the ambient Cl- concentrations, tolerates pH levels up to 9.2, beyond which it disappears (Fig. 4) and adapted to lower TP levels (not shown). In lab experiments, A. ovalisporum hardly grew under Na+ lower than 2.5 mM (Bar Yosef thesis, P.9, based on Kaplan et al. 1984. FEBS letters 176:166-168).",
+      "further_reading": "Ballot A, Ramm J, Rundberget T, Kaplan-Levy RN, Hadas O, Sukenik A, Wiedner C. 2011. Occurrence of non-toxic Aphanizomenon ovalisporum and Anabaena bergii strains in Lake Kinneret (Israel). J Plankton Res 33:1736-1746.\nBanker R, Carmeli S, Hadas O, Teltsch B, Porat R, Sukenik A. 1997. Identification of cylindrospermopsin in Aphanizomenon ovalisporum (Cyanophyceae) isolated from Lake Kinneret, Israel. J Phycol 33: 613-616.\nBanker R, Teltsch B, Sukenik A, Carmeli S. 2000. 7- Epicylindrospermopsin, a toxic minor metabolite of the cyanobacterium Aphanizomenon ovalisporum from Lake Kinneret, Israel. J Natural Products 63: 387-389.\nBar‐Yosef Y, Murik O, Sukenik A, Hadas O, Kaplan A. 2012. Multiannual variations in phytoplankton populations: what distinguished the blooms of Aphanizomenon ovalisporum in Lake Kinneret in 2010 from 2009? Environmental Microbiology Reports 4:498-503.\nBar-Yosef Y, Sukenik A, Hadas O, Viner-Mozzini Y, Kaplan A. 2010. Enslavement in the water body by toxic Aphanizomenon ovalisporum, inducing alkaline phosphatase in phytoplanktons. Current biology 20:1557-61.\nHadas O. 2014. Microbial processes within the nitrogen cycle. Chap. 22 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 381-396. Springer, Heidelberg.\nHadas O, Pinkas R, Malinsky‐Rushansky N, Nishri A, Kaplan A, Rimmer A, Sukenik A. 2012. Appearance and establishment of diazotrophic cyanobacteria in Lake Kinneret, Israel. Freshwater Biology, 57:1214-27.\nHadas O, Pinkas R, Malinsky-Rushansky N, Shalev-Alon G, Delphine E, Berner T, Sukenik A, Kaplan A. 2002. Physiological variables determined under laboratory conditions may explain the bloom of Aphanizomenon ovalisporum in Lake Kinneret. European Journal of Phycology, 37:259-267.\nHadas O, Pinkas R, Vardi A, Kaplan A, Delphin E, Sukenik A. 1999. Limnological aspects of Aphanizomenon ovalisporum bloom in Lake Kinneret, Israel. J Plankton Res 21: 1439-1453.\nHadas O, Kaplan A, Sukenik A. 2015. Long-term changes in cyanobacteria populations in Lake Kinneret (Sea of Galilee), Israel: an eco-physiological outlook. Life 5:418-31.\nHambright KD, Zohary T. 1998. Lakes Hula and Agmon: destruction and creation of wetland ecosystems in northern Israel. Wetlands Ecol Manag 6: 83-89.\nHambright KD, Zohary T, Easton J, Azoulay B, Fishbein T. 2001. Effects of zooplankton grazing and nutrients on the bloom-forming, N₂-fixing cyanobacterium Aphanizomenon in Lake Kinneret. J Plankton Res 23:165–174.\nKaplan-Levy RN, Hadas O, Sukenik A. 2015. Deciphering the mechanisms against oxidative stress in developing and mature akinetes of the cyanobacterium Aphanizomenon ovalisporum. Microbiology 161:1485-1495.\nMcGregor GB, Sendall BC, Niiyama Y, Tuji A, Willis A. 2023. Chrysosporum ovalisporum is synonymous with the true‐branching cyanobacterium Umezakia natans (Nostocales/Aphanizomenonaceae). J Phycol 59:326-41.\nPollingher U, Hadas O, Yacobi YZ, Zohary T, Berman T. 1998. Aphanizomenon ovalisporum (Forti) in Lake Kinneret (Israel). J Plankton Res 20:1321-1339.\nShalev-Malul G, Lieman-Hurwitz J, Viner-Mozzini Y, Sukenik A, Gaathon A, Lebendiker M, Kaplan A. 2008. An AbrB-like protein might be involved in the regulation of cylindrospermopsin production by Aphanizomenon ovalisporum. Environm Microbiol 10:988–999\nShalev-Alon G, Sukenik A, Livne O, Kaplan A. 2002. A novel gene ecoding amidinotranseerase in the cylindrospermopsin producing cyanobacterium Aphanizomenon ovalisporum. FEMS Microbiol Letters 209: 87-91.\nStüken A, Campbell RJ, Quesada, A, Sukenik A, Dadheech PK, Wiedner C. 2009. Genetic and morphologic characterisation of four putative cylindrospermopsin producing species of the cyanobacterial genera Anabaena and Aphanizomenon. J Plankton Res 31: 465–480.\nSukenik A, Beardall J, Hadas O. 2007. Photosynthetic characterization of developing and mature akinetes of Aphanizomenon ovalisporum (Cyanoprokaryota). J Phycol 43:780-788.\nSukenik A. Hadas O, Kaplan A. 2014. Cyanobacteria. Chap. 12 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 213-226. Springer, Heidelberg.\nSukenik A, Hadas Stojkovic S, Malinsky-Rushansky N, Viner-Motzini Y, Bearall J. 2009. Fluorescence approaches reveal variations in cellular composition during formation of akinetes in the cyanobacterium Aphanizomenon ovalisporum. Eur J Phycol 44: 309-317.\nSukenik A, Kaplan‐Levy RN, Viner‐Mozzini Y, Quesada A, Hadas O. 2013. Potassium deficiency triggers the development of dormant cells (akinetes) in Aphanizomenon ovalisporum (Nostocales, Cyanoprokaryota). J Phycol 49:580-7.\nZohary T, Yacobi YZ, Alster A, Fishbein T, Lippman S, Tibor G. 2014. Phytoplankton. Chap. 10 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 161-190. Springer, Heidelberg."
     },
     "sections_rich": {
       "phylum": [
@@ -6460,37 +6471,70 @@
       ],
       "color": [
         {
-          "text": "pale blue-green\npale blue-green, but end cells often colorless. ",
+          "text": "pale blue-green",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_diameter_d": [
+        {
+          "text": "3.0–4.4 µm, median: 3.4 µm (N=3980). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "cell_length_l": [
+        {
+          "text": "not measured, only filament length was measured",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_per_cell": [
+        {
+          "text": "not computed, only filament volume was computed",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "biovolume_equation": [
+        {
+          "text": "Cylinder, V = 2 π L (D/2)",
           "italic": false,
           "bold": false
         },
         {
-          "text": "Heterocyte",
+          "text": "2",
           "italic": false,
-          "bold": true
+          "bold": false,
+          "superscript": true
         },
         {
-          "text": "s solitary, ",
+          "text": ", where L=filament length",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "filament_length": [
+        {
+          "text": "20–1100 µm, median: 190 µm (N=3980)",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      "morphological_features": [
+        {
+          "text": "Solitary planktonic ",
           "italic": false,
           "bold": false
         },
         {
-          "text": "intercalary",
+          "text": "trichome",
           "italic": false,
           "bold": true
         },
         {
-          "text": " (between two other cells; never at end of trichome), nearly spherical or ellipsoidal, 2-6 µm wide (median: 3.4 µm) and 2.5-9 µm long (median: 5.30. ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Akinete",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": "s (resting cells) oval, usually separated by vegetative cells from heterocytes on the same trichome, up to 3-14 µm (median: 6.7 µm) wide and 5-23 µm long (median: 10.2 µm), with a yellow or brown envelope. Reproduction by fragmentation of trichomes and by germination of akinetes. The species can be distinguished from the other common nostocalean cyanobacterium, ",
+          "text": "s, straight or slightly curved, several hundred µm long, 3-4 µm wide, with bluntly rounded or slightly tapered and often colorless end cells; scarcely constricted at the cross walls (Plates 1, 2). Vegetative cells are cylindrical, 1-3 times longer than wide, at the ends of the trichome, up to 6-7 times longer than wide, gradually becoming longer and often reaching 25-30 µm in length; with gas vesicles. Heterocytes solitary, intercalary (between two other cells; never at end of trichome), nearly spherical or ellipsoidal, 2-6 µm wide (median: 3.4 µm) and 2.5-9 µm long (median: 5.30. Akinetes (resting cells) oval, usually separated by vegetative cells from heterocytes on the same trichome, up to 3-14 µm (median: 6.7 µm) wide and 5-23 µm long (median: 10.2 µm), with a yellow or brown envelope. Reproduction by fragmentation of trichomes and by germination of akinetes. The species can be distinguished from the other common nostocalean cyanobacterium, ",
           "italic": false,
           "bold": false
         },
@@ -6590,70 +6634,67 @@
           "bold": false
         },
         {
-          "text": " (Plate 3).",
-          "italic": false,
-          "bold": false
-        }
-      ],
-      "cell_diameter_d": [
-        {
-          "text": "3.0–4.4 µm, median: 3.4 µm (N=3980). Cell diameter varies significantly over an annual cycle, making it necessary to measure it routinely",
-          "italic": false,
-          "bold": false
-        }
-      ],
-      "cell_length_l": [
-        {
-          "text": "not measured, only filament length was measured",
-          "italic": false,
-          "bold": false
-        }
-      ],
-      "biovolume_per_cell": [
-        {
-          "text": "not computed, only filament volume was computed",
-          "italic": false,
-          "bold": false
-        }
-      ],
-      "biovolume_equation": [
-        {
-          "text": "Cylinder, V = 2 π L (D/2)",
+          "text": " (Plate 3). Another, less common nostocalean cyanobacterium that should be distinguished from ",
           "italic": false,
           "bold": false
         },
         {
-          "text": "2",
-          "italic": false,
-          "bold": false,
-          "superscript": true
+          "text": "U.",
+          "italic": true,
+          "bold": false
         },
         {
-          "text": ", where L=filament length",
-          "italic": false,
-          "bold": false
-        }
-      ],
-      "filament_length": [
-        {
-          "text": "20–1100 µm, median: 190 µm (N=3980)",
-          "italic": false,
-          "bold": false
-        }
-      ],
-      "morphological_features": [
-        {
-          "text": "Solitary planktonic ",
+          "text": " ",
           "italic": false,
           "bold": false
         },
         {
-          "text": "trichome",
-          "italic": false,
-          "bold": true
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
         },
         {
-          "text": "s, straight or slightly curved, several hundred µm long, 3-4 µm wide, with bluntly rounded or slightly tapered end cells; scarcely constricted at the cross walls (Plates 1, 2). Vegetative cells are cylindrical, 1-3 times longer than wide, at the ends of the trichome, up to 6-7 times longer than wide, gradually becoming longer and often reaching 25-30 µm in length; with gas vesicles.",
+          "text": " is ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysosporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (previously ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Anabaena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ") ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "bergii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". (Stüken et al. 2009). The distinction is again by end cells (see item for ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Chrysosporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ").",
           "italic": false,
           "bold": false
         }
@@ -6712,7 +6753,7 @@
           "bold": false
         },
         {
-          "text": " a nitrogen-fixing cyanobacterium invaded Lake Kinneret in 1994 (Pollingher et al. 1998), shortly after the Hula Valley was hydrologically disconnected from Lake Kinneret when Lake Agmon was created (Hambright and Zohary 1998). This disconnection reduced substantially the nitrate load entering Lake Kinneret and created in-lake conditions suitable for the proliferation of nitrogen fixers. ",
+          "text": " a nitrogen-fixing cyanobacterium, invaded Lake Kinneret in 1994 (Pollingher et al. 1998), shortly after the Hula Valley was hydrologically disconnected from Lake Kinneret when Lake Agmon was created (Hambright and Zohary 1998). This disconnection reduced substantially the nitrate load entering Lake Kinneret and created in-lake conditions suitable for the proliferation of nitrogen fixers. ",
           "italic": false,
           "bold": false
         },
@@ -6752,7 +6793,7 @@
           "bold": false
         },
         {
-          "text": " formed a massive bloom in Kinneret (Fig. 1). Since 1994 it is a common component of the Kinneret summer phytoplankton. It occurs in the plankton only when the lake is stratified, peaking in September-October (Fig. 2). Towards the onset of winter, it forms ",
+          "text": " formed a massive bloom (Fig. 1). Since then, it is a common component of the Kinneret summer phytoplankton (Fig. 1). It occurs in the plankton only when the lake is stratified, peaking in September-October (Fig. 2). Cell diameter also fluctuates seasonally, having maximal diameter in winter, smallest in summer (Fig. 3). Towards the onset of winter, it forms ",
           "italic": false,
           "bold": false
         },
@@ -6762,14 +6803,14 @@
           "bold": true
         },
         {
-          "text": " (Plate 1) that sink to the sediment and wait for germination till the following summer. This species is usually evenly distributed throughout the epilimnion. In Kinneret it doesn’t form surface films and doesn’t cluster.",
+          "text": " (Plate 1) that sink to the sediment and wait for germination till the following summer. This species is usually evenly distributed throughout the epilimnion. In Kinneret it doesn’t form surface films or bundles.",
           "italic": false,
           "bold": false
         }
       ],
       "physiological_features": [
         {
-          "text": "Like other nostocalean species, it fixes atmospheric nitrogen. N-fixation happens in the heterocytes, where anoxic conditions are maintained. It produces the toxin cylindrospermopsin and hence considered bad for water quality. Potassium deficiency triggers the development of akinetes (Sukenik et al. 2013).",
+          "text": "Like other nostocalean species, it fixes atmospheric nitrogen. N-fixation happens in the heterocytes, where anoxic conditions are maintained. It produces the hepatotoxin cylindrospermopsin (Banker et al. 1997; 2000) and hence considered bad for water quality. Cylindrospermopsin production was shown to increase supply of inorganic P by inducing secretion of the enzyme Alkaline Phosphatase by other phytoplankton, a process called “enslavement” (Bar Yosef et al. 2010). Potassium deficiency triggers the development of akinetes (Sukenik et al. 2013).",
           "italic": false,
           "bold": false
         }
@@ -6791,7 +6832,7 @@
           "bold": false
         },
         {
-          "text": " disappears when the pH exceeds 9 (Fig. 3) although its intense blooms push the pH towards this level. It is adapted to higher salinities, higher water temperatures, lower TP levels. In lab experiments, ",
+          "text": " is adapted to higher ambient water temperatures, indifferent to the ambient Cl- concentrations, tolerates pH levels up to 9.2, beyond which it disappears (Fig. 4) and adapted to lower TP levels (not shown). In lab experiments, ",
           "italic": false,
           "bold": false
         },
@@ -6811,45 +6852,14 @@
           "bold": false
         },
         {
-          "text": " hardly grew under Na+ lower than 2.5 mM (Bar Yosef thesis, P.9, based on Kaplan et al. 1984. FEBS letters 176:166-168).\nFigure 4. ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "U.",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "ovalisporum",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " abundance (cells mL",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "-1",
-          "italic": false,
-          "bold": false,
-          "superscript": true
-        },
-        {
-          "text": ") vs. environmental parameters recorded at the site and time of sampling, showing...",
+          "text": " hardly grew under Na+ lower than 2.5 mM (Bar Yosef thesis, P.9, based on Kaplan et al. 1984. FEBS letters 176:166-168).",
           "italic": false,
           "bold": false
         }
       ],
       "further_reading": [
         {
-          "text": "Bar‐Yosef Y, Murik O, Sukenik A, Hadas O, Kaplan A. 2012. Multiannual variations in phytoplankton populations: what distinguished the blooms of ",
+          "text": "Ballot A, Ramm J, Rundberget T, Kaplan-Levy RN, Hadas O, Sukenik A, Wiedner C. 2011. Occurrence of non-toxic ",
           "italic": false,
           "bold": false
         },
@@ -6869,7 +6879,27 @@
           "bold": false
         },
         {
-          "text": " in Lake Kinneret in 2010 from 2009? Environmental Microbiology Reports, 4:498-503.\nBar-Yosef Y, Sukenik A, Hadas O, Viner-Mozzini Y, Kaplan A. 2010. Enslavement in the water body by toxic ",
+          "text": " and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Anabaena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "bergii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " strains in Lake Kinneret (Israel). J Plankton Res 33:1736-1746.\nBanker R, Carmeli S, Hadas O, Teltsch B, Porat R, Sukenik A. 1997. Identification of cylindrospermopsin in ",
           "italic": false,
           "bold": false
         },
@@ -6889,22 +6919,12 @@
           "bold": false
         },
         {
-          "text": ", inducing alkaline phosphatase in phytoplanktons. Current biology, 20:1557-61.\nHadas O. 2014. Microbial processes within the nitrogen cycle. Chap. 22 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 381-396. Springer, Heidelberg.\nHadas O, Pinkas R, Malinsky‐Rushansky N, Nishri A, Kaplan A, Rimmer A, Sukenik A. 2012. Appearance and establishment of diazotrophic cyanobacteria in Lake Kinneret, Israel. Freshwater Biology, 57:1214-27.\nHadas O, Pinkas R, Malinsky-Rushansky N, Shalev-Alon G, Delphine E, Berner T, Sukenik A, Kaplan A. 2002. Physiological variables determined under laboratory conditions may explain the bloom of Aphanizomenon ovalisporum in Lake Kinneret. European Journal of Phycology, 37:259-267.\nHadas O, Kaplan A, Sukenik A. 2015. Long-term changes in cyanobacteria populations in Lake Kinneret (Sea of Galilee), Israel: an eco-physiological outlook. ",
+          "text": " (Cyanophyceae) isolated from Lake Kinneret, Israel. J Phycol 33: 613-616.\nBanker R, Teltsch B, Sukenik A, Carmeli S. 2000. 7- Epicylindrospermopsin, a toxic minor metabolite of the cyanobacterium ",
           "italic": false,
           "bold": false
         },
         {
-          "text": "Life.",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " 5:418-31.\nHambright KD, Zohary T. 1998. Lakes Hula and Agmon: destruction and creation of wetland ecosystems in northern Israel. ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Wetlands",
+          "text": "Aphanizomenon",
           "italic": true,
           "bold": false
         },
@@ -6914,7 +6934,17 @@
           "bold": false
         },
         {
-          "text": "Ecol.",
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " from Lake Kinneret, Israel. J Natural Products 63: 387-389.\nBar‐Yosef Y, Murik O, Sukenik A, Hadas O, Kaplan A. 2012. Multiannual variations in phytoplankton populations: what distinguished the blooms of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
           "italic": true,
           "bold": false
         },
@@ -6924,12 +6954,52 @@
           "bold": false
         },
         {
-          "text": "Manag.",
+          "text": "ovalisporum",
           "italic": true,
           "bold": false
         },
         {
-          "text": " 6: 83-89.\nHambright KD, Zohary T, Easton J, Azoulay B, Fishbein T. 2001. Effects of zooplankton grazing and nutrients on the bloom-forming, N",
+          "text": " in Lake Kinneret in 2010 from 2009? Environmental Microbiology Reports 4:498-503.\nBar-Yosef Y, Sukenik A, Hadas O, Viner-Mozzini Y, Kaplan A. 2010. Enslavement in the water body by toxic ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ", inducing alkaline phosphatase in phytoplanktons. Current biology 20:1557-61.\nHadas O. 2014. Microbial processes within the nitrogen cycle. Chap. 22 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 381-396. Springer, Heidelberg.\nHadas O, Pinkas R, Malinsky‐Rushansky N, Nishri A, Kaplan A, Rimmer A, Sukenik A. 2012. Appearance and establishment of diazotrophic cyanobacteria in Lake Kinneret, Israel. Freshwater Biology, 57:1214-27.\nHadas O, Pinkas R, Malinsky-Rushansky N, Shalev-Alon G, Delphine E, Berner T, Sukenik A, Kaplan A. 2002. Physiological variables determined under laboratory conditions may explain the bloom of Aphanizomenon ovalisporum in Lake Kinneret. European Journal of Phycology, 37:259-267.\nHadas O, Pinkas R, Vardi A, Kaplan A, Delphin E, Sukenik A. 1999. Limnological aspects of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " bloom in Lake Kinneret, Israel. J Plankton Res 21: 1439-1453.\nHadas O, Kaplan A, Sukenik A. 2015. Long-term changes in cyanobacteria populations in Lake Kinneret (Sea of Galilee), Israel: an eco-physiological outlook. Life 5:418-31.\nHambright KD, Zohary T. 1998. Lakes Hula and Agmon: destruction and creation of wetland ecosystems in northern Israel. Wetlands Ecol Manag 6: 83-89.\nHambright KD, Zohary T, Easton J, Azoulay B, Fishbein T. 2001. Effects of zooplankton grazing and nutrients on the bloom-forming, N",
           "italic": false,
           "bold": false
         },
@@ -6950,117 +7020,7 @@
           "bold": false
         },
         {
-          "text": " in Lake Kinneret. ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "J.",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Plankton",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Res",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": ". ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "23",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": ":165–174.\n(Kaplan et al. 1984) FEBS letters 176(1) 166-168.\nMcGregor GB, Sendall BC, Niiyama Y, Tuji A, Willis A. 2023. ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Chrysosporum",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "ovalisporum",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " is synonymous with the true-branching cyanobacterium ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Umezakia",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "natans",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " (Nostocales/Aphanizomenaceae). ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Journal",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "of",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "Phycology",
-          "italic": true,
-          "bold": false
-        },
-        {
-          "text": " 59: 326-341.\nPollingher U, Hadas O, Yacobi YZ, Zohary T, Berman T. 1998. ",
+          "text": " in Lake Kinneret. J Plankton Res 23:165–174.\nKaplan-Levy RN, Hadas O, Sukenik A. 2015. Deciphering the mechanisms against oxidative stress in developing and mature akinetes of the cyanobacterium ",
           "italic": false,
           "bold": false
         },
@@ -7080,12 +7040,12 @@
           "bold": false
         },
         {
-          "text": " (Forti) in Lake Kinneret (Israel). ",
+          "text": ". Microbiology 161:1485-1495.\nMcGregor GB, Sendall BC, Niiyama Y, Tuji A, Willis A. 2023. ",
           "italic": false,
           "bold": false
         },
         {
-          "text": "J.",
+          "text": "Chrysosporum",
           "italic": true,
           "bold": false
         },
@@ -7095,7 +7055,17 @@
           "bold": false
         },
         {
-          "text": "Plankton",
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " is synonymous with the true‐branching cyanobacterium ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Umezakia",
           "italic": true,
           "bold": false
         },
@@ -7105,12 +7075,112 @@
           "bold": false
         },
         {
-          "text": "Res",
+          "text": "natans",
           "italic": true,
           "bold": false
         },
         {
-          "text": ". 20: 1321-1339.\nSukenik A. Hadas O, Kaplan A. 2014. Cyanobacteria. Chapter 12 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] ",
+          "text": " (Nostocales/Aphanizomenonaceae). J Phycol 59:326-41.\nPollingher U, Hadas O, Yacobi YZ, Zohary T, Berman T. 1998. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Forti) in Lake Kinneret (Israel). J Plankton Res 20:1321-1339.\nShalev-Malul G, Lieman-Hurwitz J, Viner-Mozzini Y, Sukenik A, Gaathon A, Lebendiker M, Kaplan A. 2008. An AbrB-like protein might be involved in the regulation of cylindrospermopsin production by ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Environm Microbiol 10:988–999\nShalev-Alon G, Sukenik A, Livne O, Kaplan A. 2002. A novel gene ecoding amidinotranseerase in the cylindrospermopsin producing cyanobacterium ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " FEMS Microbiol Letters 209: 87-91.\nStüken A, Campbell RJ, Quesada, A, Sukenik A, Dadheech PK, Wiedner C. 2009. Genetic and morphologic characterisation of four putative cylindrospermopsin producing species of the cyanobacterial genera ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Anabaena",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " and ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". J Plankton Res 31: 465–480.\nSukenik A, Beardall J, Hadas O. 2007. Photosynthetic characterization of developing and mature akinetes of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Cyanoprokaryota). J Phycol 43:780-788.\nSukenik A. Hadas O, Kaplan A. 2014. Cyanobacteria. Chap. 12 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] ",
           "italic": false,
           "bold": false
         },
@@ -7155,12 +7225,12 @@
           "bold": false
         },
         {
-          "text": "Management",
+          "text": "Management,",
           "italic": true,
           "bold": false
         },
         {
-          "text": ", pp. 213-226. Springer, Heidelberg.\nSukenik A, Kaplan‐Levy RN, Viner‐Mozzini Y, Quesada A, Hadas O. 2013. Potassium deficiency triggers the development of dormant cells (akinetes) in ",
+          "text": " pp. 213-226. Springer, Heidelberg.\nSukenik A, Hadas Stojkovic S, Malinsky-Rushansky N, Viner-Motzini Y, Bearall J. 2009. Fluorescence approaches reveal variations in cellular composition during formation of akinetes in the cyanobacterium ",
           "italic": false,
           "bold": false
         },
@@ -7180,7 +7250,27 @@
           "bold": false
         },
         {
-          "text": " (Nostocales, Cyanoprokaryota). Journal of phycology, 49:580-7.\nZohary T, Yacobi YZ, Alster A, Fishbein T, Lippman S, Tibor G. 2014. Phytoplankton. Chap. 10 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] ",
+          "text": ". Eur J Phycol 44: 309-317.\nSukenik A, Kaplan‐Levy RN, Viner‐Mozzini Y, Quesada A, Hadas O. 2013. Potassium deficiency triggers the development of dormant cells (akinetes) in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Aphanizomenon",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "ovalisporum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " (Nostocales, Cyanoprokaryota). J Phycol 49:580-7.\nZohary T, Yacobi YZ, Alster A, Fishbein T, Lippman S, Tibor G. 2014. Phytoplankton. Chap. 10 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] ",
           "italic": false,
           "bold": false
         },
@@ -7237,8 +7327,8 @@
       ]
     },
     "metadata": {
-      "source_file": "Aphanizomenon ovalisporum 2026-10-18.docx",
-      "record_updated": "2026-11-01"
+      "source_file": "Aphanizomenon ovalisporum 2026-11-02.docx",
+      "record_updated": "2026-11-02"
     }
   },
   {
@@ -22095,6 +22185,7 @@
       "/algae-images/peridinium-gatunense/plate-3.jpg",
       "/algae-images/peridinium-gatunense/plate-4.jpg",
       "/algae-images/peridinium-gatunense/plate-5.jpg",
+      "/algae-images/peridinium-gatunense/plate-6.jpg",
       "/algae-images/peridinium-gatunense/figure-1.png",
       "/algae-images/peridinium-gatunense/figure-2.png",
       "/algae-images/peridinium-gatunense/figure-3.png"
@@ -22106,6 +22197,7 @@
       "Plate 3. Resting cysts of Peridinium gatunense, with two red eyespots, before completely shedding the thecae. Photos: Alla Alster.",
       "Plate 4. (a) Map of the spatial distribution of chlorophyll in Lake Kinneret on 1 May 2020, during the peak of a P. gatunense bloom, showing the patchy distribution of the dinoflagellates. Map, curtesy of Gideon Tibor, IOLR, was created from Sentinel-3 remote sensing data. (b) Air photo of part of a patch of P. gatunense (darker water on bottom left side), curtesy of Asaf Dori, Israel Nature and Parks Authority.",
       "Plate 5. Fungus-infected Peridinium gatunense. At least 6 colorless cells of the chytrid fungus Dinochytrium kinneriticum (Leshem et al. 2016) are seen attached to the surface of a Peridinium cell sucking its contents; as a result, its brown protoplast has contracted. Photo: Alla Alster.",
+      "Plate 6. Cell division in Peridinium gatunense. Photo: Alla Alster, 2006.",
       "Figure 1. Time series of Peridinium gatunense depth-integrated wet-weight biomass (g m⁻²), Lake Kinneret, 1970-2020.",
       "Figure 2. Box plots showing the seasonal pattern of statistics of water column cell abundance (left) and volume per cell (right) for Peridinium gatunense.",
       "Figure 3. Peridinium gatunense abundance (cells mL⁻¹) vs. environmental parameters recorded at the site and time of sampling."
@@ -22309,6 +22401,33 @@
       ],
       [
         {
+          "text": "Plate 6. Cell division in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " Photo: Alla Alster, 2006.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
           "text": "Figure 1. Time series of ",
           "italic": false,
           "bold": false
@@ -22429,7 +22548,7 @@
       "ecology": "From the beginning of monitoring in Lake Kinneret in the 1960s, the regular late-winter-spring bloom of P. gatunense was the most salient feature of the Kinneret phytoplankton (Zohary et al. 2014). Those intense blooms could be observed as large patches of coffee-brown colored water (Plate 4), reaching up to several square kilometers in area. At the bloom peak P. gatunense reached mean epilimnion concentrations > 500 cells mL⁻¹ (Figs. 1, 2), or 150-250 g m⁻² of wet weight biomass and comprised >95% of total phytoplankton biomass. The blooms declined sharply in May-June (Fig. 2), shortly after water temperature exceeded 25ºC, thermal stratification was established, and nutrients became scarce, leaving behind resting cysts on the lake sediments. Another trigger to the bloom decline is CO₂ limitation as ambient pH increases with increasing photosynthesis (Berman-Frank et al. 1995). During the summer months P. gatunense concentrations in the water column were low, usually <5 cells mL⁻¹ (Fig. 2). Autumn turnover caused re-suspension of the cysts from the sediments, leading to their excystation and the initiation of the next year’s bloom. After many years of recorded constancy, in the mid-1990s, the regular pattern of late-winter spring P. gatunense blooms broke down, P. gatunense blooms have become irregular (Fig. 1) occurring only in high-rainfall years (Zohary et al. 2012), and in more recent years, not even in all of them. As in several other Kinneret dinoflagellates, cell size varies seasonally (Fig. 2), with largest sizes recorded in January-February, when nutrients are most plentiful, and smallest sizes in summer, after the bloom crash. In 2019 and 2020, when the lake’s water level rose after several years of being remarkably low and inundated for the first time shores that were overgrown by dense vegetation – exceptionally dense patches of P. gatunense (~1600 cells mL⁻¹) developed between flooded Tamarix trees (Zohary et al. 2026).\nPeridinium gatunense cells are too large to be grazed by crustacean zooplankton (Hambright et al. 2007). The native Cichlid fish feed primarily on Peridinium (Zohary et al. 1994) but overall, grazing has only a minor impact on the population. The primary loss of cells is due to death and decomposition in the water column. Second in importance is sinking to bottom sediments, where decomposition processes prevail but some grazing also takes place. An additional, less important losses is by parasitism by chytrid fungi in the water column (Alster and Zohary 2007, Leshem et al. 2016).",
       "physiological_features": "Because Peridinium gatunense is a large cell, its growth rate is slow compared with that of other microalgae, with ambient doubling (turnover) time of ~7 days (Table 1). Lab experiments have shown maximal growth rates at 20-23°C and light intensities ranging 50-200 μmol photons m⁻² s⁻¹. Growth rates decline at 25-27°C (Berman and Dubinsky 1985). The specific photosynthetic rates (per unit chlorophyll) of P. gatunense are low (Table 1) in comparison with other phytoplankton prevailing in Lake Kinneret. But daily vertical migration and accumulation close to the surface in daytime (Berman and Rhode 1971) enhances photosynthesis. With darkness, the motile cells migrate down the water column to depths with higher nutrient concentrations. When CO₂ levels become limiting (under intense bloom conditions), the dinoflagellates responded with higher levels of external and internal carbonic anhydrase activity and internal storage of inorganic C by means of a C concentrating mechanism (Berman-Frank et al. 1994). C content of P. gatunense, 45% of dry weight, is relatively high due to the thecae made of polyglucan, with practically no N, P. Allelopathic interactions between Peridinium gatunense and the bloom forming toxic cyanobacterium, Microcystis sp. were reported by Sukenik et al. (2002).\nTable 1. Physiological parameters for Peridinium gatunense based on field measurements (from monitoring data using only dates when P. gatunense comprised > 90% of total phytoplankton biomass).\n\nPhysiological parameter | Average ± SD | N | Reference\nC:Chl ratio | 58.3 ± 19.3 | 243 | Yacobi and Zohary (2010)\nAssimilation number (at depth of max photosynthesis), mg C mg Chl⁻¹ h⁻¹ | 1.56 ±0.80 | 36 | Yacobi and Zohary (2010)\nTurnover time, d | 7.44±5.05 | 36 | Yacobi and Zohary (2010)\nC content, % dry weight | 45.6±4.7 | 54 | J Erez lab, HUJ\nN Content, % dry weight | 4.3±0.6 | 54 | J Erez lab, HUJ\nC:P | 464±150 |  | Wynne et al. (1982)",
       "environmental_conditions": "Peridinium gatunense biomass > 100 g m⁻² (considered a bloom) was associated with all incidences of Secchi depth < 1.5 m (Fig. 3) and TSS > 10 mg L⁻¹ (not shown), 70% of all incidences of turbidity > 4 NTU (not shown), 80% of all incidences with pH > 9.1 (Fig. 3), over 80% of the cases of excessive oxygen super-saturation (DO >13 mg L⁻¹, Fig. 3) and of TP> 0.05 mg L⁻¹, and over 60% of all cases where TN exceeded 1 mg L⁻¹, demonstrating how a single dominant species can modify the light conditions and chemical properties of its own environment. Factors that may have impacted P. gatunense biomass may have been salinity (no blooms at chloride > 280 mg L⁻¹) and availability of particulate organic N (Norg-part) for a mixotrophic species (Fig. 3). Its environmental preferences included temperature range of 16-23°C, and probably particulate organic matter as a source of nutrients. This explains its proliferation in dense patches among inundated shore vegetation.",
-      "further_reading": "Alster A, Zohary T (2007) Interactions between the bloom forming dinoflagellate Peridinium gatunense and the chytrid fungus Phlyctochytrium sp. Hydrobiologia 578:131-139.\nAlster A, Zohary T, Dubinsky Z (2006) Peridinium gatunense cyst type, abundance and germination in Lake Kinneret. Verh Internat Verein Limnol 29:2083-2086.\nAlster A, Zohary T (2007) Interactions between the bloom-forming dinoflagellate Peridinium gatunense and the chytrid fungus Phlyctochytrium sp. Hydrobiologia 578:131-139.\nBerman T, Dubinsky Z (1985) The autecology of Peridinium cinctum fa.westii from Lake Kinneret. Verh Internat Verein Limnol 22:2850-2854.\nBerman T, Rodhe W (1971) Distribution and migration of Peridinium in Lake Kinneret. Mitteilungen Internationale Vereinigung für Theoretische und Angewandte Limnologie 19:266-276.\nBerman T, Sherr BF, Sherr E, Wynne D, McCarthy JJ (1984) The characteristics of ammonium and nitrate uptake by phytoplankton in Lake Kinneret. Limnol Oceanogr 29:287-297.\nBerman T, Shteinman B (1998) Phytoplankton development and turbulent mixing in Lake Kinneret (1992-1996). J Plankton Res 20:709-726.\nBerman-Frank I, Erez J (1996) Inorganic carbon pools in the bloom-forming dinoflagellate Peridinium gatunense. Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO₂ availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A (1983) Peridinium cinctum f. westii del Mar de Galilea, sinonimo de Peridinium gatunense (Dinophyceae). Limnobios 2:413-418.\nButow B, Wynne D, Sukenik A, Hadas O, Tel-Or E (1998) The synergistic effect of carbon concentration and high temperature on lipid peroxidation in Peridinium gatunense. J Phycol 20:355-369.\nElgavish A, Elgavish GA, Halman M, Berman T (1980) Phosphorus utilization and storage in batch cultures of the dinoflagellate Peridinium cinctum fa. westii. J Phycol 16:626-633.\nEren J (1969) Studies of development cycle of Peridinium cinctum fa. westii. Verh Internat Verein Limnol 17:1013-1016.\nHader D-P, Liu S-M, Hader M, Ullrich W (1990) Photoorientation, motility and pigmentation in a freshwater Peridinium affected by ultraviolet radiation. Gen Physiol Biophys 9:361-371.\nHambright KD, Zohary T, Gude H (2007) Microzooplankton dominate carbon flow and nutrient cycling in a warm subtropical freshwater lake. Limnol Oceanogr 52 (3):1018-1025.\nHickel B, Pollingher U (1988) Identification of the bloom forming Peridinium from Lake Kinneret (Israel) as P. gatunense (Dinophyceae). Br Phycol J23:115-119.\nHansen G, Flaim G (2007) Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nLeshem T, Letcher PM, Powell MJ, Sukenik A. (2016) Characterization of a new chytrid species parasitic on the dinoflagellate, Peridinium gatunense. Mycologia 108: 731-743.\nLindström K (1984) Effect of temperature, light and pH on growth, photosynthesis and respiration of the dinoflagellate Peridinium cinctum fa. westii in laboratory cultures. J Phycol 20:212-220.\nLindström K (1991) Nutrient requirements of the dinoflagellate Peridinium gatunense. J Phycol 27:207-219.\nLiu S-M, Hader D-P, Ullrich W (1990) Photoorientation in the freshwater dinoflagellate, Peridinium gatunense Nygaard. FEMS Microbiol Let 73:91-101.\nMcCarthy JJ, Wynne D, Berman T (1982) The uptake of dissolved nitrogenous nutrients by Lake Kinneret, Israel microplankton. Limnol Oceanogr 27:673-680.\nMesser G, Ben Shaul Y (1969) Fine structure of Peridinium westii, a freshwater dinoflagellate. J Protozool 15:272-280.\nMurik O, Kaplan A (2009) Paradoxically, prior acquisition of antioxidant activity enhances oxidative stress-induced cell death. Environ Microbiol 11 (9):2301-2309.\nNevo Z, Sharon N (1969) The cell wall of Peridinium westii, a non-cellulosic glucan. Biochim Biophys Acta 173:161-175.\nPfiester LA (1977) Sexual reproduction of Peridinium gatunense (Dinophyceae). J Phycol 13:92-95.\nPollingher U (1986) Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nPollingher U (1988) Freshwater armored dinoflagellates: growth, reproductive strategies and population dynamics. In: Sandgren C (ed) Growth and Reproduction Strategies of Freshwater Phytoplankton. Cambridge University Press, Cambridge, pp 134-174.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285.\nPollingher U, Serruya C (1976) Phased division of Peridinium cinctum fa. westii (Dinophyceae) and development of the Lake Kinneret, Israel bloom. J Phycol 12:162-170.\nPollingher U, Zemel E (1981) In situ and experimental evidence of the influence of turbulence on cell division processes of Peridinium cinctum fa. westii. (Lemm.) Lefevre. Br Phycol J 16:281-287.\nRahat M (1968) Observations on the life cycle of Peridinium westii in a mixed culture. Isr J Bot 17:200-206.\nRodhe W (1978) Peridinium cinctum fa. westii (Lemm.) Lef.: growth characteristics. In: Serruya C (ed) Lake Kinneret. Dr. Junk Publishers, The Hague, pp 275-283.\nSerruya C, Gophen M, Pollingher U (1980) Lake Kinneret: Carbon flow patterns and ecosystems management. Arch Hydrobiol 88:265-302.\nSherr B, Sherr E, Berman T (1982) Decomposition of organic detritus: a selective role for microflagellate protozoa. Limnol Oceanogr 27:765-769.\nSpataru P, Zorn M (1976) Some aspects of natural food and feeding habits of Tilapia galilaea (Artedi) and Tiplapia aurea (Steindachner) in Lake Kinneret. Bamidgeh, The Isr J Aquaculture 28:12-17.\nSukenik A, Eshkol R, Livne A, Hadas O, Rom M, Tchernov D, Vardi A, Kaplan A (2002) Inhibition of growth and photosynthesis of the dinoflagellate Peridinium gatunense by Microcystis sp.(cyanobacteria): a novel allelopathic mechanism. Limnol Oceanogr 47:1656-1663.\nUsvyatsov S, Zohary T (2006) Lake Kinneret continuous time-depth chlorophyll record highlights major phytoplankton events. Verh Internat Verein Limnol 29:1131-1134.\nVardi A, Berman-Frank I, Rozenberg T, Hadas O, Kaplan A, Levine A (1999) Programmed cell death of the dinoflagellate Peridinium gatunense is mediated by CO₂ limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A (2007) Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A (2002) Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D (1981) Phosphorus, phosphatases and the Peridinium bloom in Lake Kinneret. Verh Internat Verein Limnol 21:523-527.\nWynne D, Patni NJ, Aaronson S, Berman T (1982) The relationship between nutrient status and chemical composition of Peridinium cinctum during the bloom in Lake Kinneret. J Plankton Res 4:125-136.\nYacobi YZ, Pollingher U, Gonen Y, Gerhard V, Sukenik A (1996) HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate Peridinium gatunense (Dinophyceae) and chlorophyll degradation products. J Plankton Res 18:1781-1796.\nYacobi YZ, Zohary T (2010) Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T (2004) Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwat Biol 49:1355-1371.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes with Lake Kinneret pelagic food web. Limnol Oceanogr 39:1030-1043.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209.\nZohary T, Hadas O, Pollingher U, Kaplan B, Pinkas R, Güde H (2000) The effect of nutrients (N, P) on the decomposition of Peridinium gatunense cells and thecae. Limnol Oceanogr 45:123-130.\nZohary T, Nishri A, Sukenik A (2012) Present-absent: a chronicle of the dinoflagellate Peridinium gatunense from Lake Kinneret. Hydrobiologia 698:161-174.\nZohary T, Pollingher U, Hadas O, Hambright KD (1998) Bloom dynamics and sedimentation of Peridinium gatunense in Lake Kinneret. Limnol Oceanogr 43:175-186.\nZohary T, Sukenik A, Berman T (2014) Peridinium gatunense. Chap. 11 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 191-212. Springer, Heidelberg.\nZohary T, Alster A, Cummings D, Dolev A, Eckert W, Gal G, Gasith A, Guk E, Leibovici E, Ofir E, Varulker S, Be’eri-Shlevin Y (2026) Inundated Tamarix forest – a novel, climate change-induced littoral habitat in Lake Kinneret. Inland Waters 16(1), 2557696"
+      "further_reading": "Alster A, Zohary T. 2007. Interactions between the bloom forming dinoflagellate Peridinium gatunense and the chytrid fungus Phlyctochytrium sp. Hydrobiologia 578:131-139.\nAlster A, Zohary T, Dubinsky Z. 2006. Peridinium gatunense cyst type, abundance and germination in Lake Kinneret. Verh Internat Verein Limnol 29:2083-2086.\nAlster A, Zohary T. 2007. Interactions between the bloom-forming dinoflagellate Peridinium gatunense and the chytrid fungus Phlyctochytrium sp. Hydrobiologia 578:131-139.\nBerman T, Dubinsky Z. 1985. The autecology of Peridinium cinctum fa. westii from Lake Kinneret. Verh Internat Verein Limnol 22:2850-2854.\nBerman T, Rodhe W. 1971. Distribution and migration of Peridinium in Lake Kinneret. Mitteilungen Internationale Vereinigung für Theoretische und Angewandte Limnologie 19:266-276.\nBerman T, Sherr BF, Sherr E, Wynne D, McCarthy JJ. 1984. The characteristics of ammonium and nitrate uptake by phytoplankton in Lake Kinneret. Limnol Oceanogr 29:287-297.\nBerman T, Shteinman B. 1998. Phytoplankton development and turbulent mixing in Lake Kinneret (1992-1996). J Plankton Res 20:709-726.\nBerman-Frank I, Erez J. 1996. Inorganic carbon pools in the bloom-forming dinoflagellate Peridinium gatunense. Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z. 1994. CO₂ availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A. 1983. Peridinium cinctum f. westii del Mar de Galilea, sinonimo de Peridinium gatunense (Dinophyceae). Limnobios 2:413-418.\nButow B, Wynne D, Sukenik A, Hadas O, Tel-Or E. 1998. The synergistic effect of carbon concentration and high temperature on lipid peroxidation in Peridinium gatunense. J Phycol 20:355-369.\nElgavish A, Elgavish GA, Halman M, Berman T. 1980. Phosphorus utilization and storage in batch cultures of the dinoflagellate Peridinium cinctum fa. westii. J Phycol 16:626-633.\nEren J. 1969. Studies of development cycle of Peridinium cinctum fa. westii. Verh Internat Verein Limnol 17:1013-1016.\nHader D-P, Liu S-M, Hader M, Ullrich W. 1990. Photoorientation, motility and pigmentation in a freshwater Peridinium affected by ultraviolet radiation. Gen Physiol Biophys 9:361-371.\nHambright KD, Zohary T, Gude H. 2007. Microzooplankton dominate carbon flow and nutrient cycling in a warm subtropical freshwater lake. Limnol Oceanogr 52 (3):1018-1025.\nHickel B, Pollingher U. 1988. Identification of the bloom forming Peridinium from Lake Kinneret (Israel) as P. gatunense (Dinophyceae). Br Phycol J 23:115-119.\nHansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nLeshem T, Letcher PM, Powell MJ, Sukenik A. 2016. Characterization of a new chytrid species parasitic on the dinoflagellate, Peridinium gatunense. Mycologia 108: 731-743.\nLindström K. 1984. Effect of temperature, light and pH on growth, photosynthesis and respiration of the dinoflagellate Peridinium cinctum fa. westii in laboratory cultures. J Phycol 20:212-220.\nLindström K. 1991. Nutrient requirements of the dinoflagellate Peridinium gatunense. J Phycol 27:207-219.\nLiu S-M, Hader D-P, Ullrich W. 1990. Photoorientation in the freshwater dinoflagellate, Peridinium gatunense Nygaard. FEMS Microbiol Let 73:91-101.\nMcCarthy JJ, Wynne D, Berman T. 1982. The uptake of dissolved nitrogenous nutrients by Lake Kinneret, Israel microplankton. Limnol Oceanogr 27:673-680.\nMesser G, Ben Shaul Y. 1969. Fine structure of Peridinium westii, a freshwater dinoflagellate. J Protozool 15:272-280.\nMurik O, Kaplan A. 2009. Paradoxically, prior acquisition of antioxidant activity enhances oxidative stress-induced cell death. Environ Microbiol 11:2301-2309.\nNevo Z, Sharon N. 1969. The cell wall of Peridinium westii, a non-cellulosic glucan. Biochim Biophys Acta 173:161-175.\nPfiester LA. 1977. Sexual reproduction of Peridinium gatunense (Dinophyceae). J Phycol 13:92-95.\nPollingher U. 1986. Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nPollingher U. 1988. Freshwater armored dinoflagellates: growth, reproductive strategies and population dynamics. In: Sandgren C (ed) Growth and Reproduction Strategies of Freshwater Phytoplankton. Cambridge University Press, Cambridge, pp 134-174.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285.\nPollingher U, Serruya C. 1976. Phased division of Peridinium cinctum fa. westii (Dinophyceae) and development of the Lake Kinneret, Israel bloom. J Phycol 12:162-170.\nPollingher U, Zemel E. 1981. In situ and experimental evidence of the influence of turbulence on cell division processes of Peridinium cinctum fa. westii. (Lemm.) Lefevre. Br Phycol J 16:281-287.\nRahat M. 1968. Observations on the life cycle of Peridinium westii in a mixed culture. Isr J Bot 17:200-206.\nRodhe W. 1978. Peridinium cinctum fa. westii (Lemm.) Lef.: growth characteristics. In: Serruya C (ed) Lake Kinneret. Dr. Junk Publishers, The Hague, pp 275-283.\nSerruya C, Gophen M, Pollingher U. 1980. Lake Kinneret: Carbon flow patterns and ecosystems management. Arch Hydrobiol 88:265-302.\nSherr B, Sherr E, Berman T. 1982. Decomposition of organic detritus: a selective role for microflagellate protozoa. Limnol Oceanogr 27:765-769.\nSpataru P, Zorn M. 1976. Some aspects of natural food and feeding habits of Tilapia galilaea (Artedi) and Tiplapia aurea (Steindachner) in Lake Kinneret. Bamidgeh, The Isr J Aquaculture 28:12-17.\nSukenik A, Eshkol R, Livne A, Hadas O, Rom M, Tchernov D, Vardi A, Kaplan A. 2002. Inhibition of growth and photosynthesis of the dinoflagellate Peridinium gatunense by Microcystis sp.(cyanobacteria): a novel allelopathic mechanism. Limnol Oceanogr 47:1656-1663.\nUsvyatsov S, Zohary T. 2006. Lake Kinneret continuous time-depth chlorophyll record highlights major phytoplankton events. Verh Internat Verein Limnol 29:1131-1134.\nVardi A, Berman-Frank I, Rozenberg T, Hadas O, Kaplan A, Levine A. 1999. Programmed cell death of the dinoflagellate Peridinium gatunense is mediated by CO₂ limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A. 2007. Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A. 2002. Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D. 1981. Phosphorus, phosphatases and the Peridinium bloom in Lake Kinneret. Verh Internat Verein Limnol 21:523-527.\nWynne D, Patni NJ, Aaronson S, Berman T. 1982. The relationship between nutrient status and chemical composition of Peridinium cinctum during the bloom in Lake Kinneret. J Plankton Res 4:125-136.\nYacobi YZ, Pollingher U, Gonen Y, Gerhard V, Sukenik A. 1996. HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate Peridinium gatunense (Dinophyceae) and chlorophyll degradation products. J Plankton Res 18:1781-1796.\nYacobi YZ, Pollingher U, Gonen Y, Gerhardt V, Sukenik A. 1996. HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate Peridinium gatunense (Dinophyceae) and chlorophyll degradation products. J. Plank. Res. 13: 1781-1796.\nYacobi YZ, Zohary T. 2010. Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T. 2004. Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwat Biol 49:1355-1371.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M. 1994. Seasonality of stable carbon isotopes with Lake Kinneret pelagic food web. Limnol Oceanogr 39:1030-1043.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L. 2017. Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209.\nZohary T, Hadas O, Pollingher U, Kaplan B, Pinkas R, Güde H. 2000. The effect of nutrients (N, P) on the decomposition of Peridinium gatunense cells and thecae. Limnol Oceanogr 45:123-130.\nZohary T, Nishri A, Sukenik A. 2012. Present-absent: a chronicle of the dinoflagellate Peridinium gatunense from Lake Kinneret. Hydrobiologia 698:161-174.\nZohary T, Pollingher U, Hadas O, Hambright KD. 1998. Bloom dynamics and sedimentation of Peridinium gatunense in Lake Kinneret. Limnol Oceanogr 43:175-186.\nZohary T, Sukenik A, Berman T. 2014. Peridinium gatunense. Chap. 11 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 191-212. Springer, Heidelberg.\nZohary T, Alster A, Cummings D, Dolev A, Eckert W, Gal G, Gasith A, Guk E, Leibovici E, Ofir E, Varulker S, Be’eri-Shlevin Y. 2026. Inundated Tamarix forest – a novel, climate change-induced littoral habitat in Lake Kinneret. Inland Waters 16(1), 2557696"
     },
     "sections_rich": {
       "phylum": [
@@ -23341,7 +23460,7 @@
       ],
       "further_reading": [
         {
-          "text": "Alster A, Zohary T (2007) Interactions between the bloom forming dinoflagellate ",
+          "text": "Alster A, Zohary T. 2007. Interactions between the bloom forming dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -23371,7 +23490,7 @@
           "bold": false
         },
         {
-          "text": " sp. Hydrobiologia 578:131-139.\nAlster A, Zohary T, Dubinsky Z (2006) ",
+          "text": " sp. Hydrobiologia 578:131-139.\nAlster A, Zohary T, Dubinsky Z. 2006. ",
           "italic": false,
           "bold": false
         },
@@ -23391,7 +23510,7 @@
           "bold": false
         },
         {
-          "text": " cyst type, abundance and germination in Lake Kinneret. Verh Internat Verein Limnol 29:2083-2086.\nAlster A, Zohary T (2007) Interactions between the bloom-forming dinoflagellate ",
+          "text": " cyst type, abundance and germination in Lake Kinneret. Verh Internat Verein Limnol 29:2083-2086.\nAlster A, Zohary T. 2007. Interactions between the bloom-forming dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -23421,7 +23540,7 @@
           "bold": false
         },
         {
-          "text": " sp. Hydrobiologia 578:131-139.\nBerman T, Dubinsky Z (1985) The autecology of ",
+          "text": " sp. Hydrobiologia 578:131-139.\nBerman T, Dubinsky Z. 1985. The autecology of ",
           "italic": false,
           "bold": false
         },
@@ -23441,7 +23560,7 @@
           "bold": false
         },
         {
-          "text": " fa.",
+          "text": " fa. ",
           "italic": false,
           "bold": false
         },
@@ -23451,7 +23570,7 @@
           "bold": false
         },
         {
-          "text": " from Lake Kinneret. Verh Internat Verein Limnol 22:2850-2854.\nBerman T, Rodhe W (1971) Distribution and migration of ",
+          "text": " from Lake Kinneret. Verh Internat Verein Limnol 22:2850-2854.\nBerman T, Rodhe W. 1971. Distribution and migration of ",
           "italic": false,
           "bold": false
         },
@@ -23461,7 +23580,7 @@
           "bold": false
         },
         {
-          "text": " in Lake Kinneret. Mitteilungen Internationale Vereinigung für Theoretische und Angewandte Limnologie 19:266-276.\nBerman T, Sherr BF, Sherr E, Wynne D, McCarthy JJ (1984) The characteristics of ammonium and nitrate uptake by phytoplankton in Lake Kinneret. Limnol Oceanogr 29:287-297.\nBerman T, Shteinman B (1998) Phytoplankton development and turbulent mixing in Lake Kinneret (1992-1996). J Plankton Res 20:709-726.\nBerman-Frank I, Erez J (1996) Inorganic carbon pools in the bloom-forming dinoflagellate ",
+          "text": " in Lake Kinneret. Mitteilungen Internationale Vereinigung für Theoretische und Angewandte Limnologie 19:266-276.\nBerman T, Sherr BF, Sherr E, Wynne D, McCarthy JJ. 1984. The characteristics of ammonium and nitrate uptake by phytoplankton in Lake Kinneret. Limnol Oceanogr 29:287-297.\nBerman T, Shteinman B. 1998. Phytoplankton development and turbulent mixing in Lake Kinneret (1992-1996). J Plankton Res 20:709-726.\nBerman-Frank I, Erez J. 1996. Inorganic carbon pools in the bloom-forming dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -23481,7 +23600,7 @@
           "bold": false
         },
         {
-          "text": ". Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z (1994) CO",
+          "text": ". Limnol Oceanogr 41:1780-1789.\nBerman-Frank I, Zohary T, Erez J, Dubinsky Z. 1994. CO",
           "italic": false,
           "bold": false
         },
@@ -23492,7 +23611,7 @@
           "subscript": true
         },
         {
-          "text": " availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A (1983) ",
+          "text": " availability, carbonic anhydrase, and the annual dinoflagellate bloom in Lake Kinneret. Limnol Oceanogr 39:1822-1834.\nBoltovskoy A. 1983. ",
           "italic": false,
           "bold": false
         },
@@ -23542,7 +23661,7 @@
           "bold": false
         },
         {
-          "text": " (Dinophyceae). Limnobios 2:413-418.\nButow B, Wynne D, Sukenik A, Hadas O, Tel-Or E (1998) The synergistic effect of carbon concentration and high temperature on lipid peroxidation in ",
+          "text": " (Dinophyceae). Limnobios 2:413-418.\nButow B, Wynne D, Sukenik A, Hadas O, Tel-Or E. 1998. The synergistic effect of carbon concentration and high temperature on lipid peroxidation in ",
           "italic": false,
           "bold": false
         },
@@ -23562,7 +23681,7 @@
           "bold": false
         },
         {
-          "text": ". J Phycol 20:355-369.\nElgavish A, Elgavish GA, Halman M, Berman T (1980) Phosphorus utilization and storage in batch cultures of the dinoflagellate ",
+          "text": ". J Phycol 20:355-369.\nElgavish A, Elgavish GA, Halman M, Berman T. 1980. Phosphorus utilization and storage in batch cultures of the dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -23592,7 +23711,7 @@
           "bold": false
         },
         {
-          "text": ". J Phycol 16:626-633.\nEren J (1969) Studies of development cycle of ",
+          "text": ". J Phycol 16:626-633.\nEren J. 1969. Studies of development cycle of ",
           "italic": false,
           "bold": false
         },
@@ -23622,7 +23741,7 @@
           "bold": false
         },
         {
-          "text": ". Verh Internat Verein Limnol 17:1013-1016.\nHader D-P, Liu S-M, Hader M, Ullrich W (1990) Photoorientation, motility and pigmentation in a freshwater ",
+          "text": ". Verh Internat Verein Limnol 17:1013-1016.\nHader D-P, Liu S-M, Hader M, Ullrich W. 1990. Photoorientation, motility and pigmentation in a freshwater ",
           "italic": false,
           "bold": false
         },
@@ -23632,7 +23751,7 @@
           "bold": false
         },
         {
-          "text": " affected by ultraviolet radiation. Gen Physiol Biophys 9:361-371.\nHambright KD, Zohary T, Gude H (2007) Microzooplankton dominate carbon flow and nutrient cycling in a warm subtropical freshwater lake. Limnol Oceanogr 52 (3):1018-1025.\nHickel B, Pollingher U (1988) Identification of the bloom forming ",
+          "text": " affected by ultraviolet radiation. Gen Physiol Biophys 9:361-371.\nHambright KD, Zohary T, Gude H. 2007. Microzooplankton dominate carbon flow and nutrient cycling in a warm subtropical freshwater lake. Limnol Oceanogr 52 (3):1018-1025.\nHickel B, Pollingher U. 1988. Identification of the bloom forming ",
           "italic": false,
           "bold": false
         },
@@ -23662,7 +23781,7 @@
           "bold": false
         },
         {
-          "text": " (Dinophyceae). Br Phycol J23:115-119.\nHansen G, Flaim G (2007) Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nLeshem T, Letcher PM, Powell MJ, Sukenik A. (2016) Characterization of a new chytrid species parasitic on the dinoflagellate, ",
+          "text": " (Dinophyceae). Br Phycol J 23:115-119.\nHansen G, Flaim G. 2007. Dinoflagellates of the Trentino Province, Italy. J Limnol. 66:107-141.\nLeshem T, Letcher PM, Powell MJ, Sukenik A. 2016. Characterization of a new chytrid species parasitic on the dinoflagellate, ",
           "italic": false,
           "bold": false
         },
@@ -23682,7 +23801,7 @@
           "bold": false
         },
         {
-          "text": " Mycologia 108: 731-743.\nLindström K (1984) Effect of temperature, light and pH on growth, photosynthesis and respiration of the dinoflagellate ",
+          "text": " Mycologia 108: 731-743.\nLindström K. 1984. Effect of temperature, light and pH on growth, photosynthesis and respiration of the dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -23712,7 +23831,7 @@
           "bold": false
         },
         {
-          "text": " in laboratory cultures. J Phycol 20:212-220.\nLindström K (1991) Nutrient requirements of the dinoflagellate ",
+          "text": " in laboratory cultures. J Phycol 20:212-220.\nLindström K. 1991. Nutrient requirements of the dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -23732,7 +23851,7 @@
           "bold": false
         },
         {
-          "text": ". J Phycol 27:207-219.\nLiu S-M, Hader D-P, Ullrich W (1990) Photoorientation in the freshwater dinoflagellate, ",
+          "text": ". J Phycol 27:207-219.\nLiu S-M, Hader D-P, Ullrich W. 1990. Photoorientation in the freshwater dinoflagellate, ",
           "italic": false,
           "bold": false
         },
@@ -23752,7 +23871,7 @@
           "bold": false
         },
         {
-          "text": " Nygaard. FEMS Microbiol Let 73:91-101.\nMcCarthy JJ, Wynne D, Berman T (1982) The uptake of dissolved nitrogenous nutrients by Lake Kinneret, Israel microplankton. Limnol Oceanogr 27:673-680.\nMesser G, Ben Shaul Y (1969) Fine structure of ",
+          "text": " Nygaard. FEMS Microbiol Let 73:91-101.\nMcCarthy JJ, Wynne D, Berman T. 1982. The uptake of dissolved nitrogenous nutrients by Lake Kinneret, Israel microplankton. Limnol Oceanogr 27:673-680.\nMesser G, Ben Shaul Y. 1969. Fine structure of ",
           "italic": false,
           "bold": false
         },
@@ -23772,7 +23891,7 @@
           "bold": false
         },
         {
-          "text": ", a freshwater dinoflagellate. J Protozool 15:272-280.\nMurik O, Kaplan A (2009) Paradoxically, prior acquisition of antioxidant activity enhances oxidative stress-induced cell death. Environ Microbiol 11 (9):2301-2309.\nNevo Z, Sharon N (1969) The cell wall of ",
+          "text": ", a freshwater dinoflagellate. J Protozool 15:272-280.\nMurik O, Kaplan A. 2009. Paradoxically, prior acquisition of antioxidant activity enhances oxidative stress-induced cell death. Environ Microbiol 11:2301-2309.\nNevo Z, Sharon N. 1969. The cell wall of ",
           "italic": false,
           "bold": false
         },
@@ -23792,7 +23911,7 @@
           "bold": false
         },
         {
-          "text": ", a non-cellulosic glucan. Biochim Biophys Acta 173:161-175.\nPfiester LA (1977) Sexual reproduction of ",
+          "text": ", a non-cellulosic glucan. Biochim Biophys Acta 173:161-175.\nPfiester LA. 1977. Sexual reproduction of ",
           "italic": false,
           "bold": false
         },
@@ -23812,7 +23931,7 @@
           "bold": false
         },
         {
-          "text": " (Dinophyceae). J Phycol 13:92-95.\nPollingher U (1986) Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nPollingher U (1988) Freshwater armored dinoflagellates: growth, reproductive strategies and population dynamics. In: Sandgren C (ed) Growth and Reproduction Strategies of Freshwater Phytoplankton. Cambridge University Press, Cambridge, pp 134-174.\nPollingher U, Hickel B (1991) Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285.\nPollingher U, Serruya C (1976) Phased division of ",
+          "text": " (Dinophyceae). J Phycol 13:92-95.\nPollingher U. 1986. Phytoplankton periodicity in a subtropical lake (Lake Kinneret, Israel). Hydrobiologia 138:127-138.\nPollingher U. 1988. Freshwater armored dinoflagellates: growth, reproductive strategies and population dynamics. In: Sandgren C (ed) Growth and Reproduction Strategies of Freshwater Phytoplankton. Cambridge University Press, Cambridge, pp 134-174.\nPollingher U, Hickel B. 1991. Dinoflagellate associations in a subtropical lake (Lake Kinneret, Israel). Arch Hydrobiol 120:267-285.\nPollingher U, Serruya C. 1976. Phased division of ",
           "italic": false,
           "bold": false
         },
@@ -23842,7 +23961,7 @@
           "bold": false
         },
         {
-          "text": " (Dinophyceae) and development of the Lake Kinneret, Israel bloom. J Phycol 12:162-170.\nPollingher U, Zemel E (1981) ",
+          "text": " (Dinophyceae) and development of the Lake Kinneret, Israel bloom. J Phycol 12:162-170.\nPollingher U, Zemel E. 1981. ",
           "italic": false,
           "bold": false
         },
@@ -23892,7 +24011,27 @@
           "bold": false
         },
         {
-          "text": ". (Lemm.) Lefevre. Br Phycol J 16:281-287.\nRahat M (1968) Observations on the life cycle of Peridinium westii in a mixed culture. Isr J Bot 17:200-206.\nRodhe W (1978) ",
+          "text": ". (Lemm.) Lefevre. Br Phycol J 16:281-287.\nRahat M. 1968. Observations on the life cycle of ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "westii",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " in a mixed culture. Isr J Bot 17:200-206.\nRodhe W. 1978. ",
           "italic": false,
           "bold": false
         },
@@ -23922,7 +24061,7 @@
           "bold": false
         },
         {
-          "text": " (Lemm.) Lef.: growth characteristics. In: Serruya C (ed) Lake Kinneret. Dr. Junk Publishers, The Hague, pp 275-283.\nSerruya C, Gophen M, Pollingher U (1980) Lake Kinneret: Carbon flow patterns and ecosystems management. Arch Hydrobiol 88:265-302.\nSherr B, Sherr E, Berman T (1982) Decomposition of organic detritus: a selective role for microflagellate protozoa. Limnol Oceanogr 27:765-769.\nSpataru P, Zorn M (1976) Some aspects of natural food and feeding habits of ",
+          "text": " (Lemm.) Lef.: growth characteristics. In: Serruya C (ed) Lake Kinneret. Dr. Junk Publishers, The Hague, pp 275-283.\nSerruya C, Gophen M, Pollingher U. 1980. Lake Kinneret: Carbon flow patterns and ecosystems management. Arch Hydrobiol 88:265-302.\nSherr B, Sherr E, Berman T. 1982. Decomposition of organic detritus: a selective role for microflagellate protozoa. Limnol Oceanogr 27:765-769.\nSpataru P, Zorn M. 1976. Some aspects of natural food and feeding habits of ",
           "italic": false,
           "bold": false
         },
@@ -23962,7 +24101,7 @@
           "bold": false
         },
         {
-          "text": " (Steindachner) in Lake Kinneret. Bamidgeh, The Isr J Aquaculture 28:12-17.\nSukenik A, Eshkol R, Livne A, Hadas O, Rom M, Tchernov D, Vardi A, Kaplan A (2002) Inhibition of growth and photosynthesis of the dinoflagellate ",
+          "text": " (Steindachner) in Lake Kinneret. Bamidgeh, The Isr J Aquaculture 28:12-17.\nSukenik A, Eshkol R, Livne A, Hadas O, Rom M, Tchernov D, Vardi A, Kaplan A. 2002. Inhibition of growth and photosynthesis of the dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -23982,7 +24121,17 @@
           "bold": false
         },
         {
-          "text": " by Microcystis sp.(cyanobacteria): a novel allelopathic mechanism. Limnol Oceanogr 47:1656-1663.\nUsvyatsov S, Zohary T (2006) Lake Kinneret continuous time-depth chlorophyll record highlights major phytoplankton events. Verh Internat Verein Limnol 29:1131-1134.\nVardi A, Berman-Frank I, Rozenberg T, Hadas O, Kaplan A, Levine A (1999) Programmed cell death of the dinoflagellate ",
+          "text": " by ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Microcystis",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " sp.(cyanobacteria): a novel allelopathic mechanism. Limnol Oceanogr 47:1656-1663.\nUsvyatsov S, Zohary T. 2006. Lake Kinneret continuous time-depth chlorophyll record highlights major phytoplankton events. Verh Internat Verein Limnol 29:1131-1134.\nVardi A, Berman-Frank I, Rozenberg T, Hadas O, Kaplan A, Levine A. 1999. Programmed cell death of the dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -24013,7 +24162,7 @@
           "subscript": true
         },
         {
-          "text": " limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A (2007) Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A (2002) Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D (1981) Phosphorus, phosphatases and the ",
+          "text": " limitation and oxidative stress. Current Biol 9:1061-1064.\nVardi A, Eisenstadt D, Murik O, Berman-Frank I, Zohary T, Levine A, Kaplan A. 2007. Synchronization of cell death in a dinoflagellate population is mediated by an excreted thiol protease. Environ Microbiol 9:360-369.\nVardi A, Schatz D, Beeri K, Motro U, Sukenik A, Levine A, Kaplan A. 2002. Dinoflagellate-cyanobacterium communication may determine the composition of phytoplankton assemblage in a mesotrophic lake. Current Biol 12:1767-1772.\nWynne D. 1981. Phosphorus, phosphatases and the ",
           "italic": false,
           "bold": false
         },
@@ -24023,7 +24172,7 @@
           "bold": false
         },
         {
-          "text": " bloom in Lake Kinneret. Verh Internat Verein Limnol 21:523-527.\nWynne D, Patni NJ, Aaronson S, Berman T (1982) The relationship between nutrient status and chemical composition of ",
+          "text": " bloom in Lake Kinneret. Verh Internat Verein Limnol 21:523-527.\nWynne D, Patni NJ, Aaronson S, Berman T. 1982. The relationship between nutrient status and chemical composition of ",
           "italic": false,
           "bold": false
         },
@@ -24043,7 +24192,7 @@
           "bold": false
         },
         {
-          "text": " during the bloom in Lake Kinneret. J Plankton Res 4:125-136.\nYacobi YZ, Pollingher U, Gonen Y, Gerhard V, Sukenik A (1996) HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate ",
+          "text": " during the bloom in Lake Kinneret. J Plankton Res 4:125-136.\nYacobi YZ, Pollingher U, Gonen Y, Gerhard V, Sukenik A. 1996. HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -24063,7 +24212,7 @@
           "bold": false
         },
         {
-          "text": " (Dinophyceae) and chlorophyll degradation products. J Plankton Res 18:1781-1796.\nYacobi YZ, Zohary T (2010) Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T (2004) Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwat Biol 49:1355-1371.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M (1994) Seasonality of stable carbon isotopes with Lake Kinneret pelagic food web. Limnol Oceanogr 39:1030-1043.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L (2017) Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209.\nZohary T, Hadas O, Pollingher U, Kaplan B, Pinkas R, Güde H (2000) The effect of nutrients (N, P) on the decomposition of ",
+          "text": " (Dinophyceae) and chlorophyll degradation products. J Plankton Res 18:1781-1796.\nYacobi YZ, Pollingher U, Gonen Y, Gerhardt V, Sukenik A. 1996. HPLC analysis of phytoplankton pigments from Lake Kinneret with special reference to the bloom-forming dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -24083,7 +24232,37 @@
           "bold": false
         },
         {
-          "text": " cells and thecae. Limnol Oceanogr 45:123-130.\nZohary T, Nishri A, Sukenik A (2012) Present-absent: a chronicle of the dinoflagellate ",
+          "text": " (Dinophyceae) and chlorophyll degradation products. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "J.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Plank.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Res.",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " 13: 1781-1796.\nYacobi YZ, Zohary T. 2010. Carbon:chlorophyll a ratio, assimilation numbers and turnover times of Lake Kinneret phytoplankton. Hydrobiologia 639:185-196.\nZohary T. 2004. Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwat Biol 49:1355-1371.\nZohary T, Erez J, Gophen M, Berman-Frank I, Stiller M. 1994. Seasonality of stable carbon isotopes with Lake Kinneret pelagic food web. Limnol Oceanogr 39:1030-1043.\nZohary T, Fishbein T, Shlichter M, Naselli-Flores L. 2017. Larger cell or colony size in winter, smaller in summer – a pattern shared by many species of Lake Kinneret phytoplankton. Inland Waters 7:200-209.\nZohary T, Hadas O, Pollingher U, Kaplan B, Pinkas R, Güde H. 2000. The effect of nutrients (N, P) on the decomposition of ",
           "italic": false,
           "bold": false
         },
@@ -24103,7 +24282,7 @@
           "bold": false
         },
         {
-          "text": " from Lake Kinneret. Hydrobiologia 698:161-174.\nZohary T, Pollingher U, Hadas O, Hambright KD (1998) Bloom dynamics and sedimentation of ",
+          "text": " cells and thecae. Limnol Oceanogr 45:123-130.\nZohary T, Nishri A, Sukenik A. 2012. Present-absent: a chronicle of the dinoflagellate ",
           "italic": false,
           "bold": false
         },
@@ -24123,7 +24302,7 @@
           "bold": false
         },
         {
-          "text": " in Lake Kinneret. Limnol Oceanogr 43:175-186.\nZohary T, Sukenik A, Berman T (2014) ",
+          "text": " from Lake Kinneret. Hydrobiologia 698:161-174.\nZohary T, Pollingher U, Hadas O, Hambright KD. 1998. Bloom dynamics and sedimentation of ",
           "italic": false,
           "bold": false
         },
@@ -24143,7 +24322,27 @@
           "bold": false
         },
         {
-          "text": ". Chap. 11 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 191-212. Springer, Heidelberg.\nZohary T, Alster A, Cummings D, Dolev A, Eckert W, Gal G, Gasith A, Guk E, Leibovici E, Ofir E, Varulker S, Be’eri-Shlevin Y (2026) Inundated ",
+          "text": " in Lake Kinneret. Limnol Oceanogr 43:175-186.\nZohary T, Sukenik A, Berman T. 2014. ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Peridinium",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gatunense",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": ". Chap. 11 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp 191-212. Springer, Heidelberg.\nZohary T, Alster A, Cummings D, Dolev A, Eckert W, Gal G, Gasith A, Guk E, Leibovici E, Ofir E, Varulker S, Be’eri-Shlevin Y. 2026. Inundated ",
           "italic": false,
           "bold": false
         },
@@ -24160,8 +24359,8 @@
       ]
     },
     "metadata": {
-      "source_file": "Peridinium gatunense 2026-08-07.docx",
-      "record_updated": "2026-08-07"
+      "source_file": "Peridinium gatunense 2026-11-02.docx",
+      "record_updated": "2026-11-02"
     }
   },
   {
