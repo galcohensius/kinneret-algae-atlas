@@ -73,8 +73,9 @@ def _format_long_date(iso_date: str | None) -> str:
 
 def _record_citation(record_updated: str | None, authors: list[str] | None = None) -> str:
     long_date = _format_long_date(record_updated)
+    cited = ", ".join(authors) if authors else CANONICAL_AUTHORS
     return (
-        f"{', '.join(authors) if authors else CANONICAL_AUTHORS}. {long_date}. Electronic publication. "
+        f"{cited}. {long_date}. Electronic publication. "
         f"{CANONICAL_PUBLISHER}. {ATLAS_CITE_URL}"
     )
 

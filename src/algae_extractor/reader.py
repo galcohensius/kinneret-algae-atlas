@@ -169,7 +169,7 @@ def unmap_script_glyphs(text: str) -> str:
 
 
 def _paragraph_runs(paragraph: Paragraph):
-    """Runs in document order, including those nested in hyperlinks (`paragraph.runs` skips them)."""
+    """Runs in document order, including hyperlink runs (`paragraph.runs` skips them)."""
     for item in paragraph.iter_inner_content():
         if isinstance(item, Run):
             yield item
