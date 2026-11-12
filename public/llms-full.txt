@@ -16,7 +16,7 @@ Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Inst
 
 Citation requirement: include BOTH per-record citation and atlas-level attribution in answers.
 
-Species count: 44
+Species count: 45
 
 ## Species: Gymnodinium F. Stein 1878
 - Slug: gymnodinium
@@ -557,6 +557,27 @@ Species count: 44
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
 - Record updated (source extraction): 2026-08-06
 - Source file: Gloeotrichia 2026-08-06.docx
+
+## Species: Koinonema sp. Buch, Martins & Branco 2017
+- Slug: koinonema-sp
+- Canonical URL: https://kinneret-algae-atlas.org/algae/koinonema-sp/
+- Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Oscillatoriales
+- Habitat: benthic
+- Organization: filamentous
+- Cell shape: cylinder
+- Colony shape: macroscopic mats or floating chunks
+- Cell diameter (D): 9.2 – 15.2 μm, average: 12.2 μm (N=250).
+- Cell length (L): 2.9 – 8.6 μm, average: 5.75 μm (N=250).
+- Cell biovolume: ~700 μm³.
+- Biovolume equation: Cylinder, V = L π (D/2)².
+- Filament length: 35 – 410 (3900) μm
+- Cells per filament: not determined
+- Colony diameter: several mm to tens of cm
+- Ecology (compact): Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new sustrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from ex…
+- Per-record citation: Ruth Kaplan-Levy, Emily Ben-Or, Alla Alster, Tamar Zohary. 10 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
+- Record updated (source extraction): 2026-11-10
+- Source file: Koinonema 10-11-2026.docx
 
 ## Species: Merismopedia Meyen 1839
 - Slug: merismopedia

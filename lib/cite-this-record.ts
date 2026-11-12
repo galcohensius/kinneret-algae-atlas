@@ -27,21 +27,28 @@ export function buildAtlasAttribution(): string {
   return `${CANONICAL_AUTHORS.join(", ")}. ${CANONICAL_AFFILIATION}.`;
 }
 
-export function buildRecordCitation(recordUpdatedIso: string | null): string {
+/** `authors`: the record's own authors when its Word file names some; the atlas authors otherwise. */
+export function buildRecordCitation(
+  recordUpdatedIso: string | null,
+  authors: readonly string[] = CANONICAL_AUTHORS
+): string {
   const iso =
     recordUpdatedIso && /^\d{4}-\d{2}-\d{2}$/.test(recordUpdatedIso.trim())
       ? recordUpdatedIso.trim()
       : new Date().toISOString().slice(0, 10);
   const lastUpdatedLong = formatRecordUpdated(iso);
-  return `${CANONICAL_AUTHORS.join(", ")}. ${lastUpdatedLong}. Electronic publication. ${CANONICAL_PUBLISHER}. ${ATLAS_CITE_URL}`;
+  return `${authors.join(", ")}. ${lastUpdatedLong}. Electronic publication. ${CANONICAL_PUBLISHER}. ${ATLAS_CITE_URL}`;
 }
 
-export function buildCitationBundle(recordUpdatedIso: string | null): {
+export function buildCitationBundle(
+  recordUpdatedIso: string | null,
+  authors?: readonly string[]
+): {
   recordCitation: string;
   atlasAttribution: string;
 } {
   return {
-    recordCitation: buildRecordCitation(recordUpdatedIso),
+    recordCitation: buildRecordCitation(recordUpdatedIso, authors),
     atlasAttribution: buildAtlasAttribution(),
   };
 }

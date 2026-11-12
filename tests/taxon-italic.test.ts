@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { splitTaxonForItalicDisplay } from "../lib/taxon-display";
+import { splitTaxonAndAuthority, splitTaxonForItalicDisplay } from "../lib/taxon-display";
 
 describe("splitTaxonForItalicDisplay", () => {
   it("keeps var. upright between italic genus and epithet", () => {
@@ -41,5 +41,14 @@ describe("splitTaxonForItalicDisplay", () => {
     expect(splitTaxonForItalicDisplay("Ceratium hirundinella")).toEqual([
       { italic: true, text: "Ceratium hirundinella" },
     ]);
+  });
+});
+
+describe("splitTaxonAndAuthority", () => {
+  it("keeps the dot of sp. with the taxon, not the authority", () => {
+    expect(splitTaxonAndAuthority("Koinonema sp. Buch, Martins & Branco 2017")).toEqual({
+      taxon: "Koinonema sp.",
+      authority: "Buch, Martins & Branco 2017",
+    });
   });
 });

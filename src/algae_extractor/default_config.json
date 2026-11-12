@@ -87,6 +87,7 @@
     "Organization:"
   ],
   "record_following_marker_lookahead": 8,
+  "default_cite_authors": ["Tamar Zohary", "Alla Alster"],
   "morphology_supplement_links": [
     {
       "scientific_name_pattern": "(?i)Parvodinium\\s+\\S*(cunningtonii|elpatiewskyi)\\S*",

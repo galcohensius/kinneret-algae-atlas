@@ -110,6 +110,7 @@ def _finalize_record(
     images_public_prefix: str = "/algae-images",
     record_index_fallback: int = 1,
     morphology_supplement_links: list[dict[str, Any]] | None = None,
+    default_cite_authors: list[str] | None = None,
 ) -> AlgaeRecord | None:
     deferred = record.get("deferred_images") or []
     if deferred and images_output_dir is not None:
@@ -192,6 +193,16 @@ def _finalize_record(
     # Source-doc date (from _new_record) wins; today is only a fallback for callers
     # that did not supply one, so extraction reruns do not churn the JSON.
     metadata.setdefault("record_updated", date.today().isoformat())
+
+    # "Cite this record as: <authors>. <date>. ..." -- keep the authors only when the
+    # record names someone other than the atlas default, which the site supplies itself.
+    cite_authors = [
+        name.strip()
+        for name in raw_sections_plain.get("cite_this_record", "").split(". ")[0].split(",")
+        if name.strip()
+    ]
+    if cite_authors and cite_authors != (default_cite_authors or []):
+        metadata["record_authors"] = cite_authors
 
     return AlgaeRecord(
         scientific_name=record["scientific_name"],
@@ -1191,6 +1202,7 @@ def extract_records(
     resolved_images_output_dir = Path(images_output_dir) if images_output_dir else None
     expect_image_caption = False
     morphology_supplement_links = config.get("morphology_supplement_links") or []
+    default_cite_authors = config.get("default_cite_authors") or []
 
     blocks = list(iter_docx_content_blocks(docx_path, use_word_renderer=use_word_renderer))
     pending_relaxed_record_markers = False
@@ -1206,6 +1218,7 @@ def extract_records(
                 images_public_prefix=images_public_prefix,
                 record_index_fallback=len(records) + 1,
                 morphology_supplement_links=morphology_supplement_links,
+                default_cite_authors=default_cite_authors,
             )
             if finalized:
                 records.append(finalized)
@@ -1361,6 +1374,7 @@ def extract_records(
                 images_public_prefix=images_public_prefix,
                 record_index_fallback=len(records) + 1,
                 morphology_supplement_links=morphology_supplement_links,
+                default_cite_authors=default_cite_authors,
             )
             if finalized:
                 records.append(finalized)
@@ -1401,6 +1415,7 @@ def extract_records(
                         images_public_prefix=images_public_prefix,
                         record_index_fallback=len(records) + 1,
                         morphology_supplement_links=morphology_supplement_links,
+                        default_cite_authors=default_cite_authors,
                     )
                     if finalized:
                         records.append(finalized)
@@ -1438,6 +1453,7 @@ def extract_records(
                     images_public_prefix=images_public_prefix,
                     record_index_fallback=len(records) + 1,
                     morphology_supplement_links=morphology_supplement_links,
+                    default_cite_authors=default_cite_authors,
                 )
                 if finalized:
                     records.append(finalized)
@@ -1470,6 +1486,7 @@ def extract_records(
         images_public_prefix=images_public_prefix,
         record_index_fallback=len(records) + 1,
         morphology_supplement_links=morphology_supplement_links,
+        default_cite_authors=default_cite_authors,
     )
     if finalized:
         records.append(finalized)

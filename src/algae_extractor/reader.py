@@ -13,6 +13,7 @@ from docx.oxml.table import CT_Tbl
 from docx.oxml.text.paragraph import CT_P
 from docx.table import Table
 from docx.text.paragraph import Paragraph
+from docx.text.run import Run
 from PIL import Image, ImageDraw, ImageFont
 
 logger = logging.getLogger(__name__)
@@ -167,9 +168,18 @@ def unmap_script_glyphs(text: str) -> str:
     return "".join(_SUPERSCRIPT_UNMAP.get(c, _SUBSCRIPT_UNMAP.get(c, c)) for c in text)
 
 
+def _paragraph_runs(paragraph: Paragraph):
+    """Runs in document order, including those nested in hyperlinks (`paragraph.runs` skips them)."""
+    for item in paragraph.iter_inner_content():
+        if isinstance(item, Run):
+            yield item
+        else:
+            yield from item.runs
+
+
 def _paragraph_to_plain_and_styles(paragraph: Paragraph) -> tuple[str, list[int]] | None:
     chars: list[tuple[str, int]] = []
-    for run in paragraph.runs:
+    for run in _paragraph_runs(paragraph):
         bold = bool(getattr(run, "bold", False))
         italic = bool(getattr(run, "italic", False))
         is_superscript = bool(getattr(run.font, "superscript", None))
@@ -795,7 +805,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
         buf_chars: list[tuple[str, int]] = []
         para_style = getattr(paragraph.style, "name", "") if paragraph.style else ""
 
-        for run in paragraph.runs:
+        for run in _paragraph_runs(paragraph):
             bold = bool(getattr(run, "bold", False))
             italic = bool(getattr(run, "italic", False))
             is_symbol = _run_font_is_symbol(run)

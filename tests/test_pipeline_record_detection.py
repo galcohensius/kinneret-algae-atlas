@@ -107,5 +107,30 @@ class TestFinalizeContentLessRecord(unittest.TestCase):
         self.assertIsNotNone(_finalize_record(record))
 
 
+class TestCiteAuthors(unittest.TestCase):
+    DEFAULT = ["Tamar Zohary", "Alla Alster"]
+
+    def _finalize(self, authors: str):
+        record = _new_record(source_file="Koinonema.docx")
+        record["scientific_name"] = "Koinonema sp. Buch, Martins & Branco 2017"
+        _append_section_line(record, "phylum", "Cyanobacteriophyta")
+        _append_section_line(
+            record,
+            "cite_this_record",
+            f"{authors}. [Date when Item was last updated]. Electronic publication.",
+        )
+        return _finalize_record(record, default_cite_authors=self.DEFAULT)
+
+    def test_keeps_authors_that_differ_from_the_default(self) -> None:
+        finalized = self._finalize("Ruth Kaplan-Levy, Emily Ben-Or, Alla Alster, Tamar Zohary")
+        self.assertEqual(
+            finalized.metadata["record_authors"],
+            ["Ruth Kaplan-Levy", "Emily Ben-Or", "Alla Alster", "Tamar Zohary"],
+        )
+
+    def test_default_authors_are_not_recorded(self) -> None:
+        self.assertNotIn("record_authors", self._finalize("Tamar Zohary, Alla Alster").metadata)
+
+
 if __name__ == "__main__":
     unittest.main()

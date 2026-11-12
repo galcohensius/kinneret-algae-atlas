@@ -20,6 +20,13 @@ describe("citation bundle", () => {
     expect(citation).toContain("https://kinneret-algae-atlas.org/");
   });
 
+  it("cites a record's own authors when it has them, the atlas authors otherwise", () => {
+    expect(buildRecordCitation("2026-06-10")).toMatch(/^Dr\. Tamar Zohary, Dr\. Alla Alster\. /);
+    expect(buildRecordCitation("2026-06-10", ["Ruth Kaplan-Levy", "Tamar Zohary"])).toMatch(
+      /^Ruth Kaplan-Levy, Tamar Zohary\. 10 June 2026\. /
+    );
+  });
+
   it("returns both citation layers in one bundle", () => {
     const bundle = buildCitationBundle("2026-06-10");
     expect(bundle.recordCitation).toContain("10 June 2026");

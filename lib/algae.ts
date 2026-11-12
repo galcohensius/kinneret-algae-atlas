@@ -26,7 +26,9 @@ const rawAlgaeRecordSchema = z.object({
   sections: z.record(z.string(), z.string()),
   sections_rich: z.record(z.string(), z.array(richSegmentSchema)).optional().default({}),
   // record_updated drives "recently updated", sitemap lastmod and the citation date.
-  metadata: z.object({ record_updated: z.iso.date() }).catchall(z.unknown()),
+  metadata: z
+    .object({ record_updated: z.iso.date(), record_authors: z.array(z.string()).min(1).optional() })
+    .catchall(z.unknown()),
 });
 
 const rawAlgaeArraySchema = z.array(rawAlgaeRecordSchema);
@@ -169,7 +171,8 @@ export function normalizeAlgaeRecords(input: RawAlgaeRecord[]): AlgaeRecord[] {
         ])
       ),
       metadata: raw.metadata,
-      recordUpdated
+      recordUpdated,
+      ...(raw.metadata.record_authors ? { recordAuthors: raw.metadata.record_authors } : {}),
     };
   });
 }

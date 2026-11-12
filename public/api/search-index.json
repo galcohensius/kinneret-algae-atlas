@@ -1,5 +1,5 @@
 {
-  "count": 44,
+  "count": 45,
   "entries": [
     {
       "slug": "aulacoseira-granulata",
@@ -19,7 +19,7 @@
     },
     {
       "slug": "chlamydomonas-sp",
-      "searchHaystack": "chlamydomonas sp. ehrenberg 1833 chlamydomonas sp . ehrenberg 1833 chlorophyta green algae"
+      "searchHaystack": "chlamydomonas sp. ehrenberg 1833 chlamydomonas sp. ehrenberg 1833 chlorophyta green algae"
     },
     {
       "slug": "eudorina-elegans",
@@ -43,7 +43,7 @@
     },
     {
       "slug": "aphanocapsa-sp",
-      "searchHaystack": "aphanocapsa sp. nägeli 1849 aphanocapsa sp . nägeli 1849 cyanobacteriophyta blue-greens"
+      "searchHaystack": "aphanocapsa sp. nägeli 1849 aphanocapsa sp. nägeli 1849 cyanobacteriophyta blue-greens"
     },
     {
       "slug": "aphanothece-stagnina",
@@ -67,11 +67,15 @@
     },
     {
       "slug": "gloeocapsa-sp",
-      "searchHaystack": "gloeocapsa sp. 1948 kützing 1843 gloeocapsa sp . 1948 kützing 1843 cyanobacteriophyta blue-greens"
+      "searchHaystack": "gloeocapsa sp. 1948 kützing 1843 gloeocapsa sp. 1948 kützing 1843 cyanobacteriophyta blue-greens"
     },
     {
       "slug": "gloeotrichia-pisum",
       "searchHaystack": "gloeotrichia pisum thuret ex bornet & flahault 1886 gloeotrichia pisum thuret ex bornet & flahault 1886 cyanobacteriophyta blue-greens"
+    },
+    {
+      "slug": "koinonema-sp",
+      "searchHaystack": "koinonema sp. buch, martins & branco 2017 koinonema sp. buch, martins & branco 2017 cyanobacteriophyta blue-greens"
     },
     {
       "slug": "merismopedia",

@@ -71,10 +71,10 @@ def _format_long_date(iso_date: str | None) -> str:
     return f"{int(d)} {months[int(m) - 1]} {y}"
 
 
-def _record_citation(record_updated: str | None) -> str:
+def _record_citation(record_updated: str | None, authors: list[str] | None = None) -> str:
     long_date = _format_long_date(record_updated)
     return (
-        f"{CANONICAL_AUTHORS}. {long_date}. Electronic publication. "
+        f"{', '.join(authors) if authors else CANONICAL_AUTHORS}. {long_date}. Electronic publication. "
         f"{CANONICAL_PUBLISHER}. {ATLAS_CITE_URL}"
     )
 
@@ -233,7 +233,9 @@ def _species_block(record: dict[str, Any], slug: str) -> str:
     if ecology:
         lines.append(f"- Ecology (compact): {_compact_text(ecology, 240)}")
 
-    lines.append(f"- Per-record citation: {_record_citation(updated)}")
+    lines.append(
+        f"- Per-record citation: {_record_citation(updated, metadata.get('record_authors'))}"
+    )
     lines.append(f"- Atlas attribution: {_atlas_attribution()}")
     lines.append(f"- Record updated (source extraction): {updated or 'Unknown'}")
     source_file = metadata.get("source_file")
@@ -291,7 +293,7 @@ def _build_species_index_item(record: dict[str, Any], slug: str) -> dict[str, An
         },
         "record_updated": updated,
         "citation": {
-            "per_record": _record_citation(updated),
+            "per_record": _record_citation(updated, metadata.get("record_authors")),
             "atlas_attribution": _atlas_attribution(),
         },
     }

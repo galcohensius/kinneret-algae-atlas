@@ -1,0 +1,33 @@
+{
+  "slug": "koinonema-sp",
+  "scientific_name": "Koinonema sp. Buch, Martins & Branco 2017",
+  "canonical_url": "https://kinneret-algae-atlas.org/algae/koinonema-sp/",
+  "taxonomy": {
+    "phylum": "Cyanobacteriophyta",
+    "class": "Cyanophyceae",
+    "order": "Oscillatoriales"
+  },
+  "record_updated": "2026-11-10",
+  "citation": {
+    "per_record": "Ruth Kaplan-Levy, Emily Ben-Or, Alla Alster, Tamar Zohary. 10 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
+  },
+  "key_fields": {
+    "organization": "filamentous",
+    "cell_shape": "cylinder",
+    "colony_shape": "macroscopic mats or floating chunks",
+    "cell_diameter_d": "9.2 – 15.2 μm, average: 12.2 μm (N=250).",
+    "cell_length_l": "2.9 – 8.6 μm, average: 5.75 μm (N=250).",
+    "biovolume_per_cell": "~700 μm³.",
+    "biovolume_equation": "Cylinder, V = L π (D/2)².",
+    "filament_length": "35 – 410 (3900) μm",
+    "cells_per_filament": "not determined",
+    "colony_diameter": "several mm to tens of cm"
+  },
+  "narrative": {
+    "morphology": "This filamentous cyanobacterium (Plate 1) forms macroscopic benthic mats covering stones and fine sediments in the shallow waters, of up to ~1 m depth (Plate 2, 3). At a later life stage pieces of the mat float to form floating aggregates (Plate 4). Microscopic examination shows free, straight, isopolar, unbranched filaments with a blue-green coloration and no mucilaginous sheath (Plate 1). Filament lengths ranged from 35 to 410 µm, with a mean length of 170 µm. The terminal cell was rounded, without a calyptra (cap-like structure), and the filaments occasionally exhibited granulation. Cells along the filaments were uniform in appearance, wider than long, with mean dimensions of ~ 12 µm diameter and 5 µm long. No cellular differentiation was observed, a characteristic feature of the order Oscillatoriales. Gliding ability is typical. Based on these characteristics, the cyanobacterium was initially classified as Phormidium sp., but molecular tools confirmed it belonged to the genus Koinonema, and is most likely a new species, to be named Koinonema galileica Kaplan-Levy et al.",
+    "ecology": "Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new sustrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from extensive photosynthesis cause peeling off and detachment of clumps from the mat, those float and aggregate at the surface (Plate 4), then die off, or settle on a new substrate to start a new accrual cycle - as detailed by Wood et al. 2015.\nPhysiological feature : The species was isolated into lab cultures and several strains of it are maintained at the Israel National Culture Collection of Algae (strains C2024, C2035, C2041; Koinonema sp. | INCCA | Israel National Culture Collection of Algae. Trichomes grown in liquid medium glide on the sides of the growth flask to form circular formations, confirming the gliding ability of this cyanobacterium. Molecular analyses confirmed that the isolates lacked genes for the biosynthesis of the cyanotoxins microcystins, cylindrospermopsins and anatoxin A. Further confirmation to the lack of toxicity was that the toxins were not found in water samples containing Koinonema sp. mats.",
+    "environmental_conditions": "",
+    "further_reading": "Buch B, Martins MD, Branco LHZ. 2017. A widespread cyanobacterium supported by polyphasic approach: proposition of Koinonema pervagatumgen. & sp. nov. (Oscillatoriales). Journal of Phycology 53(5): 1097-1105.\nWood S, Hawes I, McBride G, Truman P, Dietrich D. 2015. Advice to inform the development of a benthic cyanobacteria attribute. Cawthron Report no. 2752."
+  }
+}

@@ -5,9 +5,13 @@ import { buildRecordCitation } from "../../lib/cite-this-record";
 
 type CiteThisRecordBlockProps = {
   recordUpdatedIso: string | null;
+  authors?: readonly string[];
 };
 
-export default function CiteThisRecordBlock({ recordUpdatedIso }: CiteThisRecordBlockProps) {
+export default function CiteThisRecordBlock({
+  recordUpdatedIso,
+  authors,
+}: CiteThisRecordBlockProps) {
   const [searchedOn, setSearchedOn] = useState<string | null>(null);
 
   useEffect(() => {
@@ -20,7 +24,7 @@ export default function CiteThisRecordBlock({ recordUpdatedIso }: CiteThisRecord
     );
   }, []);
 
-  const recordCitation = buildRecordCitation(recordUpdatedIso);
+  const recordCitation = buildRecordCitation(recordUpdatedIso, authors);
 
   return (
     <section className="cite-this-record" aria-label="How to cite this record">

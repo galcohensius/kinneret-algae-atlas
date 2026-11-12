@@ -32,6 +32,8 @@ export type AlgaeRecord = {
   metadata: Record<string, unknown>;
   /** ISO YYYY-MM-DD: modified date of the record's source Word file (see metadata.record_updated). */
   recordUpdated: string | null;
+  /** Citation authors from the record's Word file, when they differ from the atlas authors. */
+  recordAuthors?: string[];
 };
 
 /** Slim home-index card row (no search text — loaded on demand when the user focuses search). */

@@ -2,8 +2,9 @@
  * Client-safe parsing of full taxon header lines (as stored in JSON `scientific_name`).
  */
 
+// "sp." / "spp." keep their dot inside the taxon, so it is not stranded at the start of the authority.
 const BINOMIAL_RE =
-  /^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+\s+[a-z][a-zA-Z-]+(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)/;
+  /^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+\s+(?:spp?\.|[a-z][a-zA-Z-]+)(?:\s+(?:subsp\.|var\.|f\.)\s+[a-z][a-zA-Z-]+)?)/;
 
 const GENUS_RE = /^(?:\d+\.?\s*)?([A-Z][a-zA-Z-]+)\b/;
 

@@ -248,7 +248,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   );
   const hasQuickFacts = QUICK_FACT_BODY_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
   const previousNamePlain = sections.previous_name_used?.trim() ?? "";
-  const citation = buildCitationBundle(record.recordUpdated);
+  const citation = buildCitationBundle(record.recordUpdated, record.recordAuthors);
   const speciesJsonLd = {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
@@ -405,7 +405,10 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
           />
         ) : null}
 
-        <CiteThisRecordBlock recordUpdatedIso={record.recordUpdated} />
+        <CiteThisRecordBlock
+          recordUpdatedIso={record.recordUpdated}
+          authors={record.recordAuthors}
+        />
 
         {sections.further_reading?.trim() ? (
           <section
