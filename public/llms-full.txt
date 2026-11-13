@@ -573,10 +573,10 @@ Species count: 45
 - Filament length: 35 – 410 (3900) μm
 - Cells per filament: not determined
 - Colony diameter: several mm to tens of cm
-- Ecology (compact): Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new sustrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from ex…
-- Per-record citation: Ruth Kaplan-Levy, Emily Ben-Or, Alla Alster, Tamar Zohary. 10 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Ecology (compact): Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new substrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from e…
+- Per-record citation: Ruth Kaplan-Levy, Emily Ben-Or, Alla Alster, Tamar Zohary. 13 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-11-10
+- Record updated (source extraction): 2026-11-13
 - Source file: Koinonema 10-11-2026.docx
 
 ## Species: Merismopedia Meyen 1839

@@ -17469,8 +17469,9 @@
       "colony_diameter": "several mm to tens of cm",
       "morphological_features": "This filamentous cyanobacterium (Plate 1) forms macroscopic benthic mats covering stones and fine sediments in the shallow waters, of up to ~1 m depth (Plate 2, 3). At a later life stage pieces of the mat float to form floating aggregates (Plate 4). Microscopic examination shows free, straight, isopolar, unbranched filaments with a blue-green coloration and no mucilaginous sheath (Plate 1). Filament lengths ranged from 35 to 410 µm, with a mean length of 170 µm. The terminal cell was rounded, without a calyptra (cap-like structure), and the filaments occasionally exhibited granulation. Cells along the filaments were uniform in appearance, wider than long, with mean dimensions of ~ 12 µm diameter and 5 µm long. No cellular differentiation was observed, a characteristic feature of the order Oscillatoriales. Gliding ability is typical. Based on these characteristics, the cyanobacterium was initially classified as Phormidium sp., but molecular tools confirmed it belonged to the genus Koinonema, and is most likely a new species, to be named Koinonema galileica Kaplan-Levy et al.",
       "distinctive_attributes": "Simple filaments of no special characters forming macroscopic mats on the bottom sediments in shallow water. Later in development clumps detach from the mats and float.",
-      "ecology": "Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new sustrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from extensive photosynthesis cause peeling off and detachment of clumps from the mat, those float and aggregate at the surface (Plate 4), then die off, or settle on a new substrate to start a new accrual cycle - as detailed by Wood et al. 2015.\nPhysiological feature : The species was isolated into lab cultures and several strains of it are maintained at the Israel National Culture Collection of Algae (strains C2024, C2035, C2041; Koinonema sp. | INCCA | Israel National Culture Collection of Algae. Trichomes grown in liquid medium glide on the sides of the growth flask to form circular formations, confirming the gliding ability of this cyanobacterium. Molecular analyses confirmed that the isolates lacked genes for the biosynthesis of the cyanotoxins microcystins, cylindrospermopsins and anatoxin A. Further confirmation to the lack of toxicity was that the toxins were not found in water samples containing Koinonema sp. mats.",
-      "further_reading": "Buch B, Martins MD, Branco LHZ. 2017. A widespread cyanobacterium supported by polyphasic approach: proposition of Koinonema pervagatumgen. & sp. nov. (Oscillatoriales). Journal of Phycology 53(5): 1097-1105.\nWood S, Hawes I, McBride G, Truman P, Dietrich D. 2015. Advice to inform the development of a benthic cyanobacteria attribute. Cawthron Report no. 2752."
+      "ecology": "Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new substrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from extensive photosynthesis cause peeling off and detachment of clumps from the mat, those float and aggregate at the surface (Plate 4), then die off, or settle on a new substrate to start a new accrual cycle - as detailed by Wood et al. 2015.",
+      "physiological_features": "The species was isolated into lab cultures and several strains of it are maintained at the Israel National Culture Collection of Algae (Koinonema sp. strains C2024, C2035, C2041; INCCA - Israel National Culture Collection of Algae). Trichomes grown in liquid medium glide on the sides of the growth flask to form circular formations, confirming the gliding ability of this cyanobacterium. Molecular analyses confirmed that the isolates lacked genes for the biosynthesis of the cyanotoxins microcystins, cylindrospermopsins and anatoxin A. Further confirmation to the lack of toxicity was that the toxins were not found in water samples containing Koinonema sp. mats.",
+      "further_reading": "Buch B, Martins MD, Branco LHZ. 2017. A widespread cyanobacterium supported by polyphasic approach: proposition of Koinonema pervagatum gen. & sp. nov. (Oscillatoriales). Journal of Phycology 53(5): 1097-1105.\nWood S, Hawes I, McBride G, Truman P, Dietrich D. 2015. Advice to inform the development of a benthic cyanobacteria attribute. Cawthron Report no. 2752."
     },
     "sections_rich": {
       "phylum": [
@@ -17666,27 +17667,14 @@
           "bold": false
         },
         {
-          "text": " sp. (Plate 1) attach onto new sustrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from extensive photosynthesis cause peeling off and detachment of clumps from the mat, those float and aggregate at the surface (Plate 4), then die off, or settle on a new substrate to start a new accrual cycle - as detailed by Wood et al. 2015.\n",
+          "text": " sp. (Plate 1) attach onto new substrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from extensive photosynthesis cause peeling off and detachment of clumps from the mat, those float and aggregate at the surface (Plate 4), then die off, or settle on a new substrate to start a new accrual cycle - as detailed by Wood et al. 2015.",
           "italic": false,
           "bold": false
-        },
+        }
+      ],
+      "physiological_features": [
         {
-          "text": "Physiological",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " ",
-          "italic": false,
-          "bold": false
-        },
-        {
-          "text": "feature",
-          "italic": false,
-          "bold": true
-        },
-        {
-          "text": " : The species was isolated into lab cultures and several strains of it are maintained at the Israel National Culture Collection of Algae (strains C2024, C2035, C2041; Koinonema sp. | INCCA | Israel National Culture Collection of Algae. Trichomes grown in liquid medium glide on the sides of the growth flask to form circular formations, confirming the gliding ability of this cyanobacterium. Molecular analyses confirmed that the isolates lacked genes for the biosynthesis of the cyanotoxins microcystins, cylindrospermopsins and anatoxin A. Further confirmation to the lack of toxicity was that the toxins were not found in water samples containing ",
+          "text": "The species was isolated into lab cultures and several strains of it are maintained at the Israel National Culture Collection of Algae (Koinonema sp. strains C2024, C2035, C2041; INCCA - Israel National Culture Collection of Algae). Trichomes grown in liquid medium glide on the sides of the growth flask to form circular formations, confirming the gliding ability of this cyanobacterium. Molecular analyses confirmed that the isolates lacked genes for the biosynthesis of the cyanotoxins microcystins, cylindrospermopsins and anatoxin A. Further confirmation to the lack of toxicity was that the toxins were not found in water samples containing ",
           "italic": false,
           "bold": false
         },
@@ -17718,7 +17706,17 @@
           "bold": false
         },
         {
-          "text": "pervagatumgen",
+          "text": "pervagatum",
+          "italic": true,
+          "bold": false
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "gen",
           "italic": true,
           "bold": false
         },
@@ -17731,7 +17729,7 @@
     },
     "metadata": {
       "source_file": "Koinonema 10-11-2026.docx",
-      "record_updated": "2026-11-10",
+      "record_updated": "2026-11-13",
       "record_authors": [
         "Ruth Kaplan-Levy",
         "Emily Ben-Or",
