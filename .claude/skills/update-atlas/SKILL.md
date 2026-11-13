@@ -1,6 +1,6 @@
 ---
 name: update-atlas
-description: Use when the user says mom sent new Word files for the Kinneret Algae Atlas and they've copied them into data/raw/. Runs the Word-to-site pipeline, commits, previews locally, waits for the user to push, verifies the deploy, and drafts the reply email to mom.
+description: Use when the user says mom sent new Word files for the Kinneret Algae Atlas and they've copied them into data/raw/. Runs the Word-to-site pipeline, commits, previews locally, waits for the user to push, verifies the deploy, drafts the reply email to mom, and sends it once the user approves.
 ---
 
 # Update the atlas from new Word files
@@ -16,4 +16,5 @@ Trigger: user has copied new/replacement `.docx` files into `data/raw/` (from mo
 7. **Commit locally** (file list in `docs/MAINTENANCE.md` step 10). Do not push.
 8. **Hand off:** tell the user what's committed and ask them to push — pushing is a production deploy of kinneret-algae-atlas.org (see `kinneret-atlas-deploy` memory).
 9. **After they say it's pushed:** `gh run list --workflow deploy-pages.yml --limit 3` to confirm the deploy succeeded, then spot-check the live site for the new/changed content.
-10. **Draft the reply to mom** (draft only — never send). No greeting, no "thanks" — this is a favor to her, not the other way round. Structure: bullet list of what was added/updated, then "Site's already live with these changes.", then any source issues from step 6 last, phrased as a request to fix and resend — never offered as something we'll patch.
+10. **Draft the reply to mom, then send it once the user approves the draft.** No greeting, no "thanks" — this is a favor to her, not the other way round. Structure: bullet list of what was added/updated, then "Site's already live with these changes.", then any source issues from step 6 last, phrased as a request to fix and resend — never offered as something we'll patch.
+    Show the draft in chat first. On the user's go-ahead, send it from their Gmail in Chrome (`claude-in-chrome`): reply in the thread of mom's email that delivered the files, so her address comes from that thread; a message not tied to one update (e.g. a full proofread list) goes as a new email to the same address. Put the text on the clipboard with `pbcopy` right before pasting, check recipient, subject and body in the compose window, send, and confirm Gmail's "Message sent". Never send without that go-ahead, and never to anyone else.
