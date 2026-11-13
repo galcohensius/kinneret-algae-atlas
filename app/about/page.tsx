@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { getAbout } from "../../lib/about-server";
+import { getAllAlgae } from "../../lib/algae";
 import {
   ALLA_ALSTER_PROFILE_URL,
   GAL_COHENSIUS_PROFILE_URL,
   TAMAR_ZOHARY_PROFILE_URL,
 } from "../../lib/collaborator-profile-links";
 import { fixScientificTypography } from "../../lib/scientific-text";
+import CiteThisRecordBlock from "../components/CiteThisRecordBlock";
 import StudyAreaBlock from "../components/StudyAreaBlock";
 import StudyAreaMapFigure from "../components/StudyAreaMapFigure";
 import { buildStudyAreaJsonLd } from "../../lib/study-area";
@@ -34,6 +36,11 @@ const COLLABORATOR_PROFILE_URL: Record<string, string> = {
 
 export default async function AboutPage() {
   const about = await getAbout();
+  const atlasUpdatedIso =
+    (await getAllAlgae())
+      .flatMap((record) => record.recordUpdated ?? [])
+      .sort()
+      .at(-1) ?? null;
   const aboutJsonLd = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -128,6 +135,11 @@ export default async function AboutPage() {
             </div>
           </section>
         ) : null}
+
+        <CiteThisRecordBlock
+          recordUpdatedIso={atlasUpdatedIso}
+          label="Cite this website as:"
+        />
       </article>
     </main>
   );
