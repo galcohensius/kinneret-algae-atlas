@@ -177,6 +177,59 @@ def _paragraph_runs(paragraph: Paragraph):
             yield from item.runs
 
 
+_FIELD_HYPERLINK_RE = re.compile(r'^\s*HYPERLINK\s+"(https?://[^"]+)"')
+
+
+def paragraph_hyperlinks(paragraph: Paragraph) -> list[dict[str, str]]:
+    """External (http/https) links in a paragraph as {text, url, before}.
+
+    Word stores a link either as <w:hyperlink r:id=...> or as a HYPERLINK field code
+    whose display runs sit between the "separate" and "end" field markers. `before` is
+    the paragraph text preceding the link, used to tell repeated link texts apart.
+    """
+    links: list[dict[str, str]] = []
+    seen: list[str] = []
+    field_instr: str | None = None
+    field_display_start: int | None = None
+
+    def add(text: str, url: str, before: str) -> None:
+        text = normalize_whitespace(text)
+        if text:
+            links.append({"text": text, "url": url, "before": normalize_whitespace(before)})
+
+    for child in paragraph._p:
+        if child.tag == qn("w:hyperlink"):
+            text = "".join(t.text or "" for t in child.iter(qn("w:t")))
+            rel = paragraph.part.rels.get(child.get(qn("r:id")))
+            if rel is not None and rel.is_external and rel.target_ref.startswith("http"):
+                add(text, rel.target_ref, "".join(seen))
+            seen.append(text)
+            continue
+        if child.tag != qn("w:r"):
+            continue
+        for el in child:
+            if el.tag == qn("w:fldChar"):
+                kind = el.get(qn("w:fldCharType"))
+                if kind == "begin":
+                    field_instr, field_display_start = "", None
+                elif kind == "separate":
+                    field_display_start = len(seen)
+                elif kind == "end":
+                    match = _FIELD_HYPERLINK_RE.match(field_instr or "")
+                    if match and field_display_start is not None:
+                        add(
+                            "".join(seen[field_display_start:]),
+                            match.group(1),
+                            "".join(seen[:field_display_start]),
+                        )
+                    field_instr, field_display_start = None, None
+            elif el.tag == qn("w:instrText") and field_instr is not None:
+                field_instr += el.text or ""
+            elif el.tag == qn("w:t"):
+                seen.append(el.text or "")
+    return links
+
+
 def _paragraph_to_plain_and_styles(paragraph: Paragraph) -> tuple[str, list[int]] | None:
     chars: list[tuple[str, int]] = []
     for run in _paragraph_runs(paragraph):
@@ -763,21 +816,28 @@ def _yield_images_from_drawing_element(
 
 
 def _take_paragraph_dict(
-    buf_chars: list[tuple[str, int]], para_style: str
+    buf_chars: list[tuple[str, int]], para_style: str, links: list[dict[str, str]]
 ) -> dict[str, object] | None:
-    """Flush buffered (char, style) pairs into a paragraph block; None when nothing to emit."""
+    """Flush buffered (char, style) pairs into a paragraph block; None when nothing to emit.
+
+    `links` (the Word paragraph's hyperlinks) ride on the first block emitted and are
+    drained, so a paragraph split around an image reports them once.
+    """
     if not buf_chars:
         return None
     plain, styles = _normalize_text_and_styles(buf_chars)
     buf_chars.clear()
     if not plain:
         return None
-    return {
+    block: dict[str, object] = {
         "type": "paragraph",
         "text": plain,
         "char_styles": styles,
         "style": para_style,
+        "links": list(links),
     }
+    links.clear()
+    return block
 
 
 def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool = False):
@@ -804,6 +864,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
         paragraph = block
         buf_chars: list[tuple[str, int]] = []
         para_style = getattr(paragraph.style, "name", "") if paragraph.style else ""
+        links = paragraph_hyperlinks(paragraph)
 
         for run in _paragraph_runs(paragraph):
             bold = bool(getattr(run, "bold", False))
@@ -822,7 +883,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                 tag = el.tag.split("}")[-1]
 
                 if tag == "drawing" or tag == "pict":
-                    sent = _take_paragraph_dict(buf_chars, para_style)
+                    sent = _take_paragraph_dict(buf_chars, para_style, links)
                     if sent is not None:
                         yield sent
                     yield from _yield_images_from_drawing_element(
@@ -842,7 +903,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                             for inner in choice:
                                 inner_tag = inner.tag.split("}")[-1]
                                 if inner_tag in ("drawing", "pict"):
-                                    sent = _take_paragraph_dict(buf_chars, para_style)
+                                    sent = _take_paragraph_dict(buf_chars, para_style, links)
                                     if sent is not None:
                                         yield sent
                                     yield from _yield_images_from_drawing_element(
@@ -860,7 +921,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                                 for inner in fallback:
                                     inner_tag = inner.tag.split("}")[-1]
                                     if inner_tag in ("drawing", "pict"):
-                                        sent = _take_paragraph_dict(buf_chars, para_style)
+                                        sent = _take_paragraph_dict(buf_chars, para_style, links)
                                         if sent is not None:
                                             yield sent
                                         yield from _yield_images_from_drawing_element(
@@ -872,7 +933,7 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                                 break
                 elif tag == "br":
                     br_type = el.get(qn("w:type"))
-                    sent = _take_paragraph_dict(buf_chars, para_style)
+                    sent = _take_paragraph_dict(buf_chars, para_style, links)
                     if sent is not None:
                         yield sent
                     if br_type == "page":
@@ -886,6 +947,6 @@ def iter_docx_content_blocks(docx_path: str | Path, *, use_word_renderer: bool =
                             run_text = _apply_script_map(run_text, _SUBSCRIPT_MAP)
                         buf_chars.extend((ch, style_int) for ch in run_text)
 
-        sent = _take_paragraph_dict(buf_chars, para_style)
+        sent = _take_paragraph_dict(buf_chars, para_style, links)
         if sent is not None:
             yield sent

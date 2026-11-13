@@ -63,7 +63,7 @@ flowchart LR
 
 When `data/raw/` gets an updated `.docx`, run these steps in order (from the repository root).
 
-1. **Add or replace the file** under `data/raw/` (keep a clear filename, e.g. `1 Dinoflagellates YYYY-MM-DD.docx`).
+1. **Add or replace the file** under `data/raw/` (keep a clear filename, e.g. `Dinoflagellates YYYY-MM-DD.docx`).
    - Taxon docs: any `*.docx` that is not a supplement, glossary, or About file.
    - Supplements: `*suppl*.docx` / `*supplement*.docx`
    - Glossary: `*glossary*.docx`
@@ -99,6 +99,10 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
    photos/plates and thumbnails are downscaled and re-encoded as progressive JPEG, while
    charts (`figure-*`) stay PNG so axis text stays crisp. This keeps the shipped image payload
    small for mobile; no manual compression step is needed.
+
+   Web links (http/https) set in Word are carried onto the site for the prose sections
+   listed under `hyperlink_sections` in `src/algae_extractor/default_config.json`. Links in
+   header fields (Phylum, Class, Order, …) and in Further reading are not carried over.
 
    You do **not** need to edit `package.json` or extractor defaults when a Word filename changes — discovery is by glob under `data/raw/`.
 

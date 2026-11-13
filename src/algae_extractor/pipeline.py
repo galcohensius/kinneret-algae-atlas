@@ -62,6 +62,10 @@ def _find_inline_record_split(
     return best
 
 
+# Characters of preceding paragraph text that must also precede a link in a section.
+_LINK_CONTEXT_CHARS = 20
+
+
 def _new_record(source_file: str, record_updated: str | None = None) -> dict[str, Any]:
     metadata: dict[str, Any] = {"source_file": source_file}
     if record_updated:
@@ -70,6 +74,8 @@ def _new_record(source_file: str, record_updated: str | None = None) -> dict[str
         "scientific_name": None,
         "images": [],
         "deferred_images": [],
+        # Word hyperlinks ({text, url, before}) seen in this record's paragraphs.
+        "links": [],
         "image_captions": [],
         "image_captions_rich": [],
         # First image after the taxon header (and any inline previous-name prose) is the
@@ -110,6 +116,7 @@ def _finalize_record(
     images_public_prefix: str = "/algae-images",
     record_index_fallback: int = 1,
     morphology_supplement_links: list[dict[str, Any]] | None = None,
+    hyperlink_sections: list[str] | None = None,
     default_cite_authors: list[str] | None = None,
 ) -> AlgaeRecord | None:
     deferred = record.get("deferred_images") or []
@@ -188,6 +195,9 @@ def _finalize_record(
             record.get("scientific_name"),
             rules,
         )
+
+    for link in record.get("links") or []:
+        _apply_word_hyperlink(sections_rich, hyperlink_sections or [], link)
 
     metadata = dict(record.get("metadata") or {})
     # Source-doc date (from _new_record) wins; today is only a fallback for callers
@@ -868,53 +878,67 @@ def _inject_href_into_rich_segments(
     segments: list[dict[str, Any]],
     link_text: str,
     href: str,
+    start: int | None = None,
 ) -> list[dict[str, Any]]:
     """
-    Merge segments to per-character style, assign ``href`` to characters covered by
-    ``link_text`` (first occurrence), then merge runs again for JSON.
+    Set ``href`` on the characters covered by ``link_text``, splitting segments at the
+    link's edges. The link sits at ``start`` in the joined text, or at the first
+    occurrence when ``start`` is omitted.
     """
     if not segments or not link_text or not href:
         return segments
-
-    expanded: list[dict[str, Any]] = []
-    for seg in segments:
-        t = seg.get("text") or ""
-        if not t:
-            continue
-        italic = bool(seg.get("italic"))
-        bold = bool(seg.get("bold"))
-        seg_href = seg.get("href")
-        for ch in t:
-            row = {"ch": ch, "italic": italic, "bold": bold}
-            if seg_href:
-                row["href"] = seg_href
-            expanded.append(row)
-
-    full = "".join(row["ch"] for row in expanded)
-    start = full.find(link_text)
+    if start is None:
+        start = "".join(seg.get("text") or "" for seg in segments).find(link_text)
     if start < 0:
         return segments
-    for i in range(start, start + len(link_text)):
-        expanded[i]["href"] = href
+    end = start + len(link_text)
 
-    merged: list[dict[str, Any]] = []
-    for row in expanded:
-        ch = row["ch"]
-        italic = row["italic"]
-        bold = row["bold"]
-        row_href = row.get("href")
-        if merged:
-            last = merged[-1]
-            same = last["italic"] == italic and last["bold"] == bold
-            last_href = last.get("href")
-            if same and last_href == row_href:
-                last["text"] += ch
-                continue
-        item: dict[str, Any] = {"text": ch, "italic": italic, "bold": bold}
-        if row_href:
-            item["href"] = row_href
-        merged.append(item)
-    return merged
+    out: list[dict[str, Any]] = []
+    pos = 0
+    for seg in segments:
+        text = seg.get("text") or ""
+        seg_end = pos + len(text)
+        spans = (
+            (pos, min(seg_end, start), False),
+            (max(pos, start), min(seg_end, end), True),
+            (max(pos, end), seg_end, False),
+        )
+        for lo, hi, linked in spans:
+            if lo < hi:
+                piece = {**seg, "text": text[lo - pos : hi - pos]}
+                if linked:
+                    piece["href"] = href
+                out.append(piece)
+        pos = seg_end
+    return out
+
+
+def _apply_word_hyperlink(
+    sections_rich: dict[str, list[dict[str, Any]]],
+    section_names: list[str],
+    link: dict[str, str],
+) -> None:
+    """Attach a Word hyperlink to its text in one of ``section_names``, in place.
+
+    The occurrence must be preceded by the same text as in the Word paragraph, so a
+    link from elsewhere in the record (a header field, a reference) never lands on a
+    matching word in the prose. Anything but exactly one such occurrence is skipped.
+    """
+    link_text, url = link["text"], link["url"]
+    context = link.get("before", "")[-_LINK_CONTEXT_CHARS:]
+    hits: list[tuple[str, int]] = []
+    for name in section_names:
+        full = "".join(seg.get("text") or "" for seg in sections_rich.get(name) or [])
+        for match in re.finditer(re.escape(link_text), full):
+            if " ".join(full[: match.start()].split()).endswith(context):
+                hits.append((name, match.start()))
+    if len(hits) > 1:
+        logger.warning("Hyperlink %r -> %s matches several places; not linked", link_text, url)
+    elif hits:
+        name, start = hits[0]
+        sections_rich[name] = _inject_href_into_rich_segments(
+            sections_rich[name], link_text, url, start
+        )
 
 
 def _apply_morphology_supplement_links(
@@ -1202,6 +1226,7 @@ def extract_records(
     resolved_images_output_dir = Path(images_output_dir) if images_output_dir else None
     expect_image_caption = False
     morphology_supplement_links = config.get("morphology_supplement_links") or []
+    hyperlink_sections = config.get("hyperlink_sections") or []
     default_cite_authors = config.get("default_cite_authors") or []
 
     blocks = list(iter_docx_content_blocks(docx_path, use_word_renderer=use_word_renderer))
@@ -1218,6 +1243,7 @@ def extract_records(
                 images_public_prefix=images_public_prefix,
                 record_index_fallback=len(records) + 1,
                 morphology_supplement_links=morphology_supplement_links,
+                hyperlink_sections=hyperlink_sections,
                 default_cite_authors=default_cite_authors,
             )
             if finalized:
@@ -1298,6 +1324,7 @@ def extract_records(
             continue
 
         text = block["text"]
+        current["links"].extend(block.get("links") or [])
         if _is_word_template_placeholder_header(text):
             # Draft Word files sometimes append a blank species template; ignore it
             # and everything after so chart titles / placeholder fields cannot become
@@ -1374,6 +1401,7 @@ def extract_records(
                 images_public_prefix=images_public_prefix,
                 record_index_fallback=len(records) + 1,
                 morphology_supplement_links=morphology_supplement_links,
+                hyperlink_sections=hyperlink_sections,
                 default_cite_authors=default_cite_authors,
             )
             if finalized:
@@ -1415,6 +1443,7 @@ def extract_records(
                         images_public_prefix=images_public_prefix,
                         record_index_fallback=len(records) + 1,
                         morphology_supplement_links=morphology_supplement_links,
+                        hyperlink_sections=hyperlink_sections,
                         default_cite_authors=default_cite_authors,
                     )
                     if finalized:
@@ -1453,6 +1482,7 @@ def extract_records(
                     images_public_prefix=images_public_prefix,
                     record_index_fallback=len(records) + 1,
                     morphology_supplement_links=morphology_supplement_links,
+                    hyperlink_sections=hyperlink_sections,
                     default_cite_authors=default_cite_authors,
                 )
                 if finalized:
@@ -1486,6 +1516,7 @@ def extract_records(
         images_public_prefix=images_public_prefix,
         record_index_fallback=len(records) + 1,
         morphology_supplement_links=morphology_supplement_links,
+        hyperlink_sections=hyperlink_sections,
         default_cite_authors=default_cite_authors,
     )
     if finalized:

@@ -6,7 +6,7 @@ Usage:
 
     # Or force one/more source files:
     python src/extract_supplements.py \\
-        --input "data/raw/9-Suppl1 cunningtoni vs elpatiewskyi.docx"
+        --input "data/raw/Suppl1 cunningtoni vs elpatiewskyi.docx"
 
 The output file is an array; running for multiple supplements upserts by id
 so each run only replaces the entry matching the current document.
