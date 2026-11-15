@@ -291,10 +291,10 @@ Species count: 45
 - Cell biovolume: 230 - 1000 μm³, median: 470 μm³.
 - Biovolume equation: sphere, V = 4/3 π (D/2)³. A prolate spheroid is probably the more suitable shape for this species but we have simplified our routine cell-size measurements and considered it a sphere.
 - Ecology (compact): Several species of naked dinoflagellates of the genera Gymnodinium and Glenodinium occur in Lake Kinneret, they were never identified to species level. Of those, a small species of Gymnodinium (cell volume ~ 500 μm³) is most common. The da…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Ceratium furcoides (Levander) Langhans 1925
 - Slug: ceratium-furcoides
@@ -307,10 +307,10 @@ Species count: 45
 - Cell length (L): 165-260 μm long (literature values)
 - Cell biovolume: 70,000 μm³ (literature value, we do not routinely measure this species)
 - Ecology (compact): Historically this species was identified as Ceratium hirundinella var. furcoides and counted as C. hirundinella. Therefore, there are no ecological data specific for it.
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Ceratium hirundinella (O.F. Muller) Dujardin 1841
 - Slug: ceratium-hirundinella
@@ -323,10 +323,10 @@ Species count: 45
 - Cell length (L): 155-200 μm (literature values)
 - Cell biovolume: 73,000 μm³ (literature value, we do not routinely measure this species)
 - Ecology (compact): C. hirundinella is the largest single-celled species occurring in the plankton of Lake Kinneret. It is one of the common dinoflagellate species, although usually it appears in low abundance, with mean epilimnetic concentrations of < 10 cel…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Diplopsalis acuta (Apstein) Entz 1906
 - Slug: diplopsalis-acuta
@@ -340,10 +340,10 @@ Species count: 45
 - Cell biovolume: 15,000 – 40,000 μm³, median: 22,000 μm³.
 - Biovolume equation: V, μm³ = (π/12) *D² *(D+h) (= volume of half sphere+cone, see Hillebrand et al. 1999).
 - Ecology (compact): Diplopsalis acuta is one of the regularly occurring dinoflagellates of Lake Kinneret, although it is present in low concentrations, usually < 2 cells mL⁻¹ (Fig. 1). It appears in the plankton from November (onset of destratification) to Ju…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Peridiniopsis borgei Lemmermann 1904
 - Slug: peridiniopsis-borgei
@@ -357,10 +357,10 @@ Species count: 45
 - Cell biovolume: 14,000 – 40,500 μm³, median: 21,300 μm³. Larger cell size in winter, smaller in summer (see Fig. 2b).
 - Biovolume equation: V = 0.9405 D².⁸⁵⁹⁶ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate spheroid).
 - Ecology (compact): Peridiniopsis borgei is one of several subdominant dinoflagellates, common in spring each year (Fig. 1). It reaches peak abundance of several tens of cells per ml in May-June and remains present in the plankton until October (Fig. 2a). The…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Parvodinium cunningtonii (Lemmermann) Pandeirada et al 2022
 - Slug: parvodinium-cunningtonii
@@ -374,10 +374,10 @@ Species count: 45
 - Cell biovolume: 6300 - 17500 μm³, median: 10500 μm³.
 - Biovolume equation: V = 2.099 D².⁶²³
 - Ecology (compact): Parvodinium cunningtonii is one of the species always present in the water column, contributing to total phytoplankton biomass up to 20-30%. The species was less abundant before the mid 1990s, when Peridinium gatunense bloomed every year,…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Peridiniopsis cunningtonii var. quinquecuspidata (Massart) Nygaard 1926
 - Slug: peridiniopsis-cunningtonii-var-quinquecuspidata
@@ -389,10 +389,10 @@ Species count: 45
 - Cell diameter (D): (D): 13 - 18 μm, median: 15.5 μm (N=450)
 - Cell biovolume: 17500 - 4300 μm³, median: 2900 μm³.
 - Biovolume equation: V = (4/3) π D³ (sphere)
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Parvodinium elpatiewskyi (Ostenfeld) Kretschmann et al 2019
 - Slug: parvodinium-elpatiewskyi
@@ -406,10 +406,10 @@ Species count: 45
 - Cell biovolume: 6600 - 17500 μm³, median: 11500 μm³.
 - Biovolume equation: V, μm³ = 1.2514 D².⁷⁹³ (regression eqn. based on >500 measurements of both D and L with V computed for a prolate spheroid).
 - Ecology (compact): Parvodinium elpatiewskyi is one of the common algal species in the Kinneret plankton, present in the water at all times of the year. In the absence of Peridinium gatunense in recent years, Parvodinium elpatiewskyi seems to be more abundant…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Durinskia oculata (Stein) Gert Hansen et Flaim 2007
 - Slug: durinskia-oculata
@@ -422,12 +422,12 @@ Species count: 45
 - Cell biovolume: 2600 - 9500 μm³, median: 5300 μm³.
 - Biovolume equation: V, μm³ = (4/3) π (D/2)³. (sphere equation)
 - Ecology (compact): Durinskia oculata is rare in the pelagic water, it appeared in our samples in 1973-1975, then disappeared for many years, to re-appear for a short time in May 2000 and then again in June 2005. It appears more often in littoral samples. Lit…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
-## Species: Glochidinium penardiforme (Lemmermann) Boltovskoy 2000
+## Species: Glochidinium penardiforme (Lindemann) Boltovskoy 2000
 - Slug: glochidinium-penardiforme
 - Canonical URL: https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme/
 - Taxonomy: phylum=Dinoflagellata; class=Dinophyceae; order=Peridiniales
@@ -439,10 +439,10 @@ Species count: 45
 - Cell biovolume: 3050 - 8200 μm³, median: 5450 μm³.
 - Biovolume equation: V = (4/3)π L (D/2)² (prolate spheroid)
 - Ecology (compact): Glochidinium penardiforme is another relatively rare species in Lake Kinneret. It occurred quite regularly between 1983 and 1997, then disappeared from the plankton for 10 years to re-appear in 2008 (Fig. 1). Its mean water column abundanc…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Naiadinium polonicum (Woloszynska) Carty 2014
 - Slug: naiadinium-polonicum
@@ -456,10 +456,10 @@ Species count: 45
 - Cell biovolume: 7,000-14,000 μm³, median: 10,000 μm³
 - Biovolume equation: V = ((4/3)π L (D/2)²)/2 (half the volume of a prolate spheroid)
 - Ecology (compact): Naiadinium polonicum occurs in the Kinneret plankton but in low numbers, usually < 5 cells/mL⁻¹ (Fig. 1). It is more abundant in shore samples than in pelagic waters. Its peak abundance is in April; it is absent in the water column during…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-07
-- Source file: Dinoflagellates 2026-08-07.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Dinoflagellates 2026-11-15.docx
 
 ## Species: Euglena Ehrenberg 1830
 - Slug: euglena
@@ -573,11 +573,11 @@ Species count: 45
 - Filament length: 35 – 410 (3900) μm
 - Cells per filament: not determined
 - Colony diameter: several mm to tens of cm
-- Ecology (compact): Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new substrates and begin growing, accruing biomass and developing into macroscopic mats that cover extensive areas (Plates 2, 3). Later, air bubbles resulting from e…
-- Per-record citation: Ruth Kaplan-Levy, Emily Ben-Or, Alla Alster, Tamar Zohary. 13 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Ecology (compact): Individual (microscopic) filaments of Koinonema sp. (Plate 1) attach onto new substrates and begin growing, accruing biomass and developing into macroscopic mats that cover large surface areas (Plates 2, 3). Later, air bubbles resulting fr…
+- Per-record citation: Ruth Kaplan-Levy, Emily Ben-Or, Alla Alster, Tamar Zohary. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-11-13
-- Source file: Koinonema 10-11-2026.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Koinonema 15-11-2026.docx
 
 ## Species: Merismopedia Meyen 1839
 - Slug: merismopedia
@@ -610,7 +610,7 @@ Species count: 45
 - Record updated (source extraction): 2026-08-23
 - Source file: Microcystis 2026-08-23.docx
 
-## Species: Microcystis aeruginosa (Wittrock) Kirchner 1898
+## Species: Microcystis aeruginosa (Kützing) Kützing 1898
 - Slug: microcystis-aeruginosa
 - Canonical URL: https://kinneret-algae-atlas.org/algae/microcystis-aeruginosa/
 - Taxonomy: phylum=Cyanobacteriophyta; class=Cyanophyceae; order=Chroococcales
@@ -624,10 +624,10 @@ Species count: 45
 - Colony diameter: 100-1000 μm
 - Cells per colony: 20-10000; median: 300
 - Ecology (compact): The species was not counted prior to 1996, when Analyst 5 began counting, probably because earlier M. aeruginosa and M. flos-aquae were considered as two forma of a single species. Microcystis aeruginosa is less abundant than M. flos-aquae…
-- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 22 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
+- Per-record citation: Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/
 - Atlas attribution: Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research.
-- Record updated (source extraction): 2026-08-22
-- Source file: Microcystis aeruginosa 2026-08-22.docx
+- Record updated (source extraction): 2026-11-15
+- Source file: Microcystis aeruginosa 2026-11-15.docx
 
 ## Species: Microcystis botrys Teiling 1942
 - Slug: microcystis-botrys

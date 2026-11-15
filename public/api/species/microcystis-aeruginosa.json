@@ -1,15 +1,15 @@
 {
   "slug": "microcystis-aeruginosa",
-  "scientific_name": "Microcystis aeruginosa (Wittrock) Kirchner 1898",
+  "scientific_name": "Microcystis aeruginosa (Kützing) Kützing 1898",
   "canonical_url": "https://kinneret-algae-atlas.org/algae/microcystis-aeruginosa/",
   "taxonomy": {
     "phylum": "Cyanobacteriophyta",
     "class": "Cyanophyceae",
     "order": "Chroococcales"
   },
-  "record_updated": "2026-08-22",
+  "record_updated": "2026-11-15",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 22 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {

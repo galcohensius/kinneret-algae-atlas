@@ -1,15 +1,15 @@
 {
   "slug": "glochidinium-penardiforme",
-  "scientific_name": "Glochidinium penardiforme (Lemmermann) Boltovskoy 2000",
+  "scientific_name": "Glochidinium penardiforme (Lindemann) Boltovskoy 2000",
   "canonical_url": "https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme/",
   "taxonomy": {
     "phylum": "Dinoflagellata",
     "class": "Dinophyceae",
     "order": "Peridiniales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-11-15",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
