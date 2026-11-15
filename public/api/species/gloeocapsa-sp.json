@@ -1,15 +1,15 @@
 {
   "slug": "gloeocapsa-sp",
-  "scientific_name": "Gloeocapsa sp. 1948 Kützing 1843",
+  "scientific_name": "Gloeocapsa sp. Kützing 1843",
   "canonical_url": "https://kinneret-algae-atlas.org/algae/gloeocapsa-sp/",
   "taxonomy": {
     "phylum": "Cyanobacteriophyta",
     "class": "Cyanophyceae",
     "order": "Chroococcidiopsidales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-11-15",
   "citation": {
-    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
+    "per_record": "Dr. Tamar Zohary, Dr. Alla Alster. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
