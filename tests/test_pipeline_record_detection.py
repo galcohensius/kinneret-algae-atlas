@@ -108,7 +108,7 @@ class TestFinalizeContentLessRecord(unittest.TestCase):
 
 
 class TestCiteAuthors(unittest.TestCase):
-    DEFAULT = ["Tamar Zohary", "Alla Alster"]
+    DEFAULT = [["Tamar Zohary", "Alla Alster"], ["Zohary T", "Alster A"]]
 
     def _finalize(self, authors: str):
         record = _new_record(source_file="Koinonema.docx")
@@ -130,6 +130,7 @@ class TestCiteAuthors(unittest.TestCase):
 
     def test_default_authors_are_not_recorded(self) -> None:
         self.assertNotIn("record_authors", self._finalize("Tamar Zohary, Alla Alster").metadata)
+        self.assertNotIn("record_authors", self._finalize("Zohary T, Alster A").metadata)
 
 
 if __name__ == "__main__":

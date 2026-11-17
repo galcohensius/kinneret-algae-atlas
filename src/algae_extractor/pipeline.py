@@ -117,7 +117,7 @@ def _finalize_record(
     record_index_fallback: int = 1,
     morphology_supplement_links: list[dict[str, Any]] | None = None,
     hyperlink_sections: list[str] | None = None,
-    default_cite_authors: list[str] | None = None,
+    default_cite_authors: list[list[str]] | None = None,
 ) -> AlgaeRecord | None:
     deferred = record.get("deferred_images") or []
     if deferred and images_output_dir is not None:
@@ -205,13 +205,14 @@ def _finalize_record(
     metadata.setdefault("record_updated", date.today().isoformat())
 
     # "Cite this record as: <authors>. <date>. ..." -- keep the authors only when the
-    # record names someone other than the atlas default, which the site supplies itself.
+    # record names someone other than the atlas default (in any of its written forms),
+    # which the site supplies itself.
     cite_authors = [
         name.strip()
         for name in raw_sections_plain.get("cite_this_record", "").split(". ")[0].split(",")
         if name.strip()
     ]
-    if cite_authors and cite_authors != (default_cite_authors or []):
+    if cite_authors and cite_authors not in (default_cite_authors or []):
         metadata["record_authors"] = cite_authors
 
     return AlgaeRecord(

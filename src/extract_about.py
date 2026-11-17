@@ -12,6 +12,10 @@ from algae_extractor.reader import paragraph_clean_text, source_modified_date
 
 SECTION_HEADINGS = {
     "our vision": "our_vision",
+    "vision": "our_vision",
+    # The site writes the study-area block itself (coordinates, map links).
+    "study area": "study_area",
+    "references cited": "references",
     "how to use this atlas": "how_to_use",
     "our collaborators": "collaborators",
 }
@@ -36,10 +40,19 @@ def _discover_about_input(raw_dir: Path) -> Path | None:
     return candidates[-1] if candidates else None
 
 
+def _is_all_bold(para) -> bool:
+    runs = [run for run in para.runs if run.text.strip()]
+    return bool(runs) and all(run.bold for run in runs)
+
+
 def parse_about_docx(docx_path: Path) -> dict:
     doc = Document(str(docx_path))
     title = "About"
-    sections: dict[str, list[str]] = {"our_vision": [], "how_to_use": []}
+    sections: dict[str, list[str | dict[str, str]]] = {
+        "our_vision": [],
+        "how_to_use": [],
+        "references": [],
+    }
     people: list[dict] = []
     current_section: str | None = None
     current_person: dict | None = None
@@ -54,7 +67,12 @@ def parse_about_docx(docx_path: Path) -> dict:
             title = text
             continue
 
-        section_key = SECTION_HEADINGS.get(lower)
+        # The site builds the "Cite this website as" line itself.
+        if lower.startswith("cite this website as"):
+            current_person = None
+            continue
+
+        section_key = SECTION_HEADINGS.get(lower.rstrip(":"))
         if section_key:
             current_section = section_key
             current_person = None
@@ -92,10 +110,10 @@ def parse_about_docx(docx_path: Path) -> dict:
             current_person["paragraphs"].append(text)
             continue
 
-        if current_section == "our_vision":
-            sections["our_vision"].append(text)
-        elif current_section == "how_to_use":
-            sections["how_to_use"].append(text)
+        if current_section == "how_to_use" and _is_all_bold(para):
+            sections["how_to_use"].append({"heading": text})
+        elif current_section in sections:
+            sections[current_section].append(text)
 
     return {
         "title": title,
@@ -105,6 +123,7 @@ def parse_about_docx(docx_path: Path) -> dict:
             "how_to_use": [
                 p for p in sections["how_to_use"] if p != "[to be written]"
             ],
+            "references": sections["references"],
         },
         "collaborators": people,
         "metadata": {

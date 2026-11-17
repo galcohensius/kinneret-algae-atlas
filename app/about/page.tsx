@@ -94,9 +94,15 @@ export default async function AboutPage() {
               How to use this atlas
             </h2>
             <div className="algae-prose">
-              {about.sections.how_to_use.map((para, i) => (
-                <p key={`how-${i}`}>{fixScientificTypography(para)}</p>
-              ))}
+              {about.sections.how_to_use.map((block, i) =>
+                typeof block === "string" ? (
+                  <p key={`how-${i}`}>{fixScientificTypography(block)}</p>
+                ) : (
+                  <h3 key={`how-${i}`} className="about-subheading">
+                    {block.heading}
+                  </h3>
+                )
+              )}
             </div>
           </section>
         ) : null}
@@ -140,6 +146,19 @@ export default async function AboutPage() {
           recordUpdatedIso={atlasUpdatedIso}
           label="Cite this website as:"
         />
+
+        {about.sections.references.length > 0 ? (
+          <section className="narrative-block further-reading-block" aria-labelledby="references-heading">
+            <h2 id="references-heading" className="section-heading">
+              References cited
+            </h2>
+            <ul className="further-reading-list">
+              {about.sections.references.map((ref, i) => (
+                <li key={`ref-${i}`}>{ref}</li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
       </article>
     </main>
   );

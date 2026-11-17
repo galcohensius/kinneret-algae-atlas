@@ -248,7 +248,11 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
   );
   const hasQuickFacts = QUICK_FACT_BODY_KEYS.some((key) => (sections[key]?.trim() ?? "").length > 0);
   const previousNamePlain = sections.previous_name_used?.trim() ?? "";
-  const citation = buildCitationBundle(record.recordUpdated, record.recordAuthors);
+  const citedRecord = {
+    taxon: record.scientificName,
+    url: absoluteUrl(`/algae/${record.slug}/`),
+  };
+  const citation = buildCitationBundle(record.recordUpdated, record.recordAuthors, citedRecord);
   const speciesJsonLd = {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
@@ -408,6 +412,7 @@ export default async function AlgaeDetailPage({ params }: AlgaeDetailPageProps) 
         <CiteThisRecordBlock
           recordUpdatedIso={record.recordUpdated}
           authors={record.recordAuthors}
+          record={citedRecord}
         />
 
         {sections.further_reading?.trim() ? (

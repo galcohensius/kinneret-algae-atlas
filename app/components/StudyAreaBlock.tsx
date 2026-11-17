@@ -33,9 +33,8 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
       <div className="study-area-details algae-prose">
         <p>
           This atlas documents microalgae from <strong>{formatStudyAreaLakeName()}</strong>, a
-          freshwater lake in the <strong>{STUDY_AREA.stateProvince}</strong>,{" "}
-          <strong>{STUDY_AREA.country}</strong>. The lake lies in the{" "}
-          <strong>{STUDY_AREA.region}</strong>, at approximately{" "}
+          freshwater lake in <strong>Northern {STUDY_AREA.country}</strong>. The lake lies in the{" "}
+          <strong>{STUDY_AREA.region}</strong>, at{" "}
           <strong>{STUDY_AREA.elevationM} m</strong> elevation (below sea level).
         </p>
         <p>

@@ -12,11 +12,13 @@ from typing import Any
 # Run as `python scripts/generate_llms_files.py` from the repo root, so src/ is not on the path.
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from algae_extractor.slugs import taxon_slug  # noqa: E402
+from algae_extractor.slugs import taxon_name_for_slug, taxon_slug  # noqa: E402
 
 ATLAS_URL = "https://kinneret-algae-atlas.org"
 ATLAS_CITE_URL = f"{ATLAS_URL}/"
 CANONICAL_AUTHORS = "Dr. Tamar Zohary, Dr. Alla Alster"
+CITATION_AUTHORS = "Zohary T, Alster A"
+ATLAS_CITE_TITLE = "Atlas of Kinneret microalgae"
 CANONICAL_AFFILIATION = (
     "Kinneret Limnological Institute, Israel Oceanographic and Limnological Research"
 )
@@ -71,12 +73,23 @@ def _format_long_date(iso_date: str | None) -> str:
     return f"{int(d)} {months[int(m) - 1]} {y}"
 
 
-def _record_citation(record_updated: str | None, authors: list[str] | None = None) -> str:
+def _record_citation(
+    record_updated: str | None,
+    authors: list[str] | None = None,
+    record: tuple[str, str] | None = None,
+) -> str:
+    """Mirror of buildRecordCitation in lib/cite-this-record.ts; `record` is (taxon, url)."""
     long_date = _format_long_date(record_updated)
-    cited = ", ".join(authors) if authors else CANONICAL_AUTHORS
+    cited = ", ".join(authors) if authors else CITATION_AUTHORS
+    if record is None:
+        return (
+            f"{cited}. {long_date}. {ATLAS_CITE_TITLE}. Electronic publication. "
+            f"{CANONICAL_PUBLISHER}. {ATLAS_CITE_URL}"
+        )
+    taxon, url = record
     return (
-        f"{cited}. {long_date}. Electronic publication. "
-        f"{CANONICAL_PUBLISHER}. {ATLAS_CITE_URL}"
+        f"{cited}. {taxon}{'' if taxon.endswith('.') else '.'} {long_date}. "
+        f"Electronic publication. {CANONICAL_PUBLISHER}. {url}"
     )
 
 
@@ -235,7 +248,12 @@ def _species_block(record: dict[str, Any], slug: str) -> str:
         lines.append(f"- Ecology (compact): {_compact_text(ecology, 240)}")
 
     lines.append(
-        f"- Per-record citation: {_record_citation(updated, metadata.get('record_authors'))}"
+        "- Per-record citation: "
+        + _record_citation(
+            updated,
+            metadata.get("record_authors"),
+            (taxon_name_for_slug(scientific_name), canonical_url),
+        )
     )
     lines.append(f"- Atlas attribution: {_atlas_attribution()}")
     lines.append(f"- Record updated (source extraction): {updated or 'Unknown'}")
@@ -294,7 +312,14 @@ def _build_species_index_item(record: dict[str, Any], slug: str) -> dict[str, An
         },
         "record_updated": updated,
         "citation": {
-            "per_record": _record_citation(updated, metadata.get("record_authors")),
+            "per_record": _record_citation(
+                updated,
+                metadata.get("record_authors"),
+                (
+                    taxon_name_for_slug(record.get("scientific_name") or ""),
+                    f"{ATLAS_URL}/algae/{slug}/",
+                ),
+            ),
             "atlas_attribution": _atlas_attribution(),
         },
     }
