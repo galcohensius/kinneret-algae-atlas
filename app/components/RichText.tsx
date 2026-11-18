@@ -42,9 +42,10 @@ function renderSegmentContent(
   else if (bold) content = <strong>{text}</strong>;
   else content = <Fragment>{text}</Fragment>;
 
-  if (superscript) return <sup>{content}</sup>;
-  if (subscript) return <sub>{content}</sub>;
-  return content;
+  if (!superscript && !subscript) return content;
+  // A true minus (as in L⁻¹, Cl⁻): correct typography, and no line break after it as after "-".
+  const scripted = renderSegmentContent(text.replace(/-/g, "−"), italic, bold);
+  return superscript ? <sup>{scripted}</sup> : <sub>{scripted}</sub>;
 }
 
 /** Renders text that may contain `\n` as inline content with `<br/>` breaks. */

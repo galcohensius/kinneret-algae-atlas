@@ -47,6 +47,12 @@ body {
   color: var(--text-primary);
 }
 
+/* Never split an exponent or index (L⁻¹, m⁻², CaCO₃) across lines. */
+sup,
+sub {
+  white-space: nowrap;
+}
+
 /* One visible focus ring for every link and control. */
 a:focus-visible,
 button:focus-visible,
