@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { GlossaryEntry, GlossaryPlate } from "../../lib/glossary-types";
 import { publicAssetPath } from "../../lib/public-path";
 import { formatRecordUpdated } from "../../lib/cite-this-record";
@@ -47,6 +47,31 @@ export default function GlossaryPageClient({
   plates,
 }: GlossaryPageClientProps) {
   const [query, setQuery] = useState("");
+  const stickyRef = useRef<HTMLDivElement>(null);
+
+  // Pin the search bar right under the site header, whose height changes when it wraps, and
+  // make anchor jumps land below both. Phones leave the bar unpinned (see globals.css).
+  useEffect(() => {
+    const header = document.querySelector<HTMLElement>(".site-header");
+    const bar = stickyRef.current;
+    if (!header || !bar) return;
+    const root = document.documentElement;
+    const sync = () => {
+      const headerHeight = header.offsetHeight;
+      bar.style.top = `${headerHeight}px`;
+      root.style.scrollPaddingTop =
+        getComputedStyle(bar).position === "sticky"
+          ? `${headerHeight + bar.offsetHeight}px`
+          : "";
+    };
+    const observer = new ResizeObserver(sync);
+    observer.observe(header);
+    observer.observe(bar);
+    return () => {
+      observer.disconnect();
+      root.style.scrollPaddingTop = "";
+    };
+  }, []);
 
   const filteredGroups = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -72,31 +97,33 @@ export default function GlossaryPageClient({
         {title} · Last updated {formatRecordUpdated(recordUpdated)} · {totalCount} terms
       </p>
 
-      <div className="glossary-toolbar">
-        <label className="glossary-search-label" htmlFor="glossary-search">
-          Search terms
-        </label>
-        <input
-          id="glossary-search"
-          type="search"
-          className="glossary-search"
-          placeholder="Filter by term or definition…"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          autoComplete="off"
-        />
-        {query.trim() ? (
-          <p className="glossary-search-count muted">{visibleCount} matching</p>
-        ) : null}
-      </div>
+      <div className="glossary-sticky" ref={stickyRef}>
+        <div className="glossary-toolbar">
+          <label className="glossary-search-label" htmlFor="glossary-search">
+            Search terms
+          </label>
+          <input
+            id="glossary-search"
+            type="search"
+            className="glossary-search"
+            placeholder="Filter by term or definition…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            autoComplete="off"
+          />
+          {query.trim() ? (
+            <p className="glossary-search-count muted">{visibleCount} matching</p>
+          ) : null}
+        </div>
 
-      <nav className="glossary-letter-nav" aria-label="Jump to letter">
-        {letters.map((letter) => (
-          <a key={letter} href={`#letter-${letter}`}>
-            {letter}
-          </a>
-        ))}
-      </nav>
+        <nav className="glossary-letter-nav" aria-label="Jump to letter">
+          {letters.map((letter) => (
+            <a key={letter} href={`#letter-${letter}`}>
+              {letter}
+            </a>
+          ))}
+        </nav>
+      </div>
 
       {plates.length > 0 ? (
         <section className="glossary-plates" aria-labelledby="glossary-plates-heading">

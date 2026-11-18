@@ -723,8 +723,19 @@ main.home {
   font-size: 0.9rem;
 }
 
+/* Search and A–Z strip stay pinned under the site header; `top` is set from its height. */
+.glossary-sticky {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  /* Bleed to the card edges (its padding) so entries scrolling underneath are hidden. */
+  margin: 0 -1.5rem 1.5rem;
+  padding: 0.6rem 1.5rem 0;
+  background: var(--card-bg);
+}
+
 .glossary-toolbar {
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 
 .glossary-search-label {
@@ -755,9 +766,25 @@ main.home {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem 0.5rem;
-  margin: 0 0 1.5rem;
-  padding-bottom: 1rem;
+  margin: 0;
+  padding-bottom: 0.6rem;
   border-bottom: 1px solid var(--border);
+}
+
+@media (max-width: 640px) {
+  /* Phones keep the bar in the page flow: pinned, it took a quarter of the screen. */
+  .glossary-sticky {
+    position: static;
+    padding-top: 0;
+  }
+
+  .glossary-toolbar {
+    margin-bottom: 1rem;
+  }
+
+  .glossary-letter-nav {
+    padding-bottom: 1rem;
+  }
 }
 
 .glossary-letter-nav a {
