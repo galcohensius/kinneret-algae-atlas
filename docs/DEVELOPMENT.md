@@ -84,8 +84,5 @@ Pushing to `main` runs `.github/workflows/deploy-pages.yml`, which calls the reu
 
 ## Conventions
 
-Restated from `.cursor/rules/*.mdc`:
+Content rules (Word is the source of truth, no hand edits to processed JSON) and the commit/preview/deploy workflow live in [CLAUDE.md](../CLAUDE.md).
 
-1. **Word is the source of truth.** Never edit files under `data/raw/`. Report source typos or wrong units to the authors instead of patching extracted JSON to hide them.
-2. **Never hand-edit processed JSON.** Fix `src/algae_extractor/`, `src/extract_*.py`, or the `.docx`, then re-run extraction in the same change. Hand edits are only for quick local experiments and must be folded back into the extractor.
-3. **Preview before merge.** A PR with a user-visible change stays draft until the user has seen it running (`npm run dev`, screenshots or a short recording); production updates only after merge to `main`. Extractor-only, test-only, or JSON-only changes need no preview.
