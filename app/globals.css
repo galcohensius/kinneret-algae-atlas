@@ -321,13 +321,15 @@ main.home {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-.home-hero-lead a {
+.home-hero-lead a,
+.home-hero-affiliation a {
   color: inherit;
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
 
-.home-hero-lead a:hover {
+.home-hero-lead a:hover,
+.home-hero-affiliation a:hover {
   color: inherit;
   opacity: 0.92;
 }
@@ -1077,9 +1079,22 @@ main.home {
 
 .algae-list-card-title {
   margin: 0;
+  min-width: 0;
+  overflow-wrap: anywhere;
   font-size: clamp(1.45rem, 1.28rem + 0.55vw, 1.65rem);
   font-weight: 700;
   line-height: 1.18;
+}
+
+@media (max-width: 640px) {
+  .algae-list-card-title {
+    font-size: 1.05rem;
+  }
+
+  .algae-list-card .algae-thumb {
+    width: 72px;
+    height: 72px;
+  }
 }
 
 .algae-list-card-title .algae-taxon {
@@ -1316,6 +1331,17 @@ a:hover {
 .quick-facts-list dd {
   margin: 0;
   line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .quick-facts-list {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .quick-facts-list dd {
+    margin-bottom: 0.75rem;
+  }
 }
 
 .rich-inline-link {
