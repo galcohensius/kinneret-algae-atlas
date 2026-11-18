@@ -9,6 +9,7 @@ from pathlib import Path
 from docx import Document
 
 from algae_extractor.reader import paragraph_clean_text, source_modified_date
+from algae_extractor.rich_text import paragraph_rich_segments
 
 SECTION_HEADINGS = {
     "our vision": "our_vision",
@@ -48,7 +49,8 @@ def _is_all_bold(para) -> bool:
 def parse_about_docx(docx_path: Path) -> dict:
     doc = Document(str(docx_path))
     title = "About"
-    sections: dict[str, list[str | dict[str, str]]] = {
+    # Body paragraphs are rich segments so Word sub/superscripts and italics survive.
+    sections: dict[str, list] = {
         "our_vision": [],
         "how_to_use": [],
         "references": [],
@@ -86,7 +88,9 @@ def parse_about_docx(docx_path: Path) -> dict:
                 continue
             remainder = text.split("]", 1)[-1].strip(" .") if "]" in text else ""
             if remainder:
-                sections["how_to_use"].append(remainder)
+                sections["how_to_use"].append(
+                    [{"text": remainder, "italic": False, "bold": False}]
+                )
             continue
 
         person_key = PEOPLE_HEADINGS.get(lower)
@@ -107,22 +111,22 @@ def parse_about_docx(docx_path: Path) -> dict:
             continue
 
         if current_person is not None:
-            current_person["paragraphs"].append(text)
+            current_person["paragraphs"].append(paragraph_rich_segments(para))
             continue
 
         if current_section == "how_to_use" and _is_all_bold(para):
             sections["how_to_use"].append({"heading": text})
-        elif current_section in sections:
-            sections[current_section].append(text)
+        elif current_section == "references":
+            sections["references"].append(text)
+        elif current_section in sections and text != "[to be written]":
+            sections[current_section].append(paragraph_rich_segments(para))
 
     return {
         "title": title,
         "record_updated": source_modified_date(docx_path),
         "sections": {
             "our_vision": sections["our_vision"],
-            "how_to_use": [
-                p for p in sections["how_to_use"] if p != "[to be written]"
-            ],
+            "how_to_use": sections["how_to_use"],
             "references": sections["references"],
         },
         "collaborators": people,

@@ -7,7 +7,9 @@ from __future__ import annotations
 
 from typing import Any
 
-from .reader import unmap_script_glyphs
+from docx.text.paragraph import Paragraph
+
+from .reader import _paragraph_to_plain_and_styles, unmap_script_glyphs
 
 
 def neutral_char_styles(text: str) -> list[int]:
@@ -50,3 +52,9 @@ def char_styles_to_rich_segments(text: str, char_styles: list[int]) -> list[dict
             cur_style = styles[i]
     segments.append(_make_rich_segment(text[start:], cur_style))
     return segments
+
+
+def paragraph_rich_segments(paragraph: Paragraph) -> list[dict[str, Any]]:
+    """A Word paragraph as rich segments; [] when it has no text."""
+    converted = _paragraph_to_plain_and_styles(paragraph)
+    return char_styles_to_rich_segments(*converted) if converted else []

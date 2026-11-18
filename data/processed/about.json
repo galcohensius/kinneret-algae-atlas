@@ -3,18 +3,207 @@
   "record_updated": "2026-11-17",
   "sections": {
     "our_vision": [
-      "This atlas of the microalgae of Lake Kinneret is based on data, knowledge and experience gained from monitoring the phytoplankton of the lake over several decades, as part of the government-funded Kinneret Monitoring Program initiated in 1969 and ongoing. Lake Kinneret has been and continues to be a strategic source of drinking water for the State of Israel. Monitoring its phytoplankton jointly with physical, chemical and other biological components is crucial for being able to follow short- and long-term trends in ecological processes taking place in the lake, highlight extreme events as they occur, understand lake functioning, and provide decision makers with knowledgeable recommendations for lake management that will ensure high water quality. For detailed information about this monitoring program see Sukenik et al. 2014.",
-      "The phytoplankton data collected for the monitoring program are stored in a database and have been used for a variety of investigations leading to scientific publications. But mostly, the data used were biomass of taxonomic groups (cyanobacteria, diatoms, dinoflagellates etc.) rather than information on individual species. Over the years, only ~ 20-30 of the nearly 200 species of phytoplankton occurring in Lake Kinneret received focused scientific attention. These were mostly species that impact the ecosystem and especially water quality: species that form blooms or possess unique physiological capabilities (e.g. N-fixation, toxin production, scum formation). But the monitoring data for most of the species remains hidden in annual reports and was never published.",
-      "This atlas attempts to address this knowledge gap and present the monitoring data for all the species of microalgae occurring in the lake. It is prepared as a service to the community of those interested in the algae of Lake Kinneret: researchers, students, teachers, nature lovers. For each species it includes hints on how to identify it and tell it apart from similarly looking species in Kinneret water; the best microscope photos we took; its long-term abundance time-series; what time of the year is best to find it; what environmental parameters are correlated with its increased abundance; any additional interesting information we have for it.",
-      "Several parameters are recorded for every species of phytoplankton counted in each sample: its abundance as cells mL⁻¹; its linear dimensions from which the volume per cell is computed, and its biomass – as the product of cells mL⁻¹ x volume cell⁻¹ assuming a specific gravity of 1. For colonial (including filamentous) species we also present data on abundance (colonies mL⁻¹) and colony size (cells per colony)."
+      [
+        {
+          "text": "This atlas of the microalgae of Lake Kinneret is based on data, knowledge and experience gained from monitoring the phytoplankton of the lake over several decades, as part of the government-funded Kinneret Monitoring Program initiated in 1969 and ongoing. Lake Kinneret has been and continues to be a strategic source of drinking water for the State of Israel. Monitoring its phytoplankton jointly with physical, chemical and other biological components is crucial for being able to follow short- and long-term trends in ecological processes taking place in the lake, highlight extreme events as they occur, understand lake functioning, and provide decision makers with knowledgeable recommendations for lake management that will ensure high water quality. For detailed information about this monitoring program see Sukenik et al. 2014.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "The phytoplankton data collected for the monitoring program are stored in a database and have been used for a variety of investigations leading to scientific publications. But mostly, the data used were biomass of taxonomic groups (cyanobacteria, diatoms, dinoflagellates etc.) rather than information on individual species. Over the years, only ~ 20-30 of the nearly 200 species of phytoplankton occurring in Lake Kinneret received focused scientific attention. These were mostly species that impact the ecosystem and especially water quality: species that form blooms or possess unique physiological capabilities (e.g. N-fixation, toxin production, scum formation). But the monitoring data for most of the species remains hidden in annual reports and was never published.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "This atlas attempts to address this knowledge gap and present the monitoring data for all the species of microalgae occurring in the lake. It is prepared as a service to the community of those interested in the algae of Lake Kinneret: researchers, students, teachers, nature lovers. For each species it includes hints on how to identify it and tell it apart from similarly looking species in Kinneret water; the best microscope photos we took; its long-term abundance time-series; what time of the year is best to find it; what environmental parameters are correlated with its increased abundance; any additional interesting information we have for it.",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Several parameters are recorded for every species of phytoplankton counted in each sample: its abundance as cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "; its linear dimensions from which the volume per cell is computed, and its biomass – as the product of cells mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " x volume cell",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " assuming a specific gravity of 1. For colonial (including filamentous) species we also present data on abundance (colonies mL",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-1",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": ") and colony size (cells per colony).",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "how_to_use": [
-      "Species descriptions: these are made using simple English. A glossary assists the reader with the scientific terms used. The descriptions are meant to allow the reader to identify a species in Kinneret samples, with focus on how it differs from similarly looking species that may be mistaken for it.",
+      [
+        {
+          "text": "Species",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "descriptions:",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " these are made using simple English. A glossary assists the reader with the scientific terms used. The descriptions are meant to allow the reader to identify a species in Kinneret samples, with focus on how it differs from similarly looking species that may be mistaken for it.",
+          "italic": false,
+          "bold": false
+        }
+      ],
       {
         "heading": "Kinneret data shown in figures"
       },
-      "Phytoplankton data: samples were collected weekly/fortnightly from 5-10 discrete depths at station A, depth integrated for wet-weight biomass estimates (g m⁻²). Mean epilimnion values of 5 parameters were computed for each species on each sampling date: biomass, cells/mL, colonies/mL, cells/col, cell volume. Microscope counts were made as described by Zohary (2005). From 2005 onwards we employed PlanktoMetrix, a proprietary software for counting phytoplankton and computing biomass of phytoplankton (Zohary et al. 2016).",
-      "Environmental data includes physical, chemical and other biological parameters monitored together with phytoplankton, mostly on the same sampling date, station and depth. In most cases the water samples for chemical and biological determinations were taken from the same bottle from which the samples for phytoplankton determinations were taken. But occasionally it was impossible to sample for chemistry and biology on the same date, in those cases the non-phytoplankton parameters were determined on samples collected at the same site and depth, during the same week, 1-2 days before or after the phytoplankton samples. The physical parameters examined were: TºC = water temperature (mean 0-10 m); thermocline depth, water level, zₘ =mixing depth; zₑᵤ = euphotic zone depth; zSₑcchᵢ =Secchi depth. The chemical parameters examined: pH; alkalinity; turbidity; dissolved oxygen (DO); Cl⁻ = chloride; Ca = calcium; Si = silica; NO₃ = nitrate; NH₄ = ammonium; DON = dissolved organic nitrogen, TDP = total dissolved phosphorus; SO₄ = sulfate; TSS = total suspended solids. Additional biological parameters examined: chlorophyll a; primary production. For detailed information about sampling, equipment used and analytical methods employed see Sukenik et al. 2014."
+      [
+        {
+          "text": "Phytoplankton data: samples were collected weekly/fortnightly from 5-10 discrete depths at station A, depth integrated for wet-weight biomass estimates (g m",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-2",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": "). Mean epilimnion values of 5 parameters were computed for each species on each sampling date: biomass, cells/mL, colonies/mL, cells/col, cell volume. Microscope counts were made as described by Zohary (2005). From 2005 onwards we employed PlanktoMetrix, a proprietary software for counting phytoplankton and computing biomass of phytoplankton (Zohary et al. 2016).",
+          "italic": false,
+          "bold": false
+        }
+      ],
+      [
+        {
+          "text": "Environmental data includes physical, chemical and other biological parameters monitored together with phytoplankton, mostly on the same sampling date, station and depth. In most cases the water samples for chemical and biological determinations were taken from the same bottle from which the samples for phytoplankton determinations were taken. But occasionally it was impossible to sample for chemistry and biology on the same date, in those cases the non-phytoplankton parameters were determined on samples collected at the same site and depth, during the same week, 1-2 days before or after the phytoplankton samples. The physical parameters examined were: TºC = water temperature (mean 0-10 m); thermocline depth, water level, z",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "m",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " =mixing depth; z",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "eu",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " = euphotic zone depth; z",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Secchi",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " =Secchi depth. The chemical parameters examined: pH; alkalinity; turbidity; dissolved oxygen (DO); Cl",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-",
+          "italic": false,
+          "bold": false,
+          "superscript": true
+        },
+        {
+          "text": " = chloride; Ca = calcium; Si = silica; NO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "3",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " = nitrate; NH",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " = ammonium; DON = dissolved organic nitrogen, TDP = total dissolved phosphorus; SO",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "4",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " = sulfate; TSS = total suspended solids. Additional biological parameters examined: chlorophyll a; primary production. For detailed information about sampling, equipment used and analytical methods employed see Sukenik et al. 2014.",
+          "italic": false,
+          "bold": false
+        }
+      ]
     ],
     "references": [
       "Sukenik A, Zohary T, Markel D. 2014. The monitoring program. Chap. 32 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 561-575. Springer, Heidelberg."
@@ -25,8 +214,20 @@
       "id": "tamar_zohary",
       "name": "Tamar Zohary",
       "paragraphs": [
-        "An emeritus senior research scientist at the Kinneret Limnological Institute, Israel Oceanographic and Limnological Research. She has been working there for more than 35 years, during which she also served as the Institute’s director for 10 years. Her research focuses on phytoplankton ecology, and she has been responsible for the monitoring of the Kinneret phytoplankton from 1996 till 2024. It has been her vision for many years to create such an atlas, and now that she has retired, this dream is materializing, with the close assistance of her dedicated and talented research assistant Alla Alster, and her innovative and inspiring son, Gal Cohensius.",
-        "Tamar obtained her BA in Psychology and Biology, MSc in Oceanography at the Hebrew University of Jerusalem, Israel, and her PhD at the University of Natal, South Africa."
+        [
+          {
+            "text": "An emeritus senior research scientist at the Kinneret Limnological Institute, Israel Oceanographic and Limnological Research. She has been working there for more than 35 years, during which she also served as the Institute’s director for 10 years. Her research focuses on phytoplankton ecology, and she has been responsible for the monitoring of the Kinneret phytoplankton from 1996 till 2024. It has been her vision for many years to create such an atlas, and now that she has retired, this dream is materializing, with the close assistance of her dedicated and talented research assistant Alla Alster, and her innovative and inspiring son, Gal Cohensius.",
+            "italic": false,
+            "bold": false
+          }
+        ],
+        [
+          {
+            "text": "Tamar obtained her BA in Psychology and Biology, MSc in Oceanography at the Hebrew University of Jerusalem, Israel, and her PhD at the University of Natal, South Africa.",
+            "italic": false,
+            "bold": false
+          }
+        ]
       ],
       "links": [
         "https://scholar.google.co.il/citations?hl=en&user=hwxUAKsAAAAJ"
@@ -36,8 +237,20 @@
       "id": "alla_alster",
       "name": "Alla Alster",
       "paragraphs": [
-        "An algal taxonomist working as a research assistant at the Kinneret Limnological Institute, Israel Oceanographic and Limnological Research since 2011. She is the analyst conducting the Kinneret phytoplankton counts and measurements since January 2013, has taken nearly all the microscope photos presented in this atlas, and is the authority when it comes to taxonomic ID.",
-        "Alla completed her BSc degree in Biology and MSc in Hydrobiology at the University of Odessa, Ukraine, PhD at Bar Ilan University, Israel, and post-doc training with Prof. Jiri Komarek in the Czech Republic."
+        [
+          {
+            "text": "An algal taxonomist working as a research assistant at the Kinneret Limnological Institute, Israel Oceanographic and Limnological Research since 2011. She is the analyst conducting the Kinneret phytoplankton counts and measurements since January 2013, has taken nearly all the microscope photos presented in this atlas, and is the authority when it comes to taxonomic ID.",
+            "italic": false,
+            "bold": false
+          }
+        ],
+        [
+          {
+            "text": "Alla completed her BSc degree in Biology and MSc in Hydrobiology at the University of Odessa, Ukraine, PhD at Bar Ilan University, Israel, and post-doc training with Prof. Jiri Komarek in the Czech Republic.",
+            "italic": false,
+            "bold": false
+          }
+        ]
       ],
       "links": []
     },
@@ -45,7 +258,13 @@
       "id": "gal_cohensius",
       "name": "Gal Cohensius",
       "paragraphs": [
-        "A data scientist with a PhD in Game Theory and AI from the Technion. He built this atlas as a gift to his mom."
+        [
+          {
+            "text": "A data scientist with a PhD in Game Theory and AI from the Technion. He built this atlas as a gift to his mom.",
+            "italic": false,
+            "bold": false
+          }
+        ]
       ],
       "links": []
     }

@@ -6,8 +6,8 @@ import {
   GAL_COHENSIUS_PROFILE_URL,
   TAMAR_ZOHARY_PROFILE_URL,
 } from "../../lib/collaborator-profile-links";
-import { fixScientificTypography } from "../../lib/scientific-text";
 import CiteThisRecordBlock from "../components/CiteThisRecordBlock";
+import { RichText } from "../components/RichText";
 import StudyAreaBlock from "../components/StudyAreaBlock";
 import StudyAreaMapFigure from "../components/StudyAreaMapFigure";
 import { buildStudyAreaJsonLd } from "../../lib/study-area";
@@ -82,27 +82,10 @@ export default async function AboutPage() {
             <div className="algae-prose about-vision-prose">
               <StudyAreaMapFigure className="about-vision-figure" />
               {about.sections.our_vision.map((para, i) => (
-                <p key={`vision-${i}`}>{fixScientificTypography(para)}</p>
+                <p key={`vision-${i}`}>
+                  <RichText segments={para} />
+                </p>
               ))}
-            </div>
-          </section>
-        ) : null}
-
-        {about.sections.how_to_use.length > 0 ? (
-          <section className="narrative-block" aria-labelledby="how-to-heading">
-            <h2 id="how-to-heading" className="section-heading">
-              How to use this atlas
-            </h2>
-            <div className="algae-prose">
-              {about.sections.how_to_use.map((block, i) =>
-                typeof block === "string" ? (
-                  <p key={`how-${i}`}>{fixScientificTypography(block)}</p>
-                ) : (
-                  <h3 key={`how-${i}`} className="about-subheading">
-                    {block.heading}
-                  </h3>
-                )
-              )}
             </div>
           </section>
         ) : null}
@@ -132,7 +115,9 @@ export default async function AboutPage() {
                     </h3>
                     <div className="algae-prose">
                       {person.paragraphs.map((para, i) => (
-                        <p key={`${person.id}-${i}`}>{fixScientificTypography(para)}</p>
+                        <p key={`${person.id}-${i}`}>
+                          <RichText segments={para} />
+                        </p>
                       ))}
                     </div>
                   </section>
@@ -142,10 +127,26 @@ export default async function AboutPage() {
           </section>
         ) : null}
 
-        <CiteThisRecordBlock
-          recordUpdatedIso={atlasUpdatedIso}
-          label="Cite this website as:"
-        />
+        {about.sections.how_to_use.length > 0 ? (
+          <section className="narrative-block" aria-labelledby="how-to-heading">
+            <h2 id="how-to-heading" className="section-heading">
+              How to use this atlas
+            </h2>
+            <div className="algae-prose">
+              {about.sections.how_to_use.map((block, i) =>
+                Array.isArray(block) ? (
+                  <p key={`how-${i}`}>
+                    <RichText segments={block} />
+                  </p>
+                ) : (
+                  <h3 key={`how-${i}`} className="about-subheading">
+                    {block.heading}
+                  </h3>
+                )
+              )}
+            </div>
+          </section>
+        ) : null}
 
         {about.sections.references.length > 0 ? (
           <section className="narrative-block further-reading-block" aria-labelledby="references-heading">
@@ -159,6 +160,11 @@ export default async function AboutPage() {
             </ul>
           </section>
         ) : null}
+
+        <CiteThisRecordBlock
+          recordUpdatedIso={atlasUpdatedIso}
+          label="Cite this website as:"
+        />
       </article>
     </main>
   );
