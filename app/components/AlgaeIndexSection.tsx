@@ -88,9 +88,23 @@ export default function AlgaeIndexSection({ records, visualSections }: AlgaeInde
         setView("appearance");
       }
     }
+    // On the home page itself a link click may not change the hash (already #visual-index, or
+    // the site title dropping it without a hashchange), so the clicked link decides the view.
+    function openViewFromLinkClick(event: MouseEvent) {
+      const link = (event.target as Element | null)?.closest?.("a[href]");
+      if (!(link instanceof HTMLAnchorElement)) return;
+      const url = new URL(link.href);
+      if (url.origin !== window.location.origin || url.pathname !== window.location.pathname) return;
+      if (url.hash === HOME_VISUAL_INDEX_HASH) setView("appearance");
+      else if (!url.hash) setView("phylum");
+    }
     openViewFromHash();
     window.addEventListener("hashchange", openViewFromHash);
-    return () => window.removeEventListener("hashchange", openViewFromHash);
+    document.addEventListener("click", openViewFromLinkClick);
+    return () => {
+      window.removeEventListener("hashchange", openViewFromHash);
+      document.removeEventListener("click", openViewFromLinkClick);
+    };
   }, []);
 
   function selectView(next: IndexView) {
