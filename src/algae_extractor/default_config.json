@@ -113,6 +113,24 @@
       "linked_taxa": ["parvodinium-elpatiewskyi", "parvodinium-cunningtonii"]
     }
   ],
+  "supplement_files": [
+    {
+      "id": "berman-et-al-2014-preprint",
+      "slug": "berman-et-al-2014-general-background",
+      "title": "Berman et al. 2014. General background",
+      "group": "Lake Kinneret: Ecology and Management (pre-prints)",
+      "source": "Berman et al 2014 preprint.pdf",
+      "cited_as": "Berman et al. 2014"
+    },
+    {
+      "id": "sukenik-et-al-2014-preprint",
+      "slug": "sukenik-et-al-2014-the-monitoring-program",
+      "title": "Sukenik et al. 2014. The monitoring program",
+      "group": "Lake Kinneret: Ecology and Management (pre-prints)",
+      "source": "Sukenik et al 2014 pre-print.pdf",
+      "cited_as": "Sukenik et al. 2014"
+    }
+  ],
   "record_start_patterns": [
     "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+)\\s+[A-Z][a-zA-Z.-]*\\.?\\s+[A-Z][a-zA-Z.-]*\\.?\\s+\\d{4}\\b",
     "^(?:\\d+\\.?\\s*)?([A-Z][a-zA-Z-]+\\s+[a-z][a-zA-Z-]+(?:\\s+(?:subsp\\.|var\\.|f\\.)\\s+[a-z][a-zA-Z-]+)?)\\s+\\([^\\)]{2,80}\\)\\s+[A-Z][a-zA-Z.-]+(?:\\s+\\d{4}\\b)?",

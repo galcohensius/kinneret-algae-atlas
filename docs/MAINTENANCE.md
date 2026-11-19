@@ -66,6 +66,7 @@ When `data/raw/` gets an updated `.docx`, run these steps in order (from the rep
 1. **Add or replace the file** under `data/raw/` (keep a clear filename, e.g. `Dinoflagellates YYYY-MM-DD.docx`).
    - Taxon docs: any `*.docx` that is not a supplement, glossary, or About file.
    - Supplements: `*suppl*.docx` / `*supplement*.docx`
+   - Supplement PDFs (e.g. book-chapter pre-prints): any filename, listed under `supplement_files` in `src/algae_extractor/default_config.json`. `extract_supplements.py` copies them to `public/supplement-files/`, and `extract_about.py` links each entry's `cited_as` text on the About page to its PDF.
    - Glossary: `*glossary*.docx`
    - About: `*about*.docx`
 

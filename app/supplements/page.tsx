@@ -45,7 +45,9 @@ export default async function SupplementsIndexPage() {
           .filter(Boolean)
       )
     );
-    const phylum = phyla.length === 1 ? phyla[0] : phyla.length > 1 ? "Mixed phyla" : "Unclassified";
+    const phylum =
+      supplement.group ??
+      (phyla.length === 1 ? phyla[0] : phyla.length > 1 ? "Mixed phyla" : "Unclassified");
     const slug = phylumToSlug(phylum);
     const existing = grouped.get(slug);
     if (existing) {
@@ -93,28 +95,39 @@ export default async function SupplementsIndexPage() {
                   <div className="algae-list-grid">
                     {group.items.map((s) => {
                       const thumb = s.images[0] ? publicAssetPath(s.images[0]) : null;
-                      return (
-                        <Link
-                          href={`/supplements/${s.slug}/`}
+                      const card = (
+                        <article className="card algae-list-card">
+                          {s.file ? (
+                            <div className="algae-thumb algae-thumb-placeholder">PDF</div>
+                          ) : thumb ? (
+                            <img
+                              className="algae-thumb"
+                              src={thumb}
+                              alt={`${s.title} thumbnail`}
+                              loading="lazy"
+                              decoding="async"
+                            />
+                          ) : (
+                            <div className="algae-thumb algae-thumb-placeholder">No image</div>
+                          )}
+                          <h3 className="algae-list-card-title">
+                            <TaxonItalicName taxon={s.title} className="algae-taxon" />
+                          </h3>
+                        </article>
+                      );
+                      return s.file ? (
+                        <a
+                          href={publicAssetPath(s.file)}
                           className="algae-list-card-link"
                           key={s.slug}
+                          target="_blank"
+                          rel="noopener noreferrer"
                         >
-                          <article className="card algae-list-card">
-                            {thumb ? (
-                              <img
-                                className="algae-thumb"
-                                src={thumb}
-                                alt={`${s.title} thumbnail`}
-                                loading="lazy"
-                                decoding="async"
-                              />
-                            ) : (
-                              <div className="algae-thumb algae-thumb-placeholder">No image</div>
-                            )}
-                            <h3 className="algae-list-card-title">
-                              <TaxonItalicName taxon={s.title} className="algae-taxon" />
-                            </h3>
-                          </article>
+                          {card}
+                        </a>
+                      ) : (
+                        <Link href={`/supplements/${s.slug}/`} className="algae-list-card-link" key={s.slug}>
+                          {card}
                         </Link>
                       );
                     })}

@@ -72,7 +72,7 @@ export default async function AboutPage() {
       </header>
 
       <article className="card algae-profile about-card">
-        <StudyAreaBlock variant="full" />
+        <StudyAreaBlock variant="full" paragraphs={about.sections.study_area} />
 
         {about.sections.our_vision.length > 0 ? (
           <section className="narrative-block" aria-labelledby="vision-heading">
@@ -127,19 +127,19 @@ export default async function AboutPage() {
           </section>
         ) : null}
 
-        {about.sections.how_to_use.length > 0 ? (
-          <section className="narrative-block" aria-labelledby="how-to-heading">
-            <h2 id="how-to-heading" className="section-heading">
-              How to use this atlas
+        {about.sections.information.length > 0 ? (
+          <section className="narrative-block" aria-labelledby="information-heading">
+            <h2 id="information-heading" className="section-heading">
+              Information presented in this atlas
             </h2>
             <div className="algae-prose">
-              {about.sections.how_to_use.map((block, i) =>
+              {about.sections.information.map((block, i) =>
                 Array.isArray(block) ? (
-                  <p key={`how-${i}`}>
+                  <p key={`information-${i}`}>
                     <RichText segments={block} />
                   </p>
                 ) : (
-                  <h3 key={`how-${i}`} className="about-subheading">
+                  <h3 key={`information-${i}`} className="about-subheading">
                     {block.heading}
                   </h3>
                 )
@@ -147,6 +147,11 @@ export default async function AboutPage() {
             </div>
           </section>
         ) : null}
+
+        <CiteThisRecordBlock
+          recordUpdatedIso={atlasUpdatedIso}
+          label="Cite this website as:"
+        />
 
         {about.sections.references.length > 0 ? (
           <section className="narrative-block further-reading-block" aria-labelledby="references-heading">
@@ -160,11 +165,6 @@ export default async function AboutPage() {
             </ul>
           </section>
         ) : null}
-
-        <CiteThisRecordBlock
-          recordUpdatedIso={atlasUpdatedIso}
-          label="Cite this website as:"
-        />
       </article>
     </main>
   );

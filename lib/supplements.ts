@@ -19,6 +19,8 @@ const rawSupplementSchema = z.object({
   id: z.string(),
   slug: z.string(),
   title: z.string(),
+  group: z.string().optional(),
+  file: z.string().optional(),
   linked_taxa: z.array(z.string()).optional().default([]),
   sections: z.record(z.string(), z.string()).optional().default({}),
   sections_rich: z
@@ -54,6 +56,8 @@ function normalizeSupplementRecord(raw: RawSupplement): SupplementRecord {
     id: raw.id,
     slug: raw.slug,
     title: raw.title,
+    group: raw.group ?? null,
+    file: raw.file ?? null,
     linkedTaxa: raw.linked_taxa,
     sections: raw.sections,
     sectionsRich: Object.fromEntries(
@@ -84,9 +88,14 @@ export async function getAllSupplements(): Promise<SupplementRecord[]> {
   return validated.map(normalizeSupplementRecord);
 }
 
+/** Supplements rendered as their own page (not shipped as a file). */
+export async function getSupplementPages(): Promise<SupplementRecord[]> {
+  return (await getAllSupplements()).filter((s) => !s.file);
+}
+
 export async function getSupplementBySlug(
   slug: string
 ): Promise<SupplementRecord | null> {
-  const all = await getAllSupplements();
-  return all.find((s) => s.slug === slug) ?? null;
+  const pages = await getSupplementPages();
+  return pages.find((s) => s.slug === slug) ?? null;
 }

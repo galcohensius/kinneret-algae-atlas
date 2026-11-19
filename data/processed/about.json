@@ -1,11 +1,157 @@
 {
   "title": "About",
-  "record_updated": "2026-11-17",
+  "record_updated": "2026-11-19",
   "sections": {
+    "study_area": [
+      [
+        {
+          "text": "This atlas documents microalgae from ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Lake",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Kinneret",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "(Sea",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "of",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Galilee)",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ", a mesotrophic, warm monomictic freshwater lake in ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Northern",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Israel",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ". The lake lies in the ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Jordan",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Rift",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Valley",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": ", at ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "-209",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "m",
+          "italic": false,
+          "bold": true
+        },
+        {
+          "text": " elevation (below sea level). For details see ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Berman et al. 2014",
+          "italic": false,
+          "bold": false,
+          "href": "/supplement-files/berman-et-al-2014-general-background.pdf"
+        }
+      ]
+    ],
     "our_vision": [
       [
         {
-          "text": "This atlas of the microalgae of Lake Kinneret is based on data, knowledge and experience gained from monitoring the phytoplankton of the lake over several decades, as part of the government-funded Kinneret Monitoring Program initiated in 1969 and ongoing. Lake Kinneret has been and continues to be a strategic source of drinking water for the State of Israel. Monitoring its phytoplankton jointly with physical, chemical and other biological components is crucial for being able to follow short- and long-term trends in ecological processes taking place in the lake, highlight extreme events as they occur, understand lake functioning, and provide decision makers with knowledgeable recommendations for lake management that will ensure high water quality. For detailed information about this monitoring program see Sukenik et al. 2014.",
+          "text": "This atlas of the microalgae of Lake Kinneret is based on data, knowledge and experience gained from monitoring the phytoplankton of the lake over several decades, as part of the government-funded Kinneret Monitoring Program initiated in 1969 and ongoing. Lake Kinneret has been and continues to be a strategic source of drinking water for the State of Israel. Monitoring its phytoplankton jointly with physical, chemical and other biological components is crucial for being able to follow short- and long-term trends in ecological processes taking place in the lake, highlight extreme events as they occur, understand lake functioning, and provide decision makers with knowledgeable recommendations for lake management that will ensure high water quality. For detailed information about this monitoring program see ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Sukenik et al. 2014",
+          "italic": false,
+          "bold": false,
+          "href": "/supplement-files/sukenik-et-al-2014-the-monitoring-program.pdf"
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
@@ -76,7 +222,7 @@
         }
       ]
     ],
-    "how_to_use": [
+    "information": [
       [
         {
           "text": "Species",
@@ -104,7 +250,18 @@
       },
       [
         {
-          "text": "Phytoplankton data: samples were collected weekly/fortnightly from 5-10 discrete depths at station A, depth integrated for wet-weight biomass estimates (g m",
+          "text": "Phytoplankton data: Starting in 1969 and on-going, phytoplankton samples were collected weekly/fortnightly from 5-10 discrete depths along the epilimnion at station A. The discrete-depths samples were counted using the sedimentation chamber and inverted microscope technique, as detailed by Zohary (2004). From 2005 onwards, cell sizes were also measured using PlanktoMetrix (Zohary et al. 2016). The data for each sampling date were depth-integrated, to give values of 5 phytoplankton parameters for each species on each sampling date: depth-integrated biomass (g",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "wet-weight",
+          "italic": false,
+          "bold": false,
+          "subscript": true
+        },
+        {
+          "text": " m",
           "italic": false,
           "bold": false
         },
@@ -115,14 +272,14 @@
           "superscript": true
         },
         {
-          "text": "). Mean epilimnion values of 5 parameters were computed for each species on each sampling date: biomass, cells/mL, colonies/mL, cells/col, cell volume. Microscope counts were made as described by Zohary (2005). From 2005 onwards we employed PlanktoMetrix, a proprietary software for counting phytoplankton and computing biomass of phytoplankton (Zohary et al. 2016).",
+          "text": "), and 4 additional mean-epilimnion values of cells/mL, colonies/mL, cells/col, cell volume. Benthic microalgae were never monitored, hence similar data does not exist for them.",
           "italic": false,
           "bold": false
         }
       ],
       [
         {
-          "text": "Environmental data includes physical, chemical and other biological parameters monitored together with phytoplankton, mostly on the same sampling date, station and depth. In most cases the water samples for chemical and biological determinations were taken from the same bottle from which the samples for phytoplankton determinations were taken. But occasionally it was impossible to sample for chemistry and biology on the same date, in those cases the non-phytoplankton parameters were determined on samples collected at the same site and depth, during the same week, 1-2 days before or after the phytoplankton samples. The physical parameters examined were: TºC = water temperature (mean 0-10 m); thermocline depth, water level, z",
+          "text": "Environmental data includes physical, chemical and other biological parameters monitored together with phytoplankton, mostly on the same sampling date, station and depth. In most cases the water samples for chemical and biological determinations were taken from the same bottle from which the samples for phytoplankton determinations were taken. But occasionally it was impossible to sample for chemistry and biology on the same date, in those cases the non-phytoplankton parameters were determined on samples collected at the same site and depth, during the same week, 1-2 days before or after the phytoplankton samples. The physical parameters examined were T°C = water temperature (mean 0-10 m); thermocline depth; water level; z",
           "italic": false,
           "bold": false
         },
@@ -133,7 +290,7 @@
           "subscript": true
         },
         {
-          "text": " =mixing depth; z",
+          "text": " = mixing depth; z",
           "italic": false,
           "bold": false
         },
@@ -155,7 +312,7 @@
           "subscript": true
         },
         {
-          "text": " =Secchi depth. The chemical parameters examined: pH; alkalinity; turbidity; dissolved oxygen (DO); Cl",
+          "text": " = Secchi depth. The chemical parameters examined: pH; alkalinity; turbidity; dissolved oxygen (DO); Cl",
           "italic": false,
           "bold": false
         },
@@ -188,7 +345,7 @@
           "subscript": true
         },
         {
-          "text": " = ammonium; DON = dissolved organic nitrogen, TDP = total dissolved phosphorus; SO",
+          "text": " = ammonium; DON = dissolved organic nitrogen; TDP = total dissolved phosphorus; SO",
           "italic": false,
           "bold": false
         },
@@ -199,14 +356,27 @@
           "subscript": true
         },
         {
-          "text": " = sulfate; TSS = total suspended solids. Additional biological parameters examined: chlorophyll a; primary production. For detailed information about sampling, equipment used and analytical methods employed see Sukenik et al. 2014.",
+          "text": " = sulfate; TSS = total suspended solids. Additional biological parameters examined: chlorophyll a; primary production. For detailed information about sampling, equipment used and analytical methods employed see ",
+          "italic": false,
+          "bold": false
+        },
+        {
+          "text": "Sukenik et al. 2014",
+          "italic": false,
+          "bold": false,
+          "href": "/supplement-files/sukenik-et-al-2014-the-monitoring-program.pdf"
+        },
+        {
+          "text": ".",
           "italic": false,
           "bold": false
         }
       ]
     ],
     "references": [
-      "Sukenik A, Zohary T, Markel D. 2014. The monitoring program. Chap. 32 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 561-575. Springer, Heidelberg."
+      "Sukenik A, Zohary T, Markel D. 2014. The monitoring program. Chap. 32 In: Zohary T, Sukenik A, Berman T, Nishri A. [eds] Lake Kinneret: Ecology and Management, pp. 561-575. Springer, Heidelberg.",
+      "Zohary T. 2004. Changes to the phytoplankton assemblage of Lake Kinneret after decades of a predictable, repetitive pattern. Freshwater Biology 49: 1355-1371.",
+      "Zohary T, Shneor M, Hambright KD. 2016. PlanktoMetrix – a computerized system to support microscope counts and measurements of plankton. Inland Waters 6: 131-135."
     ]
   },
   "collaborators": [
@@ -270,6 +440,6 @@
     }
   ],
   "metadata": {
-    "source_file": "1-About 2026-11-16.docx"
+    "source_file": "1-About 2026-11-19.docx"
   }
 }

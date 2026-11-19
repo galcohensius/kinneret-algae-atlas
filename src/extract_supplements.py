@@ -1,5 +1,6 @@
 """
-Extract a supplement .docx into data/processed/supplements.json.
+Extract supplement .docx files, and publish supplement files (PDF pre-prints listed under
+"supplement_files" in the config), into data/processed/supplements.json.
 
 Usage:
     python src/extract_supplements.py
@@ -108,6 +109,16 @@ def main() -> None:
         help="Public URL prefix for extracted images.",
     )
     parser.add_argument(
+        "--files-dir",
+        default="public/supplement-files",
+        help="Directory where supplements shipped as files (PDF pre-prints) are copied.",
+    )
+    parser.add_argument(
+        "--files-public-prefix",
+        default=None,
+        help="Public URL prefix for supplement files.",
+    )
+    parser.add_argument(
         "--config",
         default=None,
         help="Config JSON path (default: src/algae_extractor/default_config.json).",
@@ -118,7 +129,11 @@ def main() -> None:
     sys.path.insert(0, str(Path(__file__).parent))
 
     from algae_extractor.config import load_config
-    from algae_extractor.supplement_pipeline import extract_supplement
+    from algae_extractor.supplement_pipeline import (
+        SUPPLEMENT_FILES_PUBLIC_PREFIX,
+        extract_supplement,
+        publish_supplement_file,
+    )
 
     config = load_config(args.config)
     supplements_config: list[dict] = config.get("supplements") or []
@@ -164,6 +179,17 @@ def main() -> None:
         replaced = _upsert_supplement(existing, record)
         action = "Updated" if replaced else "Added"
         print(f"{action} '{record['id']}' from {docx_path.name}.")
+
+    for file_meta in config.get("supplement_files") or []:
+        record = publish_supplement_file(
+            Path(args.raw_dir),
+            file_meta,
+            files_output_dir=Path(args.files_dir),
+            files_public_prefix=args.files_public_prefix or SUPPLEMENT_FILES_PUBLIC_PREFIX,
+        )
+        replaced = _upsert_supplement(existing, record)
+        action = "Updated" if replaced else "Added"
+        print(f"{action} '{record['id']}' from {file_meta['source']}.")
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(

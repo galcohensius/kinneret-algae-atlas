@@ -469,5 +469,25 @@
       "source_file": "Suppl1 cunningtoni vs elpatiewskyi.docx",
       "record_updated": "2026-04-15"
     }
+  },
+  {
+    "id": "berman-et-al-2014-preprint",
+    "slug": "berman-et-al-2014-general-background",
+    "title": "Berman et al. 2014. General background",
+    "group": "Lake Kinneret: Ecology and Management (pre-prints)",
+    "file": "/supplement-files/berman-et-al-2014-general-background.pdf",
+    "metadata": {
+      "source_file": "Berman et al 2014 preprint.pdf"
+    }
+  },
+  {
+    "id": "sukenik-et-al-2014-preprint",
+    "slug": "sukenik-et-al-2014-the-monitoring-program",
+    "title": "Sukenik et al. 2014. The monitoring program",
+    "group": "Lake Kinneret: Ecology and Management (pre-prints)",
+    "file": "/supplement-files/sukenik-et-al-2014-the-monitoring-program.pdf",
+    "metadata": {
+      "source_file": "Sukenik et al 2014 pre-print.pdf"
+    }
   }
 ]

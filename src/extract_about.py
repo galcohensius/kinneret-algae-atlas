@@ -8,16 +8,20 @@ from pathlib import Path
 
 from docx import Document
 
+from algae_extractor.config import load_config
 from algae_extractor.reader import paragraph_clean_text, source_modified_date
 from algae_extractor.rich_text import paragraph_rich_segments
+from algae_extractor.supplement_pipeline import (
+    SUPPLEMENT_FILES_PUBLIC_PREFIX,
+    supplement_file_name,
+)
 
 SECTION_HEADINGS = {
     "our vision": "our_vision",
     "vision": "our_vision",
-    # The site writes the study-area block itself (coordinates, map links).
     "study area": "study_area",
     "references cited": "references",
-    "how to use this atlas": "how_to_use",
+    "information presented in this atlas": "information",
     "our collaborators": "collaborators",
 }
 
@@ -46,13 +50,34 @@ def _is_all_bold(para) -> bool:
     return bool(runs) and all(run.bold for run in runs)
 
 
-def parse_about_docx(docx_path: Path) -> dict:
+def _link_citations(segments: list[dict], links: dict[str, str]) -> list[dict]:
+    """Split segments around each cited text (e.g. "Berman et al. 2014") and link it."""
+    for cited, href in links.items():
+        linked: list[dict] = []
+        for seg in segments:
+            if "href" in seg or cited not in seg["text"]:
+                linked.append(seg)
+                continue
+            before, *rest = seg["text"].split(cited)
+            if before:
+                linked.append({**seg, "text": before})
+            for after in rest:
+                linked.append({**seg, "text": cited, "href": href})
+                if after:
+                    linked.append({**seg, "text": after})
+        segments = linked
+    return segments
+
+
+def parse_about_docx(docx_path: Path, citation_links: dict[str, str]) -> dict:
+    """citation_links maps a citation as written in the text to the URL it links to."""
     doc = Document(str(docx_path))
     title = "About"
     # Body paragraphs are rich segments so Word sub/superscripts and italics survive.
     sections: dict[str, list] = {
+        "study_area": [],
         "our_vision": [],
-        "how_to_use": [],
+        "information": [],
         "references": [],
     }
     people: list[dict] = []
@@ -80,19 +105,6 @@ def parse_about_docx(docx_path: Path) -> dict:
             current_person = None
             continue
 
-        # "How to use this atlas [to be written]." is a placeholder — skip until real copy exists.
-        if lower.startswith("how to use this atlas"):
-            current_section = "how_to_use"
-            current_person = None
-            if "[to be written]" in lower:
-                continue
-            remainder = text.split("]", 1)[-1].strip(" .") if "]" in text else ""
-            if remainder:
-                sections["how_to_use"].append(
-                    [{"text": remainder, "italic": False, "bold": False}]
-                )
-            continue
-
         person_key = PEOPLE_HEADINGS.get(lower)
         if person_key and current_section in {"collaborators", None}:
             current_section = "collaborators"
@@ -114,21 +126,19 @@ def parse_about_docx(docx_path: Path) -> dict:
             current_person["paragraphs"].append(paragraph_rich_segments(para))
             continue
 
-        if current_section == "how_to_use" and _is_all_bold(para):
-            sections["how_to_use"].append({"heading": text})
+        if current_section == "information" and _is_all_bold(para):
+            sections["information"].append({"heading": text})
         elif current_section == "references":
             sections["references"].append(text)
-        elif current_section in sections and text != "[to be written]":
-            sections[current_section].append(paragraph_rich_segments(para))
+        elif current_section in sections:
+            sections[current_section].append(
+                _link_citations(paragraph_rich_segments(para), citation_links)
+            )
 
     return {
         "title": title,
         "record_updated": source_modified_date(docx_path),
-        "sections": {
-            "our_vision": sections["our_vision"],
-            "how_to_use": sections["how_to_use"],
-            "references": sections["references"],
-        },
+        "sections": sections,
         "collaborators": people,
         "metadata": {
             "source_file": docx_path.name,
@@ -153,6 +163,11 @@ def main() -> None:
         default="data/processed/about.json",
         help="Output JSON path.",
     )
+    parser.add_argument(
+        "--config",
+        default=None,
+        help="Config JSON path (default: src/algae_extractor/default_config.json).",
+    )
     args = parser.parse_args()
 
     if args.input:
@@ -165,7 +180,12 @@ def main() -> None:
             )
         input_path = discovered
 
-    data = parse_about_docx(input_path)
+    # Citations of supplements shipped as files link to the copy extract_supplements.py publishes.
+    citation_links = {
+        entry["cited_as"]: f"{SUPPLEMENT_FILES_PUBLIC_PREFIX}/{supplement_file_name(entry)}"
+        for entry in load_config(args.config).get("supplement_files") or []
+    }
+    data = parse_about_docx(input_path, citation_links)
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

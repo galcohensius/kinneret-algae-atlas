@@ -1,18 +1,20 @@
 import Link from "next/link";
+import type { RichSegment } from "../../lib/algae-types";
+import { RichText } from "./RichText";
 import {
   formatStudyAreaCoordinatesDecimal,
   formatStudyAreaFooterLine,
-  formatStudyAreaLakeName,
-  STUDY_AREA,
   studyAreaGoogleMapsUrl,
   studyAreaOpenStreetMapUrl,
 } from "../../lib/study-area";
 
-type StudyAreaBlockProps = {
-  variant: "footer" | "full";
-};
+type StudyAreaBlockProps =
+  | { variant: "footer" }
+  /** paragraphs: the About Word file's Study area text. */
+  | { variant: "full"; paragraphs: RichSegment[][] };
 
-export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
+export default function StudyAreaBlock(props: StudyAreaBlockProps) {
+  const { variant } = props;
   if (variant === "footer") {
     return (
       <footer className="study-area-footer" aria-label="Study area">
@@ -31,12 +33,11 @@ export default function StudyAreaBlock({ variant }: StudyAreaBlockProps) {
         Study area
       </h2>
       <div className="study-area-details algae-prose">
-        <p>
-          This atlas documents microalgae from <strong>{formatStudyAreaLakeName()}</strong>, a
-          freshwater lake in <strong>Northern {STUDY_AREA.country}</strong>. The lake lies in the{" "}
-          <strong>{STUDY_AREA.region}</strong>, at{" "}
-          <strong>{STUDY_AREA.elevationM} m</strong> elevation (below sea level).
-        </p>
+        {props.paragraphs.map((para, i) => (
+          <p key={`study-area-${i}`}>
+            <RichText segments={para} />
+          </p>
+        ))}
         <p>
           Coordinates: <strong>{formatStudyAreaCoordinatesDecimal()}</strong>
         </p>

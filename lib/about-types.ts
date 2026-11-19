@@ -14,8 +14,9 @@ export type AboutData = {
   title: string;
   record_updated: string | null;
   sections: {
+    study_area: RichSegment[][];
     our_vision: RichSegment[][];
-    how_to_use: AboutBlock[];
+    information: AboutBlock[];
     references: string[];
   };
   collaborators: AboutCollaborator[];

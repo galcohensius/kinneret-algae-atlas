@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
 import { getAllAlgae } from "../lib/algae";
-import { getAllSupplements } from "../lib/supplements";
+import { getSupplementPages } from "../lib/supplements";
 import { absoluteUrl } from "../lib/site";
 
 export const dynamic = "force-static";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [algae, supplements] = await Promise.all([getAllAlgae(), getAllSupplements()]);
+  const [algae, supplements] = await Promise.all([getAllAlgae(), getSupplementPages()]);
   const now = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [

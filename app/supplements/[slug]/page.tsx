@@ -6,7 +6,7 @@ import TaxonItalicName from "../../components/TaxonItalicName";
 import GlossaryAwarePlainText from "../../components/GlossaryAwarePlainText";
 import GlossaryAwareRichText from "../../components/GlossaryAwareRichText";
 import { GlossaryLinkScopeProvider } from "../../components/GlossaryLinkScopeProvider";
-import { getAllSupplements, getSupplementBySlug } from "../../../lib/supplements";
+import { getSupplementBySlug, getSupplementPages } from "../../../lib/supplements";
 import { getAllAlgae } from "../../../lib/algae";
 import { publicAssetPath } from "../../../lib/public-path";
 import { partitionPlateAndGalleryImages } from "../../../lib/partition-plate-images";
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: SupplementDetailPageProps) {
 }
 
 export async function generateStaticParams() {
-  const supplements = await getAllSupplements();
+  const supplements = await getSupplementPages();
   return supplements.map((s) => ({ slug: s.slug }));
 }
 

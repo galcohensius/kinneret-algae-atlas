@@ -12,6 +12,7 @@ Section splitting heuristic:
 """
 
 import re
+import shutil
 from pathlib import Path
 from typing import Any
 
@@ -193,4 +194,33 @@ def extract_supplement(
             "source_file": docx_path.name,
             "record_updated": source_modified_date(docx_path),
         },
+    }
+
+
+SUPPLEMENT_FILES_PUBLIC_PREFIX = "/supplement-files"
+
+
+def supplement_file_name(file_meta: dict[str, Any]) -> str:
+    """Published name of a supplement shipped as a file: its slug plus the source extension."""
+    return f"{file_meta['slug']}{Path(file_meta['source']).suffix.lower()}"
+
+
+def publish_supplement_file(
+    raw_dir: Path,
+    file_meta: dict[str, Any],
+    *,
+    files_output_dir: Path,
+    files_public_prefix: str = SUPPLEMENT_FILES_PUBLIC_PREFIX,
+) -> dict[str, Any]:
+    """Copy a supplement shipped as a file (a PDF pre-print) to the site; return its record."""
+    target_name = supplement_file_name(file_meta)
+    files_output_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(raw_dir / file_meta["source"], files_output_dir / target_name)
+    return {
+        "id": file_meta["id"],
+        "slug": file_meta["slug"],
+        "title": file_meta["title"],
+        "group": file_meta["group"],
+        "file": f"{files_public_prefix.rstrip('/')}/{target_name}",
+        "metadata": {"source_file": file_meta["source"]},
     }
