@@ -13,3 +13,6 @@ next-env.d.ts
 
 # Optional duplicate at repo root (canonical asset is public/kinneret-lake.jpg)
 /kinneret-lake.jpg
+
+# Talk decks built from the atlas; edited outside git
+docs/atlas-presentation/
