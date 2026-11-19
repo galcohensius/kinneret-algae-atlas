@@ -7,16 +7,16 @@
     "class": "Dinophyceae",
     "order": "Peridiniales"
   },
-  "record_updated": "2026-11-15",
+  "record_updated": "2026-11-19",
   "citation": {
-    "per_record": "Zohary T, Alster A. Peridiniopsis cunningtonii var. quinquecuspidata. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata/",
+    "per_record": "Zohary T, Alster A. Peridiniopsis cunningtonii var. quinquecuspidata. 19 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/peridiniopsis-cunningtonii-var-quinquecuspidata/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
     "organization": "flagellated single cells",
     "cell_shape": "sphere",
     "cell_diameter_d": "(D): 13 - 18 μm, median: 15.5 μm (N=450)",
-    "biovolume_per_cell": "17500 - 4300 μm³, median: 2900 μm³.",
+    "biovolume_per_cell": "17500 - 4300 μm³, median: 2900 μm³",
     "biovolume_equation": "V = (4/3) π D³ (sphere)"
   },
   "narrative": {

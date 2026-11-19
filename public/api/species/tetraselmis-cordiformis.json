@@ -7,17 +7,17 @@
     "class": "Chlorodendrophyceae",
     "order": "Chlorodendrales"
   },
-  "record_updated": "2026-11-15",
+  "record_updated": "2026-11-19",
   "citation": {
-    "per_record": "Zohary T, Alster A. Tetraselmis cordiformis. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/tetraselmis-cordiformis/",
+    "per_record": "Zohary T, Alster A. Tetraselmis cordiformis. 19 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/tetraselmis-cordiformis/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
     "organization": "flagellated single cells",
     "cell_shape": "spheroid",
-    "cell_diameter_d": "10.2–15.9 μm, median: 13.1 μm (N=526).",
+    "cell_diameter_d": "10.2–15.9 μm, median: 13.1 μm (N=526)",
     "cell_length_l": "13.4–18.7 μm, median: 15.9 μm (N=526)",
-    "biovolume_per_cell": "730-2400 μm³, median: 1400 μm³.",
+    "biovolume_per_cell": "730-2400 μm³, median: 1400 μm³",
     "biovolume_equation": "prolate spheroid, V = 4/3 π L/2 (D/2)²\nor: regression eqn. based on >500 measurements of both D and L with V computed for a prolate spheroid: V= 1.9507*D².⁵⁶⁵¹"
   },
   "narrative": {

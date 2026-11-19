@@ -7,9 +7,9 @@
     "class": "Dinophyceae",
     "order": "Peridiniales"
   },
-  "record_updated": "2026-11-15",
+  "record_updated": "2026-11-19",
   "citation": {
-    "per_record": "Zohary T, Alster A. Parvodinium cunningtonii. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/parvodinium-cunningtonii/",
+    "per_record": "Zohary T, Alster A. Parvodinium cunningtonii. 19 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/parvodinium-cunningtonii/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -17,7 +17,7 @@
     "cell_shape": "prolate spheroid",
     "cell_diameter_d": "varies significantly over an annual cycle\n21 - 30 μm, median: 25.6 μm (N=>2000)",
     "cell_length_l": "27 – 36 μm, median: 31 μm (N=700)",
-    "biovolume_per_cell": "6300 - 17500 μm³, median: 10500 μm³.",
+    "biovolume_per_cell": "6300 - 17500 μm³, median: 10500 μm³",
     "biovolume_equation": "V = 2.099 D².⁶²³"
   },
   "narrative": {

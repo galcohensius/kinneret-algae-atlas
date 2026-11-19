@@ -7,9 +7,9 @@
     "class": "Dinophyceae",
     "order": "Peridiniales"
   },
-  "record_updated": "2026-11-15",
+  "record_updated": "2026-11-19",
   "citation": {
-    "per_record": "Zohary T, Alster A. Glochidinium penardiforme. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme/",
+    "per_record": "Zohary T, Alster A. Glochidinium penardiforme. 19 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/glochidinium-penardiforme/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -17,7 +17,7 @@
     "cell_shape": "ovoid or prolate spheroid",
     "cell_diameter_d": "17 - 24 μm, median: 21 μm (N=160)",
     "cell_length_l": "20 – 27.5 μm, median: 23 μm (N=160)",
-    "biovolume_per_cell": "3050 - 8200 μm³, median: 5450 μm³.",
+    "biovolume_per_cell": "3050 - 8200 μm³, median: 5450 μm³",
     "biovolume_equation": "V = (4/3)π L (D/2)² (prolate spheroid)"
   },
   "narrative": {

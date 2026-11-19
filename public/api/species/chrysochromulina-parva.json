@@ -7,17 +7,17 @@
     "class": "Coccolithophyceae",
     "order": "Prymnesiales"
   },
-  "record_updated": "2026-11-15",
+  "record_updated": "2026-11-19",
   "citation": {
-    "per_record": "Zohary T, Alster A. Chrysochromulina parva. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/chrysochromulina-parva/",
+    "per_record": "Zohary T, Alster A. Chrysochromulina parva. 19 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/chrysochromulina-parva/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
     "organization": "flagellated single cells",
     "cell_shape": "spheroid",
-    "cell_diameter_d": "2.9 – 5.2 μm, median: 3.9 μm (N=100).",
-    "biovolume_per_cell": "13 – 76 μm³, median: 34 μm³.",
-    "biovolume_equation": "sphere V = 4/3 π *(D/2)³."
+    "cell_diameter_d": "2.9 – 5.2 μm, median: 3.9 μm (N=100)",
+    "biovolume_per_cell": "13 – 76 μm³, median: 34 μm³",
+    "biovolume_equation": "sphere V = 4/3 π *(D/2)³"
   },
   "narrative": {
     "morphology": "This species comprises the smallest (3 - 5 μm diameter), but very common flagellates of Lake Kinneret (Plate 1). Cells have a bilateral symmetry, spheroid shape except when dividing (Plate 2A), with 2 flagella of equal or near-equal length, 1 haptonema (Plate 2B), 2 chloroplasts, 2 contractile vacuoles, and a stigma (Plates 1, 2). The flagella are much longer than the cell. During swimming, one flagellum is directed forward, whereas the other trails behind. The haptonema that may be mistaken for a third flagellum, is a thread-like organelle used for attachment and catching prey. It is thinner and more delicate than the flagella and rarely seen under a light microscope, because it often contracts and hides against the cell wall. During cell division there is a stage when the two daughter cells are still contained within the same cell wall thus the cell seems particularly wide and with 4 flagella (Plate 2A).\nSkuja, who first described Erkenia subaequiciliata in 1948, didn’t see its haptonema and placed it with the Chrysophyta, although in all other attributes it resembled the haptophyte Chrysochromulina parva Lackey 1939. With more advanced microscopy it was shown in the 1960s that the two species are identical, and the earlier name, Chrysochromulina parva, took over.",

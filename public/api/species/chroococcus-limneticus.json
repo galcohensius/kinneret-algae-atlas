@@ -7,9 +7,9 @@
     "class": "Cyanophyceae",
     "order": "Chroococcales"
   },
-  "record_updated": "2026-08-07",
+  "record_updated": "2026-11-19",
   "citation": {
-    "per_record": "Zohary T, Alster A. Chroococcus limneticus. 7 August 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/chroococcus-limneticus/",
+    "per_record": "Zohary T, Alster A. Chroococcus limneticus. 19 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/chroococcus-limneticus/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
@@ -18,7 +18,7 @@
     "colony_shape": "spherical",
     "cell_diameter_d": "4 – 10 μm",
     "biovolume_per_cell": "35 – 500 μm³",
-    "biovolume_equation": "Sphere V, μm³ = 4/3 π (D/2)³",
+    "biovolume_equation": "sphere, V = 4/3 π (D/2)³",
     "cells_per_colony": "4-30"
   },
   "narrative": {

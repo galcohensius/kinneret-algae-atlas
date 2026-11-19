@@ -7,18 +7,18 @@
     "class": "Cryptophyceae",
     "order": "Cryptomonadales"
   },
-  "record_updated": "2026-11-15",
+  "record_updated": "2026-11-19",
   "citation": {
-    "per_record": "Zohary T, Alster A. Plagioselmis nannoplanctica. 15 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica/",
+    "per_record": "Zohary T, Alster A. Plagioselmis nannoplanctica. 19 November 2026. Electronic publication. Israel Oceanographic & Limnological Research. https://kinneret-algae-atlas.org/algae/plagioselmis-nannoplanctica/",
     "atlas_attribution": "Dr. Tamar Zohary, Dr. Alla Alster. Kinneret Limnological Institute, Israel Oceanographic and Limnological Research."
   },
   "key_fields": {
     "organization": "flagellated single cells",
     "cell_shape": "drop-like",
-    "cell_diameter_d": "3 – 6 μm, median: 4.5 μm (N=477).",
-    "cell_length_l": "6 – 10 μm, median: 7.8 μm (N=390).",
-    "biovolume_per_cell": "40 – 150 μm³, median: 82 μm³.",
-    "biovolume_equation": "V=1.841D².⁵²⁶⁴ (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R²=0.93)."
+    "cell_diameter_d": "3 – 6 μm, median: 4.5 μm (N=477)",
+    "cell_length_l": "6 – 10 μm, median: 7.8 μm (N=390)",
+    "biovolume_per_cell": "40 – 150 μm³, median: 82 μm³",
+    "biovolume_equation": "V=1.841D².⁵²⁶⁴ (regression eqn. between D and V based on 390 measurements of both D and L with V computed for a Half sphere + cone; R²=0.93)"
   },
   "narrative": {
     "morphology": "A small drop-shaped monad with two slightly unequal flagella (Plate 1), this is the smaller cryptophyte of Lake Kinneret. A single red (contains phycoerythrin) chloroplast is dorsal with ventral margins. A central large pyrenoid surrounded by a thick starch sheath of 2 hemispherical halves. The nucleus is posterior. Its chloroplast fluoresces orange (autofluorescence) when observed under an epifluorescent microscope.",
